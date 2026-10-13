@@ -1,6 +1,7 @@
 """Inspect staged AND tracked content before public push; never print suspected secrets."""
 from pathlib import PurePosixPath
 import json
+import hashlib
 import re
 import subprocess
 import sys
@@ -37,6 +38,14 @@ def main():
             continue
         if any(re.search(pattern,content) for pattern in patterns):
             findings.append({'path':path,'reason':'Suspected credential/private-key content; value withheld'})
+    # Check index bytes, not just working-tree bytes: autocrlf can otherwise alter protected records.
+    if 'docs/contracts/historical_inventory.json' in paths:
+        inventory=json.loads(git('show', ':docs/contracts/historical_inventory.json'))
+        for record in inventory['records']:
+            if record.get('local_only'):
+                continue
+            if record['path'] not in paths or hashlib.sha256(git('show', ':'+record['path'])).hexdigest()!=record['sha256']:
+                findings.append({'path':record['path'],'reason':'Protected historical index bytes differ from original SHA256'})
     print(json.dumps({'status':'PASS' if not findings else 'STOP','staged_paths':len(list(filter(None,staged))),
                       'tracked_and_staged_files_audited':len(paths),'findings':findings,
                       'scope':'Path/case and targeted secret patterns; human diff review still required'},indent=2))
