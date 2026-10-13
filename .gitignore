@@ -1,0 +1,23 @@
+# Local native/third-party inspection artifacts; never redistribute game classes.
+/research/
+/.m0r-local/
+/.agents/
+/.codex/
+__pycache__/
+*.py[cod]
+# Generated/runtime outputs and private diagnostics.
+/dist/
+/staging/
+/logs/
+/diagnostics/
+*.log
+*.zip
+*.jar
+*.class
+*.blend1
+local.settings.json
+*.pem
+*.key
+.env
+.env.*
+!*.example

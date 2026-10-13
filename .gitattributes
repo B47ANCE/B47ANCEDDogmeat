@@ -1,0 +1,16 @@
+* text=auto
+*.md text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+# Preserve exact original bytes of protected reports/request snapshots.
+docs/COMPANION_DOGS_SOURCE_AUDIT.md -text
+docs/DOGPACK_COMPATIBILITY_AUDIT.md -text
+docs/DRUGS_OF_93_COMPATIBILITY_AUDIT.md -text
+docs/FEATURE_FEASIBILITY_MATRIX.md -text
+docs/SERVER_AUTHORITY_DESIGN.md -text
+docs/USER_HANDOFF.md -text
+docs/VALIDATION.md -text
+docs/VANILLA_API_AUDIT.md -text
+docs/VERSION_POLICY.md -text
+docs/historical/** -text
+docs/requirements/** -text
