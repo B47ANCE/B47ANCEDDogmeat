@@ -1,0 +1,3079 @@
+{
+  "project_version": "0.1.0-dev.1",
+  "status": "CURRENT STANDALONE ASSESSMENT - NO GAMEPLAY IMPLEMENTATION",
+  "features": [
+    {
+      "id": "F01",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 1,25",
+      "requirement": "Dedicated authority/full MP compatibility",
+      "technical_dependency": [
+        "B-ENV",
+        "B-ASSET",
+        "B-TASK"
+      ],
+      "milestone": "M1A",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-ENVIRONMENT",
+        "T-NATIVE"
+      ],
+      "acceptance": "Two clients observe one server-owned dog and outcomes; no client position/reward writes or competing native task writer.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F02",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 2",
+      "requirement": "Exact dependency/native identification and source hashes",
+      "technical_dependency": [
+        "B-ENV",
+        "B-ASSET",
+        "B-TASK"
+      ],
+      "milestone": "M1A",
+      "classification": "VERIFIED",
+      "acceptance_tests": [
+        "T-ENVIRONMENT",
+        "T-NATIVE"
+      ],
+      "acceptance": "Current native file/class hash inventory VERIFIED; actual effective/pristine client/dedicated class baseline remains UNKNOWN and must be observed; optional identifiers never required dog dependencies.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F03",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3",
+      "requirement": "Identity through save/restart/reconnect/unload",
+      "technical_dependency": [
+        "B-IDENTITY",
+        "B-STORE"
+      ],
+      "milestone": "M1B/M1C",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-IDENTITY",
+        "T-TRANSPORT",
+        "T-GROWTH"
+      ],
+      "acceptance": "One original ID/private record through ordinary save/restart/reconnect/unload; no reallocation/reroll.",
+      "evidence": [
+        "E-IDENTITY",
+        "E-GROWTH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F04",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3",
+      "requirement": "Identity through ownership transfer/transport/pack changes/death",
+      "technical_dependency": [
+        "B-IDENTITY",
+        "B-STORE"
+      ],
+      "milestone": "M1B/M1C",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-IDENTITY",
+        "T-TRANSPORT",
+        "T-GROWTH"
+      ],
+      "acceptance": "Each ownership/carry/release/trailer/vehicle/pack/death transition retains one identity and one representation; unsupported route stays blocked.",
+      "evidence": [
+        "E-IDENTITY",
+        "E-GROWTH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F05",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1",
+      "requirement": "Breed/sex/age/weight generation",
+      "technical_dependency": [
+        "B-IDENTITY",
+        "B-STORE"
+      ],
+      "milestone": "M1B/M1C",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-IDENTITY",
+        "T-TRANSPORT",
+        "T-GROWTH"
+      ],
+      "acceptance": "Register original breed/type and validated age/sex/weight once; maturation cannot silently lose marker.",
+      "evidence": [
+        "E-IDENTITY",
+        "E-GROWTH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F06",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1",
+      "requirement": "Physical condition/strength/fitness/endurance potentials",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate physical condition/strength/fitness/endurance potentials with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F07",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1",
+      "requirement": "Learning aptitude/intelligence",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate learning aptitude/intelligence with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F08",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1",
+      "requirement": "Confidence separate from anxiety disposition/current anxiety",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate confidence separate from anxiety disposition/current anxiety with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F09",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1",
+      "requirement": "Sociability/independence/handler attachment",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate sociability/independence/handler attachment with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F10",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1",
+      "requirement": "Food/play motivation/prey drive/energy/noise sensitivity",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate food/play motivation/prey drive/energy/noise sensitivity with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F11",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.1,4",
+      "requirement": "Prior experiences/training/possible working history",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate prior experiences/training/possible working history with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F12",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.2",
+      "requirement": "Breed predispositions subordinate to personality",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Personality overrides breed stereotype; sampled breed profile never guarantees confidence/working success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F13",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 3.3",
+      "requirement": "Gradual socialization/trauma/rehabilitation/aging changes",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Observed experience/aging changes traits gradually; no instant rehabilitation or reroll.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F14",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 4",
+      "requirement": "Hidden untrained/partial/advanced/hunting/police/military/detection histories",
+      "technical_dependency": [
+        "B-STORE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-PRIVACY",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate hidden untrained/partial/advanced/hunting/police/military/detection histories with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F15",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 4.1",
+      "requirement": "Discover skills by observation without gaining dog XP",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "A verified observation reveals prior skill only to eligible handler, with zero discovery XP.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F16",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 4.2",
+      "requirement": "Spoken/hand/whistle/vibration/previous cue recognition",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Each spoken/hand/whistle/conditioned vibration/previous cue type has separate recognition and proved physical/audio behavior.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F17",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 4.2",
+      "requirement": "Faster cue transfer for an already known behavior",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate faster cue transfer for an already known behavior with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F18",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5",
+      "requirement": "28–56 day training target",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Document complete-training endpoint and cohorts; calibrate 28–56 game days under declared effective practice without unlock timer.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F19",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.1",
+      "requirement": "Overall levels 0–10 without automatic command mastery",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Summary 0–10 cannot unlock command mastery; each command still needs independent proof.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F20",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.2",
+      "requirement": "Cue/proficiency/duration/distance/distraction/generalization records",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate cue/proficiency/duration/distance/distraction/generalization records with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F21",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.2",
+      "requirement": "Reinforcement/handler familiarity/practice/known cue history",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate reinforcement/handler familiarity/practice/known cue history with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F22",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.3",
+      "requirement": "Rolling 24-game-hour structured/passive XP budgets",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Enforce preceding24 game-hour structured/passive windows across reconnect/restart; no midnight reset.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F23",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.3",
+      "requirement": "Prevent command/idle/wall/reconnect/packet XP farming",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Spam/idle/wall/replay/reconnect cannot earn repeated or unobserved XP.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F24",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.4",
+      "requirement": "Loose-leash/heel passive training while scavenging",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Measure real handler and dog displacement, leash state and unobstructed loose-leash behavior before passive reward.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F25",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.4",
+      "requirement": "Calm during Mechanics/mat during Carpentry",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Mechanics calm/Carpentry mat practice requires server-observed eligible activity/location/duration, never proximity-only XP.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F26",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 5.4",
+      "requirement": "Door waiting/building follow/successful recall/safehouse settling",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-CUES",
+        "T-TASK"
+      ],
+      "acceptance": "Door waiting/follow/recall/settle must actually occur with path/floor/eligibility checks.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F27",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 6",
+      "requirement": "Standard leash/long line/harness",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate standard leash/long line/harness with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F28",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 6",
+      "requirement": "Clicker/whistle/treat pouch/treats",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate clicker/whistle/treat pouch/treats with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F29",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 6",
+      "requirement": "Toys/retrieval dummy/mat/target stick",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate toys/retrieval dummy/mat/target stick with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F30",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 6",
+      "requirement": "Conditioned vibration/tone collar and sensitivity",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Condition tone/vibration, model individual sensitivity and non-punitive use; no fictional audible event for silent cue.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F31",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 6",
+      "requirement": "No multiplier stacking; condition clickers",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Unconditioned clicker lacks full benefit; one bounded reinforcement resolver prevents multiplier stacking.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F32",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 6,20",
+      "requirement": "Audible devices/spoken cues attract zombies; silent cues remain silent",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Audible cue uses real zombie-attracting world sound; silent cue emits no audible speech.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F33",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 7",
+      "requirement": "Handling based on dog/player condition, weight and terrain",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Demonstrate handling based on dog/player condition, weight and terrain with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F34",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 7",
+      "requirement": "Pull player/interrupt movement/loss of balance",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-PHYSICS"
+      ],
+      "milestone": "M3",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-CUES",
+        "T-TRANSACTION",
+        "T-TASK"
+      ],
+      "acceptance": "Real pulling/movement interruption/stumble has proved safe native authority/collision and calibrated consequence; UI effect is insufficient.",
+      "evidence": [
+        "E-ATTACH",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F35",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 8",
+      "requirement": "Human Dog Training skill separate from canine skill",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M3-content",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-LOCALIZATION",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate human dog training skill separate from canine skill with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F36",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 8",
+      "requirement": "Reading behavior/prior training and specialized-handler knowledge",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M3-content",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-LOCALIZATION",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate reading behavior/prior training and specialized-handler knowledge with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F37",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 8.1",
+      "requirement": "Dog Trainer and K9 Handler occupations",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M3-content",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-LOCALIZATION",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Original Dog Trainer/K9 Handler occupations register/save on both platforms and use reviewed vanilla-relative costs.",
+      "evidence": [
+        "E-CONTENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F38",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 8.2",
+      "requirement": "Training books 1–5/behavior/leash manuals",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M3-content",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-LOCALIZATION",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate training books 1–5/behavior/leash manuals with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F39",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 8.2",
+      "requirement": "Detection/hunting/police/military/veterinary manuals",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M3-content",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-LOCALIZATION",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate detection/hunting/police/military/veterinary manuals with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F40",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 8.2",
+      "requirement": "Obedience VHS",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M3-content",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-LOCALIZATION",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Original VHS knowledge/XP registration works after save/reconnect without duplicate awards.",
+      "evidence": [
+        "E-CONTENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F41",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9",
+      "requirement": "Veterinary interface inspired by human health UI",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate veterinary interface inspired by human health ui with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F42",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.1",
+      "requirement": "Head/neck/torso/abdomen/legs/paws/tail injury regions",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Each named canine region uses proved damage attribution and one writer; no human BodyDamage substitution.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F43",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.2",
+      "requirement": "Scratches/lacerations/bites/bleeding/infection/fractures/sprains/pain",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate scratches/lacerations/bites/bleeding/infection/fractures/sprains/pain with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F44",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.2",
+      "requirement": "Dehydration/malnutrition/fatigue/temperature exposure",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate dehydration/malnutrition/fatigue/temperature exposure with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F45",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.2",
+      "requirement": "Parasites/skin irritation/coat matting/age mobility",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Coat/parasites/skin/matting/age-mobility rules are independently reviewed and avoid competing native timers.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F46",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.2",
+      "requirement": "Canine medical suitability",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Each treatment has reviewed canine suitability and server item/condition evidence; human pharmacology is not proof.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F47",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.3",
+      "requirement": "Brushing/bathing/drying/coat inspection/mat removal",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate brushing/bathing/drying/coat inspection/mat removal with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F48",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.3",
+      "requirement": "Parasite treatment/paw inspection/general hygiene",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Demonstrate parasite treatment/paw inspection/general hygiene with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F49",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.3",
+      "requirement": "Only specifically modeled zoonotic transmission",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Each dog-to-player disease/parasite has a specifically reviewed mechanism; absent evidence means no transmission.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F50",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 9.4",
+      "requirement": "Injured/neglected stray generation and months-long rehabilitation",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2-health",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HEALTH",
+        "T-TRANSACTION",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Neglected stray and severe rehabilitation takes calibrated weeks/months with care/resources, never one-click cure.",
+      "evidence": [
+        "E-NATIVE",
+        "E-IDENTITY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F51",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 10",
+      "requirement": "Optional exposure/incubation/symptoms/terminal Knox illness",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-ZOMBIE"
+      ],
+      "milestone": "M8",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-DEATH"
+      ],
+      "acceptance": "Demonstrate optional exposure/incubation/symptoms/terminal knox illness with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-DEATH",
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F52",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 10",
+      "requirement": "Hostile canine reanimation attacking players/dogs/NPCs",
+      "technical_dependency": [
+        "B-HEALTH",
+        "B-ZOMBIE"
+      ],
+      "milestone": "M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-DEATH"
+      ],
+      "acceptance": "Proved hostile canine entity/attack/animation/sync lifecycle revokes companion commands and retains terminal history.",
+      "evidence": [
+        "E-DEATH",
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F53",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 11",
+      "requirement": "Canine fitness/endurance/running/strength/agility skills",
+      "technical_dependency": [
+        "B-TASK",
+        "B-HEALTH"
+      ],
+      "milestone": "M3/M6/M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-WORK",
+        "T-PACK"
+      ],
+      "acceptance": "Demonstrate canine fitness/endurance/running/strength/agility skills with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F54",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 11",
+      "requirement": "Obedience/stealth/impulse control/pack coordination",
+      "technical_dependency": [
+        "B-TASK",
+        "B-HEALTH"
+      ],
+      "milestone": "M3/M6/M7",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-WORK",
+        "T-PACK"
+      ],
+      "acceptance": "Demonstrate obedience/stealth/impulse control/pack coordination with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F55",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 11",
+      "requirement": "Scent/tracking/search/discrimination skills",
+      "technical_dependency": [
+        "B-TASK",
+        "B-HEALTH"
+      ],
+      "milestone": "M3/M6/M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-WORK",
+        "T-PACK"
+      ],
+      "acceptance": "Demonstrate scent/tracking/search/discrimination skills with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F56",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 11",
+      "requirement": "Retrieval/hauling/guarding/hunting/foraging/fishing/herding/assistance",
+      "technical_dependency": [
+        "B-TASK",
+        "B-HEALTH"
+      ],
+      "milestone": "M3/M6/M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-WORK",
+        "T-PACK"
+      ],
+      "acceptance": "Demonstrate retrieval/hauling/guarding/hunting/foraging/fishing/herding/assistance with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F57",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 11",
+      "requirement": "Comfort as welfare; age/size/health/fatigue capability limits",
+      "technical_dependency": [
+        "B-TASK",
+        "B-HEALTH"
+      ],
+      "milestone": "M3/M6/M7",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-WORK",
+        "T-PACK"
+      ],
+      "acceptance": "Demonstrate comfort as welfare; age/size/health/fatigue capability limits with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F58",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 12",
+      "requirement": "Modular learned odor registry",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate modular learned odor registry with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F59",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 12",
+      "requirement": "Narcotics targets through optional DO93 adapter",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Adapter maps verified public FullTypes/tags to trained odors only; absence disables adapter without mod failure.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F60",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 12",
+      "requirement": "Gunpowder/ammunition/specific object scent",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate gunpowder/ammunition/specific object scent with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F61",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 12",
+      "requirement": "Wildlife/people tracking scent",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Human scent persistence is independently proved; wildlife tracks do not imply human trail APIs.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F62",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 12.1",
+      "requirement": "Staged introduction/discrimination/false alerts/indication/proofing",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate staged introduction/discrimination/false alerts/indication/proofing with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F63",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 12.1",
+      "requirement": "Environmental scent effects",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Environment/occlusion affects actual scent accessibility through reviewed evidence; weather values alone do not prove plume simulation.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F64",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 13",
+      "requirement": "Locate downed game/retrieve suitable small prey",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate locate downed game/retrieve suitable small prey with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F65",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 13",
+      "requirement": "Natural-resource indication/designated search areas",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate natural-resource indication/designated search areas with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F66",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 13",
+      "requirement": "Locate dropped fishing equipment",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Demonstrate locate dropped fishing equipment with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F67",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 13",
+      "requirement": "Floating retrieval/fishing assistance beyond dropped items",
+      "technical_dependency": [
+        "B-SCENT",
+        "B-TASK"
+      ],
+      "milestone": "M6",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-SCENT",
+        "T-WORK",
+        "T-COMPATIBILITY"
+      ],
+      "acceptance": "Prove water path/reach/floating item identity/physical return; never expose hidden fish knowledge.",
+      "evidence": [
+        "E-CONTENT",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F68",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 14",
+      "requirement": "Lightweight carrying/appropriate saddlebag transport",
+      "technical_dependency": [
+        "B-INVENTORY",
+        "B-TASK"
+      ],
+      "milestone": "M6/M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRANSACTION",
+        "T-WORK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Original native carrying capacity/weight/identity succeeds without Companion Dogs; historical CD primitive cannot become standalone VERIFIED.",
+      "evidence": [
+        "E-CARRY",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F69",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 14",
+      "requirement": "Designated-item retrieval/drop zones/familiar-player delivery",
+      "technical_dependency": [
+        "B-INVENTORY",
+        "B-TASK"
+      ],
+      "milestone": "M6/M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRANSACTION",
+        "T-WORK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Demonstrate designated-item retrieval/drop zones/familiar-player delivery with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-CARRY",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F70",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 14.1",
+      "requirement": "Deposit into open basket/crate/reachable open trunk",
+      "technical_dependency": [
+        "B-INVENTORY",
+        "B-TASK"
+      ],
+      "milestone": "M6/M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRANSACTION",
+        "T-WORK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Actual item enters reachable open permitted basket/crate/trunk exactly once; dog cannot open arbitrary closed/locked container.",
+      "evidence": [
+        "E-CARRY",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F71",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 15",
+      "requirement": "Drag bags/backpacks/small loads",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-INVENTORY",
+        "B-HEALTH"
+      ],
+      "milestone": "M7/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-LOGISTICS",
+        "T-ADVANCED",
+        "T-HEALTH"
+      ],
+      "acceptance": "Demonstrate drag bags/backpacks/small loads with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-DEATH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F72",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 15",
+      "requirement": "True ragdoll dragging/cooperative multi-dog loads",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-INVENTORY",
+        "B-HEALTH"
+      ],
+      "milestone": "M7/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-LOGISTICS",
+        "T-ADVANCED",
+        "T-HEALTH"
+      ],
+      "acceptance": "True physics/shared loads require native-safe collision/animation/ownership and one load, not cosmetic movement.",
+      "evidence": [
+        "E-DEATH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F73",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 15.1",
+      "requirement": "Corpse zone collection/destination/individual claims",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-INVENTORY",
+        "B-HEALTH"
+      ],
+      "milestone": "M7/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-LOGISTICS",
+        "T-ADVANCED",
+        "T-HEALTH"
+      ],
+      "acceptance": "Demonstrate corpse zone collection/destination/individual claims with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-DEATH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F74",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 15.1",
+      "requirement": "Corpse contamination/injury restrictions",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-INVENTORY",
+        "B-HEALTH"
+      ],
+      "milestone": "M7/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-LOGISTICS",
+        "T-ADVANCED",
+        "T-HEALTH"
+      ],
+      "acceptance": "Corpse contamination/injury uses reviewed disease/health mechanism and restrictions.",
+      "evidence": [
+        "E-DEATH"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F75",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 16",
+      "requirement": "Zombie attraction/redirection/escape/recall/disengagement",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-TASK"
+      ],
+      "milestone": "M8",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-CUES",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Native sound/perception/escape supports bounded redirection; no guaranteed horde control/survival.",
+      "evidence": [
+        "E-ZOMBIE",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F76",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 17",
+      "requirement": "Squeaky toys/audible and remote lures/deliver-retreat tasks",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-TASK"
+      ],
+      "milestone": "M8",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-CUES",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Demonstrate squeaky toys/audible and remote lures/deliver-retreat tasks with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-ZOMBIE",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F77",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 17",
+      "requirement": "Toy launcher/compatible thrown objects",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-TASK"
+      ],
+      "milestone": "M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-CUES",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Prove launcher trajectory/landing object/native item identity and safe recovery.",
+      "evidence": [
+        "E-ZOMBIE",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F78",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 17",
+      "requirement": "Optional explosive projectile interoperability",
+      "technical_dependency": [
+        "B-PHYSICS",
+        "B-TASK"
+      ],
+      "milestone": "M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-CUES",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Select and clean-room audit actual optional projectile interface; never armed-explosive dog transport.",
+      "evidence": [
+        "E-ZOMBIE",
+        "E-NATIVE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F79",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 18",
+      "requirement": "Affiliation/familiarity/cooperation/tension/resources/preference/influence",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M7",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-PACK",
+        "T-TASK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Demonstrate affiliation/familiarity/cooperation/tension/resources/preference/influence with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F80",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 18.1",
+      "requirement": "Dynamic task leadership/uncommon disputes",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-PACK",
+        "T-TASK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Task-specific influence is dynamic; no rigid alpha; uncommon fights depend on stress/compatibility/resources.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F81",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 18.2",
+      "requirement": "Follow/stay/search/guard/recall/disengage group orders",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-PACK",
+        "T-TASK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Each group member independently meets cue/skill/health conditions and has one task lease.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F82",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 18.2",
+      "requirement": "Return home/retrieve/haul/clear bodies group tasks",
+      "technical_dependency": [
+        "B-TASK",
+        "B-STORE"
+      ],
+      "milestone": "M7",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-PACK",
+        "T-TASK",
+        "T-LOGISTICS"
+      ],
+      "acceptance": "Demonstrate return home/retrieve/haul/clear bodies group tasks with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-NATIVE",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F83",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 19",
+      "requirement": "Paw icon, expandable vertical list, hover/pinned panels",
+      "technical_dependency": [
+        "B-STORE",
+        "B-TASK"
+      ],
+      "milestone": "M1B/M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-CUES",
+        "T-LOCALIZATION"
+      ],
+      "acceptance": "Demonstrate paw icon, expandable vertical list, hover/pinned panels with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F84",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 19.1",
+      "requirement": "Overview/health/training/skills/behavior/welfare/equipment/relationships/tasks",
+      "technical_dependency": [
+        "B-STORE",
+        "B-TASK"
+      ],
+      "milestone": "M1B/M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-CUES",
+        "T-LOCALIZATION"
+      ],
+      "acceptance": "Demonstrate overview/health/training/skills/behavior/welfare/equipment/relationships/tasks with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F85",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 19.2",
+      "requirement": "UI scaling/controller/tooltips/state-aware menu/failure explanations",
+      "technical_dependency": [
+        "B-STORE",
+        "B-TASK"
+      ],
+      "milestone": "M1B/M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-CUES",
+        "T-LOCALIZATION"
+      ],
+      "acceptance": "Keyboard/controller can reach every hover action with scaling, focus, tooltips and accurate refusal.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F86",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 20",
+      "requirement": "Hold radial/F-key configurable bindings/no overwrite",
+      "technical_dependency": [
+        "B-STORE",
+        "B-TASK"
+      ],
+      "milestone": "M1B/M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-CUES",
+        "T-LOCALIZATION"
+      ],
+      "acceptance": "Hold/toggle radial and configurable F-key bindings do not overwrite existing bindings.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F87",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 20",
+      "requirement": "Sit/down/stay/heel/recall/place/release",
+      "technical_dependency": [
+        "B-STORE",
+        "B-TASK"
+      ],
+      "milestone": "M1B/M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-CUES",
+        "T-LOCALIZATION"
+      ],
+      "acceptance": "All seven foundation cues cause distinct actual server-observed behavior with individual duration/distance/distraction proof.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F88",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 20.1",
+      "requirement": "Overhead named speech and vanilla vocalization",
+      "technical_dependency": [
+        "B-STORE",
+        "B-TASK"
+      ],
+      "milestone": "M1B/M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-CUES",
+        "T-LOCALIZATION"
+      ],
+      "acceptance": "Named overhead speech and verified vocalization replicate appropriately; no audible output for silent cues.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F89",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 21",
+      "requirement": "Home/safehouse eat/drink/rest/sleep/stress recovery/social settle",
+      "technical_dependency": [
+        "B-TASK",
+        "B-INVENTORY",
+        "B-DOOR"
+      ],
+      "milestone": "M4",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HOME",
+        "T-BIOLOGY",
+        "T-DOOR"
+      ],
+      "acceptance": "Home actions consume actual reachable resources/ACL and game time; no instant need/anxiety reset.",
+      "evidence": [
+        "E-NATIVE",
+        "E-DOOR"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F90",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 22",
+      "requirement": "Probabilistic residential/rural/police/military/shelter/POI spawns",
+      "technical_dependency": [
+        "B-ASSET",
+        "B-IDENTITY"
+      ],
+      "milestone": "M2-population",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-ASSET"
+      ],
+      "acceptance": "Reload-safe weighted original population choices remain probabilistic; POIs/breed/history never guarantee police training.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-ASSET"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F91",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 22",
+      "requirement": "Additional breeds such as French Bulldog",
+      "technical_dependency": [
+        "B-ASSET",
+        "B-IDENTITY"
+      ],
+      "milestone": "M2-population",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-POPULATION",
+        "T-ASSET"
+      ],
+      "acceptance": "Every additional approved breed has original/licensed editable assets and native registry/animation evidence.",
+      "evidence": [
+        "E-REGISTRY",
+        "E-ASSET"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F92",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 23",
+      "requirement": "Catch poles/portable kennels/crates/harness/protective gear",
+      "technical_dependency": [
+        "B-VEHICLE",
+        "B-PHYSICS"
+      ],
+      "milestone": "M7/M8",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-TRANSPORT",
+        "T-ADVANCED"
+      ],
+      "acceptance": "Demonstrate catch poles/portable kennels/crates/harness/protective gear with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-TRAILER",
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F93",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 23.1",
+      "requirement": "8–10 compartment kennel truck with size/comfort/ventilation/identity",
+      "technical_dependency": [
+        "B-VEHICLE",
+        "B-PHYSICS"
+      ],
+      "milestone": "M7/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-TRANSPORT",
+        "T-ADVANCED"
+      ],
+      "acceptance": "Original8–10-compartment truck has unique size/ventilation/comfort/occupancy and native restart/transport proof.",
+      "evidence": [
+        "E-TRAILER",
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F94",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 23.2",
+      "requirement": "Optional zombie pole restraint/escape/grapple",
+      "technical_dependency": [
+        "B-VEHICLE",
+        "B-PHYSICS"
+      ],
+      "milestone": "M7/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-TRANSPORT",
+        "T-ADVANCED"
+      ],
+      "acceptance": "Pole restraint uses proved targeting/collision/escape/authority and never makes zombie permanently harmless.",
+      "evidence": [
+        "E-TRAILER",
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F95",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 24",
+      "requirement": "UI manual/in-world handbook/tooltips/first-time guidance/troubleshooting",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "Every slice/M9",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-INPUT",
+        "T-LOCALIZATION",
+        "T-RELEASE"
+      ],
+      "acceptance": "Demonstrate ui manual/in-world handbook/tooltips/first-time guidance/troubleshooting with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-UI",
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F96",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 25.1",
+      "requirement": "Invalid/stale/unauthorized/replayed/conflicting request rejection",
+      "technical_dependency": [
+        "B-STORE",
+        "B-IDENTITY"
+      ],
+      "milestone": "M1B/Every slice",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-PROTOCOL",
+        "T-RECOVERY",
+        "T-SANDBOX"
+      ],
+      "acceptance": "Demonstrate invalid/stale/unauthorized/replayed/conflicting request rejection with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-FILES",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F97",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 25.2",
+      "requirement": "Schema migrations/restart/backup/unknown data preservation",
+      "technical_dependency": [
+        "B-STORE",
+        "B-IDENTITY"
+      ],
+      "milestone": "M1B/Every slice",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-PROTOCOL",
+        "T-RECOVERY",
+        "T-SANDBOX"
+      ],
+      "acceptance": "Paired private/native recovery preserves unknown schemas and histories; mismatched stores quarantine without reroll.",
+      "evidence": [
+        "E-FILES",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F98",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 26",
+      "requirement": "Grouped server-authoritative sandbox options/localization/save policy",
+      "technical_dependency": [
+        "B-STORE",
+        "B-IDENTITY"
+      ],
+      "milestone": "M1B/Every slice",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-PROTOCOL",
+        "T-RECOVERY",
+        "T-SANDBOX"
+      ],
+      "acceptance": "Demonstrate grouped server-authoritative sandbox options/localization/save policy with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-FILES",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F99",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 27",
+      "requirement": "Bounded milestones and optional advanced feature gates",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M0R/M9",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-VERSION",
+        "T-RELEASE"
+      ],
+      "acceptance": "Demonstrate bounded milestones and optional advanced feature gates with server-observed eligible events, preserved identity/private records, resources, and relevant restart/MP checks; no client success.",
+      "evidence": [
+        "E-ENVIRONMENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "DOCUMENTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F100",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 28,29",
+      "requirement": "Dedicated/multi-client/performance/regression/Linux validation",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M0R/M9",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-VERSION",
+        "T-RELEASE"
+      ],
+      "acceptance": "Exact-revision dedicated two-client/Linux/runtime evidence and bounded benchmarks precede G8; offline does not PASS G7.",
+      "evidence": [
+        "E-ENVIRONMENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F101",
+      "provenance": "Historical F01-F101; USER_HANDOFF sections 30",
+      "requirement": "Seven Milestone 0 technical documents only",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M0R/M9",
+      "classification": "VERIFIED",
+      "acceptance_tests": [
+        "T-VERSION",
+        "T-RELEASE"
+      ],
+      "acceptance": "Preserve the seven historical M0reports/provenance and deliver thirteen current M0Rcontracts with honest validation.",
+      "evidence": [
+        "E-ENVIRONMENT"
+      ],
+      "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
+      "implementation_status": "DOCUMENTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F102",
+      "provenance": "Standalone master sections 1.1–1.3",
+      "requirement": "Original native canine species/breed registry and dedicated spawn",
+      "technical_dependency": [
+        "B-ASSET",
+        "B-ENV"
+      ],
+      "milestone": "M1A",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-REGISTRY"
+      ],
+      "acceptance": "Original shared definitions load before native cache; one validated server spawn without dog-mod dependencies.",
+      "evidence": [
+        "E-REGISTRY"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F103",
+      "provenance": "Standalone master sections 1.2–1.3",
+      "requirement": "Original canine model/skeleton/skin/animation/death body/avatar",
+      "technical_dependency": [
+        "B-ASSET"
+      ],
+      "milestone": "M1A",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-ASSET"
+      ],
+      "acceptance": "Every reachable native state and UI avatar resolves original assets on both clients, preserving editable provenance.",
+      "evidence": [
+        "E-ASSET"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F104",
+      "provenance": "Standalone master sections 1.2,2.4",
+      "requirement": "Native headless movement/navigation/collision/synchronization",
+      "technical_dependency": [
+        "B-TASK",
+        "B-ENV"
+      ],
+      "milestone": "M1A/M1C",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-NATIVE",
+        "T-TASK"
+      ],
+      "acceptance": "Real native routes/collision and late-join sync; one server decision/physical writer, no position lease.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F105",
+      "provenance": "Standalone master sections 1.2,30",
+      "requirement": "Pristine/effective class and Lua-only capability baseline",
+      "technical_dependency": [
+        "B-ENV"
+      ],
+      "milestone": "M1A",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-ENVIRONMENT"
+      ],
+      "acceptance": "Actual client/dedicated class/launcher baseline excludes required agents/injected classes/custom JARs.",
+      "evidence": [
+        "E-ENVIRONMENT"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F106",
+      "provenance": "Standalone master sections 2.1",
+      "requirement": "Original allocation/carrier/generation and duplicate quarantine",
+      "technical_dependency": [
+        "B-IDENTITY",
+        "B-STORE"
+      ],
+      "milestone": "M1B/M1C",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-IDENTITY",
+        "T-TRANSPORT",
+        "T-GROWTH"
+      ],
+      "acceptance": "UUIDworld/dog and proved carrier survive each declared lifecycle; missing/duplicate/growth markers never auto-adopt.",
+      "evidence": [
+        "E-IDENTITY",
+        "E-GROWTH"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F107",
+      "provenance": "Standalone master sections 2.2",
+      "requirement": "Private persistence/world pairing/schema/rollback recovery",
+      "technical_dependency": [
+        "B-STORE"
+      ],
+      "milestone": "M1B",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-PRIVACY",
+        "T-RECOVERY"
+      ],
+      "acceptance": "No private record in public ModData; matched native/private checkpoint or explicit quarantine; paired backups.",
+      "evidence": [
+        "E-FILES",
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F108",
+      "provenance": "Standalone master sections 2.3",
+      "requirement": "Authenticated roles/projections/protocol/receipts from first slice",
+      "technical_dependency": [
+        "B-STORE",
+        "B-IDENTITY"
+      ],
+      "milestone": "M1B",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-AUTH",
+        "T-PROTOCOL",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Authenticated actor ACL before allowlisted projection; replay/version mismatch/stale handles safely refused.",
+      "evidence": [
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F109",
+      "provenance": "Standalone master sections 2.4–2.5",
+      "requirement": "Per-field native arbitration and task interrupt/recovery",
+      "technical_dependency": [
+        "B-TASK"
+      ],
+      "milestone": "M1C",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-TASK",
+        "T-NATIVE"
+      ],
+      "acceptance": "Native behavior competition and pre/postcommit cancellation/resume preserve exactly one writer.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F110",
+      "provenance": "Standalone master sections 25.1",
+      "requirement": "Distinct bladder/bowel/urgency/intake/age/illness physiology",
+      "technical_dependency": [
+        "B-WASTE",
+        "B-HEALTH"
+      ],
+      "milestone": "M2",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Owned extension fields progress once, remain separate from native hunger/thirst and cannot retain indefinitely.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F111",
+      "provenance": "Standalone master sections 25.1",
+      "requirement": "Loaded/unloaded/carried/kenneled/vehicle/offline bounded time",
+      "technical_dependency": [
+        "B-IDENTITY",
+        "B-WASTE",
+        "B-STORE"
+      ],
+      "milestone": "M2/M1C",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-BIOLOGY",
+        "T-RECOVERY"
+      ],
+      "acceptance": "Equal game hours produce equivalent owned state without double native catch-up or wall-clock aging.",
+      "evidence": [
+        "E-CARRY",
+        "E-FILES"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F112",
+      "provenance": "Standalone master sections 25.2",
+      "requirement": "Physical visible persistent urine puddles",
+      "technical_dependency": [
+        "B-WASTE"
+      ],
+      "milestone": "M2",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-WASTE"
+      ],
+      "acceptance": "Unique real valid-surface urine object persists/drys/decays/cleans once; descriptor never remains invisible-stat substitute.",
+      "evidence": [
+        "E-WORLD"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F113",
+      "provenance": "Standalone master sections 25.2",
+      "requirement": "Physical persistent feces objects/collection/disposal",
+      "technical_dependency": [
+        "B-WASTE",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-WASTE",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Real feces object has stable identity/age and one physical collection/disposal commit.",
+      "evidence": [
+        "E-WORLD"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F114",
+      "provenance": "Standalone master sections 25.2",
+      "requirement": "Safe placement/decay/odor/cleaning/carrier anchors",
+      "technical_dependency": [
+        "B-WASTE",
+        "B-INVENTORY"
+      ],
+      "milestone": "M2",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-WASTE",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "No waste at stale transported tile/inaccessible geometry; bounded volume/age/decay and exact cleanup.",
+      "evidence": [
+        "E-WORLD"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F115",
+      "provenance": "Standalone master sections 25.3",
+      "requirement": "Independent housebreaking0–5/history/positive reinforcement",
+      "technical_dependency": [
+        "B-STORE",
+        "B-WASTE"
+      ],
+      "milestone": "M3",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-TRAINING",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Previous household proficiency independent of work/breed; real suitable elimination earns learning; punishment never grants bonus.",
+      "evidence": [
+        "E-PRIVACY"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F116",
+      "provenance": "Standalone master sections 25.4",
+      "requirement": "Temperament-based signals/alerts/state-aware relief actions",
+      "technical_dependency": [
+        "B-TASK",
+        "B-ASSET"
+      ],
+      "milestone": "M3",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-BIOLOGY",
+        "T-INPUT"
+      ],
+      "acceptance": "Pacing/whining/body-language and clear bounded alerts; only meaningful actions; no click-for-XP.",
+      "evidence": [
+        "E-UI",
+        "E-ASSET"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F117",
+      "provenance": "Standalone master sections 25.5",
+      "requirement": "Persistent relief areas/home ACL/shared-zone safe routes",
+      "technical_dependency": [
+        "B-TASK",
+        "B-DOOR"
+      ],
+      "milestone": "M3/M4",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-HOME",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Multiple dogs share valid permitted relief zones; no horde route, stale restart task or per-tick replan.",
+      "evidence": [
+        "E-NATIVE",
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F118",
+      "provenance": "Standalone master sections 25.5",
+      "requirement": "Blocked exit/emergency accident/return to prior task",
+      "technical_dependency": [
+        "B-TASK",
+        "B-WASTE",
+        "B-DOOR"
+      ],
+      "milestone": "M3/M4",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-BIOLOGY",
+        "T-DOOR"
+      ],
+      "acceptance": "Urgency interrupts Stay/work; signal/replan/real accident at valid anchor, then revalidated safe resume.",
+      "evidence": [
+        "E-NATIVE",
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F119",
+      "provenance": "Standalone master sections 25.6,29",
+      "requirement": "Independent physiology/learning/autonomy/waste controls",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "Every slice",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-SANDBOX",
+        "T-BIOLOGY"
+      ],
+      "acceptance": "Four switches preserve records, no native need takeover and no deletion when disabled; core profile enables all.",
+      "evidence": [
+        "E-LOCALIZATION"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F120",
+      "provenance": "Standalone master sections 26.1",
+      "requirement": "Door support matrix/materials/tools/install/remove/repair",
+      "technical_dependency": [
+        "B-DOOR",
+        "B-INVENTORY"
+      ],
+      "milestone": "M4",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Verified supported vanilla/playerbuilt/modded doors; correct real item/skill/tool completion; unsupported types show reason.",
+      "evidence": [
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F121",
+      "provenance": "Standalone master sections 26.1",
+      "requirement": "Small/medium/large/XL/reinforced/electronic size variants",
+      "technical_dependency": [
+        "B-ASSET",
+        "B-DOOR"
+      ],
+      "milestone": "M4",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-ASSET"
+      ],
+      "acceptance": "Opening uses actual dog dimensions/clearance, independent of breed name; original variant assets.",
+      "evidence": [
+        "E-ASSET",
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F122",
+      "provenance": "Standalone master sections 26.2",
+      "requirement": "Bidirectional/entry/exit/lock/electronic collar ACL",
+      "technical_dependency": [
+        "B-DOOR"
+      ],
+      "milestone": "M4",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-AUTH"
+      ],
+      "acceptance": "Server-owned modes/ACL/collarIDs persist; main native door open/closed/locked function intact.",
+      "evidence": [
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F123",
+      "provenance": "Standalone master sections 26.2",
+      "requirement": "Electronic power/battery/power-loss physical policy",
+      "technical_dependency": [
+        "B-DOOR"
+      ],
+      "milestone": "M4",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-TRANSACTION"
+      ],
+      "acceptance": "Proved consumption/lock transition and safe in-flight result; no collar infection detector.",
+      "evidence": [
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F124",
+      "provenance": "Standalone master sections 26.3",
+      "requirement": "Learned physical selective flap traversal/task resumption",
+      "technical_dependency": [
+        "B-DOOR",
+        "B-TASK"
+      ],
+      "milestone": "M4",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-TASK"
+      ],
+      "acceptance": "Real collision-safe native/proved transition through aperture; no teleport/globalcollision disable.",
+      "evidence": [
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F125",
+      "provenance": "Standalone master sections 26.3",
+      "requirement": "Opposing dogs/obstruction/unload/power loss midtraverse",
+      "technical_dependency": [
+        "B-DOOR",
+        "B-TASK"
+      ],
+      "milestone": "M4",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-RECOVERY"
+      ],
+      "acceptance": "Serialized safe crossing/yield and revalidated recovery; no stuck/duplicate dog or stale route.",
+      "evidence": [
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F126",
+      "provenance": "Standalone master sections 26.4",
+      "requirement": "Flap durability/barricade/security/emergency lockdown",
+      "technical_dependency": [
+        "B-DOOR"
+      ],
+      "milestone": "M4/M5",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-DOOR",
+        "T-SECURITY"
+      ],
+      "acceptance": "Actual barricade geometry/reinforcement/damage; manual names only proven security consequences.",
+      "evidence": [
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F127",
+      "provenance": "Standalone master sections 27.1–27.2",
+      "requirement": "Zombie investigation/reach/scratch/damage separate from pass",
+      "technical_dependency": [
+        "B-ZOMBIE"
+      ],
+      "milestone": "M5",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SECURITY"
+      ],
+      "acceptance": "Verified perception and native damage respond to real opening/lock/obstruction; damage never implies traversal.",
+      "evidence": [
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F128",
+      "provenance": "Standalone master sections 27.2",
+      "requirement": "Zombie size/posture crawl/squeeze physical passage",
+      "technical_dependency": [
+        "B-ZOMBIE",
+        "B-DOOR"
+      ],
+      "milestone": "M5/M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-SECURITY"
+      ],
+      "acceptance": "Proved closed-door native aperture transition and sync; no replacement/teleport/whole-door bypass.",
+      "evidence": [
+        "E-ZOMBIE",
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F129",
+      "provenance": "Standalone master sections 27.3",
+      "requirement": "Flap sounds/dog alert/bark/retreat genuine perception",
+      "technical_dependency": [
+        "B-ZOMBIE",
+        "B-TASK"
+      ],
+      "milestone": "M5",
+      "classification": "EXPERIMENTAL",
+      "acceptance_tests": [
+        "T-SECURITY",
+        "T-CUES"
+      ],
+      "acceptance": "World sounds/perception and trained reactions real; barking can attract more zombies, silent alerts remain silent.",
+      "evidence": [
+        "E-ZOMBIE"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F130",
+      "provenance": "Standalone master sections 27.3",
+      "requirement": "Infected/reanimated canine opening/collar behavior",
+      "technical_dependency": [
+        "B-ZOMBIE",
+        "B-DOOR"
+      ],
+      "milestone": "M8",
+      "classification": "BLOCKED",
+      "acceptance_tests": [
+        "T-ADVANCED",
+        "T-DOOR"
+      ],
+      "acceptance": "Separate hostile-canine proof; valid physical collar may still grant access; no magical infection detection.",
+      "evidence": [
+        "E-ZOMBIE",
+        "E-DOOR"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F131",
+      "provenance": "Standalone master sections 2.6,28",
+      "requirement": "Bounded scheduling/network/pathfinding/waste/zombie work",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "Every slice/M9",
+      "classification": "FEASIBLE",
+      "acceptance_tests": [
+        "T-PERFORMANCE"
+      ],
+      "acceptance": "Measure declared budgets/nativebaseline with bounded fair queues and no global per-tick scans.",
+      "evidence": [
+        "E-NATIVE"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "NOT STARTED",
+      "runtime_status": "NOT TESTED"
+    },
+    {
+      "id": "F132",
+      "provenance": "Standalone master sections 28–31",
+      "requirement": "Thirteen M0Rcontracts/source evidence/current entry points",
+      "technical_dependency": [
+        "B-RUNTIME"
+      ],
+      "milestone": "M0R",
+      "classification": "VERIFIED",
+      "acceptance_tests": [
+        "T-VERSION"
+      ],
+      "acceptance": "All requested docs/IDs/tests/settings/keys exist; history intact; runtime gates remain unpassed.",
+      "evidence": [
+        "E-ENVIRONMENT"
+      ],
+      "authority": "Server domain plus native physical writer; client presentation only.",
+      "implementation_status": "DOCUMENTED",
+      "runtime_status": "NOT TESTED"
+    }
+  ]
+}

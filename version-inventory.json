@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "canonical": "VERSION",
+  "mirrors": [
+    {
+      "path": "README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VERSIONING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/M0R_SOURCE_EVIDENCE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/HISTORICAL_RESEARCH_INDEX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/STANDALONE_CANINE_FEASIBILITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_STATE_OWNERSHIP_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CANINE_IDENTITY_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/TASK_ARBITRATION_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MILESTONE_DEPENDENCY_GRAPH.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SANDBOX_SETTINGS_REGISTRY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LOCALIZATION_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CANINE_BIOLOGY_TIME_MODEL.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MINIMUM_PLAYABLE_RELEASE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MULTIPLAYER_ACCEPTANCE_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/FEATURE_TRACEABILITY_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/M0R_VALIDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/contracts/feature_traceability.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/historical_inventory.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/localization_keys.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/native_evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/sandbox_settings.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    }
+  ],
+  "changelog": {
+    "path": "CHANGELOG.md",
+    "pattern": "^## \\[(?P<version>[^\\]]+)\\]"
+  },
+  "packaging": {
+    "artifacts": [
+      {
+        "glob": "dist/current/*.zip",
+        "pattern": "B47ANCEDDogTraining-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip"
+      }
+    ]
+  },
+  "other_versions": [
+    {
+      "category": "pz",
+      "reference": "docs/VANILLA_API_AUDIT.md",
+      "reason": "Installed native build is independent of project SemVer"
+    },
+    {
+      "category": "dependency",
+      "reference": "research/SOURCE_MANIFEST.json",
+      "reason": "Observed third-party metadata versions remain upstream values"
+    },
+    {
+      "category": "framework",
+      "reference": "docs/VERSION_POLICY.md",
+      "reason": "Policy/checker provenance, not project version"
+    },
+    {
+      "category": "inventory-schema",
+      "reference": "version-inventory.json:schema",
+      "reason": "Version-check format"
+    },
+    {
+      "category": "compatibility",
+      "reference": "docs/PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md",
+      "reason": "Proposed store/marker/protocol schema1 is separate from Project Version; not implemented."
+    }
+  ],
+  "historical": [
+    {
+      "reference": "docs/COMPANION_DOGS_SOURCE_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/DOGPACK_COMPATIBILITY_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/DRUGS_OF_93_COMPATIBILITY_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/FEATURE_FEASIBILITY_MATRIX.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/SERVER_AUTHORITY_DESIGN.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/USER_HANDOFF.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/VALIDATION.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/VANILLA_API_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "research/CD_BACKEND_AUDIT_2026-10-12.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/historical/IMPLEMENTATION_PLAN_M0_ADDON.md",
+      "reason": "Verbatim former implementation plan preserved before authorized current-entry replacement."
+    },
+    {
+      "reference": "docs/requirements/STANDALONE_MASTER_HANDOFF.md",
+      "reason": "Immutable supplied standalone gameplay requirements snapshot; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/M0R_REQUEST.md",
+      "reason": "Immutable authorized M0R request snapshot; not a current version mirror."
+    }
+  ]
+}
