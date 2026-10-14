@@ -1,6 +1,6 @@
 # Private persistence and recovery contract
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
 M0R design, 2026-10-12. FEASIBLE conservative storage protocol; crash/power-loss durability and coordinated native saves EXPERIMENTAL. Transactional gameplay is BLOCKED until reconciliation/durability acceptance. Lua-only; no Java bridge fallback. [Evidence](M0R_SOURCE_EVIDENCE.md), [identity](CANINE_IDENTITY_CONTRACT.md), [tasks](TASK_ARBITRATION_CONTRACT.md).
 

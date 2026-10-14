@@ -194,6 +194,10 @@
     {
       "reference": "docs/requirements/M0R_REQUEST.md",
       "reason": "Immutable authorized M0R request snapshot; not a current version mirror."
+    },
+    {
+      "reference": "art/german_shepherd/history/gsd-v001/",
+      "reason": "Original art reports and builder at 0.1.0-dev.1 / gsd-v001; full asset recovery commit recorded alongside. Not current proof."
     }
   ]
 }

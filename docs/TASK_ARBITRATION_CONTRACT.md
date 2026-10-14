@@ -1,6 +1,6 @@
 # Task arbitration contract
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
 M0R design, 2026-10-12. FEASIBLE state machine; native task-control seam EXPERIMENTAL and gameplay gate BLOCKED until proved. Lua-only. [Ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [time model](CANINE_BIOLOGY_TIME_MODEL.md), [transactions/recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md).
 

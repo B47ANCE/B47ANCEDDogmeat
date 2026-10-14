@@ -1,55 +1,53 @@
-# German Shepherd authoring asset
+# German Shepherd authoring candidate
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
-2026-10-14 authoring checkpoint; asset revision `gsd-v001`. Original adult black-and-tan German Shepherd blockout with a standing pose and experimental deformation rig. German Shepherd is the first requested breed. The current asset does **not meet the user's realistic visual quality standard** and has no production art approval; it does not select or implement the proposed native research prototype.
+Asset revision: `gsd-v002`. Rebuilt 2026-10-14 from original authored geometry, with a shorter neck, broader cranium/muzzle, revised chest and paws, curved ear shells, eyelids/irises, mouth interior, teeth and a continuous tongue. The coat uses three 2048-pixel maps and skinned mesh guard hairs. This is an **unapproved authoring candidate**. The supplied realistic benchmark has **not been met**; structural checks are not visual acceptance.
 
-![Original German Shepherd Blender render](previews/german_shepherd.png)
+![Actual Blender render](previews/german_shepherd.png)
 
-## User's visual quality benchmark — 2026-10-14
+## Benchmark and visual verdict
 
-The user supplied the [CGTrader Dogs big pack](https://www.cgtrader.com/3d-model-packs/dogs-big-pack) and two screenshots, including a detailed German Shepherd close-up, as the required quality standard. Target: believable real-time dogs with convincing breed anatomy, detailed fur and facial materials, and natural deformation. The references establish the visual benchmark; no commercial model, texture or rig has been acquired or incorporated.
+The user supplied the [CGTrader Dogs big pack](https://www.cgtrader.com/3d-model-packs/dogs-big-pack) and a detailed German Shepherd screenshot as the quality requirement. No commercial model, texture, rig or animation was acquired or incorporated. The original blockout is preserved at commit `38aef659dda253accc6c1062a7b123273f9404a4`, with original reports and a recovery record in [history/gsd-v001](history/gsd-v001/README.md).
 
-The seller describes 13,000–17,000 triangles per dog, 2048 x 2048 albedo/alpha, surface-property and normal maps, 54–57 bones and four LOD levels. These are seller specifications, not independently tested assets or mandatory PZ settings. Our existing 16,668-triangle count is within that advertised range, yet the visual quality is substantially below the reference. Increasing polygon count alone does not resolve the shape, surface and deformation work.
+The rebuild was inspected repeatedly in real Blender renders and independently reviewed against the supplied screenshot. It improves the first blockout, but still reads as a procedural/stylized dog. It must not be described as matching the commercial reference or ready for production.
 
-| Acceptance area | Required result | Current blockout gap |
+| Area | Changes in v002 | Remaining visual gate |
 |---|---|---|
-| Breed anatomy | Coherent skull/cheeks/neck, substantial chest, natural shoulder-to-ribcage and pelvis-to-thigh transitions, believable knee/hock placement and paw proportions | Small simplified head, tubular body/limbs and lumpy mass transitions |
-| Face and expression | Eyes seated in shaped sockets with eyelids, defined brow, cupped ears, shaped nose/nostrils, mouth interior with teeth and tongue for panting/open-mouth poses | Simple eye/nose shapes, thin lip line and no mouth interior |
-| Fur surface | Region-specific hair direction and length, layered color variation, readable undercoat and saddle, fine surface relief and controlled highlights | Smooth coat with broad color masks and slight procedural grain |
-| Fur silhouette and paws | Natural neck ruff, chest/haunch/tail feathering, tapered bushy tail, distinct compact toes and integrated claws | Smooth outlines, narrow ear wedges and rounded simplified feet |
-| Deformation | Deliberate joint/face topology, skin weights and corrective work that retain volume through locomotion and expressive poses | Triangulated blockout topology and automatic weights tested only with four probes |
-| Review evidence | Comparable neutral-light full-body views, head/paw/fur close-ups, clay anatomy views, moving joint checks and readability at the intended PZ camera scale | Current renders show the blockout and pipeline operation; production visual acceptance remains NOT MET |
+| Anatomy | Broader head and chest, shorter neck, abdominal tuck, thicker forelegs and compact toes | Convincing skull/neck/shoulder proportions, joint transitions and pelvic anatomy still require sculpting refinement |
+| Face | Eyelids, amber irises, nose/nostrils, lips, teeth and continuous tongue | Natural recessed sockets, facial planes, lip anatomy and nose integration remain below the reference |
+| Ears | Closed curved shells with recessed front bowls | Insets/rims need more organic transitions and internal fur |
+| Coat | Original generated fur detail mapped into albedo, tangent normal and roughness; skin-anchored mesh hairs | Regional grooming and fine strand detail need refinement; repeated/embossed patterns remain visible in close-ups |
+| Silhouette | Ruff/haunch/tail hairs and toe shapes | More natural feathering and tail edges needed; current guard-hair mesh is costly |
+| Deformation | Exact skin-root fur transfer; head/limb/tail and jaw/ear probes | Automatic triangulated weights and sparse poses do not establish animation-quality topology or locomotion |
 
-The next modeling pass must establish accurate anatomy and facial construction before detailed fur/material authoring. Select texture resolution, normal/roughness use and any fur-edge geometry through authoring tests and verified PZ rendering support; the reference screenshots do not prove those shader features work in PZ. Compare the resulting model against this benchmark before expanding to other breeds. Technical export checks, GitHub CI and triangle counts never substitute for visual acceptance.
+The model's dense authoring groom is substantially above the reference pack's advertised 13,000–17,000 triangles per dog. It is a review master, **not an optimized game model**. PZ shader support and performance budgets remain unverified. Do not substitute increased polygon count or technical validation for the visual requirement.
 
-## Editable source and review files
+## Files and evidence
 
 | File | Purpose |
 |---|---|
-| [source/german_shepherd.blend](source/german_shepherd.blend) | Canonical editable mesh, UVs, original deformation rig, packed texture and isolated preview studio |
-| [source/build_german_shepherd.py](source/build_german_shepherd.py) | Original procedural authoring source; rebuilds owned asset outputs in a fresh standalone process |
-| [textures/coat_albedo.png](textures/coat_albedo.png) | Original 1024 x 1024 black-and-tan coat atlas, generated from independently authored spatial masks |
-| [interchange/german_shepherd.glb](interchange/german_shepherd.glb) | Skinned, textured review interchange; **not a verified PZ native format** |
-| [source/validate_german_shepherd.py](source/validate_german_shepherd.py) | Independent source reopen, provenance, skin, topology and GLB roundtrip checks |
-| [validation/asset_validation.json](validation/asset_validation.json) | Exact geometry, dimensions, weights, pose probes and owned output SHA-256 hashes |
-| [validation/roundtrip_validation.json](validation/roundtrip_validation.json) | Separate reopened-source and imported-GLB evidence |
+| [source/german_shepherd.blend](source/german_shepherd.blend) | Editable, packed Blender scene, original rig and preview studio |
+| [interchange/german_shepherd.glb](interchange/german_shepherd.glb) | Skinned mesh review interchange; not verified PZ native format |
+| [source/build_german_shepherd.py](source/build_german_shepherd.py) | Standalone builder and render orchestration |
+| [source/shepherd_anatomy.py](source/shepherd_anatomy.py) | Original anatomical forms, facial details and matched rest-skeleton refinement |
+| [source/shepherd_coat.py](source/shepherd_coat.py) | UV coat maps and exact skin-vertex-root mesh groom |
+| [source/validate_german_shepherd.py](source/validate_german_shepherd.py) | Independent reopen/import checks and imported-GLB render |
+| [textures/GENERATION.md](textures/GENERATION.md) | Built-in image-generation tool provenance and exact fur-detail prompt |
+| [validation/asset_validation.json](validation/asset_validation.json) | Current build counts, pose measurements and output hashes |
+| [validation/roundtrip_validation.json](validation/roundtrip_validation.json) | Independent source/import evidence and imported-preview hash |
 
-The body has 10,500 triangles. Total geometry, including eyes, ear interiors, mouth lines, claws and toe details, has 16,668 triangles across 42 mesh objects. One original 29-bone deformation skeleton has independent front/rear upper, lower, pastern and foot bones on both sides, head/jaw/ears, trunk and four tail bones. All vertices have normalized weights with at most four influences. These are measured authoring counts, not an established PZ performance budget. Native LODs remain unimplemented.
+Review the [head](previews/head_closeup.png), [paws](previews/paws_closeup.png), [coat](previews/coat_closeup.png), [side](previews/side.png), [front](previews/front.png), [rear](previews/rear.png), [clay](previews/clay.png), [posed three-quarter](previews/deformation_check.png), [posed side](previews/deformation_side.png), [160-pixel silhouette](previews/silhouette_160.png) and [reimported GLB](previews/imported_glb.png). These are actual model renders, not generated concept illustrations.
 
-Authoring conventions: metres, Z up, head +X; identity mesh/armature object transforms, root at the body centerline near the floor. The GLB exporter uses its glTF axis conversion and the roundtrip restores the measured world-space bounds. PZ axes, units, rest skeleton, attachment conventions and importer mapping remain [UNKNOWN]. Bone labels are original authoring names, not claimed native engine identifiers.
+Measured current geometry: **230,061 triangles**, comprising 24,000 body triangles, 189,465 groom triangles (63,155 strands), and 16,596 facial/detail triangles across 63 objects. This is authoring detail, not an established PZ budget.
 
-## Provenance and visual intent
+Authoring conventions remain metres, Z up, head +X, identity mesh/rig transforms. The original skeleton has 29 bones. Bone labels are independent authoring names, not verified PZ identifiers. The exported fur consists of actual colored mesh ribbons with skin weights; it does not depend on Blender hair particles or unexported procedural shading. Skin weights are normalized to at most four influences. The body is one closed connected outer mesh; intentionally open fur/ear inset surfaces are assessed separately.
 
-No third-party or vanilla dog mesh, rig, texture, animation, photograph or sculpt was imported, traced or copied. Body geometry, accessories, UVs, coat painting function, weights and studio are independently authored in the included build script. Anatomy references informed general proportions only: the [FCI/SV breed standard](https://www.fci.be/Nomenclature/Standards/166g01-en.pdf) and [AKC breed standard](https://cdn.akc.org/GermanShepherdDog.pdf). The selected approximately 62 cm withers target and moderate standing silhouette are art choices, not a veterinary or conformation assessment.
+## Reproduction and validation scope
 
-The supplied consolidated handoff was consulted as reference: this base corresponds to a large shepherd body concept and one requested coat. Other coat variants, breed genetics, mixed ancestry, equipment/bandages, injury clips, diagnostic visuals and hidden-condition metadata are not implemented. There are no authored action clips or root-motion proof. The posed render is an isolated deformation probe, not a locomotion animation or medical state.
+Use a fresh standalone Blender-Python process. The builder resets that process's scene and overwrites only current owned asset outputs. Its source modules and original fur-detail PNG must remain together. Toolchain: Windows, CPython 3.13.7, Blender Python 5.2.2 LTS, NumPy and Pillow. These are authoring tools, never PZ runtime dependencies.
 
-## Tested boundary and reproduction
-
-[TESTED Windows offline] Blender Python 5.2.2 LTS / CPython 3.13.7; NumPy and Pillow authoring tools. The official `bpy` wheel was used in an isolated, ignored local toolchain because no live Blender connection was available. Tools are not shipped with the art or required by a runtime mod. Run from repository root in a **fresh standalone process**; the builder resets that process's scene and overwrites only its owned asset outputs.
-
-Exact commands used on this machine:
+Exact commands used on this machine, from repository root:
 
 ```powershell
 $assetPython = '.m0r-local/art-tools/python313/python.exe'
@@ -59,14 +57,15 @@ $docsPython = 'C:/Users/willi/.cache/codex-runtimes/codex-primary-runtime/depend
 & $docsPython -B scripts/check_versions.py --root . --json
 & $docsPython -B scripts/validate_m0r.py
 & $docsPython -B scripts/audit_public_push.py
+git diff --cached --check
 ```
 
-The build and independent checks pass: closed, connected main body; no degenerate body faces; finite geometry; normalized skin weights; portable packed texture; valid UVs; preserved triangle count/bone names/hierarchy/bounds and four nontrivial head/foreleg/hindleg/tail deformation probes after GLB reimport. Imported UV seam vertices are welded only in a disposable topology-check copy at 0.000001 m tolerance. Source and export files are not altered by that check. Poses reset to neutral in both the saved source and GLB.
+The optional `--draft` produces three quick views and marks `DRAFT_ONLY`; `--no-render` produces no current preview proof. Complete validation rejects either checkpoint. Draft rejection was exercised during this rebuild. The full builder records the explicit eleven-view set rendered in that run, excluding stale leftover images. The separate validator renders the freshly imported GLB and records its hash.
 
-The builder's optional `--no-render` creates an intermediate source/export checkpoint, marks previews unrendered and excludes cached previews from its new provenance. Complete validation rejects that checkpoint until the default build rerenders all seven views. This rejection was tested before the final default rebuild and passing validation; older images cannot silently establish current visual evidence.
+[TESTED Windows offline, 0.1.0-dev.2 / gsd-v002] Source reopen, provenance and independent GLB roundtrip: **PASS**. Maximum sampled fur-root error under the four posed body tests: 0.000651 m. Source/import material maps, vertex colors, skin weights and facial ownership checks passed. The exporter drops weights at or below 0.0001 by its verified implementation; validation compares that normalized result and separately holds posed-position differences below 0.00002 m. Visual benchmark acceptance remains **NOT MET**.
 
-Visually inspected [three-quarter](previews/german_shepherd.png), [side](previews/side.png), [front](previews/front.png), [rear](previews/rear.png), [clay](previews/clay.png), [deformation probe](previews/deformation_check.png) and [160-pixel silhouette](previews/silhouette_160.png). These remain blockout/pipeline evidence. Subsequent user-supplied references establish a realistic quality target that this asset does not meet. Automatic weights need animation-driven refinement and native rig mapping. The geometry is triangulated authoring topology, not a completed animation retopology pass. The recorded structural test results remain evidence for their original scope only.
+Validation checks finite geometry, connected/manifold body, UVs, three packed/embedded material maps with live albedo/normal/roughness connections, normalized skin weights, hierarchy, dimensions, matching triangles/objects and posed source/import results. An initial barycentric weight interpolation failed the 3 mm fur-root motion limit; the groom was corrected to inherit exact body-vertex roots/weights. Sampled fur roots are checked against deformed skin, then matched to imported vertices for pose, weight and color comparison. Jaw/ear ownership includes a lower-tooth motion probe and an upper-tooth stationarity check. These structural probes are not a gait, corrective deformation, native animation or production art approval.
 
-[RUNTIME GATE] PZ import, native definitions/registration, rest skeleton mapping, enabled-state animation set, corpse/avatar/attachments, runtime performance and dedicated synchronization are **NOT TESTED**. T-ASSET remains unpassed. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No game/server launch, deployment, runtime package, Workshop publication, stable tag or main merge was performed.
+[RUNTIME GATE] PZ model import, scale/axes, native rig mapping, registration, complete enabled-state clips, corpse/avatar/attachments, LOD/performance and dedicated synchronization remain NOT TESTED. T-ASSET remains unpassed. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, deployment, runtime package, Workshop upload, stable tag or main merge was performed.
 
-Canonical project version remains unchanged: no shipped gameplay, API, save or sandbox behavior changed. `gsd-v001` identifies this art checkpoint separately from project SemVer. The original M0R evidence remains dated historical evidence and is not relabeled as asset or runtime validation.
+The project advances to 0.1.0-dev.2 as a compatible art-development checkpoint. No gameplay, API, save or sandbox behavior changed. M0R/native observations retain their original 0.1.0-dev.1 dates and scope; updated current contract headers do not refresh that evidence.

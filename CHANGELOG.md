@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0-dev.2] — 2026-10-14
+
+- Rebuild gsd-v002 with revised anatomy/facial parts, original generated fur detail, 2048 albedo/normal/roughness maps, weighted mesh guard hairs and an editable Blender/GLB review candidate. The realistic visual benchmark remains NOT MET; no production art approval.
+- Compatible art-development checkpoint: no gameplay, API, save or sandbox changes; release core remains 0.1.0.
+- Preserve gsd-v001 reports and recovery commit as historical evidence. Extend independent validation to material connections, facial ownership, exact skin-root fur attachment and imported fur colors/weights/deformation; retain actual tool outcomes in the asset reports.
+- Windows offline source reopen/GLB roundtrip, version and M0R consistency checks passed. Maximum sampled posed fur-root error was 0.000651 m. These results do not establish visual quality or PZ runtime compatibility.
+- G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## [0.1.0-dev.1] — 2026-10-12
 
 - Establish the user-authorized Milestone 0 documentation project.

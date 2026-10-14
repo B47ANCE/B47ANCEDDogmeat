@@ -1,12 +1,12 @@
 # M0R validation and remaining blockers
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
-Date: 2026-10-12. Environment: Windows offline documentation/native source inspection. No gameplay prototype/assets implemented, PZ/server launched, deployment, package or Workshop publication. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+Historical M0R evidence date: 2026-10-12; tested project version: 0.1.0-dev.1. The current header identifies the contract edition. Environment: Windows offline documentation/native source inspection. At that evidence checkpoint no gameplay prototype/assets were implemented, and no PZ/server launch, deployment, package or Workshop publication occurred. Later gsd-v002 authoring evidence is separate under art/german_shepherd. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
 
 ## Compatibility and evidence
 
-Current/target documentation version remains0.1.0-dev.1: compatible documentation correction/architecture design, no shipped gameplay/save/API/configuration surface changed. Future gameplay/release target requires its own decision. Current mirrors are inventoried; historical results retain their observed versions. Old implementation plan is preserved verbatim before the authorized current-entry update.
+Current project version is 0.1.0-dev.2 for a compatible art-development checkpoint; the historical M0R documentation result below remains tested at 0.1.0-dev.1. No shipped gameplay/save/API/configuration surface changed. Future gameplay/release target requires its own decision. Current mirrors are inventoried; historical results retain their observed versions. Old implementation plan is preserved verbatim before the authorized current-entry update.
 
 [M0R_SOURCE_EVIDENCE.md](M0R_SOURCE_EVIDENCE.md) records exact signatures/lines/bytecode offsets and44 current hashes. Native Lua registry/spawn/model, nonclient updates/synchronization, marker save/load/carry/trailer/corpse and cache-file primitives exist. Larger original canine, task/lifecycle/private durability/physical waste/door capabilities remain unproved. Fresh native growth replacement does not demonstrate marker transfer; broad old ModData-growth assertion stays historical.
 
@@ -23,7 +23,7 @@ $m0rPython = 'C:/Users/willi/.cache/codex-runtimes/codex-primary-runtime/depende
 git diff --cached --check
 ```
 
-Before-edit version check: PASS at0.1.0-dev.1, declared mirrors only; absent packages deferred. Post-edit version consistency: PASS. [TESTED Windows offline] Current structural/native check: STATIC PASS; thirteen required docs,132 IDs/original101 names,79 setting schemas/parents/bounds,303 keys/29-language policy,35 acceptance scenario definitions,11 preserved historical Markdown hashes and44 native input hashes; no errors. Two local managed .agents skill files changed concurrently outside M0R authoring and were preserved; these ignored guidance files are not product source or historical audit reports. All other protected pre-edit files remain unchanged. The validator is read-only and does not execute acceptance scenarios, canine behavior, native Lua logic, medical balance or Linux runtime. Old validate_audit.py was not run because it rewrites historical add-on evidence.
+Before-edit version check: PASS at0.1.0-dev.1, declared mirrors only; absent packages deferred. Post-edit version consistency: PASS. [TESTED Windows offline, 0.1.0-dev.1, 2026-10-12] Historical structural/native check: STATIC PASS; thirteen required docs,132 IDs/original101 names,79 setting schemas/parents/bounds,303 keys/29-language policy,35 acceptance scenario definitions,11 preserved historical Markdown hashes and44 native input hashes; no errors. Two local managed .agents skill files changed concurrently outside M0R authoring and were preserved; these ignored guidance files are not product source or historical audit reports. All other protected pre-edit files remain unchanged. The validator is read-only and does not execute acceptance scenarios, canine behavior, native Lua logic, medical balance or Linux runtime. Old validate_audit.py was not run because it rewrites historical add-on evidence.
 
 ## Gates
 

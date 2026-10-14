@@ -1,6 +1,8 @@
 # M0R native source evidence and exact limits
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
+
+Native observations below were recorded at 0.1.0-dev.1 on 2026-10-12. This current contract header is not a new native inspection or runtime result; the gsd-v002 art rebuild does not change those observations.
 
 Evidence date: 2026-10-12. Environment: Windows offline vanilla Lua/file/class inspection. No game class executed and no custom Java mod/bridge built. Canonical current hash inventory: [native_evidence.json](contracts/native_evidence.json). G = installed ProjectZomboid root; P = this repository. Raw native binaries/decompiled research remain local under research and are excluded from public Git; the public index contains facts, signatures and hashes only.
 

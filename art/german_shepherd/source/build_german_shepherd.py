@@ -18,7 +18,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT.parents[1]
-REVISION = "gsd-v001"
+REVISION = "gsd-v002"
 MODEL = []
 PARTS = []
 
@@ -49,6 +49,7 @@ def material(name, color, roughness=.6, metallic=0):
     shader = next(n for n in mat.node_tree.nodes if n.type == 'BSDF_PRINCIPLED')
     shader.inputs['Base Color'].default_value = (*linear(color), 1)
     shader.inputs['Roughness'].default_value = roughness
+    shader.inputs['Specular IOR Level'].default_value = .25
     shader.inputs['Metallic'].default_value = metallic
     mat.diffuse_color = (*linear(color), 1)
     return mat
@@ -143,229 +144,6 @@ def curve_mesh(name, points, radius, mat):
     return bpy.context.object
 
 
-def anatomy():
-    tube('Trunk', [((-.432, 0, .48), .009, .016), ((-.405, 0, .475), .055, .074), ((-.34, 0, .47), .10, .117),
-                  ((-.24, 0, .467), .104, .132), ((-.12, 0, .468), .10, .118),
-                  ((.03, 0, .466), .12, .145), ((.16, 0, .47), .125, .15),
-                  ((.265, 0, .477), .112, .144), ((.33, 0, .472), .088, .12),
-                  ((.355, 0, .463), .035, .077), ((.382, 0, .466), .009, .025)], 28)
-    # Ruff and shoulder blend into the chest. Back is firm, not a show-stack dip.
-    tube('NeckRuff', [((.205, 0, .481), .104, .133), ((.302, 0, .542), .106, .124),
-                     ((.372, 0, .610), .090, .10), ((.436, 0, .665), .073, .083),
-                     ((.481, 0, .70), .066, .070), ((.518, 0, .710), .048, .047)], 28)
-    tube('Skull', [((.426, 0, .704), .055, .065), ((.48, 0, .713), .079, .071),
-                  ((.527, 0, .713), .083, .069), ((.575, 0, .701), .071, .059),
-                  ((.618, 0, .682), .052, .04)], 28)
-    tube('Muzzle', [((.574, 0, .671), .059, .045), ((.62, 0, .665), .05, .039),
-                   ((.668, 0, .664), .042, .032), ((.719, 0, .663), .034, .025),
-                   ((.754, 0, .665), .03, .022)], 24)
-    tube('LowerJaw', [((.57, 0, .646), .048, .024), ((.626, 0, .637), .043, .018),
-                     ((.69, 0, .638), .032, .013), ((.741, 0, .647), .026, .012)], 20)
-    for side, sign in [('L', 1), ('R', -1)]:
-        y = .088 * sign
-        ellipsoid('Shoulder_' + side, (.247, .073 * sign, .45), (.072, .044, .103), part=True)
-        tube('Foreleg_' + side, [((.248, .067 * sign, .535), .025, .031),
-                                 ((.242, y, .46), .041, .052), ((.218, y, .367), .032, .038),
-                                 ((.228, y, .308), .025, .029), ((.231, y, .265), .022, .024),
-                                 ((.246, y, .166), .018, .021), ((.25, y, .11), .017, .020),
-                                 ((.251, y, .071), .02, .023), ((.27, y, .038), .028, .027)], 16)
-        ellipsoid('ForePaw_' + side, (.284, y, .032), (.058, .036, .03), part=True)
-        y = .09 * sign
-        ellipsoid('Haunch_' + side, (-.311, .067 * sign, .44), (.078, .057, .113), part=True)
-        tube('Hindleg_' + side, [((-.322, .059 * sign, .502), .028, .034),
-                                 ((-.316, y, .435), .045, .057), ((-.255, y, .352), .043, .053),
-                                 ((-.216, y, .286), .034, .039), ((-.279, y, .22), .025, .03),
-                                 ((-.36, y, .134), .023, .025), ((-.352, y, .071), .018, .021),
-                                 ((-.333, y, .039), .026, .023)], 16)
-        ellipsoid('HindPaw_' + side, (-.311, y, .03), (.052, .034, .028), part=True)
-        # Closed, cupped triangular ears, broad roots fused into the skull.
-        ey = sign * .06
-        verts = [(.548, ey - .036, .740), (.548, ey + .036, .740),
-                 (.513, ey + sign * .027, .900), (.535, ey + sign * .009, .801),
-                 (.482, ey - .036, .740), (.482, ey + .036, .740),
-                 (.495, ey + sign * .027, .897)]
-        # Watertight triangular prism with an inset front center for the cup.
-        mesh_obj('Ear_' + side, verts, [(0, 1, 3), (1, 2, 3), (2, 0, 3),
-                                        (4, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2),
-                                        (2, 6, 4, 0)], part=True)
-    tube('Tail', [((-.393, 0, .475), .034, .038), ((-.473, 0, .42), .036, .043),
-                 ((-.539, .012, .351), .04, .047), ((-.605, .022, .269), .041, .048),
-                 ((-.677, .033, .192), .037, .043), ((-.749, .043, .16), .027, .032),
-                 ((-.795, .048, .17), .011, .016), ((-.816, .05, .183), .003, .004)], 24)
-    select(PARTS)
-    bpy.ops.object.join()
-    dog = bpy.context.object
-    dog.name = 'GSD_CoatBody'
-    # Fix primitive winding before union; the final outer surface is one mesh.
-    bpy.ops.object.mode_set(mode='EDIT')
-    bpy.ops.mesh.select_all(action='SELECT')
-    bpy.ops.mesh.normals_make_consistent(inside=False)
-    bpy.ops.object.mode_set(mode='OBJECT')
-    dog.data.remesh_voxel_size = .0035
-    bpy.ops.object.voxel_remesh()
-    smooth = dog.modifiers.new('SurfaceRelax', 'SMOOTH')
-    smooth.factor = .7
-    smooth.iterations = 3
-    apply(dog, smooth)
-    triangles = sum(len(p.vertices) - 2 for p in dog.data.polygons)
-    dec = dog.modifiers.new('AuthoringBudget', 'DECIMATE')
-    dec.ratio = min(1, 10500 / triangles)
-    apply(dog, dec)
-    tri = dog.modifiers.new('StableTriangles', 'TRIANGULATE')
-    apply(dog, tri)
-    for face in dog.data.polygons:
-        face.use_smooth = True
-    dog['asset_revision'] = REVISION
-    dog['provenance'] = 'Original independently authored geometry; no imported mesh or rig.'
-    MODEL.append(dog)
-    return dog
-
-
-def coat_color(points):
-    """Original spatial black/tan pattern, evaluated at texture-pixel positions."""
-    x, y, z = points.T
-    ay = np.abs(y)
-    wave = .008 * np.sin(x * 53 + z * 27) + .003 * np.sin(x * 137 - z * 89)
-    tan = np.tile(np.array([.57, .345, .158]), (len(points), 1))
-    warm = np.clip((z - .06) / .45, 0, 1)
-    tan += warm[:, None] * np.array([.08, .038, .014])
-    # Ventral feathering / throat are warm buff, keeping paws darker than chest.
-    cream = np.clip((.38 - z) / .10, 0, 1) * np.clip((x + .03) / .25, 0, 1)
-    cream *= np.clip((.09 - ay) / .045, 0, 1)
-    tan += cream[:, None] * np.array([.16, .15, .105])
-    saddle_edge = .445 + .05 * np.clip((x + .10) / .4, 0, 1) + wave
-    saddle = np.clip((z - saddle_edge) / .035, 0, 1)
-    saddle *= np.clip((.335 - x) / .095, 0, 1) * np.clip((x + .44) / .09, 0, 1)
-    # Neck's outer ruff, forehead, muzzle and ear backs.
-    nape = np.clip((z - (.585 + .45 * (x - .34))) / .045, 0, 1)
-    nape *= np.clip((x - .28) / .07, 0, 1) * np.clip((.54 - x) / .07, 0, 1)
-    mask = np.clip((x - .605) / .035, 0, 1) * np.clip((z - .61) / .04, 0, 1)
-    forehead = np.clip((z - .734) / .016, 0, 1) * np.clip((x - .44) / .06, 0, 1)
-    forehead *= np.clip((.625 - x) / .03, 0, 1)
-    tail = np.clip((-x - .405) / .055, 0, 1)
-    eye_mask = .94 * np.exp(-((x - .600) / .063) ** 2 - ((z - .713) / .033) ** 2)
-    eye_mask *= np.clip((x - .537) / .028, 0, 1)
-    dark = np.maximum.reduce([saddle, nape, mask, forehead, tail, eye_mask])
-    # Small tan eyebrow marks leave the long black mask legible.
-    brow = np.exp(-((x - .585) / .026) ** 2 - ((ay - .047) / .031) ** 2 - ((z - .729) / .010) ** 2)
-    cheek = np.exp(-((x - .588) / .034) ** 2 - ((ay - .06) / .022) ** 2 - ((z - .665) / .025) ** 2)
-    dark *= 1 - .83 * brow
-    dark *= 1 - .7 * cheek
-    charcoal = np.tile(np.array([.042, .048, .055]), (len(points), 1))
-    charcoal += np.clip((z - .35) / .5, 0, 1)[:, None] * np.array([.023, .019, .015])
-    color = tan * (1 - dark[:, None]) + charcoal * dark[:, None]
-    # Deterministic fine coat grain, no external photographic input.
-    grain = (np.sin(x * 1801 + y * 823 + z * 937) * np.sin(x * 137 - y * 1481 + z * 571))
-    strand = np.sin(x * 310 + y * 1430 + z * 715)
-    color *= (1 + .020 * grain + .012 * strand)[:, None]
-    return np.clip(color, 0, 1)
-
-
-def texture(dog):
-    select([dog])
-    bpy.ops.object.mode_set(mode='EDIT')
-    bpy.ops.mesh.select_all(action='SELECT')
-    bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=.013)
-    bpy.ops.object.mode_set(mode='OBJECT')
-    size = 1024
-    pixels = np.zeros((size, size, 3), dtype=np.uint8)
-    filled = np.zeros((size, size), dtype=bool)
-    uvdata = dog.data.uv_layers.active.data
-    for face in dog.data.polygons:
-        uv = np.array([tuple(uvdata[i].uv) for i in face.loop_indices]) * (size - 1)
-        xyz = np.array([tuple(dog.data.vertices[i].co) for i in face.vertices])
-        lo = np.floor(uv.min(axis=0)).astype(int).clip(0, size - 1)
-        hi = np.ceil(uv.max(axis=0)).astype(int).clip(0, size - 1)
-        if np.any(hi < lo):
-            continue
-        xx, yy = np.meshgrid(np.arange(lo[0], hi[0] + 1), np.arange(lo[1], hi[1] + 1))
-        q = np.stack([xx.ravel(), yy.ravel()], axis=1) + .5
-        a, b, c = uv
-        determinant = (b[1] - c[1]) * (a[0] - c[0]) + (c[0] - b[0]) * (a[1] - c[1])
-        if abs(determinant) < 1e-8:
-            continue
-        wa = ((b[1] - c[1]) * (q[:, 0] - c[0]) + (c[0] - b[0]) * (q[:, 1] - c[1])) / determinant
-        wb = ((c[1] - a[1]) * (q[:, 0] - c[0]) + (a[0] - c[0]) * (q[:, 1] - c[1])) / determinant
-        weights = np.stack([wa, wb, 1 - wa - wb], axis=1)
-        inside = np.all(weights >= -1e-5, axis=1)
-        rows = yy.ravel()[inside]
-        cols = xx.ravel()[inside]
-        pixels[rows, cols] = np.round(coat_color(weights[inside] @ xyz) * 255).astype(np.uint8)
-        filled[rows, cols] = True
-    # Eight-pixel padding prevents dark UV seams in filtered/mipped views.
-    coverage = float(filled.mean())
-    for _ in range(8):
-        old = filled.copy()
-        for axis, direction in [(0, 1), (0, -1), (1, 1), (1, -1)]:
-            neighbor = np.roll(old, direction, axis=axis)
-            take = (~filled) & neighbor
-            pixels[take] = np.roll(pixels, direction, axis=axis)[take]
-            filled[take] = True
-    pixels[~filled] = [104, 67, 36]
-    path = ROOT / 'textures' / 'coat_albedo.png'
-    Image.fromarray(np.flipud(pixels)).save(path)
-    image = bpy.data.images.load(str(path), check_existing=True)
-    image.name = 'GSD_OriginalCoat_1024'
-    image.pack()
-    image.filepath = '//../textures/coat_albedo.png'
-    mat = material('GSD_Coat', (.5, .3, .15), .84)
-    nodes = mat.node_tree.nodes
-    shader = next(n for n in nodes if n.type == 'BSDF_PRINCIPLED')
-    tex = nodes.new('ShaderNodeTexImage')
-    tex.image = image
-    mat.node_tree.links.new(tex.outputs['Color'], shader.inputs['Base Color'])
-    dog.data.materials.clear()
-    dog.data.materials.append(mat)
-    return coverage
-
-
-def features():
-    dark = material('GSD_LipEyelid', (.052, .046, .04), .68)
-    nosemat = material('GSD_Nose', (.035, .039, .043), .48)
-    eyemat = material('GSD_DarkAmberEye', (.115, .057, .022), .16)
-    pupilmat = material('GSD_Pupil', (.007, .008, .009), .11)
-    inner = material('GSD_EarInterior', (.30, .215, .165), .9)
-    nailmat = material('GSD_Claw', (.13, .115, .10), .57)
-    nose = ellipsoid('GSD_Nose', (.755, 0, .669), (.02, .032, .021), nosemat)
-    MODEL.append(nose)
-    for side, sign in [('L', 1), ('R', -1)]:
-        ey = sign * .06
-        verts = [(.543, ey - .020, .774), (.543, ey + .022, .774),
-                 (.520, ey + sign * .021, .86), (.538, ey + sign * .008, .800)]
-        inset = mesh_obj('GSD_EarInset_' + side, verts, [(0, 1, 3), (1, 2, 3), (2, 0, 3)])
-        solid = inset.modifiers.new('EarInsetThickness', 'SOLIDIFY')
-        solid.thickness = .002
-        apply(inset, solid)
-        inset.data.materials.append(inner)
-        inset['rig_domain'] = 'ear_' + side
-        MODEL.append(inset)
-        rim = ellipsoid('GSD_EyeLid_' + side, (.588, sign * .061, .711), (.020, .006, .009), dark)
-        eye = ellipsoid('GSD_Eye_' + side, (.591, sign * .065, .712), (.0145, .0032, .0063), eyemat)
-        pupil = ellipsoid('GSD_Pupil_' + side, (.595, sign * .0675, .712), (.0045, .001, .0045), pupilmat, segments=16, rings=10)
-        MODEL.extend([rim, eye, pupil])
-        nostril = ellipsoid('GSD_Nostril_' + side, (.765, sign * .023, .673), (.007, .003, .004), pupilmat, segments=16, rings=10)
-        MODEL.append(nostril)
-        lip = curve_mesh('GSD_MouthLine_' + side,
-                         [(.747, sign * .028, .650), (.713, sign * .035, .645),
-                          (.667, sign * .044, .642), (.619, sign * .051, .640)], .0010, dark)
-        MODEL.append(lip)
-        for front, centerx, centery in [(True, .284, .088 * sign), (False, -.311, .09 * sign)]:
-            domain = ('front_foot_' if front else 'rear_foot_') + side
-            for t in [-1.5, -.5, .5, 1.5]:
-                # Tiny arched toe grooves and claws; four paws stay grounded.
-                nail = ellipsoid('GSD_Claw_' + domain + '_' + str(t),
-                                 (centerx + (.049 if front else .045), centery + t * .015, .019),
-                                 (.010, .004, .0045), nailmat, segments=12, rings=8)
-                nail['rig_domain'] = domain
-                MODEL.append(nail)
-            for t in [-1, 0, 1]:
-                groove = curve_mesh('GSD_Toe_' + domain + '_' + str(t),
-                                    [(centerx + .045, centery + t * .015, .027),
-                                     (centerx + .028, centery + t * .015, .05)], .0007, dark)
-                groove['rig_domain'] = domain
-                MODEL.append(groove)
-
-
 def skeleton():
     arm = bpy.data.armatures.new('GSD_OriginalDeformSkeleton')
     rig = bpy.data.objects.new('GSD_Rig', arm)
@@ -383,25 +161,25 @@ def skeleton():
         definitions[name] = (Vector(head), Vector(tail))
 
     bone('root', (0, 0, .015), (0, 0, .12), deform=False)
-    bone('pelvis', (-.30, 0, .455), (-.15, 0, .47), 'root')
+    bone('pelvis', (-.285, 0, .475), (-.15, 0, .48), 'root')
     bone('spine', (-.15, 0, .47), (.07, 0, .48), 'pelvis')
-    bone('chest', (.07, 0, .48), (.26, 0, .50), 'spine')
-    bone('neck', (.26, 0, .50), (.475, 0, .705), 'chest')
-    bone('head', (.475, 0, .705), (.741, 0, .665), 'neck')
-    bone('jaw', (.577, 0, .642), (.741, 0, .645), 'head')
+    bone('chest', (.07, 0, .48), (.24, 0, .54), 'spine')
+    bone('neck', (.24, 0, .54), (.395, 0, .785), 'chest')
+    bone('head', (.395, 0, .785), (.673, 0, .735), 'neck')
+    bone('jaw', (.48, 0, .722), (.655, 0, .681), 'head')
     for side, sign in [('L', 1), ('R', -1)]:
-        bone('ear_' + side, (.51, sign * .06, .75), (.50, sign * .087, .898), 'head')
-        fy, ry = sign * .088, sign * .09
-        bone('front_upper_' + side, (.24, fy, .46), (.22, fy, .36), 'chest')
-        bone('front_lower_' + side, (.22, fy, .36), (.251, fy, .071), 'front_upper_' + side)
-        bone('front_pastern_' + side, (.251, fy, .071), (.267, fy, .033), 'front_lower_' + side)
-        bone('front_foot_' + side, (.267, fy, .033), (.326, fy, .025), 'front_pastern_' + side)
-        bone('rear_upper_' + side, (-.316, ry, .435), (-.216, ry, .286), 'pelvis')
-        bone('rear_lower_' + side, (-.216, ry, .286), (-.36, ry, .134), 'rear_upper_' + side)
-        bone('rear_pastern_' + side, (-.36, ry, .134), (-.333, ry, .039), 'rear_lower_' + side)
-        bone('rear_foot_' + side, (-.333, ry, .039), (-.268, ry, .023), 'rear_pastern_' + side)
-    tailpoints = [(-.39, 0, .475), (-.50, .006, .39), (-.605, .022, .269),
-                  (-.725, .04, .164), (-.825, .05, .197)]
+        bone('ear_' + side, (.435, sign * .063, .84), (.41, sign * .087, 1.025), 'head')
+        fy, ry = sign * .112, sign * .108
+        bone('front_upper_' + side, (.24, fy, .48), (.20, fy, .37), 'chest')
+        bone('front_lower_' + side, (.20, fy, .37), (.235, fy, .095), 'front_upper_' + side)
+        bone('front_pastern_' + side, (.235, fy, .095), (.264, fy, .038), 'front_lower_' + side)
+        bone('front_foot_' + side, (.264, fy, .038), (.34, fy, .025), 'front_pastern_' + side)
+        bone('rear_upper_' + side, (-.285, ry, .459), (-.214, ry, .295), 'pelvis')
+        bone('rear_lower_' + side, (-.214, ry, .295), (-.342, ry, .134), 'rear_upper_' + side)
+        bone('rear_pastern_' + side, (-.342, ry, .134), (-.318, ry, .037), 'rear_lower_' + side)
+        bone('rear_foot_' + side, (-.318, ry, .037), (-.235, ry, .024), 'rear_pastern_' + side)
+    tailpoints = [(-.363, 0, .498), (-.50, .018, .377), (-.62, .036, .269),
+                  (-.72, .049, .245), (-.79, .055, .276)]
     for i in range(4):
         bone('tail_' + str(i + 1), tailpoints[i], tailpoints[i + 1], 'pelvis' if i == 0 else 'tail_' + str(i))
     bpy.ops.object.mode_set(mode='OBJECT')
@@ -419,9 +197,9 @@ def skeleton():
                 candidates = ['head']
             elif x < -.43:
                 candidates = ['pelvis', 'tail_1', 'tail_2', 'tail_3', 'tail_4']
-            elif z > .750 and x > .44:
+            elif z > .855 and .35 < x < .49:
                 candidates = ['ear_' + side, 'head']
-            elif x > .455 and z > .596:
+            elif x > .445 and z > .69:
                 candidates = ['head', 'neck']
             elif z < .34 and x > .09:
                 candidates = ['front_upper_' + side, 'front_lower_' + side,
@@ -505,12 +283,12 @@ def validate(dog, rig, coverage):
     result = {
         'project_version': (PROJECT / 'VERSION').read_text().strip(),
         'asset_revision': REVISION, 'environment': 'Offline Blender Python ' + bpy.app.version_string,
-        'body_vertices': len(dog.data.vertices), 'body_triangles': len(dog.data.polygons),
+        'body_vertices': len(dog.data.vertices), 'body_triangles': sum(len(p.vertices)-2 for p in dog.data.polygons),
         'total_triangles': sum(sum(len(p.vertices) - 2 for p in obj.data.polygons) for obj in MODEL),
         'mesh_objects': len(MODEL), 'bones': len(rig.data.bones), 'body_nonmanifold_edges': nonmanifold,
         'body_degenerate_faces': degenerate, 'unweighted_vertices': unweighted,
         'invalid_weight_sums': badsum, 'vertices_over_four_influences': overfour,
-        'texture_size': [1024, 1024], 'uv_occupied_fraction_before_padding': round(coverage, 4),
+        'texture_size': [2048, 2048], 'uv_occupied_fraction_before_padding': round(coverage, 4),
         'bounds_min_m': bounds.min(axis=0).round(6).tolist(),
         'bounds_max_m': bounds.max(axis=0).round(6).tolist(),
         'dimensions_m': np.ptp(bounds, axis=0).round(6).tolist(),
@@ -536,20 +314,26 @@ def studio():
     scene.render.image_settings.file_format = 'PNG'
     if scene.world is None:
         scene.world = bpy.data.worlds.new('Studio_World')
-    scene.world.color = (.16, .16, .16)
+    scene.world.color = (.6, .6, .6)
     world = scene.world
     world.use_nodes = True
     background = next(n for n in world.node_tree.nodes if n.type == 'BACKGROUND')
-    background.inputs['Color'].default_value = (.19, .23, .29, 1)
-    background.inputs['Strength'].default_value = .32
+    background.inputs['Color'].default_value = (.67, .70, .75, 1)
+    background.inputs['Strength'].default_value = .45
     scene.view_settings.view_transform = 'AgX'
+    scene.view_settings.look = 'AgX - Medium High Contrast'
+    scene.render.engine = 'CYCLES'
+    scene.cycles.samples = 32
+    scene.cycles.use_denoising = True
+    scene.render.threads_mode = 'FIXED'
+    scene.render.threads = 12
     bpy.ops.mesh.primitive_plane_add(size=200, location=(0, 0, -.002))
     ground = bpy.context.object
     ground.name = 'Studio_Ground'
-    ground.data.materials.append(material('Studio_Slate', (.22, .255, .29), .9))
+    ground.data.materials.append(material('Studio_Slate', (.76, .77, .78), .9))
     for name, location, power, size, color in [
-        ('Studio_Key', (1.6, -2.3, 3.3), 260, 2.5, (1, .88, .75)),
-        ('Studio_Fill', (1, 2.2, 1.5), 125, 2, (.75, .86, 1)),
+        ('Studio_Key', (1.6, -2.3, 3.3), 260, 2.5, (1, .96, .91)),
+        ('Studio_Fill', (1, 2.2, 1.5), 125, 2, (.91, .95, 1)),
         ('Studio_Rim', (-1.8, .7, 2.3), 320, 1.7, (1, .92, .8))]:
         data = bpy.data.lights.new(name, 'AREA')
         data.energy, data.shape, data.size, data.color = power, 'DISK', size, color
@@ -585,67 +369,75 @@ def export_glb(rig):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--no-render', action='store_true')
-    args = parser.parse_args()
-    started = time.time()
-    for folder in ['textures', 'interchange', 'previews', 'validation']:
-        (ROOT / folder).mkdir(parents=True, exist_ok=True)
-    # Factory state belongs exclusively to this standalone authoring process.
+    import sys
+    sys.path.insert(0,str(Path(__file__).resolve().parent))
+    import shepherd_anatomy
+    import shepherd_coat
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--draft',action='store_true',help='Three quick previews; not complete validation')
+    parser.add_argument('--no-render',action='store_true')
+    args=parser.parse_args();started=time.time();g=sys.modules[__name__]
+    for folder in ['textures','interchange','previews','validation']:(ROOT/folder).mkdir(parents=True,exist_ok=True)
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    log('Build original anatomy')
-    dog = anatomy()
-    log('UV and original coat texture')
-    coverage = texture(dog)
-    features()
-    rig = skeleton()
-    for obj in MODEL + [rig]:
-        obj['project_version'] = (PROJECT / 'VERSION').read_text().strip()
-    report = validate(dog, rig, coverage)
-    report['preview_status'] = ('RENDERED_THIS_BUILD' if not args.no_render
-                                else 'NOT RENDERED; cached previews excluded from provenance')
-    log(json.dumps(report, indent=2))
-    export_glb(rig)
-    camera = studio()
-    bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / 'source' / 'german_shepherd.blend'), compress=True)
+    log('Build v002 anatomy');dog=shepherd_anatomy.build(g)
+    log('Build face, ears, mouth and paws');shepherd_anatomy.details(g)
+    rig=skeleton()
+    shepherd_anatomy.refine_proportions(g,rig)
+    log('Paint original 2048 coat maps');coverage=shepherd_coat.texture(g,dog)
+    log('Build skin-anchored guard fur');groom=shepherd_coat.groom(g,dog,rig)
+    for obj in MODEL+[rig]:
+        obj['project_version']=(PROJECT/'VERSION').read_text().strip()
+        obj['asset_revision']=REVISION
+    log('Validate structure');report=validate(dog,rig,coverage)
+    report['fur'] = groom
+    report['preview_status']='NOT RENDERED' if args.no_render else ('DRAFT_ONLY' if args.draft else 'RENDERED_THIS_BUILD')
+    report['quality_status']='AUTHORING CANDIDATE; visual acceptance reviewed separately, never inferred from tests'
+    report['mesh_names']=sorted(o.name for o in MODEL)
+    report['texture_roles']=['albedo','normal','roughness']
+    log('Export review GLB');export_glb(rig)
+    camera=studio();scene=bpy.context.scene
+    hero=(2.6,-3.8,1.48);target=(.0,0,.49);scale=1.88
+    rendered=[]
+    def view(name,position,target=target,scale=scale,size=(1500,1200)):
+        if args.draft:size=(900,720)
+        render(camera,name,position,target,scale,size);rendered.append('previews/'+name+'.png')
+    if args.draft:scene.cycles.samples=16
     if not args.no_render:
-        render(camera, 'german_shepherd', (2.2, -3.7, 1.64), target=(.015, 0, .448), scale=1.86)
-        bpy.data.objects['Studio_Ground'].hide_render = True
-        render(camera, 'side', (0, -4, .44), scale=1.86)
-        render(camera, 'front', (4, 0, .46), scale=1.12, size=(1000, 1000))
-        render(camera, 'rear', (-4, 0, .46), scale=1.12, size=(1000, 1000))
-        bpy.data.objects['Studio_Ground'].hide_render = False
-        clay = material('Studio_Clay', (.49, .56, .61), .9)
-        bpy.context.scene.view_layers[0].material_override = clay
-        render(camera, 'clay', (2.2, -3.7, 1.64), target=(.015, 0, .448), scale=1.86)
-        bpy.context.scene.view_layers[0].material_override = None
-        pose_bone(rig, 'head', -.35, (0, 0, 1))
-        pose_bone(rig, 'tail_2', .5, (0, 0, 1))
-        pose_bone(rig, 'front_lower_L', .5, (0, 1, 0))
-        pose_bone(rig, 'rear_lower_R', -.45, (0, 1, 0))
-        render(camera, 'deformation_check', (2.2, -3.7, 1.64), target=(.015, 0, .448), scale=1.86)
-        reset_pose(rig)
-        bpy.data.objects['Studio_Ground'].hide_render = True
-        render(camera, 'silhouette_160', (0, -4, .44), scale=1.86, size=(160, 120))
-        bpy.data.objects['Studio_Ground'].hide_render = False
-        # Restore the initial review framing in the editable source.
-        camera.location = (2.2, -3.7, 1.64)
-        camera.rotation_euler = (Vector((.015, 0, .448)) - camera.location).to_track_quat('-Z', 'Y').to_euler()
-        camera.data.ortho_scale = 1.86
-        bpy.context.scene.render.resolution_x, bpy.context.scene.render.resolution_y = 1400, 1050
-    bpy.context.scene.render.filepath = '//../previews/german_shepherd.png'
-    # Packed image keeps the canonical source editable and self-contained.
-    select([rig])
-    bpy.ops.wm.save_as_mainfile(filepath=str(ROOT / 'source' / 'german_shepherd.blend'))
-    report['build_seconds'] = round(time.time() - started, 2)
-    folders = ['source', 'textures', 'interchange'] + ([] if args.no_render else ['previews'])
-    report['files'] = {str(p.relative_to(ROOT)).replace('\\', '/'): {
-        'bytes': p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}
-        for folder in folders
-        for p in sorted((ROOT / folder).iterdir()) if p.is_file() and p.suffix != '.blend1'}
-    (ROOT / 'validation' / 'asset_validation.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
-    log('DONE in ' + str(report['build_seconds']) + ' seconds')
+        view('german_shepherd',hero)
+        view('head_closeup',(2.0,-3.4,1.45),(.49,0,.82),.57,(1200,1200))
+        view('side',(0,-4,.53),scale=1.82)
+        if not args.draft:
+            view('front',(4,0,.53),scale=1.20,size=(1100,1300))
+            view('rear',(-4,0,.53),scale=1.20,size=(1100,1300))
+            view('paws_closeup',(1.3,-2.6,.7),(.255,0,.11),.40,(1200,1000))
+            view('coat_closeup',(.10,-3,.88),(.08,-.02,.55),.55,(1200,1000))
+            fur=bpy.data.objects['GSD_GuardFur'];fur.hide_render=True
+            clay=material('Studio_Clay',(.47,.49,.51),.86)
+            scene.view_layers[0].material_override=clay
+            view('clay',hero)
+            scene.view_layers[0].material_override=None;fur.hide_render=False
+            pose_bone(rig,'head',-.28,(0,0,1));pose_bone(rig,'tail_2',.4,(0,0,1))
+            pose_bone(rig,'front_lower_L',.4,(0,1,0));pose_bone(rig,'rear_lower_R',-.35,(0,1,0))
+            pose_bone(rig,'jaw',.12,(0,1,0))
+            view('deformation_check',hero)
+            view('deformation_side',(0,-4,.53),scale=1.82)
+            reset_pose(rig)
+            view('silhouette_160',(0,-4,.53),scale=1.82,size=(160,120))
+    reset_pose(rig)
+    camera.location=hero;camera.rotation_euler=(Vector(target)-camera.location).to_track_quat('-Z','Y').to_euler()
+    camera.data.ortho_scale=scale;scene.render.resolution_x,scene.render.resolution_y=1500,1200
+    scene.render.filepath='//../previews/german_shepherd.png'
+    select([rig]);bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'source'/'german_shepherd.blend'),compress=True)
+    report['rendered_views']=rendered;report['build_seconds']=round(time.time()-started,2)
+    # Validator owns its own hash in the independent report. Editing only a
+    # verification tool must not imply that geometry or rendered pixels changed.
+    owned=[p for folder in ['source','textures','interchange']for p in sorted((ROOT/folder).iterdir())
+           if p.is_file()and p.suffix!='.blend1' and p.name!='validate_german_shepherd.py']
+    owned += [ROOT/p for p in rendered]
+    report['files']={p.relative_to(ROOT).as_posix():{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}for p in owned}
+    (ROOT/'validation'/'asset_validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+    log('DONE '+json.dumps({k:report[k]for k in ['body_triangles','total_triangles','mesh_objects','build_seconds','preview_status']}))
 
 
-if __name__ == '__main__':
+if __name__=='__main__':
     main()

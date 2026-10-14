@@ -1,11 +1,11 @@
 {
-  "project_version": "0.1.0-dev.1",
-  "asset_revision": "gsd-v001",
+  "project_version": "0.1.0-dev.2",
+  "asset_revision": "gsd-v002",
   "environment": "Offline Blender Python 5.2.2 LTS",
-  "body_vertices": 5252,
-  "body_triangles": 10500,
-  "total_triangles": 16668,
-  "mesh_objects": 42,
+  "body_vertices": 12002,
+  "body_triangles": 24000,
+  "total_triangles": 230061,
+  "mesh_objects": 63,
   "bones": 29,
   "body_nonmanifold_edges": 0,
   "body_degenerate_faces": 0,
@@ -13,24 +13,24 @@
   "invalid_weight_sums": 0,
   "vertices_over_four_influences": 0,
   "texture_size": [
-    1024,
-    1024
+    2048,
+    2048
   ],
-  "uv_occupied_fraction_before_padding": 0.3075,
+  "uv_occupied_fraction_before_padding": 0.3603,
   "bounds_min_m": [
-    -0.816611,
-    -0.137975,
-    0.002162
+    -0.789261,
+    -0.163979,
+    0.002653
   ],
   "bounds_max_m": [
-    0.775,
-    0.138013,
-    0.898744
+    0.661243,
+    0.163878,
+    0.987992
   ],
   "dimensions_m": [
-    1.591611,
-    0.275988,
-    0.896582
+    1.450504,
+    0.327857,
+    0.985339
   ],
   "authoring_axes": "Z up; head +X; metres; identity mesh and armature transforms",
   "pose_tests": {
@@ -41,8 +41,8 @@
         0,
         1
       ],
-      "moved_vertices": 1211,
-      "max_displacement_m": 0.0977,
+      "moved_vertices": 2932,
+      "max_displacement_m": 0.106103,
       "finite": true
     },
     "front_lower_L": {
@@ -52,8 +52,8 @@
         1,
         0
       ],
-      "moved_vertices": 514,
-      "max_displacement_m": 0.180917,
+      "moved_vertices": 1427,
+      "max_displacement_m": 0.190864,
       "finite": true
     },
     "rear_lower_R": {
@@ -63,8 +63,8 @@
         1,
         0
       ],
-      "moved_vertices": 661,
-      "max_displacement_m": 0.136159,
+      "moved_vertices": 1532,
+      "max_displacement_m": 0.150747,
       "finite": true
     },
     "tail_2": {
@@ -74,8 +74,8 @@
         0,
         1
       ],
-      "moved_vertices": 533,
-      "max_displacement_m": 0.158269,
+      "moved_vertices": 827,
+      "max_displacement_m": 0.143937,
       "finite": true
     }
   },
@@ -84,56 +84,1084 @@
   "G6": "NOT TESTED",
   "G7": "BLOCKED / NOT TESTED",
   "G8": "BLOCKED",
+  "fur": {
+    "strand_count": 63155,
+    "triangles": 189465,
+    "root_probes": [
+      {
+        "vertex": 0,
+        "body_vertices": [
+          7125,
+          7129,
+          4717
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00031489680228027184
+      },
+      {
+        "vertex": 5000,
+        "body_vertices": [
+          4752,
+          4766,
+          4748
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00030570484600822155
+      },
+      {
+        "vertex": 10000,
+        "body_vertices": [
+          7584,
+          7957,
+          7956
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0003826605980159785
+      },
+      {
+        "vertex": 15000,
+        "body_vertices": [
+          2183,
+          2201,
+          2188
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00042194519269910435
+      },
+      {
+        "vertex": 20000,
+        "body_vertices": [
+          11065,
+          11060,
+          11066
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00023673955600435426
+      },
+      {
+        "vertex": 25000,
+        "body_vertices": [
+          10749,
+          11097,
+          11129
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00022826477694448322
+      },
+      {
+        "vertex": 30000,
+        "body_vertices": [
+          3102,
+          3103,
+          3153
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00032345404775377645
+      },
+      {
+        "vertex": 35000,
+        "body_vertices": [
+          10533,
+          10535,
+          10534
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00024351498359221192
+      },
+      {
+        "vertex": 40000,
+        "body_vertices": [
+          2737,
+          2730,
+          2734
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002938071645318321
+      },
+      {
+        "vertex": 45000,
+        "body_vertices": [
+          6611,
+          6607,
+          6614
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00042500604015064704
+      },
+      {
+        "vertex": 50000,
+        "body_vertices": [
+          2663,
+          2695,
+          2662
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0006510915050045274
+      },
+      {
+        "vertex": 55000,
+        "body_vertices": [
+          8590,
+          8591,
+          8588
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0003770398684479623
+      },
+      {
+        "vertex": 60000,
+        "body_vertices": [
+          691,
+          724,
+          694
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002349578729170034
+      },
+      {
+        "vertex": 65000,
+        "body_vertices": [
+          8316,
+          8327,
+          8329
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0002610010118711246
+      },
+      {
+        "vertex": 70000,
+        "body_vertices": [
+          1607,
+          1752,
+          1614
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00023515109643265696
+      },
+      {
+        "vertex": 75000,
+        "body_vertices": [
+          7706,
+          7704,
+          7689
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0003272899501891592
+      },
+      {
+        "vertex": 80000,
+        "body_vertices": [
+          1088,
+          1081,
+          1086
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00031227424107893765
+      },
+      {
+        "vertex": 85000,
+        "body_vertices": [
+          2510,
+          2497,
+          2481
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0005981390505178433
+      },
+      {
+        "vertex": 90000,
+        "body_vertices": [
+          11651,
+          11660,
+          11640
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00037273701106382075
+      },
+      {
+        "vertex": 95000,
+        "body_vertices": [
+          11827,
+          11826,
+          11857
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002636717308381792
+      },
+      {
+        "vertex": 100000,
+        "body_vertices": [
+          1370,
+          1368,
+          1371
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0003123775817127251
+      },
+      {
+        "vertex": 105000,
+        "body_vertices": [
+          11407,
+          11405,
+          11346
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0005895545769352675
+      },
+      {
+        "vertex": 110000,
+        "body_vertices": [
+          4067,
+          4058,
+          4068
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0004734571633985408
+      },
+      {
+        "vertex": 115000,
+        "body_vertices": [
+          9269,
+          9270,
+          9613
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00022784851907144143
+      },
+      {
+        "vertex": 120000,
+        "body_vertices": [
+          2997,
+          2531,
+          2532
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00042245312650345624
+      },
+      {
+        "vertex": 125000,
+        "body_vertices": [
+          11597,
+          11602,
+          11598
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00024787899601889685
+      },
+      {
+        "vertex": 130000,
+        "body_vertices": [
+          4922,
+          4924,
+          4920
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00023571331118009116
+      },
+      {
+        "vertex": 135000,
+        "body_vertices": [
+          4549,
+          4548,
+          4546
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0002886342630973606
+      },
+      {
+        "vertex": 140000,
+        "body_vertices": [
+          6239,
+          6036,
+          6231
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00026254085837717535
+      },
+      {
+        "vertex": 145000,
+        "body_vertices": [
+          2473,
+          2007,
+          2238
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0006299408839671096
+      },
+      {
+        "vertex": 150000,
+        "body_vertices": [
+          11645,
+          11518,
+          11516
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.000522288728927009
+      },
+      {
+        "vertex": 155000,
+        "body_vertices": [
+          2680,
+          1394,
+          1416
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00040051577706028813
+      },
+      {
+        "vertex": 160000,
+        "body_vertices": [
+          4668,
+          4674,
+          4666
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00024770605909861504
+      },
+      {
+        "vertex": 165000,
+        "body_vertices": [
+          5721,
+          5699,
+          4396
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002560658866732458
+      },
+      {
+        "vertex": 170000,
+        "body_vertices": [
+          2420,
+          2439,
+          2438
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0003135386095597492
+      },
+      {
+        "vertex": 175000,
+        "body_vertices": [
+          6687,
+          6712,
+          6689
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00034295048212988323
+      },
+      {
+        "vertex": 180000,
+        "body_vertices": [
+          6689,
+          6708,
+          6686
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.000321011423396819
+      },
+      {
+        "vertex": 185000,
+        "body_vertices": [
+          764,
+          763,
+          761
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0004092790478402678
+      },
+      {
+        "vertex": 190000,
+        "body_vertices": [
+          7374,
+          7370,
+          7382
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00024960863406974377
+      },
+      {
+        "vertex": 195000,
+        "body_vertices": [
+          2329,
+          2301,
+          2330
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0003885968697858455
+      },
+      {
+        "vertex": 200000,
+        "body_vertices": [
+          11603,
+          11601,
+          11609
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00023551188196743874
+      },
+      {
+        "vertex": 205000,
+        "body_vertices": [
+          4906,
+          4831,
+          4837
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002510721691573748
+      },
+      {
+        "vertex": 210000,
+        "body_vertices": [
+          8197,
+          8192,
+          8190
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0003177831067553652
+      },
+      {
+        "vertex": 215000,
+        "body_vertices": [
+          6710,
+          4588,
+          6705
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00035422817162223796
+      },
+      {
+        "vertex": 220000,
+        "body_vertices": [
+          7086,
+          7084,
+          7091
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00025095856685689857
+      },
+      {
+        "vertex": 225000,
+        "body_vertices": [
+          5608,
+          5606,
+          5609
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00023460762029388436
+      },
+      {
+        "vertex": 230000,
+        "body_vertices": [
+          5474,
+          5475,
+          5470
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00022635868307816686
+      },
+      {
+        "vertex": 235000,
+        "body_vertices": [
+          4757,
+          4755,
+          4751
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00029457436920299606
+      },
+      {
+        "vertex": 240000,
+        "body_vertices": [
+          6895,
+          6894,
+          8939
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00032432378821806716
+      },
+      {
+        "vertex": 245000,
+        "body_vertices": [
+          4683,
+          4715,
+          4673
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002658043378828121
+      },
+      {
+        "vertex": 250000,
+        "body_vertices": [
+          11121,
+          10569,
+          11117
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0002265913620895636
+      },
+      {
+        "vertex": 255000,
+        "body_vertices": [
+          8843,
+          8838,
+          8865
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002592375228252428
+      },
+      {
+        "vertex": 260000,
+        "body_vertices": [
+          2217,
+          2226,
+          2224
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00040981530668845675
+      },
+      {
+        "vertex": 265000,
+        "body_vertices": [
+          1945,
+          1960,
+          1848
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00028967202388122744
+      },
+      {
+        "vertex": 270000,
+        "body_vertices": [
+          8153,
+          8160,
+          7085
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00034134788638879546
+      },
+      {
+        "vertex": 275000,
+        "body_vertices": [
+          2623,
+          2612,
+          2610
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.0005503471630346961
+      },
+      {
+        "vertex": 280000,
+        "body_vertices": [
+          4582,
+          4589,
+          4596
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00030577228954155225
+      },
+      {
+        "vertex": 285000,
+        "body_vertices": [
+          9128,
+          9124,
+          9148
+        ],
+        "barycentric": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "rest_distance_m": 0.00025591469490306585
+      },
+      {
+        "vertex": 290000,
+        "body_vertices": [
+          4541,
+          4549,
+          4546
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00028705628387531437
+      },
+      {
+        "vertex": 295000,
+        "body_vertices": [
+          3053,
+          3056,
+          4469
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00041856251099574006
+      },
+      {
+        "vertex": 300000,
+        "body_vertices": [
+          8143,
+          8133,
+          8141
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00041279785844282937
+      },
+      {
+        "vertex": 305000,
+        "body_vertices": [
+          6687,
+          6686,
+          6681
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00027886371869608655
+      },
+      {
+        "vertex": 310000,
+        "body_vertices": [
+          6652,
+          6559,
+          6640
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.0002552787752510628
+      },
+      {
+        "vertex": 315000,
+        "body_vertices": [
+          2965,
+          2899,
+          2914
+        ],
+        "barycentric": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "rest_distance_m": 0.00037960153495997137
+      }
+    ]
+  },
   "preview_status": "RENDERED_THIS_BUILD",
-  "build_seconds": 14.35,
+  "quality_status": "AUTHORING CANDIDATE; visual acceptance reviewed separately, never inferred from tests",
+  "mesh_names": [
+    "GSD_Claw_front_foot_L0",
+    "GSD_Claw_front_foot_L1",
+    "GSD_Claw_front_foot_L2",
+    "GSD_Claw_front_foot_L3",
+    "GSD_Claw_front_foot_R0",
+    "GSD_Claw_front_foot_R1",
+    "GSD_Claw_front_foot_R2",
+    "GSD_Claw_front_foot_R3",
+    "GSD_Claw_rear_foot_L0",
+    "GSD_Claw_rear_foot_L1",
+    "GSD_Claw_rear_foot_L2",
+    "GSD_Claw_rear_foot_L3",
+    "GSD_Claw_rear_foot_R0",
+    "GSD_Claw_rear_foot_R1",
+    "GSD_Claw_rear_foot_R2",
+    "GSD_Claw_rear_foot_R3",
+    "GSD_CoatBody",
+    "GSD_EarInset_L",
+    "GSD_EarInset_R",
+    "GSD_Eye_L",
+    "GSD_Eye_R",
+    "GSD_GuardFur",
+    "GSD_Iris_L",
+    "GSD_Iris_R",
+    "GSD_LowerJaw",
+    "GSD_LowerLid_L",
+    "GSD_LowerLid_R",
+    "GSD_LowerLip_L",
+    "GSD_LowerLip_R",
+    "GSD_LowerTooth_L0",
+    "GSD_LowerTooth_L1",
+    "GSD_LowerTooth_L3",
+    "GSD_LowerTooth_L4",
+    "GSD_LowerTooth_R0",
+    "GSD_LowerTooth_R1",
+    "GSD_LowerTooth_R3",
+    "GSD_LowerTooth_R4",
+    "GSD_MouthInterior",
+    "GSD_Nose",
+    "GSD_NostrilWing_L",
+    "GSD_NostrilWing_R",
+    "GSD_Nostril_L",
+    "GSD_Nostril_R",
+    "GSD_Philtrum",
+    "GSD_Pupil_L",
+    "GSD_Pupil_R",
+    "GSD_TongueTip",
+    "GSD_UpperGum_L",
+    "GSD_UpperGum_R",
+    "GSD_UpperLid_L",
+    "GSD_UpperLid_R",
+    "GSD_UpperLip_L",
+    "GSD_UpperLip_R",
+    "GSD_UpperTooth_L0",
+    "GSD_UpperTooth_L1",
+    "GSD_UpperTooth_L2",
+    "GSD_UpperTooth_L3",
+    "GSD_UpperTooth_L4",
+    "GSD_UpperTooth_R0",
+    "GSD_UpperTooth_R1",
+    "GSD_UpperTooth_R2",
+    "GSD_UpperTooth_R3",
+    "GSD_UpperTooth_R4"
+  ],
+  "texture_roles": [
+    "albedo",
+    "normal",
+    "roughness"
+  ],
+  "rendered_views": [
+    "previews/german_shepherd.png",
+    "previews/head_closeup.png",
+    "previews/side.png",
+    "previews/front.png",
+    "previews/rear.png",
+    "previews/paws_closeup.png",
+    "previews/coat_closeup.png",
+    "previews/clay.png",
+    "previews/deformation_check.png",
+    "previews/deformation_side.png",
+    "previews/silhouette_160.png"
+  ],
+  "build_seconds": 247.77,
   "files": {
     "source/build_german_shepherd.py": {
-      "bytes": 32285,
-      "sha256": "0fb7fe26005ff5c813f4a403bec1d0c07bc536947a85b7437929f8b92863e7e1"
+      "bytes": 20766,
+      "sha256": "2bba621855bf387efa0b3b31c05cd44dc0653d2e2dd63eede016b2b9d7e72d0f"
     },
     "source/german_shepherd.blend": {
-      "bytes": 1037668,
-      "sha256": "24fe3fe5a09d9ab0b38b1e0d274dedb3c4f702e19351990e2b70fb4c4685e3b1"
+      "bytes": 22725950,
+      "sha256": "2a201ced0fac6ef93c5d29416d4d70bbb6f9a120fc6dac77f6d2e8b06ce43796"
     },
-    "source/validate_german_shepherd.py": {
-      "bytes": 10086,
-      "sha256": "cabd88bb2e4983191b96bd026544acfd1e52230bdf36bacb12e72156a035c5c3"
+    "source/shepherd_anatomy.py": {
+      "bytes": 12444,
+      "sha256": "2c4f54092649c61701e73a5b92dd5fc55bce20276b7c06daa9bb813ba7e5fa52"
+    },
+    "source/shepherd_coat.py": {
+      "bytes": 10554,
+      "sha256": "35c95f475dfc0d77e902ec45563ab538161c6e489cb0a99af35a6eacf23e0bd1"
     },
     "textures/coat_albedo.png": {
-      "bytes": 405117,
-      "sha256": "ce7453f487f27571ef73e69c6d814ffc74ba3c79d076a09ff601cf094e7252fa"
+      "bytes": 3430810,
+      "sha256": "1b43428ed0735bf6487323f362cd813e522ac4af2fd92dccae79da178e959e31"
+    },
+    "textures/coat_normal.png": {
+      "bytes": 4809917,
+      "sha256": "ca988fcfc78036b042c7a9e3210c4569db7228bcabc16d260b2f590d13e63782"
+    },
+    "textures/coat_roughness.png": {
+      "bytes": 1654658,
+      "sha256": "d905a13fe57f655cbe39fcad649d06fbb69d4813780260621541d53b61ce3106"
+    },
+    "textures/fur_detail_source.png": {
+      "bytes": 4039061,
+      "sha256": "45386958948c38b762d9e374984c24f6c85505942fc17aee2f4414ec39b4ed7e"
+    },
+    "textures/GENERATION.md": {
+      "bytes": 1294,
+      "sha256": "ee608bfb7146e8f7fca2531dbb0def462757963f1dc7c642cca1aa996191568b"
     },
     "interchange/german_shepherd.glb": {
-      "bytes": 1124788,
-      "sha256": "d5e85805ae841a023d4b043d15cbd44dfd4a6605e22448a3cadfbe89f687389c"
-    },
-    "previews/clay.png": {
-      "bytes": 1526172,
-      "sha256": "088e756f0549fecbede813cabe5335df0f73afba601af11cf131b49e42567624"
-    },
-    "previews/deformation_check.png": {
-      "bytes": 1564728,
-      "sha256": "08a66f336f221ed26f975e22e38f236295c9a8c672d0caad74dba09b94547ee7"
-    },
-    "previews/front.png": {
-      "bytes": 931900,
-      "sha256": "42b70c5f21918c1ec32e9e2740830bffe6c667657b19f660b1ea01779f887c5f"
+      "bytes": 31758468,
+      "sha256": "7a689470a5ccbd970c6ad10922c17715d52bffe71483fa48cd665b38612d2ff3"
     },
     "previews/german_shepherd.png": {
-      "bytes": 1574242,
-      "sha256": "67c66fde0b2e125fcad914484b213a3d9f0de691942b3e19d2c2efda46c84107"
+      "bytes": 2062348,
+      "sha256": "7d0558fbf4f15fe8a67deb3b38696def58abd0e9eb41f374fca508d9a61f517f"
     },
-    "previews/rear.png": {
-      "bytes": 932300,
-      "sha256": "c48ed7f29bef105f49999965ddead992c164dbb36261dee722a1a1be950f398d"
+    "previews/head_closeup.png": {
+      "bytes": 1777629,
+      "sha256": "f335614cd95d2d4c0edd6fe34581ae8f48e73768dbcbae16954996a05cb9f0a6"
     },
     "previews/side.png": {
-      "bytes": 1377614,
-      "sha256": "9d61a985a404d081ad258e5a0186f5118908fd52c9b8f5d2ac053b90bacffcc2"
+      "bytes": 2053095,
+      "sha256": "9f9458d2362ca7eb06e67f00826d3a15e3316fd091c79563863f358b5bcd7531"
+    },
+    "previews/front.png": {
+      "bytes": 1716856,
+      "sha256": "d62760a55473a11a0e3d84b90256a974f7fb7248bd2b2de15b77dc47a67f70ff"
+    },
+    "previews/rear.png": {
+      "bytes": 1685951,
+      "sha256": "96ff898eb056492f8b947cbb1d85dc8397e1494e1fd1a3e60f9657987c46e293"
+    },
+    "previews/paws_closeup.png": {
+      "bytes": 1529097,
+      "sha256": "48040caebc74a63a7609a37f462877e1d2e33e31580b6d62eb32a8928f2dacc7"
+    },
+    "previews/coat_closeup.png": {
+      "bytes": 1813070,
+      "sha256": "b3a7925d0b8f6e09cc7452490172255394d52bce4d8c37bdc8ac3cd624711fd0"
+    },
+    "previews/clay.png": {
+      "bytes": 1808581,
+      "sha256": "7793d982f3fea7269349723cc48f74956632be9c6c559050e33ffd4442e0d87a"
+    },
+    "previews/deformation_check.png": {
+      "bytes": 2056577,
+      "sha256": "c3ec72962311bac1b32fa73a5e0101f1b0b262d21ec473b73f654f8d39cc2bd4"
+    },
+    "previews/deformation_side.png": {
+      "bytes": 2100309,
+      "sha256": "f9c16d754e48e0e54abafffde14bea703080b0e4c99df6ca671654e579e1c313"
     },
     "previews/silhouette_160.png": {
-      "bytes": 23596,
-      "sha256": "393734022ea5a2335ccfc71ea3a85f21c82bb1d6fe1e298aa3e7e2d74418322d"
+      "bytes": 27443,
+      "sha256": "365e117597d6af7c1e05e7f7d8aad632185aae0a7be1b7169b8b50a525762d62"
     }
+  },
+  "source_normalization": {
+    "file": "source/build_german_shepherd.py",
+    "executed_sha256": "3a5bd335306be47ad77be01db4dc1f3589f3d2e3899161b9c83cd40a8719d539",
+    "normalized_sha256": "2bba621855bf387efa0b3b31c05cd44dc0653d2e2dd63eede016b2b9d7e72d0f",
+    "change": "Remove trailing blank line only; Python AST equality verified. Generated artifact bytes and render provenance unchanged."
   }
 }

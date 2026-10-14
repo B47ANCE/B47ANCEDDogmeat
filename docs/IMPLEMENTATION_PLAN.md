@@ -1,6 +1,6 @@
 # Current standalone implementation plan
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
 M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. No gameplay implementation authorized by this delivery. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 
@@ -8,7 +8,7 @@ M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine doma
 
 The [M0R request](requirements/M0R_REQUEST.md) supplements the [standalone master](requirements/STANDALONE_MASTER_HANDOFF.md). Latest shared/project Lua-only rules supersede older Java allowances. All approved gameplay scope remains in [132 traceability rows](FEATURE_TRACEABILITY_MATRIX.md). Former R1–R6 integration assumptions are historical, not automatic standalone blockers or proof. Current signatures/hashes, growth correction and missing safe Lua seams are in [the source index](M0R_SOURCE_EVIDENCE.md).
 
-Canonical/current/target documentation version remains0.1.0-dev.1: compatible documentation correction/architecture design, no shipped gameplay/save/API/configuration change. Future additive gameplay is MINOR-compatible scope only if existing contracts remain compatible; schema/API redesign requires explicit migration/classification under VERSION_POLICY.md. No future runtime/release version is invented. Technical Mod ID remains provisional; GitHub folder/name does not finalize it.
+Current project checkpoint is 0.1.0-dev.2 for the compatible gsd-v002 art rebuild. The original M0R documentation checkpoint was 0.1.0-dev.1; no shipped gameplay/save/API/configuration change occurred. Future additive gameplay is MINOR-compatible scope only if existing contracts remain compatible; schema/API redesign requires explicit migration/classification under VERSION_POLICY.md. No future runtime/release version is invented. Technical Mod ID remains provisional; GitHub folder/name does not finalize it.
 
 ## Bounded next proposal
 

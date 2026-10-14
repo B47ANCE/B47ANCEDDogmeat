@@ -1,8 +1,8 @@
 # B47ANCE'd Dog Training
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
-Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R contracts remain the technical baseline. An [original adult German Shepherd blockout, coat and authoring rig](art/german_shepherd/README.md) exists for pipeline review; it does not meet the user's realistic visual quality benchmark. No playable mod, native asset registration, runtime source or packages exist. Companion Dogs and DogPack are not dependencies or asset sources.
+Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R contracts remain the technical baseline. An [rebuilt German Shepherd authoring candidate, coat and rig](art/german_shepherd/README.md) exists as gsd-v002 for visual and pipeline review; it has not met the user's realistic visual quality benchmark. No playable mod, native asset registration, runtime source or packages exist. Companion Dogs and DogPack are not dependencies or asset sources.
 Provisional technical Mod ID: `B47ANCEDDogTraining`; not registered or packaged.
 
 Start with [the current plan](docs/IMPLEMENTATION_PLAN.md), [M0R validation](docs/M0R_VALIDATION.md), [native evidence](docs/M0R_SOURCE_EVIDENCE.md) and [132 current traceability rows](docs/FEATURE_TRACEABILITY_MATRIX.md). The [historical research index](docs/HISTORICAL_RESEARCH_INDEX.md) labels former add-on records; their bytes and observed evidence remain unchanged.
@@ -43,7 +43,7 @@ Old validate_audit/collect_evidence commands are historical add-on tools that ca
 
 Public repository: [B47ANCE/B47ANCEDDogmeat](https://github.com/B47ANCE/B47ANCEDDogmeat). Current contracts use the docs/m0r-contracts review branch. GitHub CI checks version/documentation on Ubuntu only; that is offline validation, not Linux PZ/dedicated proof. Native inspection remains local. Public pushes are audited for sensitive/generated/native files and do not authorize main merge or release.
 
-Initial project creation, not an upgrade from an existing release. This version is supplied by the user.
+The user supplied the initial 0.1.0-dev.1 scaffold version. Current 0.1.0-dev.2 records a compatible art-development checkpoint; no gameplay/save/API/sandbox surface changed.
 Future additive training functionality is MINOR scope; dependency versions, PZ builds and data schemas remain independent.
 G6 and G7 are NOT TESTED; G8 is BLOCKED. Do not implement gameplay from this scaffold without resolving the design gates.
 
