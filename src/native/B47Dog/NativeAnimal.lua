@@ -20,8 +20,12 @@ function NativeAnimal.new(namespace,allowedTypes,api)
             if api.isServer()~=true or api.isClient()~=false or api.instanceof(animal,"IsoAnimal")~=true then
                 return {status="Unavailable"}
             end
-            if animal:isExistInTheWorld()~=true then return {status="Detached"} end
-            if animal:isDead()~=false then return {status="Dead"} end
+            local dead=animal:isDead()
+            if dead==true then return {status="Dead"} end
+            if dead~=false then return {status="Unavailable"} end
+            local exists=animal:isExistInTheWorld()
+            if exists==false then return {status="Detached"} end
+            if exists~=true then return {status="Unavailable"} end
             local nativeType=animal:getAnimalType()
             if not Guard.id(nativeType) or not Guard.plain(allowed[nativeType]) then return {status="Unsupported"} end
             local nativeBreed=animal:getBreed()

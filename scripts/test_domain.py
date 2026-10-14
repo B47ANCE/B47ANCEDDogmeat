@@ -37,8 +37,9 @@ def main():
     suites = []
     with tempfile.TemporaryDirectory(prefix='b47dog-offline-') as temporary:
         directory = Path(temporary).resolve()
-        for name, phase in [('ownership_spec.lua', None), ('storage_spec.lua', None),
-                            ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover')]:
+        for name, phase in [('ownership_spec.lua', None), ('storage_spec.lua', None), ('pairing_spec.lua', None),
+                            ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover'),
+                            ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover')]:
             lua = runtime(directory)
             lua_version = lua.eval('_VERSION')
             lua.globals().RESTART_PHASE = phase

@@ -242,7 +242,7 @@ test("dead animal and refused observation revoke prior match",function()
     local _,payload=S.fixture();local registry=Identity.newRegistry(S.WORLD,payload.records)
     equal(registry.observe(animal,reader.observe(animal)).status,"MATCHED")
     animal.dead=true;equal(reader.observe(animal).status,"Dead")
-    equal(registry.observe(animal,reader.observe(animal)).status,"QUARANTINED")
+    equal(registry.observe(animal,reader.observe(animal)).status,"KNOWN_DEAD")
     local obs=S.observation();obs.status="Detached"
     equal(registry.observe({},obs).status,"UNBOUND")
 end)

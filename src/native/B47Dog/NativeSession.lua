@@ -28,6 +28,14 @@ function NativeSession.open(config,api)
     function session.observe(animal)
         return registry.observe(animal,reader.observe(animal))
     end
+    function session.status(dogId)
+        return registry.status(dogId)
+    end
+    function session.observeDeath(animal)
+        local observation=reader.observe(animal)
+        if observation.status~="Dead" then return {status="Unavailable"} end
+        return registry.observe(animal,observation)
+    end
     function session.prepareOwnership(animal,context,intent)
         if busy then return nil,"Busy" end
         busy=true

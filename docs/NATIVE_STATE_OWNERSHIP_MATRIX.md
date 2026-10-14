@@ -1,6 +1,6 @@
 # Native state ownership matrix
 
-Project Version: 0.2.0-dev.2
+Project Version: 0.2.0-dev.3
 
 M0R contract, 2026-10-12. Status: FEASIBLE domain design; native arbitration EXPERIMENTAL. This assigns intended ownership, not proved runtime behavior. Lua-only. See [source evidence](M0R_SOURCE_EVIDENCE.md), [task contract](TASK_ARBITRATION_CONTRACT.md) and [identity contract](CANINE_IDENTITY_CONTRACT.md).
 

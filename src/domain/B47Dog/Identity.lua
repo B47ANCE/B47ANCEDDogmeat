@@ -40,15 +40,27 @@ function Identity.newRegistry(worldId, records)
     if not encoded then return nil,"Recovery" end
     records=Codec.decode(encoded)
     local dogs, handles, quarantine, handleCount, dogCount={}, {}, {}, 0, 0
+    local detached, dead={}, {}
     local exhausted=false
     local registry={}
+    local function status(id)
+        if exhausted then return "CAPACITY" end
+        if quarantine[id] then return "QUARANTINED" end
+        if dead[id] then return "KNOWN_DEAD" end
+        if detached[id] then return "DETACHED_PENDING" end
+        return dogs[id] and "MATCHED" or "UNOBSERVED"
+    end
     function registry.observe(handle, observation)
         if exhausted then return {status="CAPACITY"} end
         if type(handle)~="table" and type(handle)~="userdata" then return {status="UNBOUND"} end
         if not Guard.plain(observation) or observation.status~="OBSERVED" or not Identity.marker(observation.marker) then
             local known=handles[handle]
-            if known then quarantine[known]=true end
-            return {status=known and "QUARANTINED" or "UNBOUND",dogId=known}
+            if known then
+                if Guard.plain(observation) and observation.status=="Detached" then detached[known]=true
+                elseif Guard.plain(observation) and observation.status=="Dead" then dead[known]=true
+                else quarantine[known]=true end
+            end
+            return {status=known and status(known) or "UNBOUND",dogId=known}
         end
         local marker=observation.marker; local id=marker.dogId
         -- Both axes are bounded: one handle can present many different IDs.
@@ -75,11 +87,13 @@ function Identity.newRegistry(worldId, records)
         end
         if dogs[id] and dogs[id]~=handle then quarantine[id]=true end
         dogs[id]=handle
-        return {status=quarantine[id] and "QUARANTINED" or "MATCHED",dogId=id,generation=marker.bindingGeneration}
+        -- Only the same validated handle may return from transient detachment.
+        -- A replacement stays quarantined; an observed death never auto-revives.
+        detached[id]=nil
+        return {status=status(id),dogId=id,generation=marker.bindingGeneration}
     end
     function registry.status(dogId)
-        if exhausted then return "CAPACITY" end
-        return quarantine[dogId] and "QUARANTINED" or dogs[dogId] and "MATCHED" or "UNOBSERVED"
+        return status(dogId)
     end
     return registry
 end

@@ -41,11 +41,11 @@ local function validTransition(before,after)
     return true
 end
 
--- Pairing is a trusted operator assertion for an externally verified paired save.
--- No client anchor, newest-sequence guess, initialization or native-save hook here.
+-- Pairing is trusted server context: an operator assertion or an anchor captured
+-- during native load. Never accept a client anchor or promote from a live table.
 function PrivateStore.open(transport,pairing)
     if type(transport)~="table" or type(transport.read)~="function" or type(transport.write)~="function"
-        or not Guard.plain(pairing) or pairing.kind~="OperatorPaired"
+        or not Guard.plain(pairing) or (pairing.kind~="OperatorPaired" and pairing.kind~="NativeLoaded")
         or not Identity.uuid(pairing.worldId) or not Identity.uuid(pairing.checkpoint)
         or not Guard.id(pairing.saveLocator) then return nil,"Recovery" end
     local worldId,locator,checkpoint=pairing.worldId,pairing.saveLocator,pairing.checkpoint

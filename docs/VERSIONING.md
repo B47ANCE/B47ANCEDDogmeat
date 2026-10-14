@@ -1,10 +1,10 @@
 # Version inventory
 
-Project Version: 0.2.0-dev.2
+Project Version: 0.2.0-dev.3
 
 Canonical: root `VERSION`. Initial value supplied by the user; new project, no discovered predecessor.
 Current M0R mirrors: README, current IMPLEMENTATION_PLAN, VERSIONING, thirteen contracts, M0R_SOURCE_EVIDENCE/HISTORICAL_RESEARCH_INDEX, docs/contracts JSON project_version fields and newest CHANGELOG entry. Exact selectors are in version-inventory.json.
-Pure Lua domain/native adapter source and prepared translation sources now exist; source-inventory.json, FEATURE_FOUNDATION.md, NATIVE_PERSISTENCE_SLICE.md and native-persistence-evidence.json are current mirrors. No registered runtime metadata or packages exist.
+Pure Lua domain/native adapter source and prepared translation sources now exist; source-inventory.json, FEATURE_FOUNDATION.md, NATIVE_PERSISTENCE_SLICE.md, NATIVE_PAIRING_LIFECYCLE.md and their native evidence manifests are current mirrors. No registered runtime metadata or packages exist.
 
 The 2026-10-14 German Shepherd rebuild advances the project from 0.1.0-dev.1 to 0.1.0-dev.2 and the separate asset revision from gsd-v001 to gsd-v002. This is a meaningful compatible art-development checkpoint, with no gameplay/save/API/sandbox surface changes; no MAJOR/MINOR/PATCH release-core bump is warranted. Expected stable-release version remains undecided. That art README/build/roundtrip evidence and binary properties are now frozen historical checkpoint data. Their tested version stays 0.1.0-dev.2, and docs/art-checkpoint.json pins all 30 tracked files to commit 643ead1. Reproduce that historical validator at its recorded commit; it intentionally expects that checkpoint VERSION. Blender/Python and asset revision remain independent provenance.
 
@@ -23,6 +23,6 @@ Historical M0R retained 0.1.0-dev.1 as a compatible documentation-only checkpoin
 
 ## Feature iteration 2026-10-14
 
-Current 0.2.0-dev.2 continues the additive MINOR 0.2.0 scope begun at 0.2.0-dev.1: ownership/inspection plus unregistered native observation and private save preparation. There was no prior runtime/save interface to break or migrate. The domain ownership schema 1 and intent protocol 1 are offline contracts, not a deployed store migration or stable API. Expected stable-release version remains undecided.
+Current 0.2.0-dev.3 continues the additive MINOR 0.2.0 scope begun at 0.2.0-dev.1: ownership/inspection, private preparation and an explicitly installed native loaded-anchor/lifecycle event adapter. Snapshot/marker data schemas remain unchanged; NativeLoaded is a trusted server context kind, not a client protocol or deployed migration. There was no prior runtime/save interface to break or migrate. The domain ownership schema 1 and intent protocol 1 are offline contracts, not a deployed store migration or stable API. Expected stable-release version remains undecided.
 
 All current contract editions and source-inventory mirror root VERSION. Prior art report/binary bytes and tested 0.1.0-dev.2 stay unchanged; applicability is limited to the unchanged candidate and its original offline scope. Feature validation does not renew art quality or runtime evidence. Newly dated native inspection is separate in native-persistence-evidence.json; prior records retain their observed date and scope. The asset hash check normalizes only text newlines according to .gitattributes, while binaries are byte-exact.

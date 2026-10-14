@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.3] — 2026-10-14
+
+- Continue additive 0.2.0 development with native loaded-anchor recovery, one pending native checkpoint and explicit event installation. No deployed save schema changes.
+- Observe known detached/dead animals conservatively; restore the same detached handle only after full revalidation, and refuse unexplained replacement handles.
+- Map native save/event ordering, public anchor trust, virtual storage and the specific carried-drop marker-copy route. No automatic initialization, save-completion inference, first spawn or gameplay commit.
+- Preserve the model. Validation and remaining in-game gates are recorded in docs/NATIVE_PAIRING_LIFECYCLE.md; dedicated multiplayer and stable release remain blocked.
+
 ## [0.2.0-dev.2] — 2026-10-14
 
 - Continue the additive 0.2.0 feature scope with original Lua native observation/identity matching and bounded private snapshot preparation/recovery. No deployed save format exists to migrate.

@@ -109,6 +109,14 @@
     {
       "path": "docs/native-persistence-evidence.json",
       "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/NATIVE_PAIRING_LIFECYCLE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-pairing-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
     }
   ],
   "changelog": {

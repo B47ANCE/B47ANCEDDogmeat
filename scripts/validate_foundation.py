@@ -10,7 +10,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
           ('Access', 'Guard', 'Ownership', 'Projection', 'Codec', 'Identity', 'Snapshot', 'PrivateStore')}
-NATIVE = {f'src/native/B47Dog/{name}.lua' for name in ('PZCache', 'NativeAnimal', 'NativeSession')}
+NATIVE = {f'src/native/B47Dog/{name}.lua' for name in
+          ('PZCache', 'NativeAnimal', 'NativeSession', 'NativeCheckpoint', 'NativeRuntime')}
 MODULES = DOMAIN | NATIVE
 
 
@@ -37,6 +38,10 @@ def check_source():
         errors.append('Localization source/language declaration differs from contract')
     if inventory['runtime_registration'] is not None or inventory['workshop_id'] is not None:
         errors.append('Unexpected runtime registration/Workshop identity in unregistered prototype')
+    adapter = inventory.get('native_event_adapter', {})
+    if (adapter.get('entry') != 'B47Dog/NativeRuntime.install' or adapter.get('automatic_bootstrap') is not None
+            or adapter.get('events') != ['OnInitGlobalModData', 'OnServerStarted', 'OnCharacterDeath']):
+        errors.append('Explicit native event adapter inventory differs')
     allowed = MODULES | {f'src/localization/{lang}/{category}.json'
                         for lang in catalog['languages'] for category in ('UI', 'Sandbox')}
     found = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'src').rglob('*') if p.is_file()}
@@ -54,17 +59,28 @@ def check_source():
             if len(candidates) != 1 or (relative in DOMAIN and not candidates <= DOMAIN):
                 errors.append('Unknown/case-wrong require in ' + relative + ': ' + module)
         # Deliberately bounded source checks, not a general Lua security scanner.
-        if re.search(r'\b(?:Events|ModData|SandboxVars|io|os|debug|luajava)\s*[.:\[]|'
+        if re.search(r'\b(?:SandboxVars|io|os|debug|luajava)\s*[.:\[]|'
                      r'\b(?:sendClientCommand|sendServerCommand|getModFileWriter|addAnimal|loadstring|dofile|loadfile)\s*\(', code):
             errors.append('Unexpected runtime registration, write or dynamic execution: ' + relative)
+        if re.search(r'\bEvents\s*[.:\[]', code) and relative != 'src/native/B47Dog/NativeRuntime.lua':
+            errors.append('Event API outside explicit runtime adapter: ' + relative)
+        if re.search(r'\bModData\s*[.:\[]', code) and relative != 'src/native/B47Dog/NativeCheckpoint.lua':
+            errors.append('Native anchor API outside checkpoint adapter: ' + relative)
         if relative in DOMAIN and re.search(r'\b(?:IsoAnimal)\s*[.:\[]|'
                      r'\b(?:getFileWriter|getFileReader|getCurrentSaveName|getRandomUUID|instanceof|isServer|isClient)\b', code):
             errors.append('Engine/storage/dynamic execution outside approved domain: ' + relative)
         if relative in NATIVE:
             allowed_api = {'isServer', 'isClient', 'getCurrentSaveName', 'getFileReader', 'getFileWriter',
-                           'instanceof', 'getRandomUUID'}
+                           'instanceof', 'getRandomUUID', 'Events', 'ModData', 'getCell'}
             if not set(re.findall(r'\bapi\.([A-Za-z_][A-Za-z0-9_]*)', code)) <= allowed_api:
                 errors.append('Unreviewed native API reference: ' + relative)
+        if relative == 'src/native/B47Dog/NativeRuntime.lua':
+            events = set(re.findall(r'api\.Events\.([A-Za-z_][A-Za-z0-9_]*)\.Add\(', code))
+            if events != {'OnInitGlobalModData', 'OnServerStarted', 'OnCharacterDeath'}:
+                errors.append('Native adapter event registrations changed')
+        if relative == 'src/native/B47Dog/NativeCheckpoint.lua':
+            if set(re.findall(r'api\.ModData\.([A-Za-z_][A-Za-z0-9_]*)', code)) != {'get'}:
+                errors.append('Unreviewed anchor creation/import API')
     for forbidden in ('dist', 'Contents', 'media', 'mod.info'):
         if (ROOT / forbidden).exists():
             errors.append('Unexpected runtime/distribution root: ' + forbidden)
@@ -72,10 +88,12 @@ def check_source():
 
 
 def check_native(game_root):
-    evidence = read(ROOT / 'docs/native-persistence-evidence.json')
     errors, checked = [], 0
+    inputs = []
+    for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json'):
+        inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
-        for item in evidence['inputs']:
+        for item in inputs:
             relative = Path(item['path'])
             if relative.is_absolute() or '..' in relative.parts:
                 errors.append('Unsafe native evidence path')

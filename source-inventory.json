@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.2",
-  "status": "UNREGISTERED NATIVE/PRIVATE PREPARATION PROTOTYPE; not a loadable mod",
+  "project_version": "0.2.0-dev.3",
+  "status": "EXPLICIT NATIVE EVENT ADAPTER AND PRIVATE PREPARATION; no automatic bootstrap or loadable mod",
   "authoritative_lua": [
     "src/domain/B47Dog/Access.lua",
     "src/domain/B47Dog/Codec.lua",
@@ -12,6 +12,8 @@
     "src/domain/B47Dog/Projection.lua",
     "src/domain/B47Dog/Snapshot.lua",
     "src/native/B47Dog/NativeAnimal.lua",
+    "src/native/B47Dog/NativeCheckpoint.lua",
+    "src/native/B47Dog/NativeRuntime.lua",
     "src/native/B47Dog/NativeSession.lua",
     "src/native/B47Dog/PZCache.lua"
   ],
@@ -83,5 +85,15 @@
     "python -B scripts/validate_foundation.py",
     "python -B scripts/test_domain.py"
   ],
-  "native_validation": "python -B scripts/validate_foundation.py --native --game-root <verified-game-root>"
+  "native_validation": "python -B scripts/validate_foundation.py --native --game-root <verified-game-root>",
+  "native_event_adapter": {
+    "entry": "B47Dog/NativeRuntime.install",
+    "automatic_bootstrap": null,
+    "events": [
+      "OnInitGlobalModData",
+      "OnServerStarted",
+      "OnCharacterDeath"
+    ],
+    "requires": "Existing validated native anchor and private slots; approved namespace/type/breed configuration before native load."
+  }
 }

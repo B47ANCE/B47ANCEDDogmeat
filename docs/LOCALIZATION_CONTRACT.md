@@ -1,6 +1,6 @@
 # Localization contract
 
-Project Version: 0.2.0-dev.2
+Project Version: 0.2.0-dev.3
 
 M0R design, 2026-10-12. FEASIBLE localization contract; the offline feature slice prepares 13 UI/eight Sandbox fallback keys across 29 languages under src/localization. No runtime translation loading or UI implementation exists. [Design key catalog](contracts/localization_keys.json), [sandbox registry](SANDBOX_SETTINGS_REGISTRY.md), [input/manual acceptance](MINIMUM_PLAYABLE_RELEASE.md).
 

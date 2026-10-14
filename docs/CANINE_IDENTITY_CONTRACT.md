@@ -1,12 +1,12 @@
 # Canonical canine identity contract
 
-Project Version: 0.2.0-dev.2
+Project Version: 0.2.0-dev.3
 
 M0R design, 2026-10-12. FEASIBLE identity domain; lifecycle carriers EXPERIMENTAL; maturation rebinding BLOCKED until a safe Lua path is demonstrated. [Evidence](M0R_SOURCE_EVIDENCE.md), [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md), [MP tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md).
 
 ## Current implementation boundary
 
-The [0.2.0-dev.2 native/private slice](NATIVE_PERSISTENCE_SLICE.md) implements read-only native observation and private marker matching. Dead/detached animals, observed duplicates and foreign/missing private bindings refuse; ID/handle capacity exhaustion stops the session. This does not establish identity through unloaded/replaced handles, allocate or stamp a dog, or prove native save/restart continuity. Those lifecycle routes remain gated below.
+The [native/private foundation](NATIVE_PERSISTENCE_SLICE.md) implements read-only marker matching. The [0.2.0-dev.3 lifecycle adapter](NATIVE_PAIRING_LIFECYCLE.md) adds detached/dead observations and same-handle return after revalidation; unexplained new handles remain quarantined. Dead/detached animals refuse actions, while duplicates and foreign/missing private bindings quarantine; ID/handle capacity exhaustion stops the session. This does not establish identity through unloaded/replaced handles, allocate or stamp a dog, or prove native save/restart continuity. Those lifecycle routes remain gated below.
 
 ## Identity and allocation
 
@@ -32,7 +32,7 @@ Private identity fields include dogId, worldId, lifecycle state, current generat
 | Native save/load | IsoAnimal.save/load serializes marker candidate | Reattach to matching private record and accepted binding-token chain within a recovered world/store checkpoint; no fresh initialization | EXPERIMENTAL |
 | Chunk unload/reload | Native animal manager lifecycle | One representation, generation unchanged unless verified replacement; stale routes discarded | EXPERIMENTAL |
 | Carry into inventory | Native AnimalInventoryItem embeds the animal | Validate source dog and real target item; exactly one active representation; private mode changes once | EXPERIMENTAL |
-| Release from inventory | Generic vanilla drop route observed; specific native animal release branch UNKNOWN | Map and prove actual replacement/marker/occupancy path before allowing release; no copyFrom assumption from trailer route | BLOCKED until mapped |
+| Release from inventory | Fresh six-argument IsoGridSquare.AddWorldInventoryItem animal branch constructs replacement and invokes copyFrom; marker-copy source path established | Prove exact item removal, one representation, lifecycle receipt/generation and restart behavior before enabling | EXPERIMENTAL; transaction/runtime NOT TESTED |
 | Trailer add/remove | Native embedded animal and vehicle replacement/copy path | Unique compartment occupancy; preserve marker, clock and exact physical item/animal count | EXPERIMENTAL |
 | Other vehicles / RV / kennel | No universal representation path established | Separate source evidence, native occupancy and antidupe acceptance before support | BLOCKED |
 | Growth / maturation | AnimalData.grow creates a new animal and preserves native animalId | No demonstrated ModData transfer in inspected growth path; prove an exposed server transition seam or definition-safe no-replacement route | BLOCKED |

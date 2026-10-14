@@ -1,5 +1,5 @@
 {
-  "project_version": "0.2.0-dev.2",
+  "project_version": "0.2.0-dev.3",
   "status": "CURRENT STANDALONE ASSESSMENT - PARTIAL UNREGISTERED PROTOTYPE; RUNTIME NOT TESTED",
   "features": [
     {
@@ -71,7 +71,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: native reader/private identity matching and offline reload; native lifecycle/restart NOT PROVED",
+      "implementation_status": "PARTIAL: exact loaded-anchor recovery and same-handle continuity; native lifecycle/restart NOT TESTED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -95,7 +95,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: ownership-transfer identity invariant and native death refusal; lifecycle transitions NOT IMPLEMENTED",
+      "implementation_status": "PARTIAL: ownership identity, native death observation and carried-drop source mapping; lifecycle transactions NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2527,7 +2527,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: canonical private slots, exact operator-pair selection and prepared readback; native pairing/durability BLOCKED",
+      "implementation_status": "PARTIAL: native loaded-anchor selection and pending checkpoint publication; initialization/completion/durability BLOCKED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2550,7 +2550,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: ACL/projection/intent domain and native ownership preparation; authenticated broker/durable commits NOT IMPLEMENTED",
+      "implementation_status": "PARTIAL: private ownership preparation and event adapter; authenticated broker/durable commits NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {

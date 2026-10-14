@@ -1,8 +1,8 @@
 # Native observation and private save preparation
 
-Project Version: 0.2.0-dev.2
+Project Version: 0.2.0-dev.3
 
-User-authorized continuation, 2026-10-14. This checkpoint connects a read-only native animal adapter to private identity matching, ownership proposals and file-backed snapshot preparation. It is an **unregistered prototype**, not a playable dog or an automatic persistent-save integration. Model work remains deferred; all 30 frozen art files are unchanged.
+Historical implementation checkpoint: 0.2.0-dev.2, 2026-10-14. Current headers identify the document edition; the results below retain their tested version. The later [native pairing/lifecycle adapter](NATIVE_PAIRING_LIFECYCLE.md) adds explicit native event installation and same-handle detachment recovery. This preceding checkpoint connects a read-only native animal adapter to private identity matching, ownership proposals and file-backed snapshot preparation. It is an **unregistered prototype**, not a playable dog or an automatic persistent-save integration. Model work remains deferred; all 30 frozen art files are unchanged.
 
 ## Implemented path
 

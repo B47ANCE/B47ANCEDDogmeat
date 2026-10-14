@@ -1,8 +1,8 @@
 # Ownership and inspection feature foundation
 
-Project Version: 0.2.0-dev.2
+Project Version: 0.2.0-dev.3
 
-The user authorized feature work on 2026-10-14 and deferred model refinement. This document describes the ownership foundation introduced and tested at 0.2.0-dev.1. It implements **engine-independent Lua logic**, with actual offline Lua tests. Current native observation and private file preparation are documented separately in [NATIVE_PERSISTENCE_SLICE.md](NATIVE_PERSISTENCE_SLICE.md). It is not yet a playable mod: no native events, authenticated-player adapter, gameplay commit, command endpoint or UI is installed.
+The user authorized feature work on 2026-10-14 and deferred model refinement. This document describes the ownership foundation introduced and tested at 0.2.0-dev.1. It implements **engine-independent Lua logic**, with actual offline Lua tests. Current native observation and private file preparation are documented separately in [NATIVE_PERSISTENCE_SLICE.md](NATIVE_PERSISTENCE_SLICE.md). It is not yet a playable mod. The later [native pairing/lifecycle adapter](NATIVE_PAIRING_LIFECYCLE.md) supplies explicit event installation; no automatic bootstrap, authenticated-player broker, gameplay commit, command endpoint or UI is installed.
 
 ## Implemented behavior
 
@@ -41,7 +41,7 @@ The later NativeSession prepares a private file from a matched native observatio
 3. Persist the ownership subrecord together with required receipts/history while preserving every other private domain. Reconcile native/private checkpoints first. A proposal's event is not a durable receipt, and this module does not provide atomicity or restart-safe exactly-once execution.
 4. Re-resolve permissions and build a new projection immediately before sending. Invalidate queued responses on ACL/configuration/episode/session changes. Do not cache or send an old projection. Never send the proposal, expected actor fields, private transition event or full private record.
 
-Until those obligations pass, the core is deliberately not attached to OnClientCommand or any game event. [Native ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [identity](CANINE_IDENTITY_CONTRACT.md) and [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md) remain the authoritative integration contracts. The ownership modules have no native API calls or game-source copies. The later native adapter has its own dated source-evidence manifest.
+The core is not attached to OnClientCommand. The later explicit load/start/death observer does not satisfy the authenticated broker or commit obligations. [Native ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [identity](CANINE_IDENTITY_CONTRACT.md) and [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md) remain the authoritative integration contracts. The ownership modules have no native API calls or game-source copies. The later native adapter has its own dated source-evidence manifest.
 
 ## Configuration and localization
 

@@ -1,0 +1,271 @@
+{
+  "project_version": "0.2.0-dev.3",
+  "observed_project_version": "0.2.0-dev.3",
+  "observed_date": "2026-10-14",
+  "game_build": "42.21",
+  "environment": "Windows offline packaged-class and installed Lua inspection; no native execution",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/ServerMap.class",
+      "sha256": "5a3e449c6b7f3ea237939502c5b43ab0dd490a3752fd675611aade7ae79c548d",
+      "bytes": 21003
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/GameWindow.class",
+      "sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+      "bytes": 42029
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoWorld.class",
+      "sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+      "bytes": 114315
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaEventManager.class",
+      "sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+      "bytes": 26415
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/world/moddata/GlobalModData.class",
+      "sha256": "1c66b5e0c66b2c7b813c977fa91d2282a022605d12d44560298e30b340f8a718",
+      "bytes": 11661
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/world/moddata/ModData.class",
+      "sha256": "5a19f07f06db59c8e2c074e303c3eb9a08e860b09e54e2bba2598f154a1cb808",
+      "bytes": 1855
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/GlobalModDataPacket.class",
+      "sha256": "652276687c148a86b4eb5ab720af40a1cbc162c587be3d9803ab76fef69cc36a",
+      "bytes": 2861
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/GlobalModDataRequestPacket.class",
+      "sha256": "6a0700bf69c862e588b268fdf859aebaf35ba61fa56ef99dc0c19dcffe3b6910",
+      "bytes": 1415
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/INetworkPacket.class",
+      "sha256": "616a8d2e86a03952e16c45e756dae12910f637716568a74571defdc1884ce7e9",
+      "bytes": 7955
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/PacketTypes$PacketType.class",
+      "sha256": "aa6718ed4e2e33b199734c8cfa4b85a64c193ccc307b2cc4deafe18e0a43d5f5",
+      "bytes": 51068
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/world/WorldDictionary.class",
+      "sha256": "0a140e330443b24ad39ad4a42659cf6b8678e7b3c6ddcf335fd7959711181f0d",
+      "bytes": 16284
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+      "bytes": 25381
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalPopulationManager.class",
+      "sha256": "bf48fdf68b9b1efddcfe9c878f4717b8d679734ff230ee483c184b6161e4a3e4",
+      "bytes": 6673
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/server/Vehicles/ProfessionVehicles.lua",
+      "sha256": "dd8f54aff597b75ff3662c74d9cac4f019030c9cf5e37b44982eeb1bdeeb8be6",
+      "bytes": 15432
+    },
+    {
+      "container": "game-root",
+      "path": "ProjectZomboid64.json",
+      "sha256": "d9042d298dace3faa63e0a217a6caae69a39ff1bba0dc91a37b28bb08fe800e0",
+      "bytes": 1477
+    },
+    {
+      "container": "game-root",
+      "path": "ProjectZomboidServer.bat",
+      "sha256": "5a8512f1d5c2d8f1cd79aa59eb0092b234e8f95f70c74255321e516a791c7dad",
+      "bytes": 474
+    },
+    {
+      "container": "game-root",
+      "path": "zombie/GameWindow.class",
+      "sha256": "a09bbcd0a25409f3c4fd68d975e16eb0b6d3ece3fdfc0abcf881695ffde601fd",
+      "classification": "Differing loose override; effective runtime unknown"
+    },
+    {
+      "container": "game-root",
+      "path": "zombie/iso/IsoWorld.class",
+      "sha256": "341c9a6c48abc1e4e7c245e07924630ff10d3e19650b9558ec16e4f8ea2ed9d3",
+      "classification": "Differing loose override; effective runtime unknown"
+    },
+    {
+      "container": "game-root",
+      "path": "zombie/Lua/LuaEventManager.class",
+      "sha256": "9508ea6d477488d9af93c442be5281f34ec5486a451683ab94c96abfd71e2c84",
+      "classification": "Differing loose override; effective runtime unknown"
+    },
+    {
+      "container": "game-root",
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "sha256": "2fc8f3207c6cf071dd37827b44e23901ea0bbfd79059621991d3d1e80a0ab245",
+      "classification": "Differing loose override; effective runtime unknown"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoCell.class",
+      "sha256": "5e9a88e1cd9a3f370e31ae0152c9de381d649caea7cab750ebc82a91b4e1f767"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoGridSquare.class",
+      "sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/inventory/types/AnimalInventoryItem.class",
+      "sha256": "852fb728e6416ea4fbd441307d6f4aa40c8780a61d8b3aae7141f44f32e8217c"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/VirtualAnimal.class",
+      "sha256": "3f87503412695eb519d91c8c56ccbfe5d476f9f429bda9161f8399923af87159"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerMain.class",
+      "sha256": "4744a1a9bb393d1dfb4db3b52d8475c5344a128c6e35c697eaf34f8b5da1db61"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerWorker.class",
+      "sha256": "bc0cb514dbde7ef1aef40ef047de004a622faaebca3527994cc7f2f8dfc47452"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/globalObjects/SGlobalObjectSystem.class",
+      "sha256": "26d0f85b96d3eb7b9770fe3f8d25ebd1021e2c7ca873129ae877cabcfc0c68dc"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/globalObjects/SGlobalObjects.class",
+      "sha256": "1c616c7fa4f5130af580486b549759b342b1bdb9e9933d44c63bbbd086d89715"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/globalObjects/SGlobalObjectNetwork.class",
+      "sha256": "aeb8d73875127f8470eef342205fc1a04bb422448772c69533dabd38bb7e1984"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/GlobalObjectsPacket.class",
+      "sha256": "68c3af0c1d6b8c10c68ae82b356d48da009c7df0ee59107f099fd7228f98a6b1"
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/ISDropWorldItemAction.lua",
+      "sha256": "1a1db7308a9cee66889ed197320d8ceb9a8373fcdf557d8e14d27b10ef644db3",
+      "bytes": 5543
+    }
+  ],
+  "findings": [
+    {
+      "subject": "Native loaded anchor API",
+      "signatures": [
+        "ModData.get(String):KahluaTable",
+        "ModData.create(String):KahluaTable",
+        "ModData.add(String,KahluaTable):void"
+      ],
+      "evidence": "ModData delegates get/create at bytecode4, add at5. Exposer.java:2794 exposes class. Implementation uses get only; no create/add/import.",
+      "scope": "A captured server table is public data; absence is not authorization to initialize."
+    },
+    {
+      "subject": "Native startup ordering",
+      "evidence": "GlobalModData.init resets at1, loads at5, emits OnInitGlobalModData at16. LuaEventManager registers event1575-1581. GameServer.main IsoWorld.init2424, startServer2650; startServer OnServerStarted231-234. IsoWorld.init GlobalModData.init2820. ProfessionVehicles.lua:347 registers the actual server load event.",
+      "scope": "Supports one-shot loaded-anchor capture and later loaded-only census; not proof every animal/chunk has loaded."
+    },
+    {
+      "subject": "Unsafe new-game inference",
+      "evidence": "WorldDictionary static isNewGame defaults true at50-51; packaged caller search found setIsNewGame only in GameLoadingState. Dedicated GameServer calls IsoWorld.init directly; GlobalModData.init precedes WorldDictionary.init.",
+      "scope": "Ignore OnInitGlobalModData boolean for initialization. Missing anchors/private stores remain blocked."
+    },
+    {
+      "subject": "Client anchor trust",
+      "evidence": "GlobalModDataPacket parse creates a separate table23-29, loads40, emits OnReceiveGlobalModData50. INetworkPacket default server processing does not merge. receiveRequest serves named table contents; packet access includes logged-in clients.",
+      "scope": "Never copy receive payloads into server anchor or put private records in it. No receive handler or command setter implemented."
+    },
+    {
+      "subject": "Dedicated save ordering",
+      "evidence": "ServerMap.QueuedSaveAll SaveAll18, AnimalPopulationManager.save71, GlobalModData.save146, catches/logs152-160, finishing text220-223. No OnSave/OnPostSave in this path or SaveAll.",
+      "scope": "No verified Lua completion event; the finishing message is not success evidence."
+    },
+    {
+      "subject": "Other save routes",
+      "evidence": "GameWindow.save emits OnSave before persistence; exit catches failures then emits OnPostSave, twice in this package. GlobalObject.save catches Throwable and delegates GameWindow; saveGame calls that wrapper. GlobalModData.save flushes temp at287, closes292, then copies to .bin and deletes temp.",
+      "scope": "No atomic/fdatasync guarantee or usable dedicated completion acknowledgement. Adapter never invokes save/saveGame."
+    },
+    {
+      "subject": "Loaded native animal census",
+      "signatures": [
+        "LuaManager.GlobalObject.getCell():IsoCell",
+        "IsoCell.getAnimals():List<IsoAnimal>",
+        "IsoAnimal.isExistInTheWorld():boolean"
+      ],
+      "evidence": "GlobalObject.java:2717-2719; IsoCell class exposed Exposer.java:2312. getAnimals scans objectList and allocates LinkedList at0-63. isExistInTheWorld source2248-2250 checks square and moving-list membership.",
+      "scope": "One-shot/explicit loaded census only; false means detached, not death, safe release or global absence."
+    },
+    {
+      "subject": "Virtual lifecycle",
+      "evidence": "VirtualAnimal.save invokes IsoAnimal.save179. load constructs via IsoObject.factoryFromFileInput159, invokes IsoAnimal.load197, stores239-248. AnimalManagerMain.fromWorker uses storedhandle120-132, adds to world416 and objectList555-565.",
+      "scope": "Markers have a serialization path; handles may be preserved or replaced. No animal-specific create/load/unload event found; no automatic replacement accepted."
+    },
+    {
+      "subject": "Specific carried drop route",
+      "evidence": "AnimalInventoryItem.setAnimal stores handle2; save invokes animal.save13; load constructs7-20 then animal.load30. IsoGridSquare five-argument AddWorldInventoryItem delegates at9 to six-argument overload; its animal branch constructs94-132, invokes copyFrom144, native registration203-210, addToWorld215, square/current229-240. ISDropWorldItemAction.complete calls native drop then removes exact inventory item.",
+      "scope": "Previously unmapped release path now source-supported; marker copy is not atomic item transfer, lifecycle receipt or generation proof."
+    },
+    {
+      "subject": "Native death notifications",
+      "evidence": "IsoAnimal.OnDeath source1191-1192 emits OnCharacterDeath. IsoDeadBody copies ModData1121-1128 but skips OnDeadBodySpawn on GameServer.server at1301-1304, trigger1307-1311.",
+      "scope": "Recheck exact native death on previously known handle. No dedicated corpse-event assumption or persistent tombstone implementation."
+    },
+    {
+      "subject": "Private native global-object alternative rejected",
+      "evidence": "SGlobalObjectSystem disk keys and client initial-state callback are separate; zero objects plus nil callback can avoid private sync. But registerSystem registers before load; load catches missing/other failures and save truncates gos_NAME.bin before serialization, catches failures and returnsvoid. All registered systems auto-save; no per-system disable/unregister found. sendCommand broadcasts.",
+      "scope": "Do not adopt without proof unknown/corrupt originals can be preserved; never broadcast private projections."
+    }
+  ],
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED"
+}
