@@ -1,6 +1,6 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
 
 M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. The M0R documentation delivery itself authorized no gameplay; the user subsequently authorized feature development on 2026-10-14. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 
@@ -8,7 +8,7 @@ M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine doma
 
 The [M0R request](requirements/M0R_REQUEST.md) supplements the [standalone master](requirements/STANDALONE_MASTER_HANDOFF.md). Latest shared/project Lua-only rules supersede older Java allowances. All approved gameplay scope remains in [132 traceability rows](FEATURE_TRACEABILITY_MATRIX.md). Former R1–R6 integration assumptions are historical, not automatic standalone blockers or proof. Current signatures/hashes, growth correction and missing safe Lua seams are in [the source index](M0R_SOURCE_EVIDENCE.md).
 
-Current project checkpoint is 0.2.0-dev.3: additive MINOR feature development authorized 2026-10-14. The [ownership/inspection foundation](FEATURE_FOUNDATION.md) implements pure Lua domain logic without engine registration or durable commits. The [native/private preparation slice](NATIVE_PERSISTENCE_SLICE.md) adds read-only native observation, private identity matching, bounded canonical snapshots and exact paired-slot recovery/preparation. The [native loaded-anchor/lifecycle adapter](NATIVE_PAIRING_LIFECYCLE.md) now captures the exact existing native anchor at load, publishes one pending preparation and observes known detached/dead handles. Its file/event tests do not prove native saving or full lifecycle continuity. Model refinement is deferred; gsd-v002 remains frozen at its tested 0.1.0-dev.2 checkpoint. Technical Mod ID remains provisional.
+Current checkpoint is 0.2.0-dev.4: additive MINOR development with [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md). It supplies explicit first-store provisioning, the user-approved B47ANCEDDogmeat Mod ID, b47dogtest/grey registration using vanilla raccoon presentation, a default-off sandbox setting and an admin diagnostic menu. No in-game result is claimed. Native animal markers are client-writable; dedicated ownership preparation is now blocked. Original model refinement remains deferred, with gsd-v002 frozen at its tested 0.1.0-dev.2 checkpoint.
 
 ## Current bounded slice and next integration
 

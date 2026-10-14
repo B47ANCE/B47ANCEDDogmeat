@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def runtime(directory):
     lua = LuaRuntime(unpack_returned_tuples=True, register_eval=False, register_builtins=False)
     lua.globals().package.path = ';'.join(str(ROOT / p).replace('\\', '/') for p in
-                                         ('src/domain/?.lua', 'src/native/?.lua', 'tests/lua/?.lua'))
+                                         ('src/domain/?.lua', 'src/native/?.lua', 'src/bootstrap/shared/?.lua', 'tests/lua/?.lua'))
     lua.globals().package.cpath = ''
     def target(relative):
         path = (directory / relative).resolve()
@@ -30,16 +30,27 @@ def runtime(directory):
         path.write_text(data, encoding='ascii', newline='')
     lua.globals().testfs_read = read_file
     lua.globals().testfs_write = write_file
+    lua.globals().testfs_exists = lambda relative: target(relative).exists()
+    lua.globals().test_bootstrap_server=(ROOT/'src/bootstrap/server/B47DogBootstrap.lua').read_text(encoding='utf-8')
+    lua.globals().test_bootstrap_client=(ROOT/'src/bootstrap/client/B47DogTestMenu.lua').read_text(encoding='utf-8')
     return lua
 
 
 def main():
     suites = []
+    syntax=runtime(Path(tempfile.gettempdir()).resolve())
+    inventory=json.loads((ROOT/'source-inventory.json').read_text(encoding='utf-8'))
+    compile_lua=syntax.eval('function(source) local fn,err=loadstring(source); assert(fn,err); return true end')
+    for relative in inventory['authoritative_lua']:
+        compile_lua((ROOT/relative).read_text(encoding='utf-8'))
+    del syntax
     with tempfile.TemporaryDirectory(prefix='b47dog-offline-') as temporary:
         directory = Path(temporary).resolve()
         for name, phase in [('ownership_spec.lua', None), ('storage_spec.lua', None), ('pairing_spec.lua', None),
+                            ('provision_spec.lua', None), ('registration_spec.lua', None), ('bootstrap_spec.lua', None),
                             ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover'),
-                            ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover')]:
+                            ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover'),
+                            ('provision_restart_spec.lua', 'prepare'), ('provision_restart_spec.lua', 'recover')]:
             lua = runtime(directory)
             lua_version = lua.eval('_VERSION')
             lua.globals().RESTART_PHASE = phase

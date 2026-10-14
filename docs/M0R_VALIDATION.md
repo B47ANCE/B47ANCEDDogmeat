@@ -1,12 +1,14 @@
 # M0R validation and remaining blockers
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+Current 0.2.0-dev.4 validation is in [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md): 259 offline tests, 19 Lua sources, 1,015 localization fallbacks, loadable source parity and new source evidence. Historical results below retain their original environments and versions. Native marker provenance is now a confirmed multiplayer authority blocker; dedicated ownership preparation is disabled.
 
 Historical M0R evidence date: 2026-10-12; tested project version: 0.1.0-dev.1. The current header identifies the contract edition. Environment: Windows offline documentation/native source inspection. At that evidence checkpoint no gameplay prototype/assets were implemented, and no PZ/server launch, deployment, package or Workshop publication occurred. Later gsd-v002 authoring evidence is separate under art/german_shepherd. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
 
 ## Compatibility and evidence
 
-Current project version is 0.2.0-dev.3 for additive feature development, including [native loaded-anchor recovery and lifecycle observation](NATIVE_PAIRING_LIFECYCLE.md). The [offline ownership/inspection foundation](FEATURE_FOUNDATION.md) is partially implemented and tested separately. The historical M0R result below remains tested at 0.1.0-dev.1, and the unchanged art remains tested at 0.1.0-dev.2. Current document headers do not renew either evidence set. Historical results retain their observed versions.
+The preceding 0.2.0-dev.3 checkpoint covered additive feature development, including [native loaded-anchor recovery and lifecycle observation](NATIVE_PAIRING_LIFECYCLE.md). The [offline ownership/inspection foundation](FEATURE_FOUNDATION.md) is partially implemented and tested separately. The historical M0R result below remains tested at 0.1.0-dev.1, and the unchanged art remains tested at 0.1.0-dev.2. Current document headers do not renew either evidence set. Historical results retain their observed versions.
 
 [M0R_SOURCE_EVIDENCE.md](M0R_SOURCE_EVIDENCE.md) records exact signatures/lines/bytecode offsets and44 current hashes. Native Lua registry/spawn/model, nonclient updates/synchronization, marker save/load/carry/trailer/corpse and cache-file primitives exist. Larger original canine, task/lifecycle/private durability/physical waste/door capabilities remain unproved. Fresh native growth replacement does not demonstrate marker transfer; broad old ModData-growth assertion stays historical.
 

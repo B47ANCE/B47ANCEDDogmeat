@@ -1,6 +1,8 @@
 # Localization contract
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) emits 35 runtime fallback keys in UI/Sandbox/IGUI for all 29 languages (1,015 entries). The full design catalog now has 318 keys; source-inventory.json declares the exact runtime subset. The original B47ANCEDDogTraining translation/design prefix is retained separately from the approved B47ANCEDDogmeat runtime Mod ID.
 
 M0R design, 2026-10-12. FEASIBLE localization contract; the offline feature slice prepares 13 UI/eight Sandbox fallback keys across 29 languages under src/localization. No runtime translation loading or UI implementation exists. [Design key catalog](contracts/localization_keys.json), [sandbox registry](SANDBOX_SETTINGS_REGISTRY.md), [input/manual acceptance](MINIMUM_PLAYABLE_RELEASE.md).
 

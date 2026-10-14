@@ -1,6 +1,8 @@
 # Native state ownership matrix
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+Current source correction: the native animal marker is client-writable through ObjectModDataPacket. The table below is the intended ownership contract; its native marker implementation does not enforce that sole-writer claim. Dedicated ownership/gameplay preparation is blocked. See [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md).
 
 M0R contract, 2026-10-12. Status: FEASIBLE domain design; native arbitration EXPERIMENTAL. This assigns intended ownership, not proved runtime behavior. Lua-only. See [source evidence](M0R_SOURCE_EVIDENCE.md), [task contract](TASK_ARBITRATION_CONTRACT.md) and [identity contract](CANINE_IDENTITY_CONTRACT.md).
 
@@ -19,7 +21,7 @@ The dedicated server commits shared gameplay. Native ownership means the native 
 | Native reproduction/pregnancy, genetic and growth data | Native-owned | Native animal subsystem | Native lifecycle | Preserve native fields; no breeding extension in M1; audit eligibility before population policy |
 | Animal inventory-item/live/trailer representation | Shared operation | Native authoritative transition | Native item/vehicle/animal save | Server validates, reserves, invokes native transition, then reconciles dog ID; exactly one representation |
 | Permanent dog ID and allocation high-water | B47ANCE-owned | Server identity allocator | Private world store plus nonsecret public binding | Allocate once before committed spawn; never trust client-supplied identity |
-| Binding marker, generation and binding provenance token | B47ANCE-owned | Server identity/recovery coordinator | Native animal ModData candidate; nonsecret allowlist only | Validate retained accepted binding chain independently of current global checkpoint; verify carries/copies; client copies cannot authorize |
+| Binding marker, generation and binding provenance token | Intended B47ANCE ownership; native authority BLOCKED | Server intent; clients can alter current native marker | Client-writable native ModData; diagnostic nonsecret allowlist only | Validate retained accepted binding chain independently of current global checkpoint; verify carries/copies; client copies cannot authorize |
 | Identity lifecycle, tombstone and quarantine | B47ANCE-owned | Server lifecycle coordinator | Private store | Serial transitions; quarantine ambiguous observations without respawn |
 | Precise traits, hidden history and prior knowledge | B47ANCE-owned | Server initialization/learning domain | Private store only | Generate once; never full-record ModData or packet serialization |
 | Intrinsic anxiety/confidence and individual motivations | B47ANCE-owned | Server personality domain | Private store | Distinct from native stress; no breed-deterministic outcomes |

@@ -6,13 +6,20 @@ import json
 import re
 import sys
 import zipfile
+from build_loadable import assemble
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
           ('Access', 'Guard', 'Ownership', 'Projection', 'Codec', 'Identity', 'Snapshot', 'PrivateStore')}
 NATIVE = {f'src/native/B47Dog/{name}.lua' for name in
-          ('PZCache', 'NativeAnimal', 'NativeSession', 'NativeCheckpoint', 'NativeRuntime')}
-MODULES = DOMAIN | NATIVE
+          ('PZCache', 'NativeAnimal', 'NativeSession', 'NativeCheckpoint', 'NativeRuntime',
+           'NativeAuthority', 'NativeProvision', 'NativeTestService')}
+BOOTSTRAP = {'src/bootstrap/shared/B47DogRegistration.lua','src/bootstrap/server/B47DogBootstrap.lua',
+             'src/bootstrap/client/B47DogTestMenu.lua'}
+MODULES = DOMAIN | NATIVE | BOOTSTRAP
+VANILLA_REQUIRES = {'Definitions/animal/RaccoonDefinitions','Definitions/animal/AnimalAvatarDefinition',
+                    'Definitions/animal/AnimalPartsDefinitions','ISUI/ISModalDialog'}
 
 
 def no_duplicates(pairs):
@@ -36,14 +43,15 @@ def check_source():
         errors.append('Source inventory differs from bounded feature slice')
     if inventory['languages'] != catalog['languages'] or inventory['localization_root'] != 'src/localization':
         errors.append('Localization source/language declaration differs from contract')
-    if inventory['runtime_registration'] is not None or inventory['workshop_id'] is not None:
-        errors.append('Unexpected runtime registration/Workshop identity in unregistered prototype')
+    registration = inventory['runtime_registration']
+    if registration.get('mod_id') != 'B47ANCEDDogmeat' or registration.get('native_type') != 'b47dogtest' or inventory['workshop_id'] is not None:
+        errors.append('Unexpected runtime identity/Workshop identity')
     adapter = inventory.get('native_event_adapter', {})
-    if (adapter.get('entry') != 'B47Dog/NativeRuntime.install' or adapter.get('automatic_bootstrap') is not None
-            or adapter.get('events') != ['OnInitGlobalModData', 'OnServerStarted', 'OnCharacterDeath']):
+    if (adapter.get('entry') != 'B47Dog/NativeRuntime.install' or adapter.get('automatic_bootstrap') != 'src/bootstrap/server/B47DogBootstrap.lua'
+            or adapter.get('events') != ['OnInitGlobalModData', 'OnServerStarted', 'OnGameStart', 'OnCharacterDeath']):
         errors.append('Explicit native event adapter inventory differs')
-    allowed = MODULES | {f'src/localization/{lang}/{category}.json'
-                        for lang in catalog['languages'] for category in ('UI', 'Sandbox')}
+    allowed = MODULES | set(inventory['metadata_sources']) | {f'src/localization/{lang}/{category}.json'
+                        for lang in catalog['languages'] for category in ('UI', 'Sandbox', 'IGUI')}
     found = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'src').rglob('*') if p.is_file()}
     if found != allowed:
         errors.append('Unexpected/missing source paths: ' + str(sorted(found ^ allowed)))
@@ -55,32 +63,53 @@ def check_source():
             continue
         code = path.read_text(encoding='utf-8')
         for module in re.findall(r'\brequire\s*\(?\s*["\']([^"\']+)["\']', code):
-            candidates = {'src/domain/' + module + '.lua', 'src/native/' + module + '.lua'} & MODULES
+            if relative in BOOTSTRAP and module in VANILLA_REQUIRES:
+                continue
+            candidates = {'src/domain/' + module + '.lua', 'src/native/' + module + '.lua',
+                          'src/bootstrap/shared/' + module + '.lua'} & MODULES
             if len(candidates) != 1 or (relative in DOMAIN and not candidates <= DOMAIN):
                 errors.append('Unknown/case-wrong require in ' + relative + ': ' + module)
         # Deliberately bounded source checks, not a general Lua security scanner.
-        if re.search(r'\b(?:SandboxVars|io|os|debug|luajava)\s*[.:\[]|'
-                     r'\b(?:sendClientCommand|sendServerCommand|getModFileWriter|addAnimal|loadstring|dofile|loadfile)\s*\(', code):
+        if re.search(r'\b(?:io|os|debug|luajava)\s*[.:\[]|'
+                     r'\b(?:getModFileWriter|loadstring|dofile|loadfile)\s*\(', code):
             errors.append('Unexpected runtime registration, write or dynamic execution: ' + relative)
-        if re.search(r'\bEvents\s*[.:\[]', code) and relative != 'src/native/B47Dog/NativeRuntime.lua':
+        if re.search(r'\bEvents\s*[.:\[]', code) and relative not in BOOTSTRAP | {'src/native/B47Dog/NativeRuntime.lua'}:
             errors.append('Event API outside explicit runtime adapter: ' + relative)
-        if re.search(r'\bModData\s*[.:\[]', code) and relative != 'src/native/B47Dog/NativeCheckpoint.lua':
+        if re.search(r'\bModData\s*[.:\[]', code) and relative not in {'src/native/B47Dog/NativeCheckpoint.lua','src/native/B47Dog/NativeProvision.lua'}:
             errors.append('Native anchor API outside checkpoint adapter: ' + relative)
         if relative in DOMAIN and re.search(r'\b(?:IsoAnimal)\s*[.:\[]|'
                      r'\b(?:getFileWriter|getFileReader|getCurrentSaveName|getRandomUUID|instanceof|isServer|isClient)\b', code):
             errors.append('Engine/storage/dynamic execution outside approved domain: ' + relative)
         if relative in NATIVE:
             allowed_api = {'isServer', 'isClient', 'getCurrentSaveName', 'getFileReader', 'getFileWriter',
-                           'instanceof', 'getRandomUUID', 'Events', 'ModData', 'getCell'}
+                           'instanceof', 'getRandomUUID', 'Events', 'ModData', 'getCell',
+                           'B47DogSinglePlayer','cacheFileExists','AnimalDefinitions','addAnimal',
+                           'SandboxVars','Capability','getTimestampMs'}
             if not set(re.findall(r'\bapi\.([A-Za-z_][A-Za-z0-9_]*)', code)) <= allowed_api:
                 errors.append('Unreviewed native API reference: ' + relative)
         if relative == 'src/native/B47Dog/NativeRuntime.lua':
             events = set(re.findall(r'api\.Events\.([A-Za-z_][A-Za-z0-9_]*)\.Add\(', code))
-            if events != {'OnInitGlobalModData', 'OnServerStarted', 'OnCharacterDeath'}:
+            if events != {'OnInitGlobalModData', 'OnServerStarted', 'OnGameStart', 'OnCharacterDeath'}:
                 errors.append('Native adapter event registrations changed')
         if relative == 'src/native/B47Dog/NativeCheckpoint.lua':
             if set(re.findall(r'api\.ModData\.([A-Za-z_][A-Za-z0-9_]*)', code)) != {'get'}:
                 errors.append('Unreviewed anchor creation/import API')
+        if relative == 'src/native/B47Dog/NativeProvision.lua':
+            if set(re.findall(r'api\.ModData\.([A-Za-z_][A-Za-z0-9_]*)', code)) != {'get','create'}:
+                errors.append('Unreviewed initializer anchor API')
+        if relative in DOMAIN and re.search(r'\b(?:Events|ModData|SandboxVars|addAnimal|sendServerCommand|sendClientCommand)\b', code):
+            errors.append('Native mutation/network API in pure domain')
+    metadata=(ROOT/'src/metadata/mod.info').read_text(encoding='utf-8')
+    if re.findall(r'^id=(.*)$',metadata,re.M)!=['B47ANCEDDogmeat'] or 'versionMin=42.21' not in metadata:
+        errors.append('Loadable metadata differs from approved identity/baseline')
+    option=read(ROOT/'src/metadata/runtime-options.json')['settings']
+    if len(option)!=1 or option[0]['id']!='B47ANCEDDogmeat.PersistenceTestMode' or option[0]['default'] is not False or option[0]['server_authority'] is not True:
+        errors.append('Runtime sandbox option contract differs')
+    sandbox=(ROOT/'src/metadata/sandbox-options.txt').read_text(encoding='utf-8')
+    if re.findall(r'option\s+([\w.]+)',sandbox)!=['B47ANCEDDogmeat.PersistenceTestMode'] or 'default = false' not in sandbox:
+        errors.append('Native sandbox source differs')
+    with tempfile.TemporaryDirectory(prefix='b47dog-validate-') as temp:
+        assemble(Path(temp)/'B47ANCEDDogmeat')
     for forbidden in ('dist', 'Contents', 'media', 'mod.info'):
         if (ROOT / forbidden).exists():
             errors.append('Unexpected runtime/distribution root: ' + forbidden)
@@ -90,7 +119,7 @@ def check_source():
 def check_native(game_root):
     errors, checked = [], 0
     inputs = []
-    for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json'):
+    for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json'):
         inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
         for item in inputs:
@@ -132,7 +161,7 @@ def main():
     translations = 0
     for language in inventory['languages']:
         for category, keys in inventory['localization_keys'].items():
-            if category not in ('UI', 'Sandbox') or len(set(keys)) != len(keys):
+            if category not in ('UI', 'Sandbox', 'IGUI') or len(set(keys)) != len(keys):
                 errors.append('Invalid localization category/key inventory')
                 continue
             relative = f'src/localization/{language}/{category}.json'
@@ -162,6 +191,7 @@ def main():
     output = {'status': 'STATIC PASS' if not errors else 'FAIL',
               'project_version': (ROOT / 'VERSION').read_text(encoding='utf-8').strip(),
               'lua_modules': len(MODULES), 'pure_domain_modules': len(DOMAIN), 'native_modules': len(NATIVE),
+              'bootstrap_files':len(BOOTSTRAP),'loadable_source_parity':'PASS' if not errors else 'FAIL',
               'native_inputs_rehashed': checked, 'languages': len(inventory['languages']),
               'fallback_entries': translations, 'frozen_art_files': len(art['files']),
               'environment': 'Offline source/data checks; no native loading or gameplay',

@@ -11,5 +11,15 @@
   "UI_B47ANCEDDogTraining_Reason_Invalid": "This request is invalid.",
   "UI_B47ANCEDDogTraining_Reason_Protocol": "Client and server versions differ.",
   "UI_B47ANCEDDogTraining_Reason_Capability": "This capability is not available.",
-  "UI_B47ANCEDDogTraining_Reason_Recovery": "Recovery must complete before this action."
+  "UI_B47ANCEDDogTraining_Reason_Recovery": "Recovery must complete before this action.",
+  "UI_B47ANCEDDogmeat_TestMenu": "Dog save/load test...",
+  "UI_B47ANCEDDogmeat_TestConfirm": "Initialize this disposable test world?\nThis creates one temporary raccoon carrier.\nUse only a NEW world made for this test.\nDo not use an existing gameplay save.",
+  "UI_B47ANCEDDogmeat_Test_Disabled": "Persistence Test Mode is disabled by the server.",
+  "UI_B47ANCEDDogmeat_Test_Unavailable": "The test is unavailable. Use a living character\non a loaded ground-floor tile after world startup.",
+  "UI_B47ANCEDDogmeat_Test_Invalid": "The test request is invalid or uses an unsupported protocol.",
+  "UI_B47ANCEDDogmeat_Test_Busy": "Please wait a moment before inspecting again.",
+  "UI_B47ANCEDDogmeat_Test_Recovery": "Recovery review is required. Existing evidence is preserved.\nNo new carrier will be created in this world.",
+  "UI_B47ANCEDDogmeat_Test_WAITING_INITIAL_NATIVE_RELOAD": "Test carrier created. Save and quit normally, then restart.\nThis message does not confirm a successful native save.\nAfter reloading, open this menu again.",
+  "UI_B47ANCEDDogmeat_Test_WAITING_NATIVE_RELOAD": "A checkpoint is pending. Save and quit normally.\nOnly a later native load can select the saved checkpoint.",
+  "UI_B47ANCEDDogmeat_Test_Loaded": "Loaded checkpoint: %1 marker matches; %2 quarantined.\nTest carrier ID: %3\nMarker matches do not prove multiplayer ownership."
 }

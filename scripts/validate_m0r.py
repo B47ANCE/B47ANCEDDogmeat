@@ -143,7 +143,8 @@ def main():
         if row is not None and row[4].strip()!=expected_default:
             errors.append('Setting Markdown default differs: '+s['id'])
     for k,v in keys.items():
-        if not isinstance(v,str) or not v.strip() or not k.startswith(('Sandbox_B47ANCEDDogTraining','UI_B47ANCEDDogTraining')):
+        if not isinstance(v,str) or not v.strip() or not k.startswith(('Sandbox_B47ANCEDDogTraining','UI_B47ANCEDDogTraining',
+                'Sandbox_B47ANCEDDogmeat','UI_B47ANCEDDogmeat','IGUI_AnimalType_b47dogtest')):
             errors.append('Invalid localization catalog entry: '+k)
     checked_history = 0
     for record in history:

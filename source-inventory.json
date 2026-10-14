@@ -1,8 +1,11 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.3",
-  "status": "EXPLICIT NATIVE EVENT ADAPTER AND PRIVATE PREPARATION; no automatic bootstrap or loadable mod",
+  "project_version": "0.2.0-dev.4",
+  "status": "LOADABLE DIAGNOSTIC SOURCE; native runtime NOT TESTED; no dedicated ownership authority",
   "authoritative_lua": [
+    "src/bootstrap/client/B47DogTestMenu.lua",
+    "src/bootstrap/server/B47DogBootstrap.lua",
+    "src/bootstrap/shared/B47DogRegistration.lua",
     "src/domain/B47Dog/Access.lua",
     "src/domain/B47Dog/Codec.lua",
     "src/domain/B47Dog/Guard.lua",
@@ -12,9 +15,12 @@
     "src/domain/B47Dog/Projection.lua",
     "src/domain/B47Dog/Snapshot.lua",
     "src/native/B47Dog/NativeAnimal.lua",
+    "src/native/B47Dog/NativeAuthority.lua",
     "src/native/B47Dog/NativeCheckpoint.lua",
+    "src/native/B47Dog/NativeProvision.lua",
     "src/native/B47Dog/NativeRuntime.lua",
     "src/native/B47Dog/NativeSession.lua",
+    "src/native/B47Dog/NativeTestService.lua",
     "src/native/B47Dog/PZCache.lua"
   ],
   "localization_root": "src/localization",
@@ -63,7 +69,17 @@
       "UI_B47ANCEDDogTraining_Reason_Invalid",
       "UI_B47ANCEDDogTraining_Reason_Protocol",
       "UI_B47ANCEDDogTraining_Reason_Capability",
-      "UI_B47ANCEDDogTraining_Reason_Recovery"
+      "UI_B47ANCEDDogTraining_Reason_Recovery",
+      "UI_B47ANCEDDogmeat_TestMenu",
+      "UI_B47ANCEDDogmeat_TestConfirm",
+      "UI_B47ANCEDDogmeat_Test_Disabled",
+      "UI_B47ANCEDDogmeat_Test_Unavailable",
+      "UI_B47ANCEDDogmeat_Test_Invalid",
+      "UI_B47ANCEDDogmeat_Test_Busy",
+      "UI_B47ANCEDDogmeat_Test_Recovery",
+      "UI_B47ANCEDDogmeat_Test_WAITING_INITIAL_NATIVE_RELOAD",
+      "UI_B47ANCEDDogmeat_Test_WAITING_NATIVE_RELOAD",
+      "UI_B47ANCEDDogmeat_Test_Loaded"
     ],
     "Sandbox": [
       "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode",
@@ -73,27 +89,45 @@
       "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath",
       "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_tooltip",
       "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option1",
-      "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option2"
+      "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option2",
+      "Sandbox_B47ANCEDDogmeat",
+      "Sandbox_B47ANCEDDogmeat_PersistenceTestMode",
+      "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip"
+    ],
+    "IGUI": [
+      "IGUI_AnimalType_b47dogtest"
     ]
   },
-  "runtime_registration": null,
+  "runtime_registration": {
+    "mod_id": "B47ANCEDDogmeat",
+    "native_type": "b47dogtest",
+    "breed": "grey",
+    "presentation": "vanilla raccoon; approved temporary test carrier"
+  },
   "workshop_id": null,
-  "generated_outputs": "None; test reports print to stdout. No staging or packages.",
+  "generated_outputs": "scripts/build_loadable.py assembles a new local development tree only; no installation, ZIP or upload. Disposable check output is temporary.",
   "validation": [
     "python -B scripts/check_versions.py --root . --json",
     "python -B scripts/validate_m0r.py",
     "python -B scripts/validate_foundation.py",
-    "python -B scripts/test_domain.py"
+    "python -B scripts/test_domain.py",
+    "python -B scripts/build_loadable.py --check"
   ],
   "native_validation": "python -B scripts/validate_foundation.py --native --game-root <verified-game-root>",
   "native_event_adapter": {
     "entry": "B47Dog/NativeRuntime.install",
-    "automatic_bootstrap": null,
+    "automatic_bootstrap": "src/bootstrap/server/B47DogBootstrap.lua",
     "events": [
       "OnInitGlobalModData",
       "OnServerStarted",
+      "OnGameStart",
       "OnCharacterDeath"
     ],
-    "requires": "Existing validated native anchor and private slots; approved namespace/type/breed configuration before native load."
-  }
+    "requires": "Explicit authority; absent data never initializes automatically. Admin confirmation plus PersistenceTestMode required for first test carrier."
+  },
+  "metadata_sources": [
+    "src/metadata/mod.info",
+    "src/metadata/sandbox-options.txt",
+    "src/metadata/runtime-options.json"
+  ]
 }

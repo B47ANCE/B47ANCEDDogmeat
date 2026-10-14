@@ -5,6 +5,7 @@ local Codec=require "B47Dog/Codec"
 local Identity=require "B47Dog/Identity"
 local Checkpoint=require "B47Dog/NativeCheckpoint"
 local Session=require "B47Dog/NativeSession"
+local Authority=require "B47Dog/NativeAuthority"
 local NativeRuntime={}
 local installed=setmetatable({},{__mode="k"})
 
@@ -19,11 +20,11 @@ function NativeRuntime.install(config,api)
     local encoded=Codec.encode(config);if not encoded then return nil,"Invalid" end
     config=Codec.decode(encoded)
     local function server()
-        local ok,result=pcall(function() return api.isServer()==true and api.isClient()==false end)
-        return ok and result
+        return Authority.allowed(api)
     end
     if not server() then return nil,"Unavailable" end
-    for _,name in ipairs({"OnInitGlobalModData","OnServerStarted","OnCharacterDeath"}) do
+    local startEvent=api.B47DogSinglePlayer==true and "OnGameStart" or "OnServerStarted"
+    for _,name in ipairs({"OnInitGlobalModData",startEvent,"OnCharacterDeath"}) do
         if type(api.Events[name])~="table" or type(api.Events[name].Add)~="function" then return nil,"Unavailable" end
     end
     installed[api]=installed[api] or {}
@@ -114,7 +115,8 @@ function NativeRuntime.install(config,api)
     installed[api][config.namespace]=controller
     local ok=pcall(function()
         api.Events.OnInitGlobalModData.Add(onLoaded)
-        api.Events.OnServerStarted.Add(onStarted)
+        if api.B47DogSinglePlayer==true then api.Events.OnGameStart.Add(onStarted)
+        else api.Events.OnServerStarted.Add(onStarted) end
         api.Events.OnCharacterDeath.Add(onDeath)
     end)
     if not ok then fail("RegistrationFailed");loaded=true;return nil,"RegistrationFailed" end

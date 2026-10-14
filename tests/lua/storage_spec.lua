@@ -255,7 +255,8 @@ end)
 
 test("native session prepares authenticated-context rename with private history",function()
     local Session=require "B47Dog/NativeSession"
-    S.seed();local api,_,calls=S.api();local animal,data=S.animal()
+    S.seed();local api,flags,calls=S.api();local animal,data=S.animal()
+    flags.server=false;api.B47DogSinglePlayer=true
     local session=assert(Session.open({namespace="FixtureDogs",worldId=S.WORLD,pairing=S.pair(),
         allowedTypes={FixtureCanine={FixtureShepherd=true}}},api))
     local ctx={worldId=S.WORLD,sessionId="fixture-session",visible=true,reachable=true,ownershipEnabled=true,
@@ -277,7 +278,8 @@ end)
 test("native session refuses death, duplicate and unauthenticated role before writes",function()
     local Session=require "B47Dog/NativeSession"
     for _,failure in ipairs({"dead","duplicate","notOwner"}) do
-        S.seed();local api,_,calls=S.api();local animal=S.animal()
+        S.seed();local api,flags,calls=S.api();local animal=S.animal()
+        flags.server=false;api.B47DogSinglePlayer=true
         local session=assert(Session.open({namespace="FixtureDogs",worldId=S.WORLD,pairing=S.pair(),
             allowedTypes={FixtureCanine={FixtureShepherd=true}}},api))
         local ctx={worldId=S.WORLD,sessionId="fixture-session",visible=true,reachable=true,ownershipEnabled=true,
@@ -316,7 +318,8 @@ end)
 test("native reobservation refuses identity changes during preparation",function()
     local Session=require "B47Dog/NativeSession"
     for _,failure in ipairs({"death","marker"}) do
-        S.seed();local api,_,calls=S.api();local animal,data=S.animal()
+        S.seed();local api,flags,calls=S.api();local animal,data=S.animal()
+        flags.server=false;api.B47DogSinglePlayer=true
         api.getRandomUUID=function()
             if failure=="death" then animal.dead=true else data.FixtureDogs.dogId=S.LATER end
             return S.NEXT

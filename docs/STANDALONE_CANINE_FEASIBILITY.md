@@ -1,6 +1,8 @@
 # Standalone Lua-only canine feasibility
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+User-approved diagnostic exception, 2026-10-14: [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) uses vanilla raccoon presentation while original model work is deferred. This supports persistence investigation only and does not satisfy original canine asset acceptance. Native ObjectModDataPacket marker forgery now blocks production identity/ownership; no safe alternative durable native identity has been established.
 
 M0R investigation, 2026-10-12. Target: Build 42.21. That investigation performed no gameplay implementation, asset creation or PZ/server execution. A separate [2026-10-14 German Shepherd authoring checkpoint](../art/german_shepherd/README.md) adds original mesh/coat/rig and Blender-only evidence; native registration and runtime gates remain unproved. Companion Dogs and DogPack are neither dependencies nor asset sources. [Exact evidence](M0R_SOURCE_EVIDENCE.md), [prototype tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md), [scope](MINIMUM_PLAYABLE_RELEASE.md).
 

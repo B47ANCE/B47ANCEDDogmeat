@@ -2,6 +2,7 @@
 local Guard=require "B47Dog/Guard"
 local Identity=require "B47Dog/Identity"
 local Codec=require "B47Dog/Codec"
+local Authority=require "B47Dog/NativeAuthority"
 local NativeAnimal={}
 
 function NativeAnimal.new(namespace,allowedTypes,api)
@@ -17,7 +18,7 @@ function NativeAnimal.new(namespace,allowedTypes,api)
     local reader={}
     function reader.observe(animal)
         local ok,result=pcall(function()
-            if api.isServer()~=true or api.isClient()~=false or api.instanceof(animal,"IsoAnimal")~=true then
+            if not Authority.allowed(api) or api.instanceof(animal,"IsoAnimal")~=true then
                 return {status="Unavailable"}
             end
             local dead=animal:isDead()

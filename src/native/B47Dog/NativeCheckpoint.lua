@@ -2,6 +2,7 @@
 -- client ModData. A published in-memory anchor is pending, not a completed save.
 local Guard=require "B47Dog/Guard"
 local Identity=require "B47Dog/Identity"
+local Authority=require "B47Dog/NativeAuthority"
 local NativeCheckpoint={}
 
 local function valid(anchor)
@@ -15,7 +16,7 @@ function NativeCheckpoint.capture(namespace,api)
         or type(api.getCurrentSaveName)~="function" or type(api.ModData)~="table"
         or type(api.ModData.get)~="function" then return nil,"Unavailable" end
     local ok,anchor,locator=pcall(function()
-        if api.isServer()~=true or api.isClient()~=false then return nil end
+        if not Authority.allowed(api) then return nil end
         return api.ModData.get(namespace),api.getCurrentSaveName()
     end)
     if not ok or not Guard.id(locator) then return nil,"Unavailable" end
@@ -29,7 +30,7 @@ function NativeCheckpoint.capture(namespace,api)
     end
     function captured.unchanged()
         local checked,result=pcall(function()
-            return not pending and api.isServer()==true and api.isClient()==false
+            return not pending and Authority.allowed(api)
                 and api.getCurrentSaveName()==locator and api.ModData.get(namespace)==anchor
                 and valid(anchor) and anchor.worldId==worldId and anchor.checkpoint==checkpoint
         end)

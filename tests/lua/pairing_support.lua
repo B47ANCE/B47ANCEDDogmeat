@@ -19,7 +19,7 @@ function P.fixture()
     end
     local callbacks={}
     api.Events={}
-    for _,name in ipairs({"OnInitGlobalModData","OnServerStarted","OnCharacterDeath",
+    for _,name in ipairs({"OnInitGlobalModData","OnServerStarted","OnGameStart","OnCharacterDeath",
         "OnSave","OnPostSave","OnReceiveGlobalModData"}) do
         callbacks[name]={}
         api.Events[name]={Add=function(callback)

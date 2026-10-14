@@ -1,6 +1,8 @@
 # Native checkpoint pairing and lifecycle observation
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+Historical implementation/validation scope: **0.2.0-dev.3**, including the 206-case result below. The current [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds bootstrap/initialization and explicitly blocks dedicated ownership after discovering client-writable animal markers. Earlier statements about absent bootstrap refer to that historical checkpoint; they are not the current source inventory.
 
 User-authorized continuation, 2026-10-14. This adds an explicit native event adapter to the existing private snapshot prototype. The model is unchanged. **Dogs are not yet saving/loading in a running game:** there is no installed/loadable mod, safe first-world initializer or registered original canine. The implementation below is ready for source review and offline tests; it must not be described as in-game or dedicated verification.
 

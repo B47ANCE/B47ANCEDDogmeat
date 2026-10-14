@@ -6,10 +6,11 @@ local Runtime=require "B47Dog/NativeRuntime"
 local Store=require "B47Dog/PrivateStore"
 local Cache=require "B47Dog/PZCache"
 local api,flags,calls,fire=P.fixture()
+flags.server=false;api.B47DogSinglePlayer=true
 if RESTART_PHASE=="prepare" then
     S.seed()
     local runtime=assert(Runtime.install(P.config(),api))
-    fire("OnInitGlobalModData",false);fire("OnServerStarted")
+    fire("OnInitGlobalModData",false);fire("OnGameStart")
     local ctx,intent=P.request()
     assert(runtime.prepareOwnership(flags.animals[1],ctx,intent).status=="WAITING_NATIVE_RELOAD")
     -- Explicit fake native persistence. No completion claim about the real engine.
@@ -17,7 +18,7 @@ if RESTART_PHASE=="prepare" then
 else
     flags.anchor=assert(Codec.decode(testfs_read("simulated-native-anchor.json")))
     local runtime=assert(Runtime.install(P.config(),api))
-    fire("OnInitGlobalModData",false);fire("OnServerStarted")
+    fire("OnInitGlobalModData",false);fire("OnGameStart")
     assert(runtime.status().phase=="RECOVERED")
     assert(runtime.observe(flags.animals[1]).status=="MATCHED")
     local store=assert(Store.open(assert(Cache.new("FixtureDogs",S.WORLD,api)),

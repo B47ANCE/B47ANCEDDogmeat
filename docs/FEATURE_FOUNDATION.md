@@ -1,6 +1,8 @@
 # Ownership and inspection feature foundation
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+Current integration: [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds only an admin save/load test using the approved raccoon carrier. Ownership gameplay is not deployed; dedicated native ownership preparation is blocked because marker provenance is untrusted. The following domain report remains its original 0.2.0-dev.1 scope.
 
 The user authorized feature work on 2026-10-14 and deferred model refinement. This document describes the ownership foundation introduced and tested at 0.2.0-dev.1. It implements **engine-independent Lua logic**, with actual offline Lua tests. Current native observation and private file preparation are documented separately in [NATIVE_PERSISTENCE_SLICE.md](NATIVE_PERSISTENCE_SLICE.md). It is not yet a playable mod. The later [native pairing/lifecycle adapter](NATIVE_PAIRING_LIFECYCLE.md) supplies explicit event installation; no automatic bootstrap, authenticated-player broker, gameplay commit, command endpoint or UI is installed.
 

@@ -1,6 +1,8 @@
 # Canonical canine identity contract
 
-Project Version: 0.2.0-dev.3
+Project Version: 0.2.0-dev.4
+
+[VERIFIED packaged source, 2026-10-14] Native ObjectModDataPacket accepts client animal marker load/wipe. A private-record byte match is diagnostic only, not identity provenance. Dedicated ownership preparation is blocked. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) reserves one expected test identity before constructor side effects and never retries/respawns on uncertainty.
 
 M0R design, 2026-10-12. FEASIBLE identity domain; lifecycle carriers EXPERIMENTAL; maturation rebinding BLOCKED until a safe Lua path is demonstrated. [Evidence](M0R_SOURCE_EVIDENCE.md), [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md), [MP tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md).
 
@@ -18,7 +20,7 @@ Allocation highwater is the durable sequence of reserved ledger entries within a
 
 ## Public carrier and private record
 
-Candidate native animal ModData marker: a namespace table containing only dogId, worldId, bindingGeneration, schema identifier and bindingToken. These identifiers are nonsecret and confer no permission. bindingToken identifies accepted creation/representation-transition provenance, not the latest global store/world checkpoint. Retain its accepted chain; an unloaded animal can legitimately carry an older binding token while the world checkpoint advances. Do not rewrite every unloaded carrier or quarantine solely because its token predates the global checkpoint. No traits, histories, medical findings, cue knowledge, rewards or ACLs belong in this marker. Exact namespace is provisional until the technical Mod ID is approved; the folder name B47ANCEDDogmeat does not finalize B47ANCEDDogTraining or any native species ID.
+Candidate native animal ModData marker: a namespace table containing only dogId, worldId, bindingGeneration, schema identifier and bindingToken. These identifiers are nonsecret and confer no permission. bindingToken identifies accepted creation/representation-transition provenance, not the latest global store/world checkpoint. Retain its accepted chain; an unloaded animal can legitimately carry an older binding token while the world checkpoint advances. Do not rewrite every unloaded carrier or quarantine solely because its token predates the global checkpoint. No traits, histories, medical findings, cue knowledge, rewards or ACLs belong in this marker. The user approved technical Mod ID/namespace B47ANCEDDogmeat on 2026-10-14; b47dogtest/grey is the temporary raccoon diagnostic registration. Original canine registration/assets remain a separate acceptance gate.
 
 Native save/load serializes animal ModData in inspected source. That is a candidate carrier, not proof across every transition or proof against client tampering. Server discovery compares the marker with its private authoritative binding, expected native type and transition record. Never accept a client marker, UID, generation or owner field as authoritative. Tamper/duplicate/missing carrier suspends affected actions.
 

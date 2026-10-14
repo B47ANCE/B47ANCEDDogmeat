@@ -3,18 +3,18 @@
 local Guard=require "B47Dog/Guard"
 local Identity=require "B47Dog/Identity"
 local Codec=require "B47Dog/Codec"
+local Authority=require "B47Dog/NativeAuthority"
 local PZCache={}
 
-function PZCache.new(namespace,worldId,api)
+local function scoped(namespace,directory,worldId,api)
     api=api or _G
     if type(namespace)~="string" or #namespace>64 or not namespace:match("^[A-Za-z][A-Za-z0-9_]*$")
-        or not Identity.uuid(worldId) or type(api)~="table" then return nil,"Unavailable" end
+        or type(api)~="table" then return nil,"Unavailable" end
     for _,name in ipairs({"isServer","isClient","getCurrentSaveName","getFileReader","getFileWriter"}) do
         if type(api[name])~="function" then return nil,"Unavailable" end
     end
     local function server()
-        local ok,allowed=pcall(function() return api.isServer()==true and api.isClient()==false end)
-        return ok and allowed
+        return Authority.allowed(api)
     end
     if not server() then return nil,"Unavailable" end
     local locatorOK,locator=pcall(api.getCurrentSaveName)
@@ -24,9 +24,16 @@ function PZCache.new(namespace,worldId,api)
         if not server() then return nil end
         local ok,current=pcall(api.getCurrentSaveName)
         if not ok or current~=locator then return nil end
-        return namespace.."/"..worldId.."/slot-"..slot..".json"
+        return namespace.."/"..directory.."/slot-"..slot..".json"
     end
     local transport={saveLocator=locator,worldId=worldId}
+    function transport.absent(slot)
+        local filename=path(slot or "a")
+        if not filename or type(api.cacheFileExists)~="function" then return false end
+        if slot==nil then filename=namespace.."/"..directory end
+        local ok,exists=pcall(api.cacheFileExists,filename)
+        return ok and exists==false
+    end
     function transport.read(slot)
         local filename=path(slot)
         if not filename then return nil,"Unavailable" end
@@ -67,6 +74,18 @@ function PZCache.new(namespace,worldId,api)
         -- PrintWriter can swallow errors. The store MUST reopen and compare readback.
         return true
     end
+    return transport
+end
+
+function PZCache.new(namespace,worldId,api)
+    if not Identity.uuid(worldId) then return nil,"Unavailable" end
+    return scoped(namespace,worldId,worldId,api)
+end
+
+function PZCache.receipt(namespace,locator,api)
+    if not Guard.id(locator) then return nil,"Unavailable" end
+    local transport,reason=scoped(namespace,"provision-"..Codec.checksum(locator),nil,api)
+    if not transport or transport.saveLocator~=locator then return nil,reason or "ForeignStore" end
     return transport
 end
 

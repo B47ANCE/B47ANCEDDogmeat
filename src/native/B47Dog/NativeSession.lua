@@ -37,6 +37,9 @@ function NativeSession.open(config,api)
         return registry.observe(animal,observation)
     end
     function session.prepareOwnership(animal,context,intent)
+        -- Native ObjectModData packets let clients replace animal markers. A
+        -- matching marker is not dedicated provenance; no gameplay commit here.
+        if api.isServer()~=false or api.B47DogSinglePlayer~=true then return nil,"UntrustedNativeMarker" end
         if busy then return nil,"Busy" end
         busy=true
         local ok,result,errorCode=pcall(function()

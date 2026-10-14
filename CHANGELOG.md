@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.4] — 2026-10-14
+
+- Continue additive MINOR development with explicit first-store provisioning, a loadable source assembler and native test-carrier registration.
+- Finalize the user-approved Mod ID B47ANCEDDogmeat; use vanilla raccoon presentation for the persistence test carrier while original model work remains deferred.
+- Block dedicated ownership preparation after source inspection established that native animal ModData markers are client-writable; diagnostic matches confer no gameplay authority.
+- Preserve existing/uncertain data and refuse automatic initialization, repeat spawning and unproved native save completion. Runtime validation remains required.
+
 ## [0.2.0-dev.3] — 2026-10-14
 
 - Continue additive 0.2.0 development with native loaded-anchor recovery, one pending native checkpoint and explicit event installation. No deployed save schema changes.

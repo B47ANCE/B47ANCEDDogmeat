@@ -11,8 +11,9 @@ local function test(name,fn)
 end
 local function recovered()
     S.seed();local api,flags,calls,fire,callbacks=P.fixture()
+    flags.server=false;api.B47DogSinglePlayer=true
     local runtime=assert(Runtime.install(P.config(),api))
-    fire("OnInitGlobalModData",false);fire("OnServerStarted")
+    fire("OnInitGlobalModData",false);fire("OnGameStart")
     equal(runtime.status().phase,"RECOVERED")
     return runtime,api,flags,calls,fire,callbacks
 end
@@ -78,7 +79,7 @@ for _,change in ipairs({"replacedTable","checkpoint","world","save","client","se
         elseif change=="checkpoint" then flags.anchor.checkpoint=S.LATER
         elseif change=="world" then flags.anchor.worldId=S.LATER
         elseif change=="save" then flags.locator="different-save"
-        elseif change=="client" then flags.client=true else flags.server=false end
+        elseif change=="client" then flags.client=true else flags.server=true end
         equal(runtime.prepareOwnership(flags.animals[1],ctx,intent),nil);equal(calls.writes,0)
     end)
 end
