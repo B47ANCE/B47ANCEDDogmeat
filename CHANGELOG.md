@@ -21,3 +21,9 @@
 - Preserve the original authoring scripts and measured provenance/validation records. Reopened source and GLB roundtrip preserve bounds, hierarchy, normalized weights, embedded texture and four deformation probes in offline Blender Python.
 - Retain0.1.0-dev.1: authoring work changes no shipped gameplay, save, API or sandbox contract. Separate asset revision is gsd-v001.
 - Native format/rig/registration, animations, corpse/avatar and PZ/runtime performance remain unproved. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No runtime implementation, launch, deployment, packaging or Workshop publication.
+
+### Visual benchmark clarification — 2026-10-14
+
+- Record the user's CGTrader dog-pack/German Shepherd screenshots as the realistic art quality target, with concrete anatomy, face, fur, silhouette, deformation and visual-review criteria.
+- Classify gsd-v001 as a rough blockout below that target. Existing structural/export checks remain valid for their original scope and do not establish production visual approval.
+- Documentation-only clarification retains0.1.0-dev.1. Model/texture/rig binaries and historical validation evidence are unchanged; no third-party assets were acquired or incorporated.

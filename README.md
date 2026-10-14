@@ -2,7 +2,7 @@
 
 Project Version: 0.1.0-dev.1
 
-Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R contracts remain the technical baseline. An [original adult German Shepherd mesh, coat and authoring rig](art/german_shepherd/README.md) now exists for visual review; no playable mod, native asset registration, runtime source or packages exist. Companion Dogs and DogPack are not dependencies or asset sources.
+Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R contracts remain the technical baseline. An [original adult German Shepherd blockout, coat and authoring rig](art/german_shepherd/README.md) exists for pipeline review; it does not meet the user's realistic visual quality benchmark. No playable mod, native asset registration, runtime source or packages exist. Companion Dogs and DogPack are not dependencies or asset sources.
 Provisional technical Mod ID: `B47ANCEDDogTraining`; not registered or packaged.
 
 Start with [the current plan](docs/IMPLEMENTATION_PLAN.md), [M0R validation](docs/M0R_VALIDATION.md), [native evidence](docs/M0R_SOURCE_EVIDENCE.md) and [132 current traceability rows](docs/FEATURE_TRACEABILITY_MATRIX.md). The [historical research index](docs/HISTORICAL_RESEARCH_INDEX.md) labels former add-on records; their bytes and observed evidence remain unchanged.

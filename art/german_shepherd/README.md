@@ -2,9 +2,26 @@
 
 Project Version: 0.1.0-dev.1
 
-2026-10-14 authoring checkpoint; asset revision `gsd-v001`. Original stylized adult black-and-tan German Shepherd, neutral standing pose, erect ears, long muzzle, compact paws, articulated hind hocks and low bushy tail. This is the user's first approved breed model; it does not select or implement the proposed native research prototype.
+2026-10-14 authoring checkpoint; asset revision `gsd-v001`. Original adult black-and-tan German Shepherd blockout with a standing pose and experimental deformation rig. German Shepherd is the first requested breed. The current asset does **not meet the user's realistic visual quality standard** and has no production art approval; it does not select or implement the proposed native research prototype.
 
 ![Original German Shepherd Blender render](previews/german_shepherd.png)
+
+## User's visual quality benchmark — 2026-10-14
+
+The user supplied the [CGTrader Dogs big pack](https://www.cgtrader.com/3d-model-packs/dogs-big-pack) and two screenshots, including a detailed German Shepherd close-up, as the required quality standard. Target: believable real-time dogs with convincing breed anatomy, detailed fur and facial materials, and natural deformation. The references establish the visual benchmark; no commercial model, texture or rig has been acquired or incorporated.
+
+The seller describes 13,000–17,000 triangles per dog, 2048 x 2048 albedo/alpha, surface-property and normal maps, 54–57 bones and four LOD levels. These are seller specifications, not independently tested assets or mandatory PZ settings. Our existing 16,668-triangle count is within that advertised range, yet the visual quality is substantially below the reference. Increasing polygon count alone does not resolve the shape, surface and deformation work.
+
+| Acceptance area | Required result | Current blockout gap |
+|---|---|---|
+| Breed anatomy | Coherent skull/cheeks/neck, substantial chest, natural shoulder-to-ribcage and pelvis-to-thigh transitions, believable knee/hock placement and paw proportions | Small simplified head, tubular body/limbs and lumpy mass transitions |
+| Face and expression | Eyes seated in shaped sockets with eyelids, defined brow, cupped ears, shaped nose/nostrils, mouth interior with teeth and tongue for panting/open-mouth poses | Simple eye/nose shapes, thin lip line and no mouth interior |
+| Fur surface | Region-specific hair direction and length, layered color variation, readable undercoat and saddle, fine surface relief and controlled highlights | Smooth coat with broad color masks and slight procedural grain |
+| Fur silhouette and paws | Natural neck ruff, chest/haunch/tail feathering, tapered bushy tail, distinct compact toes and integrated claws | Smooth outlines, narrow ear wedges and rounded simplified feet |
+| Deformation | Deliberate joint/face topology, skin weights and corrective work that retain volume through locomotion and expressive poses | Triangulated blockout topology and automatic weights tested only with four probes |
+| Review evidence | Comparable neutral-light full-body views, head/paw/fur close-ups, clay anatomy views, moving joint checks and readability at the intended PZ camera scale | Current renders show the blockout and pipeline operation; production visual acceptance remains NOT MET |
+
+The next modeling pass must establish accurate anatomy and facial construction before detailed fur/material authoring. Select texture resolution, normal/roughness use and any fur-edge geometry through authoring tests and verified PZ rendering support; the reference screenshots do not prove those shader features work in PZ. Compare the resulting model against this benchmark before expanding to other breeds. Technical export checks, GitHub CI and triangle counts never substitute for visual acceptance.
 
 ## Editable source and review files
 
@@ -48,7 +65,7 @@ The build and independent checks pass: closed, connected main body; no degenerat
 
 The builder's optional `--no-render` creates an intermediate source/export checkpoint, marks previews unrendered and excludes cached previews from its new provenance. Complete validation rejects that checkpoint until the default build rerenders all seven views. This rejection was tested before the final default rebuild and passing validation; older images cannot silently establish current visual evidence.
 
-Visually inspected [three-quarter](previews/german_shepherd.png), [side](previews/side.png), [front](previews/front.png), [rear](previews/rear.png), [clay](previews/clay.png), [deformation probe](previews/deformation_check.png) and [160-pixel silhouette](previews/silhouette_160.png). This is a first authoring model suitable for visual review; automatic weights still need animation-driven refinement and native rig mapping. The geometry is triangulated authoring topology, not a completed animation retopology pass.
+Visually inspected [three-quarter](previews/german_shepherd.png), [side](previews/side.png), [front](previews/front.png), [rear](previews/rear.png), [clay](previews/clay.png), [deformation probe](previews/deformation_check.png) and [160-pixel silhouette](previews/silhouette_160.png). These remain blockout/pipeline evidence. Subsequent user-supplied references establish a realistic quality target that this asset does not meet. Automatic weights need animation-driven refinement and native rig mapping. The geometry is triangulated authoring topology, not a completed animation retopology pass. The recorded structural test results remain evidence for their original scope only.
 
 [RUNTIME GATE] PZ import, native definitions/registration, rest skeleton mapping, enabled-state animation set, corpse/avatar/attachments, runtime performance and dedicated synchronization are **NOT TESTED**. T-ASSET remains unpassed. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No game/server launch, deployment, runtime package, Workshop publication, stable tag or main merge was performed.
 
