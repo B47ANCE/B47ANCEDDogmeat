@@ -2439,7 +2439,7 @@
         "E-ASSET"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "ASSET AUTHORING PARTIAL; native registration/animation/corpse/avatar NOT STARTED",
       "runtime_status": "NOT TESTED"
     },
     {

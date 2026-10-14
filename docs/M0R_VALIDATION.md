@@ -59,6 +59,8 @@ Before-edit version check: PASS at0.1.0-dev.1, declared mirrors only; absent pac
 
 ## Public repository evidence
 
+Later evidence,2026-10-14: [German Shepherd authoring checkpoint](../art/german_shepherd/README.md) supplies original standing mesh/coat/rig, review interchange and offline Blender validation. The M0R command outputs, hashes, counts and CI history below remain the preceding dated documentation snapshot. No native/runtime acceptance gate is upgraded by the later art work.
+
 Approved destination: [B47ANCE/B47ANCEDDogmeat](https://github.com/B47ANCE/B47ANCEDDogmeat), created and verified PUBLIC. Authentication succeeded for B47ANCE via HTTPS. Documentation branch docs/m0r-contracts was pushed and local/remote SHA ee486fc3f842019ec2468887a29c930a538aa5c2 matched. [Draft PR1](https://github.com/B47ANCE/B47ANCEDDogmeat/pull/1) holds the contracts for review; no shared-main merge/stable tag. This ledger records the preceding snapshot; final branch SHA is verified after the ledger/CI correction commit and reported with the task. No public backup implies runtime readiness.
 
 [TESTED Windows offline] Staged/tracked audit: PASS,48 intended public files, no suspected secret/native/private/generated paths or case collisions. Staged whitespace check PASS; immutable CRLF/hard-break reports are protected by attributes. Public CI runs version/documentation checks on Ubuntu with official checkout v7.0.1 pinned to3d3c42e5aac5ba805825da76410c181273ba90b1. This is offline Python/document validation, not Linux dedicated runtime evidence. Native/source and report hashes remain local/provenance metadata; raw binaries/research are excluded.

@@ -53,7 +53,7 @@ Common procedure: establish clean matched world/store fixture → exercise the r
 | ID | Exact unresolved condition | Resolution gate |
 |---|---|---|
 | B-ENV | Effective/pristine client and dedicated class/API baseline not demonstrated | T-ENVIRONMENT |
-| B-ASSET | Original canine definition/rig/model/animation/avatar not created/loaded | T-REGISTRY/T-ASSET |
+| B-ASSET | Original GSD standing mesh/coat/authoring rig partially authored; native definition, rig mapping, enabled-state animations/corpse/avatar and PZ loading remain unproved | T-REGISTRY/T-ASSET |
 | B-TASK | No proved Lua-exclusive arbitration over native movement/behavior | T-NATIVE/T-TASK |
 | B-IDENTITY | Complete release/streaming/growth/transport/death binding observation not proved | T-IDENTITY/T-TRANSPORT/T-GROWTH/T-DEATH |
 | B-STORE | Native world/private-store pairing and crash-durable receipts unproved | T-PRIVACY/T-RECOVERY |

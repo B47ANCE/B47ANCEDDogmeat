@@ -1,0 +1,139 @@
+{
+  "project_version": "0.1.0-dev.1",
+  "asset_revision": "gsd-v001",
+  "environment": "Offline Blender Python 5.2.2 LTS",
+  "body_vertices": 5252,
+  "body_triangles": 10500,
+  "total_triangles": 16668,
+  "mesh_objects": 42,
+  "bones": 29,
+  "body_nonmanifold_edges": 0,
+  "body_degenerate_faces": 0,
+  "unweighted_vertices": 0,
+  "invalid_weight_sums": 0,
+  "vertices_over_four_influences": 0,
+  "texture_size": [
+    1024,
+    1024
+  ],
+  "uv_occupied_fraction_before_padding": 0.3075,
+  "bounds_min_m": [
+    -0.816611,
+    -0.137975,
+    0.002162
+  ],
+  "bounds_max_m": [
+    0.775,
+    0.138013,
+    0.898744
+  ],
+  "dimensions_m": [
+    1.591611,
+    0.275988,
+    0.896582
+  ],
+  "authoring_axes": "Z up; head +X; metres; identity mesh and armature transforms",
+  "pose_tests": {
+    "head": {
+      "radians": 0.35,
+      "world_axis": [
+        0,
+        0,
+        1
+      ],
+      "moved_vertices": 1211,
+      "max_displacement_m": 0.0977,
+      "finite": true
+    },
+    "front_lower_L": {
+      "radians": 0.5,
+      "world_axis": [
+        0,
+        1,
+        0
+      ],
+      "moved_vertices": 514,
+      "max_displacement_m": 0.180917,
+      "finite": true
+    },
+    "rear_lower_R": {
+      "radians": -0.45,
+      "world_axis": [
+        0,
+        1,
+        0
+      ],
+      "moved_vertices": 661,
+      "max_displacement_m": 0.136159,
+      "finite": true
+    },
+    "tail_2": {
+      "radians": 0.5,
+      "world_axis": [
+        0,
+        0,
+        1
+      ],
+      "moved_vertices": 533,
+      "max_displacement_m": 0.158269,
+      "finite": true
+    }
+  },
+  "animation_clips": "None: deformation checks only; native state/action set remains unimplemented.",
+  "pz_import": "NOT TESTED",
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED",
+  "preview_status": "RENDERED_THIS_BUILD",
+  "build_seconds": 14.35,
+  "files": {
+    "source/build_german_shepherd.py": {
+      "bytes": 32285,
+      "sha256": "0fb7fe26005ff5c813f4a403bec1d0c07bc536947a85b7437929f8b92863e7e1"
+    },
+    "source/german_shepherd.blend": {
+      "bytes": 1037668,
+      "sha256": "24fe3fe5a09d9ab0b38b1e0d274dedb3c4f702e19351990e2b70fb4c4685e3b1"
+    },
+    "source/validate_german_shepherd.py": {
+      "bytes": 10086,
+      "sha256": "cabd88bb2e4983191b96bd026544acfd1e52230bdf36bacb12e72156a035c5c3"
+    },
+    "textures/coat_albedo.png": {
+      "bytes": 405117,
+      "sha256": "ce7453f487f27571ef73e69c6d814ffc74ba3c79d076a09ff601cf094e7252fa"
+    },
+    "interchange/german_shepherd.glb": {
+      "bytes": 1124788,
+      "sha256": "d5e85805ae841a023d4b043d15cbd44dfd4a6605e22448a3cadfbe89f687389c"
+    },
+    "previews/clay.png": {
+      "bytes": 1526172,
+      "sha256": "088e756f0549fecbede813cabe5335df0f73afba601af11cf131b49e42567624"
+    },
+    "previews/deformation_check.png": {
+      "bytes": 1564728,
+      "sha256": "08a66f336f221ed26f975e22e38f236295c9a8c672d0caad74dba09b94547ee7"
+    },
+    "previews/front.png": {
+      "bytes": 931900,
+      "sha256": "42b70c5f21918c1ec32e9e2740830bffe6c667657b19f660b1ea01779f887c5f"
+    },
+    "previews/german_shepherd.png": {
+      "bytes": 1574242,
+      "sha256": "67c66fde0b2e125fcad914484b213a3d9f0de691942b3e19d2c2efda46c84107"
+    },
+    "previews/rear.png": {
+      "bytes": 932300,
+      "sha256": "c48ed7f29bef105f49999965ddead992c164dbb36261dee722a1a1be950f398d"
+    },
+    "previews/side.png": {
+      "bytes": 1377614,
+      "sha256": "9d61a985a404d081ad258e5a0186f5118908fd52c9b8f5d2ac053b90bacffcc2"
+    },
+    "previews/silhouette_160.png": {
+      "bytes": 23596,
+      "sha256": "393734022ea5a2335ccfc71ea3a85f21c82bb1d6fe1e298aa3e7e2d74418322d"
+    }
+  }
+}

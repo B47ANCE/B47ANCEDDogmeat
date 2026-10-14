@@ -2,11 +2,11 @@
 
 Project Version: 0.1.0-dev.1
 
-M0R investigation, 2026-10-12. Target: Build 42.21. No gameplay implementation, asset creation or PZ/server execution. Companion Dogs and DogPack are neither dependencies nor asset sources. [Exact evidence](M0R_SOURCE_EVIDENCE.md), [prototype tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md), [scope](MINIMUM_PLAYABLE_RELEASE.md).
+M0R investigation, 2026-10-12. Target: Build 42.21. That investigation performed no gameplay implementation, asset creation or PZ/server execution. A separate [2026-10-14 German Shepherd authoring checkpoint](../art/german_shepherd/README.md) adds original mesh/coat/rig and Blender-only evidence; native registration and runtime gates remain unproved. Companion Dogs and DogPack are neither dependencies nor asset sources. [Exact evidence](M0R_SOURCE_EVIDENCE.md), [prototype tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md), [scope](MINIMUM_PLAYABLE_RELEASE.md).
 
 ## Finding and proof boundary
 
-[VERIFIED source] Native animal definitions consume Lua tables; exposed addAnimal constructors and a vanilla server construction call exist. Native model, animationsMesh and animation-set data provide an original asset registration candidate. These primitives establish an EXPERIMENTAL standalone canine path, not a working dog or a runtime PASS. Original canine assets do not currently exist in this scaffold.
+[VERIFIED source] Native animal definitions consume Lua tables; exposed addAnimal constructors and a vanilla server construction call exist. Native model, animationsMesh and animation-set data provide an original asset registration candidate. These primitives establish an EXPERIMENTAL standalone canine path, not a working dog or a runtime PASS. Original German Shepherd standing mesh/coat/authoring rig now exists; the complete native model/skeleton/skin/clip/corpse/avatar contract remains unproved. GLB is review interchange, not a verified PZ native format.
 
 | Capability | Source-supported path | Classification / remaining proof |
 |---|---|---|

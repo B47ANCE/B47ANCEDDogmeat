@@ -6,6 +6,8 @@ Canonical: root `VERSION`. Initial value supplied by the user; new project, no d
 Current M0R mirrors: README, current IMPLEMENTATION_PLAN, VERSIONING, thirteen contracts, M0R_SOURCE_EVIDENCE/HISTORICAL_RESEARCH_INDEX, docs/contracts JSON project_version fields and newest CHANGELOG entry. Exact selectors are in version-inventory.json.
 No runtime metadata/code/packages exist. Add their exact mirrors when authorized implementation creates them.
 
+The2026-10-14 German Shepherd authoring checkpoint retains the same canonical project version: no shipped gameplay/save/API/sandbox surface changes. Exact art README and build/roundtrip report project_version mirrors are now inventoried. Editable Blender object properties read root VERSION and are checked on source reopen by the asset validator. Asset revision gsd-v001 and Blender/Python versions are independent provenance, not project version substitutes.
+
 The supplied [VERSION_POLICY.md](VERSION_POLICY.md) is authoritative. Checker provenance:
 `C:/Users/willi/Desktop/Repositories/PZ-AI-Development-Framework/project-template/scripts/check_versions.py`.
 The local copy must remain unchanged. Framework and dependency versions are independent of this project.

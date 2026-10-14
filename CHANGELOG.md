@@ -14,3 +14,10 @@
 - Recheck44 native inputs and narrow the old growth-ModData claim; document missing task, growth, private durability, waste and selective-flap seams.
 - Retain0.1.0-dev.1 for compatible documentation-only work with no shipped gameplay/save/API changes.
 - G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Prototype still requires review/approval.
+
+### Original German Shepherd authoring checkpoint — 2026-10-14
+
+- Create the first original adult black-and-tan German Shepherd standing model, independent deformation skeleton, UV coat texture, editable Blender source, GLB review interchange and seven rendered previews under art/german_shepherd.
+- Preserve the original authoring scripts and measured provenance/validation records. Reopened source and GLB roundtrip preserve bounds, hierarchy, normalized weights, embedded texture and four deformation probes in offline Blender Python.
+- Retain0.1.0-dev.1: authoring work changes no shipped gameplay, save, API or sandbox contract. Separate asset revision is gsd-v001.
+- Native format/rig/registration, animations, corpse/avatar and PZ/runtime performance remain unproved. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No runtime implementation, launch, deployment, packaging or Workshop publication.

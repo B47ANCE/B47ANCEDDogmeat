@@ -3,6 +3,18 @@
   "canonical": "VERSION",
   "mirrors": [
     {
+      "path": "art/german_shepherd/README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "art/german_shepherd/validation/asset_validation.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "art/german_shepherd/validation/roundtrip_validation.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
       "path": "README.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },

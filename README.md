@@ -2,7 +2,7 @@
 
 Project Version: 0.1.0-dev.1
 
-Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R delivers documentation/contracts only; no playable mod, original assets, runtime source or packages exist. Companion Dogs and DogPack are not dependencies or asset sources.
+Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R contracts remain the technical baseline. An [original adult German Shepherd mesh, coat and authoring rig](art/german_shepherd/README.md) now exists for visual review; no playable mod, native asset registration, runtime source or packages exist. Companion Dogs and DogPack are not dependencies or asset sources.
 Provisional technical Mod ID: `B47ANCEDDogTraining`; not registered or packaged.
 
 Start with [the current plan](docs/IMPLEMENTATION_PLAN.md), [M0R validation](docs/M0R_VALIDATION.md), [native evidence](docs/M0R_SOURCE_EVIDENCE.md) and [132 current traceability rows](docs/FEATURE_TRACEABILITY_MATRIX.md). The [historical research index](docs/HISTORICAL_RESEARCH_INDEX.md) labels former add-on records; their bytes and observed evidence remain unchanged.
@@ -25,7 +25,7 @@ Start with [the current plan](docs/IMPLEMENTATION_PLAN.md), [M0R validation](doc
 
 ## Source, generated outputs and validation
 
-Authoritative current source is README, VERSION, CHANGELOG, version-inventory.json, current docs/contracts JSON, current Markdown contracts and scripts/validate_m0r.py. There is no runtime src/Contents/mod.info tree. Future runtime layout must be reviewed before prototype implementation. The existing inventory reserves dist/current/B47ANCEDDogTraining-<version>.zip without authorizing packaging or finalizing the ID. The folder/public repository name B47ANCEDDogmeat does not finalize the technical Mod ID. No Workshop ID exists in this scaffold.
+Authoritative current source is README, VERSION, CHANGELOG, version-inventory.json, current docs/contracts JSON, current Markdown contracts and scripts/validate_m0r.py. Original art source is art/german_shepherd/source (editable .blend and original build/validation scripts), with the original texture and intentional review outputs documented in its asset README. There is no runtime src/Contents/mod.info tree. Future runtime layout must be reviewed before prototype implementation. The existing inventory reserves dist/current/B47ANCEDDogTraining-<version>.zip without authorizing packaging or finalizing the ID. The folder/public repository name B47ANCEDDogmeat does not finalize the technical Mod ID. No Workshop ID exists in this scaffold.
 
 research contains immutable local inspection artifacts excluded from public Git; raw game classes/assets/decompiled code must never ship. .m0r-local authoring/baselines and managed .agents guidance are also local-only. Current contracts preserve all101 original IDs and add31 native/core requirements; the79-setting/303-key catalogs are design data, not runtime implementation.
 
