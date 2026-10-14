@@ -1,5 +1,5 @@
 {
-  "project_version": "0.1.0-dev.2",
+  "project_version": "0.2.0-dev.1",
   "status": "CURRENT STANDALONE ASSESSMENT - NO GAMEPLAY IMPLEMENTATION",
   "features": [
     {
@@ -95,7 +95,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: offline ownership-transfer identity invariant; native lifecycle routes NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2550,7 +2550,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: offline Lua ACL/projection/intent domain; native adapters, durable commits and receipts NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {

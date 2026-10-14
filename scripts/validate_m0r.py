@@ -178,8 +178,9 @@ def main():
             languages = sorted(p.name for p in (args.game_root/'media/lua/shared/Translate').iterdir() if p.is_dir())
             if languages != sorted(LANGUAGES):
                 errors.append('Installed translation language set differs; compatibility review required')
-    if (ROOT/'src').exists() or (ROOT/'dist').exists():
-        errors.append('Unexpected gameplay source/distribution in documentation-only M0R')
+    # Feature development is now authorized; retain a bounded no-integration guard.
+    from validate_foundation import check_source
+    errors.extend(check_source())
     result = {'status':'STATIC PASS' if not errors else 'FAIL','project_version':version,'required_deliverables':len(REQUIRED),
               'feature_rows':len(features),'sandbox_settings':len(settings),'localization_keys':len(keys),'required_languages':len(LANGUAGES),
               'acceptance_scenarios':len(test_ids),'historical_hashes_checked':checked_history,'native_inputs_rehashed':native_checked,

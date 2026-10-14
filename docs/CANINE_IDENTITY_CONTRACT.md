@@ -1,6 +1,6 @@
 # Canonical canine identity contract
 
-Project Version: 0.1.0-dev.2
+Project Version: 0.2.0-dev.1
 
 M0R design, 2026-10-12. FEASIBLE identity domain; lifecycle carriers EXPERIMENTAL; maturation rebinding BLOCKED until a safe Lua path is demonstrated. [Evidence](M0R_SOURCE_EVIDENCE.md), [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md), [MP tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md).
 

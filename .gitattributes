@@ -2,6 +2,7 @@
 *.md text eol=lf
 *.json text eol=lf
 *.py text eol=lf
+*.lua text eol=lf
 # Preserve exact original bytes of protected reports/request snapshots.
 docs/COMPANION_DOGS_SOURCE_AUDIT.md -text
 docs/DOGPACK_COMPATIBILITY_AUDIT.md -text

@@ -1,0 +1,10 @@
+{
+  "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode": "Handler Permission Mode",
+  "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode_tooltip": "Allow only the owner or also explicitly granted handlers; narrowing suspends grant use without deleting relationship history.",
+  "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode_option1": "Owner Only",
+  "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode_option2": "Owner And Granted",
+  "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath": "Owner After Character Death",
+  "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_tooltip": "Choose active owner access after character death; preserve dog identity/history, never inherit native human skill XP or silently transfer ownership.",
+  "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option1": "Retain Account Access",
+  "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option2": "Require New Claim"
+}

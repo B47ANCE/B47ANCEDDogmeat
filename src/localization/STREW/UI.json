@@ -1,0 +1,15 @@
+{
+  "UI_B47ANCEDDogTraining_Action_InspectDog": "Inspect Dog",
+  "UI_B47ANCEDDogTraining_Action_ClaimDog": "Claim Dog",
+  "UI_B47ANCEDDogTraining_Action_RenameDog": "Name Dog",
+  "UI_B47ANCEDDogTraining_Action_GrantHandler": "Grant Handler",
+  "UI_B47ANCEDDogTraining_Action_RevokeHandler": "Revoke Handler",
+  "UI_B47ANCEDDogTraining_Action_TransferDog": "Transfer Dog",
+  "UI_B47ANCEDDogTraining_Reason_Unauthorized": "You do not have permission.",
+  "UI_B47ANCEDDogTraining_Reason_Unavailable": "The dog is unavailable.",
+  "UI_B47ANCEDDogTraining_Reason_Stale": "The dog state changed; try again.",
+  "UI_B47ANCEDDogTraining_Reason_Invalid": "This request is invalid.",
+  "UI_B47ANCEDDogTraining_Reason_Protocol": "Client and server versions differ.",
+  "UI_B47ANCEDDogTraining_Reason_Capability": "This capability is not available.",
+  "UI_B47ANCEDDogTraining_Reason_Recovery": "Recovery must complete before this action."
+}

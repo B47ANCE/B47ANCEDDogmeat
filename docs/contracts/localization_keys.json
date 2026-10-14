@@ -1,5 +1,5 @@
 {
-  "project_version": "0.1.0-dev.2",
+  "project_version": "0.2.0-dev.1",
   "status": "DESIGN KEY CATALOG - NOT RUNTIME TRANSLATIONS",
   "languages": [
     "AR",
@@ -335,7 +335,8 @@
     "UI_B47ANCEDDogTraining_Manual_Housebreaking": "Housebreaking",
     "UI_B47ANCEDDogTraining_Manual_DoorsSecurity": "Doors Security",
     "UI_B47ANCEDDogTraining_Manual_Recovery": "Recovery",
-    "UI_B47ANCEDDogTraining_Manual_Troubleshooting": "Troubleshooting"
+    "UI_B47ANCEDDogTraining_Manual_Troubleshooting": "Troubleshooting",
+    "UI_B47ANCEDDogTraining_Action_RenameDog": "Name Dog"
   },
   "placeholder_syntax": "%1, %2; preserve native format and count"
 }

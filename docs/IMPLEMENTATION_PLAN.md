@@ -1,18 +1,18 @@
 # Current standalone implementation plan
 
-Project Version: 0.1.0-dev.2
+Project Version: 0.2.0-dev.1
 
-M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. No gameplay implementation authorized by this delivery. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
+M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. The M0R documentation delivery itself authorized no gameplay; the user subsequently authorized feature development on 2026-10-14. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 
 ## Authority and compatibility
 
 The [M0R request](requirements/M0R_REQUEST.md) supplements the [standalone master](requirements/STANDALONE_MASTER_HANDOFF.md). Latest shared/project Lua-only rules supersede older Java allowances. All approved gameplay scope remains in [132 traceability rows](FEATURE_TRACEABILITY_MATRIX.md). Former R1–R6 integration assumptions are historical, not automatic standalone blockers or proof. Current signatures/hashes, growth correction and missing safe Lua seams are in [the source index](M0R_SOURCE_EVIDENCE.md).
 
-Current project checkpoint is 0.1.0-dev.2 for the compatible gsd-v002 art rebuild. The original M0R documentation checkpoint was 0.1.0-dev.1; no shipped gameplay/save/API/configuration change occurred. Future additive gameplay is MINOR-compatible scope only if existing contracts remain compatible; schema/API redesign requires explicit migration/classification under VERSION_POLICY.md. No future runtime/release version is invented. Technical Mod ID remains provisional; GitHub folder/name does not finalize it.
+Current project checkpoint is 0.2.0-dev.1: additive MINOR feature development authorized 2026-10-14. The [ownership/inspection foundation](FEATURE_FOUNDATION.md) implements pure Lua domain logic without engine registration or durable writes. Model refinement is deferred; gsd-v002 remains frozen at its tested 0.1.0-dev.2 checkpoint. Technical Mod ID remains provisional.
 
-## Bounded next proposal
+## Current bounded slice and next integration
 
-2026-10-14 authorized art-only slice: [original adult German Shepherd mesh, coat, authoring rig, GLB interchange and previews](../art/german_shepherd/README.md). This is partial F103 authoring evidence. It does not authorize gameplay/prototype implementation or select a native breed/species identifier. Blender rig/deformation checks do not establish native animation compatibility; original enabled-state clips, registration, corpse/avatar and PZ import still require their gates. Project Version remains unchanged for this authoring checkpoint.
+F108 and the ownership-transfer portion of F04 are partially implemented offline: claiming/naming, owner-only grant/revoke/transfer, character-aware access, stale intent refusal and actor-specific allowlisted projections. This separates engine-independent work from M1A/B integration gates; it does not claim that the milestone ordering or native prerequisites have passed.
 
 Review one original medium adult canine research prototype: shared original definitions and independently created mesh/rig/skin/clips/avatar; one controlled server spawn; private world store/original ID; owner/handler/observer authorization and projections; native route intent/observation and two-client synchronization. Verify adult/no-replacement configuration before selecting it. No XP, population automation, veterinary treatment, flaps, item gameplay, packs or advanced tasks in this initial proof. Enabled native eating/drinking/rest/death states still require their original asset references.
 
@@ -24,7 +24,7 @@ M1A original registry/assets/spawn/native authority precedes M1B identity/store/
 
 M2-health owns regional injuries/treatments/grooming/rehabilitation after condition-specific writer and reviewed suitability gates. M2-population owns original breed assets and weighted locations/POIs. M3-content owns all equipment/cue conditioning, human skill/knowledge, occupations/books/VHS. M6 working/scent/retrieval, M7 original packs/logistics/capture/transport and M8 advanced experiments retain every approved feature. M9 audits either the declared [minimum development candidate](MINIMUM_PLAYABLE_RELEASE.md) or full-roadmap release; minimum does not mean1.0 or scope removal.
 
-Every slice includes server sandbox configuration, localization, input/manual/refusal UI, diagnostics, Linux case review and focused relevant offline/operator tests. The [79-setting registry](SANDBOX_SETTINGS_REGISTRY.md) separates schema design from blocked feature capability. The [localization contract](LOCALIZATION_CONTRACT.md) requires all29 languages with English fallback keys from first implementation. The [biology time model](CANINE_BIOLOGY_TIME_MODEL.md) prevents double native catch-up, fake offscreen waste and infinite holding. [Task arbitration](TASK_ARBITRATION_CONTRACT.md) defines pre/postcommit interruption and resume. [Current traceability](FEATURE_TRACEABILITY_MATRIX.md) assigns each feature its acceptance/blocker.
+Every slice includes server sandbox configuration, localization, input/manual/refusal UI, diagnostics, Linux case review and focused relevant offline/operator tests. The [79-setting registry](SANDBOX_SETTINGS_REGISTRY.md) separates schema design from blocked feature capability. The [localization contract](LOCALIZATION_CONTRACT.md) requires all 29 languages with English fallback keys from first implementation. The [biology time model](CANINE_BIOLOGY_TIME_MODEL.md) prevents double native catch-up, fake offscreen waste and infinite holding. [Task arbitration](TASK_ARBITRATION_CONTRACT.md) defines pre/postcommit interruption and resume. [Current traceability](FEATURE_TRACEABILITY_MATRIX.md) assigns each feature its acceptance/blocker.
 
 ## Remaining stop gates
 

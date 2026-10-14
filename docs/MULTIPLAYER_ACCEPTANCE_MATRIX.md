@@ -1,6 +1,6 @@
 # Multiplayer and lifecycle acceptance matrix
 
-Project Version: 0.1.0-dev.2
+Project Version: 0.2.0-dev.1
 
 M0R test specification, 2026-10-12. All gameplay tests below are NOT TESTED. No game/server was launched. Offline/source assertions are separately labeled. T-* identifiers are stable acceptance contracts, not test executions. [Milestones](MILESTONE_DEPENDENCY_GRAPH.md), [source index](M0R_SOURCE_EVIDENCE.md), [minimum candidate](MINIMUM_PLAYABLE_RELEASE.md).
 

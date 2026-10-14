@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "project_version": "0.2.0-dev.1",
+  "status": "OFFLINE DOMAIN ONLY; not a loadable mod",
+  "authoritative_lua": [
+    "src/domain/B47Dog/Access.lua",
+    "src/domain/B47Dog/Guard.lua",
+    "src/domain/B47Dog/Ownership.lua",
+    "src/domain/B47Dog/Projection.lua"
+  ],
+  "localization_root": "src/localization",
+  "languages": [
+    "AR",
+    "CA",
+    "CH",
+    "CN",
+    "CS",
+    "DA",
+    "DE",
+    "EN",
+    "ES",
+    "ES_CL",
+    "ES_MX",
+    "FI",
+    "FR",
+    "HU",
+    "ID",
+    "IT",
+    "JP",
+    "KO",
+    "NL",
+    "NO",
+    "PL",
+    "PT",
+    "PTBR",
+    "RO",
+    "RU",
+    "STREW",
+    "TH",
+    "TR",
+    "UA"
+  ],
+  "localization_keys": {
+    "UI": [
+      "UI_B47ANCEDDogTraining_Action_InspectDog",
+      "UI_B47ANCEDDogTraining_Action_ClaimDog",
+      "UI_B47ANCEDDogTraining_Action_RenameDog",
+      "UI_B47ANCEDDogTraining_Action_GrantHandler",
+      "UI_B47ANCEDDogTraining_Action_RevokeHandler",
+      "UI_B47ANCEDDogTraining_Action_TransferDog",
+      "UI_B47ANCEDDogTraining_Reason_Unauthorized",
+      "UI_B47ANCEDDogTraining_Reason_Unavailable",
+      "UI_B47ANCEDDogTraining_Reason_Stale",
+      "UI_B47ANCEDDogTraining_Reason_Invalid",
+      "UI_B47ANCEDDogTraining_Reason_Protocol",
+      "UI_B47ANCEDDogTraining_Reason_Capability",
+      "UI_B47ANCEDDogTraining_Reason_Recovery"
+    ],
+    "Sandbox": [
+      "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode",
+      "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode_tooltip",
+      "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode_option1",
+      "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode_option2",
+      "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath",
+      "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_tooltip",
+      "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option1",
+      "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option2"
+    ]
+  },
+  "runtime_registration": null,
+  "workshop_id": null,
+  "generated_outputs": "None; test reports print to stdout. No staging or packages.",
+  "validation": [
+    "python -B scripts/check_versions.py --root . --json",
+    "python -B scripts/validate_m0r.py",
+    "python -B scripts/validate_foundation.py",
+    "python -B scripts/test_domain.py"
+  ]
+}

@@ -1,6 +1,6 @@
 # Sandbox settings registry
 
-Project Version: 0.1.0-dev.2
+Project Version: 0.2.0-dev.1
 
 M0R design, 2026-10-12. Canonical design rows: [sandbox_settings.json](contracts/sandbox_settings.json). This registry is complete for the approved scope; no settings are shipped or implemented. All defaults/bounds are provisional balancing choices, not native/clinical constants or tested balance. Settings with unproved capability stay unexposed/inactive until their slice passes; requested true never overrides a blocker. The namespace remains provisional with the technical Mod ID.
 

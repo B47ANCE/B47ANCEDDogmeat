@@ -3,18 +3,6 @@
   "canonical": "VERSION",
   "mirrors": [
     {
-      "path": "art/german_shepherd/README.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
-      "path": "art/german_shepherd/validation/asset_validation.json",
-      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
-    },
-    {
-      "path": "art/german_shepherd/validation/roundtrip_validation.json",
-      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
-    },
-    {
       "path": "README.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
@@ -105,6 +93,14 @@
     {
       "path": "docs/contracts/sandbox_settings.json",
       "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "source-inventory.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/FEATURE_FOUNDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -198,6 +194,22 @@
     {
       "reference": "art/german_shepherd/history/gsd-v001/",
       "reason": "Original art reports and builder at 0.1.0-dev.1 / gsd-v001; full asset recovery commit recorded alongside. Not current proof."
+    },
+    {
+      "reference": "art/german_shepherd/README.md",
+      "reason": "Frozen gsd-v002 art checkpoint tested at 0.1.0-dev.2; unchanged during feature work, not current gameplay evidence."
+    },
+    {
+      "reference": "art/german_shepherd/validation/asset_validation.json",
+      "reason": "Frozen gsd-v002 art checkpoint tested at 0.1.0-dev.2; unchanged during feature work, not current gameplay evidence."
+    },
+    {
+      "reference": "art/german_shepherd/validation/roundtrip_validation.json",
+      "reason": "Frozen gsd-v002 art checkpoint tested at 0.1.0-dev.2; unchanged during feature work, not current gameplay evidence."
+    },
+    {
+      "reference": "docs/art-checkpoint.json",
+      "reason": "Frozen art commit, tested version and canonical file hashes. Not current feature validation."
     }
   ]
 }

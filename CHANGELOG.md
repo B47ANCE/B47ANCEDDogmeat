@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.1] — 2026-10-14
+
+- Begin additive MINOR feature development with an engine-independent Lua ownership, naming, handler permission and private projection domain. No previous runtime/save format exists to migrate.
+- Server-context-only transition proposals; strict intent validation, revision/session checks, ownership transfer/revocation and per-character discovery filtering. Native adapters and durable commits remain disabled pending their gates.
+- Preserve gsd-v002 at its tested 0.1.0-dev.2 checkpoint, with unchanged file hashes. Model refinement is deferred.
+- Validation outcomes and integration limitations are recorded in docs/FEATURE_FOUNDATION.md. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## [0.1.0-dev.2] — 2026-10-14
 
 - Rebuild gsd-v002 with revised anatomy/facial parts, original generated fur detail, 2048 albedo/normal/roughness maps, weighted mesh guard hairs and an editable Blender/GLB review candidate. The realistic visual benchmark remains NOT MET; no production art approval.
