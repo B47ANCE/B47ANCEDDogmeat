@@ -101,6 +101,14 @@
     {
       "path": "docs/FEATURE_FOUNDATION.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_PERSISTENCE_SLICE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-persistence-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
     }
   ],
   "changelog": {
@@ -139,7 +147,7 @@
     {
       "category": "compatibility",
       "reference": "docs/PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md",
-      "reason": "Proposed store/marker/protocol schema1 is separate from Project Version; not implemented."
+      "reason": "Prototype ownership/marker/snapshot schema 1 and intent protocol 1 are separate from Project Version; no deployed migration or stable API."
     }
   ],
   "historical": [

@@ -1,8 +1,12 @@
 # Canonical canine identity contract
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
 M0R design, 2026-10-12. FEASIBLE identity domain; lifecycle carriers EXPERIMENTAL; maturation rebinding BLOCKED until a safe Lua path is demonstrated. [Evidence](M0R_SOURCE_EVIDENCE.md), [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md), [MP tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md).
+
+## Current implementation boundary
+
+The [0.2.0-dev.2 native/private slice](NATIVE_PERSISTENCE_SLICE.md) implements read-only native observation and private marker matching. Dead/detached animals, observed duplicates and foreign/missing private bindings refuse; ID/handle capacity exhaustion stops the session. This does not establish identity through unloaded/replaced handles, allocate or stamp a dog, or prove native save/restart continuity. Those lifecycle routes remain gated below.
 
 ## Identity and allocation
 

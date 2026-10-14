@@ -1,12 +1,19 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.1",
-  "status": "OFFLINE DOMAIN ONLY; not a loadable mod",
+  "project_version": "0.2.0-dev.2",
+  "status": "UNREGISTERED NATIVE/PRIVATE PREPARATION PROTOTYPE; not a loadable mod",
   "authoritative_lua": [
     "src/domain/B47Dog/Access.lua",
+    "src/domain/B47Dog/Codec.lua",
     "src/domain/B47Dog/Guard.lua",
+    "src/domain/B47Dog/Identity.lua",
     "src/domain/B47Dog/Ownership.lua",
-    "src/domain/B47Dog/Projection.lua"
+    "src/domain/B47Dog/PrivateStore.lua",
+    "src/domain/B47Dog/Projection.lua",
+    "src/domain/B47Dog/Snapshot.lua",
+    "src/native/B47Dog/NativeAnimal.lua",
+    "src/native/B47Dog/NativeSession.lua",
+    "src/native/B47Dog/PZCache.lua"
   ],
   "localization_root": "src/localization",
   "languages": [
@@ -75,5 +82,6 @@
     "python -B scripts/validate_m0r.py",
     "python -B scripts/validate_foundation.py",
     "python -B scripts/test_domain.py"
-  ]
+  ],
+  "native_validation": "python -B scripts/validate_foundation.py --native --game-root <verified-game-root>"
 }

@@ -1,12 +1,12 @@
 # M0R validation and remaining blockers
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
 Historical M0R evidence date: 2026-10-12; tested project version: 0.1.0-dev.1. The current header identifies the contract edition. Environment: Windows offline documentation/native source inspection. At that evidence checkpoint no gameplay prototype/assets were implemented, and no PZ/server launch, deployment, package or Workshop publication occurred. Later gsd-v002 authoring evidence is separate under art/german_shepherd. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
 
 ## Compatibility and evidence
 
-Current project version is 0.2.0-dev.1 for additive feature development. The [offline ownership/inspection foundation](FEATURE_FOUNDATION.md) is partially implemented and tested separately. The historical M0R result below remains tested at 0.1.0-dev.1, and the unchanged art remains tested at 0.1.0-dev.2. Current document headers do not renew either evidence set. Historical results retain their observed versions.
+Current project version is 0.2.0-dev.2 for additive feature development, including the [unregistered native/private preparation prototype](NATIVE_PERSISTENCE_SLICE.md). The [offline ownership/inspection foundation](FEATURE_FOUNDATION.md) is partially implemented and tested separately. The historical M0R result below remains tested at 0.1.0-dev.1, and the unchanged art remains tested at 0.1.0-dev.2. Current document headers do not renew either evidence set. Historical results retain their observed versions.
 
 [M0R_SOURCE_EVIDENCE.md](M0R_SOURCE_EVIDENCE.md) records exact signatures/lines/bytecode offsets and44 current hashes. Native Lua registry/spawn/model, nonclient updates/synchronization, marker save/load/carry/trailer/corpse and cache-file primitives exist. Larger original canine, task/lifecycle/private durability/physical waste/door capabilities remain unproved. Fresh native growth replacement does not demonstrate marker transfer; broad old ModData-growth assertion stays historical.
 
@@ -32,9 +32,9 @@ Before-edit version check: PASS at0.1.0-dev.1, declared mirrors only; absent pac
 | G0 requirements | Contracts/traceability documented; calibration/release endpoint decisions explicit |
 | G1 reconnaissance | Partial source evidence; native/pristine gaps remain |
 | G2 design/prototype approval | Feature development authorized 2026-10-14; native integration prerequisites remain unresolved |
-| G3 gameplay implementation | PARTIAL offline ownership/projection domain; no live adapter |
+| G3 gameplay implementation | PARTIAL ownership/projection, native observation and private save preparation; no live registration or gameplay commit |
 | G4 static documentation | STATIC PASS, Windows offline current contract/version/source checks only |
-| G5 offline gameplay logic | 94 Lua 5.1 domain test cases PASS on Windows; native gameplay NOT TESTED |
+| G5 offline gameplay logic | 171 Lua 5.1 domain/file test cases PASS on Windows at 0.2.0-dev.2; native gameplay NOT TESTED |
 | G6 actual client | NOT TESTED |
 | G7 dedicated gameplay | BLOCKED / NOT TESTED |
 | G8 release | BLOCKED; no artifacts authorized; --release not run |

@@ -1,0 +1,132 @@
+{
+  "project_version": "0.2.0-dev.2",
+  "observed_date": "2026-10-14",
+  "observed_project_version": "0.2.0-dev.2",
+  "game_build": "42.21",
+  "environment": "Windows offline installed source/class inspection; no PZ/server execution",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/datas/AnimalBreed.class",
+      "sha256": "4ad326b7cccbcea214f4b9964739538e1fa55717c139219777db387dc14edf1f"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager.class",
+      "sha256": "dcaad0082ca27a15550c7d0a6e14b3aeb71f634a14f32123dec620df180c646d"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject$LuaFileWriter.class",
+      "sha256": "d635dbbbc2f07c45ce0cce7672a38c7ede92c445714d855c91e1f5a8acba6c3e"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/Core.class",
+      "sha256": "8f5c69740c8bf2181123a831ab68d1dfb047453687cca6dc62c77816d76ab360"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd"
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalUpdatePacket.class",
+      "sha256": "10d0be45fff9127f2f4b7f260581ce18d686dcc9bd043135efc59f15a4045ec4"
+    },
+    {
+      "container": "game-root",
+      "path": "projectzomboid.jar",
+      "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33"
+    },
+    {
+      "container": "game-root",
+      "path": "jre64/lib/modules",
+      "sha256": "dffbeebedd7be590b85872533da9fc9ef366d82fb1cb88809b241165a4355658"
+    }
+  ],
+  "signatures": [
+    {
+      "api": "LuaManager.GlobalObject.isServer():boolean; isClient():boolean; instanceof(Object,String):boolean",
+      "evidence": "Hash-matched local GlobalObject.java lines 1749-1752, 1759-1762, 802-819; packaged descriptors inspected.",
+      "scope": "Role/type reads, not a complete native authority proof."
+    },
+    {
+      "api": "IsoAnimal.getAnimalType():String; getBreed():AnimalBreed; getAnimalID():int; isExistInTheWorld():boolean",
+      "evidence": "Packaged IsoAnimal.java local inspection lines 1598-1600, 2123-2125, 2995-2997, 2248-2250. Constructor Rand.Next(10000) at 1523.",
+      "scope": "World membership is not alive status; native ID is not canonical identity."
+    },
+    {
+      "api": "IsoGameCharacter.isDead():boolean",
+      "evidence": "Packaged descriptor ()Z; bytecode offsets 0-33 check health/body health. Exposer.java:1948.",
+      "scope": "Inherited native read, not a death/lifecycle notification."
+    },
+    {
+      "api": "AnimalBreed.getName():String; IsoObject.getModData():KahluaTable",
+      "evidence": "Packaged public methods; vanilla ButcheringUtil.lua:14 and ISButcherHookUI.lua:229 usage. Exposer.java:1950/1952, recursive exposure:2843-2844.",
+      "scope": "Only explicit public binding marker is read; all private state remains outside ModData."
+    },
+    {
+      "api": "IsoAnimal.save/load and AnimalUpdatePacket.write/parse",
+      "evidence": "Packaged IsoAnimal ModData save lines1336-1342 / bytecode163-167; load1433-1436. Packet write calls animal.save at227; parse calls load at446 under GameClient branch157-160.",
+      "scope": "Animal ModData is network-visible; serialization does not prove trusted lifecycle continuity."
+    },
+    {
+      "api": "LuaManager.GlobalObject.getFileReader(String,boolean):BufferedReader",
+      "evidence": "Hash-matched GlobalObject.java:2840-2863; UTF-8 cache/Lua relative paths; false does not create missing file.",
+      "scope": "Nil can mean missing/error, never proof of a new world."
+    },
+    {
+      "api": "LuaManager.GlobalObject.getFileWriter(String,boolean,boolean):LuaFileWriter",
+      "evidence": "GlobalObject.java:3471-3503; allowed .json in LuaManager.java:136,352-358. LuaFileWriter delegates write at bytecode5 and close at4 to PrintWriter; Exposer.java:2633.",
+      "scope": "write/writeln/close only; no established fsync, atomic rename, checkError or native pairing."
+    },
+    {
+      "api": "LuaManager.GlobalObject.getCurrentSaveName():String; getRandomUUID():String",
+      "evidence": "GlobalObject.java:2086-2088 and782-785.",
+      "scope": "Save name is a locator, not world identity; UUID collision checks remain required."
+    },
+    {
+      "api": "java.io.BufferedReader.read():int; close():void",
+      "evidence": "Installed JRE javap --system <game>/jre64 -sysinfo -public -s java.io.BufferedReader. read descriptor ()I is directly declared; bytecode37-40 returns -1,95-98 returns character. Exposer.java:1828. LuaJavaClassExposer.exposeMethods Class.getMethods at1, public/nonstatic/HiddenFromLua filters34-55, exposeMethod65.",
+      "runtime_class_sha256": "25654bebdd214b7a3cfc76497650cc973eef4d68936c75a9d8d751d9b06eb6de",
+      "runtime_class_bytes": 5107,
+      "jre": "Azul 25.0.1+8-LTS",
+      "scope": "Source exposure verified; Kahlua overload dispatch and actual files remain a dedicated runtime gate."
+    }
+  ],
+  "runtime_limitations": [
+    "Loose classes differ from packaged classes and observed client configuration includes an external agent; pristine effective class loading is unknown.",
+    "No safe native save completion, automatic private/world pairing, account/episode adapter or lifecycle replacement path is established.",
+    "Native APIs are mocked in offline tests; no live save/store initialization, spawn, registration or event hook."
+  ],
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED"
+}

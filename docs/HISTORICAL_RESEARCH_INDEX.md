@@ -1,6 +1,6 @@
 # Historical research and current authority
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
 M0R inventory, 2026-10-12. Current architecture is standalone Lua-only. Historical records remain unchanged; their dependency assumptions, Java suggestions and PASS results belong to their exact old audit, not current authorization.
 

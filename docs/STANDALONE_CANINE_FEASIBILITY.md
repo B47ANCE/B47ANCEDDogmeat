@@ -1,6 +1,6 @@
 # Standalone Lua-only canine feasibility
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
 M0R investigation, 2026-10-12. Target: Build 42.21. That investigation performed no gameplay implementation, asset creation or PZ/server execution. A separate [2026-10-14 German Shepherd authoring checkpoint](../art/german_shepherd/README.md) adds original mesh/coat/rig and Blender-only evidence; native registration and runtime gates remain unproved. Companion Dogs and DogPack are neither dependencies nor asset sources. [Exact evidence](M0R_SOURCE_EVIDENCE.md), [prototype tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md), [scope](MINIMUM_PLAYABLE_RELEASE.md).
 

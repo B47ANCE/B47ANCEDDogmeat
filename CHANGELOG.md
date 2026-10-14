@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.2] — 2026-10-14
+
+- Continue the additive 0.2.0 feature scope with original Lua native observation/identity matching and bounded private snapshot preparation/recovery. No deployed save format exists to migrate.
+- Use strict canonical data, corruption checks, exact operator-paired checkpoint selection and inactive-slot readback. Missing/corrupt/ambiguous data is preserved and refused; no automatic initialization or highest-sequence recovery.
+- Recheck installed native API evidence. Native ModData is network-visible; keep private ownership/history outside it. The adapters remain unregistered pending pristine runtime, lifecycle, identity and native/private save-pairing proof.
+- Model files remain unchanged. Validation commands, exact outcomes and remaining gates are in docs/NATIVE_PERSISTENCE_SLICE.md. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED.
+
 ## [0.2.0-dev.1] — 2026-10-14
 
 - Begin additive MINOR feature development with an engine-independent Lua ownership, naming, handler permission and private projection domain. No previous runtime/save format exists to migrate.

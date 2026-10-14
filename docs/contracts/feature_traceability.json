@@ -1,6 +1,6 @@
 {
-  "project_version": "0.2.0-dev.1",
-  "status": "CURRENT STANDALONE ASSESSMENT - NO GAMEPLAY IMPLEMENTATION",
+  "project_version": "0.2.0-dev.2",
+  "status": "CURRENT STANDALONE ASSESSMENT - PARTIAL UNREGISTERED PROTOTYPE; RUNTIME NOT TESTED",
   "features": [
     {
       "id": "F01",
@@ -71,7 +71,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: native reader/private identity matching and offline reload; native lifecycle/restart NOT PROVED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -95,7 +95,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: offline ownership-transfer identity invariant; native lifecycle routes NOT IMPLEMENTED",
+      "implementation_status": "PARTIAL: ownership-transfer identity invariant and native death refusal; lifecycle transitions NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2311,7 +2311,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: bounded schema/corruption refusal and private-file preservation; migration/native recovery NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2527,7 +2527,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: canonical private slots, exact operator-pair selection and prepared readback; native pairing/durability BLOCKED",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2550,7 +2550,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: offline Lua ACL/projection/intent domain; native adapters, durable commits and receipts NOT IMPLEMENTED",
+      "implementation_status": "PARTIAL: ACL/projection/intent domain and native ownership preparation; authenticated broker/durable commits NOT IMPLEMENTED",
       "runtime_status": "NOT TESTED"
     },
     {

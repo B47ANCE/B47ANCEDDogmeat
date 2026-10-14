@@ -1,8 +1,8 @@
 # Ownership and inspection feature foundation
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
-The user authorized feature work on 2026-10-14 and deferred model refinement. This slice implements **engine-independent Lua logic**, with actual offline Lua tests. It is not yet a playable mod: no native events, authenticated-player adapter, save writer, command endpoint or UI is installed.
+The user authorized feature work on 2026-10-14 and deferred model refinement. This document describes the ownership foundation introduced and tested at 0.2.0-dev.1. It implements **engine-independent Lua logic**, with actual offline Lua tests. Current native observation and private file preparation are documented separately in [NATIVE_PERSISTENCE_SLICE.md](NATIVE_PERSISTENCE_SLICE.md). It is not yet a playable mod: no native events, authenticated-player adapter, gameplay commit, command endpoint or UI is installed.
 
 ## Implemented behavior
 
@@ -18,9 +18,9 @@ F108 is partial. F04 has an offline ownership-transfer invariant only; transport
 
 ## Source and data boundary
 
-[source-inventory.json](../source-inventory.json) declares authoritative source, prepared localization and validation commands. `src/domain/B47Dog` contains Guard, Access, Ownership and Projection. `B47Dog` is an internal module path, not a finalized Mod ID or native animal namespace. There is no `media`, `Contents`, `mod.info`, staging or distribution tree.
+[source-inventory.json](../source-inventory.json) declares authoritative source, prepared localization and validation commands. The original ownership modules are Guard, Access, Ownership and Projection in `src/domain/B47Dog`; the current inventory also includes the later identity/snapshot/store modules and unregistered native adapters. `B47Dog` is an internal module path, not a finalized Mod ID or native animal namespace. There is no `media`, `Contents`, `mod.info`, staging or distribution tree.
 
-The ownership schema 1 is a dedicated subrecord: schema, worldId, dogId, generation, revision, aclRevision, phase, optional name, optional ownerAccount/ownerEpisode and a bounded explicit handlers map. Never pass or replace the entire private dog record with this subrecord. Other personality, health, history, reward and training domains remain outside it. Unknown schema/fields produce Recovery with no mutation. There is no serialized private-store format or migration implementation in this slice.
+The ownership schema 1 is a dedicated subrecord: schema, worldId, dogId, generation, revision, aclRevision, phase, optional name, optional ownerAccount/ownerEpisode and a bounded explicit handlers map. Never pass or replace the entire private dog record with this subrecord. Other personality, health, history, reward and training domains remain outside it. Unknown schema/fields produce Recovery with no mutation. The ownership foundation did not supply a private-store format. The later native/private slice supplies a bounded prototype snapshot format and preparation path; no migration is implemented.
 
 `Ownership.propose(state, context, request)` returns either `{ok=false, reason=...}` or a **server-only proposed subrecord**, expected revisions and an optional private transition event. It performs no commit. Successful no-ops do not advance revision or produce events. Counter exhaustion refuses further changes; the 64-handler limit is an internal bounded record/packet safety limit, not a progression setting.
 
@@ -34,14 +34,14 @@ Context fields are **not network arguments**. A verified server adapter must der
 
 The intent contains only protocol 1, worldId, sessionId, dogId, generation, revision, configRevision, action and the action's name or opaque targetRef. Unknown keys, including actor/owner/role/proximity claims, are refused. Target identity/consent must be resolved and validated server-side. Revocation can resolve an offline account from a trusted retained grant; granting identity never comes directly from client args.
 
-No adapter exists yet. It must:
+The later NativeSession prepares a private file from a matched native observation and trusted context. An authenticated native broker and gameplay commit adapter still must:
 
 1. Authenticate and bound/rate-limit input before resolving world/dog/target records. Verify native character lifecycle and account uniqueness under T-AUTH.
 2. Serialize each dog's mutations. Immediately before committing, reread current actor/binding/configuration/ACL/target and rerun the proposal inside a compare-and-swap boundary. Two proposals computed from the same state are alternatives, never two committed successes.
 3. Persist the ownership subrecord together with required receipts/history while preserving every other private domain. Reconcile native/private checkpoints first. A proposal's event is not a durable receipt, and this module does not provide atomicity or restart-safe exactly-once execution.
 4. Re-resolve permissions and build a new projection immediately before sending. Invalidate queued responses on ACL/configuration/episode/session changes. Do not cache or send an old projection. Never send the proposal, expected actor fields, private transition event or full private record.
 
-Until those obligations pass, the core is deliberately not attached to OnClientCommand or any game event. [Native ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [identity](CANINE_IDENTITY_CONTRACT.md) and [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md) remain the authoritative integration contracts. There are no new native API assumptions or game-source copies in this implementation.
+Until those obligations pass, the core is deliberately not attached to OnClientCommand or any game event. [Native ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [identity](CANINE_IDENTITY_CONTRACT.md) and [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md) remain the authoritative integration contracts. The ownership modules have no native API calls or game-source copies. The later native adapter has its own dated source-evidence manifest.
 
 ## Configuration and localization
 
@@ -51,7 +51,7 @@ Prepared `src/localization/<language>/UI.json` and Sandbox.json contain 13 actio
 
 ## Validation and remaining gates
 
-[TESTED Windows offline] 94 test cases passed under Lua 5.1 through Lupa 2.6, including claim/name/grants/transfer, actor spoofing, stale/config/session/replay refusal, consent, privacy, new-character access, malformed inputs, unsupported schema/fields, overflow and unchanged input tables. Disposable tables are used; no player saves or native files are read or written. Lua 5.1 syntax/behavior is not Kahlua or PZ runtime proof.
+[TESTED Windows offline, 2026-10-14, 0.2.0-dev.1] 94 test cases passed under Lua 5.1 through Lupa 2.6, including claim/name/grants/transfer, actor spoofing, stale/config/session/replay refusal, consent, privacy, new-character access, malformed inputs, unsupported schema/fields, overflow and unchanged input tables. Disposable tables are used; no player saves or native files are read or written. Lua 5.1 syntax/behavior is not Kahlua or PZ runtime proof.
 
 Exact commands from repository root (Python3 with Lupa 2.6 for the Lua test):
 
@@ -65,8 +65,8 @@ $featurePython = 'C:/Users/willi/.cache/codex-runtimes/codex-primary-runtime/dep
 git diff --cached --check
 ```
 
-The foundation validator checks the bounded source inventory, case-correct requires, all 609 prepared fallback entries and30 unchanged art files. GitHub CI repeats the offline checks on Ubuntu with pinned Lupa 2.6; green CI does not establish Linux PZ compatibility. Native-source hashes are not revalidated by this feature slice because it introduces no native adapter.
+The foundation validator checks the bounded source inventory, case-correct requires, all 609 prepared fallback entries and30 unchanged art files. GitHub CI repeats the offline checks on Ubuntu with pinned Lupa 2.6; green CI does not establish Linux PZ compatibility. That original foundation introduced no native adapter; the later native/private slice separately rechecks native inputs and extends the test suite to 171 cases at 0.2.0-dev.2.
 
 The art remains gsd-v002 tested at 0.1.0-dev.2/commit 643ead1. [Frozen checkpoint hashes](art-checkpoint.json) use canonical Git bytes, with only declared text-newline normalization for Windows checkouts. Binary bytes remain exact. Existing art results retain their original scope; the visual benchmark is still NOT MET and model work is deferred.
 
-[RUNTIME GATE] B-ENV/B-ASSET, B-IDENTITY and B-STORE still block live companion integration. T-AUTH, T-PROTOCOL, T-PRIVACY, T-RECOVERY, native character changes, reconnect/restart and two-client permission changes require actual dedicated evidence. No durable receipt/CAS, packet flood control, native binding, initialization, migration, handler roster UI or gameplay command is implemented. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, deployment, package, Workshop upload or main merge is authorized by these tests.
+[RUNTIME GATE] B-ENV/B-ASSET, B-IDENTITY and B-STORE still block live companion integration. T-AUTH, T-PROTOCOL, T-PRIVACY, T-RECOVERY, native character changes, reconnect/restart and two-client permission changes require actual dedicated evidence. No durable receipt/CAS, packet flood control, complete native lifecycle binding, initialization, migration, handler roster UI or gameplay command is implemented. The later read-only native match and prepared private file do not satisfy those gates. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED. No game/server launch, deployment, package, Workshop upload or main merge is authorized by these tests.

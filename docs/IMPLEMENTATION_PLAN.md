@@ -1,6 +1,6 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
 M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. The M0R documentation delivery itself authorized no gameplay; the user subsequently authorized feature development on 2026-10-14. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 
@@ -8,7 +8,7 @@ M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine doma
 
 The [M0R request](requirements/M0R_REQUEST.md) supplements the [standalone master](requirements/STANDALONE_MASTER_HANDOFF.md). Latest shared/project Lua-only rules supersede older Java allowances. All approved gameplay scope remains in [132 traceability rows](FEATURE_TRACEABILITY_MATRIX.md). Former R1–R6 integration assumptions are historical, not automatic standalone blockers or proof. Current signatures/hashes, growth correction and missing safe Lua seams are in [the source index](M0R_SOURCE_EVIDENCE.md).
 
-Current project checkpoint is 0.2.0-dev.1: additive MINOR feature development authorized 2026-10-14. The [ownership/inspection foundation](FEATURE_FOUNDATION.md) implements pure Lua domain logic without engine registration or durable writes. Model refinement is deferred; gsd-v002 remains frozen at its tested 0.1.0-dev.2 checkpoint. Technical Mod ID remains provisional.
+Current project checkpoint is 0.2.0-dev.2: additive MINOR feature development authorized 2026-10-14. The [ownership/inspection foundation](FEATURE_FOUNDATION.md) implements pure Lua domain logic without engine registration or durable commits. The [native/private preparation slice](NATIVE_PERSISTENCE_SLICE.md) adds read-only native observation, private identity matching, bounded canonical snapshots and exact paired-slot recovery/preparation. Its file-backed offline tests do not establish native save pairing. Model refinement is deferred; gsd-v002 remains frozen at its tested 0.1.0-dev.2 checkpoint. Technical Mod ID remains provisional.
 
 ## Current bounded slice and next integration
 
@@ -30,4 +30,4 @@ Every slice includes server sandbox configuration, localization, input/manual/re
 
 B-ENV/B-ASSET require pristine actual class baseline, original canine assets and registry/state coverage. B-TASK requires a safe exclusive native task seam. B-IDENTITY requires complete carried release and marker continuity; maturation replacement has no demonstrated marker copy. B-STORE/B-INVENTORY require recoverable native/private checkpoint and physical receipts; cache close/readback is not atomic durable world coordination. B-WASTE requires physical persistent objects and safe anchors. B-DOOR/B-ZOMBIE require selective closed-door/native traversal and hostile canine proof. B-HEALTH/B-SCENT/B-PHYSICS/B-VEHICLE retain individual reviewed condition, target, physical-load and occupancy gates.
 
-[M0R_VALIDATION.md](M0R_VALIDATION.md) records exact checks, blockers and public-backup evidence. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Review and approve only the concrete bounded prototype before gameplay implementation. Dedicated G7 must PASS before gameplay G8; packaging/publication remain separately authorized.
+[M0R_VALIDATION.md](M0R_VALIDATION.md) records exact checks, blockers and public-backup evidence. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Continue the authorized bounded implementation; stop affected live behavior wherever its native authority or recovery prerequisites remain unproved. Dedicated G7 must PASS before gameplay G8; packaging/publication remain separately authorized.

@@ -1,8 +1,12 @@
 # Private persistence and recovery contract
 
-Project Version: 0.2.0-dev.1
+Project Version: 0.2.0-dev.2
 
 M0R design, 2026-10-12. FEASIBLE conservative storage protocol; crash/power-loss durability and coordinated native saves EXPERIMENTAL. Transactional gameplay is BLOCKED until reconciliation/durability acceptance. Lua-only; no Java bridge fallback. [Evidence](M0R_SOURCE_EVIDENCE.md), [identity](CANINE_IDENTITY_CONTRACT.md), [tasks](TASK_ARBITRATION_CONTRACT.md).
+
+## Current implementation boundary
+
+The 0.2.0-dev.2 prototype reads native markers and prepares ownership-only private snapshots. Both slots must validate, and selection requires an exact trusted operator-paired checkpoint. It preserves a newer unpaired slot and refuses corruption instead of repairing automatically. It never initializes missing stores, updates native markers, registers save hooks or claims readback as a durable save. See [implementation and tests](NATIVE_PERSISTENCE_SLICE.md) for the exact format, technical bounds, single-coordinator limitation and remaining native gates. The following full protocol remains the design target.
 
 ## Privacy and location
 
@@ -10,7 +14,7 @@ Hidden records live only in server memory and a server-host private file store. 
 
 Candidate path using getFileWriter/getFileReader: <server cache>/Lua/B47ANCEDDogTraining/<worldUUID>/slot-a.json and slot-b.json, with bounded immutable receipt segments. Components are server-generated UUIDs/fixed names; never raw account/save/user input. Allowed .json extension and relative path semantics are source-supported. getCurrentSaveName identifies the native save-directory locator, not durable world identity. Startup readers use createIfNull=false; a missing file must not be converted into an apparently empty valid record. getModFileWriter is excluded because installed mod directories are not world-private storage.
 
-Proposed storeSchema=1, markerSchema=1 and protocolSchema=1 are independent design schema identifiers, not Project Version and not implemented formats. The envelope records world UUID, native-save locator fingerprint, store schema, checkpoint token, predecessor token, sequence, allocation epoch/highwater, accepted animal binding-token chains, record count, payload byte length, canonical payload checksum and transaction receipts. Serialize in a defined key order with explicit numeric/string limits and a documented pure-Lua checksum implementation selected in the prototype. The checksum detects accidental corruption; it is not authentication or a substitute for filesystem permissions. Unsupported future schema becomes read-only/quarantined; migrations preserve originals, are explicit and tested, and never silently discard fields.
+The original M0R proposed storeSchema=1, markerSchema=1 and protocolSchema=1 independently of Project Version. The current [native/private slice](NATIVE_PERSISTENCE_SLICE.md) implements a bounded snapshot/marker schema 1 and preparation protocol subset; full automatic native pairing, transactions, migrations and durable receipts remain unimplemented. The envelope records world UUID, native-save locator fingerprint, store schema, checkpoint token, predecessor token, sequence, allocation epoch/highwater, accepted animal binding-token chains, record count, payload byte length, canonical payload checksum and transaction receipts. Serialize in a defined key order with explicit numeric/string limits and a documented pure-Lua checksum implementation selected in the prototype. The checksum detects accidental corruption; it is not authentication or a substitute for filesystem permissions. Unsupported future schema becomes read-only/quarantined; migrations preserve originals, are explicit and tested, and never silently discard fields.
 
 ## Atomic-write limitation and candidate recovery strategy
 

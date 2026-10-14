@@ -1,12 +1,17 @@
-"""Read-only source, localization and frozen-art checks for the offline feature slice."""
+"""Read-only source, localization, frozen-art and optional native-evidence checks."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import re
 import sys
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULES = {f'src/domain/B47Dog/{name}.lua' for name in ('Access', 'Guard', 'Ownership', 'Projection')}
+DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
+          ('Access', 'Guard', 'Ownership', 'Projection', 'Codec', 'Identity', 'Snapshot', 'PrivateStore')}
+NATIVE = {f'src/native/B47Dog/{name}.lua' for name in ('PZCache', 'NativeAnimal', 'NativeSession')}
+MODULES = DOMAIN | NATIVE
 
 
 def no_duplicates(pairs):
@@ -27,11 +32,11 @@ def check_source():
     inventory = read(ROOT / 'source-inventory.json')
     catalog = read(ROOT / 'docs/contracts/localization_keys.json')
     if set(inventory['authoritative_lua']) != MODULES:
-        errors.append('Source inventory differs from bounded ownership slice')
+        errors.append('Source inventory differs from bounded feature slice')
     if inventory['languages'] != catalog['languages'] or inventory['localization_root'] != 'src/localization':
         errors.append('Localization source/language declaration differs from contract')
     if inventory['runtime_registration'] is not None or inventory['workshop_id'] is not None:
-        errors.append('Unexpected native registration/Workshop identity in offline domain slice')
+        errors.append('Unexpected runtime registration/Workshop identity in unregistered prototype')
     allowed = MODULES | {f'src/localization/{lang}/{category}.json'
                         for lang in catalog['languages'] for category in ('UI', 'Sandbox')}
     found = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'src').rglob('*') if p.is_file()}
@@ -45,20 +50,65 @@ def check_source():
             continue
         code = path.read_text(encoding='utf-8')
         for module in re.findall(r'\brequire\s*\(?\s*["\']([^"\']+)["\']', code):
-            if 'src/domain/' + module + '.lua' not in MODULES:
+            candidates = {'src/domain/' + module + '.lua', 'src/native/' + module + '.lua'} & MODULES
+            if len(candidates) != 1 or (relative in DOMAIN and not candidates <= DOMAIN):
                 errors.append('Unknown/case-wrong require in ' + relative + ': ' + module)
-        # Deliberately small pure-domain boundary, not a general Lua security scanner.
-        if re.search(r'\b(?:Events|ModData|SandboxVars|IsoAnimal|io|os|debug|luajava)\s*[.:\[]|'
-                     r'\b(?:sendClientCommand|sendServerCommand|getFileWriter|getFileReader|addAnimal|loadstring|dofile|loadfile)\s*\(', code):
+        # Deliberately bounded source checks, not a general Lua security scanner.
+        if re.search(r'\b(?:Events|ModData|SandboxVars|io|os|debug|luajava)\s*[.:\[]|'
+                     r'\b(?:sendClientCommand|sendServerCommand|getModFileWriter|addAnimal|loadstring|dofile|loadfile)\s*\(', code):
+            errors.append('Unexpected runtime registration, write or dynamic execution: ' + relative)
+        if relative in DOMAIN and re.search(r'\b(?:IsoAnimal)\s*[.:\[]|'
+                     r'\b(?:getFileWriter|getFileReader|getCurrentSaveName|getRandomUUID|instanceof|isServer|isClient)\b', code):
             errors.append('Engine/storage/dynamic execution outside approved domain: ' + relative)
+        if relative in NATIVE:
+            allowed_api = {'isServer', 'isClient', 'getCurrentSaveName', 'getFileReader', 'getFileWriter',
+                           'instanceof', 'getRandomUUID'}
+            if not set(re.findall(r'\bapi\.([A-Za-z_][A-Za-z0-9_]*)', code)) <= allowed_api:
+                errors.append('Unreviewed native API reference: ' + relative)
     for forbidden in ('dist', 'Contents', 'media', 'mod.info'):
         if (ROOT / forbidden).exists():
             errors.append('Unexpected runtime/distribution root: ' + forbidden)
     return errors
 
 
+def check_native(game_root):
+    evidence = read(ROOT / 'docs/native-persistence-evidence.json')
+    errors, checked = [], 0
+    with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
+        for item in evidence['inputs']:
+            relative = Path(item['path'])
+            if relative.is_absolute() or '..' in relative.parts:
+                errors.append('Unsafe native evidence path')
+                continue
+            if item['container'] == 'projectzomboid.jar':
+                actual = hashlib.sha256(jar.read(item['path'])).hexdigest()
+            elif item['container'] == 'game-root':
+                digest = hashlib.sha256()
+                with (game_root / relative).open('rb') as stream:
+                    for block in iter(lambda: stream.read(1024 * 1024), b''):
+                        digest.update(block)
+                actual = digest.hexdigest()
+            else:
+                errors.append('Unknown native evidence container')
+                continue
+            checked += 1
+            if actual != item['sha256']:
+                errors.append('Native input changed: ' + item['path'])
+    return errors, checked
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--native', action='store_true', help='Rehash installed inputs without executing game code')
+    parser.add_argument('--game-root', type=Path)
+    args = parser.parse_args()
+    if args.native and not args.game_root:
+        parser.error('--native requires --game-root')
     errors = check_source()
+    checked = 0
+    if args.native:
+        native_errors, checked = check_native(args.game_root)
+        errors.extend(native_errors)
     inventory = read(ROOT / 'source-inventory.json')
     catalog = read(ROOT / 'docs/contracts/localization_keys.json')['english_fallback']
     translations = 0
@@ -93,7 +143,8 @@ def main():
             errors.append('Frozen art changed: ' + relative)
     output = {'status': 'STATIC PASS' if not errors else 'FAIL',
               'project_version': (ROOT / 'VERSION').read_text(encoding='utf-8').strip(),
-              'lua_modules': len(MODULES), 'languages': len(inventory['languages']),
+              'lua_modules': len(MODULES), 'pure_domain_modules': len(DOMAIN), 'native_modules': len(NATIVE),
+              'native_inputs_rehashed': checked, 'languages': len(inventory['languages']),
               'fallback_entries': translations, 'frozen_art_files': len(art['files']),
               'environment': 'Offline source/data checks; no native loading or gameplay',
               'errors': errors, 'G6': 'NOT TESTED', 'G7': 'BLOCKED / NOT TESTED', 'G8': 'BLOCKED'}
