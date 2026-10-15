@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+The [server-account alternative investigation](docs/SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) finds lossless string labels and a useful normal login path, but automatic account binding remains BLOCKED. Slot/replacement aliases, case behavior and rename/delete/recreation require explicit root-account and lifecycle proof. A private realm-scoped principal UUID registry is proposed only; no provider, ownership or task control is activated.
+
 The focused [server SteamID64 audit](docs/STEAMID64_SERVER_PATH_AUDIT.md) retains D1 BLOCKED. NetworkUser.getSteamid is lossless as a string, but its exposed user-list route is a packet mirror; the server writer uses a separate local map. Player.getOwner returns nil and native database/connection helpers have no verified production Lua route. No principal adapter or gameplay enablement was added.
 
 The latest [database/native proof decision](docs/DATABASE_AUTHORITY_GO_NO_GO.md) remains **NO-GO**. The isolated store transaction experiment adds 31 cases (406 offline total) without changing production Lua. Connection-scoped actors and native action candidates do not resolve lossless server identity, native lifecycle, exclusive control or durable commit. The new drift report records five historical failures plus two further package/loose differences; no runtime evidence or installation repair.

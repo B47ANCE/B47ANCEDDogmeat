@@ -309,6 +309,14 @@
     {
       "path": "docs/native-principal-string-evidence.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-account-identity-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {

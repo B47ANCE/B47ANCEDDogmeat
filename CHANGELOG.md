@@ -20,6 +20,8 @@
 
 - Audit lossless server SteamID64 candidates: distinguish native NetworkUser string conversion from client user-list synchronization, reject null player-owner/saved-database/reflection routes, and retain D1 BLOCKED. Add reproducible descriptor/exposure and source-hash checks; production Lua and 406-case regression suite remain unchanged.
 
+- Investigate server-authenticated accounts as an explicit Lua-only identity alternative: document the normal login string path, slot/replacement alias boundary, native account lifecycle/case/rename/recreation limits and a proposed private principal registry. Retain automatic binding blocker, ownership/task refusal and existing 406-case offline baseline; no provider, migration or gameplay config is activated.
+
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.2.0-dev.5. No new SP/dedicated MP evidence.

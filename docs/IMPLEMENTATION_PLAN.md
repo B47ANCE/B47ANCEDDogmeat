@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Server-account alternative: [SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md](SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) proposes retained private principal UUIDs with realm, roster lifecycle and fresh session/episode fences. Normal login names avoid precision loss, but slot/replacement names and account reincarnation prevent automatic name-only association. Prove root-account association and lifecycle evidence or explicitly accept operator mediation before adopting a provider. No migration/config/runtime change in this investigation.
+
 Authenticated identity follow-up: [STEAMID64_SERVER_PATH_AUDIT.md](STEAMID64_SERVER_PATH_AUDIT.md) and its 25-input source ledger reject the user-list mirror, null inherited owner getter, saved DB lookup and numeric/reflection alternatives as current actor adapters. D1 remains BLOCKED; no safe lossless server Lua path was established. Production source, ownership/task refusal, raccoon and deferred model stay unchanged.
 
 Latest bounded foundational proof: [DATABASE_AUTHORITY_GO_NO_GO.md](DATABASE_AUTHORITY_GO_NO_GO.md) and its eight reports govern the next step. Offline candidate transactions are test-only; natural bonding/handler leases stay contracts, live ownership/tasks stay disabled. Do not continue speculative guards. Reopen only for a sufficient vanilla principal/lifecycle/control/commit capability or explicitly approved contract change, then disposable runtime evidence. D1/D2/D3/D8 BLOCKED; D4/D6 EXPERIMENTAL; D5 FEASIBLE for tested logical subset; D7 NOT TESTED.

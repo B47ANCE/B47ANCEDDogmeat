@@ -1,0 +1,438 @@
+{
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "steam_build": "25485521",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/ServerWorldDatabase.class",
+      "sha256": "0ef977c06969d4578e6ecc18134db0764eb76bd820bf4a6df0b8da0ea7a386cd",
+      "bytes": 52716
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/ServerWorldDatabase$LogonResult.class",
+      "sha256": "dc345b9fe391fba3977cdb05344aeafc70172f65ddd0bb13f4c6bf5bfed862e8",
+      "bytes": 981
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/ServerOptions.class",
+      "sha256": "50a54b1cbba203fa20bd3b94f33299bba70d93eedbe6eaea9d22ba5129ea3fb5",
+      "bytes": 28208
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/LoginPacket.class",
+      "sha256": "5ea931e8d251517d6566eaac9a220d3d722959951581e6cc6bb7a104fe4519d9",
+      "bytes": 11688
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/GoogleAuthPacket.class",
+      "sha256": "33e55ccc358f2ac1017b78f54443027122f5811c624348068249541ba82ead5c",
+      "bytes": 3844
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/GoogleAuthRequestPacket.class",
+      "sha256": "17e7cb6ef8133f31bf36b0cb0ee713fb5a61b6012a7567adb4487a35ef0fc064",
+      "bytes": 1327
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/ConnectPacket.class",
+      "sha256": "f7248dfa068dd5b48bcf50d9b90d51829830ddc0ad0f6b3823ba3027748102e9",
+      "bytes": 3171
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/ConnectCoopPacket.class",
+      "sha256": "5b34b2d428a3b68f4222a854f132c2806230d12c2b929fdab342d7b0e7dc014e",
+      "bytes": 8389
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/ConnectedCoopPacket.class",
+      "sha256": "7e4354c1f3051ba42a29c8f7b94efc3b294ba95e7c40300295c11f19c77fdf67",
+      "bytes": 2527
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/NetworkUserActionPacket.class",
+      "sha256": "c96e56ac4173a7663bccf898b97828a1bb81bd77d33454e11f86cf0504d7fdd5",
+      "bytes": 5067
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/raknet/UdpConnection.class",
+      "sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+      "bytes": 20451
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "bytes": 465921
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+      "bytes": 23071
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/server/ClientCommands.lua",
+      "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+      "bytes": 45277
+    }
+  ],
+  "format_revision": 1,
+  "project_version": "0.2.0-dev.7",
+  "observed_date": "2026-10-15",
+  "source_baseline_commit": "68fb883bc26941adf34f32039d896f5cff34ccb7",
+  "game_version": "42.21",
+  "status": "DESIGN_FEASIBLE_AUTOMATIC_ACCOUNT_BINDING_BLOCKED",
+  "runtime_status": "NOT TESTED",
+  "provider_adopted": false,
+  "runtime_adapter_installed": false,
+  "ownership_enabled": false,
+  "live_task_control_enabled": false,
+  "automatic_incarnation_detection_proven": false,
+  "callback_username_is_universal_account_id": false,
+  "leases_survive_restart": false,
+  "credential_material_stored": false,
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED",
+  "claims": [
+    {
+      "id": "A01",
+      "classes": [
+        "zombie.network.packets.connection.LoginPacket",
+        "zombie.network.ServerWorldDatabase"
+      ],
+      "methods": [
+        "LoginPacket.processServer(PacketType,UdpConnection)",
+        "ServerWorldDatabase.authClient(String,String,String,long,int)"
+      ],
+      "offsets": [
+        792,
+        853,
+        994,
+        1006,
+        1456,
+        317,
+        470,
+        522,
+        628
+      ],
+      "finding": "Normal login authenticates against configured native account policy, then assigns connection username and slot-zero name. Not all auth modes or credential policies are equivalent.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A02",
+      "classes": [
+        "zombie.network.packets.connection.ConnectPacket",
+        "zombie.network.GameServer"
+      ],
+      "methods": [
+        "ConnectPacket.parse(ByteBufferReader,IConnection)",
+        "GameServer.receivePlayerConnect(ByteBufferReader,IConnection,String)"
+      ],
+      "offsets": [
+        3,
+        8,
+        358,
+        387,
+        517
+      ],
+      "finding": "Normal connect supplies root connection username; common player creation writes playerIndex/current player association and the supplied name to IsoPlayer.username.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A03",
+      "classes": [
+        "zombie.network.GameServer"
+      ],
+      "methods": [
+        "receiveClientCommand(ByteBufferReader,UdpConnection,short)",
+        "getPlayerFromConnection(IConnection,int)",
+        "getAnyPlayerFromConnection(IConnection)"
+      ],
+      "offsets": [
+        66,
+        77,
+        217,
+        228,
+        11,
+        24
+      ],
+      "finding": "OnClientCommand player comes from sending connection slot; -1 chooses first non-null slot. Callback lacks root account/row/incarnation proof.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A04",
+      "classes": [
+        "zombie.characters.IsoPlayer",
+        "zombie.Lua.LuaManager$Exposer"
+      ],
+      "methods": [
+        "IsoPlayer.getUsername()",
+        "IsoPlayer.getUsername(Boolean,Boolean)",
+        "IsoPlayer.getPlayerNum()"
+      ],
+      "offsets": [
+        9,
+        1,
+        253,
+        254
+      ],
+      "finding": "No-argument name getter requests unformatted username string, not display/disguise fields. A readable slot name is not an immutable account principal.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A05",
+      "classes": [
+        "zombie.network.packets.connection.ConnectCoopPacket",
+        "zombie.core.raknet.UdpConnection"
+      ],
+      "methods": [
+        "ConnectCoopPacket.parse(ByteBufferReader,IConnection)",
+        "UdpConnection.getUserName()",
+        "UdpConnection.getUserName(int)",
+        "UdpConnection.setUserName(int,String)"
+      ],
+      "offsets": [
+        137,
+        235,
+        372,
+        623,
+        747,
+        797
+      ],
+      "finding": "Coop/replacement path reads separate slot name, checks current collisions and writes slot array without an observed authClient call in this method. Root connection name and slot names are separate fields. Full exploit closure/runtime remains unproved.",
+      "status": "VERIFIED_SOURCE_PATH_INFERRED_IDENTITY_RISK"
+    },
+    {
+      "id": "A06",
+      "classes": [
+        "zombie.network.packets.connection.ConnectCoopPacket"
+      ],
+      "methods": [
+        "ConnectCoopPacket.parse(ByteBufferReader,IConnection)",
+        "ConnectCoopPacket class PacketSetting metadata"
+      ],
+      "offsets": [
+        31,
+        44,
+        58,
+        62,
+        69,
+        107
+      ],
+      "finding": "AllowCoop false refuses nonzero slots but index zero is still permitted. Slot-zero-only check is insufficient as an account-binding proof. Metadata requires LoginOnServer; packet eligibility remains a runtime gate.",
+      "status": "VERIFIED_SOURCE_PATH_INFERRED_IDENTITY_RISK"
+    },
+    {
+      "id": "A07",
+      "classes": [
+        "zombie.network.ServerWorldDatabase"
+      ],
+      "methods": [
+        "authClient(String,String,String,long,int)",
+        "containsCaseinsensitiveUser(String)",
+        "addUser(String,String,int)"
+      ],
+      "offsets": [
+        317,
+        322,
+        2,
+        16,
+        89
+      ],
+      "finding": "Authentication uses LOWER(username) comparison scoped by world; enrollment rejects case-insensitive duplicates and inserts persistent whitelist rows. Case-sensitive private keys may split native account identity; Unicode normalization remains unverified.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A08",
+      "classes": [
+        "zombie.network.ServerWorldDatabase",
+        "zombie.network.packets.NetworkUserActionPacket"
+      ],
+      "methods": [
+        "changeUsername(String,String)",
+        "removeUser(String,String)",
+        "NetworkUserActionPacket.processServer(PacketType,UdpConnection)"
+      ],
+      "offsets": [
+        52,
+        69,
+        94,
+        4,
+        32,
+        165
+      ],
+      "finding": "Native account row id can survive rename; deletion removes row; admin account actions are capability-gated. No immutable account/incarnation ID exposed to current Lua callback was established.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A09",
+      "classes": [
+        "zombie.characters.IsoGameCharacter"
+      ],
+      "methods": [
+        "DoDeath(HandWeapon,IsoGameCharacter,boolean)"
+      ],
+      "offsets": [
+        141,
+        147,
+        188,
+        202
+      ],
+      "finding": "Configured DropOffWhiteListAfterDeath attempts user removal for eligible players, using serverName as world argument. Actual matching/deletion and re-enrollment must be tested, not assumed.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    },
+    {
+      "id": "A10",
+      "classes": [
+        "zombie.network.ServerWorldDatabase",
+        "zombie.network.packets.connection.LoginPacket",
+        "zombie.network.ServerWorldDatabase$LogonResult"
+      ],
+      "methods": [
+        "ServerWorldDatabase.create()",
+        "LoginPacket.processServer(PacketType,UdpConnection)",
+        "LogonResult constructor"
+      ],
+      "offsets": [
+        7,
+        50,
+        118,
+        132,
+        1352,
+        15
+      ],
+      "finding": "Native persistent account database supports account reauthentication after restart when retained. LogonResult contains no account UUID/incarnation. Private registry recovery and current binding are separate requirements; no actual DB accessed.",
+      "status": "VERIFIED_PACKAGED_SOURCE_ONLY"
+    }
+  ],
+  "proposed_registry": {
+    "status": "PROPOSAL_NOT_IMPLEMENTED",
+    "provider": "SERVER_ACCOUNT_CANDIDATE",
+    "key": [
+      "accountRealmId",
+      "principalId"
+    ],
+    "principal_id_encoding": "PRIVATE_SERVER_ALLOCATED_UUID",
+    "account_label": "Separate exact/canonical label plus explicitly reviewed aliases; not the primary identity key",
+    "incarnation": "Explicit lifecycle revision; never inferred from equal username",
+    "auto_rebind_by_username": false,
+    "auto_migrate_legacy_owners": false,
+    "client_identity_accepted": false,
+    "native_account_binding_required": true,
+    "session_authority": "Fresh process session/connection membership/character episode/fence; never restored from durable lease",
+    "rename": "Reviewed atomic alias migration preserving principal; fence prior contexts",
+    "delete_recreate": "Tombstone prior mapping; separate new principal unless explicit reviewed recovery",
+    "uncertain_lifecycle": "Preserve dog/relationship records; refuse association",
+    "credential_storage": "NONE; vanilla owns authentication; no passwords/tokens/IPs in mod registry"
+  },
+  "runtime_cases": [
+    {
+      "id": "AC01",
+      "scenario": "Normal account login",
+      "required": "Valid credentials select current primary account; invalid credentials cause no mod identity or disclosure.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC02",
+      "scenario": "Two simultaneous accounts and forged args",
+      "required": "Each callback remains its authenticated principal; supplied account/owner/role fields cannot choose another principal.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC03",
+      "scenario": "Reconnect with same character",
+      "required": "Same durable principal after fresh account proof; new connection/session fence, retained dog history.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC04",
+      "scenario": "Character death and replacement",
+      "required": "New character episode cannot restore old lease; account continuity only with valid current root-account binding.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC05",
+      "scenario": "Secondary/co-op alias collision",
+      "required": "An authenticated connection claiming an offline existing account name as slot alias cannot access that account principal.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC06",
+      "scenario": "Slot-zero replacement with AllowCoop false",
+      "required": "Do not treat playerNum zero as sufficient; verify root account association before any principal use.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC07",
+      "scenario": "Case variants and Unicode",
+      "required": "One native account does not split into duplicate principals; unrelated accounts do not merge under guessed normalization.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC08",
+      "scenario": "Administrator rename",
+      "required": "Reviewed alias migration preserves principal once, invalidates stale contexts and leaves old label unavailable for implicit reuse.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC09",
+      "scenario": "Delete and recreate same account name",
+      "required": "New credentials/incarnation never inherit old principal/dogs through name equality; preserve original records.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC10",
+      "scenario": "Password/auth-mode reset and account policy",
+      "required": "Verify protected accounts, configured auth method/second factor, Open enrollment and death-removal behavior; no credential copy into mod.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC11",
+      "scenario": "Full restart and account/private backup rollback",
+      "required": "Recover exact retained registry/world pair; reauthenticate; old leases invalid; coordinated rollback freshness limits explicit.",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "AC12",
+      "scenario": "Missing or conflicting roster/realm/actor",
+      "required": "Refuse automatic initialization, cross-realm linking or first-match adoption; preserve private state and unrelated clients.",
+      "status": "NOT TESTED"
+    }
+  ]
+}
