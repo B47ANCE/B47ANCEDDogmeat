@@ -1,6 +1,8 @@
 # Native observation and private save preparation
 
-Project Version: 0.2.0-dev.6
+Project Version: 0.2.0-dev.7
+
+Current guard integration: [server admission guard](NATIVE_ADMISSION_GUARD.md) adds nine completion guards and guarded recovery/provisioning. This report retains its earlier implementation/test scope; complete native provenance and dedicated ownership remain blocked.
 
 Current implementation changes and the client-writable marker authority blocker are recorded in [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md). Dedicated ownership preparation is disabled; the older preparation results below remain historical scope.
 

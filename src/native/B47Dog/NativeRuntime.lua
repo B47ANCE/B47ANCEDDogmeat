@@ -6,6 +6,7 @@ local Identity=require "B47Dog/Identity"
 local Checkpoint=require "B47Dog/NativeCheckpoint"
 local Session=require "B47Dog/NativeSession"
 local Authority=require "B47Dog/NativeAuthority"
+local Admission=require "B47Dog/NativeAdmissionGuard"
 local NativeRuntime={}
 local installed=setmetatable({},{__mode="k"})
 
@@ -31,22 +32,35 @@ function NativeRuntime.install(config,api)
     if installed[api][config.namespace] then return nil,"AlreadyInstalled" end
     local count=0;for _ in pairs(installed[api]) do count=count+1 end
     if count>=8 then return nil,"Capacity" end
+    local admission=Admission.current(config,api)
+    if not admission then
+        local why;admission,why=Admission.install(config,api)
+        if not admission then return nil,why end
+    end
+    local guarded,guardReason=admission.check()
+    if not guarded then return nil,guardReason end
     local phase,reason="WAITING_NATIVE_LOAD",nil
     local loaded=false
     local started=false
     local checkpoint,session
     local controller={}
     local function fail(code) phase="RECOVERY";reason=code end
+    local function guardReady()
+        local ready,why=admission.check()
+        if not ready then fail(why);return false end
+        return true
+    end
     function controller.status()
-        return {phase=phase,reason=reason,serverStarted=started}
+        guardReady()
+        return {phase=phase,reason=reason,serverStarted=started,admission=admission.status()}
     end
     function controller.observe(animal)
-        if not server() or not session or phase~="RECOVERED" then return {status="Unavailable"} end
+        if not guardReady() or not server() or not session or phase~="RECOVERED" then return {status="Unavailable"} end
         if not checkpoint.unchanged() then fail("AnchorChanged");return {status="Unavailable"} end
         return session.observe(animal)
     end
     function controller.census()
-        if not server() or not started or not session or phase~="RECOVERED" then return nil,"Unavailable" end
+        if not guardReady() or not server() or not started or not session or phase~="RECOVERED" then return nil,"Unavailable" end
         if not checkpoint.unchanged() then fail("AnchorChanged");return nil,"AnchorChanged" end
         local ok,result=pcall(function()
             -- getAnimals scans native objectList. Called once at startup or by an
@@ -67,13 +81,15 @@ function NativeRuntime.install(config,api)
             return {status="OBSERVED_LOADED_ONLY",animalsRead=size,dogs=statuses,
                 retained=identity.retained,dogId=identity.dogId,bindingVerified=false}
         end)
+        if not guardReady() then return nil,"Unavailable" end
         if not ok or not result then fail("CensusUnavailable");return nil,"Unavailable" end
         return result
     end
     function controller.prepareOwnership(animal,context,intent)
-        if not server() or not started or phase~="RECOVERED" or not session then return nil,"Unavailable" end
+        if not guardReady() or not server() or not started or phase~="RECOVERED" or not session then return nil,"Unavailable" end
         if not checkpoint.unchanged() then fail("AnchorChanged");return nil,"AnchorChanged" end
         local prepared,why=session.prepareOwnership(animal,context,intent)
+        if not guardReady() then return nil,"Unavailable" end
         if not prepared then
             if why=="WriteFailed" or why=="ReadbackFailed" or why=="ChangedOnDisk" then fail(why) end
             return nil,why
@@ -88,6 +104,7 @@ function NativeRuntime.install(config,api)
         if loaded then return end -- duplicate events cannot promote an in-memory anchor
         loaded=true
         if started then fail("NativeLoadNotObserved");return end
+        if not guardReady() then return end
         if not server() then fail("Unavailable");return end
         local ok=pcall(function()
             checkpoint,reason=Checkpoint.capture(config.namespace,api)
@@ -103,6 +120,7 @@ function NativeRuntime.install(config,api)
     local function onStarted()
         if started then return end
         started=true
+        if not guardReady() then return end
         if not loaded then fail("NativeLoadNotObserved");return end
         if phase=="RECOVERED" then controller.census() end
     end

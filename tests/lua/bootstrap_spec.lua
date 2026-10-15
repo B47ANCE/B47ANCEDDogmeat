@@ -1,10 +1,11 @@
 local F=require "provision_support"
+local A=require "admission_support"
 local passed,failed,failures=0,0,{}
 local function test(name,fn)
     local ok,err=pcall(fn);if ok then passed=passed+1 else failed=failed+1;failures[#failures+1]=name..": "..tostring(err) end
 end
 local function fixture(single)
-    local api,flags,calls,fire,config,player=F.fixture("BootstrapFixture"..(F.counter+1))
+    local api,flags,calls,fire,config,player=F.fixture("BootstrapFixture"..(F.counter+1),true)
     flags.server=not single
     function player:getOnlineID() return 7 end
     function player:getPlayerNum() return 0 end
@@ -29,6 +30,10 @@ local function fixture(single)
         flags.client=client;flags.server=server
     end
     package.preload["ISUI/ISModalDialog"]=function() return true end
+    for _,name in ipairs(A.names) do
+        local path="TimedActions/"..((name=="ISDropWorldItemAction" or name=="ISDropVehicleItemAction") and "" or "Animals/")..name
+        package.preload[path]=function() return true end
+    end
     ISModalDialog={new=function(_,x,y,w,h,text,yesno,target,onclick,index)
         assert(index==0)
         local modal={text=text,yesno=yesno,callback=onclick,target=target,

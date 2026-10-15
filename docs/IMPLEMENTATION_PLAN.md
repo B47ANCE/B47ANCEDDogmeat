@@ -1,6 +1,6 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.6
+Project Version: 0.2.0-dev.7
 
 M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. The M0R documentation delivery itself authorized no gameplay; the user subsequently authorized feature development on 2026-10-14. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 
@@ -8,7 +8,7 @@ M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine doma
 
 The [M0R request](requirements/M0R_REQUEST.md) supplements the [standalone master](requirements/STANDALONE_MASTER_HANDOFF.md). Latest shared/project Lua-only rules supersede older Java allowances. All approved gameplay scope remains in [132 traceability rows](FEATURE_TRACEABILITY_MATRIX.md). Former R1–R6 integration assumptions are historical, not automatic standalone blockers or proof. Current signatures/hashes, growth correction and missing safe Lua seams are in [the source index](M0R_SOURCE_EVIDENCE.md).
 
-Current checkpoint is 0.2.0-dev.5: additive MINOR development with [private identity diagnostics and authority audit](NATIVE_IDENTITY_AUTHORITY.md), building on the [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md). It supplies explicit first-store provisioning, the user-approved B47ANCEDDogmeat Mod ID, b47dogtest/grey registration using vanilla raccoon presentation, a default-off sandbox setting and an admin diagnostic menu. No in-game result is claimed. Native animal markers are client-writable; dedicated ownership preparation remains blocked. Recovered private UUIDs now remain visible independently of loaded/altered carriers. An assigned native integer persists, but the audit found unclosed inventory/trailer and native reconstruction admission paths. It is not enabled as authority. Original model refinement remains deferred, with gsd-v002 frozen at its tested 0.1.0-dev.2 checkpoint.
+Current checkpoint is 0.2.0-dev.7: additive MINOR development with a [server admission guard](NATIVE_ADMISSION_GUARD.md), building on private identity diagnostics and the loadable raccoon persistence diagnostic. Nine selected completion hooks refuse carrier inventory/trailer/hutch/attachment transitions and generic animal drops before vanilla mutation. Runtime recovery/provisioning verify the entire hook set; failures latch for the process. The current guard explicitly reports LUA_ACTIONS_ONLY and ownershipReady=false. A fresh process cannot certify prior-session integrity, and the complete native admission graph remains unproved. No high integer is allocated or trusted; dedicated ownership remains closed. The 0.2.0-dev.6 branding is preserved. The approved Mod ID B47ANCEDDogmeat, b47dogtest/grey raccoon and default-off admin diagnostic remain unchanged. Native save/load is NOT TESTED. Original model refinement stays deferred at the unchanged gsd-v002 art checkpoint.
 
 ## Current bounded slice and next integration
 

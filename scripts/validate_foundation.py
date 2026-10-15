@@ -14,12 +14,16 @@ DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
           ('Access', 'Guard', 'Ownership', 'Projection', 'Codec', 'Identity', 'Snapshot', 'PrivateStore')}
 NATIVE = {f'src/native/B47Dog/{name}.lua' for name in
           ('PZCache', 'NativeAnimal', 'NativeSession', 'NativeCheckpoint', 'NativeRuntime',
-           'NativeAuthority', 'NativeProvision', 'NativeTestService')}
+           'NativeAuthority', 'NativeProvision', 'NativeTestService', 'NativeAdmissionGuard')}
 BOOTSTRAP = {'src/bootstrap/shared/B47DogRegistration.lua','src/bootstrap/server/B47DogBootstrap.lua',
              'src/bootstrap/client/B47DogTestMenu.lua'}
 MODULES = DOMAIN | NATIVE | BOOTSTRAP
 VANILLA_REQUIRES = {'Definitions/animal/RaccoonDefinitions','Definitions/animal/AnimalAvatarDefinition',
                     'Definitions/animal/AnimalPartsDefinitions','ISUI/ISModalDialog'}
+VANILLA_REQUIRES |= {'TimedActions/Animals/' + name for name in
+                     ('ISPickupAnimal','ISAddAnimalInTrailer','ISRemoveAnimalFromTrailer',
+                      'ISAttachAnimalToPlayer','ISAttachAnimalToTree','ISPutAnimalInHutch','ISHutchGrabAnimal')}
+VANILLA_REQUIRES |= {'TimedActions/ISDropWorldItemAction','TimedActions/ISDropVehicleItemAction'}
 
 
 def no_duplicates(pairs):
@@ -50,6 +54,22 @@ def check_source():
     if (adapter.get('entry') != 'B47Dog/NativeRuntime.install' or adapter.get('automatic_bootstrap') != 'src/bootstrap/server/B47DogBootstrap.lua'
             or adapter.get('events') != ['OnInitGlobalModData', 'OnServerStarted', 'OnGameStart', 'OnCharacterDeath']):
         errors.append('Explicit native event adapter inventory differs')
+    admission = inventory.get('native_admission_guard', {})
+    admission_actions = ['ISPickupAnimal','ISAddAnimalInTrailer','ISRemoveAnimalFromTrailer',
+                         'ISAttachAnimalToPlayer','ISAttachAnimalToTree','ISPutAnimalInHutch',
+                         'ISHutchGrabAnimal','ISDropWorldItemAction','ISDropVehicleItemAction']
+    if (admission.get('entry') != 'B47Dog/NativeAdmissionGuard.install'
+            or admission.get('guarded_actions') != admission_actions
+            or admission.get('coverage') != 'LUA_ACTIONS_ONLY' or admission.get('ownership_ready') is not False):
+        errors.append('Selected admission guard inventory/authority differs')
+    guard_source = (ROOT/'src/native/B47Dog/NativeAdmissionGuard.lua').read_text(encoding='utf-8')
+    if re.findall(r'\{name="([A-Za-z0-9_]+)",source=', guard_source) != admission_actions:
+        errors.append('Selected admission hooks differ from declared contract')
+    bootstrap_source = (ROOT/'src/bootstrap/server/B47DogBootstrap.lua').read_text(encoding='utf-8')
+    for action in admission_actions:
+        prefix = '' if action in ('ISDropWorldItemAction','ISDropVehicleItemAction') else 'Animals/'
+        if 'require "TimedActions/' + prefix + action + '"' not in bootstrap_source:
+            errors.append('Missing case-correct vanilla admission dependency: ' + action)
     allowed = MODULES | set(inventory['metadata_sources']) | {f'src/localization/{lang}/{category}.json'
                         for lang in catalog['languages'] for category in ('UI', 'Sandbox', 'IGUI')}
     found = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'src').rglob('*') if p.is_file()}
@@ -120,7 +140,7 @@ def check_native(game_root):
     errors, checked = [], 0
     inputs = []
     for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json',
-                 'native-identity-evidence.json'):
+                 'native-identity-evidence.json','native-admission-evidence.json'):
         inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
         for item in inputs:

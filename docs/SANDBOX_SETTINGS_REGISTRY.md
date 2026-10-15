@@ -1,6 +1,6 @@
 # Sandbox settings registry
 
-Project Version: 0.2.0-dev.6
+Project Version: 0.2.0-dev.7
 
 Runtime diagnostic exception: B47ANCEDDogmeat.PersistenceTestMode is the sole deployed native option, boolean/default false/server authoritative, with existing-save preservation. Exact registry: [runtime-options.json](../src/metadata/runtime-options.json); source and operator behavior: [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md). The 79 rows below remain future designs under their original proposed identifiers, not deployed options.
 

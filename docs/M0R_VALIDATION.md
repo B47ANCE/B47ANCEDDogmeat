@@ -1,8 +1,8 @@
 # M0R validation and remaining blockers
 
-Project Version: 0.2.0-dev.6
+Project Version: 0.2.0-dev.7
 
-Current 0.2.0-dev.4 validation is in [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md): 259 offline tests, 19 Lua sources, 1,015 localization fallbacks, loadable source parity and new source evidence. Historical results below retain their original environments and versions. Native marker provenance is now a confirmed multiplayer authority blocker; dedicated ownership preparation is disabled.
+Current 0.2.0-dev.7 validation is recorded in the [server admission guard report](NATIVE_ADMISSION_GUARD.md). It adds guarded Lua completion/runtime/provisioning boundaries and adversarial/fresh-VM tests. The prior bootstrap and identity reports retain their tested versions, environments and counts. Complete native admission coverage and prior-session integrity remain unresolved; dedicated ownership preparation is disabled.
 
 Historical M0R evidence date: 2026-10-12; tested project version: 0.1.0-dev.1. The current header identifies the contract edition. Environment: Windows offline documentation/native source inspection. At that evidence checkpoint no gameplay prototype/assets were implemented, and no PZ/server launch, deployment, package or Workshop publication occurred. Later gsd-v002 authoring evidence is separate under art/german_shepherd. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
 

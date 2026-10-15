@@ -1,7 +1,8 @@
 local S=require "storage_support"
 local P=require "pairing_support"
+local Admission=require "B47Dog/NativeAdmissionGuard"
 local F={counter=0}
-function F.fixture(namespace)
+function F.fixture(namespace,withoutGuard)
     F.counter=F.counter+1
     local api,flags,calls,fire=P.fixture()
     local config={namespace=namespace or "ProvisionFixture"..F.counter,nativeType="FixtureCanine",breed="FixtureShepherd"}
@@ -46,6 +47,9 @@ function F.fixture(namespace)
         end
         flags.spawned=animal;flags.spawnedData=data
         return animal
+    end
+    if not withoutGuard then
+        assert(Admission.install({namespace=config.namespace,allowedTypes={[config.nativeType]={[config.breed]=true}}},api))
     end
     return api,flags,calls,fire,config,player
 end

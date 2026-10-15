@@ -1,5 +1,15 @@
 if isClient() then return end
 local config=require "B47DogRegistration"
+-- Load exact vanilla completion classes before the one-shot server guard install.
+require "TimedActions/Animals/ISPickupAnimal"
+require "TimedActions/Animals/ISAddAnimalInTrailer"
+require "TimedActions/Animals/ISRemoveAnimalFromTrailer"
+require "TimedActions/Animals/ISAttachAnimalToPlayer"
+require "TimedActions/Animals/ISAttachAnimalToTree"
+require "TimedActions/Animals/ISPutAnimalInHutch"
+require "TimedActions/Animals/ISHutchGrabAnimal"
+require "TimedActions/ISDropWorldItemAction"
+require "TimedActions/ISDropVehicleItemAction"
 local Runtime=require "B47Dog/NativeRuntime"
 local Service=require "B47Dog/NativeTestService"
 -- Explicit SP adapter, preserving the real native isServer/isClient functions.

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.7] — 2026-10-14
+
+- Continue additive MINOR development with server-side admission guards around raccoon carrier representation changes and generic item drops.
+- Verify the complete installed hook set before runtime recovery, provisioning and delegated mutations; latch missing/displaced hooks and uncertain failures without retry or replacement.
+- Keep private UUID/history recovery and dedicated ownership refusal intact. Guarded Lua actions alone do not certify every native admission path or prior-session integrity; no native-key allocation or save migration.
+- Preserve the raccoon, existing artwork and deferred model. Offline validation only; G6 NOT TESTED, G7 BLOCKED / NOT TESTED, stable-release G8 BLOCKED.
+
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.2.0-dev.5. No new SP/dedicated MP evidence.

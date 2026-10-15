@@ -1,8 +1,8 @@
 # Multiplayer identity authority investigation
 
-Project Version: 0.2.0-dev.6
+Project Version: 0.2.0-dev.7
 
-The approved `B47ANCEDDogmeat` / `b47dogtest` / `grey` raccoon remains the diagnostic carrier. The model is unchanged. This iteration distinguishes recovery of a private dog record from proof that a loaded animal is that dog. **Automatic multiplayer carrier admission remains blocked; no game or server was launched.**
+The approved `B47ANCEDDogmeat` / `b47dogtest` / `grey` raccoon remains the diagnostic carrier. The model is unchanged. This report retains the 0.2.0-dev.5 identity audit scope, with later source refinements identified below. The current [server admission guard](NATIVE_ADMISSION_GUARD.md) refuses selected Lua representation transitions but does not certify native provenance. **Automatic multiplayer carrier admission remains blocked; no game or server was launched.**
 
 ## Implemented safe boundary
 
@@ -34,9 +34,9 @@ The later trailer review found a source-supported admission concern, beyond mere
 
 Wrapping only animal transport actions is insufficient. `IsoGridSquare.AddWorldInventoryItem(InventoryItem,float,float,float,boolean,boolean)` dispatches on `AnimalInventoryItem` before either boolean matters, constructs an animal, copies its state and adds it to the world. Generic item-drop and vehicle-drop actions reach it. Native `IsoGameCharacter.dropHeavyItems()` also reaches that method directly on the non-client path, before its notification events; wrapping Lua actions or a Lua convenience function cannot intercept this internal native call. Hutch restoration/release is another native representation boundary. Admission integrity must cover the underlying imported/equipped/container state, not just visible animal menus.
 
-The counterexamples were checked carefully: pickup's completion explicitly repeats a world-presence check; player reconnect loads server-owned character data in inspected paths; `AddItemToMapPacket` is client-receive-only. Those sites are not reported as confirmed ordinary-client server injection. A native synchronization helper can add missing animals to world lists, but its inbound server reachability was not established and remains [UNKNOWN].
+The counterexamples were checked carefully: pickup's completion explicitly repeats a world-presence check; player reconnect loads server-owned character data in inspected paths; `AddItemToMapPacket` is client-receive-only. Those sites are not reported as confirmed ordinary-client server injection. The later 0.2.0-dev.7 review resolves the previously unknown synchronization helper's inspected invocation branches as client-only. It also verifies existing-item resolution in equipment/trade/attached-item server paths: the native heavy-drop call alone does not establish an ordinary-client import. Complete upstream coverage remains uncertified; see the current guard report for exact distinctions.
 
-**Disposition:** no safe automatic physical rebind has been established in the current Lua-only design. Current code deliberately does not allocate high native integers, install partial vanilla-action wrappers or enable multiplayer ownership from them. This is not a claim that every future Lua-only design is impossible. A candidate must first demonstrate a complete, pre-mutation admission boundary and then pass native restart/streaming tests. Selected wrappers would currently hide an unclosed authority gap.
+**Disposition:** no safe automatic physical rebind has been established in the current Lua-only design. At the original 0.2.0-dev.5 audit checkpoint no wrappers were installed. The current 0.2.0-dev.7 adds nine explicit server completion guards with an honest LUA_ACTIONS_ONLY status; it still does not allocate high native integers or enable multiplayer ownership from them. This is not a claim that every future Lua-only design is impossible. A candidate must first demonstrate a complete, pre-mutation admission boundary and prior-session integrity, then pass native restart/streaming tests. Selected wrappers must never be presented as closing that entire authority gap.
 
 ## Safe continuation and acceptance criteria
 
@@ -55,7 +55,7 @@ Server-private storage cannot prevent a client from altering public carrier data
 
 ## Validation and required runtime checks
 
-**274 tests PASS, zero failures**, including 13 new authority-boundary cases and two new fresh-VM phases. All 19 Lua sources compile under the offline Lua 5.1 interpreter; no source or asset registration is added. Version/contracts/source checks pass; source assembly verifies 108 files, 1,015 localized fallback entries match, and all 30 frozen art files remain unchanged. Native verification rehashed 44 original M0R inputs and 162 checks across the later manifests, including 71 inputs for this investigation.
+**Historical 0.2.0-dev.5: 274 tests PASS, zero failures**, including 13 new authority-boundary cases and two new fresh-VM phases. All 19 Lua sources compiled under the offline Lua 5.1 interpreter; no source or asset registration was added then. Version/contracts/source checks passed; source assembly verified 108 files, 1,015 localized fallback entries matched, and all 30 frozen art files remained unchanged. Native verification rehashed 44 original M0R inputs and 162 checks across the later manifests, including 71 inputs for that investigation. Current source/tests/assembly are recorded separately in [the guard report](NATIVE_ADMISSION_GUARD.md).
 
 [TESTED Windows offline, 2026-10-14] Tests use Lua 5.1 through Lupa 2.6 and real disposable files. Adversarial fixtures exercise a clone observed first, maximum positive native integer, erased/foreign/duplicate markers, dead/detached carriers, empty and subsequently unloaded censuses, forged trust flags, private-summary mutation and multiple retained records. Separate Lua VMs retain the private UUID while losing transient quarantine, and still refuse ownership. These are boundary fixtures, not a native packet exploit or real PZ save.
 

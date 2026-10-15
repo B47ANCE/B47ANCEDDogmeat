@@ -1,5 +1,5 @@
 {
-  "project_version": "0.2.0-dev.6",
+  "project_version": "0.2.0-dev.7",
   "status": "DESIGN CATALOG with explicit runtime subset in source-inventory.json; remaining proposed setting identifiers are not deployed",
   "languages": [
     "AR",

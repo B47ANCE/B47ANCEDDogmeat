@@ -5,6 +5,7 @@ local Identity=require "B47Dog/Identity"
 local Snapshot=require "B47Dog/Snapshot"
 local Cache=require "B47Dog/PZCache"
 local Authority=require "B47Dog/NativeAuthority"
+local Admission=require "B47Dog/NativeAdmissionGuard"
 local Provision={}
 
 function Provision.new(config,api)
@@ -13,7 +14,8 @@ function Provision.new(config,api)
     local used=false
     local service={}
     local function ready(locator)
-        return Authority.allowed(api) and api.getCurrentSaveName()==locator
+        return Admission.active(config.namespace,config.nativeType,api)
+            and Authority.allowed(api) and api.getCurrentSaveName()==locator
             and api.ModData.get(config.namespace)==nil
     end
     function service.available()
@@ -67,7 +69,8 @@ function Provision.new(config,api)
             -- Constructor may register an instance even if it later throws. Never retry.
             local animal=api.addAnimal(api.getCell(),square:getX(),square:getY(),0,config.nativeType,breed)
             if api.instanceof(animal,"IsoAnimal")~=true or animal:isDead()~=false
-                or animal:getAnimalType()~=config.nativeType or animal:getBreed():getName()~=config.breed then
+                or animal:getAnimalType()~=config.nativeType or animal:getBreed():getName()~=config.breed
+                or not ready(locator) then
                 return nil,"Recovery"
             end
             local data=animal:getModData()
@@ -75,6 +78,7 @@ function Provision.new(config,api)
             local marker={schema=1,worldId=ids.world,dogId=ids.dog,bindingGeneration=1,bindingToken=ids.binding}
             local markerBytes=Codec.encode(marker)
             data[config.namespace]=marker
+            if not ready(locator) then return nil,"Recovery" end
             animal:addToWorld()
             if animal:isExistInTheWorld()~=true or animal:isDead()~=false
                 or animal:getAnimalType()~=config.nativeType or animal:getBreed():getName()~=config.breed

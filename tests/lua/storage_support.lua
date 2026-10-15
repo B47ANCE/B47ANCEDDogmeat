@@ -1,5 +1,6 @@
 local Codec=require "B47Dog/Codec"
 local Snapshot=require "B47Dog/Snapshot"
+local AdmissionFixture=require "admission_support"
 local Support={}
 Support.WORLD="11111111-1111-4111-8111-111111111111"
 Support.DOG="22222222-2222-4222-8222-222222222222"
@@ -59,7 +60,17 @@ function Support.api()
     local calls={reads=0,writes=0,readerClosed=0,writerClosed=0,charactersRead=0}
     local api={isServer=function() return flags.server end,isClient=function() return flags.client end,
         getCurrentSaveName=function() return flags.locator end,getRandomUUID=function() return Support.NEXT end,
-        instanceof=function(value,name) return type(value)=="table" and value.fixtureNative==true and name=="IsoAnimal" end}
+        instanceof=function(value,name)
+            if type(value)~="table" then return false end
+            if name=="IsoAnimal" then return value.fixtureNative==true end
+            if name=="IsoPlayer" then return value.fixturePlayer==true end
+            if name=="IsoHutch" then return value.fixtureHutch==true end
+            if name=="IsoDeadBody" then return value.fixtureCorpse==true end
+            if name=="InventoryItem" then return value.fixtureItem==true end
+            if name=="AnimalInventoryItem" then return value.fixtureAnimalItem==true end
+            return false
+        end}
+    AdmissionFixture.classes(api,calls)
     function api.getFileReader(path,create)
         assert(create==false); calls.reads=calls.reads+1
         local bytes=testfs_read(path)

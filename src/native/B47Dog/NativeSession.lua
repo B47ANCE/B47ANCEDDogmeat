@@ -7,6 +7,7 @@ local Ownership=require "B47Dog/Ownership"
 local Store=require "B47Dog/PrivateStore"
 local Cache=require "B47Dog/PZCache"
 local Animal=require "B47Dog/NativeAnimal"
+local Admission=require "B47Dog/NativeAdmissionGuard"
 local NativeSession={}
 
 function NativeSession.open(config,api)
@@ -24,6 +25,7 @@ function NativeSession.open(config,api)
     local registry;registry,reason=Identity.newRegistry(config.worldId,baseline.payload.records)
     if not registry then return nil,reason end
     local busy=false
+    local admission=Admission.current({namespace=config.namespace,allowedTypes=config.allowedTypes},api)
     local session={}
     -- Private recovery and carrier provenance are separate claims. Return only
     -- nonsecret identity metadata; never expose ownership or retained history.
@@ -49,6 +51,7 @@ function NativeSession.open(config,api)
         -- Native ObjectModData packets let clients replace animal markers. A
         -- matching marker is not dedicated provenance; no gameplay commit here.
         if api.isServer()~=false or api.B47DogSinglePlayer~=true then return nil,"UntrustedNativeMarker" end
+        if admission and admission.check()~=true then return nil,"Recovery" end
         if busy then return nil,"Busy" end
         busy=true
         local ok,result,errorCode=pcall(function()
@@ -86,6 +89,7 @@ function NativeSession.open(config,api)
             payload.checkpointLedger[checkpoint]=true
             payload.ownershipEvents[checkpoint]={kind="OWNERSHIP_PREPARED",dogId=matched.dogId,
                 generation=matched.generation,previousRevision=record.ownership.revision,event=proposal.event}
+            if admission and admission.check()~=true then return nil,"Recovery" end
             return store.prepare(payload,checkpoint,baseline.meta.allocationHighwater)
         end)
         busy=false

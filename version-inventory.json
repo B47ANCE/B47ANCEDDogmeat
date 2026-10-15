@@ -141,6 +141,14 @@
     {
       "path": "docs/native-identity-evidence.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/NATIVE_ADMISSION_GUARD.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-admission-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {
@@ -180,6 +188,11 @@
       "category": "compatibility",
       "reference": "docs/PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md",
       "reason": "Prototype ownership/marker/snapshot schema 1 and intent protocol 1 are separate from Project Version; no deployed migration or stable API."
+    },
+    {
+      "category": "compatibility",
+      "reference": "src/native/B47Dog/NativeAdmissionGuard.lua:LUA_WORLD_CARRIER_GUARD_1",
+      "reason": "Selected-hook contract revision; not a native admission certificate, project version, save schema or configurable gameplay value."
     }
   ],
   "historical": [

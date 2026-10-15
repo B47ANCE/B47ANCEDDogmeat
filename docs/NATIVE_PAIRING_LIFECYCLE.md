@@ -1,6 +1,8 @@
 # Native checkpoint pairing and lifecycle observation
 
-Project Version: 0.2.0-dev.6
+Project Version: 0.2.0-dev.7
+
+Current guard integration: [server admission guard](NATIVE_ADMISSION_GUARD.md) adds nine completion guards and guarded recovery/provisioning. This report retains its earlier implementation/test scope; complete native provenance and dedicated ownership remain blocked.
 
 Historical implementation/validation scope: **0.2.0-dev.3**, including the 206-case result below. The current [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds bootstrap/initialization and explicitly blocks dedicated ownership after discovering client-writable animal markers. Earlier statements about absent bootstrap refer to that historical checkpoint; they are not the current source inventory.
 

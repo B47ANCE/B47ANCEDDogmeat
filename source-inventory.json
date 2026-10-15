@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.6",
-  "status": "LOADABLE DIAGNOSTIC SOURCE; private identity recovery separated from unverified native carrier provenance; dedicated ownership blocked",
+  "project_version": "0.2.0-dev.7",
+  "status": "LOADABLE GUARDED DIAGNOSTIC SOURCE; known Lua representation transitions refused; full native admission coverage and dedicated ownership remain blocked",
   "authoritative_lua": [
     "src/bootstrap/client/B47DogTestMenu.lua",
     "src/bootstrap/server/B47DogBootstrap.lua",
@@ -14,6 +14,7 @@
     "src/domain/B47Dog/PrivateStore.lua",
     "src/domain/B47Dog/Projection.lua",
     "src/domain/B47Dog/Snapshot.lua",
+    "src/native/B47Dog/NativeAdmissionGuard.lua",
     "src/native/B47Dog/NativeAnimal.lua",
     "src/native/B47Dog/NativeAuthority.lua",
     "src/native/B47Dog/NativeCheckpoint.lua",
@@ -131,5 +132,24 @@
     "src/metadata/runtime-options.json",
     "src/metadata/poster.png",
     "src/metadata/media/ui/B47ANCEDDogmeat_icon.png"
-  ]
+  ],
+  "native_admission_guard": {
+    "entry": "B47Dog/NativeAdmissionGuard.install",
+    "scope": "server completion hooks; no native-key certification",
+    "guarded_actions": [
+      "ISPickupAnimal",
+      "ISAddAnimalInTrailer",
+      "ISRemoveAnimalFromTrailer",
+      "ISAttachAnimalToPlayer",
+      "ISAttachAnimalToTree",
+      "ISPutAnimalInHutch",
+      "ISHutchGrabAnimal",
+      "ISDropWorldItemAction",
+      "ISDropVehicleItemAction"
+    ],
+    "coverage": "LUA_ACTIONS_ONLY",
+    "ownership_ready": false,
+    "installation": "explicit server bootstrap before native recovery and provisioning",
+    "failure": "process-latched; never infer previous-session coverage from a fresh install"
+  }
 }
