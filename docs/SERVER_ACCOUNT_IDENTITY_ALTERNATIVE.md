@@ -80,6 +80,44 @@ The next sufficient proof is a read-only current callback-player-to-root-account
 
 Historical SteamID64 D1 remains BLOCKED; a different principal provider must be evaluated explicitly rather than relabelling its old evidence. Native dog identity, one physical controller and native/private durability remain blocked independently. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED. The raccoon and all 21 production Lua files, runtime metadata/options, old manifests, models and artwork remain unchanged. No game/server launch, deploy, Workshop publish or PR merge.
 
+## Focused root-account binding follow-up — 2026-10-15
+
+The user's subsequent “do it” authorizes the bounded next proof. Starting HEAD/upstream `a214c2b7af30adfe241168fa575eead709918aa5`, 0 ahead/0 behind; main 20 ahead/0 behind. The existing AGENTS.md edit is preserved. Version stays 0.2.0-dev.7 for compatible test/research tooling; no production/save/config/API change or provider adoption.
+
+[The focused ledger](native-account-binding-evidence.json) records 17 packaged fingerprints, eight findings B01–B08 and 20 direct public connection/server/engine descriptor candidates. This is a bounded descriptor/receiver audit, not a whole-object-graph impossibility proof. It includes IConnection returns, which the earlier Steam-specific descriptor selection did not include; none was found in this direct public selection. No copied game code is distributed.
+
+| Route | Source result | Disposition |
+| --- | --- | --- |
+| GameServer.getConnectionFromPlayer | Native player-object-to-address map, nil guard, active connection lookup; official [native API reference](https://www.projectzomboid.com/modding/zombie/network/GameServer.html) also lists the method | Promising native capability; no literal explicit Lua exposure or verified Lua receiver established |
+| ChatUtility.findConnection(short) | Searches server engine connections by slot player ID | No literal explicit exposure or verified Lua receiver. Name overload matches slot text and does not authenticate a root |
+| IsoPlayer inherited getOwner / IsoAnimal | Base getter returns nil; no selected-class override | Cannot supply a player-to-connection binding |
+| IsoZombie / NetworkZombieComponent ownership | Simulation owner/owner-player can refer to a connection/player | Separate zombie availability, simulation assignment, exact actor membership and Lua receiver still matter. No scanning, reassignment or ownership inference added |
+| getGameClient, its connection/engine, getClientUsername/getOnlineUsername | Client singleton/state; own client engine; client-flag name or local display name | Not the dedicated server's current connection roster |
+| getPlayerByOnlineID | Server IDToPlayerMap lookup | Supports current actor-reference checking; does not establish root account/incarnation |
+| MP status/statistics | Client-gated status and stored local/remote statistics tables | No verified authenticated-account feed |
+
+LuaManager.Exposer.shouldExpose tests its explicit class set. The inspected literal registrations include IsoPlayer/IsoZombie/IsoAnimal, but not GameServer, GameClient, ChatUtility, UdpConnection or UdpEngine. This registration observation is not an actual Lua invocation, nor proof that every possible indirect exposure is absent. No reflection/exposure bypass, mutable native registry or client-authored identity is used.
+
+The concrete deliverable is a [read-only disposable Lua experiment and AC01–AC12 run sheet](../tests/runtime/account_binding/README.md). Its normal build is excluded from production; explicit staging assembles 115 files (112 ordinary plus three diagnostic scripts). It checks current actor reference, candidate connection membership at the exact slot and raw root/actor equality, while always returning UNPROVEN. It ignores claimed identity/role/connection arguments, redacts identifiers and exception text, installs once and caps diagnostic samples. Even a positive association cannot establish account incarnation, deletion/recreation or paired rollback continuity.
+
+[TESTED — Windows offline Lua 5.1/Lupa 2.6] 25 additional cases exercise the actual probe, server bootstrap and client helper; 431 total cases pass. Ordinary 112-file assembly and explicit 115-file probe assembly pass. Seventeen packaged input hashes and the repeated descriptor collection match. All 21 production Lua sources, runtime metadata/options, prior evidence, raccoon and art remain unchanged. These results do not execute native authentication or AC01–AC12.
+
+**Automatic root-account binding remains BLOCKED.** The known native baseline failures prevent a clean dedicated experiment on the present installation. No server/client was launched and no installed files, native accounts or real saves were changed. A clean isolated installation plus two independent disposable clients is the remaining runtime gate, followed by authenticated account lifecycle/incarnation evidence or an explicitly accepted operator-mediated contract. No runtime/ownership GO follows from this diagnostic. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED.
+
+A separate installed dedicated-server application was located read-only: Steam app 380870, build 25485538, `java/projectzomboid.jar` layout. Its complete packaged JAR fingerprint matches the client package, all 17 selected class fingerprints match, and no loose override exists at those 17 paths. This is a useful source-compatible candidate, not an absent server installation or a full pristine/runtime PASS. The selected client baseline still fails; complete dedicated launch/classpath provenance and two clean independent client sessions remain unverified. No startup script, loader, server profile, account DB or third-party implementation was executed or changed.
+
+Additional exact commands from the repository root:
+
+```powershell
+& $accountPython -B scripts/audit_account_binding.py --collect --game-root $accountGame --javap $accountJavap --scratch .m0r-local/account-binding-proof --output .m0r-local/account-binding-proof/recheck.json
+& $accountPython -B scripts/audit_account_binding.py
+& $accountPython -B scripts/audit_account_binding.py --native --game-root $accountGame
+& $accountPython -B scripts/audit_account_binding.py --dedicated-root 'E:/Program Files (x86)/Steam/steamapps/common/Project Zomboid Dedicated Server'
+& $accountPython -B scripts/stage_account_probe.py --check
+```
+
+The variables are defined in the command block below. Explicit staging is available via `--output` under ignored .m0r-local only; no installation, archive or launch occurs.
+
 ## Exact validation commands
 
 From the repository root:

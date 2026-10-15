@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Focused root-account experiment, 2026-10-15: [disposable Lua probe](../tests/runtime/account_binding/README.md) and [B01–B08 source ledger](native-account-binding-evidence.json). Twenty-five new offline diagnostic/entry-point cases bring the suite to 431; ordinary 112-file and explicit 115-file assemblies pass. Seventeen packaged inputs/20 direct connection descriptors match. No verified Lua root-account route, no provider adoption and no actual two-client run; native baseline failures retain G7 BLOCKED / NOT TESTED and stable G8 BLOCKED. All prior dated counts below retain their original scope.
+
 Server-account research: [SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md](SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md), 2026-10-15. Eighteen selected source inputs, ten findings and twelve NOT TESTED account scenarios; a proposed private UUID roster is not authentication proof. Existing 406 offline regression cases stay separate from untested dedicated account reconnect/restart behavior. All production Lua/metadata and prior evidence are preserved; ownership/task control remain disabled.
 
 Focused SteamID64 source audit: [STEAMID64_SERVER_PATH_AUDIT.md](STEAMID64_SERVER_PATH_AUDIT.md). Twenty Steam-named public String methods and connection/identity receiver candidates were indexed; 24 class hashes plus one vanilla Lua file bind the selected inspection. D1 remains BLOCKED; matching source bytes and 406 offline regression cases are not authenticated runtime proof. Existing native baseline failures remain.

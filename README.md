@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+The focused account-binding follow-up now includes a [read-only disposable Lua probe and two-client test procedure](tests/runtime/account_binding/README.md). The native player-to-connection helpers have no verified Lua route; automatic adoption remains BLOCKED. Twenty-five probe cases bring the offline suite to 431. The probe is excluded from ordinary assembly; no server/client launch or dedicated reconnect/restart result is claimed.
+
 The [server-account alternative investigation](docs/SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) finds lossless string labels and a useful normal login path, but automatic account binding remains BLOCKED. Slot/replacement aliases, case behavior and rename/delete/recreation require explicit root-account and lifecycle proof. A private realm-scoped principal UUID registry is proposed only; no provider, ownership or task control is activated.
 
 The focused [server SteamID64 audit](docs/STEAMID64_SERVER_PATH_AUDIT.md) retains D1 BLOCKED. NetworkUser.getSteamid is lossless as a string, but its exposed user-list route is a packet mirror; the server writer uses a separate local map. Player.getOwner returns nil and native database/connection helpers have no verified production Lua route. No principal adapter or gameplay enablement was added.
@@ -54,7 +56,7 @@ Public repository: [B47ANCE/B47ANCEDDogmeat](https://github.com/B47ANCE/B47ANCED
 
 The user supplied the initial 0.1.0-dev.1 scaffold version. Current 0.2.0-dev.7 continues additive MINOR development with server-side completion guards, guarded recovery/provisioning and adversarial admission/restart tests. The prior 0.2.0-dev.6 added approved branding. No storage schema or raccoon registration changes. The art checkpoint remains tested 0.1.0-dev.2; no model files changed.
 Future additive training functionality is MINOR scope; dependency versions, PZ builds and data schemas remain independent.
-G6 and G7 are NOT TESTED; G8 is BLOCKED. The current 406 offline Lua/file/event/transaction tests do not validate authenticated game actors, native dog lifecycle, durable world saves or multiplayer behavior.
+G6 and G7 are NOT TESTED; G8 is BLOCKED. The current 431 offline Lua/file/event/transaction/diagnostic tests do not validate authenticated game actors, native dog lifecycle, durable world saves or multiplayer behavior.
 
 The [native continuity audit](docs/BLOCKER_RESOLUTION_REPORT.md) adds a central refusal policy and nine lifecycle/security documents. ADMIT remains unreachable. The 59 direct native constructor sites and worker/deserializer paths show gaps beyond the nine hooks; a fresh process cannot attest prior-session authenticity. Same dev.7 is retained for this unreleased guard revision. [Operator procedures](docs/MULTIPLAYER_OWNERSHIP_TEST_PLAN.md) distinguish current negative tests from blocked positive ownership acceptance.
 

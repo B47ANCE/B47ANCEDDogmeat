@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def runtime(directory):
     lua = LuaRuntime(unpack_returned_tuples=True, register_eval=False, register_builtins=False)
     lua.globals().package.path = ';'.join(str(ROOT / p).replace('\\', '/') for p in
-                                         ('src/domain/?.lua', 'src/native/?.lua', 'src/bootstrap/shared/?.lua', 'tests/lua/?.lua'))
+                                         ('src/domain/?.lua', 'src/native/?.lua', 'src/bootstrap/shared/?.lua', 'tests/lua/?.lua',
+                                          'tests/runtime/account_binding/shared/?.lua'))
     lua.globals().package.cpath = ''
     def target(relative):
         path = (directory / relative).resolve()
@@ -33,6 +34,8 @@ def runtime(directory):
     lua.globals().testfs_exists = lambda relative: target(relative).exists()
     lua.globals().test_bootstrap_server=(ROOT/'src/bootstrap/server/B47DogBootstrap.lua').read_text(encoding='utf-8')
     lua.globals().test_bootstrap_client=(ROOT/'src/bootstrap/client/B47DogTestMenu.lua').read_text(encoding='utf-8')
+    lua.globals().test_account_probe_bootstrap=(ROOT/'tests/runtime/account_binding/server/B47AccountBindingProbeBootstrap.lua').read_text(encoding='utf-8')
+    lua.globals().test_account_probe_client=(ROOT/'tests/runtime/account_binding/client/B47AccountBindingProbeClient.lua').read_text(encoding='utf-8')
     return lua
 
 
@@ -43,6 +46,8 @@ def main():
     compile_lua=syntax.eval('function(source) local fn,err=loadstring(source); assert(fn,err); return true end')
     for relative in inventory['authoritative_lua']:
         compile_lua((ROOT/relative).read_text(encoding='utf-8'))
+    for path in (ROOT/'tests/runtime/account_binding').rglob('*.lua'):
+        compile_lua(path.read_text(encoding='utf-8'))
     del syntax
     with tempfile.TemporaryDirectory(prefix='b47dog-offline-') as temporary:
         directory = Path(temporary).resolve()
@@ -52,6 +57,7 @@ def main():
                             ('admission_spec.lua', None),
                             ('continuity_spec.lua', None),
                             ('database_transaction_spec.lua', None),
+                            ('account_binding_probe_spec.lua', None),
                             ('database_restart_spec.lua', 'prepare'), ('database_restart_spec.lua', 'recover'),
                             ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover'),
                             ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover'),

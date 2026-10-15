@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+The bounded root-account follow-up has a [disposable read-only probe/run sheet](../tests/runtime/account_binding/README.md) and 25 offline refusal/redaction/entry-point tests. No verified Lua receiver for native root-account helpers was established. Stop automatic provider work until a clean isolated two-client experiment and authenticated account lifecycle evidence are available, or the user explicitly adopts an operator-mediated trust contract. Production ownership/tasks remain disabled; no speculative gameplay guard or identity adapter was added.
+
 Server-account alternative: [SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md](SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) proposes retained private principal UUIDs with realm, roster lifecycle and fresh session/episode fences. Normal login names avoid precision loss, but slot/replacement names and account reincarnation prevent automatic name-only association. Prove root-account association and lifecycle evidence or explicitly accept operator mediation before adopting a provider. No migration/config/runtime change in this investigation.
 
 Authenticated identity follow-up: [STEAMID64_SERVER_PATH_AUDIT.md](STEAMID64_SERVER_PATH_AUDIT.md) and its 25-input source ledger reject the user-list mirror, null inherited owner getter, saved DB lookup and numeric/reflection alternatives as current actor adapters. D1 remains BLOCKED; no safe lossless server Lua path was established. Production source, ownership/task refusal, raccoon and deferred model stay unchanged.

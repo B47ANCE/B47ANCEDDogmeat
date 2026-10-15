@@ -1,0 +1,455 @@
+{
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "inputs": [
+    {
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "path": "zombie/network/GameClient.class",
+      "sha256": "99d1778ab2c2627ddcbc04fdbb435461289c3c3075c96cf70eae5c216193352b",
+      "bytes": 97817
+    },
+    {
+      "path": "zombie/chat/ChatUtility.class",
+      "sha256": "b016921d88c1ff19b7f0f2afb31e20efe5d8b187a6b939d9967eb0ac51157b4d",
+      "bytes": 12787
+    },
+    {
+      "path": "zombie/core/raknet/UdpConnection.class",
+      "sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+      "bytes": 20451
+    },
+    {
+      "path": "zombie/core/raknet/UdpEngine.class",
+      "sha256": "385c8fa80a6b24c8a7fe1770cae1e5c9ddb0d23e614297c6c0c05283e51adf36",
+      "bytes": 16032
+    },
+    {
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "bytes": 465921
+    },
+    {
+      "path": "zombie/characters/IsoZombie.class",
+      "sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "bytes": 167359
+    },
+    {
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "path": "zombie/characters/component/NetworkZombieComponent.class",
+      "sha256": "d1b1ae92912a2b1b64b9e40ad5879b7f41d1bb0261f169786e4422325a3eb895",
+      "bytes": 1688
+    },
+    {
+      "path": "zombie/popman/Ownership.class",
+      "sha256": "dd6f052ed459a0856f2dc9b37625b8bbe5b79d40647e9aee65ba3c3c6a878e16",
+      "bytes": 872
+    },
+    {
+      "path": "zombie/network/statistics/data/NetworkStatistic.class",
+      "sha256": "eb785bb38274033519d4830e5035e808e2c310b0d3a96f46f24a17042a4e2e53",
+      "bytes": 8872
+    },
+    {
+      "path": "zombie/network/statistics/data/Statistic.class",
+      "sha256": "f3b65753c2bbf2dd4babff2f52519839c228dcc81e1466cc29db3b4d95b1b159",
+      "bytes": 4344
+    },
+    {
+      "path": "zombie/network/statistics/StatusManager.class",
+      "sha256": "001921a78d46c359d2b2fef7e7a3e28d6892ae3885c88e0b4831b97c3965004e",
+      "bytes": 2178
+    },
+    {
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "path": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+      "bytes": 23071
+    }
+  ],
+  "descriptor_index": [
+    {
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "kind": "method",
+      "name": "getOwner",
+      "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/characters/IsoZombie.class",
+      "kind": "method",
+      "name": "getOwner",
+      "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/characters/component/NetworkZombieComponent.class",
+      "kind": "method",
+      "name": "getAuthOwner",
+      "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/chat/ChatUtility.class",
+      "kind": "method",
+      "name": "findConnection",
+      "descriptor": "(S)Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/chat/ChatUtility.class",
+      "kind": "method",
+      "name": "findConnection",
+      "descriptor": "(Ljava/lang/String;)Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/core/raknet/UdpEngine.class",
+      "kind": "method",
+      "name": "getActiveConnection",
+      "descriptor": "(J)Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/iso/areas/isoregion/jobs/JobChunkUpdate.class",
+      "kind": "method",
+      "name": "getTargetConn",
+      "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/iso/areas/isoregion/jobs/JobServerSendFullData.class",
+      "kind": "method",
+      "name": "getTargetConn",
+      "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameClient.class",
+      "kind": "field",
+      "name": "connection",
+      "descriptor": "Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameClient.class",
+      "kind": "field",
+      "name": "udpEngine",
+      "descriptor": "Lzombie/core/raknet/UdpEngine;"
+    },
+    {
+      "path": "zombie/network/GameServer$DelayedConnection.class",
+      "kind": "field",
+      "name": "connection",
+      "descriptor": "Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "method",
+      "name": "getConnectionByPlayerOnlineID",
+      "descriptor": "(S)Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "method",
+      "name": "getConnectionFromPlayer",
+      "descriptor": "(Lzombie/characters/IsoPlayer;)Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "method",
+      "name": "getConnectionByIp",
+      "descriptor": "(Ljava/lang/String;)Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "field",
+      "name": "udpEngine",
+      "descriptor": "Lzombie/core/raknet/UdpEngine;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "field",
+      "name": "removeZombiesConnection",
+      "descriptor": "Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "field",
+      "name": "removeAnimalsConnection",
+      "descriptor": "Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "field",
+      "name": "removeCorpsesConnection",
+      "descriptor": "Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/network/GameServer.class",
+      "kind": "field",
+      "name": "removeVehiclesConnection",
+      "descriptor": "Lzombie/core/raknet/UdpConnection;"
+    },
+    {
+      "path": "zombie/popman/Ownership.class",
+      "kind": "method",
+      "name": "getConnection",
+      "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+    }
+  ],
+  "literal_explicit_exposure": {
+    "zombie.network.GameServer": false,
+    "zombie.network.GameClient": false,
+    "zombie.chat.ChatUtility": false,
+    "zombie.core.raknet.UdpConnection": false,
+    "zombie.core.raknet.UdpEngine": false,
+    "zombie.characters.IsoPlayer": true,
+    "zombie.characters.IsoZombie": true,
+    "zombie.characters.animals.IsoAnimal": true
+  },
+  "scope": "Direct public return/field descriptors; excludes generic collection contents, arbitrary object graphs, private/reflection routes and runtime dispatch. Explicit exposure is literal setExposed membership only.",
+  "project_version": "0.2.0-dev.7",
+  "game_version": "42.21",
+  "steam_build": "25485521",
+  "status": "BLOCKED_NO_VERIFIED_LUA_ROOT_ACCOUNT_ROUTE",
+  "runtime_status": "NOT TESTED",
+  "provider_adopted": false,
+  "ownership_enabled": false,
+  "live_task_control_enabled": false,
+  "runtime_probe_executed": false,
+  "account_incarnation_proven": false,
+  "automatic_continuity_proven": false,
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED",
+  "baseline_commit": "a214c2b7af30adfe241168fa575eead709918aa5",
+  "prior_account_evidence": "docs/native-account-identity-evidence.json",
+  "official_reference": {
+    "url": "https://www.projectzomboid.com/modding/zombie/network/GameServer.html",
+    "observation": "Official native API documentation lists getConnectionFromPlayer; it does not prove Lua exposure or this installed build."
+  },
+  "probe_sources": {
+    "tests/runtime/account_binding/client/B47AccountBindingProbeClient.lua": "047e607f98e87d35b04e89ff33c1f78d29942dd44c64bf2754d4f365175f9dfe",
+    "tests/runtime/account_binding/server/B47AccountBindingProbeBootstrap.lua": "b80206d1fe967d847a98b07cbd0860c0d57395c39513803ddfb3efad1c364708",
+    "tests/runtime/account_binding/shared/B47AccountBindingProbe.lua": "2c91440e647d615134b6b04cc834d949a4e5d6d7700a34b7b048fc377cbcd160"
+  },
+  "findings": [
+    {
+      "id": "B01",
+      "classification": "NATIVE_OBSERVATION_LUA_ROUTE_UNVERIFIED",
+      "class": "zombie.network.GameServer",
+      "methods": [
+        "getConnectionFromPlayer(IsoPlayer)",
+        "getConnectionByPlayerOnlineID(short)"
+      ],
+      "offsets": "getConnectionFromPlayer: 0-4 PlayerToAddressMap lookup, 12-16 nil guard, 17-27 active-connection lookup/return",
+      "observation": "Native player-object map can find a connection without reading a chosen username. GameServer has no literal setExposed registration in the inspected exposer; no approved Lua global route was established."
+    },
+    {
+      "id": "B02",
+      "classification": "NATIVE_OBSERVATION_LUA_ROUTE_UNVERIFIED",
+      "class": "zombie.chat.ChatUtility",
+      "methods": [
+        "findConnection(short)",
+        "findConnection(String)"
+      ],
+      "offsets": "short overload: 2-37 server engine connection enumeration, 44-67 slot playerIds match; String overload: 68-85 player.username comparison",
+      "observation": "Native chat helper has a connection route, but no literal setExposed registration or vanilla Lua receiver is established. Username overload matches player slot text rather than authenticating the root account."
+    },
+    {
+      "id": "B03",
+      "classification": "NATIVE_OBSERVATION_NOT_ACCOUNT_BINDING",
+      "class": "zombie.characters.IsoGameCharacter",
+      "methods": [
+        "getOwner()",
+        "IsoZombie.getOwner()",
+        "IsoZombie.getOwnerPlayer()"
+      ],
+      "offsets": "IsoGameCharacter.getOwner: 0-1 nil return; IsoZombie.getOwner: 0-25 NetworkZombieComponent optional owner",
+      "observation": "Player base getter returns nil; IsoPlayer and IsoAnimal have no inspected override. Zombie ownership can return a simulator connection, but depends on a separate zombie/component and does not certify the callback actor or universal availability. No world scan or simulation-owner change was added."
+    },
+    {
+      "id": "B04",
+      "classification": "NATIVE_OBSERVATION_CLIENT_STATE_NOT_SERVER_ROSTER",
+      "class": "zombie.network.GameClient",
+      "methods": [
+        "startClient()",
+        "GlobalObject.getGameClient()",
+        "GlobalObject.getClientUsername()",
+        "GlobalObject.getOnlineUsername()"
+      ],
+      "offsets": "startClient: 28-49 constructs its client UdpEngine; GlobalObject.getClientUsername: 0-13 client flag gate; getOnlineUsername: 0-6 local player display name",
+      "observation": "Client singleton, its static connection and instance engine are not the dedicated server actor connection map. No client account label or display name is adopted."
+    },
+    {
+      "id": "B05",
+      "classification": "BOUNDED_DESCRIPTOR_INVENTORY",
+      "class": "packaged zombie public descriptors",
+      "observation": "20 direct public return/field descriptors for UdpConnection, IConnection, GameServer or UdpEngine were inventoried. No direct IConnection or GameServer return/field was found. Other UdpConnection receivers include simulation ownership, internal jobs, client state and server internals. This excludes collection generic contents, private/object graph/reflection paths and is not a universal impossibility proof."
+    },
+    {
+      "id": "B06",
+      "classification": "NATIVE_OBSERVATION_CURRENT_ACTOR_ONLY",
+      "class": "zombie.Lua.LuaManager$GlobalObject",
+      "methods": [
+        "getPlayerByOnlineID(int)",
+        "UdpConnection.getPlayerAt(int)",
+        "UdpConnection.getUserName()"
+      ],
+      "offsets": "getPlayerByOnlineID: 0-20 server IDToPlayerMap; getPlayerAt: 0-6 players array; no-arg getUserName: 0-4 root userName field",
+      "observation": "Exact current player-reference and slot checks can reject stale/wrong actors in an experiment. They do not authenticate an account incarnation, expose a missing connection, or establish restart continuity."
+    },
+    {
+      "id": "B07",
+      "classification": "NATIVE_OBSERVATION_NOT_ACCOUNT_FEED",
+      "class": "zombie.network.statistics.StatusManager",
+      "methods": [
+        "getTable()",
+        "Statistic.getLocalTable()",
+        "Statistic.getRemoteTable()"
+      ],
+      "offsets": "StatusManager.getTable: 0-11 wipe then GameClient.client guard; Statistic getters: 0-7 stored table return",
+      "observation": "Client status and local/remote statistics tables are not a verified server player-to-authenticated-account registry. No table value is promoted to identity proof."
+    },
+    {
+      "id": "B08",
+      "classification": "INFERRED_LIFECYCLE_BLOCKER_RETAINED",
+      "class": "prior account evidence A07-A10",
+      "observation": "Even an observed root-account association is insufficient for automatic rename/delete/recreation/rollback continuity. Equal text after account recreation cannot distinguish a retained account from a new incarnation without an authenticated lifecycle feed or explicitly reviewed operator process."
+    }
+  ],
+  "probe_contract": {
+    "entry": "tests/runtime/account_binding/server/B47AccountBindingProbeBootstrap.lua",
+    "network_module": "B47AccountBindingProbe",
+    "command": "sample",
+    "case_labels": "AC01-AC12; operator labels only, never client assertions of scenario truth",
+    "read_only": true,
+    "auto_requests": false,
+    "sample_cap_per_installation": 64,
+    "writes_files": false,
+    "output": "Fixed diagnostic codes, equality booleans and run-local sequence; no usernames, credentials, IDs, pointers, raw exceptions or args",
+    "positive_result": "OBSERVED_UNPROVEN; never an admitted principal or ownership grant",
+    "default_assembly_includes_probe": false,
+    "ordinary_assembly_files": 112,
+    "explicit_probe_assembly_files": 115,
+    "offline_environment": "Windows Lua 5.1 through Lupa 2.6; not PZ/Kahlua",
+    "offline_cases": 25,
+    "limitations": [
+      "Current native baseline contains recorded loose overrides; clean runtime unavailable",
+      "No dedicated process or two clients were launched; AC01-AC12 remain NOT TESTED",
+      "Ordinary-client packet reachability and account lifecycle cannot be proved by synthetic probe cases",
+      "Unexpected global/API visibility on a modified install is not a vanilla Lua exposure proof"
+    ]
+  },
+  "dedicated_layout_observation": {
+    "steam_app": "380870",
+    "steam_build": "25485538",
+    "layout": "java/. plus java/projectzomboid.jar",
+    "runtime_baseline_proven": false,
+    "launch_provenance_verified": false,
+    "server_started": false,
+    "scope": "Only selected package/loose fingerprints. Not full installation inventory, launcher validation or runtime proof.",
+    "fingerprints": {
+      "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+      "inputs": [
+        {
+          "path": "zombie/network/GameServer.class",
+          "packaged_sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/network/GameClient.class",
+          "packaged_sha256": "99d1778ab2c2627ddcbc04fdbb435461289c3c3075c96cf70eae5c216193352b",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/chat/ChatUtility.class",
+          "packaged_sha256": "b016921d88c1ff19b7f0f2afb31e20efe5d8b187a6b939d9967eb0ac51157b4d",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/core/raknet/UdpConnection.class",
+          "packaged_sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/core/raknet/UdpEngine.class",
+          "packaged_sha256": "385c8fa80a6b24c8a7fe1770cae1e5c9ddb0d23e614297c6c0c05283e51adf36",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/characters/IsoPlayer.class",
+          "packaged_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/characters/IsoGameCharacter.class",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/characters/IsoZombie.class",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/characters/animals/IsoAnimal.class",
+          "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/characters/component/NetworkZombieComponent.class",
+          "packaged_sha256": "d1b1ae92912a2b1b64b9e40ad5879b7f41d1bb0261f169786e4422325a3eb895",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/popman/Ownership.class",
+          "packaged_sha256": "dd6f052ed459a0856f2dc9b37625b8bbe5b79d40647e9aee65ba3c3c6a878e16",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/network/statistics/data/NetworkStatistic.class",
+          "packaged_sha256": "eb785bb38274033519d4830e5035e808e2c310b0d3a96f46f24a17042a4e2e53",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/network/statistics/data/Statistic.class",
+          "packaged_sha256": "f3b65753c2bbf2dd4babff2f52519839c228dcc81e1466cc29db3b4d95b1b159",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/network/statistics/StatusManager.class",
+          "packaged_sha256": "001921a78d46c359d2b2fef7e7a3e28d6892ae3885c88e0b4831b97c3965004e",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/Lua/LuaManager$GlobalObject.class",
+          "packaged_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+          "loose_sha256": null
+        },
+        {
+          "path": "zombie/Lua/LuaManager$Exposer.class",
+          "packaged_sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+          "loose_sha256": null
+        },
+        {
+          "path": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+          "packaged_sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+          "loose_sha256": null
+        }
+      ]
+    }
+  }
+}

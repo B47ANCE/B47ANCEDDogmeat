@@ -12,6 +12,7 @@ from validate_database_design import check as check_database_design
 from validate_database_authority_proof import check as check_database_authority_proof
 from audit_principal_strings import check as check_principal_strings
 from audit_server_accounts import check as check_server_accounts
+from audit_account_binding import check as check_account_binding
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
@@ -45,7 +46,7 @@ def read(path):
 
 def check_source():
     errors = (check_database_design() + check_database_authority_proof()
-              + check_principal_strings()[1] + check_server_accounts()[1])
+              + check_principal_strings()[1] + check_server_accounts()[1] + check_account_binding()[1])
     inventory = read(ROOT / 'source-inventory.json')
     catalog = read(ROOT / 'docs/contracts/localization_keys.json')
     if set(inventory['authoritative_lua']) != MODULES:

@@ -317,6 +317,14 @@
     {
       "path": "docs/native-account-identity-evidence.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/native-account-binding-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\\\"]+)\""
+    },
+    {
+      "path": "tests/runtime/account_binding/README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
