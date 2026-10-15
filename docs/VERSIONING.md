@@ -1,6 +1,6 @@
 # Version inventory
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 0.2.0-dev.5 continues the additive MINOR development scope with private identity diagnostics and a native authority investigation. The prior 0.2.0-dev.4 added explicit provisioning and approved native/Mod ID registration. Schemas remain 1; no deployed save format is migrated. Dedicated ownership preparation is deliberately disabled after new source evidence invalidated marker provenance. There was no deployed gameplay contract to remove. Original model/historical evidence retain their tested versions.
 

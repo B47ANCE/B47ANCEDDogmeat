@@ -1,6 +1,6 @@
 # Canonical canine identity contract
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 [VERIFIED packaged source, 2026-10-14] Native ObjectModDataPacket accepts client animal marker load/wipe. A private-record byte match is diagnostic only, not identity provenance. Dedicated ownership preparation is blocked. The [current authority investigation](NATIVE_IDENTITY_AUTHORITY.md) preserves private-ID reporting across absent/altered observations and evaluates a server-assigned native integer without promoting it to authority. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) reserves one expected test identity before constructor side effects and never retries/respawns on uncertainty.
 

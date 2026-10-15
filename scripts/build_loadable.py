@@ -22,6 +22,8 @@ def sources():
         for category in inventory['localization_keys']:
             result[f'42/media/lua/shared/Translate/{language}/{category}.json'] = ROOT/f'src/localization/{language}/{category}.json'
     result['42/mod.info'] = ROOT/'src/metadata/mod.info'
+    result['42/poster.png'] = ROOT/'src/metadata/poster.png'
+    result['42/media/ui/B47ANCEDDogmeat_icon.png'] = ROOT/'src/metadata/media/ui/B47ANCEDDogmeat_icon.png'
     result['42/media/sandbox-options.txt'] = ROOT/'src/metadata/sandbox-options.txt'
     return result
 

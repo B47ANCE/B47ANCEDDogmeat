@@ -1,6 +1,6 @@
 # Multiplayer identity authority investigation
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 The approved `B47ANCEDDogmeat` / `b47dogtest` / `grey` raccoon remains the diagnostic carrier. The model is unchanged. This iteration distinguishes recovery of a private dog record from proof that a loaded animal is that dog. **Automatic multiplayer carrier admission remains blocked; no game or server was launched.**
 

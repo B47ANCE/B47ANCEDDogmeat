@@ -1,6 +1,6 @@
 # B47ANCE'd Dog Training
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 Standalone, Lua-only, dedicated-server-first Build42.21 project. M0R contracts remain the technical baseline. A [rebuilt German Shepherd authoring candidate, coat and rig](art/german_shepherd/README.md) exists as gsd-v002 for visual and pipeline review; it has not met the user's realistic visual quality benchmark. The [first feature foundation](docs/FEATURE_FOUNDATION.md) implements offline Lua ownership, naming, handler permissions and private projections. The [native/private persistence prototype](docs/NATIVE_PERSISTENCE_SLICE.md) adds native observation, private identity matching and inactive-slot save preparation. The [loaded-anchor/lifecycle adapter](docs/NATIVE_PAIRING_LIFECYCLE.md) connects explicit native load/start/death events, exact checkpoint recovery and one pending native anchor. The [loadable persistence diagnostic](docs/NATIVE_BOOTSTRAP_TEST.md) now adds an explicit first-store operation, native raccoon test registration and admin menu. The [multiplayer identity investigation](docs/NATIVE_IDENTITY_AUTHORITY.md) now reports recovered private identity independently of untrusted carrier observations. In-game save/load remains NOT TESTED; production multiplayer ownership is blocked pending native carrier provenance. Companion Dogs and DogPack are not dependencies or asset sources.
 User-approved technical Mod ID: `B47ANCEDDogmeat` (2026-10-14). The temporary raccoon carrier is approved for save/load testing; the original model is unchanged.

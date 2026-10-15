@@ -1,6 +1,6 @@
 # Loadable native persistence diagnostic
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 This report retains the 0.2.0-dev.4 bootstrap implementation/evidence scope (259 tests). The current [identity investigation](NATIVE_IDENTITY_AUTHORITY.md) adds independent private-ID reporting and adversarial tests; this document header identifies the current contract edition, not a renewed native test.
 
