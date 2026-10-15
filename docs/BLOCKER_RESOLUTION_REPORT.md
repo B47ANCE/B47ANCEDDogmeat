@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Latest database-authoritative proposal is documented in [DATABASE_AUTHORITY_DESIGN.md](DATABASE_AUTHORITY_DESIGN.md) and [DATABASE_REDESIGN_VALIDATION.md](DATABASE_REDESIGN_VALIDATION.md). Native Option A NO-GO is retained. No database/lease/controller gameplay has been enabled; prior report evidence below retains its exact scope.
+
 Option A follow-up at baseline `fda2538e64624babbd1606b4e53a0935d80c02f9`: [OWNERSHIP_GO_NO_GO_DECISION.md](OWNERSHIP_GO_NO_GO_DECISION.md) is the current architectural decision (NO-GO), with 375 offline cases and no production runtime change. The report below retains its prior 373-test validation scope and earlier source baseline verbatim. No prior evidence is upgraded.
 
 Audit date: 2026-10-14. Implementation/source baseline: `6518be2aa7afaa71d70e3ff4b28b68dc01e21a63`, branch docs/m0r-contracts, [draft PR #1](https://github.com/B47ANCE/B47ANCEDDogmeat/pull/1). **The technical milestone is not resolved. Multiplayer ownership remains disabled.** Native physical continuity and previous-session authenticity are not proved; larger offline coverage does not change that conclusion.

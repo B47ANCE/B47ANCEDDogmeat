@@ -54,5 +54,7 @@ The [native continuity audit](docs/BLOCKER_RESOLUTION_REPORT.md) adds a central 
 
 [Option A concludes NO-GO](docs/OWNERSHIP_GO_NO_GO_DECISION.md) for automatic authenticated ownership on the verified Lua boundary: serialized fields cannot provide trusted origin, transient IDs cannot survive as a binding, and no complete native policy/save seal was established. The bounded save/load trace and fresh-VM equivalence witness add evidence without changing runtime guards or enabling gameplay. See the [focused disposable procedure](docs/DISPOSABLE_RUNTIME_TEST_PROCEDURE.md); positive identity proof remains blocked.
 
+The [database-authoritative redesign](docs/DATABASE_AUTHORITY_DESIGN.md) now separates permanent logical dogs from session-bound native representations, with natural primary/sub-bond relationships, one active task/handler lease and approved default offline self-care. It is a design proposal with schema/permissions/lifecycle/sandbox/acceptance contracts; no production controller, SQLite interface, storage mode or ownership enablement is implemented. [Validation and remaining gates](docs/DATABASE_REDESIGN_VALIDATION.md) retain Option A NO-GO. Current native-baseline verification FAILS on five changed loose class overrides; the packaged inputs for the new audit match. Historical hashes are preserved and no installed files are repaired.
+
 The input handoff is preserved as a historical requirements artifact under `docs/USER_HANDOFF.md`.
 Evidence records are immutable snapshots; they do not establish dedicated runtime correctness.

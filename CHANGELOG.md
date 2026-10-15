@@ -12,6 +12,9 @@
 - Option A bounded save/load investigation: issue NO-GO for automatic authenticated native ownership; document eight requested proof/decision reports, transient/positional identifier limits and the missing native admission/save-generation contract.
 - Add two fresh-VM evidence-equivalence phases (375 offline cases total); keep production runtime/guards unchanged, no positive ownership prototype or gameplay enablement.
 
+- Add the user-directed database-authoritative logical identity, natural primary/sub-bond, task/handler lease and default offline self-care design contracts; preserve Option A NO-GO and all live gates.
+- Audit SQLite exposure, authenticated actor/Steam identity, save exclusion/removal and enum format against Build 42.21 / Steam 25485521; retain private-file extension as a candidate only. No runtime controller, migration or new sandbox option is registered.
+
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.2.0-dev.5. No new SP/dedicated MP evidence.

@@ -229,6 +229,42 @@
     {
       "path": "docs/native-save-load-evidence.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/DATABASE_AUTHORITY_DESIGN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PERSISTENT_CANINE_AND_RELATIONSHIP_SCHEMA.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATURAL_BONDING_AND_PERMISSIONS.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ACTIVE_TASK_AND_HANDLER_AUTHORITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/OFFLINE_SELFCARE_LIFECYCLE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_REDESIGN_SANDBOX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_REDESIGN_VALIDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/contracts/database_redesign.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/native-database-redesign-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {
@@ -343,6 +379,14 @@
     {
       "reference": "docs/art-checkpoint.json",
       "reason": "Frozen art commit, tested version and canonical file hashes. Not current feature validation."
+    },
+    {
+      "reference": "docs/requirements/DATABASE_AUTHORITY_REQUEST.md",
+      "reason": "Immutable supplied database/task design request snapshot; completeness noted in database_redesign.json; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/TASK_HANDLER_AUTHORITY_REQUEST.md",
+      "reason": "Immutable supplied database/task design request snapshot; completeness noted in database_redesign.json; not a current version mirror."
     }
   ]
 }

@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Latest design-only database/relationship/task revision: [DATABASE_REDESIGN_VALIDATION.md](DATABASE_REDESIGN_VALIDATION.md). Structural proposal checks are separate from the unchanged 375-case offline runtime-boundary suite and from actual gameplay. No dedicated evidence or native NO-GO is upgraded.
+
 ## Option A current decision — 2026-10-14
 
 [OWNERSHIP_GO_NO_GO_DECISION.md](OWNERSHIP_GO_NO_GO_DECISION.md) records NO-GO for automatic authenticated native ownership. [ADVERSARIAL_IDENTITY_TEST_RESULTS.md](ADVERSARIAL_IDENTITY_TEST_RESULTS.md) records 375 Windows offline cases including two new fresh-VM evidence-equivalence phases; source/runtime guards unchanged from fda2538. The exact commands and current source manifest are linked there. Prior dated reports/counts below retain their original scope. No native runtime proof is supplied: G6 NOT TESTED, G7 BLOCKED / NOT TESTED, stable G8 BLOCKED.

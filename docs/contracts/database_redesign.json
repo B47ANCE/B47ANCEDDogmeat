@@ -1,0 +1,729 @@
+{
+  "format_revision": 1,
+  "project_version": "0.2.0-dev.7",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "logical_schema_revision": 1,
+  "runtime_enabled": false,
+  "native_no_go_retained": true,
+  "sqlite_verified": false,
+  "safe_store_mode_verified": false,
+  "source_baseline_commit": "72b542a622e1d519cfb8912a0a4960311f388cb1",
+  "source_requests": [
+    {
+      "path": "docs/requirements/DATABASE_AUTHORITY_REQUEST.md",
+      "sha256": "c669b2dfe45b1d45a35e0893043fda9e838759a049f58bab5ae5d34e15bf4a2a",
+      "complete": false
+    },
+    {
+      "path": "docs/requirements/TASK_HANDLER_AUTHORITY_REQUEST.md",
+      "sha256": "059ff9dd872cfdac60b0ccc8b33cdf09fb75843a9c6dd15c55688ed35f2ca2ed",
+      "complete": true
+    }
+  ],
+  "field_groups": {
+    "identity": [
+      "dogId",
+      "name",
+      "creationOrigin",
+      "originalBreed",
+      "age",
+      "sex",
+      "permanentMetadata"
+    ],
+    "geneticsAppearance": [
+      "ancestry",
+      "physicalCharacteristics",
+      "coatPhenotype",
+      "appearanceSeed",
+      "originalAppearance",
+      "cosmeticModelOverride"
+    ],
+    "personality": [
+      "confidence",
+      "anxietyDisposition",
+      "currentAnxiety",
+      "sociability",
+      "independence",
+      "learningAptitude",
+      "motivations",
+      "energyRequirements",
+      "behavioralTraits"
+    ],
+    "training": [
+      "overallObedience",
+      "commandKnowledge",
+      "recognizedCues",
+      "trainingXP",
+      "workingSkills",
+      "trainingHistory",
+      "reinforcementRecords",
+      "dailyXPBudgets"
+    ],
+    "health": [
+      "injuries",
+      "illnesses",
+      "parasites",
+      "treatments",
+      "medicalHistory",
+      "currentCondition",
+      "recoveryState"
+    ],
+    "welfare": [
+      "hunger",
+      "thirst",
+      "fatigue",
+      "bladder",
+      "bowel",
+      "comfort",
+      "hygiene",
+      "stress",
+      "sleepRequirements"
+    ],
+    "equipmentInventory": [
+      "collar",
+      "lead",
+      "harness",
+      "armor",
+      "medicalEquipment",
+      "carriedItems",
+      "inventoryTransactions"
+    ],
+    "homeWorld": [
+      "assignedSafehouse",
+      "assignedDoghouse",
+      "assignedPottyArea",
+      "lastTrustedLocation",
+      "currentTask",
+      "lifecycleState"
+    ],
+    "persistence": [
+      "schemaVersion",
+      "recordRevision",
+      "worldId",
+      "lastCommittedCheckpoint",
+      "recoveryMetadata"
+    ]
+  },
+  "unknown_measurement_policy": "Explicit known/provenance/unit/time; unsupported values never reset to healthy defaults or gain writers.",
+  "canonical_key": [
+    "worldId",
+    "dogId"
+  ],
+  "principal_policy": {
+    "source": "AUTHENTICATED_SERVER_CONNECTION",
+    "steamid_encoding": "DECIMAL_STRING_NEVER_LUA_NUMBER",
+    "adapter_status": "UNKNOWN_NOT_IMPLEMENTED",
+    "client_identity_accepted": false,
+    "non_steam_fallback": "UNDECIDED_NO_SILENT_USERNAME_FALLBACK"
+  },
+  "relationship_key": [
+    "worldId",
+    "dogId",
+    "principalId"
+  ],
+  "relationship_fields": [
+    "authenticatedPlayerIdentity",
+    "bondStrength",
+    "relationshipType",
+    "familiarity",
+    "trust",
+    "knownCommandsAndCueFamiliarity",
+    "interactionHistory",
+    "authorizedCapabilities",
+    "lastInteraction",
+    "ownerPermissions",
+    "relationshipRevision",
+    "receiptReferences"
+  ],
+  "bond_range": {
+    "minimum": 0,
+    "maximum": 100,
+    "primary_completion": 100
+  },
+  "primary_owner_unique": true,
+  "secondary_bond_can_transfer_ownership": false,
+  "trust_alone_grants_permission": false,
+  "arbitrary_claim_button": false,
+  "owner_only_operations": [
+    "Rename",
+    "TransferOwnership",
+    "DeletePrimaryBond",
+    "ExclusiveCosmeticChange",
+    "PermanentRemoval"
+  ],
+  "lease_fields": [
+    "dogId",
+    "authenticatedPrincipal",
+    "relationship",
+    "authorizedCapabilities",
+    "createdAt",
+    "expiresAt",
+    "currentTaskId",
+    "serverSessionId",
+    "leaseFence"
+  ],
+  "max_active_leases_per_dog": 1,
+  "max_active_tasks_per_dog": 1,
+  "max_physical_movement_writers": 1,
+  "leases_survive_restart": false,
+  "owner_reconnect_teleports": false,
+  "owner_reconnect_preempts_without_command": false,
+  "task_states": [
+    "Requested",
+    "Validated",
+    "Assigned",
+    "Running",
+    "Suspended",
+    "Completed",
+    "Cancelled",
+    "Failed"
+  ],
+  "task_transitions": [
+    [
+      "Requested",
+      "Validated"
+    ],
+    [
+      "Requested",
+      "Cancelled"
+    ],
+    [
+      "Requested",
+      "Failed"
+    ],
+    [
+      "Validated",
+      "Assigned"
+    ],
+    [
+      "Validated",
+      "Cancelled"
+    ],
+    [
+      "Validated",
+      "Failed"
+    ],
+    [
+      "Assigned",
+      "Running"
+    ],
+    [
+      "Assigned",
+      "Suspended"
+    ],
+    [
+      "Assigned",
+      "Cancelled"
+    ],
+    [
+      "Running",
+      "Suspended"
+    ],
+    [
+      "Running",
+      "Completed"
+    ],
+    [
+      "Running",
+      "Cancelled"
+    ],
+    [
+      "Running",
+      "Failed"
+    ],
+    [
+      "Suspended",
+      "Validated"
+    ],
+    [
+      "Suspended",
+      "Cancelled"
+    ],
+    [
+      "Suspended",
+      "Failed"
+    ],
+    [
+      "Assigned",
+      "Failed"
+    ]
+  ],
+  "task_terminal_states": [
+    "Completed",
+    "Cancelled",
+    "Failed"
+  ],
+  "internal_transaction_phases": [
+    "RESERVED",
+    "EFFECT_PENDING",
+    "RECONCILING",
+    "COMMITTED"
+  ],
+  "task_definition_fields": [
+    "priority",
+    "requiredSkills",
+    "requiredEquipment",
+    "handlerPermissions",
+    "validStartConditions",
+    "interruptionRules",
+    "resumptionRules",
+    "completionEvidence",
+    "failureConditions",
+    "persistencePolicy"
+  ],
+  "durable_task_fields": [
+    "dogId",
+    "taskId",
+    "type",
+    "handlerPrincipal",
+    "state",
+    "targetIdentity",
+    "destination",
+    "serverRevision",
+    "checkpoint",
+    "outstandingClaims",
+    "taskDefinitionRevision"
+  ],
+  "forbidden_durable_authority": [
+    "nativeObjectReference",
+    "clientPointer",
+    "routeHandle",
+    "activeSessionLease"
+  ],
+  "priorities": [
+    {
+      "priority": 1,
+      "category": "ImmediateSurvival"
+    },
+    {
+      "priority": 2,
+      "category": "UrgentBiologicalNeeds"
+    },
+    {
+      "priority": 3,
+      "category": "PrimaryOwner"
+    },
+    {
+      "priority": 4,
+      "category": "TrustedHandler"
+    },
+    {
+      "priority": 5,
+      "category": "AutonomousCare"
+    },
+    {
+      "priority": 6,
+      "category": "NonurgentAssignedWork"
+    },
+    {
+      "priority": 7,
+      "category": "SocialIdle"
+    }
+  ],
+  "hard_stops": [
+    "DECEASED",
+    "INVALID_BINDING",
+    "QUARANTINED",
+    "UNSUPPORTED_SCHEMA",
+    "UNCERTAIN_PHYSICAL_TRANSACTION"
+  ],
+  "dog_lifecycle_states": [
+    "WILD",
+    "BONDING",
+    "OWNED_ACTIVE",
+    "OWNER_OFFLINE_SELFCARE",
+    "WITHDRAW_PENDING",
+    "STORED_OFFLINE",
+    "RESTORE_PENDING",
+    "QUARANTINED",
+    "DECEASED"
+  ],
+  "offline_default": "SelfCare",
+  "store_offline_enabled": false,
+  "sandbox_settings": [
+    {
+      "id": "B47ANCEDDogmeat.OfflineCompanionMode",
+      "type": "enum",
+      "default": "SelfCare",
+      "allowed_values": [
+        "SelfCare",
+        "StoreOffline"
+      ],
+      "minimum": null,
+      "maximum": null,
+      "step": null,
+      "server_authority": true,
+      "status": "PROPOSAL_NOT_REGISTERED",
+      "engine_default": 1,
+      "engine_num_values": 2,
+      "page": "B47ANCEDDogmeat",
+      "name_key": "Sandbox_B47ANCEDDogmeat_OfflineCompanionMode",
+      "tooltip_key": "Sandbox_B47ANCEDDogmeat_OfflineCompanionMode_tooltip",
+      "capability_gates": [
+        "native-binding",
+        "exclusive-control",
+        "private-durability",
+        "withdrawal-restoration"
+      ],
+      "existing_save_policy": "Revalidate configuration revision at safe boundary; preserve records/history and committed receipts; never delete, teleport, auto-spawn or force an uncertain withdrawal.",
+      "invalid_policy": "Refuse unavailable/dangerous behavior and preserve evidence/current bodies; no client fallback."
+    },
+    {
+      "id": "B47ANCEDDogmeat.OfflineSafehouseRestriction",
+      "type": "boolean",
+      "default": true,
+      "allowed_values": [],
+      "minimum": null,
+      "maximum": null,
+      "step": null,
+      "server_authority": true,
+      "status": "PROPOSAL_NOT_REGISTERED",
+      "engine_default": true,
+      "engine_num_values": null,
+      "page": "B47ANCEDDogmeat",
+      "name_key": "Sandbox_B47ANCEDDogmeat_OfflineSafehouseRestriction",
+      "tooltip_key": "Sandbox_B47ANCEDDogmeat_OfflineSafehouseRestriction_tooltip",
+      "capability_gates": [
+        "native-binding",
+        "exclusive-control",
+        "home-access"
+      ],
+      "existing_save_policy": "Revalidate configuration revision at safe boundary; preserve records/history and committed receipts; never delete, teleport, auto-spawn or force an uncertain withdrawal.",
+      "invalid_policy": "Refuse unavailable/dangerous behavior and preserve evidence/current bodies; no client fallback."
+    },
+    {
+      "id": "B47ANCEDDogmeat.OfflineDoghouseGrowth",
+      "type": "boolean",
+      "default": true,
+      "allowed_values": [],
+      "minimum": null,
+      "maximum": null,
+      "step": null,
+      "server_authority": true,
+      "status": "PROPOSAL_NOT_REGISTERED",
+      "engine_default": true,
+      "engine_num_values": null,
+      "page": "B47ANCEDDogmeat",
+      "name_key": "Sandbox_B47ANCEDDogmeat_OfflineDoghouseGrowth",
+      "tooltip_key": "Sandbox_B47ANCEDDogmeat_OfflineDoghouseGrowth_tooltip",
+      "capability_gates": [
+        "native-binding",
+        "growth-transaction"
+      ],
+      "existing_save_policy": "Revalidate configuration revision at safe boundary; preserve records/history and committed receipts; never delete, teleport, auto-spawn or force an uncertain withdrawal.",
+      "invalid_policy": "Refuse unavailable/dangerous behavior and preserve evidence/current bodies; no client fallback."
+    },
+    {
+      "id": "B47ANCEDDogmeat.AllowTrustedOfflineCaretakers",
+      "type": "boolean",
+      "default": true,
+      "allowed_values": [],
+      "minimum": null,
+      "maximum": null,
+      "step": null,
+      "server_authority": true,
+      "status": "PROPOSAL_NOT_REGISTERED",
+      "engine_default": true,
+      "engine_num_values": null,
+      "page": "B47ANCEDDogmeat",
+      "name_key": "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineCaretakers",
+      "tooltip_key": "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineCaretakers_tooltip",
+      "capability_gates": [
+        "native-binding",
+        "verified-interaction",
+        "owner-permissions"
+      ],
+      "existing_save_policy": "Revalidate configuration revision at safe boundary; preserve records/history and committed receipts; never delete, teleport, auto-spawn or force an uncertain withdrawal.",
+      "invalid_policy": "Refuse unavailable/dangerous behavior and preserve evidence/current bodies; no client fallback."
+    },
+    {
+      "id": "B47ANCEDDogmeat.AllowTrustedOfflineTraining",
+      "type": "boolean",
+      "default": true,
+      "allowed_values": [],
+      "minimum": null,
+      "maximum": null,
+      "step": null,
+      "server_authority": true,
+      "status": "PROPOSAL_NOT_REGISTERED",
+      "engine_default": true,
+      "engine_num_values": null,
+      "page": "B47ANCEDDogmeat",
+      "name_key": "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineTraining",
+      "tooltip_key": "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineTraining_tooltip",
+      "capability_gates": [
+        "native-binding",
+        "exclusive-control",
+        "training-receipts",
+        "owner-permissions"
+      ],
+      "existing_save_policy": "Revalidate configuration revision at safe boundary; preserve records/history and committed receipts; never delete, teleport, auto-spawn or force an uncertain withdrawal.",
+      "invalid_policy": "Refuse unavailable/dangerous behavior and preserve evidence/current bodies; no client fallback."
+    }
+  ],
+  "english_fallback": {
+    "Sandbox_B47ANCEDDogmeat_OfflineCompanionMode": "Offline Companion Mode",
+    "Sandbox_B47ANCEDDogmeat_OfflineCompanionMode_tooltip": "Default: remain in world and use real resources for self-care. Store Offline requires proved withdrawal/restoration and is unavailable until safe.",
+    "Sandbox_B47ANCEDDogmeat_OfflineSafehouseRestriction": "Offline Safehouse Restriction",
+    "Sandbox_B47ANCEDDogmeat_OfflineSafehouseRestriction_tooltip": "Prefer the assigned home; essential needs and danger escape may leave, then attempt return. Never teleport or make the dog invulnerable.",
+    "Sandbox_B47ANCEDDogmeat_OfflineDoghouseGrowth": "Offline Doghouse Growth",
+    "Sandbox_B47ANCEDDogmeat_OfflineDoghouseGrowth_tooltip": "Only applies once safe growth exists. Preserve identity, relationships, health, history and equipment. Currently unavailable.",
+    "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineCaretakers": "Allow Trusted Offline Caretakers",
+    "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineCaretakers_tooltip": "Allow care only with owner permission, sufficient trust/skill and real resources. Preserve relationship history when disabled.",
+    "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineTraining": "Allow Trusted Offline Training",
+    "Sandbox_B47ANCEDDogmeat_AllowTrustedOfflineTraining_tooltip": "Allow training only with owner permission, trust, knowledge and verified exercises. No XP for cancelled or replayed work.",
+    "Sandbox_B47ANCEDDogmeat_OfflineCompanionMode_SelfCare": "Remain in World — Self-Care",
+    "Sandbox_B47ANCEDDogmeat_OfflineCompanionMode_StoreOffline": "Store Dog While Owner Offline",
+    "UI_B47ANCEDDogmeat_Task_BusyHandler": "This dog is currently being handled by another survivor.",
+    "UI_B47ANCEDDogmeat_Task_InsufficientTrust": "You have not earned enough trust to lead this dog.",
+    "UI_B47ANCEDDogmeat_Task_SafetyReturn": "This dog is returning to safety.",
+    "UI_B47ANCEDDogmeat_Task_OwnerRecall": "The owner has recalled this dog.",
+    "UI_B47ANCEDDogmeat_Task_PermissionDenied": "The owner has not permitted this action.",
+    "UI_B47ANCEDDogmeat_Task_BindingUnavailable": "The dog is unavailable while its identity is reconciled.",
+    "UI_B47ANCEDDogmeat_Task_CapabilityUnavailable": "This activity is not safely supported yet.",
+    "UI_B47ANCEDDogmeat_Task_ResourceUnavailable": "The required resource is unavailable."
+  },
+  "localization_policy": "All required 29 explicit language fallbacks before runtime activation; proposal keys are not current runtime keys.",
+  "physical_invariants": {
+    "real_resources_only": true,
+    "automatic_respawn": false,
+    "copied_marker_authorizes": false,
+    "missing_body_means_stored": false,
+    "serious_conditions_auto_cure": false,
+    "proximity_training_xp": false,
+    "death_terminal": true,
+    "native_private_atomicity_proven": false
+  },
+  "commit_unit": "ONE_WORLD_AGGREGATE_SINGLE_COORDINATOR_DRAFT",
+  "task_acceptance": [
+    {
+      "id": "TA01",
+      "scenario": "Primary owner commands bonded dog",
+      "required": "Authenticated actor + verified body + single task/lease/native writer",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA02",
+      "scenario": "Unauthorized player attempts command",
+      "required": "No task/mutation/private disclosure",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA03",
+      "scenario": "Trusted caretaker routine care",
+      "required": "Owner permission + trust/skill + resource receipt; owner unchanged",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA04",
+      "scenario": "Trusted trainer authorized command",
+      "required": "Real verified exercise/reinforcement; one XP receipt",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA05",
+      "scenario": "Conflicting handler commands",
+      "required": "One accepted lease/fence; explicit refusal to loser",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA06",
+      "scenario": "Owner disconnect during training",
+      "required": "Release owner lease, reconcile pending work; no unearned XP",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA07",
+      "scenario": "Secondary handler disconnect while leading",
+      "required": "Fence/release promptly; no indefinite movement control",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA08",
+      "scenario": "Autonomous self-care",
+      "required": "Physical presence, real supplies, no freebies",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA09",
+      "scenario": "Urgent biological need interrupts work",
+      "required": "Safe interruption of Stay/Place/work",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA10",
+      "scenario": "Danger during bathroom trip",
+      "required": "Safety priority and actual permitted route/accident",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA11",
+      "scenario": "Owner reconnect with active handler",
+      "required": "Preserve body/location/care; explicit owner command preemption only",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA12",
+      "scenario": "Server restart during suspended task",
+      "required": "No restored session lease; authenticate dog/target/destination/claims",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA13",
+      "scenario": "Two dogs retrieve same item",
+      "required": "One world claim/transfer/receipt",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA14",
+      "scenario": "Pack contains untrained dog",
+      "required": "Per-dog skills and permission; no inherited ability",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA15",
+      "scenario": "Native representation unavailable",
+      "required": "Suspend/fence/quarantine, retain history, no respawn",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA16",
+      "scenario": "Duplicate task request replay",
+      "required": "Idempotent outcome, no double reward/transfer",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA17",
+      "scenario": "StoreOffline withdrawal and restoration",
+      "required": "Durable coordinated transaction, one body, no hidden conflict",
+      "status": "BLOCKED / NOT TESTED"
+    },
+    {
+      "id": "TA18",
+      "scenario": "Private relationship/task restart",
+      "required": "Retain records/history, invalidate old lease authority",
+      "status": "BLOCKED / NOT TESTED"
+    }
+  ],
+  "additional_acceptance": [
+    "Simultaneous primary 100% compare-and-set",
+    "Secondary 100% no ownership transfer",
+    "Proximity/feed/pet replay and budget farming",
+    "Forged client SteamID/bond/food receipt",
+    "Split-screen and multiple authenticated connections",
+    "Unsafe/no-resource self-care with real waste",
+    "Migration old/new/corrupt/unknown schema",
+    "Native/private one-sided and paired rollback",
+    "Death interruption and terminal tombstone",
+    "Natural population receipt replay",
+    "Exclusive cosmetic entitlement forgery",
+    "Revocation/preemption during item commit",
+    "Every withdrawal/restoration interruption boundary"
+  ],
+  "entity_collections": {
+    "dogs": [
+      "worldId",
+      "dogId",
+      "fieldGroups",
+      "recordRevision"
+    ],
+    "relationships": [
+      "worldId",
+      "dogId",
+      "principalId",
+      "relationshipRevision",
+      "receiptReferences"
+    ],
+    "primaryOwners": [
+      "worldId",
+      "dogId",
+      "principalId",
+      "ownershipRevision",
+      "primaryBondReceipt",
+      "delegationRevision",
+      "checkpoint"
+    ],
+    "tasks": [
+      "dogId",
+      "taskId",
+      "type",
+      "handlerPrincipal",
+      "state",
+      "targetIdentity",
+      "destination",
+      "serverRevision",
+      "checkpoint",
+      "outstandingClaims",
+      "taskDefinitionRevision"
+    ],
+    "resourceClaims": [
+      "worldId",
+      "claimId",
+      "targetIdentity",
+      "quantity",
+      "dogId",
+      "taskId",
+      "transactionId",
+      "state",
+      "checkpoint"
+    ],
+    "interactionReceipts": [
+      "worldId",
+      "receiptId",
+      "dogId",
+      "principalId",
+      "interactionType",
+      "evidenceReference",
+      "timeWindow",
+      "budgetRevision",
+      "bondContribution",
+      "state"
+    ],
+    "completionReceipts": [
+      "worldId",
+      "receiptId",
+      "taskId",
+      "effectTransactionId",
+      "outcome",
+      "xpAward",
+      "checkpoint"
+    ],
+    "lifecycleIntents": [
+      "worldId",
+      "dogId",
+      "transitionId",
+      "fromState",
+      "toState",
+      "expectedGeneration",
+      "nativeEvidence",
+      "phase",
+      "checkpoint"
+    ],
+    "terminalTombstones": [
+      "worldId",
+      "dogId",
+      "deathReceipt",
+      "recordRevision",
+      "checkpoint",
+      "pendingReconciliation"
+    ],
+    "cosmeticEntitlements": [
+      "principalId",
+      "approvedModelIds",
+      "entitlementRevision",
+      "provenance"
+    ],
+    "checkpoints": [
+      "worldId",
+      "checkpointId",
+      "predecessor",
+      "aggregateRevision",
+      "schemaRevision",
+      "recoveryStatus"
+    ]
+  },
+  "active_task_states": [
+    "Assigned",
+    "Running"
+  ]
+}

@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Latest user-directed database/relationship/task proposal: [PERSISTENT_CANINE_AND_RELATIONSHIP_SCHEMA.md](PERSISTENT_CANINE_AND_RELATIONSHIP_SCHEMA.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
+
 The current [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds a single explicit operator-confirmed first-store attempt, receipt-first preservation and one temporary carrier. No automatic new-world inference or uncertain retry exists. The operator asserts a new disposable world; missing files alone never authorize it. Private records remain private, but the native marker cannot prove multiplayer provenance. Dedicated ownership preparation is blocked. The [identity audit](NATIVE_IDENTITY_AUTHORITY.md) adds read-only recovery summaries from the private snapshot, so missing or forged markers cannot select the displayed saved UUID. No schema migration or auto-rebind occurs.
 
 M0R design, 2026-10-12. FEASIBLE conservative storage protocol; crash/power-loss durability and coordinated native saves EXPERIMENTAL. Transactional gameplay is BLOCKED until reconciliation/durability acceptance. Lua-only; no Java bridge fallback. [Evidence](M0R_SOURCE_EVIDENCE.md), [identity](CANINE_IDENTITY_CONTRACT.md), [tasks](TASK_ARBITRATION_CONTRACT.md).

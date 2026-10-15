@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Latest user-directed database/relationship/task proposal: [ACTIVE_TASK_AND_HANDLER_AUTHORITY.md](ACTIVE_TASK_AND_HANDLER_AUTHORITY.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
+
 M0R design, 2026-10-12. FEASIBLE state machine; native task-control seam EXPERIMENTAL and gameplay gate BLOCKED until proved. Lua-only. [Ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [time model](CANINE_BIOLOGY_TIME_MODEL.md), [transactions/recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md).
 
 ## Single decision owner

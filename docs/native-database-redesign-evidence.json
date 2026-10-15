@@ -1,0 +1,249 @@
+{
+  "schema": 1,
+  "project_version": "0.2.0-dev.7",
+  "observed_date": "2026-10-14",
+  "game_version": "42.21",
+  "steam_build": "25485521",
+  "source_baseline_commit": "72b542a622e1d519cfb8912a0a4960311f388cb1",
+  "evidence": "PACKAGED_SOURCE_AND_OFFLINE_DESIGN_ONLY",
+  "runtime_status": "NOT TESTED",
+  "scope": "Bounded private-store API, actor identity, managed save-exclusion/removal and sandbox format candidates; not exhaustive API graph proof",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/SandboxOptions$EnumSandboxOption.class",
+      "sha256": "20c8bd893b8eb93010f2520ff82483548754adb45f42ad16f5141dcd5dbaee7f",
+      "bytes": 5249
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerMain.class",
+      "sha256": "4744a1a9bb393d1dfb4db3b52d8475c5344a128c6e35c697eaf34f8b5da1db61",
+      "bytes": 6571
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerWorker.class",
+      "sha256": "bc0cb514dbde7ef1aef40ef047de004a622faaebca3527994cc7f2f8dfc47452",
+      "bytes": 9982
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/Core.class",
+      "sha256": "8f5c69740c8bf2181123a831ab68d1dfb047453687cca6dc62c77816d76ab360",
+      "bytes": 150885
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/raknet/UdpConnection.class",
+      "sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+      "bytes": 20451
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "bytes": 171614
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/ServerWorldDatabase.class",
+      "sha256": "0ef977c06969d4578e6ecc18134db0764eb76bd820bf4a6df0b8da0ea7a386cd",
+      "bytes": 52716
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/sandbox/CustomEnumSandboxOption.class",
+      "sha256": "6ffe81f8643485546b027ed1f7ad70d431622771782be741b6e24507e762195d",
+      "bytes": 1657
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/sandbox/CustomSandboxOptions.class",
+      "sha256": "80d7d66b1bd7dda3877fa2edca2b136442208c4edc9f178e210130feaf0c4166",
+      "bytes": 7198
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/util/PZSQLUtils.class",
+      "sha256": "72fbab95fe6375d08ae0dbc4be6abd38edd4a068021c5df514a6fafdbc495690",
+      "bytes": 2964
+    }
+  ],
+  "claims": [
+    {
+      "id": "D01",
+      "class": "zombie.util.PZSQLUtils",
+      "method": "public static java.sql.Connection getConnection(java.lang.String) throws java.sql.SQLException;",
+      "scope": "Native JDBC exists. No suitable generic private SQLite Lua interface established in inspected Exposer/global methods; signature is not Lua exposure.",
+      "status": "UNKNOWN_LUA_SQLITE"
+    },
+    {
+      "id": "D02",
+      "class": "zombie.Lua.LuaManager$GlobalObject",
+      "method": "public static java.lang.String getSteamIDFromUsername(java.lang.String);",
+      "offsets": [
+        0,
+        6,
+        9,
+        25,
+        28,
+        32
+      ],
+      "scope": "Requires Steam mode and GameClient.client; converts current client player Steam long to string. Returns null on dedicated server branch. Not a server actor adapter.",
+      "status": "VERIFIED_NATIVE_ONLY"
+    },
+    {
+      "id": "D03",
+      "class": "zombie.network.GameServer",
+      "method": "static void receiveClientCommand(zombie.core.network.ByteBufferReader, zombie.core.raknet.UdpConnection, short);",
+      "offsets": [
+        66,
+        77,
+        217,
+        228
+      ],
+      "scope": "Resolves callback player through sending connection before OnClientCommand; reliable lossless Steam principal Lua adapter still unproved.",
+      "status": "VERIFIED_NATIVE_SOURCE_AUTH_ADAPTER_UNKNOWN"
+    },
+    {
+      "id": "D04",
+      "class": "zombie.iso.IsoObject",
+      "method": "public boolean Serialize();",
+      "offsets": [
+        0,
+        1
+      ],
+      "scope": "Returns true. No verified per-managed-animal save-exclusion control; replacing Lua table field does not override native Java virtual call.",
+      "status": "VERIFIED_NATIVE_METHOD_CAPABILITY_UNKNOWN"
+    },
+    {
+      "id": "D05",
+      "class": "zombie.characters.animals.IsoAnimal",
+      "method": "public void delete();",
+      "offsets": [
+        24,
+        28,
+        37
+      ],
+      "scope": "Calls removeFromWorld/removeFromSquare/removeFromUpdateLists. Worker.removeFromWorld marks saved cell changed if known; no durable native/private withdrawal receipt or proof all saved representations gone.",
+      "status": "VERIFIED_MUTATION_NOT_SAFE_LIFECYCLE"
+    },
+    {
+      "id": "D06",
+      "class": "zombie.sandbox.CustomEnumSandboxOption",
+      "method": "static zombie.sandbox.CustomEnumSandboxOption parse(zombie.scripting.ScriptParser$Block);",
+      "scope": "Reads numValues and default as integers; optional valueTranslation. Existing owned metadata verifies boolean syntax. Enum translation suffix not finalized.",
+      "status": "VERIFIED_SOURCE_NOT_RUNTIME"
+    },
+    {
+      "id": "D07",
+      "class": "zombie.core.Core",
+      "method": "static {};",
+      "offsets": [
+        4,
+        6,
+        11,
+        14
+      ],
+      "scope": "Initializes GameVersion with major 42, minor 21 and empty suffix. Local appmanifest app 108600 buildid 25485521; no account/private metadata copied.",
+      "status": "VERIFIED_PACKAGED_VERSION"
+    }
+  ],
+  "no_go_retained": true,
+  "runtime_implementation_changed": false,
+  "package_fingerprint": {
+    "path": "projectzomboid.jar",
+    "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+    "scope": "Whole packaged JAR fingerprint for local API audit reuse; does not attest effective loose classes or runtime."
+  },
+  "effective_runtime": "UNKNOWN / BASELINE_DRIFT; five changed loose overrides; pristine baseline not re-established",
+  "native_baseline_validation": {
+    "status": "FAIL",
+    "current_packaged_audit_inputs_match": true,
+    "historical_manifests_preserved": true,
+    "trusted_runtime_reestablished": false,
+    "drift_inputs": [
+      {
+        "historical_manifest": "docs/contracts/native_evidence.json",
+        "container": "game-root",
+        "path": "zombie/characters/animals/IsoAnimal.class",
+        "historical_sha256": "f345480fb0a2e652ffe613d37df2a438b07e9c655213fe71f9b5e5c895fe1e73",
+        "observed_sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+        "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+        "bytes": 114103,
+        "observed_loose_matches_packaged": false
+      },
+      {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/GameWindow.class",
+        "historical_sha256": "a09bbcd0a25409f3c4fd68d975e16eb0b6d3ece3fdfc0abcf881695ffde601fd",
+        "observed_sha256": "83426d04937b9f4284c515d79068fddc501a7ca7f2798735f95a5c35b8317f6b",
+        "packaged_sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+        "bytes": 46342,
+        "observed_loose_matches_packaged": false
+      },
+      {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/iso/IsoWorld.class",
+        "historical_sha256": "341c9a6c48abc1e4e7c245e07924630ff10d3e19650b9558ec16e4f8ea2ed9d3",
+        "observed_sha256": "a3d530a1d7990e9a50d04768c1be550ac3ba5f58b25bcb8a77a476b9ef381d2c",
+        "packaged_sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+        "bytes": 121146,
+        "observed_loose_matches_packaged": false
+      },
+      {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/Lua/LuaEventManager.class",
+        "historical_sha256": "9508ea6d477488d9af93c442be5281f34ec5486a451683ab94c96abfd71e2c84",
+        "observed_sha256": "d786c342e563fb735727beb268e39a9a40726c2e83a8ac15ec06c753580b524b",
+        "packaged_sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+        "bytes": 28066,
+        "observed_loose_matches_packaged": false
+      },
+      {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/gameStates/GameLoadingState.class",
+        "historical_sha256": "2fc8f3207c6cf071dd37827b44e23901ea0bbfd79059621991d3d1e80a0ab245",
+        "observed_sha256": "d5724bb56020b572dbc24dc1d63836fcf49d327c3718baebe49434884e37f21b",
+        "packaged_sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+        "bytes": 29130,
+        "observed_loose_matches_packaged": false
+      }
+    ]
+  }
+}

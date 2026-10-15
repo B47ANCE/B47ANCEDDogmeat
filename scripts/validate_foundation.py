@@ -8,6 +8,7 @@ import sys
 import zipfile
 from build_loadable import assemble
 import tempfile
+from validate_database_design import check as check_database_design
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
@@ -40,7 +41,7 @@ def read(path):
 
 
 def check_source():
-    errors = []
+    errors = check_database_design()
     inventory = read(ROOT / 'source-inventory.json')
     catalog = read(ROOT / 'docs/contracts/localization_keys.json')
     if set(inventory['authoritative_lua']) != MODULES:
@@ -182,7 +183,8 @@ def check_native(game_root):
     inputs = []
     for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json',
                  'native-identity-evidence.json','native-admission-evidence.json',
-                 'native-continuity-evidence.json', 'native-save-load-evidence.json'):
+                 'native-continuity-evidence.json', 'native-save-load-evidence.json',
+                 'native-database-redesign-evidence.json'):
         inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
         for item in inputs:

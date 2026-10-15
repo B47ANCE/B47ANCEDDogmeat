@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Latest user-directed database/relationship/task proposal: [DATABASE_AUTHORITY_DESIGN.md](DATABASE_AUTHORITY_DESIGN.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
+
 [VERIFIED packaged source, 2026-10-14] Native ObjectModDataPacket accepts client animal marker load/wipe. A private-record byte match is diagnostic only, not identity provenance. Dedicated ownership preparation is blocked. The [current authority investigation](NATIVE_IDENTITY_AUTHORITY.md) preserves private-ID reporting across absent/altered observations and evaluates a server-assigned native integer without promoting it to authority. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) reserves one expected test identity before constructor side effects and never retries/respawns on uncertainty.
 
 M0R design, 2026-10-12. FEASIBLE identity domain; lifecycle carriers EXPERIMENTAL; maturation rebinding BLOCKED until a safe Lua path is demonstrated. [Evidence](M0R_SOURCE_EVIDENCE.md), [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md), [MP tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md).

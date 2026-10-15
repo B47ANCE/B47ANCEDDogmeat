@@ -71,7 +71,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: private UUID recovery/refusal tests; Option A NO-GO for automatic native save/restart/stream continuity on verified Lua boundary.",
+      "implementation_status": "PARTIAL: private logical recovery/refusal tests; database-authoritative redesign proposes session bindings, native save/restart continuity still NO-GO.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -95,7 +95,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: private ownership rules and canonical retention tested offline; managed transport refused, native death/transfer continuity BLOCKED.",
+      "implementation_status": "PARTIAL: legacy offline ownership rules; new primary/sub-bond and lease design preserves owner on loss/transport; native lifecycle BLOCKED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -215,7 +215,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "DESIGN ONLY: per-dog/player familiarity, trust and sub-bonds; no personality or relationship gameplay writer.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -503,7 +503,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "DESIGN ONLY: verified interaction/training receipts and per-player cue familiarity; no reward/proximity farming writer.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2004,7 +2004,7 @@
         "E-LOCALIZATION"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "DESIGN ONLY: role-filtered relationship/task/handler/refusal UI contract; existing client remains diagnostic only.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2527,7 +2527,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: exact checkpoint/private recovery; Option A finds no joint durable native/private session seal; native runtime NOT TESTED.",
+      "implementation_status": "PARTIAL: existing strict private file prototype; aggregate database schema/migration proposal only, no SQLite or joint native durability proof.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2550,7 +2550,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: server-context Lua ACL/projection tests and authorized diagnostic broker; central refusal plus independent dedicated ownership fence, native trust BLOCKED.",
+      "implementation_status": "PARTIAL: legacy offline ACL/projections; natural bonding/delegation/principal adapter proposed, authenticated Steam/native lifecycle gates unresolved.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2571,7 +2571,7 @@
         "E-NATIVE"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "DESIGN ONLY: seven-priority/eight-state arbiter and session-fenced single handler lease; native control/writer seam BLOCKED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2616,7 +2616,7 @@
         "E-FILES"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "DESIGN ONLY: offline SelfCare default, StoreOffline unavailable; one biology clock and no duplicated native catch-up.",
       "runtime_status": "NOT TESTED"
     },
     {
