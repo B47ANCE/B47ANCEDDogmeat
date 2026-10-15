@@ -2,6 +2,10 @@
 
 Project Version: 0.2.0-dev.7
 
+## Option A current decision — 2026-10-14
+
+[OWNERSHIP_GO_NO_GO_DECISION.md](OWNERSHIP_GO_NO_GO_DECISION.md) records NO-GO for automatic authenticated native ownership. [ADVERSARIAL_IDENTITY_TEST_RESULTS.md](ADVERSARIAL_IDENTITY_TEST_RESULTS.md) records 375 Windows offline cases including two new fresh-VM evidence-equivalence phases; source/runtime guards unchanged from fda2538. The exact commands and current source manifest are linked there. Prior dated reports/counts below retain their original scope. No native runtime proof is supplied: G6 NOT TESTED, G7 BLOCKED / NOT TESTED, stable G8 BLOCKED.
+
 ## Current continuity revision — 2026-10-14
 
 [BLOCKER_RESOLUTION_REPORT.md](BLOCKER_RESOLUTION_REPORT.md) is the current dev.7 validation record. Baseline 6518be2 is preserved in NATIVE_ADMISSION_GUARD; prior dated command outputs/tables below remain historical scope, not renewed evidence. Current bounded implementation includes a loadable diagnostic, private recovery and central refusal policy; 373 offline Lua cases, 21 Lua modules, 1,044 fallback entries and 30 unchanged art hashes. Native source inspection/rehash and offline assembly do not prove native save/load or multiplayer identity. G3 PARTIAL; G4 STATIC PASS; G5 offline PASS; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED. No ownership enablement, launch/deploy/publish/package or main merge.

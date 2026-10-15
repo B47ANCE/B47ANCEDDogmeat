@@ -56,7 +56,8 @@ def main():
                             ('provision_restart_spec.lua', 'prepare'), ('provision_restart_spec.lua', 'recover'),
                             ('identity_restart_spec.lua', 'prepare'), ('identity_restart_spec.lua', 'recover'),
                             ('admission_restart_spec.lua', 'prepare'), ('admission_restart_spec.lua', 'recover'),
-                            ('continuity_restart_spec.lua', 'prepare'), ('continuity_restart_spec.lua', 'recover')]:
+                            ('continuity_restart_spec.lua', 'prepare'), ('continuity_restart_spec.lua', 'recover'),
+                            ('save_load_equivalence_spec.lua', 'honest'), ('save_load_equivalence_spec.lua', 'copy')]:
             lua = runtime(directory)
             lua_version = lua.eval('_VERSION')
             lua.globals().RESTART_PHASE = phase

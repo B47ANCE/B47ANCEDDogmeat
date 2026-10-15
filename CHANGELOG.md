@@ -9,6 +9,8 @@
 - Revise the same unreleased dev.7 at the user's direction: central QUARANTINE/REJECT/DEFER policy at runtime/session/selected transition boundaries, no reachable ADMIT and no dedicated ownership writes.
 - Inventory 59 direct native construction sites across 136 candidate classes; document deserializer, streaming, transport, growth and prior-session gaps in nine requested reports and exact disposable operator procedures.
 - Add 41 actual-boundary offline refusal/retention cases (373 total), managed census decision counts and 29-language explicit fallback parity; no new schema, model, installed-game or gameplay writer.
+- Option A bounded save/load investigation: issue NO-GO for automatic authenticated native ownership; document eight requested proof/decision reports, transient/positional identifier limits and the missing native admission/save-generation contract.
+- Add two fresh-VM evidence-equivalence phases (375 offline cases total); keep production runtime/guards unchanged, no positive ownership prototype or gameplay enablement.
 
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.

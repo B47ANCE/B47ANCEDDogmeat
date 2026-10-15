@@ -48,9 +48,11 @@ Public repository: [B47ANCE/B47ANCEDDogmeat](https://github.com/B47ANCE/B47ANCED
 
 The user supplied the initial 0.1.0-dev.1 scaffold version. Current 0.2.0-dev.7 continues additive MINOR development with server-side completion guards, guarded recovery/provisioning and adversarial admission/restart tests. The prior 0.2.0-dev.6 added approved branding. No storage schema or raccoon registration changes. The art checkpoint remains tested 0.1.0-dev.2; no model files changed.
 Future additive training functionality is MINOR scope; dependency versions, PZ builds and data schemas remain independent.
-G6 and G7 are NOT TESTED; G8 is BLOCKED. The current 373 offline Lua/file/event tests do not validate authenticated game actors, native dog lifecycle, durable world saves or multiplayer behavior.
+G6 and G7 are NOT TESTED; G8 is BLOCKED. The current 375 offline Lua/file/event tests do not validate authenticated game actors, native dog lifecycle, durable world saves or multiplayer behavior.
 
 The [native continuity audit](docs/BLOCKER_RESOLUTION_REPORT.md) adds a central refusal policy and nine lifecycle/security documents. ADMIT remains unreachable. The 59 direct native constructor sites and worker/deserializer paths show gaps beyond the nine hooks; a fresh process cannot attest prior-session authenticity. Same dev.7 is retained for this unreleased guard revision. [Operator procedures](docs/MULTIPLAYER_OWNERSHIP_TEST_PLAN.md) distinguish current negative tests from blocked positive ownership acceptance.
+
+[Option A concludes NO-GO](docs/OWNERSHIP_GO_NO_GO_DECISION.md) for automatic authenticated ownership on the verified Lua boundary: serialized fields cannot provide trusted origin, transient IDs cannot survive as a binding, and no complete native policy/save seal was established. The bounded save/load trace and fresh-VM equivalence witness add evidence without changing runtime guards or enabling gameplay. See the [focused disposable procedure](docs/DISPOSABLE_RUNTIME_TEST_PROCEDURE.md); positive identity proof remains blocked.
 
 The input handoff is preserved as a historical requirements artifact under `docs/USER_HANDOFF.md`.
 Evidence records are immutable snapshots; they do not establish dedicated runtime correctness.

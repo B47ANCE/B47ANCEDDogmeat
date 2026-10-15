@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Option A retains canonical 0.2.0-dev.7 for compatible documentation/test investigation within this unreleased slice, per the explicit request not to invent a version and policy that not every edit needs a bump. No src/runtime/config/API/save schema change; no new version iteration or release claim. Eight current decision/proof reports and native-save-load-evidence.json are declared mirrors. Prior counts/source hashes remain tied to their original commits.
+
 0.2.0-dev.7 continues the additive MINOR development scope with nine server completion guards and guarded runtime/provisioning boundaries. The user-directed continuity audit revises this same unreleased slice: central refusal policy, lifecycle/previous-session evidence and operator procedures. No new version is invented; this compatible hardening changes no deployed save/API schema. The nine continuity documents and metadata-only constructor/hash inventories are declared current mirrors. Earlier dev.7 test results are scoped to baseline 6518be2 and preserved separately. The prior 0.2.0-dev.6 added branding; the identity investigation remains historical at 0.2.0-dev.5. The prior 0.2.0-dev.4 added explicit provisioning and approved native/Mod ID registration. Schemas remain 1; no deployed save format is migrated. Dedicated ownership preparation is deliberately disabled after new source evidence invalidated marker provenance. There was no deployed gameplay contract to remove. Original model/historical evidence retain their tested versions.
 
 Canonical: root `VERSION`. Initial value supplied by the user; new project, no discovered predecessor.

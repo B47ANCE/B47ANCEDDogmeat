@@ -71,7 +71,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: private UUID/checkpoint recovery and refusal tests; native save/restart/stream/reconnect provenance BLOCKED, runtime NOT TESTED.",
+      "implementation_status": "PARTIAL: private UUID recovery/refusal tests; Option A NO-GO for automatic native save/restart/stream continuity on verified Lua boundary.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2505,7 +2505,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: private UUID/duplicate diagnostics and central no-ADMIT policy tested offline; complete native admission/previous-session provenance BLOCKED.",
+      "implementation_status": "PARTIAL: private allocation/duplicate quarantine; Option A NO-GO, no trusted persisted native origin or complete admission seam.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2527,7 +2527,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: exact private checkpoint/receipt recovery tested offline; partial saves refused, paired rollback freshness unproved, actual native runtime NOT TESTED.",
+      "implementation_status": "PARTIAL: exact checkpoint/private recovery; Option A finds no joint durable native/private session seal; native runtime NOT TESTED.",
       "runtime_status": "NOT TESTED"
     },
     {

@@ -1,0 +1,447 @@
+{
+  "schema": 1,
+  "project_version": "0.2.0-dev.7",
+  "observed_date": "2026-10-14",
+  "observed_game_build": "42.21",
+  "source_baseline_commit": "fda2538e64624babbd1606b4e53a0935d80c02f9",
+  "scope": "Bounded save/load chain and identity/callback candidates only; no broad constructor inventory rerun",
+  "evidence": "VERIFIED_PACKAGED_SOURCE_NOT_RUNTIME",
+  "effective_runtime": "UNKNOWN: pristine actual client/dedicated baseline required; local loose-class/launcher drift not modified",
+  "decision": "NO-GO",
+  "positive_prototype_implemented": false,
+  "ownership_enabled": false,
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/GameWindow.class",
+      "sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+      "bytes": 42029
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaEventManager.class",
+      "sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+      "bytes": 26415
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "bytes": 465921
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalCell.class",
+      "sha256": "764653e71eb2d1672c4011c04629276ea7eaaad0c75a2aac16a16158c42e0c0a",
+      "bytes": 12331
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalChunk.class",
+      "sha256": "1e2852df9dcf1b4be06f601c1bdd03b6b7f27324d9307b5c328816231aa55d5b",
+      "bytes": 7351
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerMain.class",
+      "sha256": "4744a1a9bb393d1dfb4db3b52d8475c5344a128c6e35c697eaf34f8b5da1db61",
+      "bytes": 6571
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerWorker.class",
+      "sha256": "bc0cb514dbde7ef1aef40ef047de004a622faaebca3527994cc7f2f8dfc47452",
+      "bytes": 9982
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalPopulationManager.class",
+      "sha256": "bf48fdf68b9b1efddcfe9c878f4717b8d679734ff230ee483c184b6161e4a3e4",
+      "bytes": 6673
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/VirtualAnimal.class",
+      "sha256": "3f87503412695eb519d91c8c56ccbfe5d476f9f429bda9161f8399923af87159",
+      "bytes": 10564
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/datas/AnimalData.class",
+      "sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "bytes": 51828
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+      "bytes": 25381
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/inventory/types/AnimalInventoryItem.class",
+      "sha256": "852fb728e6416ea4fbd441307d6f4aa40c8780a61d8b3aae7141f44f32e8217c",
+      "bytes": 7178
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoGridSquare.class",
+      "sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "bytes": 286573
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoMovingObject.class",
+      "sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+      "bytes": 62965
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoObject$36.class",
+      "sha256": "b052c0214baea296deb3969d78e5c31597ddb5b18a065375af893a1dfb9eae68",
+      "bytes": 795
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "bytes": 171614
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoWorld.class",
+      "sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+      "bytes": 114315
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/SaveBufferMap.class",
+      "sha256": "b4f6700bf73ad1b16e8ffdb24e0e99329093d7e9787a2c42f78713c772607e44",
+      "bytes": 3312
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+      "bytes": 79976
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/objects/IsoHutch$NestBox.class",
+      "sha256": "896d368c52c01795917a62a9c1ee23d52647ddad685e452e769ea7c1217c7f6f",
+      "bytes": 3026
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/objects/IsoHutch.class",
+      "sha256": "d9c1944025f6902416c83993199a89b2509bb2af3d09a44ced9c61b28c8589ae",
+      "bytes": 32396
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/PacketTypes$PacketType.class",
+      "sha256": "aa6718ed4e2e33b199734c8cfa4b85a64c193ccc307b2cc4deafe18e0a43d5f5",
+      "bytes": 51068
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/ServerMap.class",
+      "sha256": "5a3e449c6b7f3ea237939502c5b43ab0dd490a3752fd675611aade7ae79c548d",
+      "bytes": 21003
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/fields/character/AnimalID.class",
+      "sha256": "f9b242e46d8528701eeb101c17ae90de85b523b136d7183dca962fafe2386070",
+      "bytes": 3039
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/ObjectModDataPacket.class",
+      "sha256": "1d6f806ee95bf6d22f5a69d0535b375a60085039311697eecd6b85dff8e9d9c2",
+      "bytes": 4919
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/GlobalModDataPacket.class",
+      "sha256": "652276687c148a86b4eb5ab720af40a1cbc162c587be3d9803ab76fef69cc36a",
+      "bytes": 2861
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/GlobalModDataRequestPacket.class",
+      "sha256": "6a0700bf69c862e588b268fdf859aebaf35ba61fa56ef99dc0c19dcffe3b6910",
+      "bytes": 1415
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/StartPausePacket.class",
+      "sha256": "5990384d03c4c06c0ef10c4251578ac8fa8d45da423b64b9e6386c7bf616ca0a",
+      "bytes": 1378
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/StopPausePacket.class",
+      "sha256": "f71a0cc57100369bd90a5f04a6035e5ce49d3a9caf6f272eb6434f75b21b5210",
+      "bytes": 1376
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/popman/animal/AnimalInstanceManager.class",
+      "sha256": "edaf2d3ce605b2e27a407eac8197523c4a9597fb2a0b8fc743e474c244d4ef95",
+      "bytes": 6184
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/popman/animal/AnimalSynchronizationManager.class",
+      "sha256": "c71ad5044ad9a7d49c0ad83c41038a1c00c52a8f4af6cfbff48959e48b22da7f",
+      "bytes": 9888
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/vehicles/BaseVehicle.class",
+      "sha256": "e7ade19e1e6f66450bef2bd37e52b2afccc7377c4e4571d0fa39435ecdb55661",
+      "bytes": 296360
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/world/moddata/GlobalModData.class",
+      "sha256": "1c66b5e0c66b2c7b813c977fa91d2282a022605d12d44560298e30b340f8a718",
+      "bytes": 11661
+    }
+  ],
+  "project_sources_at_baseline": {
+    "src/native/B47Dog/NativeProvision.lua": "e4276d5841e55195dda1fdd729856d33123e13b59ae8051f2e61ef3493dbdb61",
+    "src/native/B47Dog/NativeCheckpoint.lua": "34b34416336041558085e999fa55883b64a945455ec110f17da50ead6274c3ca",
+    "src/native/B47Dog/PZCache.lua": "2e0cc531effddc155bd613a32e4266daf8ca009c9449afc7e280154bfe08823b",
+    "src/native/B47Dog/NativeRuntime.lua": "55b4fc39874eca96f34fa98098ff57aa7e011f80a6a6b1223b95d6eecbc6dfb9",
+    "src/native/B47Dog/NativeSession.lua": "018752e080bffc83f0b69a9d571ec83b0d56e52557fffd63dcf56692828a0407",
+    "src/native/B47Dog/NativeAnimal.lua": "ae1a8683490e6d10bb25338e0a6d717336a06005ab4748f62e4c6263f728c140",
+    "src/domain/B47Dog/AdmissionPolicy.lua": "01541a3888226d12bafdd53f80525b23b60b352ce52e82dcc6caa79a63287cac",
+    "src/domain/B47Dog/PrivateStore.lua": "51dc9c1d2dbc5cfb1087a23fb101363ce75c933a5e001d2a1429626cfaf8867e",
+    "src/bootstrap/shared/B47DogRegistration.lua": "5db31bc91ac36a72520f5e67fc353af2fa24213b643a26d1907bbcb7f4860815"
+  },
+  "claims": [
+    {
+      "id": "A01",
+      "source": "src/native/B47Dog/NativeProvision.lua",
+      "lines": [
+        29,
+        41,
+        50,
+        57,
+        60,
+        64,
+        70,
+        78,
+        82,
+        90
+      ],
+      "finding": "Private intent/UUID/receipt/slots precede explicit constructor; public marker and pending global anchor follow. No native origin certificate."
+    },
+    {
+      "id": "A02",
+      "class": "zombie.characters.animals.IsoAnimal",
+      "method": "public void save(java.nio.ByteBuffer, boolean, boolean) throws java.io.IOException;",
+      "offsets": [
+        167,
+        177,
+        206,
+        773
+      ],
+      "finding": "Serializes public table, itemId, animalId, virtualId; no superclass save call or persistent superclass UID field in this override."
+    },
+    {
+      "id": "A03",
+      "class": "zombie.characters.animals.IsoAnimal",
+      "method": "public void load(java.nio.ByteBuffer, int, boolean) throws java.io.IOException;",
+      "offsets": [
+        227,
+        237,
+        270,
+        728,
+        848,
+        857
+      ],
+      "finding": "Restores table/itemId/animalId/virtualId; saved online short restored only for GameClient.client; no per-animal Lua provenance/veto dispatch."
+    },
+    {
+      "id": "A04",
+      "source": "src/native/B47Dog/PZCache.lua",
+      "lines": [
+        65,
+        69,
+        71,
+        72,
+        74
+      ],
+      "finding": "PrintWriter write/close plus caller readback is not demonstrated fsync/atomic native-private durability."
+    },
+    {
+      "id": "A05",
+      "class": "zombie.characters.animals.VirtualAnimal",
+      "method": "void load(java.nio.ByteBuffer, int) throws java.io.IOException;",
+      "offsets": [
+        159,
+        197,
+        236
+      ],
+      "supporting_class": "zombie.iso.IsoObject$36",
+      "supporting_method": "protected zombie.iso.IsoObject InstantiateObject(zombie.iso.IsoCell);",
+      "supporting_offsets": [
+        0,
+        5
+      ],
+      "finding": "Generic factory creates a fresh animal, restores its bytes and removes it from live lists into virtual representation; no Lua origin receipt/veto."
+    },
+    {
+      "id": "A06",
+      "class": "zombie.characters.animals.AnimalManagerMain",
+      "method": "void fromWorker(java.util.ArrayList<zombie.characters.animals.VirtualAnimal>);",
+      "offsets": [
+        390,
+        416,
+        482,
+        560,
+        574,
+        577
+      ],
+      "finding": "Assign virtual group, addToWorld, catch-up, objectList insertion and new simulator ID; no Lua pre-admission policy dispatch."
+    },
+    {
+      "id": "A07",
+      "class": "zombie.iso.IsoWorld",
+      "method": "public void init() throws java.io.FileNotFoundException, java.io.IOException, zombie.world.WorldDictionaryException;",
+      "offsets": [
+        2820,
+        3918
+      ],
+      "supporting_class": "zombie.world.moddata.GlobalModData",
+      "supporting_method": "public void init() throws java.io.IOException;",
+      "supporting_offsets": [
+        5,
+        16
+      ],
+      "finding": "Global table load/callback precedes animal subsystem init; not per-animal provenance. GameServer.startServer OnServerStarted at 231/234."
+    },
+    {
+      "id": "A08",
+      "class": "zombie.network.ServerMap",
+      "method": "public void QueuedSaveAll(boolean);",
+      "offsets": [
+        71,
+        146
+      ],
+      "supporting_method": "public void QueuedQuit();",
+      "supporting_offsets": [
+        5,
+        78
+      ],
+      "finding": "Animal save then global table save; quit later stops animal subsystem. No proved joint durable private/native final session seal."
+    },
+    {
+      "id": "A09",
+      "class": "zombie.GameWindow",
+      "method": "private static void exit();",
+      "offsets": [
+        101,
+        115,
+        130,
+        159,
+        191
+      ],
+      "finding": "SP save, caught failure logging, post-save callbacks and later animal stop. StartPause/StopPause.processClient trigger save pause notifications at 4/6; no dedicated seal."
+    },
+    {
+      "id": "A10",
+      "class": "zombie.iso.IsoMovingObject",
+      "method": "public zombie.iso.IsoMovingObject(zombie.iso.sprite.IsoSprite, boolean);",
+      "offsets": [
+        104,
+        113,
+        145,
+        152
+      ],
+      "supporting_class": "zombie.iso.IsoObject",
+      "supporting_method": "public long getEntityNetID();",
+      "supporting_offsets": [
+        68,
+        81,
+        93,
+        106,
+        136
+      ],
+      "finding": "Superclass ID counter/constructor random UID; entity network ID derives coordinates and object index. AnimalID resolves current short simulator ID; none is an authenticated persistent native origin."
+    },
+    {
+      "id": "A11",
+      "source": "src/native/B47Dog/NativeRuntime.lua",
+      "symbols": [
+        "controller.assessAdmission",
+        "controller.census",
+        "controller.prepareOwnership"
+      ],
+      "finding": "Actual Lua boundary checks/refuses; NativeSession dedicated independent refusal; no ADMIT, adoption, automatic respawn or ownership protocol endpoint."
+    },
+    {
+      "id": "A12",
+      "class": "zombie.characters.animals.IsoAnimal",
+      "method": "public void copyFrom(zombie.characters.animals.IsoAnimal);",
+      "offsets": [
+        1,
+        5,
+        96,
+        99
+      ],
+      "supporting_paths": [
+        "zombie/inventory/types/AnimalInventoryItem.class",
+        "zombie/iso/IsoGridSquare.class",
+        "zombie/vehicles/BaseVehicle.class",
+        "zombie/characters/animals/datas/AnimalData.class",
+        "zombie/iso/objects/IsoHutch.class",
+        "zombie/iso/objects/IsoDeadBody.class",
+        "zombie/network/packets/ObjectModDataPacket.class"
+      ],
+      "finding": "Native/public state can be reconstructed/copied; ObjectModDataPacket applies animal public table. Prior C04-C12 evidence remains bounded, not full ordinary-client exploit proof."
+    }
+  ],
+  "limitations": [
+    "Source absence/candidate rejection is scoped to inspected methods and interfaces, not universal Lua impossibility.",
+    "Fresh-VM witness uses fake engine objects; native exact clone and client exploit reachability NOT TESTED.",
+    "Private byte readback does not establish joint durable native/private commit.",
+    "Actual runtime evidence required; no positive ownership prototype justified."
+  ]
+}

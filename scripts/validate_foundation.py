@@ -73,6 +73,26 @@ def check_source():
     for name in continuity_docs:
         if not (ROOT / 'docs' / (name + '.md')).is_file():
             errors.append('Missing native continuity deliverable: ' + name)
+    option_a_docs = ('NATIVE_SAVE_LOAD_AUTHORITY_TRACE', 'EXCLUSIVE_ADMISSION_SEAM_ASSESSMENT',
+                     'PREVIOUS_SESSION_AUTHENTICITY_PROOF', 'NATIVE_RECONSTRUCTION_PROVENANCE',
+                     'LUA_ONLY_OWNERSHIP_PROTOTYPE', 'ADVERSARIAL_IDENTITY_TEST_RESULTS',
+                     'DISPOSABLE_RUNTIME_TEST_PROCEDURE', 'OWNERSHIP_GO_NO_GO_DECISION')
+    for name in option_a_docs:
+        if not (ROOT / 'docs' / (name + '.md')).is_file():
+            errors.append('Missing Option A deliverable: ' + name)
+    authority_evidence = read(ROOT / 'docs/native-save-load-evidence.json')
+    if (authority_evidence.get('decision') != 'NO-GO'
+            or authority_evidence.get('positive_prototype_implemented') is not False
+            or authority_evidence.get('ownership_enabled') is not False):
+        errors.append('Option A authority disposition differs from reviewed evidence')
+    for relative, expected in authority_evidence['project_sources_at_baseline'].items():
+        path = Path(relative)
+        if path.is_absolute() or '..' in path.parts or not relative.startswith('src/'):
+            errors.append('Unsafe Option A baseline source path')
+            continue
+        actual = hashlib.sha256((ROOT / path).read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+        if actual != expected:
+            errors.append('Option A source applicability requires review: ' + relative)
     construction = read(ROOT / 'docs/native-construction-index.json')
     sites = construction['direct_constructor_sites']
     if construction.get('scope') != 'DIRECT_NEW_ONLY_NOT_GRAPH_CLOSURE' or not sites:
@@ -162,7 +182,7 @@ def check_native(game_root):
     inputs = []
     for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json',
                  'native-identity-evidence.json','native-admission-evidence.json',
-                 'native-continuity-evidence.json'):
+                 'native-continuity-evidence.json', 'native-save-load-evidence.json'):
         inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
         for item in inputs:
