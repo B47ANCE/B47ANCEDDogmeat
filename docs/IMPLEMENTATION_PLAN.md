@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Latest bounded foundational proof: [DATABASE_AUTHORITY_GO_NO_GO.md](DATABASE_AUTHORITY_GO_NO_GO.md) and its eight reports govern the next step. Offline candidate transactions are test-only; natural bonding/handler leases stay contracts, live ownership/tasks stay disabled. Do not continue speculative guards. Reopen only for a sufficient vanilla principal/lifecycle/control/commit capability or explicitly approved contract change, then disposable runtime evidence. D1/D2/D3/D8 BLOCKED; D4/D6 EXPERIMENTAL; D5 FEASIBLE for tested logical subset; D7 NOT TESTED.
+
 M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. The M0R documentation delivery itself authorized no gameplay; the user subsequently authorized feature development on 2026-10-14. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 
 ## Authority and compatibility

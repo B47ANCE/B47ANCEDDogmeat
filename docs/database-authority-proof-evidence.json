@@ -1,0 +1,669 @@
+{
+  "format_revision": 1,
+  "project_version": "0.2.0-dev.7",
+  "source_baseline_commit": "56a391c1ca2073e1d4db40f851b7b23e01241ba9",
+  "steam_build": "25485521",
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/Core.class",
+      "sha256": "8f5c69740c8bf2181123a831ab68d1dfb047453687cca6dc62c77816d76ab360",
+      "bytes": 150885
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/GameWindow.class",
+      "sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+      "bytes": 42029
+    },
+    {
+      "container": "loose",
+      "path": "zombie/GameWindow.class",
+      "sha256": "83426d04937b9f4284c515d79068fddc501a7ca7f2798735f95a5c35b8317f6b",
+      "bytes": 46342
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoWorld.class",
+      "sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+      "bytes": 114315
+    },
+    {
+      "container": "loose",
+      "path": "zombie/iso/IsoWorld.class",
+      "sha256": "a3d530a1d7990e9a50d04768c1be550ac3ba5f58b25bcb8a77a476b9ef381d2c",
+      "bytes": 121146
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaEventManager.class",
+      "sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+      "bytes": 26415
+    },
+    {
+      "container": "loose",
+      "path": "zombie/Lua/LuaEventManager.class",
+      "sha256": "d786c342e563fb735727beb268e39a9a40726c2e83a8ac15ec06c753580b524b",
+      "bytes": 28066
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+      "bytes": 25381
+    },
+    {
+      "container": "loose",
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "sha256": "d5724bb56020b572dbc24dc1d63836fcf49d327c3718baebe49434884e37f21b",
+      "bytes": 29130
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject$LuaFileWriter.class",
+      "sha256": "d635dbbbc2f07c45ce0cce7672a38c7ede92c445714d855c91e1f5a8acba6c3e",
+      "bytes": 1142
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/KahluaNumberConverter.class",
+      "sha256": "7aafa6a4dafae18150c72fdd4ad58e596d87eb97cbad51d2e29eb82532af8958",
+      "bytes": 1937
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/KahluaNumberConverter$NumberToLuaConverter.class",
+      "sha256": "9b78e9c0edfc7946d01de3e293c92c5690000aae12d3312fb3800e47cbf9e851",
+      "bytes": 2762
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/raknet/UdpConnection.class",
+      "sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+      "bytes": 20451
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "container": "loose",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+      "bytes": 265249
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/znet/SteamUtils.class",
+      "sha256": "c2963f18c951f3ad0a9820246454ccc804b02d5f0840716cd2189200ceaab05b",
+      "bytes": 9070
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "container": "loose",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+      "bytes": 114103
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/VirtualAnimal.class",
+      "sha256": "3f87503412695eb519d91c8c56ccbfe5d476f9f429bda9161f8399923af87159",
+      "bytes": 10564
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerMain.class",
+      "sha256": "4744a1a9bb393d1dfb4db3b52d8475c5344a128c6e35c697eaf34f8b5da1db61",
+      "bytes": 6571
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerWorker.class",
+      "sha256": "bc0cb514dbde7ef1aef40ef047de004a622faaebca3527994cc7f2f8dfc47452",
+      "bytes": 9982
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/behavior/BaseAnimalBehavior.class",
+      "sha256": "a4f125807bc3843053717711c83193dea0f158a0823cd6510758f8453f84d7f7",
+      "bytes": 42129
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/datas/AnimalData.class",
+      "sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "bytes": 51828
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "bytes": 171614
+    },
+    {
+      "container": "loose",
+      "path": "zombie/iso/IsoObject.class",
+      "sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "bytes": 177485
+    },
+    {
+      "container": "loose",
+      "path": "media/lua/shared/TimedActions/Animals/ISFeedAnimalFromHand.lua",
+      "sha256": "337847d631480f8540ec5f307185f8326669f78a7b83185291085943e1098697",
+      "bytes": 2128
+    },
+    {
+      "container": "loose",
+      "path": "media/lua/shared/TimedActions/Animals/ISPetAnimal.lua",
+      "sha256": "e303c6654963b90a0bb3200f674dd78411c6bfa2d17c52d48b4fad914bf2e0a0",
+      "bytes": 2994
+    },
+    {
+      "container": "loose",
+      "path": "media/lua/shared/TimedActions/Animals/ISAttachAnimalToPlayer.lua",
+      "sha256": "511db72fea2830975e9f05a3d8c88e8f4a99f74bcadf486c8db4b77469fa3662",
+      "bytes": 2137
+    }
+  ],
+  "drift": [
+    {
+      "path": "zombie/GameWindow.class",
+      "current_loose_sha256": "83426d04937b9f4284c515d79068fddc501a7ca7f2798735f95a5c35b8317f6b",
+      "packaged_sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+      "previous_observation": {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/GameWindow.class",
+        "historical_sha256": "a09bbcd0a25409f3c4fd68d975e16eb0b6d3ece3fdfc0abcf881695ffde601fd",
+        "observed_sha256": "83426d04937b9f4284c515d79068fddc501a7ca7f2798735f95a5c35b8317f6b",
+        "packaged_sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+        "bytes": 46342,
+        "observed_loose_matches_packaged": false
+      },
+      "added_methods": [
+        "private static void lambda$mainThreadInit$0();",
+        "private static void loadTilePacks();"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 18,
+      "selected_changed_methods": [
+        "private static void exit();"
+      ],
+      "observed_external_namespace_references": [
+        "pzopt/AotCache",
+        "pzopt/AudioLimiter",
+        "pzopt/BootAsync",
+        "pzopt/BootPump",
+        "pzopt/Config",
+        "pzopt/DriveJitter",
+        "pzopt/DynRes",
+        "pzopt/FrameCap",
+        "pzopt/FrameClock",
+        "pzopt/GtAb",
+        "pzopt/InputLag",
+        "pzopt/InputLatch",
+        "pzopt/LuaPrecompiler",
+        "pzopt/MacPresent",
+        "pzopt/NoLoadingScreen",
+        "pzopt/Overrides",
+        "pzopt/Pacing",
+        "pzopt/ResumeShot",
+        "pzopt/ScriptDump",
+        "pzopt/TileDefPreload",
+        "pzopt/UiProfile",
+        "pzopt/UiRetained",
+        "pzopt/Updater",
+        "pzopt/VehicleSmooth",
+        "pzopt/VsyncLock",
+        "pzopt/ZombieLate"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    },
+    {
+      "path": "zombie/iso/IsoWorld.class",
+      "current_loose_sha256": "a3d530a1d7990e9a50d04768c1be550ac3ba5f58b25bcb8a77a476b9ef381d2c",
+      "packaged_sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+      "previous_observation": {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/iso/IsoWorld.class",
+        "historical_sha256": "341c9a6c48abc1e4e7c245e07924630ff10d3e19650b9558ec16e4f8ea2ed9d3",
+        "observed_sha256": "a3d530a1d7990e9a50d04768c1be550ac3ba5f58b25bcb8a77a476b9ef381d2c",
+        "packaged_sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+        "bytes": 121146,
+        "observed_loose_matches_packaged": false
+      },
+      "added_methods": [
+        "private void pzoptSortZombiesByScore();",
+        "public void pzoptPreloadTileDefs(zombie.iso.sprite.IsoSpriteManager, java.util.List<java.lang.String>, java.util.List<java.lang.Integer>, java.util.List<java.lang.String>);"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 57,
+      "selected_changed_methods": [
+        "public void update();"
+      ],
+      "observed_external_namespace_references": [
+        "pzopt/CenterFirstLoad",
+        "pzopt/Config",
+        "pzopt/Darkness",
+        "pzopt/GpuSections",
+        "pzopt/GtAb",
+        "pzopt/LoadTrace",
+        "pzopt/Overrides",
+        "pzopt/SortKeys",
+        "pzopt/SpriteWindow",
+        "pzopt/TileDefPreload",
+        "pzopt/TileDepthFix",
+        "pzopt/ZombieLate",
+        "pzopt/ZombieLod"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    },
+    {
+      "path": "zombie/Lua/LuaEventManager.class",
+      "current_loose_sha256": "d786c342e563fb735727beb268e39a9a40726c2e83a8ac15ec06c753580b524b",
+      "packaged_sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+      "previous_observation": {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/Lua/LuaEventManager.class",
+        "historical_sha256": "9508ea6d477488d9af93c442be5281f34ec5486a451683ab94c96abfd71e2c84",
+        "observed_sha256": "d786c342e563fb735727beb268e39a9a40726c2e83a8ac15ec06c753580b524b",
+        "packaged_sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+        "bytes": 28066,
+        "observed_loose_matches_packaged": false
+      },
+      "added_methods": [
+        "public static boolean pzoptHasListeners(java.lang.String);"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 13,
+      "selected_changed_methods": [
+        "public static void triggerEvent(java.lang.String);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);",
+        "public static void triggerEvent(java.lang.String, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object);"
+      ],
+      "observed_external_namespace_references": [
+        "pzopt/Overrides",
+        "pzopt/UpdateBatch"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    },
+    {
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "current_loose_sha256": "d5724bb56020b572dbc24dc1d63836fcf49d327c3718baebe49434884e37f21b",
+      "packaged_sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+      "previous_observation": {
+        "historical_manifest": "docs/native-pairing-evidence.json",
+        "container": "game-root",
+        "path": "zombie/gameStates/GameLoadingState.class",
+        "historical_sha256": "2fc8f3207c6cf071dd37827b44e23901ea0bbfd79059621991d3d1e80a0ab245",
+        "observed_sha256": "d5724bb56020b572dbc24dc1d63836fcf49d327c3718baebe49434884e37f21b",
+        "packaged_sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+        "bytes": 29130,
+        "observed_loose_matches_packaged": false
+      },
+      "added_methods": [
+        "private static void pzoptInitChatIcons();",
+        "private void pzoptOnMain(java.lang.Runnable);"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 11,
+      "selected_changed_methods": [
+        "public void exit();",
+        "public zombie.gameStates.GameStateMachine$StateAction update();"
+      ],
+      "observed_external_namespace_references": [
+        "pzopt/AnimalPreload",
+        "pzopt/BootAsync",
+        "pzopt/BootPump",
+        "pzopt/CenterFirstLoad",
+        "pzopt/Config",
+        "pzopt/JitGovernor",
+        "pzopt/Log",
+        "pzopt/LuaEventProfile",
+        "pzopt/LuaPrecompiler",
+        "pzopt/NoLoadingScreen",
+        "pzopt/Overrides",
+        "pzopt/ResumeShot"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    },
+    {
+      "path": "zombie/characters/IsoPlayer.class",
+      "current_loose_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+      "packaged_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "previous_observation": {},
+      "added_methods": [
+        "private int pzoptUpdateLosNative(int, float, float, float, boolean, boolean);",
+        "private static boolean pzoptAllPlayersAsleep();",
+        "public float getSneakSpotMod();"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 147,
+      "selected_changed_methods": [
+        "public void update();"
+      ],
+      "observed_external_namespace_references": [
+        "pzopt/Config",
+        "pzopt/FrameTick",
+        "pzopt/GtAb",
+        "pzopt/LosPrefetch",
+        "pzopt/NativeLos",
+        "pzopt/Overrides",
+        "pzopt/PlayerLos"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    },
+    {
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "current_loose_sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+      "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "previous_observation": {
+        "historical_manifest": "docs/contracts/native_evidence.json",
+        "container": "game-root",
+        "path": "zombie/characters/animals/IsoAnimal.class",
+        "historical_sha256": "f345480fb0a2e652ffe613d37df2a438b07e9c655213fe71f9b5e5c895fe1e73",
+        "observed_sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+        "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+        "bytes": 114103,
+        "observed_loose_matches_packaged": false
+      },
+      "added_methods": [
+        "private void pzoptSpottedTicks(zombie.characters.animals.behavior.BaseAnimalBehavior, int);",
+        "private void pzoptUpdateLosSnapshot(zombie.characters.animals.behavior.BaseAnimalBehavior, boolean, float, float);",
+        "private void pzoptUpdateLosWalk(zombie.characters.animals.behavior.BaseAnimalBehavior, boolean, float, float, pzopt.CellObjectSet);"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 64,
+      "selected_changed_methods": [
+        "public void init(zombie.characters.animals.datas.AnimalBreed);",
+        "public void update();"
+      ],
+      "observed_external_namespace_references": [
+        "pzopt/AnimalLosSkip",
+        "pzopt/AnimalLosSnapshot",
+        "pzopt/AnimalLosWalk",
+        "pzopt/CellObjectSet",
+        "pzopt/Config",
+        "pzopt/GtAb",
+        "pzopt/Overrides"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    },
+    {
+      "path": "zombie/iso/IsoObject.class",
+      "current_loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "previous_observation": {},
+      "added_methods": [
+        "private static boolean pzoptWarm(zombie.iso.sprite.IsoSprite, zombie.iso.sprite.IsoSpriteInstance);",
+        "private static zombie.core.textures.ColorInfo pzoptStCol();",
+        "private static zombie.core.textures.ColorInfo pzoptStCol2();",
+        "private static zombie.iso.IsoObject$PzoptScratch pzoptScratch();",
+        "public boolean pzoptHasChildrenOrSplats();",
+        "public boolean pzoptSpritesWarm();",
+        "public void pzoptEcsChanged();",
+        "public zombie.characters.ecs.ECSComponent[] pzoptEcsValues();"
+      ],
+      "removed_methods": [],
+      "changed_normalized_method_count": 190,
+      "selected_changed_methods": [],
+      "observed_external_namespace_references": [
+        "pzopt/BakeRecord",
+        "pzopt/Config",
+        "pzopt/DrawRecorder",
+        "pzopt/PixelLight",
+        "pzopt/RenderScratch"
+      ],
+      "runtime_effect": "UNKNOWN; source differences are not an execution test"
+    }
+  ],
+  "production_sources": {
+    "src/bootstrap/client/B47DogTestMenu.lua": "f3b96ca3284aff43c513b8c388bf6b9d5eafb6286b8410c08a5deebed77b8b4f",
+    "src/bootstrap/server/B47DogBootstrap.lua": "aa363ec7a0ed5cdbacaf0bc70f434e2917c5d72edae33026c86455b49f2a8f34",
+    "src/bootstrap/shared/B47DogRegistration.lua": "5db31bc91ac36a72520f5e67fc353af2fa24213b643a26d1907bbcb7f4860815",
+    "src/domain/B47Dog/Access.lua": "41b14206b6cd1ee4f7d9ec2501f4af9a9537cb896fe0f307a06b3dec293625c4",
+    "src/domain/B47Dog/AdmissionPolicy.lua": "01541a3888226d12bafdd53f80525b23b60b352ce52e82dcc6caa79a63287cac",
+    "src/domain/B47Dog/Codec.lua": "0b9eccfaf02dcff491f6c3655046293d6b875c1da2bd51438518d852d8bf1970",
+    "src/domain/B47Dog/Guard.lua": "98e693ba1753830faccd086079652d64178d71a6c34e3d213187d7632d59d7b6",
+    "src/domain/B47Dog/Identity.lua": "d65d3fc920588b36d8ce97affc3dc2a4f402b02beb816a4557929981762f7b6e",
+    "src/domain/B47Dog/Ownership.lua": "21ebf0a477ffec2832b2e2a07b73d0c147e6dd99bf516754eaa4e40d3a2c128f",
+    "src/domain/B47Dog/PrivateStore.lua": "51dc9c1d2dbc5cfb1087a23fb101363ce75c933a5e001d2a1429626cfaf8867e",
+    "src/domain/B47Dog/Projection.lua": "ed27bf11bd9dd334358d4a4889d5f7933dd3190df6428b9c08f049f65cfcce89",
+    "src/domain/B47Dog/Snapshot.lua": "66071c84dfc7f1923503bff797eb0abd8a53241605aa2c1df6c8eae1aeeefbff",
+    "src/native/B47Dog/NativeAdmissionGuard.lua": "21673d8f98eefdcae3b47066d669d8eb8cc510bdcdd765d95fb39c410564d851",
+    "src/native/B47Dog/NativeAnimal.lua": "ae1a8683490e6d10bb25338e0a6d717336a06005ab4748f62e4c6263f728c140",
+    "src/native/B47Dog/NativeAuthority.lua": "b7b8b3fcea2c8183998a0da98cabb8d2d440be7fda9b14988b39f210cd9ae947",
+    "src/native/B47Dog/NativeCheckpoint.lua": "34b34416336041558085e999fa55883b64a945455ec110f17da50ead6274c3ca",
+    "src/native/B47Dog/NativeProvision.lua": "e4276d5841e55195dda1fdd729856d33123e13b59ae8051f2e61ef3493dbdb61",
+    "src/native/B47Dog/NativeRuntime.lua": "55b4fc39874eca96f34fa98098ff57aa7e011f80a6a6b1223b95d6eecbc6dfb9",
+    "src/native/B47Dog/NativeSession.lua": "018752e080bffc83f0b69a9d571ec83b0d56e52557fffd63dcf56692828a0407",
+    "src/native/B47Dog/NativeTestService.lua": "fc936a03617a0c331646786d0824ddd7c0aecba3cac1d7eed240cdddf584d2fb",
+    "src/native/B47Dog/PZCache.lua": "2e0cc531effddc155bd613a32e4266daf8ca009c9449afc7e280154bfe08823b"
+  },
+  "environment": "READ_ONLY_SOURCE_INSPECTION; no game/server execution",
+  "effective_runtime": "UNKNOWN / BASELINE_DRIFT",
+  "native_no_go_retained": true,
+  "observed_date": "2026-10-14",
+  "game_version": "42.21",
+  "production_source_hash_normalization": "CRLF_TO_LF",
+  "source_request": {
+    "path": "docs/requirements/DATABASE_AUTHORITY_NATIVE_LIFECYCLE_REQUEST.md",
+    "sha256": "1c45c88e41bcc59026d9f20da9fbfbd23711d9516b63c7b062e10ceb07362173",
+    "complete": true
+  },
+  "decision": "NO-GO",
+  "runtime_enabled": false,
+  "ownership_enabled": false,
+  "live_task_control_enabled": false,
+  "bond_gameplay_enabled": false,
+  "handler_gameplay_enabled": false,
+  "sqlite_verified": false,
+  "fixture_only": true,
+  "gates": {
+    "D1": "BLOCKED",
+    "D2": "BLOCKED",
+    "D3": "BLOCKED",
+    "D4": "EXPERIMENTAL",
+    "D5": "FEASIBLE",
+    "D6": "EXPERIMENTAL",
+    "D7": "NOT TESTED",
+    "D8": "BLOCKED"
+  },
+  "runtime_status": "NOT TESTED",
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED",
+  "production_metadata": {
+    "src/metadata/mod.info": "b93729f5ce32c3928213d0f17cdb7f8eaeb728de0d77ebeb37e3028db8f71268",
+    "src/metadata/runtime-options.json": "9bf0b76c47c9f8ac36fffd5467de715eb5f6c7571d73d79e183cda4f589b4a16",
+    "src/metadata/sandbox-options.txt": "7b65ba537ec20b76a1f4036649c28ccf3f3eb6f2d17c9a07ab80669448e2e2d3"
+  },
+  "historical_manifests": {
+    "docs/native-admission-evidence.json": "16ca1c4de278c482644da90580db2e1bc684b451523c0f4990e01208ca3bd56c",
+    "docs/native-bootstrap-evidence.json": "5755e549ffffc3b23fb1685e599d659b00cf16b8e5f9db0a8537ca6a2e383556",
+    "docs/native-construction-index.json": "e445270899a8b3da2febb2225220acb431718046451b1e2985f40506c944e901",
+    "docs/native-continuity-evidence.json": "83d17d5a1a9cef5c142994e8ad9c2a43520858a0c19d729fa890118a6650b1d5",
+    "docs/native-database-redesign-evidence.json": "b1e533b61136d087ff49251a9c9e2293527dc3e45e92bc84124eb0e0b8a31113",
+    "docs/native-identity-evidence.json": "8323794adeed41464e1747130ab1c30e5c6284b649e7a97dfdc6c73a26f1eed9",
+    "docs/native-pairing-evidence.json": "9842f548c553dfde81e40ed3318f5619b8d9d3ca4bbf8bc8489cc03c28aa9dde",
+    "docs/native-persistence-evidence.json": "ac48ea02baa93e0563b695ff766b27510468ecd5b06fb3ba33b310e45323008c",
+    "docs/native-save-load-evidence.json": "9a2aba36ff12b5eb93616ad3efba62802b0809e8cdf6dcef74f3b6836ddeb8ac"
+  },
+  "claims": [
+    {
+      "id": "P01",
+      "path": "zombie/network/GameServer.class",
+      "method": "static void receiveClientCommand(zombie.core.network.ByteBufferReader, zombie.core.raknet.UdpConnection, short);",
+      "offsets": [
+        66,
+        77,
+        82,
+        93,
+        217,
+        228
+      ],
+      "finding": "Callback player comes from sending connection; argument table remains untrusted. Source-only; no runtime principal proof."
+    },
+    {
+      "id": "P02",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "method": "public static java.lang.String getSteamIDFromUsername(java.lang.String);",
+      "offsets": [
+        0,
+        6,
+        9,
+        25,
+        28,
+        32
+      ],
+      "finding": "Steam+GameClient.client gated; dedicated branch returns null."
+    },
+    {
+      "id": "P03",
+      "path": "zombie/Lua/KahluaNumberConverter.class",
+      "method": "public static void install(se.krka.kahlua.converter.KahluaConverterManager);",
+      "offsets": [
+        105,
+        110,
+        115,
+        199,
+        204,
+        210
+      ],
+      "related_path": "zombie/Lua/KahluaNumberConverter$NumberToLuaConverter.class",
+      "related_method": "public java.lang.Object fromJavaToLua(T);",
+      "related_offsets": [
+        0,
+        10,
+        13
+      ],
+      "finding": "Boxed and primitive long converters use Number.doubleValue; numeric SteamID cannot be assumed lossless. No runtime invocation."
+    },
+    {
+      "id": "P04",
+      "path": "zombie/characters/IsoPlayer.class",
+      "method": "public long getSteamID();",
+      "finding": "Native long candidate, not a verified lossless Lua string adapter. UdpConnection native getters/public signatures do not by themselves prove exposure."
+    },
+    {
+      "id": "P05",
+      "path": "zombie/iso/IsoObject.class",
+      "method": "public boolean Serialize();",
+      "offsets": [
+        0,
+        1
+      ],
+      "finding": "Returns true; no complete managed save-exclusion Lua interface established."
+    },
+    {
+      "id": "P06",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "method": "public void delete();",
+      "offsets": [
+        24,
+        28,
+        37
+      ],
+      "finding": "Calls native removal; worker removal/saved-cell invalidation is not durable complete withdrawal or absence proof."
+    },
+    {
+      "id": "P07",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "method": "public void pathToCharacter(zombie.characters.IsoGameCharacter);",
+      "offsets": [
+        96,
+        112
+      ],
+      "related_path": "zombie/characters/animals/behavior/BaseAnimalBehavior.class",
+      "related_methods": [
+        "public void update();",
+        "private void followChr();"
+      ],
+      "finding": "Native path delegation and attached-player follow exist; sole control producer/cancellation/simulator authority unproved."
+    },
+    {
+      "id": "P08",
+      "path": "media/lua/shared/TimedActions/Animals/ISFeedAnimalFromHand.lua",
+      "symbol": "ISFeedAnimalFromHand:complete",
+      "finding": "Calls feedFromHand and sendFeedAnimalFromHand, returns true; not an authenticated private consumption receipt.",
+      "line_anchors": {
+        "ISFeedAnimalFromHand:complete": 45
+      }
+    },
+    {
+      "id": "P09",
+      "path": "media/lua/shared/TimedActions/Animals/ISPetAnimal.lua",
+      "symbols": [
+        "ISPetAnimal:complete",
+        "ISPetAnimal:serverStart",
+        "ISPetAnimal:animEvent"
+      ],
+      "finding": "Multiple candidate pet completion paths; native client/timer early return means invocation alone cannot certify accepted effect.",
+      "line_anchors": {
+        "ISPetAnimal:complete": 69,
+        "ISPetAnimal:serverStart": 81,
+        "ISPetAnimal:animEvent": 86
+      }
+    },
+    {
+      "id": "P10",
+      "path": "zombie/Lua/LuaManager$GlobalObject$LuaFileWriter.class",
+      "methods": [
+        "public void write(java.lang.String) throws java.io.IOException;",
+        "public void close() throws java.io.IOException;"
+      ],
+      "offsets": [
+        1,
+        5,
+        4
+      ],
+      "finding": "Wraps PrintWriter write/close; no exposed fsync or atomic private/native commit in inspected wrapper."
+    }
+  ],
+  "offline_validation": {
+    "environment": "Windows Lua 5.1 through Lupa 2.6; not PZ/Kahlua",
+    "existing_cases": 375,
+    "added_cases": 31,
+    "total_cases": 406,
+    "failed": 0,
+    "fixture_schema": "TEST_ONLY; not production snapshot or complete canine schema",
+    "faults": "Injected Lua exceptions/partial bytes/readback corruption; no real process/power loss",
+    "combined_pair_rollback_detection": false,
+    "durable_native_commit_proven": false
+  }
+}

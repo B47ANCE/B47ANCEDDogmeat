@@ -9,6 +9,7 @@ import zipfile
 from build_loadable import assemble
 import tempfile
 from validate_database_design import check as check_database_design
+from validate_database_authority_proof import check as check_database_authority_proof
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
@@ -41,7 +42,7 @@ def read(path):
 
 
 def check_source():
-    errors = check_database_design()
+    errors = check_database_design() + check_database_authority_proof()
     inventory = read(ROOT / 'source-inventory.json')
     catalog = read(ROOT / 'docs/contracts/localization_keys.json')
     if set(inventory['authoritative_lua']) != MODULES:

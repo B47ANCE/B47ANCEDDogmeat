@@ -51,6 +51,8 @@ def main():
                             ('identity_authority_spec.lua', None),
                             ('admission_spec.lua', None),
                             ('continuity_spec.lua', None),
+                            ('database_transaction_spec.lua', None),
+                            ('database_restart_spec.lua', 'prepare'), ('database_restart_spec.lua', 'recover'),
                             ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover'),
                             ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover'),
                             ('provision_restart_spec.lua', 'prepare'), ('provision_restart_spec.lua', 'recover'),

@@ -15,6 +15,9 @@
 - Add the user-directed database-authoritative logical identity, natural primary/sub-bond, task/handler lease and default offline self-care design contracts; preserve Option A NO-GO and all live gates.
 - Audit SQLite exposure, authenticated actor/Steam identity, save exclusion/removal and enum format against Build 42.21 / Steam 25485521; retain private-file extension as a candidate only. No runtime controller, migration or new sandbox option is registered.
 
+- Complete the bounded database/native authority proof with eight reports, lossless-Steam numeric conversion findings, read-only override comparisons and retained NO-GO. Preserve existing historical manifests and production Lua.
+- Add a test-only world aggregate transaction experiment with atomic logical owner/bond/receipt candidates, revision/replay checks, fault injection, paired rollback characterization and fresh-VM recovery: 406 offline cases total. No production schema/migration, bonding/handler gameplay or task control.
+
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.2.0-dev.5. No new SP/dedicated MP evidence.

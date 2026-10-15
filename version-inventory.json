@@ -265,6 +265,42 @@
     {
       "path": "docs/native-database-redesign-evidence.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/AUTHENTICATED_PRINCIPAL_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_MANAGED_LIFECYCLE_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SERVER_MOVEMENT_INTERACTION_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PRIVATE_DATABASE_DURABILITY_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_OVERRIDE_DRIFT_REPORT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_AUTHORITY_BLOCKER_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DISPOSABLE_RUNTIME_VALIDATION_PLAN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_AUTHORITY_GO_NO_GO.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/database-authority-proof-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {
@@ -309,6 +345,11 @@
       "category": "compatibility",
       "reference": "src/native/B47Dog/NativeAdmissionGuard.lua:LUA_WORLD_CARRIER_GUARD_1",
       "reason": "Selected-hook contract revision; not a native admission certificate, project version, save schema or configurable gameplay value."
+    },
+    {
+      "category": "compatibility",
+      "reference": "tests/lua/database_store_fixture.lua:fixtureSchema",
+      "reason": "Synthetic test-only aggregate/envelope format, not a production migration or complete canine schema."
     }
   ],
   "historical": [
@@ -387,6 +428,10 @@
     {
       "reference": "docs/requirements/TASK_HANDLER_AUTHORITY_REQUEST.md",
       "reason": "Immutable supplied database/task design request snapshot; completeness noted in database_redesign.json; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/DATABASE_AUTHORITY_NATIVE_LIFECYCLE_REQUEST.md",
+      "reason": "Immutable complete supplied native/database foundational proof request; not a current version mirror."
     }
   ]
 }
