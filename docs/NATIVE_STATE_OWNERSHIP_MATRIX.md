@@ -1,6 +1,6 @@
 # Native state ownership matrix
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 Current source correction: the native animal marker is client-writable through ObjectModDataPacket. The table below is the intended ownership contract; its native marker implementation does not enforce that sole-writer claim. Dedicated ownership/gameplay preparation is blocked. The [identity authority investigation](NATIVE_IDENTITY_AUTHORITY.md) also rejects trusting an assigned native integer without complete reconstruction/admission controls; private logical identity recovery remains separate.
 

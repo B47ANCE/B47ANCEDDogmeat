@@ -1,6 +1,6 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 M0R checkpoint, 2026-10-12. Standalone Lua-only server-authoritative canine domain using verified native APIs/data/assets. Companion Dogs/DogPack are not dependencies. No custom Java/JAR/agent/class replacement. The M0R documentation delivery itself authorized no gameplay; the user subsequently authorized feature development on 2026-10-14. Former plan preserved verbatim as [IMPLEMENTATION_PLAN_M0_ADDON.md](historical/IMPLEMENTATION_PLAN_M0_ADDON.md).
 

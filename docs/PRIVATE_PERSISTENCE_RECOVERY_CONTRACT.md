@@ -1,6 +1,6 @@
 # Private persistence and recovery contract
 
-Project Version: 0.2.0-dev.5
+Project Version: 0.2.0-dev.6
 
 The current [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds a single explicit operator-confirmed first-store attempt, receipt-first preservation and one temporary carrier. No automatic new-world inference or uncertain retry exists. The operator asserts a new disposable world; missing files alone never authorize it. Private records remain private, but the native marker cannot prove multiplayer provenance. Dedicated ownership preparation is blocked. The [identity audit](NATIVE_IDENTITY_AUTHORITY.md) adds read-only recovery summaries from the private snapshot, so missing or forged markers cannot select the displayed saved UUID. No schema migration or auto-rebind occurs.
 

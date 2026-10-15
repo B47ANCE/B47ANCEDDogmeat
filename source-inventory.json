@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.5",
+  "project_version": "0.2.0-dev.6",
   "status": "LOADABLE DIAGNOSTIC SOURCE; private identity recovery separated from unverified native carrier provenance; dedicated ownership blocked",
   "authoritative_lua": [
     "src/bootstrap/client/B47DogTestMenu.lua",
@@ -128,6 +128,8 @@
   "metadata_sources": [
     "src/metadata/mod.info",
     "src/metadata/sandbox-options.txt",
-    "src/metadata/runtime-options.json"
+    "src/metadata/runtime-options.json",
+    "src/metadata/poster.png",
+    "src/metadata/media/ui/B47ANCEDDogmeat_icon.png"
   ]
 }

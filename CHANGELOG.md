@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.0-dev.6]
+- Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
+- Offline branding/version checks only; earlier validation remains historical at 0.2.0-dev.5. No new SP/dedicated MP evidence.
+
 ## [0.2.0-dev.5] — 2026-10-14
 
 - Continue additive MINOR development with a native identity authority audit and independent reporting of recovered private dog identity.
