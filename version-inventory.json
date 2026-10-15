@@ -301,6 +301,14 @@
     {
       "path": "docs/database-authority-proof-evidence.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/STEAMID64_SERVER_PATH_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-principal-string-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {

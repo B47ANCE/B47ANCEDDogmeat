@@ -1,0 +1,601 @@
+{
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager.class",
+      "sha256": "dcaad0082ca27a15550c7d0a6e14b3aeb71f634a14f32123dec620df180c646d",
+      "bytes": 26525
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/KahluaNumberConverter.class",
+      "sha256": "7aafa6a4dafae18150c72fdd4ad58e596d87eb97cbad51d2e29eb82532af8958",
+      "bytes": 1937
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/KahluaNumberConverter$NumberToLuaConverter.class",
+      "sha256": "9b78e9c0edfc7946d01de3e293c92c5690000aae12d3312fb3800e47cbf9e851",
+      "bytes": 2762
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoLivingCharacter.class",
+      "sha256": "04398e7fee60de3edc44ea5a908fbbbb1862743bb1cc05b075d525d6fdc55b55",
+      "bytes": 10358
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "bytes": 465921
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/NetworkUser.class",
+      "sha256": "d82e3313bbf45c2f317d4a96260a74a46d0bedc1b28fc6613ce17ca153068e35",
+      "bytes": 5881
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/NetworkUsers.class",
+      "sha256": "43f6343fb0d8cb907b6a31cb00e2167a6b04c6296933d165a5c174a0bcb2a7ca",
+      "bytes": 2397
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/NetworkCharacterAI.class",
+      "sha256": "7ec30ba9fc20cd90ab14c36907c89ccba11faf29c506739e0998c167c598c4c8",
+      "bytes": 14508
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/NetworkPlayerAI.class",
+      "sha256": "46df5ede124384e10a848fe9eb6f6ba06cccbb3cc74f51e5e9b0306cd80a628a",
+      "bytes": 27392
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/raknet/UdpConnection.class",
+      "sha256": "9c9bb471ff0c3dccdd0e52a3bb3c770327d02f0ad262187f950e660b2730e763",
+      "bytes": 20451
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/znet/SteamUser.class",
+      "sha256": "11e90a718d34da581d319d78c10cf4d9928d3a4e10e21591d8a17df232563dc6",
+      "bytes": 695
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/znet/SteamUtils.class",
+      "sha256": "c2963f18c951f3ad0a9820246454ccc804b02d5f0840716cd2189200ceaab05b",
+      "bytes": 9070
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/znet/SteamFriend.class",
+      "sha256": "517c4409d7d725aa274eb31b22c14870642494c05988b06f54a338c9be6a4730",
+      "bytes": 1526
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/Server.class",
+      "sha256": "49174e71de03bd9f28e8da804c0c3e602377b965a74dbd25ca05baa3e812b942",
+      "bytes": 12087
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/RequestNetworkUsersPacket.class",
+      "sha256": "16be2e29f7bd9a663c9e50e87faaa2075e0f7fbe4c42fed2485dd13c5a9e19e8",
+      "bytes": 1830
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/NetworkUsersPacket.class",
+      "sha256": "2bd7876461ac76bfdf4153d622f5ee792120c1ce3bcc865f1710abd8de5f9c72",
+      "bytes": 4897
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/savefile/ServerPlayerDB.class",
+      "sha256": "aeb328c4dfbd436c372b3c2d350ac533dcd4e692b6ee58a5f8c24807ecf31379",
+      "bytes": 12956
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "se/krka/kahlua/integration/expose/ReturnValues.class",
+      "sha256": "86f6b0016d1f946f5faf1ae2fcf50c58da2de547788eb76b3a0ed69551cd40c7",
+      "bytes": 3019
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+      "bytes": 23071
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "se/krka/kahlua/converter/KahluaConverterManager.class",
+      "sha256": "d2293d6b953c17d3e9f7849b3403a35fc04ec5a76f8d138d8fbd778f5accd15c",
+      "bytes": 7703
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/ISUI/AdminPanel/ISUsersList.lua",
+      "sha256": "68a2c856a2c4c8b0270eab55539f08d1385e63c643ce9ef0e29e9e52c7a57d64",
+      "bytes": 31551
+    }
+  ],
+  "descriptor_index": {
+    "steam_named_public_string_methods": [
+      {
+        "path": "zombie/Lua/LuaManager$GlobalObject.class",
+        "name": "getCurrentUserSteamID",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/Lua/LuaManager$GlobalObject.class",
+        "name": "getSteamProfileNameFromSteamID",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/Lua/LuaManager$GlobalObject.class",
+        "name": "getSteamIDFromUsername",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/Lua/LuaManager$GlobalObject.class",
+        "name": "getSteamProfileNameFromUsername",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/characters/NetworkUser.class",
+        "name": "isSteamIdBanned",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/characters/NetworkUser.class",
+        "name": "getSteamIdBanned",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/characters/NetworkUser.class",
+        "name": "getSteamid",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/core/Core.class",
+        "name": "getSteamServerVersion",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/core/znet/SteamFriend.class",
+        "name": "getSteamID",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/core/znet/SteamUser.class",
+        "name": "GetSteamIDString",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/core/znet/SteamUtils.class",
+        "name": "convertSteamIDToString",
+        "descriptor": "(J)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/BanSystem.class",
+        "name": "BanUserBySteamID",
+        "descriptor": "(Ljava/lang/String;Lzombie/core/raknet/UdpConnection;Ljava/lang/String;Z)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/DBBannedSteamID.class",
+        "name": "getSteamID",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/Server.class",
+        "name": "getSteamId",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/ServerWorldDatabase.class",
+        "name": "addSteamID",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/ServerWorldDatabase.class",
+        "name": "removeSteamID",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/ServerWorldDatabase.class",
+        "name": "isSteamIdBanned",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/ServerWorldDatabase.class",
+        "name": "banSteamID",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/network/ServerWorldDatabase.class",
+        "name": "setUserSteamID",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+      },
+      {
+        "path": "zombie/savefile/ServerPlayerDB.class",
+        "name": "getNetworkUserSteamID",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+      }
+    ],
+    "public_connection_or_identity_receivers": [
+      {
+        "path": "zombie/characters/IsoGameCharacter.class",
+        "kind": "method",
+        "name": "getOwner",
+        "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/characters/IsoZombie.class",
+        "kind": "method",
+        "name": "getOwner",
+        "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/characters/NetworkUsers.class",
+        "kind": "method",
+        "name": "getUser",
+        "descriptor": "(Ljava/lang/String;)Lzombie/characters/NetworkUser;"
+      },
+      {
+        "path": "zombie/characters/component/NetworkZombieComponent.class",
+        "kind": "method",
+        "name": "getAuthOwner",
+        "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/chat/ChatUtility.class",
+        "kind": "method",
+        "name": "findConnection",
+        "descriptor": "(S)Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/chat/ChatUtility.class",
+        "kind": "method",
+        "name": "findConnection",
+        "descriptor": "(Ljava/lang/String;)Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/core/raknet/UdpEngine.class",
+        "kind": "method",
+        "name": "getActiveConnection",
+        "descriptor": "(J)Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/iso/areas/isoregion/jobs/JobChunkUpdate.class",
+        "kind": "method",
+        "name": "getTargetConn",
+        "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/iso/areas/isoregion/jobs/JobServerSendFullData.class",
+        "kind": "method",
+        "name": "getTargetConn",
+        "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameClient.class",
+        "kind": "field",
+        "name": "connection",
+        "descriptor": "Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer$DelayedConnection.class",
+        "kind": "field",
+        "name": "connection",
+        "descriptor": "Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "method",
+        "name": "getConnectionByPlayerOnlineID",
+        "descriptor": "(S)Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "method",
+        "name": "getConnectionFromPlayer",
+        "descriptor": "(Lzombie/characters/IsoPlayer;)Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "method",
+        "name": "getConnectionByIp",
+        "descriptor": "(Ljava/lang/String;)Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "field",
+        "name": "removeZombiesConnection",
+        "descriptor": "Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "field",
+        "name": "removeAnimalsConnection",
+        "descriptor": "Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "field",
+        "name": "removeCorpsesConnection",
+        "descriptor": "Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/network/GameServer.class",
+        "kind": "field",
+        "name": "removeVehiclesConnection",
+        "descriptor": "Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/popman/Ownership.class",
+        "kind": "method",
+        "name": "getConnection",
+        "descriptor": "()Lzombie/core/raknet/UdpConnection;"
+      },
+      {
+        "path": "zombie/savefile/ServerPlayerDB.class",
+        "kind": "method",
+        "name": "getInstance",
+        "descriptor": "()Lzombie/savefile/ServerPlayerDB;"
+      }
+    ],
+    "network_users_referencing_classes": [
+      "zombie/Lua/LuaManager$GlobalObject.class",
+      "zombie/characters/NetworkUsers.class",
+      "zombie/network/packets/NetworkUsersPacket.class"
+    ],
+    "scope": "Packaged zombie public descriptors and literal references only; not complete call graph, Lua exposure or runtime proof"
+  },
+  "exposure_scope": "Literal class then setExposed calls in packaged LuaManager.Exposer; not a universal exposure proof",
+  "explicit_exposure_for_candidates": {
+    "zombie/characters/NetworkUser": true,
+    "zombie/characters/NetworkUsers": false,
+    "zombie/characters/IsoGameCharacter": true,
+    "zombie/characters/IsoPlayer": true,
+    "zombie/core/raknet/UdpConnection": false,
+    "zombie/network/GameServer": false,
+    "zombie/savefile/ServerPlayerDB": false,
+    "zombie/core/znet/SteamUtils": false,
+    "zombie/core/znet/SteamUser": false,
+    "zombie/core/znet/SteamFriend": true
+  },
+  "format_revision": 1,
+  "project_version": "0.2.0-dev.7",
+  "observed_date": "2026-10-14",
+  "source_baseline_commit": "41192a9df906654628f8a09b33823d65fa6c29ab",
+  "game_version": "42.21",
+  "steam_build": "25485521",
+  "status": "BLOCKED_NO_VERIFIED_LOSSLESS_SERVER_PATH",
+  "runtime_status": "NOT TESTED",
+  "D1": "BLOCKED",
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED",
+  "ownership_enabled": false,
+  "live_task_control_enabled": false,
+  "principal_adapter_installed": false,
+  "reflection_bypass_used": false,
+  "candidates": [
+    {
+      "id": "S01",
+      "paths": [
+        "zombie/characters/IsoPlayer.class",
+        "se/krka/kahlua/integration/expose/ReturnValues.class",
+        "zombie/Lua/KahluaNumberConverter.class",
+        "zombie/Lua/KahluaNumberConverter$NumberToLuaConverter.class"
+      ],
+      "methods": [
+        "IsoPlayer.getSteamID()J",
+        "ReturnValues.push(Object)",
+        "KahluaNumberConverter.install(KahluaConverterManager)",
+        "NumberToLuaConverter.fromJavaToLua(Number)"
+      ],
+      "offsets": [
+        1,
+        14,
+        110,
+        115,
+        204,
+        210,
+        10
+      ],
+      "disposition": "Long return crosses converter; doubleValue is not lossless for arbitrary SteamID64."
+    },
+    {
+      "id": "S02",
+      "paths": [
+        "zombie/Lua/LuaManager$GlobalObject.class"
+      ],
+      "methods": [
+        "getSteamIDFromUsername(String)String"
+      ],
+      "offsets": [
+        0,
+        6,
+        9,
+        25,
+        28,
+        32
+      ],
+      "disposition": "Client-only native string helper; dedicated branch null."
+    },
+    {
+      "id": "S03",
+      "paths": [
+        "zombie/Lua/LuaManager$GlobalObject.class"
+      ],
+      "methods": [
+        "getCurrentUserSteamID()String"
+      ],
+      "offsets": [
+        0,
+        6,
+        9,
+        12,
+        16
+      ],
+      "disposition": "Returns local Steam SDK ID only outside GameServer.server; not incoming actor."
+    },
+    {
+      "id": "S04",
+      "paths": [
+        "zombie/Lua/LuaManager$GlobalObject.class",
+        "zombie/characters/NetworkUser.class",
+        "zombie/characters/NetworkUsers.class",
+        "zombie/network/packets/NetworkUsersPacket.class"
+      ],
+      "methods": [
+        "GlobalObject.getUsers()ArrayList",
+        "NetworkUser.getSteamid()String",
+        "NetworkUsers.parse(ByteBufferReader)",
+        "NetworkUsersPacket.write(ByteBufferWriter)",
+        "NetworkUsersPacket.parse(ByteBufferReader,IConnection)"
+      ],
+      "offsets": [
+        0,
+        3,
+        1,
+        4,
+        108,
+        111,
+        226,
+        40,
+        44
+      ],
+      "disposition": "Native connection-to-string conversion exists in outgoing packet; getUsers reads separate packet-populated mirror, not a verified server connection registry."
+    },
+    {
+      "id": "S05",
+      "paths": [
+        "zombie/characters/IsoGameCharacter.class",
+        "zombie/characters/IsoPlayer.class",
+        "zombie/core/raknet/UdpConnection.class",
+        "zombie/Lua/LuaManager$Exposer.class"
+      ],
+      "methods": [
+        "IsoGameCharacter.getOwner()UdpConnection",
+        "UdpConnection.getDescription()String",
+        "LuaManager.Exposer.shouldExpose(Class)boolean"
+      ],
+      "offsets": [
+        0,
+        1,
+        6,
+        34,
+        37,
+        62,
+        7,
+        11
+      ],
+      "disposition": "IsoPlayer inherits null owner getter; description is lossless inside native code but no verified Lua receiver/binding. No zombie scan or diagnostic parser installed."
+    },
+    {
+      "id": "S06",
+      "paths": [
+        "zombie/savefile/ServerPlayerDB.class"
+      ],
+      "methods": [
+        "getNetworkUserSteamID(String,String,String)String"
+      ],
+      "offsets": [
+        1,
+        9,
+        41,
+        48,
+        107,
+        118
+      ],
+      "disposition": "Saved database lookup, native file permission change/SQL commit; not current connection attestation or verified Lua binding. Not called."
+    },
+    {
+      "id": "S07",
+      "paths": [
+        "zombie/core/znet/SteamUtils.class",
+        "zombie/Lua/LuaManager$Exposer.class"
+      ],
+      "methods": [
+        "convertSteamIDToString(long)String"
+      ],
+      "offsets": [],
+      "disposition": "Native string conversion is safe before Lua; passing already-rounded Lua number does not recover original bits. No verified server getter-to-string composition in Lua."
+    },
+    {
+      "id": "S08",
+      "paths": [
+        "zombie/Lua/LuaManager.class",
+        "zombie/Lua/LuaManager$GlobalObject.class"
+      ],
+      "methods": [
+        "LuaManager.validateReflectionAccess(Object)",
+        "GlobalObject.getClassFieldVal(Object,Field)Object"
+      ],
+      "offsets": [
+        0,
+        3,
+        6,
+        16,
+        17,
+        38,
+        44,
+        4,
+        6
+      ],
+      "disposition": "Reflection helpers require Core.debug and reject Class/ClassLoader/Lookup. Field.get(Long) still crosses return conversion. No reflection or security bypass used."
+    },
+    {
+      "id": "S09",
+      "paths": [
+        "zombie/core/znet/SteamFriend.class",
+        "zombie/core/znet/SteamUser.class",
+        "zombie/network/Server.class",
+        "zombie/Lua/LuaManager$GlobalObject.class"
+      ],
+      "methods": [
+        "SteamFriend.getSteamID()String",
+        "SteamUser.GetSteamIDString()String",
+        "Server.getSteamId()String",
+        "GlobalObject.getFriendsList()KahluaTable"
+      ],
+      "offsets": [],
+      "disposition": "Friend/local SDK/server-browser/banned-ID strings are not authenticated current request actor bindings; no client list or saved row accepted as principal."
+    }
+  ]
+}

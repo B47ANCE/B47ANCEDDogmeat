@@ -18,6 +18,8 @@
 - Complete the bounded database/native authority proof with eight reports, lossless-Steam numeric conversion findings, read-only override comparisons and retained NO-GO. Preserve existing historical manifests and production Lua.
 - Add a test-only world aggregate transaction experiment with atomic logical owner/bond/receipt candidates, revision/replay checks, fault injection, paired rollback characterization and fresh-VM recovery: 406 offline cases total. No production schema/migration, bonding/handler gameplay or task control.
 
+- Audit lossless server SteamID64 candidates: distinguish native NetworkUser string conversion from client user-list synchronization, reject null player-owner/saved-database/reflection routes, and retain D1 BLOCKED. Add reproducible descriptor/exposure and source-hash checks; production Lua and 406-case regression suite remain unchanged.
+
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.2.0-dev.5. No new SP/dedicated MP evidence.

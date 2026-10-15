@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Focused SteamID64 source audit: [STEAMID64_SERVER_PATH_AUDIT.md](STEAMID64_SERVER_PATH_AUDIT.md). Twenty Steam-named public String methods and connection/identity receiver candidates were indexed; 24 class hashes plus one vanilla Lua file bind the selected inspection. D1 remains BLOCKED; matching source bytes and 406 offline regression cases are not authenticated runtime proof. Existing native baseline failures remain.
+
 Latest foundational database/native proof validation: [DATABASE_AUTHORITY_GO_NO_GO.md](DATABASE_AUTHORITY_GO_NO_GO.md). 406 Windows offline cases, including 31 added test-only transaction/restart/precision cases; all 21 production Lua files and prior evidence hashes unchanged. Native baseline checks still FAIL; two additional loose/package differences are documented without inventing historical drift. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED.
 
 Latest design-only database/relationship/task revision: [DATABASE_REDESIGN_VALIDATION.md](DATABASE_REDESIGN_VALIDATION.md). Structural proposal checks are separate from the unchanged 375-case offline runtime-boundary suite and from actual gameplay. No dedicated evidence or native NO-GO is upgraded.
