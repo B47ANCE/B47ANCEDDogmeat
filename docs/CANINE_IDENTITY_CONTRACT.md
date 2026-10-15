@@ -1,8 +1,8 @@
 # Canonical canine identity contract
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
 
-[VERIFIED packaged source, 2026-10-14] Native ObjectModDataPacket accepts client animal marker load/wipe. A private-record byte match is diagnostic only, not identity provenance. Dedicated ownership preparation is blocked. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) reserves one expected test identity before constructor side effects and never retries/respawns on uncertainty.
+[VERIFIED packaged source, 2026-10-14] Native ObjectModDataPacket accepts client animal marker load/wipe. A private-record byte match is diagnostic only, not identity provenance. Dedicated ownership preparation is blocked. The [current authority investigation](NATIVE_IDENTITY_AUTHORITY.md) preserves private-ID reporting across absent/altered observations and evaluates a server-assigned native integer without promoting it to authority. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) reserves one expected test identity before constructor side effects and never retries/respawns on uncertainty.
 
 M0R design, 2026-10-12. FEASIBLE identity domain; lifecycle carriers EXPERIMENTAL; maturation rebinding BLOCKED until a safe Lua path is demonstrated. [Evidence](M0R_SOURCE_EVIDENCE.md), [private recovery](PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md), [MP tests](MULTIPLAYER_ACCEPTANCE_MATRIX.md).
 
@@ -14,7 +14,7 @@ The [native/private foundation](NATIVE_PERSISTENCE_SLICE.md) implements read-onl
 
 Proposed permanent key: a persisted world UUID plus a server-minted dog UUID from the vanilla Lua-exposed getRandomUUID(). UUIDs are checked against the allocation ledger, live bindings and tombstones before use; bounded collision retry fails safely. Allocate a reserved private record before invoking a validated native spawn. Record reserved → spawned → bound phases and reconcile after crash; a reservation never authorizes blind replacement spawning. Allocation history is retained with tombstones; never recycle a dead dog's key or infer it from animalId, network ID, display/owner name, chunk location or breed.
 
-The native animalId is a supporting hint: the inspected constructor uses Rand.Next(10000). It cannot independently recover a lost marker or serve as a world-unique permanent key. Binding generation advances only on an observed verified representation replacement/rebinding, not reconnect, UI requests or ordinary save. Entity handles are transient. The current generation, record revision and authenticated actor permissions are re-resolved immediately before every action commit.
+The default native animalId is a supporting hint: the inspected initializer uses Rand.Next(10000). The exposed setAnimalID(int) can assign a value above that range, and native save/load preserves it. Such an allocator remains a candidate until inbound cloning/admission and lifecycle integrity are established; the current implementation does not assign or trust that value. It cannot independently recover a lost marker or serve as a world-unique permanent key. Binding generation advances only on an observed verified representation replacement/rebinding, not reconnect, UI requests or ordinary save. Entity handles are transient. The current generation, record revision and authenticated actor permissions are re-resolved immediately before every action commit.
 
 Allocation highwater is the durable sequence of reserved ledger entries within an allocation epoch, not the UUID itself. Persist epoch/sequence/reservation before spawn; failed reservation remains consumed. The UUID-key ledger handles collisions while sequence/predecessor proves ordering. Refuse overflow rather than silently rounding; paired restore/fork changes allocation/session epoch before new work.
 

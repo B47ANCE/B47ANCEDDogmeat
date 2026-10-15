@@ -1,8 +1,8 @@
 # Native state ownership matrix
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
 
-Current source correction: the native animal marker is client-writable through ObjectModDataPacket. The table below is the intended ownership contract; its native marker implementation does not enforce that sole-writer claim. Dedicated ownership/gameplay preparation is blocked. See [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md).
+Current source correction: the native animal marker is client-writable through ObjectModDataPacket. The table below is the intended ownership contract; its native marker implementation does not enforce that sole-writer claim. Dedicated ownership/gameplay preparation is blocked. The [identity authority investigation](NATIVE_IDENTITY_AUTHORITY.md) also rejects trusting an assigned native integer without complete reconstruction/admission controls; private logical identity recovery remains separate.
 
 M0R contract, 2026-10-12. Status: FEASIBLE domain design; native arbitration EXPERIMENTAL. This assigns intended ownership, not proved runtime behavior. Lua-only. See [source evidence](M0R_SOURCE_EVIDENCE.md), [task contract](TASK_ARBITRATION_CONTRACT.md) and [identity contract](CANINE_IDENTITY_CONTRACT.md).
 

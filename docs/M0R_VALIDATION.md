@@ -1,6 +1,6 @@
 # M0R validation and remaining blockers
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
 
 Current 0.2.0-dev.4 validation is in [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md): 259 offline tests, 19 Lua sources, 1,015 localization fallbacks, loadable source parity and new source evidence. Historical results below retain their original environments and versions. Native marker provenance is now a confirmed multiplayer authority blocker; dedicated ownership preparation is disabled.
 

@@ -133,6 +133,14 @@
     {
       "path": "docs/NATIVE_BOOTSTRAP_TEST.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_IDENTITY_AUTHORITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-identity-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {

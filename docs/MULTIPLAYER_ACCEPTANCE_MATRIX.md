@@ -1,8 +1,10 @@
 # Multiplayer and lifecycle acceptance matrix
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
 
 New B-IDENTITY blocker, 2026-10-14: clients can load/wipe animal ModData through the native ObjectModDataPacket route. A matching marker alone is not provenance. Require forged/copied marker tests and an independently validated Lua-only authority solution before enabling ownership/gameplay. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) has only privileged Inspect/Provision commands, and dedicated ownership preparation refuses UntrustedNativeMarker.
+
+Current [native identity investigation](NATIVE_IDENTITY_AUTHORITY.md): 274 offline tests do not clear T-IDENTITY. Extend it with clone-first restart, high/duplicate assigned native integers, erased markers saved before restart, and private identity recovery with no loaded carrier. Private record recovery and physical admission are separate acceptance claims.
 
 M0R test specification, 2026-10-12. All gameplay tests below are NOT TESTED. No game/server was launched. Offline/source assertions are separately labeled. T-* identifiers are stable acceptance contracts, not test executions. [Milestones](MILESTONE_DEPENDENCY_GRAPH.md), [source index](M0R_SOURCE_EVIDENCE.md), [minimum candidate](MINIMUM_PLAYABLE_RELEASE.md).
 
@@ -57,7 +59,7 @@ Common procedure: establish clean matched world/store fixture → exercise the r
 | B-ENV | Effective/pristine client and dedicated class/API baseline not demonstrated | T-ENVIRONMENT |
 | B-ASSET | Original GSD standing mesh/coat/authoring rig partially authored; native definition, rig mapping, enabled-state animations/corpse/avatar and PZ loading remain unproved | T-REGISTRY/T-ASSET |
 | B-TASK | No proved Lua-exclusive arbitration over native movement/behavior | T-NATIVE/T-TASK |
-| B-IDENTITY | Complete release/streaming/growth/transport/death binding observation not proved | T-IDENTITY/T-TRANSPORT/T-GROWTH/T-DEATH |
+| B-IDENTITY | Client-resistant native carrier provenance and complete release/streaming/growth/transport/death binding observation not proved | T-IDENTITY/T-TRANSPORT/T-GROWTH/T-DEATH |
 | B-STORE | Native world/private-store pairing and crash-durable receipts unproved | T-PRIVACY/T-RECOVERY |
 | B-INVENTORY | Exactly-once real physical item commits/recovery unproved | T-TRANSACTION |
 | B-WASTE | Persistent replicated physical waste and carrier/offscreen anchor unproved | T-WASTE/T-BIOLOGY |

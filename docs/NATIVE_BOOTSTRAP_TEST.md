@@ -1,6 +1,8 @@
 # Loadable native persistence diagnostic
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
+
+This report retains the 0.2.0-dev.4 bootstrap implementation/evidence scope (259 tests). The current [identity investigation](NATIVE_IDENTITY_AUTHORITY.md) adds independent private-ID reporting and adversarial tests; this document header identifies the current contract edition, not a renewed native test.
 
 User decisions, 2026-10-14: technical Mod ID **B47ANCEDDogmeat**; use a **raccoon** as the temporary save/load test carrier; leave the original Shepherd model unchanged. This checkpoint supplies loadable source, native registration and explicit first-store provisioning. **PZ has not been launched and in-game save/load is NOT TESTED.** This is a disposable-world diagnostic, not a playable dog-training release.
 
@@ -39,7 +41,7 @@ Only a fresh native load can select the exact checkpoint; discovery then compare
 
 NativeSession.prepareOwnership now refuses **UntrustedNativeMarker on dedicated**, including when every marker field matches. No deployed ownership/reward/training/gameplay mutation endpoint exists. The diagnostic initialization endpoint requires native admin capability and creates only its explicit test carrier. MATCHED means observed bytes match a retained record; it unlocks no multiplayer gameplay action. The offline SP prototype can still exercise local private ownership preparation, but the UI exposes only Inspect/Provision and the old one-pending-checkpoint limit remains.
 
-No proved durable private native identifier was found: animalId is a small/random hint, online ID is transient, and virtualId is mutable native state. This blocks production identity/ownership until an independently validated Lua-only authority design exists. A source/CI pass cannot clear this blocker. Native trailer/pickup flags and other animal packet handlers are not a security boundary either.
+No authenticated durable native identifier was established by this bootstrap audit: default animalId is small/random, online ID is transient, and virtualId is mutable native state. The later identity investigation verifies that Lua can assign a larger animalId; that corrects the allocation limitation but does not by itself prove secure provenance. This blocks production identity/ownership until an independently validated Lua-only authority design exists. A source/CI pass cannot clear this blocker. Native trailer/pickup flags and other animal packet handlers are not a security boundary either.
 
 ## Evidence and validation
 

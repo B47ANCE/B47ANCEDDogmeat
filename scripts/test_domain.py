@@ -48,9 +48,11 @@ def main():
         directory = Path(temporary).resolve()
         for name, phase in [('ownership_spec.lua', None), ('storage_spec.lua', None), ('pairing_spec.lua', None),
                             ('provision_spec.lua', None), ('registration_spec.lua', None), ('bootstrap_spec.lua', None),
+                            ('identity_authority_spec.lua', None),
                             ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover'),
                             ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover'),
-                            ('provision_restart_spec.lua', 'prepare'), ('provision_restart_spec.lua', 'recover')]:
+                            ('provision_restart_spec.lua', 'prepare'), ('provision_restart_spec.lua', 'recover'),
+                            ('identity_restart_spec.lua', 'prepare'), ('identity_restart_spec.lua', 'recover')]:
             lua = runtime(directory)
             lua_version = lua.eval('_VERSION')
             lua.globals().RESTART_PHASE = phase

@@ -25,8 +25,17 @@ function NativeSession.open(config,api)
     if not registry then return nil,reason end
     local busy=false
     local session={}
+    -- Private recovery and carrier provenance are separate claims. Return only
+    -- nonsecret identity metadata; never expose ownership or retained history.
+    function session.identitySummary()
+        local count,dogId=0,nil
+        for id in pairs(baseline.payload.records) do count=count+1;dogId=id end
+        return {retained=count,dogId=count==1 and dogId or nil,bindingVerified=false}
+    end
     function session.observe(animal)
-        return registry.observe(animal,reader.observe(animal))
+        local observed=registry.observe(animal,reader.observe(animal))
+        observed.bindingVerified=false -- even MATCHED means public bytes only
+        return observed
     end
     function session.status(dogId)
         return registry.status(dogId)

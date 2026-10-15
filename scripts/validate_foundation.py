@@ -119,7 +119,8 @@ def check_source():
 def check_native(game_root):
     errors, checked = [], 0
     inputs = []
-    for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json'):
+    for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json',
+                 'native-identity-evidence.json'):
         inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
         for item in inputs:

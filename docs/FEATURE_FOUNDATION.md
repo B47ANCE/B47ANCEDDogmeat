@@ -1,6 +1,6 @@
 # Ownership and inspection feature foundation
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
 
 Current integration: [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds only an admin save/load test using the approved raccoon carrier. Ownership gameplay is not deployed; dedicated native ownership preparation is blocked because marker provenance is untrusted. The following domain report remains its original 0.2.0-dev.1 scope.
 

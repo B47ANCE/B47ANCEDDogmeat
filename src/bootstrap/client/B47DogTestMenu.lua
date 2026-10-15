@@ -22,7 +22,7 @@ local function receive(result)
         local text=getText("UI_B47ANCEDDogmeat_Test_"..result.status)
         if result.status=="Loaded" then
             text=getText("UI_B47ANCEDDogmeat_Test_Loaded",tonumber(result.matched) or 0,tonumber(result.other) or 0,
-                type(result.dogId)=="string" and result.dogId or "-")
+                type(result.dogId)=="string" and result.dogId or "-",tonumber(result.retained) or 0)
         end
         show(player,text,false,nil)
     end

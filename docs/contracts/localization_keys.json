@@ -1,5 +1,5 @@
 {
-  "project_version": "0.2.0-dev.4",
+  "project_version": "0.2.0-dev.5",
   "status": "DESIGN CATALOG with explicit runtime subset in source-inventory.json; remaining proposed setting identifiers are not deployed",
   "languages": [
     "AR",
@@ -346,7 +346,7 @@
     "UI_B47ANCEDDogmeat_Test_Recovery": "Recovery review is required. Existing evidence is preserved.\nNo new carrier will be created in this world.",
     "UI_B47ANCEDDogmeat_Test_WAITING_INITIAL_NATIVE_RELOAD": "Test carrier created. Save and quit normally, then restart.\nThis message does not confirm a successful native save.\nAfter reloading, open this menu again.",
     "UI_B47ANCEDDogmeat_Test_WAITING_NATIVE_RELOAD": "A checkpoint is pending. Save and quit normally.\nOnly a later native load can select the saved checkpoint.",
-    "UI_B47ANCEDDogmeat_Test_Loaded": "Loaded checkpoint: %1 marker matches; %2 quarantined.\nTest carrier ID: %3\nMarker matches do not prove multiplayer ownership.",
+    "UI_B47ANCEDDogmeat_Test_Loaded": "Private records recovered: %4\nSaved dog ID: %3\nLoaded matches: %1; other observations: %2\nMultiplayer carrier identity remains unverified.",
     "Sandbox_B47ANCEDDogmeat": "B47ANCED Dogmeat Test",
     "Sandbox_B47ANCEDDogmeat_PersistenceTestMode": "Persistence Test Mode",
     "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip": "Enables the admin save/load diagnostic in a disposable world. Default off. Never initializes automatically. Disabling prevents new test requests and preserves existing records and carriers.",

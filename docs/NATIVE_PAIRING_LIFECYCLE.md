@@ -1,6 +1,6 @@
 # Native checkpoint pairing and lifecycle observation
 
-Project Version: 0.2.0-dev.4
+Project Version: 0.2.0-dev.5
 
 Historical implementation/validation scope: **0.2.0-dev.3**, including the 206-case result below. The current [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) adds bootstrap/initialization and explicitly blocks dedicated ownership after discovering client-writable animal markers. Earlier statements about absent bootstrap refer to that historical checkpoint; they are not the current source inventory.
 

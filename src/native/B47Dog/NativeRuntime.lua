@@ -63,7 +63,9 @@ function NativeRuntime.install(config,api)
             end
             local statuses={}
             for id in pairs(seen) do statuses[id]=session.status(id) end
-            return {status="OBSERVED_LOADED_ONLY",animalsRead=size,dogs=statuses}
+            local identity=session.identitySummary()
+            return {status="OBSERVED_LOADED_ONLY",animalsRead=size,dogs=statuses,
+                retained=identity.retained,dogId=identity.dogId,bindingVerified=false}
         end)
         if not ok or not result then fail("CensusUnavailable");return nil,"Unavailable" end
         return result

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0-dev.5] — 2026-10-14
+
+- Continue additive MINOR development with a native identity authority audit and independent reporting of recovered private dog identity.
+- Retain private identity when carriers are missing, erased or copied; diagnostic marker correlation never grants multiplayer ownership.
+- Preserve existing schema/records, the approved raccoon carrier and deferred model. Native/dedicated runtime remains NOT TESTED.
+
 ## [0.2.0-dev.4] — 2026-10-14
 
 - Continue additive MINOR development with explicit first-store provisioning, a loadable source assembler and native test-carrier registration.

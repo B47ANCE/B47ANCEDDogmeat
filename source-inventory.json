@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.4",
-  "status": "LOADABLE DIAGNOSTIC SOURCE; native runtime NOT TESTED; no dedicated ownership authority",
+  "project_version": "0.2.0-dev.5",
+  "status": "LOADABLE DIAGNOSTIC SOURCE; private identity recovery separated from unverified native carrier provenance; dedicated ownership blocked",
   "authoritative_lua": [
     "src/bootstrap/client/B47DogTestMenu.lua",
     "src/bootstrap/server/B47DogBootstrap.lua",

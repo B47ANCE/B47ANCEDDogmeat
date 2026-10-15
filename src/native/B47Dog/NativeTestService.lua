@@ -59,11 +59,12 @@ function Service.new(config,runtime,api)
         local census=runtime.census()
         if not census then return {status="Recovery"} end
         local matched,other=0,0
-        local dogId
-        for id,status in pairs(census.dogs) do
-            if status=="MATCHED" then matched=matched+1;dogId=id else other=other+1 end
+        for _,status in pairs(census.dogs) do
+            if status=="MATCHED" then matched=matched+1 else other=other+1 end
         end
-        return {status="Loaded",matched=matched,other=other,dogId=dogId}
+        -- The displayed ID is recovered privately, never selected by a marker.
+        return {status="Loaded",matched=matched,other=other,dogId=census.dogId,
+            retained=census.retained,bindingVerified=false}
     end
     return service
 end
