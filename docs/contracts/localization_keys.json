@@ -350,7 +350,8 @@
     "Sandbox_B47ANCEDDogmeat": "B47ANCED Dogmeat Test",
     "Sandbox_B47ANCEDDogmeat_PersistenceTestMode": "Persistence Test Mode",
     "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip": "Enables the admin save/load diagnostic in a disposable world. Default off. Never initializes automatically. Disabling prevents new test requests and preserves existing records and carriers.",
-    "IGUI_AnimalType_b47dogtest": "Dog persistence test carrier (raccoon)"
+    "IGUI_AnimalType_b47dogtest": "Dog persistence test carrier (raccoon)",
+    "UI_B47ANCEDDogmeat_Test_Admission": "Carrier decisions: admit %1; quarantine %2; reject %3; defer %4."
   },
   "placeholder_syntax": "%1, %2; preserve native format and count"
 }

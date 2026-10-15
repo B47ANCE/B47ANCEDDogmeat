@@ -8,6 +8,7 @@ local Store=require "B47Dog/PrivateStore"
 local Cache=require "B47Dog/PZCache"
 local Animal=require "B47Dog/NativeAnimal"
 local Admission=require "B47Dog/NativeAdmissionGuard"
+local Policy=require "B47Dog/AdmissionPolicy"
 local NativeSession={}
 
 function NativeSession.open(config,api)
@@ -22,9 +23,13 @@ function NativeSession.open(config,api)
     local reader;reader,reason=Animal.new(config.namespace,config.allowedTypes,api)
     if not reader then return nil,reason end
     local baseline=store.read()
+    local allowedBytes=Codec.encode(config.allowedTypes)
+    if not allowedBytes then return nil,"Recovery" end
+    local allowedTypes=Codec.decode(allowedBytes)
     local registry;registry,reason=Identity.newRegistry(config.worldId,baseline.payload.records)
     if not registry then return nil,reason end
     local busy=false
+    local assessing=false
     local admission=Admission.current({namespace=config.namespace,allowedTypes=config.allowedTypes},api)
     local session={}
     -- Private recovery and carrier provenance are separate claims. Return only
@@ -42,6 +47,20 @@ function NativeSession.open(config,api)
     function session.status(dogId)
         return registry.status(dogId)
     end
+    function session.assessAdmission(animal,route)
+        if not Policy.route(route) then return Policy.result("REJECT","UnsupportedRoute") end
+        if assessing or busy then return Policy.result("DEFER","AdmissionBusy") end
+        assessing=true
+        local ok,result,correlation=pcall(function()
+            local observation=reader.observe(animal)
+            local correlation=registry.observe(animal,observation)
+            return Policy.observation(baseline.meta.worldId,baseline.payload.records,allowedTypes,
+                observation,correlation,route),correlation
+        end)
+        assessing=false
+        if not ok then return Policy.result("QUARANTINE","EvidenceUnavailable") end
+        return result,correlation
+    end
     function session.observeDeath(animal)
         local observation=reader.observe(animal)
         if observation.status~="Dead" then return {status="Unavailable"} end
@@ -52,7 +71,7 @@ function NativeSession.open(config,api)
         -- matching marker is not dedicated provenance; no gameplay commit here.
         if api.isServer()~=false or api.B47DogSinglePlayer~=true then return nil,"UntrustedNativeMarker" end
         if admission and admission.check()~=true then return nil,"Recovery" end
-        if busy then return nil,"Busy" end
+        if busy or assessing then return nil,"Busy" end
         busy=true
         local ok,result,errorCode=pcall(function()
             local matched=session.observe(animal)

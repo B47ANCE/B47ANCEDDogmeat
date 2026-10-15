@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Historical selected-hook checkpoint: source/validation at `6518be2aa7afaa71d70e3ff4b28b68dc01e21a63`. Its 332-test/20-module/1,015-fallback results retain that scope. The same unreleased dev.7 has since been revised; current policy, counts and blockers are in [BLOCKER_RESOLUTION_REPORT.md](BLOCKER_RESOLUTION_REPORT.md) and [SERVER_ADMISSION_GUARD.md](SERVER_ADMISSION_GUARD.md). The earlier report below is preserved.
+
 The approved `b47dogtest` / `grey` raccoon remains the carrier. This iteration implements a complete installation and refusal path for **nine selected Lua completion hooks**. It does **not** establish a complete native admission boundary or enable multiplayer ownership. The private dog UUID, ownership and history remain recoverable through the existing paired store; an observed physical carrier remains unverified.
 
 ## Implemented boundary

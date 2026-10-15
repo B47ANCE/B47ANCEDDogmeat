@@ -64,7 +64,7 @@ function Service.new(config,runtime,api)
         end
         -- The displayed ID is recovered privately, never selected by a marker.
         return {status="Loaded",matched=matched,other=other,dogId=census.dogId,
-            retained=census.retained,bindingVerified=false}
+            retained=census.retained,bindingVerified=false,admission=census.admission}
     end
     return service
 end

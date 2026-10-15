@@ -11,7 +11,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = {f'src/domain/B47Dog/{name}.lua' for name in
-          ('Access', 'Guard', 'Ownership', 'Projection', 'Codec', 'Identity', 'Snapshot', 'PrivateStore')}
+          ('Access', 'Guard', 'Ownership', 'Projection', 'Codec', 'Identity', 'Snapshot', 'PrivateStore', 'AdmissionPolicy')}
 NATIVE = {f'src/native/B47Dog/{name}.lua' for name in
           ('PZCache', 'NativeAnimal', 'NativeSession', 'NativeCheckpoint', 'NativeRuntime',
            'NativeAuthority', 'NativeProvision', 'NativeTestService', 'NativeAdmissionGuard')}
@@ -60,8 +60,29 @@ def check_source():
                          'ISHutchGrabAnimal','ISDropWorldItemAction','ISDropVehicleItemAction']
     if (admission.get('entry') != 'B47Dog/NativeAdmissionGuard.install'
             or admission.get('guarded_actions') != admission_actions
-            or admission.get('coverage') != 'LUA_ACTIONS_ONLY' or admission.get('ownership_ready') is not False):
+            or admission.get('coverage') != 'LUA_ACTIONS_ONLY' or admission.get('ownership_ready') is not False
+            or admission.get('central_policy') != 'B47Dog/AdmissionPolicy'
+            or admission.get('runtime_decision_entry') != 'B47Dog/NativeRuntime.assessAdmission'
+            or admission.get('admit_implemented') is not False):
         errors.append('Selected admission guard inventory/authority differs')
+    continuity_docs = ('NATIVE_ADMISSION_COVERAGE', 'CANONICAL_IDENTITY_CONTRACT',
+                       'PREVIOUS_SESSION_INTEGRITY', 'SERVER_ADMISSION_GUARD',
+                       'LUA_ONLY_FEASIBILITY', 'ANIMAL_LIFECYCLE_MATRIX',
+                       'GROWTH_IDENTITY_FEASIBILITY', 'MULTIPLAYER_OWNERSHIP_TEST_PLAN',
+                       'BLOCKER_RESOLUTION_REPORT')
+    for name in continuity_docs:
+        if not (ROOT / 'docs' / (name + '.md')).is_file():
+            errors.append('Missing native continuity deliverable: ' + name)
+    construction = read(ROOT / 'docs/native-construction-index.json')
+    sites = construction['direct_constructor_sites']
+    if construction.get('scope') != 'DIRECT_NEW_ONLY_NOT_GRAPH_CLOSURE' or not sites:
+        errors.append('Invalid constructor inventory scope')
+    unique = set()
+    for site in sites:
+        key = (site['class'], site['method'], site['new_offset'])
+        if key in unique or not isinstance(site['new_offset'], int) or site['new_offset'] < 0:
+            errors.append('Invalid/duplicate constructor metadata')
+        unique.add(key)
     guard_source = (ROOT/'src/native/B47Dog/NativeAdmissionGuard.lua').read_text(encoding='utf-8')
     if re.findall(r'\{name="([A-Za-z0-9_]+)",source=', guard_source) != admission_actions:
         errors.append('Selected admission hooks differ from declared contract')
@@ -140,7 +161,8 @@ def check_native(game_root):
     errors, checked = [], 0
     inputs = []
     for name in ('native-persistence-evidence.json', 'native-pairing-evidence.json','native-bootstrap-evidence.json',
-                 'native-identity-evidence.json','native-admission-evidence.json'):
+                 'native-identity-evidence.json','native-admission-evidence.json',
+                 'native-continuity-evidence.json'):
         inputs.extend(read(ROOT / 'docs' / name)['inputs'])
     with zipfile.ZipFile(game_root / 'projectzomboid.jar') as jar:
         for item in inputs:

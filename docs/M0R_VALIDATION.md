@@ -2,6 +2,10 @@
 
 Project Version: 0.2.0-dev.7
 
+## Current continuity revision — 2026-10-14
+
+[BLOCKER_RESOLUTION_REPORT.md](BLOCKER_RESOLUTION_REPORT.md) is the current dev.7 validation record. Baseline 6518be2 is preserved in NATIVE_ADMISSION_GUARD; prior dated command outputs/tables below remain historical scope, not renewed evidence. Current bounded implementation includes a loadable diagnostic, private recovery and central refusal policy; 373 offline Lua cases, 21 Lua modules, 1,044 fallback entries and 30 unchanged art hashes. Native source inspection/rehash and offline assembly do not prove native save/load or multiplayer identity. G3 PARTIAL; G4 STATIC PASS; G5 offline PASS; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED. No ownership enablement, launch/deploy/publish/package or main merge.
+
 Current 0.2.0-dev.7 validation is recorded in the [server admission guard report](NATIVE_ADMISSION_GUARD.md). It adds guarded Lua completion/runtime/provisioning boundaries and adversarial/fresh-VM tests. The prior bootstrap and identity reports retain their tested versions, environments and counts. Complete native admission coverage and prior-session integrity remain unresolved; dedicated ownership preparation is disabled.
 
 Historical M0R evidence date: 2026-10-12; tested project version: 0.1.0-dev.1. The current header identifies the contract edition. Environment: Windows offline documentation/native source inspection. At that evidence checkpoint no gameplay prototype/assets were implemented, and no PZ/server launch, deployment, package or Workshop publication occurred. Later gsd-v002 authoring evidence is separate under art/german_shepherd. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.

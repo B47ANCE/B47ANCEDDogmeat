@@ -5,6 +5,7 @@ local Guard=require "B47Dog/Guard"
 local Codec=require "B47Dog/Codec"
 local Identity=require "B47Dog/Identity"
 local Authority=require "B47Dog/NativeAuthority"
+local Policy=require "B47Dog/AdmissionPolicy"
 local Admission={}
 local installed=setmetatable({},{__mode="k"})
 local owners=setmetatable({},{__mode="k"})
@@ -100,7 +101,8 @@ function Admission.install(config,api)
         if corpse and api.instanceof(animal,"IsoDeadBody")==true then return true end
         if api.instanceof(animal,"IsoAnimal")~=true then return false end
         local kind=animal:getAnimalType()
-        return Guard.id(kind) and not types[kind]
+        local decision=Policy.transition(frozen.allowedTypes,kind)
+        return decision.decision=="DEFER" and decision.reason=="Unmanaged" and decision.managed==false
     end
     local function allowedItem(item)
         if api.instanceof(item,"InventoryItem")~=true then return false end

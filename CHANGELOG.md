@@ -6,6 +6,9 @@
 - Verify the complete installed hook set before runtime recovery, provisioning and delegated mutations; latch missing/displaced hooks and uncertain failures without retry or replacement.
 - Keep private UUID/history recovery and dedicated ownership refusal intact. Guarded Lua actions alone do not certify every native admission path or prior-session integrity; no native-key allocation or save migration.
 - Preserve the raccoon, existing artwork and deferred model. Offline validation only; G6 NOT TESTED, G7 BLOCKED / NOT TESTED, stable-release G8 BLOCKED.
+- Revise the same unreleased dev.7 at the user's direction: central QUARANTINE/REJECT/DEFER policy at runtime/session/selected transition boundaries, no reachable ADMIT and no dedicated ownership writes.
+- Inventory 59 direct native construction sites across 136 candidate classes; document deserializer, streaming, transport, growth and prior-session gaps in nine requested reports and exact disposable operator procedures.
+- Add 41 actual-boundary offline refusal/retention cases (373 total), managed census decision counts and 29-language explicit fallback parity; no new schema, model, installed-game or gameplay writer.
 
 ## [0.2.0-dev.6]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.

@@ -28,11 +28,13 @@ function NativeAnimal.new(namespace,allowedTypes,api)
             if exists==false then return {status="Detached"} end
             if exists~=true then return {status="Unavailable"} end
             local nativeType=animal:getAnimalType()
-            if not Guard.id(nativeType) or not Guard.plain(allowed[nativeType]) then return {status="Unsupported"} end
+            if not Guard.id(nativeType) or not Guard.plain(allowed[nativeType]) then
+                return {status="Unsupported",nativeType=Guard.id(nativeType) and nativeType or nil}
+            end
             local nativeBreed=animal:getBreed()
             if nativeBreed==nil then return {status="Unavailable"} end
             local breed=nativeBreed:getName()
-            if not Guard.id(breed) or allowed[nativeType][breed]~=true then return {status="Unsupported"} end
+            if not Guard.id(breed) or allowed[nativeType][breed]~=true then return {status="Unsupported",nativeType=nativeType} end
             local nativeId=animal:getAnimalID()
             if not Guard.integer(nativeId,0) then return {status="Unavailable"} end
             local data=animal:getModData()

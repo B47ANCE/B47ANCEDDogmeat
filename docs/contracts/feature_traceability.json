@@ -23,7 +23,7 @@
         "E-NATIVE"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: server-only guarded diagnostics and central refusal policy; native dedicated authority/lifecycle BLOCKED, no ownership enablement.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -47,7 +47,7 @@
         "E-NATIVE"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: packaged Build 42.21 hash/constructor inventory rechecked; actual effective pristine client/dedicated baseline UNKNOWN.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -71,7 +71,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: explicit diagnostic first-store provisioning and raccoon native registration; original canine presentation/production spawning NOT IMPLEMENTED.",
+      "implementation_status": "PARTIAL: private UUID/checkpoint recovery and refusal tests; native save/restart/stream/reconnect provenance BLOCKED, runtime NOT TESTED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -95,7 +95,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "PARTIAL: private identity and loaded-marker diagnostics with conservative lifecycle observation; native markers client-writable, dedicated ownership BLOCKED.",
+      "implementation_status": "PARTIAL: private ownership rules and canonical retention tested offline; managed transport refused, native death/transfer continuity BLOCKED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -119,7 +119,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain/native authoritative subsystem; client presentation only where applicable.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "NOT STARTED: native growth replacement investigated; future doghouse design preserved, no growth gameplay or identity transaction.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2419,7 +2419,7 @@
         "E-REGISTRY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: experimental b47dogtest/grey raccoon diagnostic registration; original canine assets/production spawn NOT IMPLEMENTED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2481,7 +2481,7 @@
         "E-ENVIRONMENT"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: packaged source inspection only; effective/pristine runtime class/launcher baseline UNKNOWN and unmodified.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2505,7 +2505,7 @@
         "E-GROWTH"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "PARTIAL: private UUID/duplicate diagnostics and central no-ADMIT policy tested offline; complete native admission/previous-session provenance BLOCKED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2527,7 +2527,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: explicit receipt-first initialization, paired root recovery and disposable restart tests; actual native save/load NOT TESTED.",
+      "implementation_status": "PARTIAL: exact private checkpoint/receipt recovery tested offline; partial saves refused, paired rollback freshness unproved, actual native runtime NOT TESTED.",
       "runtime_status": "NOT TESTED"
     },
     {
@@ -2550,7 +2550,7 @@
         "E-PRIVACY"
       ],
       "authority": "Server domain plus native physical writer; client presentation only.",
-      "implementation_status": "PARTIAL: pure Lua ownership rules tested; dedicated native ownership preparation disabled pending trusted identity provenance.",
+      "implementation_status": "PARTIAL: server-context Lua ACL/projection tests and authorized diagnostic broker; central refusal plus independent dedicated ownership fence, native trust BLOCKED.",
       "runtime_status": "NOT TESTED"
     },
     {

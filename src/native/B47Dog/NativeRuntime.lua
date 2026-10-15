@@ -7,6 +7,7 @@ local Checkpoint=require "B47Dog/NativeCheckpoint"
 local Session=require "B47Dog/NativeSession"
 local Authority=require "B47Dog/NativeAuthority"
 local Admission=require "B47Dog/NativeAdmissionGuard"
+local Policy=require "B47Dog/AdmissionPolicy"
 local NativeRuntime={}
 local installed=setmetatable({},{__mode="k"})
 
@@ -43,6 +44,7 @@ function NativeRuntime.install(config,api)
     local loaded=false
     local started=false
     local checkpoint,session
+    local assessing=false
     local controller={}
     local function fail(code) phase="RECOVERY";reason=code end
     local function guardReady()
@@ -59,9 +61,27 @@ function NativeRuntime.install(config,api)
         if not checkpoint.unchanged() then fail("AnchorChanged");return {status="Unavailable"} end
         return session.observe(animal)
     end
+    function controller.assessAdmission(animal,route)
+        if not server() then return Policy.result("REJECT","AuthorityUnavailable") end
+        if not Policy.route(route) then return Policy.result("REJECT","UnsupportedRoute") end
+        if assessing then return Policy.result("DEFER","AdmissionBusy") end
+        if not guardReady() then return Policy.result("QUARANTINE","GuardIntegrityUnavailable") end
+        if not started or phase=="WAITING_NATIVE_LOAD" then return Policy.result("DEFER","AwaitNativeLoad") end
+        if phase~="RECOVERED" or not session then return Policy.result("QUARANTINE","PrivateRecoveryUnavailable") end
+        if not checkpoint.unchanged() then fail("AnchorChanged");return Policy.result("QUARANTINE","AnchorChanged") end
+        assessing=true
+        local ok,result=pcall(session.assessAdmission,animal,route)
+        assessing=false
+        if not guardReady() then return Policy.result("QUARANTINE","GuardIntegrityUnavailable") end
+        if not checkpoint.unchanged() then fail("AnchorChanged");return Policy.result("QUARANTINE","AnchorChanged") end
+        if not ok then fail("ObservationFailed");return Policy.result("QUARANTINE","EvidenceUnavailable") end
+        return result
+    end
     function controller.census()
+        if assessing then return nil,"Busy" end
         if not guardReady() or not server() or not started or not session or phase~="RECOVERED" then return nil,"Unavailable" end
         if not checkpoint.unchanged() then fail("AnchorChanged");return nil,"AnchorChanged" end
+        assessing=true
         local ok,result=pcall(function()
             -- getAnimals scans native objectList. Called once at startup or by an
             -- explicit server recovery action, never by a tick/update callback.
@@ -70,24 +90,33 @@ function NativeRuntime.install(config,api)
             local size=animals:size()
             if not Guard.integer(size,0) or size>1024 then return nil end
             local seen={}
+            local decisions={ADMIT=0,QUARANTINE=0,REJECT=0,DEFER=0}
             for index=0,size-1 do
-                local observed=session.observe(animals:get(index))
+                local decision,observed=session.assessAdmission(animals:get(index),"inspect")
+                if not observed then return nil end
                 if observed.status=="CAPACITY" then return nil end
                 if observed.dogId then seen[observed.dogId]=true end
+                if decision.managed then decisions[decision.decision]=decisions[decision.decision]+1 end
             end
             local statuses={}
             for id in pairs(seen) do statuses[id]=session.status(id) end
             local identity=session.identitySummary()
             return {status="OBSERVED_LOADED_ONLY",animalsRead=size,dogs=statuses,
-                retained=identity.retained,dogId=identity.dogId,bindingVerified=false}
+                retained=identity.retained,dogId=identity.dogId,bindingVerified=false,admission=decisions}
         end)
+        assessing=false
         if not guardReady() then return nil,"Unavailable" end
+        if not checkpoint.unchanged() then fail("AnchorChanged");return nil,"AnchorChanged" end
         if not ok or not result then fail("CensusUnavailable");return nil,"Unavailable" end
         return result
     end
     function controller.prepareOwnership(animal,context,intent)
         if not guardReady() or not server() or not started or phase~="RECOVERED" or not session then return nil,"Unavailable" end
         if not checkpoint.unchanged() then fail("AnchorChanged");return nil,"AnchorChanged" end
+        if api.isServer()~=false or api.B47DogSinglePlayer~=true then
+            local decision=controller.assessAdmission(animal,"privileged_action")
+            if decision.decision~="ADMIT" then return nil,"UntrustedNativeMarker" end
+        end
         local prepared,why=session.prepareOwnership(animal,context,intent)
         if not guardReady() then return nil,"Unavailable" end
         if not prepared then

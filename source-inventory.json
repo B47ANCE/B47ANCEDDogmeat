@@ -7,6 +7,7 @@
     "src/bootstrap/server/B47DogBootstrap.lua",
     "src/bootstrap/shared/B47DogRegistration.lua",
     "src/domain/B47Dog/Access.lua",
+    "src/domain/B47Dog/AdmissionPolicy.lua",
     "src/domain/B47Dog/Codec.lua",
     "src/domain/B47Dog/Guard.lua",
     "src/domain/B47Dog/Identity.lua",
@@ -80,7 +81,8 @@
       "UI_B47ANCEDDogmeat_Test_Recovery",
       "UI_B47ANCEDDogmeat_Test_WAITING_INITIAL_NATIVE_RELOAD",
       "UI_B47ANCEDDogmeat_Test_WAITING_NATIVE_RELOAD",
-      "UI_B47ANCEDDogmeat_Test_Loaded"
+      "UI_B47ANCEDDogmeat_Test_Loaded",
+      "UI_B47ANCEDDogmeat_Test_Admission"
     ],
     "Sandbox": [
       "Sandbox_B47ANCEDDogTraining_HandlerPermissionMode",
@@ -150,6 +152,9 @@
     "coverage": "LUA_ACTIONS_ONLY",
     "ownership_ready": false,
     "installation": "explicit server bootstrap before native recovery and provisioning",
-    "failure": "process-latched; never infer previous-session coverage from a fresh install"
+    "failure": "process-latched; never infer previous-session coverage from a fresh install",
+    "central_policy": "B47Dog/AdmissionPolicy",
+    "runtime_decision_entry": "B47Dog/NativeRuntime.assessAdmission",
+    "admit_implemented": false
   }
 }

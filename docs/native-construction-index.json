@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "project_version": "0.2.0-dev.7",
+  "observed_date": "2026-10-14",
+  "source_baseline_commit": "6518be2aa7afaa71d70e3ff4b28b68dc01e21a63",
+  "observed_game_build": "42.21",
+  "scope": "DIRECT_NEW_ONLY_NOT_GRAPH_CLOSURE",
+  "candidate_classes": 136,
+  "direct_constructor_sites": [
+    {
+      "class": "zombie.Lua.LuaManager$GlobalObject",
+      "method": "public static zombie.characters.animals.IsoAnimal addAnimal(zombie.iso.IsoCell, int, int, int, java.lang.String, zombie.characters.animals.datas.AnimalBreed, boolean);",
+      "new_offset": 0
+    },
+    {
+      "class": "zombie.Lua.LuaManager$GlobalObject",
+      "method": "public static zombie.characters.animals.IsoAnimal addAnimal(zombie.iso.IsoCell, int, int, int, java.lang.String, zombie.characters.animals.datas.AnimalBreed);",
+      "new_offset": 0
+    },
+    {
+      "class": "zombie.characters.animals.IsoAnimal",
+      "method": "public zombie.characters.animals.IsoAnimal addBaby();",
+      "new_offset": 38
+    },
+    {
+      "class": "zombie.characters.animals.IsoAnimal",
+      "method": "public static zombie.characters.animals.IsoAnimal createAnimalFromCorpse(zombie.iso.objects.IsoDeadBody);",
+      "new_offset": 0
+    },
+    {
+      "class": "zombie.characters.animals.MigrationGroupDefinitions",
+      "method": "public static java.util.ArrayList<zombie.characters.animals.IsoAnimal> generatePossibleAnimals(zombie.characters.animals.VirtualAnimal, java.lang.String);",
+      "new_offset": 89
+    },
+    {
+      "class": "zombie.characters.animals.MigrationGroupDefinitions",
+      "method": "public static java.util.ArrayList<zombie.characters.animals.IsoAnimal> generatePossibleAnimals(zombie.characters.animals.VirtualAnimal, java.lang.String);",
+      "new_offset": 167
+    },
+    {
+      "class": "zombie.characters.animals.datas.AnimalData",
+      "method": "public void grow(java.lang.String);",
+      "new_offset": 58
+    },
+    {
+      "class": "zombie.inventory.InventoryItem",
+      "method": "private zombie.iso.objects.IsoDeadBody createDefaultDeadBody(zombie.iso.IsoGridSquare) throws java.lang.Throwable;",
+      "new_offset": 163
+    },
+    {
+      "class": "zombie.inventory.types.AnimalInventoryItem",
+      "method": "public void load(java.nio.ByteBuffer, int) throws java.io.IOException;",
+      "new_offset": 7
+    },
+    {
+      "class": "zombie.inventory.types.Food",
+      "method": "public boolean checkEggHatch(zombie.iso.objects.IsoHutch);",
+      "new_offset": 310
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "public void AddCorpses(int, int);",
+      "new_offset": 700
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "public void AddCorpses(int, int);",
+      "new_offset": 738
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "public void AddCorpses(int, int);",
+      "new_offset": 838
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "public void AddCorpses(int, int);",
+      "new_offset": 876
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "private void addRatsAfterLoading(zombie.iso.IsoGridSquare);",
+      "new_offset": 390
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "private void addRatsAfterLoading(zombie.iso.IsoGridSquare);",
+      "new_offset": 554
+    },
+    {
+      "class": "zombie.iso.IsoChunk",
+      "method": "private void addRatsAfterLoading(zombie.iso.IsoGridSquare);",
+      "new_offset": 903
+    },
+    {
+      "class": "zombie.iso.IsoGridSquare",
+      "method": "public zombie.inventory.InventoryItem AddWorldInventoryItem(zombie.inventory.InventoryItem, float, float, float, boolean, boolean);",
+      "new_offset": 94
+    },
+    {
+      "class": "zombie.iso.IsoObject$36",
+      "method": "protected zombie.iso.IsoObject InstantiateObject(zombie.iso.IsoCell);",
+      "new_offset": 0
+    },
+    {
+      "class": "zombie.iso.objects.IsoDeadBody",
+      "method": "private zombie.characters.animals.IsoAnimal reanimateAnimal();",
+      "new_offset": 8
+    },
+    {
+      "class": "zombie.iso.objects.IsoHutch$NestBox",
+      "method": "void load(java.nio.ByteBuffer, int) throws java.io.IOException;",
+      "new_offset": 72
+    },
+    {
+      "class": "zombie.iso.objects.IsoHutch",
+      "method": "public void load(java.nio.ByteBuffer, int, boolean) throws java.io.IOException;",
+      "new_offset": 228
+    },
+    {
+      "class": "zombie.iso.objects.IsoHutch",
+      "method": "public void load(java.nio.ByteBuffer, int, boolean) throws java.io.IOException;",
+      "new_offset": 309
+    },
+    {
+      "class": "zombie.network.packets.character.AnimalCommandPacket",
+      "method": "public void processClient(zombie.core.raknet.UdpConnection);",
+      "new_offset": 409
+    },
+    {
+      "class": "zombie.network.packets.character.AnimalCommandPacket",
+      "method": "public void processClient(zombie.core.raknet.UdpConnection);",
+      "new_offset": 1203
+    },
+    {
+      "class": "zombie.network.packets.character.AnimalUpdatePacket",
+      "method": "public void parse(zombie.core.network.ByteBufferReader, zombie.network.IConnection);",
+      "new_offset": 268
+    },
+    {
+      "class": "zombie.network.packets.character.AnimalUpdatePacket",
+      "method": "public void parse(zombie.core.network.ByteBufferReader, zombie.network.IConnection);",
+      "new_offset": 335
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSDevouredByRats",
+      "method": "public void randomizeDeadSurvivor(zombie.iso.BuildingDef);",
+      "new_offset": 281
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSDevouredByRats",
+      "method": "public void randomizeDeadSurvivor(zombie.iso.BuildingDef);",
+      "new_offset": 318
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSRatInfested",
+      "method": "public static void ratRoom(zombie.iso.RoomDef);",
+      "new_offset": 664
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSRatInfested",
+      "method": "public static void ratRoom(zombie.iso.RoomDef);",
+      "new_offset": 702
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSRatInfested",
+      "method": "public static void ratRoom(zombie.iso.RoomDef);",
+      "new_offset": 918
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSRatInfested",
+      "method": "public static void ratRoom(zombie.iso.RoomDef);",
+      "new_offset": 956
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSRatKing",
+      "method": "public void randomizeDeadSurvivor(zombie.iso.BuildingDef);",
+      "new_offset": 188
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedDeadSurvivor.RDSRatKing",
+      "method": "public void randomizeDeadSurvivor(zombie.iso.BuildingDef);",
+      "new_offset": 225
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedRanch.RandomizedRanchBase",
+      "method": "public static void randomizeRanch(zombie.iso.zones.Zone, zombie.iso.areas.DesignationZoneAnimal);",
+      "new_offset": 245
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedRanch.RandomizedRanchBase",
+      "method": "public static void randomizeRanch(zombie.iso.zones.Zone, zombie.iso.areas.DesignationZoneAnimal);",
+      "new_offset": 567
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSAnimalOnRoad",
+      "method": "public void spawnElement(zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner, zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner$Element);",
+      "new_offset": 341
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSAnimalTrailerOnRoad",
+      "method": "private void spawnAnimals(zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner, zombie.iso.IsoGridSquare);",
+      "new_offset": 85
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSAnimalTrailerOnRoad",
+      "method": "private void spawnAnimals(zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner, zombie.iso.IsoGridSquare);",
+      "new_offset": 191
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSCarCrashDeer",
+      "method": "public void spawnElement(zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner, zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner$Element);",
+      "new_offset": 163
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSHerdOnRoad",
+      "method": "public void randomizeVehicleStory(zombie.iso.zones.Zone, zombie.iso.IsoChunk);",
+      "new_offset": 264
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSHerdOnRoad",
+      "method": "public void randomizeVehicleStory(zombie.iso.zones.Zone, zombie.iso.IsoChunk);",
+      "new_offset": 364
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSRoadKill",
+      "method": "public void spawnElement(zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner, zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner$Element);",
+      "new_offset": 365
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedVehicleStory.RVSRoadKillSmall",
+      "method": "public void spawnElement(zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner, zombie.randomizedWorld.randomizedVehicleStory.VehicleStorySpawner$Element);",
+      "new_offset": 299
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSAttachedAnimal",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 237
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSEscapedAnimal",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 261
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSEscapedHerd",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 237
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSEscapedHerd",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 317
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSHogWild",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 83
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSHogWild",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 195
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSHogWild",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 310
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSHunterCamp",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 463
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSOccultActivity",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 350
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSOrphanedFawn",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 14
+    },
+    {
+      "class": "zombie.randomizedWorld.randomizedZoneStory.RZSOrphanedFawn",
+      "method": "public void randomizeZoneStory(zombie.iso.zones.Zone);",
+      "new_offset": 88
+    },
+    {
+      "class": "zombie.vehicles.BaseVehicle",
+      "method": "public void load(java.nio.ByteBuffer, int, boolean) throws java.io.IOException;",
+      "new_offset": 844
+    },
+    {
+      "class": "zombie.vehicles.BaseVehicle",
+      "method": "public void load(java.nio.ByteBuffer, int, boolean) throws java.io.IOException;",
+      "new_offset": 905
+    },
+    {
+      "class": "zombie.vehicles.BaseVehicle",
+      "method": "public zombie.iso.IsoObject removeAnimalFromTrailer(zombie.characters.animals.IsoAnimal);",
+      "new_offset": 53
+    }
+  ]
+}

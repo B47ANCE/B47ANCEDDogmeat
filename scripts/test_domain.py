@@ -50,11 +50,13 @@ def main():
                             ('provision_spec.lua', None), ('registration_spec.lua', None), ('bootstrap_spec.lua', None),
                             ('identity_authority_spec.lua', None),
                             ('admission_spec.lua', None),
+                            ('continuity_spec.lua', None),
                             ('restart_spec.lua', 'prepare'), ('restart_spec.lua', 'recover'),
                             ('native_restart_spec.lua', 'prepare'), ('native_restart_spec.lua', 'recover'),
                             ('provision_restart_spec.lua', 'prepare'), ('provision_restart_spec.lua', 'recover'),
                             ('identity_restart_spec.lua', 'prepare'), ('identity_restart_spec.lua', 'recover'),
-                            ('admission_restart_spec.lua', 'prepare'), ('admission_restart_spec.lua', 'recover')]:
+                            ('admission_restart_spec.lua', 'prepare'), ('admission_restart_spec.lua', 'recover'),
+                            ('continuity_restart_spec.lua', 'prepare'), ('continuity_restart_spec.lua', 'recover')]:
             lua = runtime(directory)
             lua_version = lua.eval('_VERSION')
             lua.globals().RESTART_PHASE = phase
