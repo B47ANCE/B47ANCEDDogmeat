@@ -325,6 +325,10 @@
     {
       "path": "tests/runtime/account_binding/README.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/BRANDING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -456,6 +460,10 @@
     {
       "reference": "docs/requirements/DATABASE_AUTHORITY_NATIVE_LIFECYCLE_REQUEST.md",
       "reason": "Immutable complete supplied native/database foundational proof request; not a current version mirror."
+    },
+    {
+      "reference": "docs/BRANDING.md#historical-fallback-setup",
+      "reason": "Fallback art setup and its 0.2.0-dev.6 authoring checkpoint retain historical evidence; current artwork selection is documented separately."
     }
   ]
 }

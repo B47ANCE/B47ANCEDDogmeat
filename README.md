@@ -2,6 +2,10 @@
 
 Project Version: 0.2.0-dev.7
 
+<img src="thumbnail.png" alt="B47ANCE'd Dogmeat project thumbnail" width="512" />
+
+The user-selected German Shepherd [project thumbnail](thumbnail.png) is preserved at its original 1254×1254 resolution. Artwork roles and provenance are recorded in [BRANDING.md](docs/BRANDING.md).
+
 The focused account-binding follow-up now includes a [read-only disposable Lua probe and two-client test procedure](tests/runtime/account_binding/README.md). The native player-to-connection helpers have no verified Lua route; automatic adoption remains BLOCKED. Twenty-five probe cases bring the offline suite to 431. The probe is excluded from ordinary assembly; no server/client launch or dedicated reconnect/restart result is claimed.
 
 The [server-account alternative investigation](docs/SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) finds lossless string labels and a useful normal login path, but automatic account binding remains BLOCKED. Slot/replacement aliases, case behavior and rename/delete/recreation require explicit root-account and lifecycle proof. A private realm-scoped principal UUID registry is proposed only; no provider, ownership or task control is activated.
