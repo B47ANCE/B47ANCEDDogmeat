@@ -464,6 +464,14 @@
     {
       "reference": "docs/BRANDING.md#historical-fallback-setup",
       "reason": "Fallback art setup and its 0.2.0-dev.6 authoring checkpoint retain historical evidence; current artwork selection is documented separately."
+    },
+    {
+      "reference": "art/english_mastiff/",
+      "reason": "Frozen em-v001 authoring/interchange/source inspection checkpoint tested at 0.2.0-dev.7; not current runtime proof. Retain recorded project/game versions on future iterations."
+    },
+    {
+      "reference": "docs/requirements/ENGLISH_MASTIFF_REQUEST.md",
+      "reason": "Immutable supplied English Mastiff asset-only handoff; no gameplay/model activation or version-bump authority."
     }
   ]
 }

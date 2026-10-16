@@ -1,0 +1,178 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "asset_revision": "em-v001",
+  "stage": "processed",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "source": "interchange/english_mastiff.glb",
+  "sha256": "37c8e1cc6e47f9ffde22aa93346e8d91f15fb4c3d90843e4cb278e2aab07bd31",
+  "meshes": [
+    {
+      "name": "Mesh_0",
+      "vertices": 11928,
+      "polygons": 12476,
+      "triangles": 12476,
+      "uv_layers": 1,
+      "raw_boundary_edges": 9410,
+      "welded_boundary_edges": 0,
+      "welded_nonmanifold_edges": 0,
+      "welded_components_vertices": [
+        6240
+      ],
+      "nonfinite_coordinates": 0,
+      "zero_area_triangles": 0,
+      "materials": [
+        "Material_0"
+      ]
+    }
+  ],
+  "dimensions_blender_units": [
+    0.6535210013389587,
+    1.9003870487213135,
+    1.3366941213607788
+  ],
+  "physical_scale": "NOT CALIBRATED",
+  "source_bounds": {
+    "minimum": [
+      -0.32982298731803894,
+      -0.9495750069618225,
+      -0.6689440608024597
+    ],
+    "maximum": [
+      0.3236980140209198,
+      0.9508119821548462,
+      0.6677500605583191
+    ]
+  },
+  "armatures": 0,
+  "animations": 0,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "sRGB"
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "Non-Color"
+    }
+  ],
+  "renders": [
+    {
+      "path": "previews/processed/three_quarter.png",
+      "sha256": "71d2d821f883d5cb96b70b03b66d6dc6969f00bcd506cae29669031eb5ea2735"
+    },
+    {
+      "path": "previews/processed/axis_x_positive.png",
+      "sha256": "e907ad8b0c72bb7e9e88c4492af90b02dafbee9f2df342e1333c165fc3f906de"
+    },
+    {
+      "path": "previews/processed/axis_x_negative.png",
+      "sha256": "48502b63ffb1b4a8b0b3ed6190e61a4c017e41977a79c62c7a14657a0c79a603"
+    },
+    {
+      "path": "previews/processed/axis_y_positive.png",
+      "sha256": "52ec321438e0d4e7ade4810371ec99249afc389886cf8893e86b77e1eaa44d2d"
+    },
+    {
+      "path": "previews/processed/axis_y_negative.png",
+      "sha256": "2eb2153510bfba636459b6ea9547a1a7ce0561118011e1c7ea1c9b1696ba2189"
+    }
+  ],
+  "pz_compatibility": "NOT TESTED",
+  "rigging_readiness": "UNRIGGED; deformation NOT TESTED",
+  "triangles": 12476,
+  "materials": [
+    {
+      "name": "Material_0",
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "image": null
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "image": null
+        },
+        {
+          "name": "Image Texture",
+          "type": "ShaderNodeTexImage",
+          "image": "Image_0"
+        },
+        {
+          "name": "Separate Color",
+          "type": "ShaderNodeSeparateColor",
+          "image": null
+        },
+        {
+          "name": "Image Texture.001",
+          "type": "ShaderNodeTexImage",
+          "image": "Image_1"
+        },
+        {
+          "name": "Normal Map",
+          "type": "ShaderNodeNormalMap",
+          "image": null
+        },
+        {
+          "name": "Image Texture.002",
+          "type": "ShaderNodeTexImage",
+          "image": "Image_2"
+        }
+      ],
+      "links": [
+        {
+          "from": "Principled BSDF.BSDF",
+          "to": "Material Output.Surface"
+        },
+        {
+          "from": "Image Texture.Color",
+          "to": "Principled BSDF.Base Color"
+        },
+        {
+          "from": "Separate Color.Blue",
+          "to": "Principled BSDF.Metallic"
+        },
+        {
+          "from": "Separate Color.Green",
+          "to": "Principled BSDF.Roughness"
+        },
+        {
+          "from": "Image Texture.001.Color",
+          "to": "Separate Color.Color"
+        },
+        {
+          "from": "Normal Map.Normal",
+          "to": "Principled BSDF.Normal"
+        },
+        {
+          "from": "Image Texture.002.Color",
+          "to": "Normal Map.Color"
+        }
+      ]
+    }
+  ],
+  "editable_source": {
+    "path": "source/english_mastiff_processed.blend",
+    "sha256": "e5103c3d1379f808819482d4519dbf900baad29209799670e815fa9a7cf9e419"
+  }
+}

@@ -6,6 +6,8 @@ Project Version: 0.2.0-dev.7
 
 The user-selected German Shepherd [project thumbnail](thumbnail.png) is preserved at its original 1254×1254 resolution. Artwork roles and provenance are recorded in [BRANDING.md](docs/BRANDING.md).
 
+An isolated [English Mastiff authoring candidate](art/english_mastiff/README.md) now includes a cleaned 12,476-triangle fawn model, 2K PBR textures, FBX/GLB and editable Blender sources. Two approved Meshy jobs consumed 30 credits. It is unrigged and native compatibility is NOT TESTED; the raccoon carrier, German Shepherd work, project thumbnail and gameplay remain unchanged.
+
 The focused account-binding follow-up now includes a [read-only disposable Lua probe and two-client test procedure](tests/runtime/account_binding/README.md). The native player-to-connection helpers have no verified Lua route; automatic adoption remains BLOCKED. Twenty-five probe cases bring the offline suite to 431. The probe is excluded from ordinary assembly; no server/client launch or dedicated reconnect/restart result is claimed.
 
 The [server-account alternative investigation](docs/SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) finds lossless string labels and a useful normal login path, but automatic account binding remains BLOCKED. Slot/replacement aliases, case behavior and rename/delete/recreation require explicit root-account and lifecycle proof. A private realm-scoped principal UUID registry is proposed only; no provider, ownership or task control is activated.

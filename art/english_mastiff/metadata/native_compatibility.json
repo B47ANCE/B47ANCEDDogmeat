@@ -1,0 +1,101 @@
+{
+  "game_version": "42.21",
+  "steam_build": "25485521",
+  "evidence": "Installed native asset/script source only; no PZ runtime",
+  "native_file_format": "DirectX text X (xof 0303txt 0032)",
+  "named_frames": [
+    "Raccoon",
+    "Dummy01",
+    "Bip01",
+    "Bip01_Pelvis",
+    "Bip01_Spine",
+    "Bip01_L_Thigh",
+    "Bip01_L_Calf",
+    "Bip01_L_Foot",
+    "Bip01_L_Toe0",
+    "Bip01_L_Toe0Nub",
+    "Bip01_R_Thigh",
+    "Bip01_R_Calf",
+    "Bip01_R_Foot",
+    "Bip01_R_Toe0",
+    "Bip01_R_Toe0Nub",
+    "Bip01_Neck",
+    "Bip01_L_Clavicle",
+    "Bip01_L_UpperArm",
+    "Bip01_L_Forearm",
+    "Bip01_L_Hand",
+    "Bip01_L_Finger0",
+    "Bip01_L_Finger0Nub",
+    "Bip01_R_Clavicle",
+    "Bip01_R_UpperArm",
+    "Bip01_R_Forearm",
+    "Bip01_R_Hand",
+    "Bip01_R_Finger0",
+    "Bip01_R_Finger0Nub",
+    "Bip01_Head",
+    "Bip01_HeadNub",
+    "Bip01_Tail",
+    "Bip01_Tail1",
+    "Bip01_Tail2",
+    "Bip01_TailNub",
+    "Translation_Data"
+  ],
+  "skin_weight_names": [
+    "Bip01_L_Thigh",
+    "Bip01_L_Calf",
+    "Bip01_L_Toe0",
+    "Bip01_Pelvis",
+    "Bip01_Spine",
+    "Bip01_L_Foot",
+    "Bip01_L_Finger0",
+    "Bip01_R_Thigh",
+    "Bip01_R_Toe0",
+    "Bip01_Neck",
+    "Bip01_R_Clavicle",
+    "Bip01_L_Clavicle",
+    "Bip01_R_Foot",
+    "Bip01_L_Hand",
+    "Bip01_L_UpperArm",
+    "Bip01_R_Calf",
+    "Bip01_L_Forearm",
+    "Bip01_R_UpperArm",
+    "Bip01_R_Forearm",
+    "Bip01_R_Finger0",
+    "Bip01_R_Hand",
+    "Bip01_Head",
+    "Bip01_Tail",
+    "Bip01_Tail2",
+    "Bip01_Tail1"
+  ],
+  "native_bone_mapping_to_mastiff": "NOT IMPLEMENTED; names alone are not deformation/animation compatibility proof",
+  "inputs": [
+    {
+      "path": "media/models_X/Skinned/Raccoon_Body.x",
+      "sha256": "a8cc66ee09bae74f02f1dbc045a528989cb02e9f7df5ec720f25b8d706348320"
+    },
+    {
+      "path": "media/scripts/generated/models_animals.txt",
+      "sha256": "148a08e544ea44714617681bac2d770ad82beac899a20e3b51ec40c72950a1d0"
+    },
+    {
+      "path": "media/scripts/generated/animations_meshes.txt",
+      "sha256": "626bc19bc4a19c7849dbd1d79b375dbb61c2b5555f0d9545555c5b654f3cb5fd"
+    },
+    {
+      "path": "media/lua/shared/Definitions/animal/RaccoonDefinitions.lua",
+      "sha256": "55185497017826ae3a1d3f3e980f963de29644797ea4d992d40ea9e483ca502c"
+    }
+  ],
+  "registration": [
+    "models_animals.txt:218-223 Raccoon_Body -> Skinned/Raccoon_Body, animalEffect, static=false, animationsMesh=Raccoon",
+    "animations_meshes.txt:101-105 Raccoon animation mesh -> Skinned/Raccoon_Body, animationDirectory=Raccoon"
+  ],
+  "runtime_binding": "src/bootstrap/shared/B47DogRegistration.lua retains cloned raccoonboar; unchanged",
+  "custom_mastiff_registration": false,
+  "native_game_mesh_redistributed": false,
+  "scale": "NOT CALIBRATED",
+  "axes": "Native alignment NOT TESTED; preview face direction visually -Y in Blender",
+  "shader_pbr_compatibility": "UNKNOWN; Meshy normal/roughness maps are authoring data, not proved animalEffect inputs",
+  "lod": "No native LOD switch/budget proof for this asset",
+  "dedicated": "No entity/authority/persistence changes; asset loading and late join remain NOT TESTED"
+}

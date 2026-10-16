@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+The user-requested [English Mastiff asset checkpoint](../art/english_mastiff/README.md) is isolated authoring work: 12,476 cleaned triangles, 2K PBR and editable/interchange files after two approved Meshy jobs. Native scale, shader/export compatibility, skeleton mapping, deformation and runtime loading remain gates. It does not replace the raccoon or authorize gameplay, rigging or animation implementation; German Shepherd refinement remains deferred.
+
 The bounded root-account follow-up has a [disposable read-only probe/run sheet](../tests/runtime/account_binding/README.md) and 25 offline refusal/redaction/entry-point tests. No verified Lua receiver for native root-account helpers was established. Stop automatic provider work until a clean isolated two-client experiment and authenticated account lifecycle evidence are available, or the user explicitly adopts an operator-mediated trust contract. Production ownership/tasks remain disabled; no speculative gameplay guard or identity adapter was added.
 
 Server-account alternative: [SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md](SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md) proposes retained private principal UUIDs with realm, roster lifecycle and fresh session/episode fences. Normal login names avoid precision loss, but slot/replacement names and account reincarnation prevent automatic name-only association. Prove root-account association and lifecycle evidence or explicitly accept operator mediation before adopting a provider. No migration/config/runtime change in this investigation.

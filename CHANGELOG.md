@@ -2,6 +2,7 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- Add the user-requested isolated English Mastiff em-v001 authoring checkpoint: Meshy-7.1 geometry/2K PBR output (20 + 10 approved credits), original files, locally cleaned 12,476-triangle GLB/FBX, packed Blender sources, actual renders, provenance/hashes and native compatibility limits. Three tiny fin triangles removed; original UV/PBR evidence retained. No rigging, animation, raccoon replacement, gameplay or project-version change.
 - Adopt the user-supplied German Shepherd project thumbnail on 2026-10-15. Preserve the original PNG bytes in thumbnail.png, show it in the README, and document provenance and fallback priority. Presentation-only change within this unreleased version; no gameplay, model, metadata, save or configuration changes.
 - Follow the root-account binding candidate through native server/chat, client, simulation-owner and exposure boundaries; retain the automatic binding blocker. Add an opt-in read-only disposable probe overlay, reproducible 17-input/direct-descriptor audit and two-client run sheet. Twenty-five probe/entry-point tests bring offline coverage to 431; no production Lua, provider, account registry, ownership/task control, model or runtime gate changes.
 - Continue additive MINOR development with server-side admission guards around raccoon carrier representation changes and generic item drops.
