@@ -2,6 +2,8 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- Author em-v004 locally in Blender from a preserved em-v001 copy: separate mandible/lining, 42 teeth, gingiva/palate, independent tongue, eyes and blinking lids, editable sources and FBX/GLB. Add actual renders, six-format/UV/weight checks and recorded collision failures. Facial/visual acceptance remains HOLD for upper inner-lip and surfacing defects; no paid job, runtime activation or project-version bump.
+
 - Run one separately approved 20-credit complete-anatomy Meshy-7.1 preview; preserve 23,865-triangle FBX/GLB, Blender source, actual mouth sections and hashes. Oral anatomy remains incomplete and 80 welded non-manifold edges remain. No automatic paid follow-up, texture, rig, runtime change or project-version bump.
 - Apply the latest local-only rigging/animation policy to current Mastiff guidance: Meshy remains limited to approved static geometry/material operations; no credit approval permits Meshy motion tooling. All prior jobs were static geometry/texturing.
 

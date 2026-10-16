@@ -2,9 +2,11 @@
 
 Project Version: 0.2.0-dev.7
 
+The new [local Blender anatomy checkpoint, em-v004](art/english_mastiff_anatomy/README.md), adds a real mouth opening, separate mandible, 42 teeth, gums, palate, oral lining, independent tongue, eyeballs and blinking lids to a copy of the original fawn Mastiff. Editable BLEND and reopened FBX/GLB are retained. Facial/visual acceptance remains **HOLD**: upper inner-lip folding and residual surfacing/attachment defects need local finishing. No new Meshy credits or native activation; the raccoon remains the test carrier.
+
 A separately approved [complete-anatomy Meshy preview](art/english_mastiff_anatomy_preview/README.md) consumed 20 credits. Its 23,865-triangle FBX/GLB imports successfully but still fails oral-anatomy acceptance and has 80 welded non-manifold edges. Original files, actual head sections and hashes are retained; no follow-up paid job, texture or rig is activated.
 
-The latest [complete-anatomy assessment](docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) requires a neutral closed mouth with modeled internal anatomy. Current Meshy candidates are incomplete; component failures, exact local Blender follow-up, proposed regional/LOD budgets and native facial limits are documented. No further paid job follows the approved em-v003 preview.
+The latest [complete-anatomy assessment](docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) records the original Meshy failures, the executed Blender fallback and remaining facial/native gates. No further paid job follows the approved em-v003 preview.
 
 The user stopped the [closed-mouth rig experiment](art/english_mastiff_rig/README.md) on 2026-10-16 and approved one [open-mouth replacement preview](art/english_mastiff_regeneration/README.md) for 20 credits. The downloaded 15,601-triangle FBX/GLB has a cavity and tongue-like geometry, but distinct teeth/gums, jaw articulation and surface defects fail the pre-texturing gate. Texturing and rigging are held; neither candidate is game-ready. The original em-v001 remains unchanged.
 

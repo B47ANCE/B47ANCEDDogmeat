@@ -1,0 +1,639 @@
+{
+  "blend": "source/english_mastiff_anatomy_tests.blend",
+  "blend_sha256": "bd6f9da40e7329f8f8a9602929458f4f1cb9faab55f001a76eda31c290d4441e",
+  "blender": "5.2.2 LTS",
+  "structural": [
+    {
+      "name": "DM_CoatAndUpperHead",
+      "vertices": 8789,
+      "triangles": 17574,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Mandible",
+      "vertices": 2765,
+      "triangles": 5526,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Gums_Upper",
+      "vertices": 204,
+      "triangles": 404,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Gums_Lower",
+      "vertices": 204,
+      "triangles": 404,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_I1",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_I2",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_I3",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_C1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_P1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_P2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_P3",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_P4",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_M1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_L_M2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_I1",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_I2",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_I3",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_C1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_P1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_P2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_P3",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_P4",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_M1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_U_R_M2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_I1",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_I2",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_I3",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_C1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_P1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_P2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_P3",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_P4",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_M1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_M2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_L_M3",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_I1",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_I2",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_I3",
+      "vertices": 60,
+      "triangles": 116,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_C1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_P1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_P2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_P3",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_P4",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_M1",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_M2",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tooth_L_R_M3",
+      "vertices": 72,
+      "triangles": 140,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Tongue",
+      "vertices": 401,
+      "triangles": 798,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_01",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_02",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_03",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_04",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_05",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_06",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_PalatalRidge_07",
+      "vertices": 104,
+      "triangles": 204,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Eyelid.R",
+      "vertices": 104,
+      "triangles": 208,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Eye.R",
+      "vertices": 522,
+      "triangles": 1040,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Eyelid.L",
+      "vertices": 116,
+      "triangles": 232,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    },
+    {
+      "name": "DM_Eye.L",
+      "vertices": 522,
+      "triangles": 1040,
+      "nonfinite": 0,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "uv_layers": 1
+    }
+  ],
+  "poses": [
+    {
+      "case": "Jaw_00",
+      "angle": 0,
+      "tongue_mode": "rest",
+      "overlaps": []
+    },
+    {
+      "case": "Jaw_05",
+      "angle": 5,
+      "tongue_mode": "rest",
+      "overlaps": []
+    },
+    {
+      "case": "Jaw_15",
+      "angle": 15,
+      "tongue_mode": "rest",
+      "overlaps": []
+    },
+    {
+      "case": "Jaw_30",
+      "angle": 30,
+      "tongue_mode": "rest",
+      "overlaps": []
+    },
+    {
+      "case": "Jaw_45",
+      "angle": 45,
+      "tongue_mode": "rest",
+      "overlaps": []
+    },
+    {
+      "case": "Tongue_Extend",
+      "angle": 30,
+      "tongue_mode": "extend",
+      "overlaps": []
+    },
+    {
+      "case": "Tongue_Curl",
+      "angle": 30,
+      "tongue_mode": "curl",
+      "overlaps": []
+    },
+    {
+      "case": "Tongue_Retract",
+      "angle": 15,
+      "tongue_mode": "retract",
+      "overlaps": []
+    }
+  ],
+  "collision_method": "Evaluated triangle meshes, mathutils.BVHTree overlap epsilon1e-8; detects surface intersections, not full containment or minimum clearance.",
+  "excluded": "All original coat surfaces; own gum/tooth root embed pairs. Lining rows reported without automatic root/hinge exemption. Adjacent surfaces and intentional attachments require manual review."
+}

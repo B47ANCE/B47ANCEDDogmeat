@@ -1,0 +1,155 @@
+{
+  "asset_revision": "em-v004",
+  "project_version": "0.2.0-dev.7",
+  "status": "WORK IN PROGRESS / facial and visual HOLD",
+  "evidence_environment": "Windows standalone Blender-Python 5.2.2 LTS",
+  "base": "art/english_mastiff/interchange/english_mastiff.glb",
+  "base_sha256": "37c8e1cc6e47f9ffde22aa93346e8d91f15fb4c3d90843e4cb278e2aab07bd31",
+  "meshy_credits_consumed": 0,
+  "summary": {
+    "geometry": "58 meshes; 34,246 triangles; 42 teeth",
+    "sampled_oral_contacts": "0 pairs in 8 poses, documented exclusions",
+    "upper_lip_self_pairs": [
+      0,
+      33,
+      80,
+      129,
+      209,
+      129,
+      129,
+      80
+    ],
+    "facial_visual_acceptance": "HOLD",
+    "native_runtime": "NOT TESTED"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 7650,
+      "sha256": "0aed6e83a62c3f60e912d088daf418320c8d15735e1a1a01b270e928fa815ea4"
+    },
+    "interchange/english_mastiff_anatomy.fbx": {
+      "bytes": 8977532,
+      "sha256": "3b6bf3b59449e5698e9f9a5922341c6eaf0fb405b9f6678f8e74267340022ef3"
+    },
+    "interchange/english_mastiff_anatomy.glb": {
+      "bytes": 8973176,
+      "sha256": "cfa0148d91d4320770584f24f4b947bde2ff4681e72abf5554cffb0b271dcfda"
+    },
+    "interchange/english_mastiff_anatomy_tests.fbx": {
+      "bytes": 9453084,
+      "sha256": "99d15c1ae59d1dc36af9071a3372bd9dea3521e1f6355de5323c21f93da1b4d3"
+    },
+    "interchange/english_mastiff_anatomy_tests.glb": {
+      "bytes": 9500008,
+      "sha256": "0dc5b1885740e85fae73067fbeaa33e196d02b3952a3446f713c471eaccd173f"
+    },
+    "metadata/construction.json": {
+      "bytes": 916749,
+      "sha256": "f41a7828f938f2e0f10f74d8b0395b4495e37afde14c9b2185c1d0973b8ec1d5"
+    },
+    "metadata/dentition.json": {
+      "bytes": 6528,
+      "sha256": "911d598a59ade8d9c1306d5d23dce793d983b3e1cfec5c4acd2f1802d210b6b6"
+    },
+    "previews/eyes_blink.png": {
+      "bytes": 1462305,
+      "sha256": "ef4e6742f74702c9c91ea0b170df40867c734684bec0c64103053b8276e570f8"
+    },
+    "previews/eyes_gaze.png": {
+      "bytes": 1468904,
+      "sha256": "90d79493289fbda0e7f5ce14f2a415d84dc9af292ff706ef222a4d926063bebd"
+    },
+    "previews/jaw_05.png": {
+      "bytes": 1408382,
+      "sha256": "61142960fc5b813be0f2da512566c0eecb3c4ad173eb356892715d97038fd671"
+    },
+    "previews/jaw_15.png": {
+      "bytes": 1404019,
+      "sha256": "6fb1bd1542c0c79b8b5097d1e78c3a4959b65e4b564d3e4265f2bcd75a3aee8d"
+    },
+    "previews/jaw_30.png": {
+      "bytes": 1397625,
+      "sha256": "a97265067a6b72786f46ea203ae549fb27558e695730dc2b10ebc03586e26236"
+    },
+    "previews/jaw_45.png": {
+      "bytes": 1397498,
+      "sha256": "dee470248fffb720d790316001673c81262235160552bb0a227d7afa6904fd51"
+    },
+    "previews/mouth_section.png": {
+      "bytes": 1278130,
+      "sha256": "05517d1dcc6b368e8e3290b846d7898a2bff84397a6121c3c920edad334bd5d2"
+    },
+    "previews/neutral_front.png": {
+      "bytes": 1465299,
+      "sha256": "10d5e5268111c70628b8b12511a1cf8b37e2a8ebf29b0746326a53da5a2fb800"
+    },
+    "previews/neutral_head.png": {
+      "bytes": 1410835,
+      "sha256": "d2bdf96126cd63cf66d024f1fe3dfe55e441767f1e1c9f5238ef85e77c6f8b61"
+    },
+    "previews/neutral_whole.png": {
+      "bytes": 1099163,
+      "sha256": "d0d822e5987c21aa876ace7f1f7ef829d65c3cf683f22e169d1b083d76109eaf"
+    },
+    "previews/oral_components.png": {
+      "bytes": 1060260,
+      "sha256": "249d25343fdcdf0754f60bb0fd191451472a2b5f734810fb76806c3c94120586"
+    },
+    "previews/tongue_curl.png": {
+      "bytes": 1381448,
+      "sha256": "ebe6b8420fb474125fe7da2ca5fb1b56ac253ba4c57908f81c2c4607ba005042"
+    },
+    "previews/tongue_extend.png": {
+      "bytes": 1381761,
+      "sha256": "665d27d7bb559fd29761184e8ce017d6e190c286a680db5a568230a5198f5ef9"
+    },
+    "previews/tongue_retract.png": {
+      "bytes": 1405353,
+      "sha256": "ec58bd3309547ca2e3b91e5145c617325d4db0cee19f9f2e5991e1d173066597"
+    },
+    "source/build_anatomy.py": {
+      "bytes": 43157,
+      "sha256": "5f62e7189d7dc58008f1da144fd2df258ff9685b03a6da70d73ac5bc52ac026b"
+    },
+    "source/english_mastiff_anatomy.blend": {
+      "bytes": 9122770,
+      "sha256": "863c0480fbc92cfe844eda89f248548370ea80a5992a67deb9cb9c5665558806"
+    },
+    "source/english_mastiff_anatomy_tests.blend": {
+      "bytes": 9200093,
+      "sha256": "bd6f9da40e7329f8f8a9602929458f4f1cb9faab55f001a76eda31c290d4441e"
+    },
+    "source/inspect_deformation.py": {
+      "bytes": 4246,
+      "sha256": "37224a8292b4e4161ee67bd28694d05e4a55b7096290af76345edd2e7749a57c"
+    },
+    "source/inspect_exports.py": {
+      "bytes": 8079,
+      "sha256": "b3c673637b6ee1ab9d7fd9a442d0d9ff666c51582c35158bd4e04f81457de234"
+    },
+    "source/inspect_oral_clearance.py": {
+      "bytes": 4326,
+      "sha256": "4e9ebf3a9eb435026e127029b9e30bcd3dfd93edd2517ae267aac24b308d5d69"
+    },
+    "source/planar_triangulation.py": {
+      "bytes": 3412,
+      "sha256": "ae2906a8b92567560f78c11ee8a2e6c672f884111582b48d0d62695a4edc6a25"
+    },
+    "source/validate_checkpoint.py": {
+      "bytes": 8309,
+      "sha256": "b8cb43ef80f53ab8f4782de3887eed3d0ce55e8fdf839a581418e87720f3828c"
+    },
+    "validation/deformation.json": {
+      "bytes": 22343,
+      "sha256": "2a73890e16890c1870c4bec547f10f5a16735c1e5881ee5907a29929fbda7b89"
+    },
+    "validation/exports.json": {
+      "bytes": 233722,
+      "sha256": "7cb13cfbc66fcef3838e380750693cbf54c965d3ffab5ddfb0bb5219f632e191"
+    },
+    "validation/oral_clearance.json": {
+      "bytes": 14458,
+      "sha256": "0fba36be11e6297c2717c23f5d38e7a09221e100872f45a527b1045ee7827081"
+    }
+  }
+}

@@ -2,14 +2,44 @@
 
 Project Version: 0.2.0-dev.7
 
-Decision, 2026-10-16: **geometry acceptance INCOMPLETE; texturing and rigging HOLD**.
+Decision, 2026-10-16: **local anatomy added; facial/visual acceptance INCOMPLETE;
+production rigging and native activation HOLD**.
 The latest [complete-anatomy request](requirements/ENGLISH_MASTIFF_ANATOMY_REQUEST.md)
 governs the target: a neutral, gently closed mouth with complete modeled anatomy
 inside, no permanently exposed tongue. It supersedes the earlier open-mouth
 preview pose. The user later approved one additional 20-credit static preview;
 no automatic follow-up is authorized. Its explicit fallback applies:
 retain the best available base, identify missing geometry
-and provide a precise local modeling plan when Meshy is unreliable.
+and provide a precise local modeling plan when Meshy is unreliable. The user's
+later instruction to use Blender authorizes executing that local fallback.
+
+## Executed local Blender slice
+
+[em-v004](../art/english_mastiff_anatomy/README.md) is a separate working copy of
+the original textured base. Codex authored the mouth incision, mandibular mesh,
+palate/floor/posterior lining, 42 individual teeth, upper/lower gingiva,
+independent tongue, eyeballs and blinking eyelids locally in Blender-Python
+5.2.2 LTS. The source includes a temporary seven-bone jaw/tongue/eye test rig and
+eight pose presets, plus rig-free BLEND and generic FBX/GLB checkpoints. This
+consumed zero additional Meshy credits and preserves all prior assets.
+
+[TESTED — offline Windows Blender] Six-format reopening verifies the semantic
+parts, UVs, expected teeth, normalized weights and Blink morphs. The original
+body/coat evidence is retained; FBX receives the original separate scalar maps
+to replace unsupported packed-channel export. Actual neutral, mouth section,
+jaw/tongue and eye renders are retained. Exact source-bound reports are linked
+from the asset README; old preview/rig reports have not been relabeled.
+
+**This is a work-in-progress anatomical checkpoint.** Upper inner-lip folds,
+residual lining slivers/attachment seams and unfinished eye/lid shading/form
+block final facial and visual acceptance. Successful export or manifoldness
+does not waive these defects. Finish local lip/corner topology and clearance
+before production animation. No claim of commercial-quality matching,
+collision-free complete motion, native morph/material support or game readiness.
+
+No production Lua, save, ownership, task control, carrier or runtime metadata
+changed. Continue using the raccoon. G6 NOT TESTED; G7 BLOCKED / NOT TESTED;
+stable G8 BLOCKED.
 
 The original textured [em-v001](../art/english_mastiff/README.md) remains the
 better retained appearance/coat checkpoint. The separately approved
@@ -21,7 +51,7 @@ also fails anatomy acceptance: 23,865 triangles, 52 boundary edges and
 verified bounded oral anatomy. None is a complete animatable character;
 no follow-up texturing or rigging is claimed.
 
-## Retained em-v002 component inspection
+## Historical retained em-v002 component inspection
 
 Evidence: em-v002-preview GLB/FBX reimports, five whole-model renders and
 [five mouth/section views](../art/english_mastiff_regeneration/previews/mouth).
@@ -87,7 +117,11 @@ Any new permitted static generation, remesh,
 texture or conversion job requires separate explicit approval. Meshy motion
 operations remain prohibited; approval for credits cannot enable them.
 
-## Precise Blender follow-up
+## Original Blender plan and remaining acceptance criteria
+
+This is the original plan used to start em-v004. Its implemented subset and
+remaining defects are recorded above and in the asset README; these steps are
+not an assertion that deformation, finished surfacing or native export passed.
 
 1. Create an em-v004 editable working copy of em-v001. Keep all service outputs,
    em-v001, em-v002-preview, em-v003-preview and the stopped rig experiment
@@ -199,17 +233,17 @@ sandbox option is appropriate for these unregistered authoring artifacts.
 
 | Requested output | Current result |
 | --- | --- |
-| Full-body Mastiff | Three retained Meshy base candidates; no final likeness/animation approval |
-| Complete mouth / riggable jaw | INCOMPLETE; precise rebuild steps above |
-| Tongue, teeth, gums, palate | INCOMPLETE/FAIL as individually recorded |
-| Fawn textures / PBR inventory | Original em-v001 only; no textures on rejected replacement |
-| Geometry inspection | Completed offline with actual geometry renders and hash inventory |
-| Facial feasibility / native assessment | Design/source evidence completed; deformation and runtime gates unproved |
-| Remaining modeling requirements | Explicit local work sequence, test poses and budgets above |
-| Existing animations | Stopped experiment only; this geometry task creates none |
+| Full-body Mastiff | Original textured base preserved in em-v004; final likeness/visual approval pending |
+| Complete mouth / riggable jaw | Modeled opening and jaw; upper transition/deformation acceptance INCOMPLETE |
+| Tongue, teeth, gums, palate | Actual separate meshes and complete reference dentition added locally; final fit/finish HOLD |
+| Fawn textures / PBR inventory | Original 2K coat retained; colored oral source materials, no finished oral atlas |
+| Geometry inspection | Actual new Blender renders, six-format reopening and source-bound hash/check reports |
+| Facial feasibility / native assessment | Seven-bone temporary controls and Blink morphs; full facial/native acceptance unproved |
+| Remaining modeling requirements | Upper lip/corner retopology, closure, complete motion clearance and visual/material finishing |
+| Existing animations | Stopped full-body experiment unchanged; eight new source-only anatomical test presets |
 
-The requested fallback is documented; a complete new anatomical model is not
-claimed. Only the separately approved static preview was added.
-No automatic paid follow-up, dependency, gameplay/save/ownership change,
-native binary modification, deployment or Workshop publication.
+The Blender fallback has been executed as an editable draft; a finished
+animatable character is not claimed. No further paid operation, runtime
+dependency, gameplay/save/ownership change, native binary modification,
+deployment or Workshop publication.
 G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED.
