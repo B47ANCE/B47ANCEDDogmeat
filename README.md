@@ -2,7 +2,9 @@
 
 Project Version: 0.2.0-dev.7
 
-The latest [complete-anatomy assessment](docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) requires a neutral closed mouth with modeled internal anatomy. Current Meshy candidates are incomplete; component failures, exact local Blender follow-up, proposed regional/LOD budgets and native facial limits are documented. No additional paid job was submitted.
+A separately approved [complete-anatomy Meshy preview](art/english_mastiff_anatomy_preview/README.md) consumed 20 credits. Its 23,865-triangle FBX/GLB imports successfully but still fails oral-anatomy acceptance and has 80 welded non-manifold edges. Original files, actual head sections and hashes are retained; no follow-up paid job, texture or rig is activated.
+
+The latest [complete-anatomy assessment](docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) requires a neutral closed mouth with modeled internal anatomy. Current Meshy candidates are incomplete; component failures, exact local Blender follow-up, proposed regional/LOD budgets and native facial limits are documented. No further paid job follows the approved em-v003 preview.
 
 The user stopped the [closed-mouth rig experiment](art/english_mastiff_rig/README.md) on 2026-10-16 and approved one [open-mouth replacement preview](art/english_mastiff_regeneration/README.md) for 20 credits. The downloaded 15,601-triangle FBX/GLB has a cavity and tongue-like geometry, but distinct teeth/gums, jaw articulation and surface defects fail the pre-texturing gate. Texturing and rigging are held; neither candidate is game-ready. The original em-v001 remains unchanged.
 

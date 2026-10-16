@@ -1,0 +1,17 @@
+{
+  "asset_revision": "em-v003-preview",
+  "tested_project_version": "0.2.0-dev.7",
+  "task_id": "01a143d2-0b78-7721-a5c2-d1c04780a497",
+  "task_type": "text-to-3d",
+  "status": "SUCCEEDED",
+  "estimated_credits": 20,
+  "actual_consumed_credits": 20,
+  "approval": "run the meshy 20 credits",
+  "parameters_file": "preview-parameters.json",
+  "reference_uploads": [],
+  "additional_paid_jobs": 0,
+  "geometry_acceptance": "INCOMPLETE / HOLD; required oral structures not established, surface defects remain",
+  "native": "NOT TESTED",
+  "review": "Actual body/mouth/section renders and independent read-only review; no deformation or PZ test",
+  "rights_provenance": "Original text-generated Meshy geometry through user integration; no photographs or third-party models uploaded"
+}

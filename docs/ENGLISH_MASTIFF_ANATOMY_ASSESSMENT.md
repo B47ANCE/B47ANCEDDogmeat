@@ -6,18 +6,22 @@ Decision, 2026-10-16: **geometry acceptance INCOMPLETE; texturing and rigging HO
 The latest [complete-anatomy request](requirements/ENGLISH_MASTIFF_ANATOMY_REQUEST.md)
 governs the target: a neutral, gently closed mouth with complete modeled anatomy
 inside, no permanently exposed tongue. It supersedes the earlier open-mouth
-preview pose. It does not authorize another paid Meshy job. Its explicit
-fallback applies: retain the best available base, identify missing geometry
+preview pose. The user later approved one additional 20-credit static preview;
+no automatic follow-up is authorized. Its explicit fallback applies:
+retain the best available base, identify missing geometry
 and provide a precise local modeling plan when Meshy is unreliable.
 
 The original textured [em-v001](../art/english_mastiff/README.md) remains the
 better retained appearance/coat checkpoint. The separately approved
 [em-v002-preview](../art/english_mastiff_regeneration/README.md) supplies actual
 open-mouth reference geometry, but fails complete-anatomy acceptance.
-Neither is a complete animatable character. No further asset generation,
-texturing or rigging is claimed under this assessment.
+The later [em-v003-preview](../art/english_mastiff_anatomy_preview/README.md)
+also fails anatomy acceptance: 23,865 triangles, 52 boundary edges and
+80 non-manifold edges. Actual sectioning shows a head-shell void rather than
+verified bounded oral anatomy. None is a complete animatable character;
+no follow-up texturing or rigging is claimed.
 
-## Actual component inspection
+## Retained em-v002 component inspection
 
 Evidence: em-v002-preview GLB/FBX reimports, five whole-model renders and
 [five mouth/section views](../art/english_mastiff_regeneration/previews/mouth).
@@ -70,22 +74,25 @@ humanoid/biped inputs and excludes non-humanoid assets. The current user policy
 also prohibits all Meshy rigging, skinning, animation-library clips, retargeting
 and text-to-motion even if credits are approved. Author all motion through
 Blender/local tools; report unavailable local/native contracts as blockers.
-The two observed geometry requests do not prove every possible
+The three observed geometry requests do not prove every possible
 Meshy generation fails; they demonstrate that this workflow has not reliably
 delivered the requested oral anatomy.
 
 Use the already installed standalone Blender-Python 5.2.2 LTS for deterministic
 local modeling. No dependencies were installed. Paid history: first preview
-20 + original texture 10 + replacement preview 20 = 50 credits. This assessment
-consumes zero additional credits. Any new permitted static generation, remesh,
+20 + original texture 10 + replacement preview 20 + complete-anatomy preview 20
+= 70 credits. The latest job consumed its approved 20 credits;
+documentation/inspection consumes zero additional credits.
+Any new permitted static generation, remesh,
 texture or conversion job requires separate explicit approval. Meshy motion
 operations remain prohibited; approval for credits cannot enable them.
 
 ## Precise Blender follow-up
 
-1. Create an em-v003 editable working copy of em-v001. Keep both service outputs,
-   em-v001, em-v002-preview and the stopped rig experiment unchanged. Treat the
-   open preview as owned geometric reference, not a source of accepted mouth
+1. Create an em-v004 editable working copy of em-v001. Keep all service outputs,
+   em-v001, em-v002-preview, em-v003-preview and the stopped rig experiment
+   unchanged. Treat the open preview as owned geometric reference,
+   not a source of accepted mouth
    topology. Preserve existing body proportions, fawn coat and body UVs.
 2. Isolate the head and inspect section views. Mark the upper/lower lip borders,
    both mouth corners, mandibular body and both temporomandibular hinge regions.
@@ -192,7 +199,7 @@ sandbox option is appropriate for these unregistered authoring artifacts.
 
 | Requested output | Current result |
 | --- | --- |
-| Full-body Mastiff | Two retained Meshy base candidates; no final likeness/animation approval |
+| Full-body Mastiff | Three retained Meshy base candidates; no final likeness/animation approval |
 | Complete mouth / riggable jaw | INCOMPLETE; precise rebuild steps above |
 | Tongue, teeth, gums, palate | INCOMPLETE/FAIL as individually recorded |
 | Fawn textures / PBR inventory | Original em-v001 only; no textures on rejected replacement |
@@ -202,6 +209,7 @@ sandbox option is appropriate for these unregistered authoring artifacts.
 | Existing animations | Stopped experiment only; this geometry task creates none |
 
 The requested fallback is documented; a complete new anatomical model is not
-claimed. No additional paid job, dependency, gameplay/save/ownership change,
+claimed. Only the separately approved static preview was added.
+No automatic paid follow-up, dependency, gameplay/save/ownership change,
 native binary modification, deployment or Workshop publication.
 G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED.

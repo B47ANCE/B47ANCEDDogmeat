@@ -1,0 +1,29 @@
+{
+  "asset_revision": "em-v003-preview",
+  "source_model_sha256": "af92349b95e848c73677e1d2d782cb48833d62f34aee07f5a9cbe554b0c34de0",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "scope": "Actual service geometry, neutral review shading, temporary render-only midline cut; no invented anatomy or saved model changes",
+  "renders": [
+    {
+      "path": "previews/mouth/front.png",
+      "sha256": "10d7302bee0233e56288dc8af9f9e9dd82671e8966ff4b1152a5b39c1f04143d"
+    },
+    {
+      "path": "previews/mouth/side.png",
+      "sha256": "5a117ec0442d12e70f514aa06ec14035b2d2a51cc631e44c8093842b93fd8532"
+    },
+    {
+      "path": "previews/mouth/three_quarter.png",
+      "sha256": "a1ed3d0a14ad225d470b63996e491fcb2b5119c7e6cab05a4948471d2302a208"
+    },
+    {
+      "path": "previews/mouth/underside.png",
+      "sha256": "6b350e3f8ca4ca8260581f71d03e2a81c31388bb4c2efe542449c4e892664593"
+    },
+    {
+      "path": "previews/mouth/midline_section.png",
+      "sha256": "64e0e28b2ce661a2c4827b14483bc5baab00d2ae98d3248e9ccbb2d55d960a63"
+    }
+  ],
+  "geometry_acceptance": "REQUIRES VISUAL/COMPONENT ASSESSMENT"
+}

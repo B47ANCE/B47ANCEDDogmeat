@@ -1,0 +1,77 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "asset_revision": "em-v003-preview",
+  "stage": "geometry_preview",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "source": "source/meshy_preview.glb",
+  "sha256": "af92349b95e848c73677e1d2d782cb48833d62f34aee07f5a9cbe554b0c34de0",
+  "meshes": [
+    {
+      "name": "output_unwrapped",
+      "vertices": 21637,
+      "polygons": 23865,
+      "triangles": 23865,
+      "uv_layers": 1,
+      "raw_boundary_edges": 16353,
+      "welded_boundary_edges": 52,
+      "welded_nonmanifold_edges": 80,
+      "welded_components_vertices": [
+        11942
+      ],
+      "nonfinite_coordinates": 0,
+      "zero_area_triangles": 0,
+      "materials": []
+    }
+  ],
+  "dimensions_blender_units": [
+    0.5369470119476318,
+    1.9009850025177002,
+    1.0910650491714478
+  ],
+  "physical_scale": "NOT CALIBRATED",
+  "source_bounds": {
+    "minimum": [
+      -0.27013900876045227,
+      -0.9507049918174744,
+      -0.5462599992752075
+    ],
+    "maximum": [
+      0.26680803298950195,
+      0.9502800703048706,
+      0.5448050498962402
+    ]
+  },
+  "armatures": 0,
+  "animations": 0,
+  "textures": [],
+  "renders": [
+    {
+      "path": "previews/geometry_preview/three_quarter.png",
+      "sha256": "37c26f60427237156c94f762bd98aedab7b58609865de6f8b13b7a3b2180f52d"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_positive.png",
+      "sha256": "b11430d7a4a678cc055f24cfef6d101416e654af1f67e1ad1885c3a9eeb9b39c"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_negative.png",
+      "sha256": "528c56502398ad594cc7dc8c30cab9be24407f58773fcca429b6aa52b5eeebc9"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_positive.png",
+      "sha256": "17d5f83f32b691be7ada57f7478538c2440c3f0c1774979686fda0c2a0faad47"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_negative.png",
+      "sha256": "3fa8371c5715548b82037aa65997086ab7fb2c586a53b3858e2c64f7991d0f6b"
+    }
+  ],
+  "pz_compatibility": "NOT TESTED",
+  "rigging_readiness": "UNRIGGED; deformation NOT TESTED",
+  "triangles": 23865,
+  "materials": [],
+  "editable_source": {
+    "path": "source/english_mastiff_geometry_preview.blend",
+    "sha256": "2d47890608647ec0a7913765ea5dc119238ce35e371a11c933d34760dbc58961"
+  }
+}

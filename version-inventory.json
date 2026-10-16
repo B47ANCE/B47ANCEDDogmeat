@@ -492,6 +492,10 @@
     {
       "reference": "docs/requirements/ENGLISH_MASTIFF_ANATOMY_REQUEST.md",
       "reason": "Immutable complete-anatomy handoff; preserve the actual supplied request, not a current version mirror."
+    },
+    {
+      "reference": "art/english_mastiff_anatomy_preview/",
+      "reason": "Frozen em-v003-preview Meshy geometry/inspection checkpoint tested at 0.2.0-dev.7; one approved 20-credit job, anatomy HOLD, not current runtime proof."
     }
   ]
 }

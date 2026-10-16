@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+The user-approved [em-v003-preview attempt](../art/english_mastiff_anatomy_preview/README.md) is complete as a 20-credit static job, not as an anatomical character. Its actual head section does not establish a bounded mouth cavity, dentition, gums or tongue. Keep anatomy HOLD and use the documented local modeling fallback before further texture/rig work.
+
 The latest [complete-anatomy plan](ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) supersedes the open-preview pose with a gently closed neutral mouth and independent oral structures. Its explicit provider-limitation fallback is recorded: retain the bases, rebuild jaw/cavity/teeth/gums/tongue locally, verify deformation before texturing/rigging, and do not claim finished anatomy or native support.
 
 The [Mastiff rig experiment](../art/english_mastiff_rig/README.md) is stopped at the user's direction. One separately approved 20-credit [replacement preview](../art/english_mastiff_regeneration/README.md) is retained with mouth/surface acceptance HOLD. Verify oral geometry and repair topology before texturing or transferring the intermediate skeleton; no automatic paid follow-up, raccoon replacement or gameplay activation.

@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+Meshy em-v003-preview, 2026-10-16: exactly one newly approved 20-credit task (01a143d2-0b78-7721-a5c2-d1c04780a497) succeeded. GLB/FBX reopen with 23,865 triangles, 52 welded boundary edges and 80 non-manifold edges. Ten actual model/mouth renders and independent read-only review retain anatomy INCOMPLETE/HOLD; a hollow head shell is not an anatomical cavity. Artifact integrity is distinct from model suitability; no new motion, texturing or runtime result.
+
 Complete-anatomy follow-up: [component assessment and precise modeling plan](ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) record FAIL/INCOMPLETE oral anatomy rather than animation-ready claims. The existing 15,601-triangle preview is the inspected evidence; no new paid task, deformation test or runtime run was added for the new handoff. Its geometry-only fallback deliverables remain distinct from the unbuilt complete model.
 
 Mastiff follow-up, 2026-10-16: [closed-mouth rig experiment stopped](../art/english_mastiff_rig/README.md); its draft 42-bone/37-clip outputs and stale intermediate reports are not final PASS evidence. The user approved one [open-mouth geometry replacement](../art/english_mastiff_regeneration/README.md), task 01a143bb-0d56-741e-990f-8926c5d2506a, actual cost 20 credits. GLB/FBX reimports agree on 15,601 triangles, 18 welded boundary edges and 28 non-manifold edges. Ten actual geometry/mouth views support acceptance HOLD: teeth/gums and clean jaw articulation remain unverified. No texture, rig or native-runtime acceptance follows. Original em-v001, production Lua and artwork remain unchanged; no additional runtime tests were run.

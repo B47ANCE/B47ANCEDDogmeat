@@ -1,0 +1,121 @@
+{
+  "asset_revision": "em-v003-preview",
+  "geometry_acceptance": "INCOMPLETE / HOLD",
+  "files": [
+    {
+      "path": "approval.json",
+      "bytes": 575,
+      "sha256": "cd4ef3c5a4eb3d7ef34b95fa7d26feea5c340b2adc22ee882b321f0bcda08ed4"
+    },
+    {
+      "path": "generation.json",
+      "bytes": 782,
+      "sha256": "8b8a27de269396d5d975250a0ca7f669ca48d9cad1c8872b2c3a740d27282a33"
+    },
+    {
+      "path": "preview-parameters.json",
+      "bytes": 1102,
+      "sha256": "9d4333df1ee3c36fe64f2155d2021886181f253b9fea90813473483f516bcc5b"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_negative.png",
+      "bytes": 366646,
+      "sha256": "528c56502398ad594cc7dc8c30cab9be24407f58773fcca429b6aa52b5eeebc9"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_positive.png",
+      "bytes": 367635,
+      "sha256": "b11430d7a4a678cc055f24cfef6d101416e654af1f67e1ad1885c3a9eeb9b39c"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_negative.png",
+      "bytes": 352567,
+      "sha256": "3fa8371c5715548b82037aa65997086ab7fb2c586a53b3858e2c64f7991d0f6b"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_positive.png",
+      "bytes": 350543,
+      "sha256": "17d5f83f32b691be7ada57f7478538c2440c3f0c1774979686fda0c2a0faad47"
+    },
+    {
+      "path": "previews/geometry_preview/three_quarter.png",
+      "bytes": 361750,
+      "sha256": "37c26f60427237156c94f762bd98aedab7b58609865de6f8b13b7a3b2180f52d"
+    },
+    {
+      "path": "previews/mouth/front.png",
+      "bytes": 422880,
+      "sha256": "10d7302bee0233e56288dc8af9f9e9dd82671e8966ff4b1152a5b39c1f04143d"
+    },
+    {
+      "path": "previews/mouth/midline_section.png",
+      "bytes": 419915,
+      "sha256": "64e0e28b2ce661a2c4827b14483bc5baab00d2ae98d3248e9ccbb2d55d960a63"
+    },
+    {
+      "path": "previews/mouth/side.png",
+      "bytes": 416869,
+      "sha256": "5a117ec0442d12e70f514aa06ec14035b2d2a51cc631e44c8093842b93fd8532"
+    },
+    {
+      "path": "previews/mouth/three_quarter.png",
+      "bytes": 421553,
+      "sha256": "a1ed3d0a14ad225d470b63996e491fcb2b5119c7e6cab05a4948471d2302a208"
+    },
+    {
+      "path": "previews/mouth/underside.png",
+      "bytes": 420752,
+      "sha256": "6b350e3f8ca4ca8260581f71d03e2a81c31388bb4c2efe542449c4e892664593"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5507,
+      "sha256": "9aa70d4698cd28d26d1468e306158cbb214c39c5629d0dbecd1bf7b2fc526ef5"
+    },
+    {
+      "path": "source/english_mastiff_geometry_preview.blend",
+      "bytes": 1276609,
+      "sha256": "2d47890608647ec0a7913765ea5dc119238ce35e371a11c933d34760dbc58961"
+    },
+    {
+      "path": "source/inspect_english_mastiff.py",
+      "bytes": 8191,
+      "sha256": "68f95a7395762c3eee1e8adb453ec871300765ceecca1b1f98add7e7e1fabb3a"
+    },
+    {
+      "path": "source/inspect_mouth.py",
+      "bytes": 3106,
+      "sha256": "7cc25593ace06dade7aeeabbf6be2ea08a3f96ff6029053c1559254b767b753c"
+    },
+    {
+      "path": "source/meshy_preview.fbx",
+      "bytes": 971036,
+      "sha256": "fa7e30fc55a167042ea7961c2bd4f0cb4e3175202c7d6d55acc5b5a8d78aae73"
+    },
+    {
+      "path": "source/meshy_preview.glb",
+      "bytes": 836632,
+      "sha256": "af92349b95e848c73677e1d2d782cb48833d62f34aee07f5a9cbe554b0c34de0"
+    },
+    {
+      "path": "source/validate_preview.py",
+      "bytes": 3150,
+      "sha256": "f89e7da955c27fe4419dadf48cdac4deb4da699570464834b5e2c287e0b6e659"
+    },
+    {
+      "path": "validation/geometry_fbx.json",
+      "bytes": 1300,
+      "sha256": "47b11e37fb29090f818b40f2ff1c6ac2b6eb3a049af2f6704d21f9ee6d2991ae"
+    },
+    {
+      "path": "validation/geometry_preview.json",
+      "bytes": 2272,
+      "sha256": "02221038b316bfb457f27e9805d5cbe202425bcee592724a00b3cf2feb0cc8a1"
+    },
+    {
+      "path": "validation/mouth_views.json",
+      "bytes": 1143,
+      "sha256": "94c58c82e6592a433570ef017132e0c30b57564af846dd1a765cc62c54238ba9"
+    }
+  ]
+}
