@@ -2,6 +2,10 @@
 
 Project Version: 0.2.0-dev.7
 
+The latest [complete-anatomy assessment](docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) requires a neutral closed mouth with modeled internal anatomy. Current Meshy candidates are incomplete; component failures, exact local Blender follow-up, proposed regional/LOD budgets and native facial limits are documented. No additional paid job was submitted.
+
+The user stopped the [closed-mouth rig experiment](art/english_mastiff_rig/README.md) on 2026-10-16 and approved one [open-mouth replacement preview](art/english_mastiff_regeneration/README.md) for 20 credits. The downloaded 15,601-triangle FBX/GLB has a cavity and tongue-like geometry, but distinct teeth/gums, jaw articulation and surface defects fail the pre-texturing gate. Texturing and rigging are held; neither candidate is game-ready. The original em-v001 remains unchanged.
+
 <img src="thumbnail.png" alt="B47ANCE'd Dogmeat project thumbnail" width="512" />
 
 The user-selected German Shepherd [project thumbnail](thumbnail.png) is preserved at its original 1254×1254 resolution. Artwork roles and provenance are recorded in [BRANDING.md](docs/BRANDING.md).

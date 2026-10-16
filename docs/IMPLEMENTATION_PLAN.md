@@ -2,6 +2,10 @@
 
 Project Version: 0.2.0-dev.7
 
+The latest [complete-anatomy plan](ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md) supersedes the open-preview pose with a gently closed neutral mouth and independent oral structures. Its explicit provider-limitation fallback is recorded: retain the bases, rebuild jaw/cavity/teeth/gums/tongue locally, verify deformation before texturing/rigging, and do not claim finished anatomy or native support.
+
+The [Mastiff rig experiment](../art/english_mastiff_rig/README.md) is stopped at the user's direction. One separately approved 20-credit [replacement preview](../art/english_mastiff_regeneration/README.md) is retained with mouth/surface acceptance HOLD. Verify oral geometry and repair topology before texturing or transferring the intermediate skeleton; no automatic paid follow-up, raccoon replacement or gameplay activation.
+
 The user-requested [English Mastiff asset checkpoint](../art/english_mastiff/README.md) is isolated authoring work: 12,476 cleaned triangles, 2K PBR and editable/interchange files after two approved Meshy jobs. Native scale, shader/export compatibility, skeleton mapping, deformation and runtime loading remain gates. It does not replace the raccoon or authorize gameplay, rigging or animation implementation; German Shepherd refinement remains deferred.
 
 The bounded root-account follow-up has a [disposable read-only probe/run sheet](../tests/runtime/account_binding/README.md) and 25 offline refusal/redaction/entry-point tests. No verified Lua receiver for native root-account helpers was established. Stop automatic provider work until a clean isolated two-client experiment and authenticated account lifecycle evidence are available, or the user explicitly adopts an operator-mediated trust contract. Production ownership/tasks remain disabled; no speculative gameplay guard or identity adapter was added.

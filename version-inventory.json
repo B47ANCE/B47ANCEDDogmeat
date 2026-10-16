@@ -329,6 +329,10 @@
     {
       "path": "docs/BRANDING.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -472,6 +476,22 @@
     {
       "reference": "docs/requirements/ENGLISH_MASTIFF_REQUEST.md",
       "reason": "Immutable supplied English Mastiff asset-only handoff; no gameplay/model activation or version-bump authority."
+    },
+    {
+      "reference": "art/english_mastiff_rig/",
+      "reason": "Stopped em-rig-v001 experimental authoring at 0.2.0-dev.7; draft/stale reports and unapproved clips are not current verification."
+    },
+    {
+      "reference": "art/english_mastiff_regeneration/",
+      "reason": "Frozen em-v002-preview geometry/inspection checkpoint tested at 0.2.0-dev.7; mouth/surface acceptance HOLD, not runtime proof."
+    },
+    {
+      "reference": "docs/requirements/ENGLISH_MASTIFF_RIG_REQUEST.md",
+      "reason": "Immutable supplied rigging/animation handoff, subsequently steered by the user to stop closed-mouth work and regenerate; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/ENGLISH_MASTIFF_ANATOMY_REQUEST.md",
+      "reason": "Immutable complete-anatomy handoff; preserve the actual supplied request, not a current version mirror."
     }
   ]
 }

@@ -1,0 +1,471 @@
+{
+  "fps": 24,
+  "clips": [
+    {
+      "name": "DM_EM_IdleNeutral",
+      "seconds": 2,
+      "frames": 49,
+      "loop": true,
+      "kind": "IdleNeutral",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_IdleBreathing",
+      "seconds": 4,
+      "frames": 97,
+      "loop": true,
+      "kind": "IdleBreathing",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Walk",
+      "seconds": 1.5,
+      "frames": 37,
+      "loop": true,
+      "kind": "Walk",
+      "gait": true,
+      "excursion": 0.34,
+      "duty": 0.7,
+      "lift": 0.065,
+      "phases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "nominal_virtual_speed_source_units_s": 0.3238095238095239,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Trot",
+      "seconds": 1,
+      "frames": 25,
+      "loop": true,
+      "kind": "Trot",
+      "gait": true,
+      "excursion": 0.42,
+      "duty": 0.58,
+      "lift": 0.09,
+      "phases": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "nominal_virtual_speed_source_units_s": 0.7241379310344828,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Run",
+      "seconds": 0.875,
+      "frames": 22,
+      "loop": true,
+      "kind": "Run",
+      "gait": true,
+      "excursion": 0.45,
+      "duty": 0.49,
+      "lift": 0.12,
+      "phases": [
+        0.48,
+        0,
+        0.6,
+        0.12
+      ],
+      "nominal_virtual_speed_source_units_s": 1.0495626822157436,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Gallop",
+      "seconds": 0.75,
+      "frames": 19,
+      "loop": true,
+      "kind": "Gallop",
+      "gait": true,
+      "excursion": 0.47,
+      "duty": 0.42,
+      "lift": 0.14,
+      "phases": [
+        0.48,
+        0,
+        0.6,
+        0.12
+      ],
+      "nominal_virtual_speed_source_units_s": 1.4920634920634919,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_TurnLeft",
+      "seconds": 2,
+      "frames": 49,
+      "loop": false,
+      "kind": "TurnLeft",
+      "turn": 0.65,
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_TurnRight",
+      "seconds": 2,
+      "frames": 49,
+      "loop": false,
+      "kind": "TurnRight",
+      "turn": -0.65,
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_StartMoving",
+      "seconds": 1.5,
+      "frames": 37,
+      "loop": false,
+      "kind": "StartMoving",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_StopMoving",
+      "seconds": 1.5,
+      "frames": 37,
+      "loop": false,
+      "kind": "StopMoving",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Sit",
+      "seconds": 2.5,
+      "frames": 61,
+      "loop": false,
+      "kind": "Sit",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_SitIdle",
+      "seconds": 3,
+      "frames": 73,
+      "loop": true,
+      "kind": "SitIdle",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_StandUp",
+      "seconds": 2.5,
+      "frames": 61,
+      "loop": false,
+      "kind": "StandUp",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LieDown",
+      "seconds": 3,
+      "frames": 73,
+      "loop": false,
+      "kind": "LieDown",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LieIdle",
+      "seconds": 4,
+      "frames": 97,
+      "loop": true,
+      "kind": "LieIdle",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_GetUp",
+      "seconds": 3,
+      "frames": 73,
+      "loop": false,
+      "kind": "GetUp",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Sleep",
+      "seconds": 4,
+      "frames": 97,
+      "loop": true,
+      "kind": "Sleep",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_HeadTilt",
+      "seconds": 2.5,
+      "frames": 61,
+      "loop": false,
+      "kind": "HeadTilt",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LookAround",
+      "seconds": 4,
+      "frames": 97,
+      "loop": true,
+      "kind": "LookAround",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_TailWag",
+      "seconds": 2,
+      "frames": 49,
+      "loop": true,
+      "kind": "TailWag",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_EarsAlert",
+      "seconds": 2,
+      "frames": 49,
+      "loop": false,
+      "kind": "EarsAlert",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_EarsRelaxed",
+      "seconds": 2,
+      "frames": 49,
+      "loop": false,
+      "kind": "EarsRelaxed",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_SniffAir",
+      "seconds": 3,
+      "frames": 73,
+      "loop": true,
+      "kind": "SniffAir",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_SniffObject",
+      "seconds": 3,
+      "frames": 73,
+      "loop": true,
+      "kind": "SniffObject",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_SniffGround",
+      "seconds": 3,
+      "frames": 73,
+      "loop": true,
+      "kind": "SniffGround",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_PettingReaction",
+      "seconds": 3,
+      "frames": 73,
+      "loop": false,
+      "kind": "PettingReaction",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_PlayBow",
+      "seconds": 3,
+      "frames": 73,
+      "loop": false,
+      "kind": "PlayBow",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_InjuredIdle",
+      "seconds": 3,
+      "frames": 73,
+      "loop": true,
+      "kind": "InjuredIdle",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_ExhaustedIdle",
+      "seconds": 4,
+      "frames": 97,
+      "loop": true,
+      "kind": "ExhaustedIdle",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_Tremble",
+      "seconds": 2,
+      "frames": 49,
+      "loop": true,
+      "kind": "Tremble",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_HeadShake",
+      "seconds": 2,
+      "frames": 49,
+      "loop": false,
+      "kind": "HeadShake",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_PainReaction",
+      "seconds": 2,
+      "frames": 49,
+      "loop": false,
+      "kind": "PainReaction",
+      "nominal_virtual_speed_source_units_s": 0.0,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LimpFL",
+      "seconds": 1.75,
+      "frames": 43,
+      "loop": true,
+      "kind": "LimpFL",
+      "gait": true,
+      "excursion": 0.18,
+      "duty": 0.78,
+      "lift": 0.04,
+      "phases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "affected_limb": "FL",
+      "nominal_virtual_speed_source_units_s": 0.13186813186813187,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LimpRL",
+      "seconds": 1.75,
+      "frames": 43,
+      "loop": true,
+      "kind": "LimpRL",
+      "gait": true,
+      "excursion": 0.18,
+      "duty": 0.78,
+      "lift": 0.04,
+      "phases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "affected_limb": "RL",
+      "nominal_virtual_speed_source_units_s": 0.13186813186813187,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LimpFR",
+      "seconds": 1.75,
+      "frames": 43,
+      "loop": true,
+      "kind": "LimpFR",
+      "gait": true,
+      "excursion": 0.18,
+      "duty": 0.78,
+      "lift": 0.04,
+      "phases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "affected_limb": "FR",
+      "nominal_virtual_speed_source_units_s": 0.13186813186813187,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_LimpRR",
+      "seconds": 1.75,
+      "frames": 43,
+      "loop": true,
+      "kind": "LimpRR",
+      "gait": true,
+      "excursion": 0.18,
+      "duty": 0.78,
+      "lift": 0.04,
+      "phases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "affected_limb": "RR",
+      "nominal_virtual_speed_source_units_s": 0.13186813186813187,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    },
+    {
+      "name": "DM_EM_CautiousWalk",
+      "seconds": 2,
+      "frames": 49,
+      "loop": true,
+      "kind": "CautiousWalk",
+      "gait": true,
+      "excursion": 0.2,
+      "duty": 0.8,
+      "lift": 0.035,
+      "phases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "nominal_virtual_speed_source_units_s": 0.125,
+      "root_motion": "in-place translation; yaw only in turn clips; no native speed/stat changes",
+      "quality": "procedural authoring foundation; deformation/foot contact review required"
+    }
+  ]
+}

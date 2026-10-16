@@ -1,0 +1,735 @@
+{
+  "asset_revision": "em-rig-v001",
+  "tested_project_version": "0.2.0-dev.7",
+  "environment": "read-only Windows installed Build 42.21 / Steam 25485521 source inspection; not runtime",
+  "files": [
+    {
+      "path": "media/models_X/Skinned/Raccoon_Body.x",
+      "sha256": "a8cc66ee09bae74f02f1dbc045a528989cb02e9f7df5ec720f25b8d706348320"
+    },
+    {
+      "path": "media/scripts/generated/models_animals.txt",
+      "sha256": "148a08e544ea44714617681bac2d770ad82beac899a20e3b51ec40c72950a1d0"
+    },
+    {
+      "path": "media/scripts/generated/animations_meshes.txt",
+      "sha256": "626bc19bc4a19c7849dbd1d79b375dbb61c2b5555f0d9545555c5b654f3cb5fd"
+    },
+    {
+      "path": "media/lua/shared/Definitions/animal/RaccoonDefinitions.lua",
+      "sha256": "55185497017826ae3a1d3f3e980f963de29644797ea4d992d40ea9e483ca502c"
+    },
+    {
+      "path": "media/shaders/animalEffect.vert",
+      "sha256": "3eb23a4d768e156740ecb77c1c8cb04790f483b11865e62a817f6574ff33449d"
+    },
+    {
+      "path": "media/shaders/animalEffect.frag",
+      "sha256": "110b03a92789f47e69facc2d3de34c1c29ad7c01254abf90a71d05d7828ee598"
+    }
+  ],
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "packaged_classes": {
+    "zombie/core/skinnedmodel/model/FileTask_AbstractLoadModel.class": "a58f90cfcaae255179b80dc971f71a967addf53ef66a12333cc4629bb200890c",
+    "zombie/core/skinnedmodel/model/FileTask_LoadMesh.class": "5f2a1c580a01064c80c0c9f9f3c868df5125e26e0716add46a060a6aafbee77d",
+    "zombie/core/skinnedmodel/model/FileTask_LoadAnimation.class": "27240cac4853f748cfad1b908f3e1c89d7b31e78632ca36fb465dc490bca8bf6",
+    "zombie/core/skinnedmodel/model/ModelMesh.class": "b12e7b5091f84ef60e72dd358e85d6611063ca5885d3237feda51dfb604f1f20",
+    "zombie/core/skinnedmodel/model/jassimp/ProcessedAiScene.class": "6cf548c3a56f0729ff9666b8bb0932c810b1aa01fd2b1b7dbada5cfd1eba6b8a",
+    "zombie/core/skinnedmodel/animation/AnimationPlayer.class": "06fc56e5aa626c808e8c6c0870dc87c10a957d86c7c22782be1d437d52b8bc28"
+  },
+  "native_frames": [
+    {
+      "name": "Raccoon",
+      "parent": null
+    },
+    {
+      "name": "Dummy01",
+      "parent": null
+    },
+    {
+      "name": "Bip01",
+      "parent": "Dummy01"
+    },
+    {
+      "name": "Bip01_Pelvis",
+      "parent": "Bip01"
+    },
+    {
+      "name": "Bip01_Spine",
+      "parent": "Bip01_Pelvis"
+    },
+    {
+      "name": "Bip01_L_Thigh",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_L_Calf",
+      "parent": "Bip01_L_Thigh"
+    },
+    {
+      "name": "Bip01_L_Foot",
+      "parent": "Bip01_L_Calf"
+    },
+    {
+      "name": "Bip01_L_Toe0",
+      "parent": "Bip01_L_Foot"
+    },
+    {
+      "name": "Bip01_L_Toe0Nub",
+      "parent": "Bip01_L_Toe0"
+    },
+    {
+      "name": "Bip01_R_Thigh",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_R_Calf",
+      "parent": "Bip01_R_Thigh"
+    },
+    {
+      "name": "Bip01_R_Foot",
+      "parent": "Bip01_R_Calf"
+    },
+    {
+      "name": "Bip01_R_Toe0",
+      "parent": "Bip01_R_Foot"
+    },
+    {
+      "name": "Bip01_R_Toe0Nub",
+      "parent": "Bip01_R_Toe0"
+    },
+    {
+      "name": "Bip01_Neck",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_L_Clavicle",
+      "parent": "Bip01_Neck"
+    },
+    {
+      "name": "Bip01_L_UpperArm",
+      "parent": "Bip01_L_Clavicle"
+    },
+    {
+      "name": "Bip01_L_Forearm",
+      "parent": "Bip01_L_UpperArm"
+    },
+    {
+      "name": "Bip01_L_Hand",
+      "parent": "Bip01_L_Forearm"
+    },
+    {
+      "name": "Bip01_L_Finger0",
+      "parent": "Bip01_L_Hand"
+    },
+    {
+      "name": "Bip01_L_Finger0Nub",
+      "parent": "Bip01_L_Finger0"
+    },
+    {
+      "name": "Bip01_R_Clavicle",
+      "parent": "Bip01_Neck"
+    },
+    {
+      "name": "Bip01_R_UpperArm",
+      "parent": "Bip01_R_Clavicle"
+    },
+    {
+      "name": "Bip01_R_Forearm",
+      "parent": "Bip01_R_UpperArm"
+    },
+    {
+      "name": "Bip01_R_Hand",
+      "parent": "Bip01_R_Forearm"
+    },
+    {
+      "name": "Bip01_R_Finger0",
+      "parent": "Bip01_R_Hand"
+    },
+    {
+      "name": "Bip01_R_Finger0Nub",
+      "parent": "Bip01_R_Finger0"
+    },
+    {
+      "name": "Bip01_Head",
+      "parent": "Bip01_Neck"
+    },
+    {
+      "name": "Bip01_HeadNub",
+      "parent": "Bip01_Head"
+    },
+    {
+      "name": "Bip01_Tail",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_Tail1",
+      "parent": "Bip01_Tail"
+    },
+    {
+      "name": "Bip01_Tail2",
+      "parent": "Bip01_Tail1"
+    },
+    {
+      "name": "Bip01_TailNub",
+      "parent": "Bip01_Tail2"
+    },
+    {
+      "name": "Translation_Data",
+      "parent": null
+    }
+  ],
+  "weighted_frame_names": [
+    "Bip01_L_Thigh",
+    "Bip01_L_Calf",
+    "Bip01_L_Toe0",
+    "Bip01_Pelvis",
+    "Bip01_Spine",
+    "Bip01_L_Foot",
+    "Bip01_L_Finger0",
+    "Bip01_R_Thigh",
+    "Bip01_R_Toe0",
+    "Bip01_Neck",
+    "Bip01_R_Clavicle",
+    "Bip01_L_Clavicle",
+    "Bip01_R_Foot",
+    "Bip01_L_Hand",
+    "Bip01_L_UpperArm",
+    "Bip01_R_Calf",
+    "Bip01_L_Forearm",
+    "Bip01_R_UpperArm",
+    "Bip01_R_Forearm",
+    "Bip01_R_Finger0",
+    "Bip01_R_Hand",
+    "Bip01_Head",
+    "Bip01_Tail",
+    "Bip01_Tail2",
+    "Bip01_Tail1"
+  ],
+  "clips": [
+    {
+      "path": "media/anims_X/Raccoon/Rac_ClimbDown.x",
+      "sha256": "118225b9988f9b8fccd7f67f3047bdc17a4e8e9734c83d778cd263394dad8944",
+      "bytes": 286546,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_ClimbDown"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_ClimbUp.x",
+      "sha256": "9b2e05efe805b090d3f0955e047a55f4116e0f3b379d4aa1ffe4bc1f4d72e019",
+      "bytes": 341014,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_ClimbUp"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Dead.x",
+      "sha256": "9cb5778c627eb99084d0e520b1ad49f2f55d275db2c2d58c0bd7270c6685511f",
+      "bytes": 106316,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Dead"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Death.x",
+      "sha256": "e241f825fa746b5f2f23b7eb5ed501e7d98222917187ea7f393cb243e157bbe3",
+      "bytes": 154013,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Death"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_HitReaction.x",
+      "sha256": "5f27a61bbf619594909442aa26073a88f2b1fdac7cb94a77f920d978abe38cba",
+      "bytes": 153200,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_HitReaction"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Idle01.x",
+      "sha256": "e132d9c58215e755be496c8225e8c436905cb9d847cb7193884bf9deca1e01f3",
+      "bytes": 391499,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Idle01"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Idle02.x",
+      "sha256": "1a5c1c02a4f5b88aec887081fff96fd88b0ec92acb335cc9ff7ff923ed58a7d4",
+      "bytes": 324139,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Idle02"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Idle03.x",
+      "sha256": "8018f5aeb270a527161db84bc1e37c06eb45fa0f34fd58b54d222e4881c45503",
+      "bytes": 331490,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Idle03"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_IdleLyingDown.x",
+      "sha256": "d167405f8350bf76d4446e01ca6fdf769c99710de0b8bbedf882e6d65dc3bece",
+      "bytes": 191873,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_IdleLyingDown"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_IdleToLieDown.x",
+      "sha256": "e70561dc48b232235a786d7c8fe23574d5727b75fdc7f3a00f2de91c1509b6a3",
+      "bytes": 171519,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_IdleToLieDown"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_LyingDownToIdle.x",
+      "sha256": "082f77eba7a72a2edb4947a0f7948a7d00fcaa945f7c3848d0018abf28a1dbb3",
+      "bytes": 168716,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_LyingDownToIdle"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Run.x",
+      "sha256": "7d7efc2f02d6b260986926447e2488036d565c5ff3fe8ef90c046250556c23ed",
+      "bytes": 131109,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Run"
+      ]
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Walk.x",
+      "sha256": "2f1668b22181c1fac70b54218793f6fca69bd9fe6d50676c06fafb340d6949bc",
+      "bytes": 155124,
+      "header": "xof 0303txt 0032",
+      "ticks_per_second": 4800,
+      "animation_sets": [
+        "Rac_Walk"
+      ]
+    }
+  ],
+  "anim_nodes": [
+    {
+      "path": "media/AnimSets/raccoon/climbfence/climbDownFence.xml",
+      "sha256": "75c774faadacfb1e1727a7182822972ceafd528e7a8a266c6633f8bcea5b2fda",
+      "name": "climbDownFence",
+      "clip": "Rac_ClimbDown",
+      "speed_scale": null,
+      "deferred_bone": "Bip01",
+      "conditions": [
+        {
+          "m_Name": "climbDown",
+          "m_Type": "BOOL",
+          "m_Value": "true"
+        }
+      ],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "ClimbDone",
+          "m_Time": "End",
+          "m_ParameterValue": null
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/climbfence/climbUpFence.xml",
+      "sha256": "020ceb89c028bf9f04055af559a94c28622f2c61ab0f87bb2c66d485fea05663",
+      "name": "climbUpFence",
+      "clip": "Rac_ClimbUp",
+      "speed_scale": null,
+      "deferred_bone": "Bip01",
+      "conditions": [
+        {
+          "m_Name": "climbDown",
+          "m_Type": "BOOL",
+          "m_Value": "false"
+        }
+      ],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "Climbed",
+          "m_Time": "End",
+          "m_ParameterValue": null
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/deadbody/deadbody.xml",
+      "sha256": "230b00d32880aa00bb5a1a6654d0705bb0f000da2e9c264c8a08a9a636c16e85",
+      "name": "deadbody",
+      "clip": "Rac_Dead",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/death/death.xml",
+      "sha256": "427ae82ce87aa1ac8ca9c49fb0fd38e4ead2992c0f3ddb7ce2e7ac81c4cdd291",
+      "name": "death",
+      "clip": "Rac_Death",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/eating/eating.xml",
+      "sha256": "7856aaeb409fad4ed292de23513714b6c54e9285a18a39d7cce54ad8e4ec31fc",
+      "name": "eating",
+      "clip": "Rac_Idle01",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "idleAction",
+          "m_Type": "STRING",
+          "m_Value": "eat"
+        }
+      ],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "idleActionEnd",
+          "m_Time": "End",
+          "m_ParameterValue": null
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/falldown/falldown.xml",
+      "sha256": "1885865fa80569fdaf75e0c8209896bb683038695262addcec13a3d7b79052dc",
+      "name": "falldown",
+      "clip": "Rac_Death",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "PlayDeathSound",
+          "m_Time": "Start",
+          "m_ParameterValue": null
+        },
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.35",
+          "m_ParameterValue": "fallover"
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/followwall/default.xml",
+      "sha256": "6f6e587690aee7b3e5006b5b2a00de544a29dc4aa4c4e473ecb2df5cde1d22a1",
+      "name": "default",
+      "clip": "Rac_Walk",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "bMoving",
+          "m_Type": "BOOL",
+          "m_Value": "true"
+        }
+      ],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.25",
+          "m_ParameterValue": "walkFront"
+        },
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.75",
+          "m_ParameterValue": "walkBack"
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/followwall/run.xml",
+      "sha256": "8c8140c37cff7d05a7503c218d2288544ae60640b4152fc80182c9febd3aff3c",
+      "name": "run",
+      "clip": "Rac_Run",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "animalRunning",
+          "m_Type": "BOOL",
+          "m_Value": "true"
+        }
+      ],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": null,
+          "m_Time": "Start",
+          "m_ParameterValue": null
+        },
+        {
+          "m_EventName": null,
+          "m_Time": "Start",
+          "m_ParameterValue": null
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/hitreaction/hitreaction1.xml",
+      "sha256": "5de02deccd3e4f99aa2a6f27115b56cb6b925c9107e8c66cf44964e3ea214950",
+      "name": "hitreaction1",
+      "clip": "Rac_HitReaction",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_Time": "Start",
+          "m_ParameterValue": "pain"
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/idle/idle1.xml",
+      "sha256": "5f4cd2a56b407de3c352b0a099b37e5ef9fec0a48873dadbb2e3579d8af50054",
+      "name": "idle",
+      "clip": "Rac_Idle01",
+      "speed_scale": "0.48",
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [
+        {
+          "m_Target": "idleSit",
+          "m_AnimName": "Rac_IdleToLieDown"
+        }
+      ],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/idle/idle2.xml",
+      "sha256": "78d6717f6c8a45d186475f747f2f1565e7be49213604235b351f8743ff03d6cf",
+      "name": "idle2",
+      "clip": "Rac_Idle02",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "idleAction",
+          "m_Type": "STRING",
+          "m_Value": "idle1"
+        }
+      ],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/idle/idle3.xml",
+      "sha256": "ace8a0337001d1591cec8f21ab06b0f1367d6c28ad7abb638791f30fc3d63fb8",
+      "name": "idle3",
+      "clip": "Rac_Idle03",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "idleAction",
+          "m_Type": "STRING",
+          "m_Value": "idle2"
+        }
+      ],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/idle/idleSit.xml",
+      "sha256": "9cf340776bdfd6c3a9c9bc67bd3d86ce90e30f4c9f5afadd6bae538e71fa34df",
+      "name": "idleSit",
+      "clip": "Rac_IdleLyingDown",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "idleAction",
+          "m_Type": "STRING",
+          "m_Value": "sit"
+        }
+      ],
+      "transitions": [
+        {
+          "m_Target": "Idle",
+          "m_AnimName": "Rac_LyingDownToIdle"
+        }
+      ],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/onground/onground.xml",
+      "sha256": "e786fca0f8af908b93c5a6100dea4816c3a7dea9a3ff775fce0be4906303f571",
+      "name": "onground",
+      "clip": "Rac_Dead",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/pathfind/defaultPathfind.xml",
+      "sha256": "47f1d2f937c222161fb40edc30590b8ae3079506d17e99ad092ea2139970dd6f",
+      "name": "defaultPathfind",
+      "clip": "Rac_Walk",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "bMoving",
+          "m_Type": "BOOL",
+          "m_Value": "true"
+        }
+      ],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.25",
+          "m_ParameterValue": "walkFront"
+        },
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.75",
+          "m_ParameterValue": "walkBack"
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/pathfind/pathfindWait.xml",
+      "sha256": "97de28ea11ddd482ece23dac0ef1f9829aed8ead3672f264ab358ea27386be14",
+      "name": "pathfindWait",
+      "clip": "Rac_Idle01",
+      "speed_scale": "0.48",
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "bMoving",
+          "m_Type": "BOOL",
+          "m_Value": "false"
+        }
+      ],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/pathfind/runPathfind.xml",
+      "sha256": "ef93ffadc57a16824af97f1a40045d4f78f476da8e5f07f20297b8829387bdb9",
+      "name": "runPathfind",
+      "clip": "Rac_Run",
+      "speed_scale": null,
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "animalRunning",
+          "m_Type": "BOOL",
+          "m_Value": "true"
+        }
+      ],
+      "transitions": [],
+      "events": []
+    },
+    {
+      "path": "media/AnimSets/raccoon/walk/defaultWalk.xml",
+      "sha256": "12065aefff270b870786054f2978bc4dd9ce994e3a81e4e740fb8fedad79b99b",
+      "name": "defaultWalk",
+      "clip": "Rac_Walk",
+      "speed_scale": "1.20",
+      "deferred_bone": null,
+      "conditions": [],
+      "transitions": [],
+      "events": [
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.25",
+          "m_ParameterValue": "walkFront"
+        },
+        {
+          "m_EventName": "PlayBreedSound",
+          "m_TimePc": "0.75",
+          "m_ParameterValue": "walkBack"
+        }
+      ]
+    },
+    {
+      "path": "media/AnimSets/raccoon/walk/run.xml",
+      "sha256": "aa1fff080540bbee3e847d7d906ddfdd4b87c8560a0497908ac90f92c9ed7cbb",
+      "name": "run",
+      "clip": "Rac_Run",
+      "speed_scale": "1.30",
+      "deferred_bone": null,
+      "conditions": [
+        {
+          "m_Name": "animalRunning",
+          "m_Type": "BOOL",
+          "m_Value": "true"
+        }
+      ],
+      "transitions": [],
+      "events": []
+    }
+  ],
+  "observations": {
+    "formats": "Inspected raccoon body and 13 animation clips use DirectX text X. FileTask_AbstractLoadModel bytecode explicitly recognizes existing .fbx, .glb (glTF) and .x paths. This is source support, not proof this particular new skin/animation asset loads.",
+    "skeleton": "35 named frames, 25 weighted names; Bip01 hierarchy is quadruped despite arm-style front-leg names. No jaw/ear or three-spine match.",
+    "shader": "animalEffect.vert uses MatrixPalette[60] and four vertex weights; fragment shader samples one Texture, with native vertex lighting. No normal/metallic/roughness sampler in this inspected shader.",
+    "registration": "Raccoon_Body -> Skinned/Raccoon_Body; static=false, shader=animalEffect, animationsMesh=Raccoon. Raccoon animation mesh references animationDirectory=Raccoon; animal definitions select animset=raccoon.",
+    "states": "XML observations include bMoving, animalRunning, idleAction and native transitions/events. No new variables or Lua animation setters implemented.",
+    "root_motion": "Native AnimationPlayer exposes deferred movement/rotation and counter-rotation descriptors. Clip-to-world ownership, deferred axis, extraction and speed match remain UNKNOWN for this new rig.",
+    "scale_axes": "New authoring rig retains source Blender units, +X animal-left, -Y forward, Z up; translates source minimum Z to floor only. Native handedness, model scale and exact importer bind transformation are NOT CALIBRATED.",
+    "dedicated": "Authoring-only assets are excluded from mod assembly. No server skeleton/visual state changes; eventual clip intent/state must be server-controlled with client rendering tested through join/rejoin."
+  },
+  "strategy": "Original 42-bone intermediate large-mastiff rig; four influences maximum, sockets as non-joint empties. Not a copied/rebranded native rig. Semantic correspondence only, no claimed native retarget or bind-pose match.",
+  "native_client": "NOT TESTED",
+  "dedicated": "NOT TESTED",
+  "remaining": [
+    "exact import axes/units/bind matrices",
+    "native export conversion and model/animation registration",
+    "deferred movement and authoritative speed calibration",
+    "animalEffect texture adaptation",
+    "attachment render/socket API",
+    "corpse/skeleton presentation",
+    "client and dedicated runtime loading"
+  ]
+}

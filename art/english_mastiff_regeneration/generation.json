@@ -1,0 +1,15 @@
+{
+  "asset_revision": "em-v002-preview",
+  "tested_project_version": "0.2.0-dev.7",
+  "task_id": "01a143bb-0d56-741e-990f-8926c5d2506a",
+  "task_type": "text-to-3d",
+  "status": "SUCCEEDED",
+  "consumed_credits": 20,
+  "approval": "Approve replacement preview \u2014 20 credits",
+  "parameters_file": "preview-parameters.json",
+  "reference_uploads": [],
+  "geometry_acceptance": "HOLD; oral anatomy/articulation not established, surface defects remain",
+  "additional_paid_jobs": 0,
+  "native": "NOT TESTED",
+  "original_em_v001": "UNCHANGED"
+}
