@@ -2,6 +2,8 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- Apply the latest local-only rigging/animation policy to current Mastiff guidance: Meshy remains limited to approved static geometry/material operations; no credit approval permits Meshy motion tooling. All prior jobs were static geometry/texturing.
+
 - Assess the latest complete-anatomy handoff against actual Meshy geometry: retain explicit mouth-component FAIL/INCOMPLETE results and provide the requested precise Blender fallback, neutral-closed-mouth target, regional/LOD estimates, facial-control proposal and native compatibility limits. No further paid operation or complete-model claim.
 - Stop the closed-mouth Mastiff rig experiment at the user's direction; preserve its unapproved authoring artifacts. Generate one separately approved open-mouth geometry preview for 20 credits and retain actual FBX/GLB, Blender views, metadata and hashes. Hold texturing/rigging because oral anatomy/articulation is incomplete and 28 welded non-manifold edges remain. No runtime or project-version change.
 - Add the user-requested isolated English Mastiff em-v001 authoring checkpoint: Meshy-7.1 geometry/2K PBR output (20 + 10 approved credits), original files, locally cleaned 12,476-triangle GLB/FBX, packed Blender sources, actual renders, provenance/hashes and native compatibility limits. Three tiny fin triangles removed; original UV/PBR evidence retained. No rigging, animation, raccoon replacement, gameplay or project-version change.

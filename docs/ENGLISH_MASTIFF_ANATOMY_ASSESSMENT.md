@@ -66,16 +66,20 @@ missing geometry. Conversion supplies file formats, not anatomy. No proposed
 mode was submitted to test this experimentally.
 
 The [official rigging API](https://docs.meshy.ai/en/api/rigging) documents
-humanoid/biped inputs and excludes non-humanoid assets. No canine rigging call
-is justified. The two observed geometry requests do not prove every possible
+humanoid/biped inputs and excludes non-humanoid assets. The current user policy
+also prohibits all Meshy rigging, skinning, animation-library clips, retargeting
+and text-to-motion even if credits are approved. Author all motion through
+Blender/local tools; report unavailable local/native contracts as blockers.
+The two observed geometry requests do not prove every possible
 Meshy generation fails; they demonstrate that this workflow has not reliably
 delivered the requested oral anatomy.
 
 Use the already installed standalone Blender-Python 5.2.2 LTS for deterministic
 local modeling. No dependencies were installed. Paid history: first preview
 20 + original texture 10 + replacement preview 20 = 50 credits. This assessment
-consumes zero additional credits. Any new generation/remesh/texture/conversion
-or rig/animation job requires separate explicit approval.
+consumes zero additional credits. Any new permitted static generation, remesh,
+texture or conversion job requires separate explicit approval. Meshy motion
+operations remain prohibited; approval for credits cannot enable them.
 
 ## Precise Blender follow-up
 
