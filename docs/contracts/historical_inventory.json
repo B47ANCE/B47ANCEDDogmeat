@@ -1,0 +1,70 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "records": [
+    {
+      "path": "docs/COMPANION_DOGS_SOURCE_AUDIT.md",
+      "sha256": "72042bc75e621ed874447257d842b4fb58f3530c0b922d025e417c5c02282ccd",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/DOGPACK_COMPATIBILITY_AUDIT.md",
+      "sha256": "6e9077458f99043b8351058f2c17d62e718f3b0ae1ac77bb638a95eeec4b1bb5",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/DRUGS_OF_93_COMPATIBILITY_AUDIT.md",
+      "sha256": "07460f41e2587b75b96387eb2a7f8264c133b26d611943021354f8900d836b40",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/FEATURE_FEASIBILITY_MATRIX.md",
+      "sha256": "ad4201c13b26ef9521ae42cb8586ae476413d14488df25402f86e65e2f994789",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/SERVER_AUTHORITY_DESIGN.md",
+      "sha256": "25fe0ab223b5b66416d7b4206dd8d4de84f5b1bc7fa62805fddcf9fdd33985c0",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/USER_HANDOFF.md",
+      "sha256": "694802d3a4dd678c670bf92b6f91bcd613703167e7969bce8d1e18936454f5c7",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "a8d74c8cac793cba953a6373f53e2c826621b3cd90e0291a63135aa24d847078",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/VANILLA_API_AUDIT.md",
+      "sha256": "6cb4446d9d6d7d5e5ce5eb037502ae9aa69f200dce532efd161b983d4db7f48d",
+      "local_only": false,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/VERSION_POLICY.md",
+      "sha256": "80a3c1636b497a516a58875fbbc9b3788e9b216324f4cd6712243af5680db85d",
+      "local_only": false,
+      "classification": "Authoritative version policy, unchanged."
+    },
+    {
+      "path": "research/CD_BACKEND_AUDIT_2026-10-12.md",
+      "sha256": "f9ec7a990f779580c232d99816ef8ee9e3094e373ae64deab2f30fd17cae61c1",
+      "local_only": true,
+      "classification": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "path": "docs/historical/IMPLEMENTATION_PLAN_M0_ADDON.md",
+      "sha256": "0c9c37f2792855469253acc787792a7263586750fc080900944a8a4c37e9bec4",
+      "classification": "Verbatim former implementation plan preserved before authorized current-entry replacement."
+    }
+  ]
+}

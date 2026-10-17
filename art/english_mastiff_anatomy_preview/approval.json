@@ -1,0 +1,13 @@
+{
+  "asset_revision": "em-v003-preview",
+  "tested_project_version": "0.2.0-dev.7",
+  "approval": "run the meshy 20 credits",
+  "authorized_operations": 1,
+  "operation": "Meshy-7.1 standard static text-to-3D geometry preview; FBX/GLB",
+  "estimated_credits": 20,
+  "status": "SUCCEEDED",
+  "task_id": "01a143d2-0b78-7721-a5c2-d1c04780a497",
+  "followups": "No paid texturing, retry, remesh or conversion authorized. Meshy motion prohibited.",
+  "compatibility": "Asset-only authoring; no gameplay/save/API change or project version bump.",
+  "actual_consumed_credits": 20
+}

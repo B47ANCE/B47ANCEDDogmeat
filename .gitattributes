@@ -2,6 +2,7 @@
 *.md text eol=lf
 *.json text eol=lf
 *.py text eol=lf
+*.lua text eol=lf
 # Preserve exact original bytes of protected reports/request snapshots.
 docs/COMPANION_DOGS_SOURCE_AUDIT.md -text
 docs/DOGPACK_COMPATIBILITY_AUDIT.md -text
@@ -14,3 +15,15 @@ docs/VANILLA_API_AUDIT.md -text
 docs/VERSION_POLICY.md -text
 docs/historical/** -text
 docs/requirements/** -text
+# Historical CRLF and Markdown hard breaks are preserved, not reformatted.
+docs/COMPANION_DOGS_SOURCE_AUDIT.md whitespace=-blank-at-eol,cr-at-eol
+docs/DOGPACK_COMPATIBILITY_AUDIT.md whitespace=-blank-at-eol,cr-at-eol
+docs/DRUGS_OF_93_COMPATIBILITY_AUDIT.md whitespace=-blank-at-eol,cr-at-eol
+docs/FEATURE_FEASIBILITY_MATRIX.md whitespace=-blank-at-eol,cr-at-eol
+docs/SERVER_AUTHORITY_DESIGN.md whitespace=-blank-at-eol,cr-at-eol
+docs/USER_HANDOFF.md whitespace=-blank-at-eol,cr-at-eol
+docs/VALIDATION.md whitespace=-blank-at-eol,cr-at-eol
+docs/VANILLA_API_AUDIT.md whitespace=-blank-at-eol,cr-at-eol
+docs/VERSION_POLICY.md whitespace=-blank-at-eol,cr-at-eol
+docs/historical/** whitespace=-blank-at-eol,cr-at-eol
+docs/requirements/** whitespace=-blank-at-eol,cr-at-eol

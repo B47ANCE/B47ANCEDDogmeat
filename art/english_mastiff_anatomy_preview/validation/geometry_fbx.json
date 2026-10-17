@@ -1,0 +1,52 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "asset_revision": "em-v003-preview",
+  "stage": "geometry_fbx",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "source": "source/meshy_preview.fbx",
+  "sha256": "fa7e30fc55a167042ea7961c2bd4f0cb4e3175202c7d6d55acc5b5a8d78aae73",
+  "meshes": [
+    {
+      "name": "output_unwrapped",
+      "vertices": 11942,
+      "polygons": 23865,
+      "triangles": 23865,
+      "uv_layers": 1,
+      "raw_boundary_edges": 52,
+      "welded_boundary_edges": 52,
+      "welded_nonmanifold_edges": 80,
+      "welded_components_vertices": [
+        11942
+      ],
+      "nonfinite_coordinates": 0,
+      "zero_area_triangles": 0,
+      "materials": []
+    }
+  ],
+  "dimensions_blender_units": [
+    0.5369470119476318,
+    1.9009851217269897,
+    1.0910651683807373
+  ],
+  "physical_scale": "NOT CALIBRATED",
+  "source_bounds": {
+    "minimum": [
+      -0.27013900876045227,
+      -0.9507050514221191,
+      -0.5462600588798523
+    ],
+    "maximum": [
+      0.26680800318717957,
+      0.9502800703048706,
+      0.5448050498962402
+    ]
+  },
+  "armatures": 0,
+  "animations": 0,
+  "textures": [],
+  "renders": [],
+  "pz_compatibility": "NOT TESTED",
+  "rigging_readiness": "UNRIGGED; deformation NOT TESTED",
+  "triangles": 23865,
+  "materials": []
+}

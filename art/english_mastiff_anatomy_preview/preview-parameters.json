@@ -1,0 +1,16 @@
+{
+  "ai_model": "meshy-7.1",
+  "model_type": "standard",
+  "prompt": "Adult English Mastiff, realistic full-body neutral quadruped, four planted paws, massive square skull, short broad deep muzzle, heavy jowls, thick neck, deep chest, heavy bones, folded V ears, long hanging tail. Mouth gently closed; lips meet without welding, no exposed tongue. COMPLETE hidden 3D mouth interior: distinct lower mandible for later rotation, recessed cavity with walls/floor, upper/lower gums and dental arches, hard palate, 42 distinct teeth: incisors, large canines, premolars/molars. Separate tongue mesh with root/middle/tip and bend loops, resting inside, never fused to floor or teeth. Opening lip/corner loops; no fused jaws or oral intersections. Prioritize oral anatomy and deformation over fur detail. Unrigged geometry only; no textures, accessories or base.",
+  "geometry_resolution": "standard",
+  "should_remesh": true,
+  "target_polycount": 23000,
+  "topology": "triangle",
+  "auto_size": false,
+  "target_formats": [
+    "glb",
+    "fbx"
+  ],
+  "alpha_thumbnail": true,
+  "response_format": "json"
+}

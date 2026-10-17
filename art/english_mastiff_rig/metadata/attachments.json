@@ -1,0 +1,370 @@
+{
+  "sockets": [
+    {
+      "name": "collar",
+      "bone": "DM_Neck01",
+      "bone_local_position": [
+        0.0,
+        0.07158708572387695,
+        0.008677035570144653
+      ],
+      "rest_position": [
+        0,
+        -0.49,
+        1.08
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "collar"
+      ]
+    },
+    {
+      "name": "lead",
+      "bone": "DM_Neck01",
+      "bone_local_position": [
+        0.0,
+        0.11388847231864929,
+        -0.08677223324775696
+      ],
+      "rest_position": [
+        0,
+        -0.46,
+        1.18
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "lead"
+      ]
+    },
+    {
+      "name": "harness",
+      "bone": "DM_Chest",
+      "bone_local_position": [
+        0.0,
+        -0.001965433359146118,
+        -0.1303693652153015
+      ],
+      "rest_position": [
+        0,
+        -0.23,
+        1.07
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "harness"
+      ]
+    },
+    {
+      "name": "backpack",
+      "bone": "DM_Spine02",
+      "bone_local_position": [
+        0.0,
+        0.0767412930727005,
+        -0.20176921784877777
+      ],
+      "rest_position": [
+        0,
+        0.05,
+        1.09
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "backpack"
+      ]
+    },
+    {
+      "name": "k9_armor",
+      "bone": "DM_Chest",
+      "bone_local_position": [
+        0.0,
+        -0.09564787894487381,
+        -0.18802008032798767
+      ],
+      "rest_position": [
+        0,
+        -0.12,
+        1.07
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "k9_armor"
+      ]
+    },
+    {
+      "name": "recovery_harness",
+      "bone": "DM_Spine01",
+      "bone_local_position": [
+        0.0,
+        0.1303372085094452,
+        -0.2037455141544342
+      ],
+      "rest_position": [
+        0,
+        0.18,
+        1.08
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "recovery_harness"
+      ]
+    },
+    {
+      "name": "cone",
+      "bone": "DM_Neck02",
+      "bone_local_position": [
+        0.0,
+        0.054596006870269775,
+        0.026819124817848206
+      ],
+      "rest_position": [
+        0,
+        -0.63,
+        1.15
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "cone"
+      ]
+    },
+    {
+      "name": "head_bandage",
+      "bone": "DM_Head",
+      "bone_local_position": [
+        0.0,
+        0.001299440860748291,
+        -0.09485922753810883
+      ],
+      "rest_position": [
+        0,
+        -0.7,
+        1.28
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "head_bandage"
+      ]
+    },
+    {
+      "name": "neck_bandage",
+      "bone": "DM_Neck01",
+      "bone_local_position": [
+        0.0,
+        0.05206328630447388,
+        0.03145483136177063
+      ],
+      "rest_position": [
+        0,
+        -0.49,
+        1.05
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "neck_bandage"
+      ]
+    },
+    {
+      "name": "torso_dressing",
+      "bone": "DM_Spine02",
+      "bone_local_position": [
+        0.0,
+        0.05346021056175232,
+        -0.023281078785657883
+      ],
+      "rest_position": [
+        0,
+        0.05,
+        0.91
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "torso_dressing"
+      ]
+    },
+    {
+      "name": "mouth_carry",
+      "bone": "DM_Head",
+      "bone_local_position": [
+        0.0,
+        0.30883458256721497,
+        0.08013248443603516
+      ],
+      "rest_position": [
+        0,
+        -0.94,
+        1.02
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "mouth_carry"
+      ]
+    },
+    {
+      "name": "front_wrap.L",
+      "bone": "DM_Forearm.L",
+      "bone_local_position": [
+        -0.0029703713953495026,
+        0.16022205352783203,
+        -0.020495900884270668
+      ],
+      "rest_position": [
+        0.22,
+        -0.37,
+        0.34
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "splint",
+        "cast"
+      ]
+    },
+    {
+      "name": "front_boot.L",
+      "bone": "DM_FrontPaw.L",
+      "bone_local_position": [
+        -1.4901161193847656e-08,
+        0.038460273295640945,
+        -0.012074638158082962
+      ],
+      "rest_position": [
+        0.21,
+        -0.5,
+        0.08
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "front_boot"
+      ]
+    },
+    {
+      "name": "rear_wrap.L",
+      "bone": "DM_Shin.L",
+      "bone_local_position": [
+        -0.008845681324601173,
+        0.23338398337364197,
+        -0.03941647708415985
+      ],
+      "rest_position": [
+        0.22,
+        0.51,
+        0.34
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "splint",
+        "cast"
+      ]
+    },
+    {
+      "name": "rear_boot.L",
+      "bone": "DM_RearPaw.L",
+      "bone_local_position": [
+        -0.01000000536441803,
+        0.05836178734898567,
+        -0.014795945957303047
+      ],
+      "rest_position": [
+        0.21,
+        0.55,
+        0.08
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "rear_boot"
+      ]
+    },
+    {
+      "name": "front_wrap.R",
+      "bone": "DM_Forearm.R",
+      "bone_local_position": [
+        0.0029703713953495026,
+        0.16022205352783203,
+        -0.020495900884270668
+      ],
+      "rest_position": [
+        -0.22,
+        -0.37,
+        0.34
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "splint",
+        "cast"
+      ]
+    },
+    {
+      "name": "front_boot.R",
+      "bone": "DM_FrontPaw.R",
+      "bone_local_position": [
+        1.4901161193847656e-08,
+        0.038460273295640945,
+        -0.012074638158082962
+      ],
+      "rest_position": [
+        -0.21,
+        -0.5,
+        0.08
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "front_boot"
+      ]
+    },
+    {
+      "name": "rear_wrap.R",
+      "bone": "DM_Shin.R",
+      "bone_local_position": [
+        0.008845681324601173,
+        0.23338398337364197,
+        -0.03941647708415985
+      ],
+      "rest_position": [
+        -0.22,
+        0.51,
+        0.34
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "splint",
+        "cast"
+      ]
+    },
+    {
+      "name": "rear_boot.R",
+      "bone": "DM_RearPaw.R",
+      "bone_local_position": [
+        0.01000000536441803,
+        0.05836178734898567,
+        -0.014795945957303047
+      ],
+      "rest_position": [
+        -0.21,
+        0.55,
+        0.08
+      ],
+      "orientation": "bone frame; equipment fit/clearance must be reviewed",
+      "native_binding": "NOT IMPLEMENTED",
+      "uses": [
+        "rear_boot"
+      ]
+    }
+  ],
+  "export_policy": "Authoring empties live in BLEND; portable definitions are this JSON, no native API assumed."
+}

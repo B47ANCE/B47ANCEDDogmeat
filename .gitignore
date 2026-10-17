@@ -15,6 +15,11 @@ __pycache__/
 *.jar
 *.class
 *.blend1
+# Blender FBX importer extractions are derived from the retained interchange.
+/art/english_mastiff_anatomy/interchange/*.fbm/
+# Earlier nonfinal debug renders are outside the frozen anatomy checkpoint.
+/art/english_mastiff_anatomy/previews/debug_front.png
+/art/english_mastiff_anatomy/previews/debug_neutral.png
 local.settings.json
 *.pem
 *.key

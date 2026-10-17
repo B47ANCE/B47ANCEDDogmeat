@@ -1,0 +1,121 @@
+{
+  "asset_revision": "em-v002-preview",
+  "acceptance": "HOLD; inventory integrity does not mean suitable geometry",
+  "files": [
+    {
+      "path": "approval.json",
+      "bytes": 325,
+      "sha256": "0fc42586866be5bc7e0e40ffef173fd512aaf47f1d95e1ba667e87fdbec3e730"
+    },
+    {
+      "path": "generation.json",
+      "bytes": 546,
+      "sha256": "4d4a26fd56d5171ff610200cec313257627ea8ec356b1b84da7ead5125a1acd7"
+    },
+    {
+      "path": "preview-parameters.json",
+      "bytes": 1049,
+      "sha256": "87f3da59bd1a7dbf9d89a807bf6615c57bb6655e134655efbf488e4471f52b32"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_negative.png",
+      "bytes": 367218,
+      "sha256": "a5b26d9cba902eb2e23996c91c1cd09549f95fd4b72cf59458d81b8eb1077422"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_positive.png",
+      "bytes": 367812,
+      "sha256": "a1811cfc6e9dccfdcbc9198ed8df62c6050d6c9f1f70faafc694d2e2f6fc3335"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_negative.png",
+      "bytes": 356362,
+      "sha256": "6f0b85b72245707a77aee9957c065e1ef5b42bf3069102c7cea65d244af1b6ba"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_positive.png",
+      "bytes": 348404,
+      "sha256": "fb4f8ca1632ab886484a0135d76eec60cb541f398adc7516ab76bb9800b234c5"
+    },
+    {
+      "path": "previews/geometry_preview/three_quarter.png",
+      "bytes": 361779,
+      "sha256": "3a6632e2d4923f28229e2eca6e2ce554e7caf84d6f7db69edc91cc5cf59e30d1"
+    },
+    {
+      "path": "previews/mouth/front.png",
+      "bytes": 463791,
+      "sha256": "313e98b447e87f3ca618f44c019897c67cf9986b87e42fa5be997055de09b069"
+    },
+    {
+      "path": "previews/mouth/midline_section.png",
+      "bytes": 461870,
+      "sha256": "2fc3a72fe6bff3b06ce9a3b099bd79b0fbfbf041aeb43d4cf639d4b758733f7b"
+    },
+    {
+      "path": "previews/mouth/side.png",
+      "bytes": 430049,
+      "sha256": "5daab912fd9ffc188eb43b4a02aadaeb7a2d3717d28f960477cacf869d2a695d"
+    },
+    {
+      "path": "previews/mouth/three_quarter.png",
+      "bytes": 454739,
+      "sha256": "67d4b3fd57eb3b88379b0eb8f05ce0678a0a0bc903c0da5ecad82f7a308995f1"
+    },
+    {
+      "path": "previews/mouth/underside.png",
+      "bytes": 465493,
+      "sha256": "b0b0927d9c1723dd52920c92f687656bd89b76fca5a18bbfb0bdfba2f764510e"
+    },
+    {
+      "path": "PROPOSAL.md",
+      "bytes": 1933,
+      "sha256": "7f281d26e8cb5d67736d6125f0accc0ad33e5faaba1e0968898f997472f2aa0e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4108,
+      "sha256": "447d71e1bf778e61b2cb381fd9befdaf3216b3d2a5a5813ce9e1dd8f3ab0fa91"
+    },
+    {
+      "path": "source/english_mastiff_geometry_preview.blend",
+      "bytes": 866352,
+      "sha256": "9f222ad5971dcc5f0f275ee1a531475456d085740caf92d9e38d2f60469767e3"
+    },
+    {
+      "path": "source/inspect_english_mastiff.py",
+      "bytes": 8191,
+      "sha256": "1cfc47f7cbc2d43b391ece2c0420b94bee6242b86a6bcf8774401022d2dc1fd5"
+    },
+    {
+      "path": "source/inspect_mouth.py",
+      "bytes": 2282,
+      "sha256": "473a1b1891116adbaab92b641a7e9805da30e25e3e887656cf3eb2c9a6b9dcc7"
+    },
+    {
+      "path": "source/meshy_preview.fbx",
+      "bytes": 638604,
+      "sha256": "ea20af8cc5a232a9ddc0350c18d9d4fd7e32fca49a20aeabd4d16e890b72a0ca"
+    },
+    {
+      "path": "source/meshy_preview.glb",
+      "bytes": 555044,
+      "sha256": "bcc89ccfc1b4b904ce3c371abe4c69516eccfa92dd9ab1789c888579aa536ef3"
+    },
+    {
+      "path": "source/validate_preview.py",
+      "bytes": 2703,
+      "sha256": "827c07b77bb874fce4e71a3c27b4ece7520d7bc294c1680ff5acbfead96fe10f"
+    },
+    {
+      "path": "validation/geometry_fbx.json",
+      "bytes": 1296,
+      "sha256": "d19e0f69fd0bd6457436868a52c91982fd0904b6905e818f8b3dbc4d14b9b10f"
+    },
+    {
+      "path": "validation/geometry_preview.json",
+      "bytes": 2269,
+      "sha256": "22f552cb37d5a4574c6a80b666458430e826820dca8a0265103d6037f0ab2038"
+    }
+  ]
+}

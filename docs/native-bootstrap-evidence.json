@@ -1,0 +1,282 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "observed_project_version": "0.2.0-dev.4",
+  "observed_date": "2026-10-14",
+  "game_build": "42.21",
+  "environment": "Offline packaged class and installed Lua inspection; not effective runtime proof",
+  "inputs": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/gameStates/ChooseGameInfo.class",
+      "sha256": "8c4b47ba966f071120feeec090202967e414246e28b5b6fd6a622a6a266af651",
+      "bytes": 13503
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/gameStates/ChooseGameInfo$Mod.class",
+      "sha256": "c91e48400b77015c450a696f2d7c5665fa872f1a76fc05d2c38e72ba2928dc69",
+      "bytes": 10506
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/ZomboidFileSystem.class",
+      "sha256": "c4e5a5123bc43d03f2585c40f37544c50c1e702eebceb78bec94069e410b6750",
+      "bytes": 51501
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/sandbox/CustomSandboxOptions.class",
+      "sha256": "80d7d66b1bd7dda3877fa2edca2b136442208c4edc9f178e210130feaf0c4166",
+      "bytes": 7198
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/sandbox/CustomEnumSandboxOption.class",
+      "sha256": "6ffe81f8643485546b027ed1f7ad70d431622771782be741b6e24507e762195d",
+      "bytes": 1657
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/SandboxOptions$EnumSandboxOption.class",
+      "sha256": "20c8bd893b8eb93010f2520ff82483548754adb45f42ad16f5141dcd5dbaee7f",
+      "bytes": 5249
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/gameStates/IngameState.class",
+      "sha256": "07e35d9e04faa98aad8a7059e5bf82590e4d679f30941ca2469afe1555e3c10c",
+      "bytes": 53691
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager.class",
+      "sha256": "dcaad0082ca27a15550c7d0a6e14b3aeb71f634a14f32123dec620df180c646d",
+      "bytes": 26525
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameServer.class",
+      "sha256": "308ee5247dc8bba4df2283d40d753c6839497767b9342a4adeea60e7c08cfacc",
+      "bytes": 143182
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/GameClient.class",
+      "sha256": "99d1778ab2c2627ddcbc04fdbb435461289c3c3075c96cf70eae5c216193352b",
+      "bytes": 97817
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/spnetwork/SinglePlayerClient.class",
+      "sha256": "c00eecf67ce8d1608919d8f412b158c3630a8ee5615c78404d67a31d5d5b8f4e",
+      "bytes": 8194
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/spnetwork/SinglePlayerServer.class",
+      "sha256": "f2b132834f7a783867efeb55f9ee5a6022ca6844c95cfedceea35eff310f18ab",
+      "bytes": 10375
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/server/ClientCommands.lua",
+      "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+      "bytes": 45277
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/ISUI/ISModalDialog.lua",
+      "sha256": "084d21246c03e54f8fe2a0dd16fb19f83e9ee347aa400c2d974e536f31f692dc",
+      "bytes": 6857
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/DebugUIs/DebugContextMenu.lua",
+      "sha256": "2acd36fb430fcc631578d7679ab466dc51c6e1245695a148c6614f52f1850697",
+      "bytes": 57048
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/ISUI/AdminPanel/ISAdminPowerUI.lua",
+      "sha256": "09156328343fbf0ad649870ba49d7a029eb614fda6436a09504668620eb2ac57",
+      "bytes": 18794
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/ISUI/Animal/ISAnimalGenomeUI.lua",
+      "sha256": "7277b5bbe7946f97f1e2d788a9cdb86eb658f69000bc89b55f52326ab2ffa4a5",
+      "bytes": 13995
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/DebugUIs/AdminContextMenu.lua",
+      "sha256": "93b44a4ef611543bbfd5d31ef9296faebe8cee265923e9e591758cb3166dbf09",
+      "bytes": 9919
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/Definitions/animal/ChickenDefinitions.lua",
+      "sha256": "6323de26b30e1d348337cbf3b70cba52fed6883aa7307a9751b085dfb8926342",
+      "bytes": 21345
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/Definitions/animal/RaccoonDefinitions.lua",
+      "sha256": "55185497017826ae3a1d3f3e980f963de29644797ea4d992d40ea9e483ca502c",
+      "bytes": 16790
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/Definitions/animal/AnimalAvatarDefinition.lua",
+      "sha256": "9a3ecc84e1e6f362edcfe815a91b3e4cfa568dd8e2878ca57197135ebcab1d86",
+      "bytes": 23188
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/Definitions/animal/AnimalPartsDefinitions.lua",
+      "sha256": "6ab17895eb51b15101a868fa7d5659ed818427fac774cdf9d6d42f7398a320f8",
+      "bytes": 44470
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/Definitions/animal/AnimalGenomeDefinitions.lua",
+      "sha256": "66c8b5b8bf242bbf2a362e67ae36ec7cf4ce119b9c15391678ee7d83c16d03cc",
+      "bytes": 8978
+    },
+    {
+      "container": "game-root",
+      "path": "media/scripts/generated/models_animals.txt",
+      "sha256": "148a08e544ea44714617681bac2d770ad82beac899a20e3b51ec40c72950a1d0",
+      "bytes": 19968
+    },
+    {
+      "container": "game-root",
+      "path": "media/scripts/generated/animations_meshes.txt",
+      "sha256": "626bc19bc4a19c7849dbd1d79b375dbb61c2b5555f0d9545555c5b654f3cb5fd",
+      "bytes": 3621
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/ISUI/Animal/ISAnimalContextMenu.lua",
+      "sha256": "809223fae0f268bedc203188bfdeb4b2cda0f83ad124f9dc55c7e530e39f0731",
+      "bytes": 56096
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/Vehicles/ISUI/ISVehicleMenu.lua",
+      "sha256": "805a7854f9f418becddc7626b6262d8665fc16129412b3a289ec623069be9f23",
+      "bytes": 79267
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISPickupAnimal.lua",
+      "sha256": "bdb20f4e1a3fce56e4c55e3173943787db48fa709ffb0ca619b43d25481d5ab3",
+      "bytes": 2269
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISAddAnimalInTrailer.lua",
+      "sha256": "ac368a7a221aa174fabdc7531ce0d247d39df5b1495b9365ea61462999e05d7c",
+      "bytes": 3224
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISFeedAnimalFromHand.lua",
+      "sha256": "337847d631480f8540ec5f307185f8326669f78a7b83185291085943e1098697",
+      "bytes": 2128
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISPetAnimal.lua",
+      "sha256": "e303c6654963b90a0bb3200f674dd78411c6bfa2d17c52d48b4fad914bf2e0a0",
+      "bytes": 2994
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalDefinitions.class",
+      "sha256": "a079339c4e39337cf555e04b4861820eadcef8b8a60cf88ece947ddb1d7e711f",
+      "bytes": 18305
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/datas/AnimalData.class",
+      "sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "bytes": 51828
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/behavior/BaseAnimalBehavior.class",
+      "sha256": "a4f125807bc3843053717711c83193dea0f158a0823cd6510758f8453f84d7f7",
+      "bytes": 42129
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/vehicles/BaseVehicle.class",
+      "sha256": "e7ade19e1e6f66450bef2bd37e52b2afccc7377c4e4571d0fa39435ecdb55661",
+      "bytes": 296360
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalUpdatePacket.class",
+      "sha256": "10d0be45fff9127f2f4b7f260581ce18d686dcc9bd043135efc59f15a4045ec4",
+      "bytes": 10320
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/ObjectModDataPacket.class",
+      "sha256": "1d6f806ee95bf6d22f5a69d0535b375a60085039311697eecd6b85dff8e9d9c2",
+      "bytes": 4919
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/fields/MovingObject.class",
+      "sha256": "ab57a9bce0e6461ce9e07e7c1f4f0f4b2991f63a532a305032132aa4925b1e04",
+      "bytes": 6121
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/popman/animal/AnimalInstanceManager.class",
+      "sha256": "edaf2d3ce605b2e27a407eac8197523c4a9597fb2a0b8fc743e474c244d4ef95",
+      "bytes": 6184
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalCommandPacket.class",
+      "sha256": "b310c9736893503d843befb52147150ceea633fccea1ce24f76c936fcc88ef57",
+      "bytes": 17863
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/Definitions/animal/ButcheringUtil.lua",
+      "sha256": "7ac0d9b698c9d3d1bb15af33ff771b91ee3abdb43f58c6973ae8cf4aa347a695",
+      "bytes": 27257
+    }
+  ],
+  "findings": [
+    "ModData.create refuses occupied names; cacheFileExists paths are relative to cache/Lua. Writer has no exclusive-create guarantee; single coordinator and preserved receipts required.",
+    "OnClientCommand resolves player from sender connection. Capability.AnimalCheats authenticates the admin on server; client arguments never supply identity, breed or position.",
+    "SP uses explicit local authority and OnGameStart; sendServerCommand does nothing in SP, so local callback is separate.",
+    "Native type loads shared Lua before lazy definition cache; adult stage has no replacement; original code deep-copies vanilla raccoon references, avatar and parts at runtime.",
+    "ObjectModDataPacket accepts animal ModData load/wipe. Marker matches are diagnostics, not trusted multiplayer provenance. Dedicated NativeSession.prepareOwnership is blocked.",
+    "Pickup/pet flags affect normal menus; trailer/feed paths can ignore flags. Native raccoon interactions remain; transport/growth/corpse continuity is not approved.",
+    "Constructor can register an instance before caller addToWorld. Receipt and both roots precede constructor; errors never trigger automatic respawn."
+  ]
+}

@@ -1,0 +1,8 @@
+VERSION = 1,
+option B47ANCEDDogmeat.PersistenceTestMode
+{
+    type = boolean,
+    default = false,
+    page = B47ANCEDDogmeat,
+    translation = B47ANCEDDogmeat_PersistenceTestMode,
+}

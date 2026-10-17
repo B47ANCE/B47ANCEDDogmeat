@@ -1,0 +1,16 @@
+{
+  "ai_model": "meshy-7.1",
+  "model_type": "standard",
+  "prompt": "Realistic adult English Mastiff, fawn with black mask, one complete dog. Huge broad square skull, short deep wide muzzle, loose heavy jowls, small brown eyes, V-shaped drop ears. Massive heavy-boned chest and torso, thick neck, sturdy legs, large paws, long tapering tail. Neutral standing quadruped, four separate legs, paws level. Mouth gently open in relaxed pant, lower jaw separated from upper jaw. Model a deep mouth cavity with inner cheeks and palate, pink tongue inside lower jaw, upper and lower teeth including canines; distinct gum lines. Clean jaw hinge and lip loops for opening and closing, interior visible from front and side. Short smooth coat. No collar, person, props, ground, text, fur strands or other animals.",
+  "geometry_resolution": "standard",
+  "should_remesh": true,
+  "target_polycount": 15000,
+  "topology": "triangle",
+  "auto_size": false,
+  "target_formats": [
+    "glb",
+    "fbx"
+  ],
+  "alpha_thumbnail": true,
+  "response_format": "json"
+}

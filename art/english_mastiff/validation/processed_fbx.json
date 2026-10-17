@@ -1,0 +1,158 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "asset_revision": "em-v001",
+  "stage": "processed_fbx",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "source": "interchange/english_mastiff.fbx",
+  "sha256": "bc20231d36edc5442d52d2eb7b6cd22ceceb84e9736174d4c561ecabd57ba9d7",
+  "meshes": [
+    {
+      "name": "Mesh_0",
+      "vertices": 6240,
+      "polygons": 12476,
+      "triangles": 12476,
+      "uv_layers": 1,
+      "raw_boundary_edges": 0,
+      "welded_boundary_edges": 0,
+      "welded_nonmanifold_edges": 0,
+      "welded_components_vertices": [
+        6240
+      ],
+      "nonfinite_coordinates": 0,
+      "zero_area_triangles": 0,
+      "materials": [
+        "EnglishMastiff_FBX_PBR"
+      ]
+    }
+  ],
+  "dimensions_blender_units": [
+    0.6535210013389587,
+    1.9003872871398926,
+    1.3366944789886475
+  ],
+  "physical_scale": "NOT CALIBRATED",
+  "source_bounds": {
+    "minimum": [
+      -0.32982298731803894,
+      -0.9495751261711121,
+      -0.668944239616394
+    ],
+    "maximum": [
+      0.3236980140209198,
+      0.9508121013641357,
+      0.6677502393722534
+    ]
+  },
+  "armatures": 0,
+  "animations": 0,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "sRGB"
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "metallic.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "Non-Color"
+    },
+    {
+      "name": "roughness.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4,
+      "colorspace": "Non-Color"
+    }
+  ],
+  "renders": [],
+  "pz_compatibility": "NOT TESTED",
+  "rigging_readiness": "UNRIGGED; deformation NOT TESTED",
+  "triangles": 12476,
+  "materials": [
+    {
+      "name": "EnglishMastiff_FBX_PBR",
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "image": null
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "image": null
+        },
+        {
+          "name": "Normal Map",
+          "type": "ShaderNodeNormalMap",
+          "image": null
+        },
+        {
+          "name": "Image Texture",
+          "type": "ShaderNodeTexImage",
+          "image": "Image_0"
+        },
+        {
+          "name": "Image Texture.001",
+          "type": "ShaderNodeTexImage",
+          "image": "Image_2"
+        },
+        {
+          "name": "Image Texture.002",
+          "type": "ShaderNodeTexImage",
+          "image": "roughness.png"
+        },
+        {
+          "name": "Image Texture.003",
+          "type": "ShaderNodeTexImage",
+          "image": "metallic.png"
+        }
+      ],
+      "links": [
+        {
+          "from": "Principled BSDF.BSDF",
+          "to": "Material Output.Surface"
+        },
+        {
+          "from": "Normal Map.Normal",
+          "to": "Principled BSDF.Normal"
+        },
+        {
+          "from": "Image Texture.Color",
+          "to": "Principled BSDF.Base Color"
+        },
+        {
+          "from": "Image Texture.001.Color",
+          "to": "Normal Map.Color"
+        },
+        {
+          "from": "Image Texture.002.Color",
+          "to": "Principled BSDF.Roughness"
+        },
+        {
+          "from": "Image Texture.003.Color",
+          "to": "Principled BSDF.Metallic"
+        }
+      ]
+    }
+  ]
+}

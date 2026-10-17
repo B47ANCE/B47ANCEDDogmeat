@@ -1,0 +1,107 @@
+{
+  "asset_revision": "em-v001",
+  "tested_project_version": "0.2.0-dev.7",
+  "provider": "Meshy AI",
+  "model": "meshy-7.1",
+  "source_request": {
+    "path": "docs/requirements/ENGLISH_MASTIFF_REQUEST.md",
+    "sha256": "2790b50ae6fcf26fd4632f3723edf448a896d8d82976a9e23592a77b23472704"
+  },
+  "generation_method": "Original text-to-3D preview, then texture refinement of that exact preview",
+  "jobs": [
+    {
+      "task_id": "01a14381-3246-76b4-b2cb-760091dad19c",
+      "task_type": "text-to-3d",
+      "stage": "preview",
+      "approval": "Approve Meshy-7.1 preview \u2014 20 credits",
+      "approved_credits": 20,
+      "consumed_credits": 20,
+      "status": "SUCCEEDED",
+      "parameters": {
+        "ai_model": "meshy-7.1",
+        "model_type": "standard",
+        "prompt": "Realistic adult English Mastiff, one complete dog, not Bullmastiff or Cane Corso. Enormous heavy-boned body, massive broad square skull, wide cheeks, short broad deep muzzle, natural forehead wrinkles and loose jowls, small brown eyes, medium V-shaped drop ears. Thick neck, very broad shoulders, deep wide chest, long substantial torso, powerful hindquarters, sturdy straight legs, large natural paws. Long thick tapering tail hanging down. Neutral quadruped standing, head forward, closed mouth, four separate legs, all paws on one plane. Short smooth coat, fawn body with black mask and dark ears. Believable lean-heavy proportions, not obese or muscular caricature. No collar, leash, person, props, base, scenery, text or other animals.",
+        "target_polycount": 12000,
+        "topology": "triangle",
+        "target_formats": [
+          "glb",
+          "fbx"
+        ],
+        "auto_size": false,
+        "should_remesh": true,
+        "alpha_thumbnail": true,
+        "response_format": "json",
+        "geometry_resolution": "standard"
+      }
+    },
+    {
+      "task_id": "01a14385-b596-72a1-9f09-e29c7414798f",
+      "task_type": "text-to-3d",
+      "stage": "refine",
+      "approval": "Approve 2K PBR texturing \u2014 10 credits",
+      "approved_credits": 10,
+      "consumed_credits": 10,
+      "status": "SUCCEEDED",
+      "parameters": {
+        "preview_task_id": "01a14381-3246-76b4-b2cb-760091dad19c",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "texture_prompt": "Classic fawn adult English Mastiff: warm golden-fawn short dense smooth coat, black muzzle and facial mask, naturally darker drop ears and eye rims, brown eyes, matte black nose. Subtle tan/fawn body variation, realistic short-fur detail primarily in albedo and normal map, natural roughness, no baked strong lighting, metallic sheen, plastic finish, collar, harness, accessories or written markings.",
+        "target_formats": [
+          "glb",
+          "fbx"
+        ],
+        "auto_size": false,
+        "response_format": "json",
+        "alpha_thumbnail": true
+      }
+    }
+  ],
+  "total_consumed_credits": 30,
+  "additional_paid_jobs": 0,
+  "automatic_paid_retries": 0,
+  "references": [
+    {
+      "name": "codex-clipboard-0c23340f-5b5c-4454-8529-43f9f91fc959.png",
+      "pixels": [
+        400,
+        400
+      ],
+      "sha256": "527c28a6d63bb271745f60d8c574bab6be71fef43a1f18ee08c54a02af83c14b",
+      "use": "User-provided breed/proportion reference only; not submitted to Meshy or redistributed",
+      "rights": "Photo authorship/license not established"
+    },
+    {
+      "name": "codex-clipboard-a7f34316-8648-434a-bbcf-730296fe10ca.png",
+      "pixels": [
+        259,
+        194
+      ],
+      "sha256": "d37dd919b33630d1e416cce429678b922d5f97058d0aca3eda89fd034899b983",
+      "use": "User-provided breed/proportion reference only; not submitted to Meshy or redistributed",
+      "rights": "Photo authorship/license not established"
+    }
+  ],
+  "reference_images_uploaded": false,
+  "original_service_outputs": [
+    "source/meshy_preview.glb",
+    "source/meshy_preview.fbx",
+    "source/meshy_textured.glb",
+    "source/meshy_textured.fbx"
+  ],
+  "processed_geometry": "Weld coincident seam geometry and remove three reviewed tiny fin triangles; no sculpt/remesh/physical rescale",
+  "material_conversion": "FBX uses direct separate provider roughness/metallic maps; GLB retains identical embedded service images by role",
+  "paid_entitlement_basis": "User states an existing Meshy subscription; authenticated credit account executed the two approved paid jobs",
+  "rights_reference": "https://www.meshy.ai/terms-of-use",
+  "provenance": "Original authored prompt; no third-party model/texture/rig acquired or copied. User photos are guidance only and are not redistributed.",
+  "asset_license": "No new redistribution license is invented; retain project/provider rights and provenance",
+  "runtime_activation": false,
+  "raccoon_replaced": false,
+  "rigging": false,
+  "animations": false,
+  "model_variant": "Fawn only",
+  "native_compatibility": "NOT TESTED",
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "G8": "BLOCKED"
+}

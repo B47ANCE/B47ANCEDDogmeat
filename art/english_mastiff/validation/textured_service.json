@@ -1,0 +1,103 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "asset_revision": "em-v001",
+  "stage": "textured_service",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "source": "source/meshy_textured.glb",
+  "sha256": "6c7fe48b69974665a88aed5e510a4a7696a1bf1eb0559af0687a2ce6cec94fdc",
+  "meshes": [
+    {
+      "name": "Mesh_0",
+      "vertices": 12047,
+      "polygons": 12479,
+      "triangles": 12479,
+      "uv_layers": 1,
+      "raw_boundary_edges": 9611,
+      "welded_boundary_edges": 5,
+      "welded_nonmanifold_edges": 9,
+      "welded_components_vertices": [
+        6241
+      ],
+      "nonfinite_coordinates": 0,
+      "zero_area_triangles": 0,
+      "materials": [
+        "Material_0"
+      ]
+    }
+  ],
+  "dimensions_blender_units": [
+    0.6535210013389587,
+    1.9003870487213135,
+    1.3366941213607788
+  ],
+  "physical_scale": "NOT CALIBRATED",
+  "source_bounds": {
+    "minimum": [
+      -0.32982298731803894,
+      -0.9495750069618225,
+      -0.6689440608024597
+    ],
+    "maximum": [
+      0.3236980140209198,
+      0.9508119821548462,
+      0.6677500605583191
+    ]
+  },
+  "armatures": 0,
+  "animations": 0,
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4
+    },
+    {
+      "name": "Image_2",
+      "size": [
+        2048,
+        2048
+      ],
+      "channels": 4
+    }
+  ],
+  "renders": [
+    {
+      "path": "previews/textured_service/three_quarter.png",
+      "sha256": "2a1607dd4d6c35e645cedb289a253907da2155dc05061331ea6848af90c65db6"
+    },
+    {
+      "path": "previews/textured_service/axis_x_positive.png",
+      "sha256": "9ba083b489ba4c4f637a815576ddef2438a3e856df4a8c2ff20d821065634b60"
+    },
+    {
+      "path": "previews/textured_service/axis_x_negative.png",
+      "sha256": "bc255eaee366766cc1bd8ed066e6caa76a7b6931d59082b879bd8dab50690953"
+    },
+    {
+      "path": "previews/textured_service/axis_y_positive.png",
+      "sha256": "6f4caa98f77b81cf0f6380d3ca65c1b49f9cfcf9ba388aa1b63ac2930bb34aee"
+    },
+    {
+      "path": "previews/textured_service/axis_y_negative.png",
+      "sha256": "224b2f6ba207a42485c6549c428c716491e1f5faf5c968580c6694653e90cad6"
+    }
+  ],
+  "pz_compatibility": "NOT TESTED",
+  "rigging_readiness": "UNRIGGED; deformation NOT TESTED",
+  "triangles": 12479,
+  "editable_source": {
+    "path": "source/english_mastiff_textured_service.blend",
+    "sha256": "e933507a30c25e2696e48a4e39ba5ee39682fab91e345b89d440cf76bbc0542a"
+  }
+}

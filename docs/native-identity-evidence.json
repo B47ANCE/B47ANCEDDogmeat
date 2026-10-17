@@ -1,0 +1,435 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "observed_project_version": "0.2.0-dev.5",
+  "observed_date": "2026-10-14",
+  "game_build": "42.21",
+  "environment": "Offline packaged classes and installed Lua; defensive authority audit, not effective runtime or network execution",
+  "inputs": [
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISAddAnimalInTrailer.lua",
+      "sha256": "ac368a7a221aa174fabdc7531ce0d247d39df5b1495b9365ea61462999e05d7c",
+      "bytes": 3224
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISPickupAnimal.lua",
+      "sha256": "bdb20f4e1a3fce56e4c55e3173943787db48fa709ffb0ca619b43d25481d5ab3",
+      "bytes": 2269
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISRemoveAnimalFromTrailer.lua",
+      "sha256": "ed71d946ac36b3a2cb7b9d70d621c3b60ec54dccba8c12958ead2292b01a0262",
+      "bytes": 2601
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/ISDropVehicleItemAction.lua",
+      "sha256": "47a72b3f652c142d3975e206f03aec18a19b97478c4c1785ca7365ae1f911ec4",
+      "bytes": 4363
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/ISDropWorldItemAction.lua",
+      "sha256": "1a1db7308a9cee66889ed197320d8ceb9a8373fcdf557d8e14d27b10ef644db3",
+      "bytes": 5543
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "se/krka/kahlua/integration/expose/LuaJavaClassExposer.class",
+      "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+      "bytes": 23071
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaManager$Exposer.class",
+      "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+      "bytes": 62603
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoGameCharacter.class",
+      "sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "bytes": 465921
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoLivingCharacter.class",
+      "sha256": "04398e7fee60de3edc44ea5a908fbbbb1862743bb1cc05b075d525d6fdc55b55",
+      "bytes": 10358
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/IsoPlayer.class",
+      "sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "bytes": 258078
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/NetworkPlayerAI.class",
+      "sha256": "46df5ede124384e10a848fe9eb6f6ba06cccbb3cc74f51e5e9b0306cd80a628a",
+      "bytes": 27392
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/WornItems/WornItems.class",
+      "sha256": "3a01a9b5b7e13d0902fcac9342ac0b42e5c2e87284d88ce9a6a01f45294409c1",
+      "bytes": 10896
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalCell.class",
+      "sha256": "764653e71eb2d1672c4011c04629276ea7eaaad0c75a2aac16a16158c42e0c0a",
+      "bytes": 12331
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalChunk.class",
+      "sha256": "1e2852df9dcf1b4be06f601c1bdd03b6b7f27324d9307b5c328816231aa55d5b",
+      "bytes": 7351
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerMain.class",
+      "sha256": "4744a1a9bb393d1dfb4db3b52d8475c5344a128c6e35c697eaf34f8b5da1db61",
+      "bytes": 6571
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalManagerWorker.class",
+      "sha256": "bc0cb514dbde7ef1aef40ef047de004a622faaebca3527994cc7f2f8dfc47452",
+      "bytes": 9982
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/AnimalPopulationManager.class",
+      "sha256": "bf48fdf68b9b1efddcfe9c878f4717b8d679734ff230ee483c184b6161e4a3e4",
+      "bytes": 6673
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/VirtualAnimal.class",
+      "sha256": "3f87503412695eb519d91c8c56ccbfe5d476f9f429bda9161f8399923af87159",
+      "bytes": 10564
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/datas/AnimalData.class",
+      "sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "bytes": 51828
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/Action.class",
+      "sha256": "4a2fe6aaf0cf73235279946e930b40489ec44859aff64cc19d97976bcc75610d",
+      "bytes": 3416
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/ActionManager.class",
+      "sha256": "3e85655f0d287837b17164d2ee4cecb7067ab419ffbe8ce1adb36bd7d54b202f",
+      "bytes": 14982
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/NetTimedAction.class",
+      "sha256": "d4a3046eeaec409977a756c6ea80b0676229274684012ad51210559ebfcb1090",
+      "bytes": 8404
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/TradingManager.class",
+      "sha256": "104c0209a91c2a8cb6d9b23eeb8bc203bd18fba85f9af4169da36a43343254ab",
+      "bytes": 8299
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/inventory/ItemContainer.class",
+      "sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+      "bytes": 115353
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/inventory/types/AnimalInventoryItem.class",
+      "sha256": "852fb728e6416ea4fbd441307d6f4aa40c8780a61d8b3aae7141f44f32e8217c",
+      "bytes": 7178
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoCell.class",
+      "sha256": "5e9a88e1cd9a3f370e31ae0152c9de381d649caea7cab750ebc82a91b4e1f767",
+      "bytes": 126209
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoGridSquare.class",
+      "sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "bytes": 286573
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoMovingObject.class",
+      "sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+      "bytes": 62965
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/IsoObject.class",
+      "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "bytes": 171614
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+      "bytes": 79976
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/iso/objects/IsoHutch.class",
+      "sha256": "d9c1944025f6902416c83993199a89b2509bb2af3d09a44ced9c61b28c8589ae",
+      "bytes": 32396
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/NetworkPlayerManager.class",
+      "sha256": "16bdb3b1777e0a1c274e4d9503fd4f8c2801729cbdc4ac5a80c5117cd9a47b78",
+      "bytes": 2354
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/PZNetKahluaTableImpl.class",
+      "sha256": "201f0e59502fc5a106f8c9021e0b0d13a30dcb8d0beb9e8934cec390231ddba6",
+      "bytes": 25993
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/PacketTypes$PacketType.class",
+      "sha256": "aa6718ed4e2e33b199734c8cfa4b85a64c193ccc307b2cc4deafe18e0a43d5f5",
+      "bytes": 51068
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/fields/INetworkPacketField.class",
+      "sha256": "0d3c35508eaa056dccdd51e0e4f8d18e81625d73dfa1eb05266df978b78bc4b3",
+      "bytes": 676
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/fields/character/PlayerID.class",
+      "sha256": "d40d1b745a70ad3bf562c15765b9f46a117ecb48aeeabf05597ce646a73e0b56",
+      "bytes": 4134
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/AddExplosiveTrapPacket.class",
+      "sha256": "e56a6498342b028529dfea202e57a61d3a565a008ad34fcab7caf09db770df8d",
+      "bytes": 6972
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/AddInventoryItemToContainerPacket.class",
+      "sha256": "ebbd2e60b7430b6478498257cae19f21eb9d3e656bb1f03ac1dfa4422d2947f1",
+      "bytes": 7688
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/AddItemInInventoryPacket.class",
+      "sha256": "4e89c333b69ec502535c3f59169feee5766ff66072237d16080566d2fdd44a1c",
+      "bytes": 4544
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/AddItemToMapPacket.class",
+      "sha256": "bd27fa5f01bb071122156d1b915cd8d75e9de62404b68175b83dd9614e58463d",
+      "bytes": 4096
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/EquipPacket.class",
+      "sha256": "35e25895c725c3154d0f1e4b3217c7e19795ed1296441dbcea9283026ec5da89",
+      "bytes": 7243
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/GameCharacterAttachedItemPacket.class",
+      "sha256": "124bab8a8f1aadd00f66fb897e9aeb52e1ca9c8d3240b0c739400982fc494bdf",
+      "bytes": 6546
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/INetworkPacket.class",
+      "sha256": "616a8d2e86a03952e16c45e756dae12910f637716568a74571defdc1884ce7e9",
+      "bytes": 7955
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/ItemTransactionPacket.class",
+      "sha256": "41608a6690d16cb0ac202a4a3196b2b0851dadb935bca2b1d9a0a3e501791e83",
+      "bytes": 6325
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/NetTimedActionPacket.class",
+      "sha256": "ce367190ce6158eb88809f3215ebc471e6161896d9d526eb9ef0e73d58de847b",
+      "bytes": 5395
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/ObjectChangePacket.class",
+      "sha256": "6da0b101ce49b2aed84bf129d5f5e0cfaad3b772f44a8cf95a306f9339a1e2b5",
+      "bytes": 7212
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/ReplaceInventoryItemInContainerPacket.class",
+      "sha256": "5a33e8e8328db89d26fc4ae032ea4d6b649436cc610eeea0388c9413da425a12",
+      "bytes": 4192
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/SyncItemFieldsPacket.class",
+      "sha256": "957430c8397cf76728fe376435d70db84f756aa897d2e753f971e396cb1c1a5c",
+      "bytes": 18437
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/TradingUIAddItemPacket.class",
+      "sha256": "a73454d0a08466fee59fa1057dc2fc408de8902ab7023a6dbd5e00a8b68d6f91",
+      "bytes": 4395
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/actions/AnimalEventPacket.class",
+      "sha256": "6969a81925f9f9df5d132ffd29ee45a383b3dc02eb53409ec590fa3f79a660c0",
+      "bytes": 8879
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/actions/EatFoodPacket.class",
+      "sha256": "09396cc9361b9e456f64736a7ef51cc889f6966cb76fc81fe7a6f1020eb96c2c",
+      "bytes": 4597
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalCommandPacket.class",
+      "sha256": "b310c9736893503d843befb52147150ceea633fccea1ce24f76c936fcc88ef57",
+      "bytes": 17863
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalOwnershipPacket.class",
+      "sha256": "15e36ed65a18f91ae4fc69f58472f5012042f98ff2be0d9b6e5ec71473eb18ed",
+      "bytes": 3579
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalPacket.class",
+      "sha256": "db6954555bb7b270589d406050eecb4dd79f789e8d5627df7fc43c1e8150f169",
+      "bytes": 6193
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalUpdatePacket.class",
+      "sha256": "10d0be45fff9127f2f4b7f260581ce18d686dcc9bd043135efc59f15a4045ec4",
+      "bytes": 10320
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalUpdateReliablePacket.class",
+      "sha256": "a2c8af71ae6830949782b1c4b3015b4c1cb0dd0e0dc54b4d6a218bbc00d89634",
+      "bytes": 645
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/AnimalUpdateUnreliablePacket.class",
+      "sha256": "434737708d5db2a36d5f4652c4c3ec8ecd68ff12d477b37c6210d9b73323729c",
+      "bytes": 651
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/character/CreatePlayerPacket.class",
+      "sha256": "9f267c40133043b9ed90b59adc637ffadc8c7f88071eb4e5d05164e15dcc5f60",
+      "bytes": 14973
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/ConnectPacket.class",
+      "sha256": "f7248dfa068dd5b48bcf50d9b90d51829830ddc0ad0f6b3823ba3027748102e9",
+      "bytes": 3171
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/ConnectedPacket.class",
+      "sha256": "75da69fc6738188a6a51dbade708f5ff47908c019c6622e15d18ff988a79de26",
+      "bytes": 13761
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/connection/LoadPlayerProfilePacket.class",
+      "sha256": "1ccf8159010b4a6af5249fadf26c8bdf7b7e49179051ddfc22f2022da9a18866",
+      "bytes": 6946
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/service/PlayerInventoryPacket.class",
+      "sha256": "04722c19f546f5e6b6c2aac68a8cdd03f3cc05008416d34bdf3353d894423344",
+      "bytes": 8208
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/vehicle/VehicleFullUpdatePacket.class",
+      "sha256": "ba52aaae8413854173b305956145dcb15bd0e7c7b7a1a4971da6dfb8e65c9f14",
+      "bytes": 7371
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/network/packets/vehicle/VehicleUpdatePacket.class",
+      "sha256": "5126d4f9dccbc42735363ad1e16bffd86557955c39a5454b01d8f5ca5afaf2b7",
+      "bytes": 8888
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/popman/animal/AnimalInstanceManager.class",
+      "sha256": "edaf2d3ce605b2e27a407eac8197523c4a9597fb2a0b8fc743e474c244d4ef95",
+      "bytes": 6184
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/popman/animal/AnimalSynchronizationManager.class",
+      "sha256": "c71ad5044ad9a7d49c0ad83c41038a1c00c52a8f4af6cfbff48959e48b22da7f",
+      "bytes": 9888
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/savefile/ClientPlayerDB.class",
+      "sha256": "ec5c2625ddb21b81bdd0912cdb5775e1fcb3c6e54e0b282d31f830ffface89f0",
+      "bytes": 6366
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/savefile/ServerPlayerDB$NetworkCharacterData.class",
+      "sha256": "ff11f5cd6726ed7be29694547103f1e9879903fe64ba5ad8ef3025130edd5c39",
+      "bytes": 3922
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/savefile/ServerPlayerDB.class",
+      "sha256": "aeb328c4dfbd436c372b3c2d350ac533dcd4e692b6ee58a5f8c24807ecf31379",
+      "bytes": 12956
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/vehicles/BaseVehicle.class",
+      "sha256": "e7ade19e1e6f66450bef2bd37e52b2afccc7377c4e4571d0fa39435ecdb55661",
+      "bytes": 296360
+    }
+  ]
+}

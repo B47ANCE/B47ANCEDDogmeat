@@ -1,0 +1,206 @@
+{
+  "asset_revision": "em-v001",
+  "tested_project_version": "0.2.0-dev.7",
+  "files": [
+    {
+      "path": "interchange/english_mastiff.fbx",
+      "bytes": 8255852,
+      "sha256": "bc20231d36edc5442d52d2eb7b6cd22ceceb84e9736174d4c561ecabd57ba9d7"
+    },
+    {
+      "path": "interchange/english_mastiff.glb",
+      "bytes": 8407560,
+      "sha256": "37c8e1cc6e47f9ffde22aa93346e8d91f15fb4c3d90843e4cb278e2aab07bd31"
+    },
+    {
+      "path": "metadata/generation.json",
+      "bytes": 4980,
+      "sha256": "bdc9632a0845d11368535b9fc2e55d8e50d49cf8f91edafed606b67cb95f7fec"
+    },
+    {
+      "path": "metadata/native_compatibility.json",
+      "bytes": 3122,
+      "sha256": "63eb89878938f2ef2dcd26e5136e4af21419010fc85d23a7545924e9d1cc39d2"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_negative.png",
+      "bytes": 369636,
+      "sha256": "c52188295017cd93e3f2fc56a0c8592246dc138dbf16e9ae98079aa034a5655f"
+    },
+    {
+      "path": "previews/geometry_preview/axis_x_positive.png",
+      "bytes": 373407,
+      "sha256": "e74366971c60a9313aee624c8b580742530e1d782a08e5d1c3ea5a14bd7ebf46"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_negative.png",
+      "bytes": 358374,
+      "sha256": "fb19ee0afe8f821359f472fa8bbf83dc129735b56437b998dbe6425fa6f2180d"
+    },
+    {
+      "path": "previews/geometry_preview/axis_y_positive.png",
+      "bytes": 352838,
+      "sha256": "5fe81def1b3e1cb63935d311a40455d572f0bfdaa6d05c6695475c24964bd160"
+    },
+    {
+      "path": "previews/geometry_preview/three_quarter.png",
+      "bytes": 365854,
+      "sha256": "41e71646aa09690236fd44ffbdb9d097fcb35f2a422899ca9e9231c508abe60e"
+    },
+    {
+      "path": "previews/processed/axis_x_negative.png",
+      "bytes": 406332,
+      "sha256": "48502b63ffb1b4a8b0b3ed6190e61a4c017e41977a79c62c7a14657a0c79a603"
+    },
+    {
+      "path": "previews/processed/axis_x_positive.png",
+      "bytes": 411121,
+      "sha256": "e907ad8b0c72bb7e9e88c4492af90b02dafbee9f2df342e1333c165fc3f906de"
+    },
+    {
+      "path": "previews/processed/axis_y_negative.png",
+      "bytes": 385951,
+      "sha256": "2eb2153510bfba636459b6ea9547a1a7ce0561118011e1c7ea1c9b1696ba2189"
+    },
+    {
+      "path": "previews/processed/axis_y_positive.png",
+      "bytes": 374720,
+      "sha256": "52ec321438e0d4e7ade4810371ec99249afc389886cf8893e86b77e1eaa44d2d"
+    },
+    {
+      "path": "previews/processed/three_quarter.png",
+      "bytes": 403126,
+      "sha256": "71d2d821f883d5cb96b70b03b66d6dc6969f00bcd506cae29669031eb5ea2735"
+    },
+    {
+      "path": "previews/textured_service/axis_x_negative.png",
+      "bytes": 409634,
+      "sha256": "bc255eaee366766cc1bd8ed066e6caa76a7b6931d59082b879bd8dab50690953"
+    },
+    {
+      "path": "previews/textured_service/axis_x_positive.png",
+      "bytes": 414048,
+      "sha256": "9ba083b489ba4c4f637a815576ddef2438a3e856df4a8c2ff20d821065634b60"
+    },
+    {
+      "path": "previews/textured_service/axis_y_negative.png",
+      "bytes": 387393,
+      "sha256": "224b2f6ba207a42485c6549c428c716491e1f5faf5c968580c6694653e90cad6"
+    },
+    {
+      "path": "previews/textured_service/axis_y_positive.png",
+      "bytes": 376547,
+      "sha256": "6f4caa98f77b81cf0f6380d3ca65c1b49f9cfcf9ba388aa1b63ac2930bb34aee"
+    },
+    {
+      "path": "previews/textured_service/three_quarter.png",
+      "bytes": 404225,
+      "sha256": "2a1607dd4d6c35e645cedb289a253907da2155dc05061331ea6848af90c65db6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9584,
+      "sha256": "b00b87fb37d26a774608e130db8d356cec58ca8cdb4ee34c6d1e9aa837c0a2ec"
+    },
+    {
+      "path": "source/english_mastiff_geometry_preview.blend",
+      "bytes": 715969,
+      "sha256": "6184b5526c63cd0d2ed9155d736d979cbce14c3ec2a7c35266724b3abb6f0d3e"
+    },
+    {
+      "path": "source/english_mastiff_processed.blend",
+      "bytes": 8668626,
+      "sha256": "e5103c3d1379f808819482d4519dbf900baad29209799670e815fa9a7cf9e419"
+    },
+    {
+      "path": "source/english_mastiff_textured_service.blend",
+      "bytes": 8667696,
+      "sha256": "e933507a30c25e2696e48a4e39ba5ee39682fab91e345b89d440cf76bbc0542a"
+    },
+    {
+      "path": "source/inspect_english_mastiff.py",
+      "bytes": 8183,
+      "sha256": "3147850715bccf20fca0db59d3c6c8a653a45e0a3ee73c1bf5a8654a61fc8d66"
+    },
+    {
+      "path": "source/meshy_preview.fbx",
+      "bytes": 517916,
+      "sha256": "ca6f3030200880c132302f73c50c366a5f8729357aa159a7f0b9edac8ff419f0"
+    },
+    {
+      "path": "source/meshy_preview.glb",
+      "bytes": 461432,
+      "sha256": "5c17e4b408e817727f01f40046ca431123fd877a46743e214f36b415a2fe77f3"
+    },
+    {
+      "path": "source/meshy_textured.fbx",
+      "bytes": 13923932,
+      "sha256": "3b8230e5a40d9677fab582ecd4973e5bcc27feafea43d3e44e962665a5910c26"
+    },
+    {
+      "path": "source/meshy_textured.glb",
+      "bytes": 8486876,
+      "sha256": "6c7fe48b69974665a88aed5e510a4a7696a1bf1eb0559af0687a2ce6cec94fdc"
+    },
+    {
+      "path": "source/meshy_textured_textures/base_color.png",
+      "bytes": 6537992,
+      "sha256": "f74a0e41b7bed81c6b96aa59e88acf058bcaf47b3a912b8598e37869db07852f"
+    },
+    {
+      "path": "source/meshy_textured_textures/metallic.png",
+      "bytes": 20634,
+      "sha256": "7481be515d6d3f7fa168076023091b646a29239b6d117424d1069bfb9fa3ae54"
+    },
+    {
+      "path": "source/meshy_textured_textures/normal.png",
+      "bytes": 5667362,
+      "sha256": "324a1f448d05b7e30b63410e2e726cb74b5e169adfdb3eeaa4bc5fc60cf9d916"
+    },
+    {
+      "path": "source/meshy_textured_textures/roughness.png",
+      "bytes": 1170006,
+      "sha256": "989407e43b12dc2bad2f7743ea93150aab5e6db31102d1f695984ec1db04f3e9"
+    },
+    {
+      "path": "source/prepare_english_mastiff.py",
+      "bytes": 5601,
+      "sha256": "8ee17b4de007387da58ad648c8346292939c15431479966f7f01bd00ecc9f355"
+    },
+    {
+      "path": "source/validate_english_mastiff.py",
+      "bytes": 6914,
+      "sha256": "3e29c9cfc68a424f80ba0138808291d86f4d3901a342e46f5f1c3f2f34eac6bc"
+    },
+    {
+      "path": "validation/geometry_fbx.json",
+      "bytes": 1266,
+      "sha256": "20398e1bd175ad6b9fdb1e1f0ae018753a67ec50a7b954a2a7f93f0c8e914b3c"
+    },
+    {
+      "path": "validation/geometry_preview.json",
+      "bytes": 2240,
+      "sha256": "8ff19d9eeb4c9a517e647379722eae176e00bd387621681e665d35f0eb7bd118"
+    },
+    {
+      "path": "validation/local_cleanup.json",
+      "bytes": 2463,
+      "sha256": "4d63f7098575de2bbe6d412eae588382a3ffcaa57a74f5c8a464633db844ec92"
+    },
+    {
+      "path": "validation/processed.json",
+      "bytes": 4367,
+      "sha256": "e9e6578c47325505e7944efd5455228987f06df80c55e278b512dec45d0ebf97"
+    },
+    {
+      "path": "validation/processed_fbx.json",
+      "bytes": 3537,
+      "sha256": "18f8a3175f2d0c5fcd65458790d411b18ccd0205787a4201588a83ee34ecec94"
+    },
+    {
+      "path": "validation/textured_service.json",
+      "bytes": 2591,
+      "sha256": "b7f9d32cc36c7afc68608dfe1147dc36f8b4f5ca2b177a11a55affc746c45867"
+    }
+  ]
+}

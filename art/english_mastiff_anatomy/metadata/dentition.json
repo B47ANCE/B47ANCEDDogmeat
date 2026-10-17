@@ -1,0 +1,342 @@
+{
+  "asset_revision": "em-v004",
+  "target": "adult canine reference formula; not a clinical simulation",
+  "teeth": [
+    {
+      "object": "DM_Tooth_U_L_I1",
+      "arch": "upper",
+      "side": "L",
+      "class": "I",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_I2",
+      "arch": "upper",
+      "side": "L",
+      "class": "I",
+      "number": 2,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_I3",
+      "arch": "upper",
+      "side": "L",
+      "class": "I",
+      "number": 3,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_C1",
+      "arch": "upper",
+      "side": "L",
+      "class": "C",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_P1",
+      "arch": "upper",
+      "side": "L",
+      "class": "P",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_P2",
+      "arch": "upper",
+      "side": "L",
+      "class": "P",
+      "number": 2,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_P3",
+      "arch": "upper",
+      "side": "L",
+      "class": "P",
+      "number": 3,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_P4",
+      "arch": "upper",
+      "side": "L",
+      "class": "P",
+      "number": 4,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_M1",
+      "arch": "upper",
+      "side": "L",
+      "class": "M",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_L_M2",
+      "arch": "upper",
+      "side": "L",
+      "class": "M",
+      "number": 2,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_I1",
+      "arch": "upper",
+      "side": "R",
+      "class": "I",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_I2",
+      "arch": "upper",
+      "side": "R",
+      "class": "I",
+      "number": 2,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_I3",
+      "arch": "upper",
+      "side": "R",
+      "class": "I",
+      "number": 3,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_C1",
+      "arch": "upper",
+      "side": "R",
+      "class": "C",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_P1",
+      "arch": "upper",
+      "side": "R",
+      "class": "P",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_P2",
+      "arch": "upper",
+      "side": "R",
+      "class": "P",
+      "number": 2,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_P3",
+      "arch": "upper",
+      "side": "R",
+      "class": "P",
+      "number": 3,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_P4",
+      "arch": "upper",
+      "side": "R",
+      "class": "P",
+      "number": 4,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_M1",
+      "arch": "upper",
+      "side": "R",
+      "class": "M",
+      "number": 1,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_U_R_M2",
+      "arch": "upper",
+      "side": "R",
+      "class": "M",
+      "number": 2,
+      "bone": "DM_Head"
+    },
+    {
+      "object": "DM_Tooth_L_L_I1",
+      "arch": "lower",
+      "side": "L",
+      "class": "I",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_I2",
+      "arch": "lower",
+      "side": "L",
+      "class": "I",
+      "number": 2,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_I3",
+      "arch": "lower",
+      "side": "L",
+      "class": "I",
+      "number": 3,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_C1",
+      "arch": "lower",
+      "side": "L",
+      "class": "C",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_P1",
+      "arch": "lower",
+      "side": "L",
+      "class": "P",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_P2",
+      "arch": "lower",
+      "side": "L",
+      "class": "P",
+      "number": 2,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_P3",
+      "arch": "lower",
+      "side": "L",
+      "class": "P",
+      "number": 3,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_P4",
+      "arch": "lower",
+      "side": "L",
+      "class": "P",
+      "number": 4,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_M1",
+      "arch": "lower",
+      "side": "L",
+      "class": "M",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_M2",
+      "arch": "lower",
+      "side": "L",
+      "class": "M",
+      "number": 2,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_L_M3",
+      "arch": "lower",
+      "side": "L",
+      "class": "M",
+      "number": 3,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_I1",
+      "arch": "lower",
+      "side": "R",
+      "class": "I",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_I2",
+      "arch": "lower",
+      "side": "R",
+      "class": "I",
+      "number": 2,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_I3",
+      "arch": "lower",
+      "side": "R",
+      "class": "I",
+      "number": 3,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_C1",
+      "arch": "lower",
+      "side": "R",
+      "class": "C",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_P1",
+      "arch": "lower",
+      "side": "R",
+      "class": "P",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_P2",
+      "arch": "lower",
+      "side": "R",
+      "class": "P",
+      "number": 2,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_P3",
+      "arch": "lower",
+      "side": "R",
+      "class": "P",
+      "number": 3,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_P4",
+      "arch": "lower",
+      "side": "R",
+      "class": "P",
+      "number": 4,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_M1",
+      "arch": "lower",
+      "side": "R",
+      "class": "M",
+      "number": 1,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_M2",
+      "arch": "lower",
+      "side": "R",
+      "class": "M",
+      "number": 2,
+      "bone": "DM_Jaw"
+    },
+    {
+      "object": "DM_Tooth_L_R_M3",
+      "arch": "lower",
+      "side": "R",
+      "class": "M",
+      "number": 3,
+      "bone": "DM_Jaw"
+    }
+  ]
+}

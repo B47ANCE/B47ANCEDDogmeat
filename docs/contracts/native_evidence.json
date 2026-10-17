@@ -1,0 +1,316 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "observed_date": "2026-10-12",
+  "game_build": "42.21 from matched packaged Core inspection",
+  "environment": "Windows offline file/class/vanilla Lua inspection; no game classes executed",
+  "sources": [
+    {
+      "evidence": "E-ENVIRONMENT",
+      "kind": "file",
+      "path": "projectzomboid.jar",
+      "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+      "bytes": 65682033
+    },
+    {
+      "evidence": "E-ENVIRONMENT",
+      "kind": "file",
+      "path": "ProjectZomboid64.json",
+      "sha256": "d9042d298dace3faa63e0a217a6caae69a39ff1bba0dc91a37b28bb08fe800e0",
+      "bytes": 1477
+    },
+    {
+      "evidence": "E-ENVIRONMENT",
+      "kind": "file",
+      "path": "ProjectZomboidServer.bat",
+      "sha256": "5a8512f1d5c2d8f1cd79aa59eb0092b234e8f95f70c74255321e516a791c7dad",
+      "bytes": 474
+    },
+    {
+      "evidence": "E-REGISTRY",
+      "kind": "file",
+      "path": "media/lua/shared/Definitions/animal/SheepDefinitions.lua",
+      "sha256": "03ebdb608d6347811d11ee3bc19ec62a9d63ecd75811250c3dde2b8b58109b27",
+      "bytes": 26686
+    },
+    {
+      "evidence": "E-REGISTRY",
+      "kind": "file",
+      "path": "media/lua/shared/Definitions/animal/RaccoonDefinitions.lua",
+      "sha256": "55185497017826ae3a1d3f3e980f963de29644797ea4d992d40ea9e483ca502c",
+      "bytes": 16790
+    },
+    {
+      "evidence": "E-ASSET",
+      "kind": "file",
+      "path": "media/lua/shared/Definitions/animal/AnimalAvatarDefinition.lua",
+      "sha256": "9a3ecc84e1e6f362edcfe815a91b3e4cfa568dd8e2878ca57197135ebcab1d86",
+      "bytes": 23188
+    },
+    {
+      "evidence": "E-REGISTRY",
+      "kind": "file",
+      "path": "media/lua/server/ClientCommands.lua",
+      "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+      "bytes": 45277
+    },
+    {
+      "evidence": "E-ATTACH",
+      "kind": "file",
+      "path": "media/lua/shared/TimedActions/Animals/ISAttachAnimalToPlayer.lua",
+      "sha256": "511db72fea2830975e9f05a3d8c88e8f4a99f74bcadf486c8db4b77469fa3662",
+      "bytes": 2137
+    },
+    {
+      "evidence": "E-CARRY",
+      "kind": "file",
+      "path": "media/lua/shared/TimedActions/Animals/ISPickupAnimal.lua",
+      "sha256": "bdb20f4e1a3fce56e4c55e3173943787db48fa709ffb0ca619b43d25481d5ab3",
+      "bytes": 2269
+    },
+    {
+      "evidence": "E-TRAILER",
+      "kind": "file",
+      "path": "media/lua/shared/TimedActions/Animals/ISAddAnimalInTrailer.lua",
+      "sha256": "ac368a7a221aa174fabdc7531ce0d247d39df5b1495b9365ea61462999e05d7c",
+      "bytes": 3224
+    },
+    {
+      "evidence": "E-TRAILER",
+      "kind": "file",
+      "path": "media/lua/shared/TimedActions/Animals/ISRemoveAnimalFromTrailer.lua",
+      "sha256": "ed71d946ac36b3a2cb7b9d70d621c3b60ec54dccba8c12958ead2292b01a0262",
+      "bytes": 2601
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "file",
+      "path": "media/lua/shared/TimedActions/Animals/ISFeedAnimalFromHand.lua",
+      "sha256": "337847d631480f8540ec5f307185f8326669f78a7b83185291085943e1098697",
+      "bytes": 2128
+    },
+    {
+      "evidence": "E-ASSET",
+      "kind": "file",
+      "path": "media/scripts/generated/models_animals.txt",
+      "sha256": "148a08e544ea44714617681bac2d770ad82beac899a20e3b51ec40c72950a1d0",
+      "bytes": 19968
+    },
+    {
+      "evidence": "E-ASSET",
+      "kind": "file",
+      "path": "media/scripts/generated/animations_meshes.txt",
+      "sha256": "626bc19bc4a19c7849dbd1d79b375dbb61c2b5555f0d9545555c5b654f3cb5fd",
+      "bytes": 3621
+    },
+    {
+      "evidence": "E-ASSET",
+      "kind": "file",
+      "path": "media/AnimSets/ewe/pathfind/defaultPathfind.xml",
+      "sha256": "87b25a83ee800f224369fc0982f87db3f0dba4f22d6a47e3fac94a8fb8874c87",
+      "bytes": 1141
+    },
+    {
+      "evidence": "E-ASSET",
+      "kind": "file",
+      "path": "media/AnimSets/ewe/walk/defaultWalk.xml",
+      "sha256": "60da60f054071f1585e5394791db65c54bde2bfdc418da1f0373aee6e01337cb",
+      "bytes": 969
+    },
+    {
+      "evidence": "E-ASSET",
+      "kind": "file",
+      "path": "media/AnimSets/ewe/idle/idle1.xml",
+      "sha256": "de044d37afcd9c5fd8fcdb92b478eec004770f1fd1adc2319a70301cc7fe87c9",
+      "bytes": 409
+    },
+    {
+      "evidence": "E-ZOMBIE",
+      "kind": "file",
+      "path": "media/AnimSets/zombie/getdown/toCrawl.xml",
+      "sha256": "311ed4f8443056118f4e39e8dbea0fbaaf64a27447af9cba3a20c857e893965d",
+      "bytes": 627
+    },
+    {
+      "evidence": "E-UI",
+      "kind": "file",
+      "path": "media/lua/client/ISUI/Animal/ISAnimalUI.lua",
+      "sha256": "3368b1ada1d17bad7a6f152e8a9f77948968425f8d7c8cf863b971f768a50bcf",
+      "bytes": 29538
+    },
+    {
+      "evidence": "E-UI",
+      "kind": "file",
+      "path": "media/lua/client/ISUI/ISVehicleAnimalUI.lua",
+      "sha256": "cb353da5517c7fa14a1b0eec4ddf894fe52ff3cf08dd7308ebcc80e0d62f9922",
+      "bytes": 18701
+    },
+    {
+      "evidence": "E-LOCALIZATION",
+      "kind": "file",
+      "path": "media/lua/shared/Translate/EN/Sandbox.json",
+      "sha256": "b22e2d5a3237d3c81741c5c3dba48a318c9149221b01892cfbfec1edbe01668c",
+      "bytes": 72482
+    },
+    {
+      "evidence": "E-LOCALIZATION",
+      "kind": "file",
+      "path": "media/lua/shared/Translate/EN/UI.json",
+      "sha256": "1c28635da4551016132710c9b907ae330db6ad6e8aa69c79e9dda78f59e8a838",
+      "bytes": 165453
+    },
+    {
+      "evidence": "E-ENVIRONMENT",
+      "kind": "jar_entry",
+      "path": "zombie/core/Core.class",
+      "sha256": "8f5c69740c8bf2181123a831ab68d1dfb047453687cca6dc62c77816d76ab360",
+      "bytes": 150885
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "jar_entry",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "bytes": 108175
+    },
+    {
+      "evidence": "E-GROWTH",
+      "kind": "jar_entry",
+      "path": "zombie/characters/animals/datas/AnimalData.class",
+      "sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "bytes": 51828
+    },
+    {
+      "evidence": "E-CARRY",
+      "kind": "jar_entry",
+      "path": "zombie/inventory/types/AnimalInventoryItem.class",
+      "sha256": "852fb728e6416ea4fbd441307d6f4aa40c8780a61d8b3aae7141f44f32e8217c",
+      "bytes": 7178
+    },
+    {
+      "evidence": "E-TRAILER",
+      "kind": "jar_entry",
+      "path": "zombie/vehicles/BaseVehicle.class",
+      "sha256": "e7ade19e1e6f66450bef2bd37e52b2afccc7377c4e4571d0fa39435ecdb55661",
+      "bytes": 296360
+    },
+    {
+      "evidence": "E-DEATH",
+      "kind": "jar_entry",
+      "path": "zombie/iso/objects/IsoDeadBody.class",
+      "sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+      "bytes": 79976
+    },
+    {
+      "evidence": "E-REGISTRY",
+      "kind": "jar_entry",
+      "path": "zombie/characters/animals/AnimalDefinitions.class",
+      "sha256": "a079339c4e39337cf555e04b4861820eadcef8b8a60cf88ece947ddb1d7e711f",
+      "bytes": 18305
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "jar_entry",
+      "path": "zombie/characters/animals/behavior/BaseAnimalBehavior.class",
+      "sha256": "a4f125807bc3843053717711c83193dea0f158a0823cd6510758f8453f84d7f7",
+      "bytes": 42129
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "jar_entry",
+      "path": "zombie/popman/animal/AnimalInstanceManager.class",
+      "sha256": "edaf2d3ce605b2e27a407eac8197523c4a9597fb2a0b8fc743e474c244d4ef95",
+      "bytes": 6184
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "jar_entry",
+      "path": "zombie/popman/animal/AnimalController.class",
+      "sha256": "83116f9d47cb8cb38be2b7433b40dc907f84414087ed67887517b79cc943b91b",
+      "bytes": 809
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "jar_entry",
+      "path": "zombie/popman/animal/AnimalSynchronizationManager.class",
+      "sha256": "c71ad5044ad9a7d49c0ad83c41038a1c00c52a8f4af6cfbff48959e48b22da7f",
+      "bytes": 9888
+    },
+    {
+      "evidence": "E-NATIVE",
+      "kind": "jar_entry",
+      "path": "zombie/network/packets/character/AnimalUpdatePacket.class",
+      "sha256": "10d0be45fff9127f2f4b7f260581ce18d686dcc9bd043135efc59f15a4045ec4",
+      "bytes": 10320
+    },
+    {
+      "evidence": "E-DOOR",
+      "kind": "jar_entry",
+      "path": "zombie/iso/objects/IsoDoor.class",
+      "sha256": "024bb36ef8a724c374ebf941b2dbf6ef3ccac4c0269ab2b8c55581a74689d929",
+      "bytes": 87770
+    },
+    {
+      "evidence": "E-DOOR",
+      "kind": "jar_entry",
+      "path": "zombie/iso/objects/IsoThumpable.class",
+      "sha256": "cc19adbef73edbda83a56fdb727b70210278e6e4bd3c2c1def881dab804f8323",
+      "bytes": 66403
+    },
+    {
+      "evidence": "E-ZOMBIE",
+      "kind": "jar_entry",
+      "path": "zombie/ai/states/ClimbThroughWindowState.class",
+      "sha256": "586217ad7a29ff9f4d97728f82b0d130f7dd11240cd102e566fe65e00f642a7a",
+      "bytes": 24963
+    },
+    {
+      "evidence": "E-FILES",
+      "kind": "jar_entry",
+      "path": "zombie/Lua/LuaManager.class",
+      "sha256": "dcaad0082ca27a15550c7d0a6e14b3aeb71f634a14f32123dec620df180c646d",
+      "bytes": 26525
+    },
+    {
+      "evidence": "E-FILES",
+      "kind": "jar_entry",
+      "path": "zombie/Lua/LuaManager$GlobalObject.class",
+      "sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "bytes": 246285
+    },
+    {
+      "evidence": "E-FILES",
+      "kind": "jar_entry",
+      "path": "zombie/Lua/LuaManager$GlobalObject$LuaFileWriter.class",
+      "sha256": "d635dbbbc2f07c45ce0cce7672a38c7ede92c445714d855c91e1f5a8acba6c3e",
+      "bytes": 1142
+    },
+    {
+      "evidence": "E-PRIVACY",
+      "kind": "jar_entry",
+      "path": "zombie/world/moddata/GlobalModData.class",
+      "sha256": "1c66b5e0c66b2c7b813c977fa91d2282a022605d12d44560298e30b340f8a718",
+      "bytes": 11661
+    },
+    {
+      "evidence": "E-CONTENT",
+      "kind": "jar_entry",
+      "path": "zombie/characters/skills/CustomPerks.class",
+      "sha256": "d85cb58504e5c142e7ee580abc11c34491e27f2599134a4747a5100f82379744",
+      "bytes": 7676
+    },
+    {
+      "evidence": "E-CONTENT",
+      "kind": "jar_entry",
+      "path": "zombie/scripting/objects/CharacterProfessionDefinitionScript.class",
+      "sha256": "093fbee7e9975a221946fac8596e646afe800bb4366ef2ea26d29ca56ac9228a",
+      "bytes": 6954
+    },
+    {
+      "evidence": "E-ENVIRONMENT",
+      "kind": "file",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "f345480fb0a2e652ffe613d37df2a438b07e9c655213fe71f9b5e5c895fe1e73",
+      "bytes": 111619
+    }
+  ]
+}

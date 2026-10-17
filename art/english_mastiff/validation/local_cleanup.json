@@ -1,0 +1,86 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "asset_revision": "em-v001",
+  "environment": "Windows standalone Blender-Python 5.2.2 LTS; not PZ",
+  "input": "source/meshy_textured.glb",
+  "input_sha256": "6c7fe48b69974665a88aed5e510a4a7696a1bf1eb0559af0687a2ce6cec94fdc",
+  "processing": "Weld coincident geometry vertices at 1e-6 source units, preserve per-loop UVs; delete reviewed tiny one-face fins; recalculate normals. No remesh, sculpt, resizing, rig or animation.",
+  "before": {
+    "name": "Mesh_0",
+    "vertices": 12047,
+    "polygons": 12479,
+    "triangles": 12479,
+    "uv_layers": 1,
+    "raw_boundary_edges": 9611,
+    "welded_boundary_edges": 5,
+    "welded_nonmanifold_edges": 9,
+    "welded_components_vertices": [
+      6241
+    ],
+    "nonfinite_coordinates": 0,
+    "zero_area_triangles": 0,
+    "materials": [
+      "Material_0"
+    ]
+  },
+  "after": {
+    "name": "Mesh_0",
+    "vertices": 6240,
+    "polygons": 12476,
+    "triangles": 12476,
+    "uv_layers": 1,
+    "raw_boundary_edges": 0,
+    "welded_boundary_edges": 0,
+    "welded_nonmanifold_edges": 0,
+    "welded_components_vertices": [
+      6240
+    ],
+    "nonfinite_coordinates": 0,
+    "zero_area_triangles": 0,
+    "materials": [
+      "Material_0"
+    ]
+  },
+  "removed_fins": [
+    {
+      "area_source_units_squared": 5.171902012079954e-05,
+      "center_source_units": [
+        -0.11003466695547104,
+        -0.31077098846435547,
+        -0.1606893241405487
+      ]
+    },
+    {
+      "area_source_units_squared": 3.589213520172052e-05,
+      "center_source_units": [
+        -0.10828366130590439,
+        -0.31710267066955566,
+        -0.16358797252178192
+      ]
+    },
+    {
+      "area_source_units_squared": 1.493482068326557e-05,
+      "center_source_units": [
+        0.20588700473308563,
+        -0.6371762752532959,
+        0.4334110617637634
+      ]
+    }
+  ],
+  "bounds_maximum_delta_source_units": 0.0,
+  "physical_scale": "NOT CALIBRATED",
+  "outputs": [
+    {
+      "path": "interchange/english_mastiff.glb",
+      "bytes": 8407560,
+      "sha256": "37c8e1cc6e47f9ffde22aa93346e8d91f15fb4c3d90843e4cb278e2aab07bd31"
+    },
+    {
+      "path": "interchange/english_mastiff.fbx",
+      "bytes": 8255852,
+      "sha256": "bc20231d36edc5442d52d2eb7b6cd22ceceb84e9736174d4c561ecabd57ba9d7"
+    }
+  ],
+  "surface_check": "PASS for tested edge/manifold/finite/area/component checks; self-intersection and deformation NOT TESTED",
+  "pz_compatibility": "NOT TESTED"
+}

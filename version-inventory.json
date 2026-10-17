@@ -1,0 +1,505 @@
+{
+  "schema": 1,
+  "canonical": "VERSION",
+  "mirrors": [
+    {
+      "path": "README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VERSIONING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/M0R_SOURCE_EVIDENCE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/HISTORICAL_RESEARCH_INDEX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/STANDALONE_CANINE_FEASIBILITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_STATE_OWNERSHIP_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CANINE_IDENTITY_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/TASK_ARBITRATION_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MILESTONE_DEPENDENCY_GRAPH.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SANDBOX_SETTINGS_REGISTRY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LOCALIZATION_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CANINE_BIOLOGY_TIME_MODEL.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MINIMUM_PLAYABLE_RELEASE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MULTIPLAYER_ACCEPTANCE_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/FEATURE_TRACEABILITY_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/M0R_VALIDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/contracts/feature_traceability.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/historical_inventory.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/localization_keys.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/native_evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/contracts/sandbox_settings.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "source-inventory.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/FEATURE_FOUNDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_PERSISTENCE_SLICE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-persistence-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "docs/NATIVE_PAIRING_LIFECYCLE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-pairing-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "src/metadata/mod.info",
+      "pattern": "^modversion=(?P<version>\\S+)$"
+    },
+    {
+      "path": "src/metadata/runtime-options.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\\\"]+)\""
+    },
+    {
+      "path": "docs/native-bootstrap-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\\\"]+)\""
+    },
+    {
+      "path": "docs/NATIVE_BOOTSTRAP_TEST.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_IDENTITY_AUTHORITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-identity-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/NATIVE_ADMISSION_GUARD.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-admission-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/NATIVE_ADMISSION_COVERAGE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CANONICAL_IDENTITY_CONTRACT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PREVIOUS_SESSION_INTEGRITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SERVER_ADMISSION_GUARD.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_ONLY_FEASIBILITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ANIMAL_LIFECYCLE_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/GROWTH_IDENTITY_FEASIBILITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MULTIPLAYER_OWNERSHIP_TEST_PLAN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/BLOCKER_RESOLUTION_REPORT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-construction-index.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/native-continuity-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/NATIVE_SAVE_LOAD_AUTHORITY_TRACE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/EXCLUSIVE_ADMISSION_SEAM_ASSESSMENT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PREVIOUS_SESSION_AUTHENTICITY_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_RECONSTRUCTION_PROVENANCE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_ONLY_OWNERSHIP_PROTOTYPE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ADVERSARIAL_IDENTITY_TEST_RESULTS.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DISPOSABLE_RUNTIME_TEST_PROCEDURE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/OWNERSHIP_GO_NO_GO_DECISION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-save-load-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/DATABASE_AUTHORITY_DESIGN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PERSISTENT_CANINE_AND_RELATIONSHIP_SCHEMA.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATURAL_BONDING_AND_PERMISSIONS.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ACTIVE_TASK_AND_HANDLER_AUTHORITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/OFFLINE_SELFCARE_LIFECYCLE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_REDESIGN_SANDBOX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_REDESIGN_VALIDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/contracts/database_redesign.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/native-database-redesign-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/AUTHENTICATED_PRINCIPAL_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_MANAGED_LIFECYCLE_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SERVER_MOVEMENT_INTERACTION_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PRIVATE_DATABASE_DURABILITY_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/NATIVE_OVERRIDE_DRIFT_REPORT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_AUTHORITY_BLOCKER_MATRIX.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DISPOSABLE_RUNTIME_VALIDATION_PLAN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/DATABASE_AUTHORITY_GO_NO_GO.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/database-authority-proof-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/STEAMID64_SERVER_PATH_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-principal-string-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/SERVER_ACCOUNT_IDENTITY_ALTERNATIVE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/native-account-identity-evidence.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/native-account-binding-evidence.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\\\"]+)\""
+    },
+    {
+      "path": "tests/runtime/account_binding/README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/BRANDING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ENGLISH_MASTIFF_ANATOMY_ASSESSMENT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    }
+  ],
+  "changelog": {
+    "path": "CHANGELOG.md",
+    "pattern": "^## \\[(?P<version>[^\\]]+)\\]"
+  },
+  "packaging": {
+    "artifacts": [
+      {
+        "glob": "dist/current/*.zip",
+        "pattern": "B47ANCEDDogmeat-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip"
+      }
+    ]
+  },
+  "other_versions": [
+    {
+      "category": "pz",
+      "reference": "docs/VANILLA_API_AUDIT.md",
+      "reason": "Installed native build is independent of project SemVer"
+    },
+    {
+      "category": "dependency",
+      "reference": "research/SOURCE_MANIFEST.json",
+      "reason": "Observed third-party metadata versions remain upstream values"
+    },
+    {
+      "category": "framework",
+      "reference": "docs/VERSION_POLICY.md",
+      "reason": "Policy/checker provenance, not project version"
+    },
+    {
+      "category": "inventory-schema",
+      "reference": "version-inventory.json:schema",
+      "reason": "Version-check format"
+    },
+    {
+      "category": "compatibility",
+      "reference": "docs/PRIVATE_PERSISTENCE_RECOVERY_CONTRACT.md",
+      "reason": "Prototype ownership/marker/snapshot schema 1 and intent protocol 1 are separate from Project Version; no deployed migration or stable API."
+    },
+    {
+      "category": "compatibility",
+      "reference": "src/native/B47Dog/NativeAdmissionGuard.lua:LUA_WORLD_CARRIER_GUARD_1",
+      "reason": "Selected-hook contract revision; not a native admission certificate, project version, save schema or configurable gameplay value."
+    },
+    {
+      "category": "compatibility",
+      "reference": "tests/lua/database_store_fixture.lua:fixtureSchema",
+      "reason": "Synthetic test-only aggregate/envelope format, not a production migration or complete canine schema."
+    }
+  ],
+  "historical": [
+    {
+      "reference": "docs/COMPANION_DOGS_SOURCE_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/DOGPACK_COMPATIBILITY_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/DRUGS_OF_93_COMPATIBILITY_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/FEATURE_FEASIBILITY_MATRIX.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/SERVER_AUTHORITY_DESIGN.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/USER_HANDOFF.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/VALIDATION.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/VANILLA_API_AUDIT.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "research/CD_BACKEND_AUDIT_2026-10-12.md",
+      "reason": "Historical source/documentation evidence; not current architecture or runtime proof."
+    },
+    {
+      "reference": "docs/historical/IMPLEMENTATION_PLAN_M0_ADDON.md",
+      "reason": "Verbatim former implementation plan preserved before authorized current-entry replacement."
+    },
+    {
+      "reference": "docs/requirements/STANDALONE_MASTER_HANDOFF.md",
+      "reason": "Immutable supplied standalone gameplay requirements snapshot; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/M0R_REQUEST.md",
+      "reason": "Immutable authorized M0R request snapshot; not a current version mirror."
+    },
+    {
+      "reference": "art/german_shepherd/history/gsd-v001/",
+      "reason": "Original art reports and builder at 0.1.0-dev.1 / gsd-v001; full asset recovery commit recorded alongside. Not current proof."
+    },
+    {
+      "reference": "art/german_shepherd/README.md",
+      "reason": "Frozen gsd-v002 art checkpoint tested at 0.1.0-dev.2; unchanged during feature work, not current gameplay evidence."
+    },
+    {
+      "reference": "art/german_shepherd/validation/asset_validation.json",
+      "reason": "Frozen gsd-v002 art checkpoint tested at 0.1.0-dev.2; unchanged during feature work, not current gameplay evidence."
+    },
+    {
+      "reference": "art/german_shepherd/validation/roundtrip_validation.json",
+      "reason": "Frozen gsd-v002 art checkpoint tested at 0.1.0-dev.2; unchanged during feature work, not current gameplay evidence."
+    },
+    {
+      "reference": "docs/art-checkpoint.json",
+      "reason": "Frozen art commit, tested version and canonical file hashes. Not current feature validation."
+    },
+    {
+      "reference": "docs/requirements/DATABASE_AUTHORITY_REQUEST.md",
+      "reason": "Immutable supplied database/task design request snapshot; completeness noted in database_redesign.json; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/TASK_HANDLER_AUTHORITY_REQUEST.md",
+      "reason": "Immutable supplied database/task design request snapshot; completeness noted in database_redesign.json; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/DATABASE_AUTHORITY_NATIVE_LIFECYCLE_REQUEST.md",
+      "reason": "Immutable complete supplied native/database foundational proof request; not a current version mirror."
+    },
+    {
+      "reference": "docs/BRANDING.md#historical-fallback-setup",
+      "reason": "Fallback art setup and its 0.2.0-dev.6 authoring checkpoint retain historical evidence; current artwork selection is documented separately."
+    },
+    {
+      "reference": "art/english_mastiff/",
+      "reason": "Frozen em-v001 authoring/interchange/source inspection checkpoint tested at 0.2.0-dev.7; not current runtime proof. Retain recorded project/game versions on future iterations."
+    },
+    {
+      "reference": "docs/requirements/ENGLISH_MASTIFF_REQUEST.md",
+      "reason": "Immutable supplied English Mastiff asset-only handoff; no gameplay/model activation or version-bump authority."
+    },
+    {
+      "reference": "art/english_mastiff_rig/",
+      "reason": "Stopped em-rig-v001 experimental authoring at 0.2.0-dev.7; draft/stale reports and unapproved clips are not current verification."
+    },
+    {
+      "reference": "art/english_mastiff_regeneration/",
+      "reason": "Frozen em-v002-preview geometry/inspection checkpoint tested at 0.2.0-dev.7; mouth/surface acceptance HOLD, not runtime proof."
+    },
+    {
+      "reference": "docs/requirements/ENGLISH_MASTIFF_RIG_REQUEST.md",
+      "reason": "Immutable supplied rigging/animation handoff, subsequently steered by the user to stop closed-mouth work and regenerate; not a current version mirror."
+    },
+    {
+      "reference": "docs/requirements/ENGLISH_MASTIFF_ANATOMY_REQUEST.md",
+      "reason": "Immutable complete-anatomy handoff; preserve the actual supplied request, not a current version mirror."
+    },
+    {
+      "reference": "art/english_mastiff_anatomy_preview/",
+      "reason": "Frozen em-v003-preview Meshy geometry/inspection checkpoint tested at 0.2.0-dev.7; one approved 20-credit job, anatomy HOLD, not current runtime proof."
+    },
+    {
+      "reference": "art/english_mastiff_anatomy/",
+      "reason": "Frozen em-v004 local Blender anatomical authoring checkpoint at 0.2.0-dev.7. Preserve its exact offline evidence and known facial/visual HOLD; not runtime or final-character acceptance."
+    }
+  ]
+}

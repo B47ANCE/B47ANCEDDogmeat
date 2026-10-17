@@ -1,0 +1,18 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "settings": [
+    {
+      "id": "B47ANCEDDogmeat.PersistenceTestMode",
+      "type": "boolean",
+      "default": false,
+      "server_authority": true,
+      "group": "B47ANCEDDogmeat",
+      "name_key": "Sandbox_B47ANCEDDogmeat_PersistenceTestMode",
+      "tooltip_key": "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip",
+      "existing_save_policy": "Never initializes automatically. Disabling blocks diagnostic requests; native recovery preserves existing state. Never enable provisioning against an established gameplay save.",
+      "bounds": "Boolean only; any non-true value is disabled.",
+      "internal_constants": "One carrier, ground floor, 128 admin contexts, 1-second inspect throttle, 120-second confirmation expiry and file/identity bounds are diagnostic/safety limits, not gameplay balance.",
+      "runtime_status": "NOT TESTED"
+    }
+  ]
+}
