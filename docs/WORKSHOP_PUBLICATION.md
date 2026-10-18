@@ -22,6 +22,8 @@ Canonical proposed copy is WORKSHOP_DESCRIPTION.md and WORKSHOP_CHANGELOG.md. Th
 
 The foundation validator checks 551 input records; its eight mismatches refer to the first four classes across retained manifests. The M0R validator checks 44 records and reports the IsoAnimal mismatch. This is not merely missing dedicated runtime evidence; an applicable offline native-evidence check failed. Publication therefore remains blocked under the user's after-checks-pass instruction and the Workshop MP testing policy. Expected hashes and historical reports remain unchanged.
 
+Further read-only comparison confirms the packaged game JAR still matches the recorded SHA-256 `e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33`. All five packaged class fingerprints also match their original package records. The failures are changed **loose override files**, each of which still differs from its packaged counterpart. This does not establish a new vanilla game build, pristine installation, effective classloader behavior or safe runtime authority. These external installation changes are excluded from the mod package and remain unreviewed.
+
 Required next gate: review actual native-input changes and their API/behavior applicability against a verified clean target build, preserving earlier evidence. Do not replace expected hashes merely to clear a check. Existing loose overrides and launcher modifications are already documented in NATIVE_OVERRIDE_DRIFT_REPORT.md. This change does not repair or modify the installation, rebaseline native APIs, or launch the game.
 
 ## Validation commands
