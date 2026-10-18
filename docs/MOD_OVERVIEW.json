@@ -4,7 +4,7 @@
   "name": "Dogmeat",
   "version": "0.2.0-dev.7",
   "reviewed": true,
-  "source_digest": "66f9eafa4efed55303c9bd445cefe21e3c9273a4f87608f2fc1c1b7ee97407c7",
+  "source_digest": "f3ca5151a4e43cffdfa881f6c288bcdd5dc90c7f5c993078b2d09cb5908f57e7",
   "features": [
     {
       "status": "Foundation",
@@ -27,7 +27,7 @@
       "text": "Authenticated ownership/admission and exclusive native-control contracts unresolved."
     }
   ],
-  "limits": "Standalone Lua-only diagnostic; no MORTIS dependency. Ownership, authenticated native identity continuity and live task control remain blocked. Raccoon remains the active test presentation; model work remains on HOLD. All 431 offline Lua cases pass; SP and dedicated NOT TESTED. Five changed native inputs block the authorized first Workshop upload.",
+  "limits": "Standalone Lua-only default-off raccoon diagnostic. Vanilla 42.21 publication target source audit passes; modified installation unsupported. Ownership, authenticated native identity continuity and live tasks remain blocked. 431 offline Lua cases and 13 publication regressions pass; SP/dedicated NOT TESTED; stable G8 BLOCKED. Models remain on HOLD.",
   "evidence": [
     "README.md",
     "source-inventory.json",

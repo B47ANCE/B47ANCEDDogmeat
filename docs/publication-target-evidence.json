@@ -1,0 +1,60 @@
+{
+  "status": "VANILLA PUBLICATION SOURCE PASS",
+  "version": "0.2.0-dev.7",
+  "target": "vanilla Build 42.21 / Steam 25485521",
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "counts": {
+    "packaged": 566,
+    "vanilla_file": 104,
+    "known_modified_environment": 16
+  },
+  "overrides": [
+    {
+      "path": "zombie/GameWindow.class",
+      "loose_sha256": "83426d04937b9f4284c515d79068fddc501a7ca7f2798735f95a5c35b8317f6b",
+      "packaged_sha256": "c3a3583923191b6aea23a74e6b05e2b53302bbcded7f89cae930e364a409dfb2",
+      "matches_newer_observation": true,
+      "normalized_method_differences": 18,
+      "runtime_effect": "UNKNOWN; modified installation unsupported"
+    },
+    {
+      "path": "zombie/iso/IsoWorld.class",
+      "loose_sha256": "a3d530a1d7990e9a50d04768c1be550ac3ba5f58b25bcb8a77a476b9ef381d2c",
+      "packaged_sha256": "5b7406a70f33578a47ff417b0b6aa7a2b7a5bebfa00487a60935303f5747fb71",
+      "matches_newer_observation": true,
+      "normalized_method_differences": 57,
+      "runtime_effect": "UNKNOWN; modified installation unsupported"
+    },
+    {
+      "path": "zombie/Lua/LuaEventManager.class",
+      "loose_sha256": "d786c342e563fb735727beb268e39a9a40726c2e83a8ac15ec06c753580b524b",
+      "packaged_sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+      "matches_newer_observation": true,
+      "normalized_method_differences": 13,
+      "runtime_effect": "UNKNOWN; modified installation unsupported"
+    },
+    {
+      "path": "zombie/gameStates/GameLoadingState.class",
+      "loose_sha256": "d5724bb56020b572dbc24dc1d63836fcf49d327c3718baebe49434884e37f21b",
+      "packaged_sha256": "72dc5070a4e8c947ad1c788b2fad8d74231d5b877e749bc361d1338afa887f3e",
+      "matches_newer_observation": true,
+      "normalized_method_differences": 11,
+      "runtime_effect": "UNKNOWN; modified installation unsupported"
+    },
+    {
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "loose_sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+      "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "matches_newer_observation": true,
+      "normalized_method_differences": 64,
+      "runtime_effect": "UNKNOWN; modified installation unsupported"
+    }
+  ],
+  "environment": "Read-only bytes/source audit; game code never executed",
+  "local_modified_installation": "BLOCKED / NOT CERTIFIED",
+  "scope": "Guarded default-off raccoon diagnostic distribution only; no ownership/live tasks",
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "stable_G8": "BLOCKED",
+  "errors": []
+}

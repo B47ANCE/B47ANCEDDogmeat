@@ -2,6 +2,8 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- Resolve the first-item publication preflight for the unchanged vanilla 42.21 target: distinguish historical installation drift from current source evidence, require exact newer observations, retain strict modified-installation blockers and all ownership NO-GO decisions. Add original target/package validators, 13 hostile-input regressions, portable team description rendering and explicit Workshop metadata/provenance. Keep runtime Lua and approved artwork unchanged; G6/G7 NOT TESTED and stable G8 BLOCKED.
+
 - On 2026-10-18 apply the user-approved transparent, subject-only German Shepherd icon at the existing mod.info path; preserve thumbnail and poster bytes. Stay within this unreleased compatible presentation checkpoint. Record first-item Workshop authorization, canonical test-build copy and the five changed native inputs that block publication. All 431 offline Lua cases pass; no gameplay enablement, Workshop upload, native repair or runtime verification.
 
 - Author em-v004 locally in Blender from a preserved em-v001 copy: separate mandible/lining, 42 teeth, gingiva/palate, independent tongue, eyes and blinking lids, editable sources and FBX/GLB. Add actual renders, six-format/UV/weight checks and recorded collision failures. Facial/visual acceptance remains HOLD for upper inner-lip and surfacing defects; no paid job, runtime activation or project-version bump.

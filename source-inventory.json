@@ -108,13 +108,15 @@
     "presentation": "vanilla raccoon; approved temporary test carrier"
   },
   "workshop_id": null,
-  "generated_outputs": "scripts/build_loadable.py assembles a new local development tree only; no installation, ZIP or upload. Disposable check output is temporary.",
+  "generated_outputs": "scripts/build_loadable.py: disposable development parity checks. scripts/prepare_workshop.py: explicit ignored staging with versioned ZIP, Contents/mods/B47ANCEDDogmeat, VDF and provenance; no automatic install/upload/cleanup.",
   "validation": [
     "python -B scripts/check_versions.py --root . --json",
     "python -B scripts/validate_m0r.py",
     "python -B scripts/validate_foundation.py",
     "python -B scripts/test_domain.py",
-    "python -B scripts/build_loadable.py --check"
+    "python -B scripts/build_loadable.py --check",
+    "python -B scripts/test_publication.py",
+    "python -B scripts/prepare_workshop.py --check"
   ],
   "native_validation": "python -B scripts/validate_foundation.py --native --game-root <verified-game-root>",
   "native_event_adapter": {

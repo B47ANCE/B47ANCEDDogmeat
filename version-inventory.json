@@ -349,6 +349,14 @@
     {
       "path": "docs/MOD_OVERVIEW.json",
       "pattern": "^  \"version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "workshop.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/publication-target-evidence.json",
+      "pattern": "^  \"version\": \"(?P<version>[^\\\"]+)\"[,]?$"
     }
   ],
   "changelog": {
@@ -358,8 +366,14 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/current/*.zip",
-        "pattern": "B47ANCEDDogmeat-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip"
+        "glob": "staging/current/*.zip",
+        "pattern": "B47ANCEDDogmeat-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip",
+        "zip_members": [
+          {
+            "member": "mods/B47ANCEDDogmeat/42/mod.info",
+            "pattern": "^modversion=(?P<version>\\S+)\\r?$"
+          }
+        ]
       }
     ]
   },
@@ -516,6 +530,10 @@
     {
       "reference": "art/english_mastiff_anatomy/",
       "reason": "Frozen em-v004 local Blender anatomical authoring checkpoint at 0.2.0-dev.7. Preserve its exact offline evidence and known facial/visual HOLD; not runtime or final-character acceptance."
+    },
+    {
+      "reference": "docs/historical/WORKSHOP_PREFLIGHT_20261018.md",
+      "reason": "Original blocked preflight preserved before target/effective-installation scope resolution; not current runtime proof."
     }
   ]
 }
