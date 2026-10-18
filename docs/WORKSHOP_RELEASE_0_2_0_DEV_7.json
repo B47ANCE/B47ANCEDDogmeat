@@ -1,0 +1,35 @@
+{
+  "project_version": "0.2.0-dev.7",
+  "source_commit": "e98d1ebfcd76ef39976e01d1f7840dd846bc30d5",
+  "workshop_id": "3822584314",
+  "mod_id": "B47ANCEDDogmeat",
+  "appid": "108600",
+  "package_sha256": "2c05351b0deee6bc2cf8c0eb3ab70b999869fe34541a06ed163d1a8873b61a5a",
+  "preupload_manifest_sha256": "f3037df30115ce9783af9bb577ef519cac45de7ffe37839ee0caec5c5793813b",
+  "steamcmd_exit_code": 0,
+  "verified_success": true,
+  "elapsed_seconds": 20.1,
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "stable_G8": "BLOCKED",
+  "steam_desktop_restart": "DECLINED BY USER; Steam left running",
+  "verification": "SteamCMD Committing update...Success. + service-assigned VDF ID + successful public metadata query (title/app/visibility/exact content-byte count)",
+  "initial_verifier_result": "False negative: older Published File Id success pattern expected; original result preserved privately, no repeat upload",
+  "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3822584314",
+  "visibility": "public",
+  "public_metadata_result": 1,
+  "public_page_description": "NOT VERIFIED: follow-up web/API requests rate-limited; uploaded canonical VDF text was verified before SteamCMD commit",
+  "public_content_bytes": 989841,
+  "archive_bytes": 773778,
+  "preview": {
+    "source": "thumbnail.png",
+    "source_sha256": "6650e3164f282e224281ad088a6c533414425d646f3c8d09a2fb600a71cfda40",
+    "source_dimensions": [
+      1254,
+      1254
+    ],
+    "preview_sha256": "1ca60235fccc1ad5db491cd189e41d19ceda45ceb42e8622d5a9beb5b23a8198",
+    "preview_bytes": 266743,
+    "export": "JPEG quality 95; same dimensions/composition, no crop/redraw; authoritative PNG unchanged"
+  }
+}

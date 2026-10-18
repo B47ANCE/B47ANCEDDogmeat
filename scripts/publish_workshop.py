@@ -14,6 +14,17 @@ def read_vdf(path):
     return dict(zip(keys,tokens[2::2]))
 
 
+def upload_success(output, code, assigned, previous=None):
+    if code != 0 or not re.fullmatch(r'[1-9][0-9]{5,19}',assigned): return False
+    if previous is not None and assigned != previous: return False
+    legacy=re.search(r'Success\.\s*Published File Id:\s*([1-9][0-9]+)',output,re.I)
+    if legacy is not None and legacy[1] != assigned: return False
+    committed=re.search(r'Committing update\.*\s*Success\.',output,re.I) is not None
+    # Authentication success alone is insufficient. The caller separately binds
+    # the service-written VDF ID to an exclusive, prevalidated upload attempt.
+    return committed or legacy is not None
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--stage',type=Path,required=True)
@@ -79,10 +90,8 @@ def main():
             except subprocess.TimeoutExpired:
                 process.terminate();process.wait(timeout=15);code=-1
         output=log_path.read_text(encoding='utf-8',errors='replace')
-        success=re.search(r'Success\.\s*Published File Id:\s*([1-9][0-9]+)',output,re.I)
         assigned=read_vdf(vdf).get('publishedfileid','0')
-        verified=code==0 and success is not None and success[1]==assigned and assigned!='0'
-        if config['publishedfileid'] is not None: verified=verified and assigned==config['publishedfileid']
+        verified=upload_success(output,code,assigned,config['publishedfileid'])
         result={'project_version':config['project_version'],'source_commit':head,'workshop_id':assigned if assigned!='0' else None,
                 'mod_id':'B47ANCEDDogmeat','appid':'108600','package_sha256':manifest['package_sha256'],
                 'preupload_manifest_sha256':sha((stage/'release-manifest.json').read_bytes()),

@@ -107,7 +107,7 @@
     "breed": "grey",
     "presentation": "vanilla raccoon; approved temporary test carrier"
   },
-  "workshop_id": null,
+  "workshop_id": "3822584314",
   "generated_outputs": "scripts/build_loadable.py: disposable development parity checks. scripts/prepare_workshop.py: explicit ignored staging with versioned ZIP, Contents/mods/B47ANCEDDogmeat, VDF and provenance; no automatic install/upload/cleanup.",
   "validation": [
     "python -B scripts/check_versions.py --root . --json",
