@@ -2,6 +2,8 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- On 2026-10-18 apply the user-approved transparent, subject-only German Shepherd icon at the existing mod.info path; preserve thumbnail and poster bytes. Stay within this unreleased compatible presentation checkpoint. Record first-item Workshop authorization, canonical test-build copy and the five changed native inputs that block publication. All 431 offline Lua cases pass; no gameplay enablement, Workshop upload, native repair or runtime verification.
+
 - Author em-v004 locally in Blender from a preserved em-v001 copy: separate mandible/lining, 42 teeth, gingiva/palate, independent tongue, eyes and blinking lids, editable sources and FBX/GLB. Add actual renders, six-format/UV/weight checks and recorded collision failures. Facial/visual acceptance remains HOLD for upper inner-lip and surfacing defects; no paid job, runtime activation or project-version bump.
 
 - Run one separately approved 20-credit complete-anatomy Meshy-7.1 preview; preserve 23,865-triangle FBX/GLB, Blender source, actual mouth sections and hashes. Oral anatomy remains incomplete and 80 welded non-manifold edges remain. No automatic paid follow-up, texture, rig, runtime change or project-version bump.

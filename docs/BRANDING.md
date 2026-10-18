@@ -11,13 +11,19 @@ The README displays this file at a width of 512 pixels; the underlying PNG retai
 | Role | Current source | Selection |
 | --- | --- | --- |
 | Project thumbnail | thumbnail.png | User-supplied German Shepherd artwork |
-| Mod icon | src/metadata/media/ui/B47ANCEDDogmeat_icon.png | Existing 64×64 fallback |
+| Mod icon | src/metadata/media/ui/B47ANCEDDogmeat_icon.png | User-approved transparent German Shepherd; original 1254×1254 RGBA PNG |
 | In-game poster | src/metadata/poster.png | Existing 128×128 fallback |
 | Retained fallback thumbnail | assets/branding/B47_THUMBNAIL.png | Historical/default 512×512 artwork; preserved for fallback use |
 
-There is no assigned Workshop item or uploader in this repository. This request selects project artwork and does not constitute a Workshop upload. A future authorized upload must validate the selected image against the uploader's requirements; no Workshop-ready resize or upload is claimed here. The runtime model remains deferred and the approved raccoon presentation remains current.
+## Current mod icon and publication request
 
-Compatibility: presentation-only work within unreleased 0.2.0-dev.7; no gameplay/API/configuration/save change. [TESTED — Windows offline] PNG decode/integrity, source/destination SHA-256 equality and visual inspection; canonical version and existing static source checks. Exact repository commands: `python -B scripts/check_versions.py --root . --json`, `python -B scripts/validate_m0r.py`, `python -B scripts/validate_foundation.py`, and `git diff --cached --check`. PNG verification used Pillow `Image.verify()` and SHA-256 over the original bytes. No new unit tests are needed for a byte-for-byte image replacement. Historical runtime evidence is not promoted: G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED.
+On 2026-10-18 the user selected the generated subject-only German Shepherd cutout as the mod icon. The existing metadata path now contains the approved original PNG bytes: 1254×1254 RGBA, SHA-256 `45527983dd84215e2277d85bdb48a0c718c8c9a0bb9000fd7721d6e4a25c4c97`. It contains the seated dog, collar and tail with transparency, no lettering or background fill. The runtime asset itself retains the full-resolution authoring master; no separate reconstruction is needed. The thumbnail and poster remain byte-for-byte unchanged.
+
+[VERIFIED — installed Build 42.21 source] `media/lua/client/OptionScreens/ModSelector/ModListBox.lua:200–201` loads the metadata icon with getTexture and draws it at the menu button size using drawTextureScaled. The original icon dimensions are therefore retained. [TESTED — Windows offline] PNG decode/integrity, RGBA and transparent corners, approved-source hash parity, unchanged thumbnail/poster hashes, loadable-tree byte parity. In-game appearance remains NOT TESTED.
+
+The user authorized a first Workshop item, all open PR merges after checks pass, and publication. No Workshop ID is assigned yet. Publication is blocked by changed installed native inputs; see [the exact preflight result](WORKSHOP_PUBLICATION.md). The authorized item would distribute only the existing default-off raccoon diagnostic. Ownership and live tasks remain disabled; model work stays deferred. No item creation, upload, visibility change, game/server launch, installation repair, or Steam restart has occurred.
+
+Compatibility: presentation/documentation work within unreleased 0.2.0-dev.7, with no gameplay/API/configuration/save change. This iteration does not promote historical runtime evidence. G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable G8 BLOCKED. The historical thumbnail and fallback setup records below retain their original scope.
 
 ## Historical fallback setup
 
