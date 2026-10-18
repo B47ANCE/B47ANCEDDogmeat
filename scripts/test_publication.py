@@ -93,4 +93,28 @@ class ArtifactTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'identity'): configuration(root)
 
 
+class UploadVerificationTests(unittest.TestCase):
+    def test_current_commit_format(self):
+        from publish_workshop import upload_success
+        self.assertTrue(upload_success('Committing update...Success.Unloading Steam API...OK',0,'3822584314'))
+
+    def test_legacy_id_format(self):
+        from publish_workshop import upload_success
+        self.assertTrue(upload_success('Success. Published File Id: 3822584314',0,'3822584314'))
+
+    def test_authentication_success_alone_is_not_upload_success(self):
+        from publish_workshop import upload_success
+        self.assertFalse(upload_success('Login Success.',0,'3822584314'))
+
+    def test_conflicting_named_id_refused(self):
+        from publish_workshop import upload_success
+        self.assertFalse(upload_success('Success. Published File Id: 3822584315 Committing update...Success.',0,'3822584314'))
+
+    def test_bad_exit_or_id_or_unexpected_reassignment_refused(self):
+        from publish_workshop import upload_success
+        for code,assigned,previous in [(1,'3822584314',None),(0,'0',None),(0,'3822584314','3822584315')]:
+            with self.subTest(code=code,assigned=assigned):
+                self.assertFalse(upload_success('Committing update...Success.',code,assigned,previous))
+
+
 if __name__=='__main__': unittest.main(verbosity=2)

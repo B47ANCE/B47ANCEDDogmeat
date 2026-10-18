@@ -2,7 +2,7 @@
 
 Project Version: 0.2.0-dev.7
 
-The approved transparent German Shepherd is the mod icon; thumbnail and poster are unchanged. The [publication target audit](docs/WORKSHOP_PUBLICATION.md) resolves the historical override fingerprint blocker for a **vanilla Build 42.21 MP testing distribution**. The modified local installation remains unsupported and runtime-unverified. This is a default-off raccoon persistence diagnostic: ownership and live task control remain disabled. A first Workshop item is authorized; its ID will be recorded after service assignment.
+The approved transparent German Shepherd is the mod icon; thumbnail and poster are unchanged. The [publication target audit](docs/WORKSHOP_PUBLICATION.md) resolves the historical override fingerprint blocker for a **vanilla Build 42.21 MP testing distribution**. The modified local installation remains unsupported and runtime-unverified. This is a default-off raccoon persistence diagnostic: ownership and live task control remain disabled. Published as [Workshop item 3822584314](https://steamcommunity.com/sharedfiles/filedetails/?id=3822584314), version 0.2.0-dev.7, from source commit e98d1eb. See [the immutable release receipt](docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json).
 
 The new [local Blender anatomy checkpoint, em-v004](art/english_mastiff_anatomy/README.md), adds a real mouth opening, separate mandible, 42 teeth, gums, palate, oral lining, independent tongue, eyeballs and blinking lids to a copy of the original fawn Mastiff. Editable BLEND and reopened FBX/GLB are retained. Facial/visual acceptance remains **HOLD**: upper inner-lip folding and residual surfacing/attachment defects need local finishing. No new Meshy credits or native activation; the raccoon remains the test carrier.
 

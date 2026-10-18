@@ -4,7 +4,7 @@
   "name": "Dogmeat",
   "version": "0.2.0-dev.7",
   "reviewed": true,
-  "source_digest": "f3ca5151a4e43cffdfa881f6c288bcdd5dc90c7f5c993078b2d09cb5908f57e7",
+  "source_digest": "e758635dbf97f95e90f5868f3e74482221d7ea5e0433e1e9e2875b6a0e507592",
   "features": [
     {
       "status": "Foundation",
@@ -27,13 +27,14 @@
       "text": "Authenticated ownership/admission and exclusive native-control contracts unresolved."
     }
   ],
-  "limits": "Standalone Lua-only default-off raccoon diagnostic. Vanilla 42.21 publication target source audit passes; modified installation unsupported. Ownership, authenticated native identity continuity and live tasks remain blocked. 431 offline Lua cases and 13 publication regressions pass; SP/dedicated NOT TESTED; stable G8 BLOCKED. Models remain on HOLD.",
+  "limits": "Workshop item 3822584314 publishes only the default-off raccoon diagnostic. Vanilla 42.21 source audit passes; modified installation unsupported. Ownership, authenticated continuity and live tasks blocked. 431 offline Lua and 18 publication cases PASS; SP/dedicated NOT TESTED; stable G8 BLOCKED. Models on HOLD.",
   "evidence": [
     "README.md",
     "source-inventory.json",
     "docs/WORKSHOP_PUBLICATION.md",
     "docs/BRANDING.md",
-    "docs/OWNERSHIP_GO_NO_GO_DECISION.md"
+    "docs/OWNERSHIP_GO_NO_GO_DECISION.md",
+    "docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json"
   ],
   "relations": []
 }

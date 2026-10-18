@@ -2,6 +2,8 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- Publish the first explicitly authorized MP testing item, 3822584314, on 2026-10-18 from e98d1eb after source/CI/package checks. Preserve the release archive/receipt and record the returned ID for future updates. Correct the SteamCMD success-format false negative with five tests (18 publication cases total); no second upload or runtime payload change. Steam remains running at the user's request; G7/stable G8 remain blocked.
+
 - Resolve the first-item publication preflight for the unchanged vanilla 42.21 target: distinguish historical installation drift from current source evidence, require exact newer observations, retain strict modified-installation blockers and all ownership NO-GO decisions. Add original target/package validators, 13 hostile-input regressions, portable team description rendering and explicit Workshop metadata/provenance. Keep runtime Lua and approved artwork unchanged; G6/G7 NOT TESTED and stable G8 BLOCKED.
 
 - On 2026-10-18 apply the user-approved transparent, subject-only German Shepherd icon at the existing mod.info path; preserve thumbnail and poster bytes. Stay within this unreleased compatible presentation checkpoint. Record first-item Workshop authorization, canonical test-build copy and the five changed native inputs that block publication. All 431 offline Lua cases pass; no gameplay enablement, Workshop upload, native repair or runtime verification.
