@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "id": "dog",
+  "name": "Dogmeat",
+  "version": "0.2.0-dev.7",
+  "reviewed": true,
+  "source_digest": "66f9eafa4efed55303c9bd445cefe21e3c9273a4f87608f2fc1c1b7ee97407c7",
+  "features": [
+    {
+      "status": "Foundation",
+      "text": "Ownership, naming, handler permissions and private projection foundations."
+    },
+    {
+      "status": "Foundation",
+      "text": "Native persistence/lifecycle pairing diagnostics with test carrier."
+    },
+    {
+      "status": "Foundation",
+      "text": "German Shepherd and English Mastiff editable model development."
+    },
+    {
+      "status": "Planned",
+      "text": "Playable dog care, bonding, training and tasks."
+    },
+    {
+      "status": "Blocked",
+      "text": "Authenticated ownership/admission and exclusive native-control contracts unresolved."
+    }
+  ],
+  "limits": "Standalone Lua-only diagnostic; no MORTIS dependency. Ownership, authenticated native identity continuity and live task control remain blocked. Raccoon remains the active test presentation; model work remains on HOLD. All 431 offline Lua cases pass; SP and dedicated NOT TESTED. Five changed native inputs block the authorized first Workshop upload.",
+  "evidence": [
+    "README.md",
+    "source-inventory.json",
+    "docs/WORKSHOP_PUBLICATION.md",
+    "docs/BRANDING.md",
+    "docs/OWNERSHIP_GO_NO_GO_DECISION.md"
+  ],
+  "relations": []
+}

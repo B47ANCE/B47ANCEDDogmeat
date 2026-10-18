@@ -2,6 +2,8 @@
 
 Project Version: 0.2.0-dev.7
 
+The approved transparent German Shepherd is now the mod icon. The project thumbnail and poster are unchanged. The first Workshop item is authorized but **publication is BLOCKED** by five installed native-input mismatches; [publication checks and limitations](docs/WORKSHOP_PUBLICATION.md) record the exact results. This remains a default-off raccoon persistence diagnostic: ownership and live task control are disabled, and SP/dedicated runtime behavior is NOT TESTED.
+
 The new [local Blender anatomy checkpoint, em-v004](art/english_mastiff_anatomy/README.md), adds a real mouth opening, separate mandible, 42 teeth, gums, palate, oral lining, independent tongue, eyeballs and blinking lids to a copy of the original fawn Mastiff. Editable BLEND and reopened FBX/GLB are retained. Facial/visual acceptance remains **HOLD**: upper inner-lip folding and residual surfacing/attachment defects need local finishing. No new Meshy credits or native activation; the raccoon remains the test carrier.
 
 A separately approved [complete-anatomy Meshy preview](art/english_mastiff_anatomy_preview/README.md) consumed 20 credits. Its 23,865-triangle FBX/GLB imports successfully but still fails oral-anatomy acceptance and has 80 welded non-manifold edges. Original files, actual head sections and hashes are retained; no follow-up paid job, texture or rig is activated.
