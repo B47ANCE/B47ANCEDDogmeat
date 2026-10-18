@@ -54,8 +54,13 @@ def check_source():
     if inventory['languages'] != catalog['languages'] or inventory['localization_root'] != 'src/localization':
         errors.append('Localization source/language declaration differs from contract')
     registration = inventory['runtime_registration']
-    if registration.get('mod_id') != 'B47ANCEDDogmeat' or registration.get('native_type') != 'b47dogtest' or inventory['workshop_id'] is not None:
-        errors.append('Unexpected runtime identity/Workshop identity')
+    if registration.get('mod_id') != 'B47ANCEDDogmeat' or registration.get('native_type') != 'b47dogtest':
+        errors.append('Unexpected runtime identity')
+    from prepare_workshop import configuration
+    try:
+        configuration()
+    except (ValueError, KeyError, OSError) as exc:
+        errors.append('Workshop identity invalid: '+str(exc))
     adapter = inventory.get('native_event_adapter', {})
     if (adapter.get('entry') != 'B47Dog/NativeRuntime.install' or adapter.get('automatic_bootstrap') != 'src/bootstrap/server/B47DogBootstrap.lua'
             or adapter.get('events') != ['OnInitGlobalModData', 'OnServerStarted', 'OnGameStart', 'OnCharacterDeath']):

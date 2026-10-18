@@ -15,7 +15,7 @@ Version 0.2.0-dev.7 is an experimental development diagnostic for native animal 
 
 ## Compatibility & Requirements
 
-Targets Project Zomboid Build 42.21. Lua-only runtime; no custom Java, JAR, native module or other mod dependency. Offline Lua tests pass; actual single-player and dedicated multiplayer behavior is NOT TESTED. Installed native-input fingerprint drift currently blocks this publication candidate.
+Targets Project Zomboid Build 42.21. Lua-only runtime; no custom Java, JAR, native module or other mod dependency. Offline Lua tests pass; actual single-player and dedicated multiplayer behavior is NOT TESTED. Requires a pristine vanilla installation for testing. Modified native classes, Java agents and third-party loaders are unsupported.
 
 ## Configuration
 
