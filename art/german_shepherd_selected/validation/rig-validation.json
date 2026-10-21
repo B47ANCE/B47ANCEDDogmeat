@@ -1,0 +1,18 @@
+{
+  "asset_revision": "gsd-selected-rig-v001",
+  "blender": "4.5.3 LTS",
+  "vertices": 1425959,
+  "triangles": 2590138,
+  "geometry_sha256_before": "11e887ba6f06145c050537e11d50a531b4f06e6271275158feed00c7bd3dea07",
+  "geometry_sha256_after": "11e887ba6f06145c050537e11d50a531b4f06e6271275158feed00c7bd3dea07",
+  "geometry_uv_topology_unchanged": true,
+  "bone_count": 34,
+  "native_bone_names_and_parents_match": true,
+  "bind_joint_positions": "Fitted to the supplied dog without editing mesh; native names/hierarchy retained",
+  "max_vertex_influences": 4,
+  "unweighted_vertices": 0,
+  "weight_sum_error": 0.0,
+  "runtime": "NOT TESTED",
+  "native_animations_bundled": false,
+  "native_model_replaced": false
+}

@@ -2,6 +2,8 @@
 
 ## [0.2.0-dev.7] — 2026-10-14
 
+- On 2026-10-21 preserve the supplied high-resolution German Shepherd and add the independent gsd-selected-rig-v001 authoring checkpoint: raccoon-compatible 34-bone names/hierarchy, dog-fitted bind joints, normalized four-influence skinning, unchanged geometry/UV/texture evidence, BLEND/GLB/FBX and real neutral/deformation renders. No geometry/material edits, decimation, paid job, vanilla raccoon replacement, runtime activation or Workshop update. The published runtime version/payload remains unchanged; native animation and performance acceptance are pending.
+
 - Publish the first explicitly authorized MP testing item, 3822584314, on 2026-10-18 from e98d1eb after source/CI/package checks. Preserve the release archive/receipt and record the returned ID for future updates. Correct the SteamCMD success-format false negative with five tests (18 publication cases total); no second upload or runtime payload change. Steam remains running at the user's request; G7/stable G8 remain blocked.
 
 - Resolve the first-item publication preflight for the unchanged vanilla 42.21 target: distinguish historical installation drift from current source evidence, require exact newer observations, retain strict modified-installation blockers and all ownership NO-GO decisions. Add original target/package validators, 13 hostile-input regressions, portable team description rendering and explicit Workshop metadata/provenance. Keep runtime Lua and approved artwork unchanged; G6/G7 NOT TESTED and stable G8 BLOCKED.
