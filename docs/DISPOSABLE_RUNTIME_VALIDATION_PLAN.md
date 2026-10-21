@@ -1,6 +1,6 @@
 # Disposable database/native runtime validation plan
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.8
 
 **Plan only. No PZ/client/server launch, deployment, destructive interruption, installation repair or production save modification is authorized by this document.** Positive ownership/control steps below require a reviewed safe proof implementation first. The current mod cannot run those positive cases. Preserve [the existing diagnostic procedure](DISPOSABLE_RUNTIME_TEST_PROCEDURE.md) for available negative tests; do not invent new console commands or admission endpoints.
 

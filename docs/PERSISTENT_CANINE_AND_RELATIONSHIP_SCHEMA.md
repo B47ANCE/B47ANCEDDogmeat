@@ -1,6 +1,6 @@
 # Persistent canine and relationship schema proposal
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.8
 
 Design only. The machine-readable field/state/permission index is [database_redesign.json](contracts/database_redesign.json). Its **proposed logical schema revision 1** is independent of Project SemVer, the existing snapshot/marker schema 1 and the design-document format revision. It is not a deployed migration or an interchangeable version of the current ownership-only record.
 

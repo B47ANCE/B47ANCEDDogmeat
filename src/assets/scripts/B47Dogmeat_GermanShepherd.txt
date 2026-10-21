@@ -1,0 +1,24 @@
+module Base
+{
+    model B47Dogmeat_GSD_Original
+    {
+        mesh = Skinned/B47Dogmeat_GSD_Original,
+        shader = animalEffect,
+        static = false,
+        animationsMesh = Raccoon,
+    }
+    model B47Dogmeat_GSD_Coat1
+    {
+        mesh = Skinned/B47Dogmeat_GSD_Coat1,
+        shader = animalEffect,
+        static = false,
+        animationsMesh = Raccoon,
+    }
+    model B47Dogmeat_GSD_Coat2
+    {
+        mesh = Skinned/B47Dogmeat_GSD_Coat2,
+        shader = animalEffect,
+        static = false,
+        animationsMesh = Raccoon,
+    }
+}

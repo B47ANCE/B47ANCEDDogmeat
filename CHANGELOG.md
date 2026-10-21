@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0-dev.8] - 2026-10-21
+
+- Rig the original Shepherd and both supplied coat variations to one native raccoon hierarchy, preserving geometry and UVs. Add three independent native types under a Shepherd group; preserve vanilla raccoons and the existing diagnostic carrier.
+- Use model-specific idle-pose inverse binds, authored skin weights and explicit hashed runtime asset mappings. Add registration, localization, asset/proof-boundary validation and selective CI LFS hydration. Ownership and live tasks remain disabled.
+- 439 offline Lua tests and 11 asset/proof boundary cases pass. Native locomotion visual acceptance remains HOLD; each mesh retains 2.59M triangles. PZ loading, performance, save/load and dedicated multiplayer remain NOT TESTED. No deployment or publication.
+
 ## [0.2.0-dev.7] — 2026-10-14
 
 - On 2026-10-21 retain user-supplied German Shepherd coat variations 1 and 2 as gsd-selected-coats-v001: byte-exact FBX/2K PBR maps, four input archive CRC/hash ledgers, original renders and an order-independent surface/UV comparison. Both match the original surface geometry at 1e-5 local-coordinate precision but use different UV layouts. Preserve the original rig/coat; no direct texture swap, UV/geometry edit, coat rigging, runtime change or publication. Runtime baseline remains unchanged.

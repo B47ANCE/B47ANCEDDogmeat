@@ -1,0 +1,32 @@
+{
+  "asset_revision": "gsd-native-rig-v001",
+  "recorded_project_version": "0.2.0-dev.8",
+  "files": {
+    "models/B47Dogmeat_GSD_Coat1.glb": "1eec0c11f824c19e8c319c3730998bb7224d534763cc0cfe265f84e4e1259a6c",
+    "models/B47Dogmeat_GSD_Coat2.glb": "3634d65cefcf2a6f99f9d5a1fc4c5c1e54600074a73d9b1992c48c7112dec888",
+    "models/B47Dogmeat_GSD_Original.glb": "81b4e354a41560e6a1853711cc5d4c3abd1d33dd00e7740b21b9545ef5368f13",
+    "previews/B47Dogmeat_GSD_Coat1_neutral.png": "58017983ebbc64406682e89f52c32af2647dd3072b0b551551f4eb5fe3721cd9",
+    "previews/B47Dogmeat_GSD_Coat2_neutral.png": "b90656582530401761bc6473f0d08778697367b6cc9c4734cf9cfa881cdeeeb9",
+    "previews/B47Dogmeat_GSD_Original_neutral.png": "07cfe3b2b70beeab1cdba3da9ab16f4942b25f6c7c2846f41b1ce4367d6389fe",
+    "previews/Rac_Death.png": "bfa0f692588e5a1e3905200d38b6066420e4c7199732f5bb45da2530b8e892b6",
+    "previews/Rac_Idle01.png": "49ba9181776e315a17e7b36e6590d164caee995204692fdc19431a67a18dfe93",
+    "previews/Rac_Run.png": "04c29031fa6a97ddd5c385050c27d044b46f3a0d553e3d384e0e6f4b8fa82d50",
+    "previews/Rac_Walk.png": "63d81ab5ef12692801d11f68eed11a6edecbcd7a878c9b32c5af27385b7cb13f",
+    "README.md": "ece2a516df5d7a057ea39c57ba37e985a733cedfcd718defd6bd6565290c689e",
+    "source/apply_weights.py": "24c9168b96f3b4bd60811ae872000d43f060b991208c6e15d8e84af3f503575f",
+    "source/author_weights.py": "bc6d30c42f26df88223152668274a97b1fd165fa85c3e8e4c90b1dee9dc78213",
+    "source/build_native.py": "7c249f694aca724f689c7968eab5dbbe67f7c9c2879b86539211e47c705b6251",
+    "source/export_native.py": "77e9f4ac530f4a19cd6e10f2f2c34058511209f1cf1f1a77e3b93b43f5fc2061",
+    "source/extract_diffuse.py": "8bfb48e071fd2da454b2f1043dc1555452bc6e1938f500e11c586f2a56c53c7b",
+    "source/native_clip_reader.py": "9eb3fa72873c2716152da429192c414095421ebad413c587502b23949db7475e",
+    "source/preview_native_clips.py": "e1fddd1f0acd42c6e7dfeadaa24b9433c7cba6c4804d974dc142b472feb5bff9",
+    "source/repair_bind_orientation.py": "8a5bdee8fa517fdbdf3433ec3cb83e0533bce896ccaf9a1d4ebd8152249aa3f0",
+    "source/shepherd_native.blend": "f4b2f802cec5b45b4e761236dcce1ee1adaa8670bf601be74bb4427fe2c16de6",
+    "source/validate_native.py": "01f4cf5500856ae639358d846dea5b9a38b67e3051a283ba982aafdfbb9bb03e",
+    "textures/B47Dogmeat_GSD_Original.png": "559c16490e181b335a8c919e5f41e1de72a6b1a510cfb8d38688b7ed59e689c6",
+    "validation/clip-samples.json": "4dfa8f22f37c2528fb83a93ec27404ac3c2968c0f2efb7f0a0e3d7508ea0af50",
+    "validation/native-bind.json": "401f31d240d2867f8c287cb57e592e1f9b4090b3a47f7f430f42b4fd130051a8",
+    "validation/original-diffuse.json": "c5836c97f1ffac972f6dfc2debd0bc15d500daa967f4528d88b14ec985e94598",
+    "validation/source-evidence.json": "92b882c3781e93e536340bfcb10b2763aff286dde093e4661001df1a3f340301"
+  }
+}

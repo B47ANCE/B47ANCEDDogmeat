@@ -1,11 +1,12 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.7",
-  "status": "LOADABLE GUARDED DIAGNOSTIC SOURCE; known Lua representation transitions refused; full native admission coverage and dedicated ownership remain blocked",
+  "project_version": "0.2.0-dev.8",
+  "status": "Development Shepherd rig/registration candidate; geometry/UV retained; native locomotion visual HOLD; ownership/live task control disabled; PZ NOT TESTED",
   "authoritative_lua": [
     "src/bootstrap/client/B47DogTestMenu.lua",
     "src/bootstrap/server/B47DogBootstrap.lua",
     "src/bootstrap/shared/B47DogRegistration.lua",
+    "src/bootstrap/shared/B47ShepherdRegistration.lua",
     "src/domain/B47Dog/Access.lua",
     "src/domain/B47Dog/AdmissionPolicy.lua",
     "src/domain/B47Dog/Codec.lua",
@@ -98,7 +99,14 @@
       "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip"
     ],
     "IGUI": [
-      "IGUI_AnimalType_b47dogtest"
+      "IGUI_AnimalType_b47dogtest",
+      "IGUI_AnimalType_b47gsdcoat1",
+      "IGUI_AnimalType_b47gsdcoat2",
+      "IGUI_AnimalType_b47gsdoriginal",
+      "IGUI_Animal_Group_b47germanshepherd",
+      "IGUI_Breed_b47gsdcoat1",
+      "IGUI_Breed_b47gsdcoat2",
+      "IGUI_Breed_b47gsdoriginal"
     ]
   },
   "runtime_registration": {
@@ -158,5 +166,61 @@
     "central_policy": "B47Dog/AdmissionPolicy",
     "runtime_decision_entry": "B47Dog/NativeRuntime.assessAdmission",
     "admit_implemented": false
-  }
+  },
+  "shepherd_registration": {
+    "entry": "src/bootstrap/shared/B47ShepherdRegistration.lua",
+    "group": "b47germanshepherd",
+    "native_types": [
+      "b47gsdoriginal",
+      "b47gsdcoat1",
+      "b47gsdcoat2"
+    ],
+    "automatic_population": false,
+    "ownership_enabled": false,
+    "spawn_authority": "Vanilla AnimalCheats server command; no custom spawn handler",
+    "existing_saves": "No migration of b47dogtest or vanilla animals; keep added type IDs stable",
+    "runtime": "NOT TESTED"
+  },
+  "runtime_assets": [
+    {
+      "source": "art/german_shepherd_native/models/B47Dogmeat_GSD_Original.glb",
+      "target": "42/media/models_X/Skinned/B47Dogmeat_GSD_Original.glb",
+      "sha256": "81b4e354a41560e6a1853711cc5d4c3abd1d33dd00e7740b21b9545ef5368f13"
+    },
+    {
+      "source": "art/german_shepherd_native/models/B47Dogmeat_GSD_Coat1.glb",
+      "target": "42/media/models_X/Skinned/B47Dogmeat_GSD_Coat1.glb",
+      "sha256": "1eec0c11f824c19e8c319c3730998bb7224d534763cc0cfe265f84e4e1259a6c"
+    },
+    {
+      "source": "art/german_shepherd_native/models/B47Dogmeat_GSD_Coat2.glb",
+      "target": "42/media/models_X/Skinned/B47Dogmeat_GSD_Coat2.glb",
+      "sha256": "3634d65cefcf2a6f99f9d5a1fc4c5c1e54600074a73d9b1992c48c7112dec888"
+    },
+    {
+      "source": "art/german_shepherd_native/textures/B47Dogmeat_GSD_Original.png",
+      "target": "42/media/textures/Body/B47Dogmeat_GSD_Original.png",
+      "sha256": "559c16490e181b335a8c919e5f41e1de72a6b1a510cfb8d38688b7ed59e689c6"
+    },
+    {
+      "source": "art/german_shepherd_selected/coats/variation_1/base_color.png",
+      "target": "42/media/textures/Body/B47Dogmeat_GSD_Coat1.png",
+      "sha256": "04764e5df041fdd75e80f508f20abe4731bc0589390ade49703668fb895278ab"
+    },
+    {
+      "source": "art/german_shepherd_selected/coats/variation_2/base_color.png",
+      "target": "42/media/textures/Body/B47Dogmeat_GSD_Coat2.png",
+      "sha256": "4d100310c91ce1b2ff334c80334a60e1251f55643753bc4cc1d5acc7f76295a0"
+    },
+    {
+      "source": "src/assets/scripts/B47Dogmeat_GermanShepherd.txt",
+      "target": "42/media/scripts/B47Dogmeat_GermanShepherd.txt",
+      "sha256": "019825cf430e255e84e2c33397c57351ff39f10de6ef6bc2b7e57d8873869cf3"
+    },
+    {
+      "source": "src/metadata/media/ui/B47ANCEDDogmeat_icon.png",
+      "target": "42/media/textures/Item_B47Dogmeat_Shepherd.png",
+      "sha256": "45527983dd84215e2277d85bdb48a0c718c8c9a0bb9000fd7721d6e4a25c4c97"
+    }
+  ]
 }

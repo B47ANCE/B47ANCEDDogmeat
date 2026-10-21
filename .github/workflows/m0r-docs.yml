@@ -9,6 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Hydrate only declared runtime assets
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          inventory=json.loads(Path('source-inventory.json').read_text())
+          paths=sorted({entry['source'] for entry in inventory['runtime_assets']})
+          subprocess.run(['git','lfs','pull','--include='+','.join(paths),'--exclude='],check=True)
+          PY
+      - name: Asset mapping and historical proof boundary regressions
+        run: python3 -B scripts/test_asset_boundaries.py
+      - name: Native model inputs and offline bind contract
+        run: python3 -B scripts/check_native_assets.py
       - name: Canonical version and current mirrors
         run: python3 -B scripts/check_versions.py --root . --json
       - name: Documentation and design contracts only

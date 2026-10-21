@@ -1,10 +1,10 @@
 # B47ANCE'd Dog Training
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.8
 
-The user-selected [German Shepherd now has a rig-only authoring checkpoint](art/german_shepherd_selected/README.md): the original supplied mesh/textures are preserved, with a fitted 34-bone raccoon-compatible hierarchy, normalized weights, BLEND/GLB/FBX and actual deformation previews. It is intended for a **separate new Dogmeat animal**, preserving vanilla raccoons. This asset is not activated or included in the published diagnostic; native animation/loading/performance checks remain outstanding.
+The German Shepherd now has an independent [native integration candidate](docs/GERMAN_SHEPHERD_INTEGRATION.md), including both supplied coat variations and the original coat. All three share the raccoon bone hierarchy and native animation library; each retains its own unchanged geometry and UVs. Their new animal types share a German Shepherd group without replacing vanilla raccoons or the existing persistence test carrier.
 
-The supplied [coat variations 1 and 2](art/german_shepherd_selected/coats/README.md) are retained separately with their original FBXs and 2K PBR maps. Their surface geometry matches the selected Shepherd at the recorded comparison precision, but their UV layouts differ. They are unrigged intake assets, not texture swaps on the original rig; no UV, geometry, original coat or runtime changes were made.
+The [editable rig, GLBs and validation renders](art/german_shepherd_native/README.md) preserve the source models. **Animation acceptance remains on HOLD:** native walk/run samples distort the Shepherd's long legs and tail. Each mesh retains 2.59 million triangles, so in-game performance is also untested. Ownership and live tasks remain disabled. This source iteration has not been deployed or published.
 
 The approved transparent German Shepherd is the mod icon; thumbnail and poster are unchanged. The [publication target audit](docs/WORKSHOP_PUBLICATION.md) resolves the historical override fingerprint blocker for a **vanilla Build 42.21 MP testing distribution**. The modified local installation remains unsupported and runtime-unverified. This is a default-off raccoon persistence diagnostic: ownership and live task control remain disabled. Published as [Workshop item 3822584314](https://steamcommunity.com/sharedfiles/filedetails/?id=3822584314), version 0.2.0-dev.7, from source commit e98d1eb. See [the immutable release receipt](docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json).
 

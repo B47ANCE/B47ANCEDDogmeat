@@ -112,7 +112,8 @@ def check():
     prior = json.loads((ROOT / 'docs/database-authority-proof-evidence.json').read_text(encoding='utf-8'))
     for group in ('production_sources', 'production_metadata', 'historical_manifests'):
         for path, expected in prior[group].items():
-            if sha((ROOT / path).read_bytes().replace(b'\r\n', b'\n')) != expected:
+            from validate_database_authority_proof import baseline_bytes
+            if sha(baseline_bytes(path,(ROOT / path).read_bytes())) != expected:
                 errors.append('Source/evidence applicability changed: ' + path)
     if [c['id'] for c in d['candidates']] != [f'S{i:02}' for i in range(1, 10)]:
         errors.append('Incomplete/duplicate principal candidate disposition')

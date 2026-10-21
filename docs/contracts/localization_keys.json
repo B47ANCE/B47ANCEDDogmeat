@@ -1,5 +1,5 @@
 {
-  "project_version": "0.2.0-dev.7",
+  "project_version": "0.2.0-dev.8",
   "status": "DESIGN CATALOG with explicit runtime subset in source-inventory.json; remaining proposed setting identifiers are not deployed",
   "languages": [
     "AR",
@@ -351,7 +351,14 @@
     "Sandbox_B47ANCEDDogmeat_PersistenceTestMode": "Persistence Test Mode",
     "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip": "Enables the admin save/load diagnostic in a disposable world. Default off. Never initializes automatically. Disabling prevents new test requests and preserves existing records and carriers.",
     "IGUI_AnimalType_b47dogtest": "Dog persistence test carrier (raccoon)",
-    "UI_B47ANCEDDogmeat_Test_Admission": "Carrier decisions: admit %1; quarantine %2; reject %3; defer %4."
+    "UI_B47ANCEDDogmeat_Test_Admission": "Carrier decisions: admit %1; quarantine %2; reject %3; defer %4.",
+    "IGUI_Animal_Group_b47germanshepherd": "German Shepherd",
+    "IGUI_AnimalType_b47gsdoriginal": "German Shepherd (original coat)",
+    "IGUI_AnimalType_b47gsdcoat1": "German Shepherd (coat variation 1)",
+    "IGUI_AnimalType_b47gsdcoat2": "German Shepherd (coat variation 2)",
+    "IGUI_Breed_b47gsdoriginal": "Original coat",
+    "IGUI_Breed_b47gsdcoat1": "Coat variation 1",
+    "IGUI_Breed_b47gsdcoat2": "Coat variation 2"
   },
   "placeholder_syntax": "%1, %2; preserve native format and count"
 }

@@ -1,6 +1,6 @@
 # Ownership and inspection feature foundation
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.8
 
 Current guard integration: [server admission guard](NATIVE_ADMISSION_GUARD.md) adds nine completion guards and guarded recovery/provisioning. This report retains its earlier implementation/test scope; complete native provenance and dedicated ownership remain blocked.
 

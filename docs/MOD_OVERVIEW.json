@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "dog",
   "name": "Dogmeat",
-  "version": "0.2.0-dev.7",
+  "version": "0.2.0-dev.8",
   "reviewed": true,
-  "source_digest": "f1a56bb204c524aca8fd4840b6a4d5a7b35ae39633779ca84ea46fa9539965dc",
+  "source_digest": "be8d8e10b9515b9a0ac663168dc2e473cdf61069556ae9bdb80cfd3cca877d0d",
   "features": [
     {
       "status": "Foundation",
@@ -27,11 +27,11 @@
       "text": "Authenticated ownership/admission and exclusive native-control contracts unresolved."
     },
     {
-      "status": "Separate branch",
-      "text": "User-selected German Shepherd rig-only checkpoint: 34 native raccoon-compatible bones, unchanged mesh/textures, editable BLEND and GLB/FBX. Two additional supplied coats are retained with distinct UV layouts and remain unrigged. Separate animal integration and native playback/performance remain pending."
+      "status": "Foundation",
+      "text": "Original Shepherd and both supplied coat variations bound to one raccoon hierarchy with immutable geometry/UVs. Three independent native animal types share a Shepherd group; vanilla raccoons and existing test carrier are unchanged. Native locomotion visual acceptance is HOLD."
     }
   ],
-  "limits": "Workshop item 3822584314 publishes only the default-off raccoon diagnostic. Vanilla 42.21 source audit passes; modified installation unsupported. Ownership, authenticated continuity and live tasks blocked. 431 offline Lua and 18 publication cases PASS; SP/dedicated NOT TESTED; stable G8 BLOCKED. Models on HOLD.",
+  "limits": "Published Workshop3822584314 remains dev.7 default-off raccoon diagnostic. Dev.8 Shepherd rigs/registration are source candidates: 2.59M triangles each, native gait distortion, PZ loading/performance/save-load NOT TESTED. Ownership/live tasks disabled. 439 offline Lua cases PASS; G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
   "evidence": [
     "README.md",
     "source-inventory.json",
@@ -40,7 +40,9 @@
     "docs/OWNERSHIP_GO_NO_GO_DECISION.md",
     "docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json",
     "art/german_shepherd_selected/README.md",
-    "art/german_shepherd_selected/coats/README.md"
+    "art/german_shepherd_selected/coats/README.md",
+    "docs/GERMAN_SHEPHERD_INTEGRATION.md",
+    "art/german_shepherd_native/README.md"
   ],
   "relations": []
 }

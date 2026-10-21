@@ -52,7 +52,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix='b47dog-offline-') as temporary:
         directory = Path(temporary).resolve()
         for name, phase in [('ownership_spec.lua', None), ('storage_spec.lua', None), ('pairing_spec.lua', None),
-                            ('provision_spec.lua', None), ('registration_spec.lua', None), ('bootstrap_spec.lua', None),
+                            ('provision_spec.lua', None), ('registration_spec.lua', None), ('shepherd_registration_spec.lua', None), ('bootstrap_spec.lua', None),
                             ('identity_authority_spec.lua', None),
                             ('admission_spec.lua', None),
                             ('continuity_spec.lua', None),

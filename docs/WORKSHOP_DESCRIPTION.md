@@ -4,14 +4,15 @@
 
 MP testing build - dedicated multiplayer NOT TESTED
 
-Version 0.2.0-dev.7 is an experimental development diagnostic for native animal save/load research. It is not a playable dog companion release. Use a new disposable world only.
+Version 0.2.0-dev.8 is an experimental development diagnostic for native animal save/load research. It is not a playable dog companion release. Use a new disposable world only.
 
 ## Features
 
 - Default-off persistence test mode with an administrator confirmation workflow.
 - Temporary vanilla raccoon carrier for native lifecycle and save/load investigation.
 - Guarded server-side diagnostic requests and private persistence foundations.
-- Custom transparent German Shepherd mod icon. The artwork does not represent the current in-game carrier.
+- Independent German Shepherd native type group: original coat plus variations 1 and 2, sharing the raccoon animation skeleton. Vanilla raccoons remain available.
+- Custom transparent German Shepherd mod icon and unchanged project thumbnail.
 
 ## Compatibility & Requirements
 
@@ -29,7 +30,9 @@ GitHub: https://github.com/B47ANCE/B47ANCEDDogmeat
 
 - Multiplayer ownership, authenticated identity continuity and live task control remain disabled.
 - Native admission coverage and restart continuity are unproven. Copied animal markers never authorize ownership.
-- No finished dog model or canine animation set is active; the raccoon remains the carrier.
+- Shepherd rigs preserve supplied geometry/UVs but native walk/run motions distort the long legs/tail. Animation acceptance is on HOLD. Each mesh has 2.59 million triangles; performance is NOT TESTED.
+- Shepherds inherit raccoon autonomy and sounds; no companion behavior, automatic world population or breeding. Corpses temporarily use the same whole-body model.
+- The raccoon remains the separate persistence diagnostic carrier.
 - Do not use valuable saves. No production migration or recovery guarantee is provided.
 
 ## Credits & Permissions

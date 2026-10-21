@@ -1,6 +1,12 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.8
+
+Current iteration: 0.2.0-dev.8 adds the separate native Shepherd registration and preserved coat rigs. The published dev.7 package/receipt stays historical; no migration or stable-release claim. See [German Shepherd integration](GERMAN_SHEPHERD_INTEGRATION.md).
+
+## Historical development narrative through 0.2.0-dev.7
+
+The statements below describe their original investigation checkpoints, including pre-publication status. They do not deny the subsequent Workshop publication or establish current runtime proof.
 
 The user-approved [em-v003-preview attempt](../art/english_mastiff_anatomy_preview/README.md) is complete as a 20-credit static job, not as an anatomical character. Its actual head section does not establish a bounded mouth cavity, dentition, gums or tongue. Keep anatomy HOLD and use the documented local modeling fallback before further texture/rig work.
 
