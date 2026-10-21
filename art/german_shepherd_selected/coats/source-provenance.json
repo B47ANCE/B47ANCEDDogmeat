@@ -1,0 +1,202 @@
+{
+  "asset_revision": "gsd-selected-coats-v001",
+  "environment": "Python archive and image inspection; PZ NOT TESTED",
+  "coats": {
+    "variation_1": {
+      "archives": [
+        {
+          "filename": "Meshy_AI_GermanShepherd3D_1021185341_texture_fbx.zip",
+          "bytes": 127704105,
+          "sha256": "c7f949c8bb9e588348f906e4cef45ee477b293433b41234429ed4239eda99c72",
+          "members": [
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021185341_texture_fbx/Meshy_AI_GermanShepherd3D_1021185341_texture.fbx",
+              "bytes": 112423404,
+              "sha256": "d491849e41806f8ef49ae43a7186ea7ff8cc661bdcc7b5020c882eba9d2d7d77"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021185341_texture_fbx/Meshy_AI_GermanShepherd3D_1021185341_texture.png",
+              "bytes": 6909196,
+              "sha256": "04764e5df041fdd75e80f508f20abe4731bc0589390ade49703668fb895278ab"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021185341_texture_fbx/Meshy_AI_GermanShepherd3D_1021185341_texture_metallic.png",
+              "bytes": 40381,
+              "sha256": "d105b79a57b5fd9dd5f571a12bd1700d979a9a9707cc5f2ddc360262fda0884e"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021185341_texture_fbx/Meshy_AI_GermanShepherd3D_1021185341_texture_normal.png",
+              "bytes": 6838406,
+              "sha256": "26c5bec20fcc217376611c06676222d66aa218451010da1e2dad9e45bc7c8b77"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021185341_texture_fbx/Meshy_AI_GermanShepherd3D_1021185341_texture_roughness.png",
+              "bytes": 1491294,
+              "sha256": "4cfa446ed9cc600167311142ab327f0bafab16fa1a866d018ac19cce9600cf00"
+            }
+          ],
+          "crc": "PASS"
+        },
+        {
+          "filename": "Meshy_AI_GermanShepherd3D_20261021_texture_obj.zip",
+          "bytes": 103685731,
+          "sha256": "1fe590b63591d62a815543f3a85e3e861dc80f2d2f2350d96836761bbc7d1207",
+          "members": [
+            {
+              "name": "Meshy_AI_GermanShepherd3D_20261021_texture_obj/Meshy_AI_GermanShepherd3D_20261021_texture.mtl",
+              "bytes": 221,
+              "sha256": "20a6578d448b738d22057ab22b4cadeff2e97dc5a726f711de789a3ffcf9ced3"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_20261021_texture_obj/Meshy_AI_GermanShepherd3D_20261021_texture.obj",
+              "bytes": 275194679,
+              "sha256": "5d0d87d6d2027e5b549083c049c5d3f9d73b0d3c63ce3068f6d14d9c39e60720"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_20261021_texture_obj/Meshy_AI_GermanShepherd3D_20261021_texture.png",
+              "bytes": 6909196,
+              "sha256": "04764e5df041fdd75e80f508f20abe4731bc0589390ade49703668fb895278ab"
+            }
+          ],
+          "crc": "PASS"
+        }
+      ],
+      "maps": {
+        "base_color": {
+          "path": "art/german_shepherd_selected/coats/variation_1/base_color.png",
+          "bytes": 6909196,
+          "sha256": "04764e5df041fdd75e80f508f20abe4731bc0589390ade49703668fb895278ab",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        "metallic": {
+          "path": "art/german_shepherd_selected/coats/variation_1/metallic.png",
+          "bytes": 40381,
+          "sha256": "d105b79a57b5fd9dd5f571a12bd1700d979a9a9707cc5f2ddc360262fda0884e",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        "normal": {
+          "path": "art/german_shepherd_selected/coats/variation_1/normal.png",
+          "bytes": 6838406,
+          "sha256": "26c5bec20fcc217376611c06676222d66aa218451010da1e2dad9e45bc7c8b77",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        "roughness": {
+          "path": "art/german_shepherd_selected/coats/variation_1/roughness.png",
+          "bytes": 1491294,
+          "sha256": "4cfa446ed9cc600167311142ab327f0bafab16fa1a866d018ac19cce9600cf00",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      }
+    },
+    "variation_2": {
+      "archives": [
+        {
+          "filename": "Meshy_AI_GermanShepherd3D_1021190310_texture_fbx.zip",
+          "bytes": 124160915,
+          "sha256": "32f3f3a913d8d8860932bc077215cfa29bcad7e7e4a5d00bbb3a3eb9d178b298",
+          "members": [
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021190310_texture_fbx/Meshy_AI_GermanShepherd3D_1021190310_texture.fbx",
+              "bytes": 111223452,
+              "sha256": "cbbc72d89ca755ec6f8bfa5d2077558d4c607ab305360c38abd3bc672012350e"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021190310_texture_fbx/Meshy_AI_GermanShepherd3D_1021190310_texture.png",
+              "bytes": 5805737,
+              "sha256": "4d100310c91ce1b2ff334c80334a60e1251f55643753bc4cc1d5acc7f76295a0"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021190310_texture_fbx/Meshy_AI_GermanShepherd3D_1021190310_texture_metallic.png",
+              "bytes": 42483,
+              "sha256": "11922da8ff39f2472d706fd1e63a07b05c75073d511d71be33df2ba93b256951"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021190310_texture_fbx/Meshy_AI_GermanShepherd3D_1021190310_texture_normal.png",
+              "bytes": 5687487,
+              "sha256": "c12d0ed13f4e961075025137621d040e3ec95f795a78781a1213aaa606f8a895"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_1021190310_texture_fbx/Meshy_AI_GermanShepherd3D_1021190310_texture_roughness.png",
+              "bytes": 1400332,
+              "sha256": "7e2c0f167c4e4bfd0e8c501887167197632452e9b5856462ed8478d2bde562ad"
+            }
+          ],
+          "crc": "PASS"
+        },
+        {
+          "filename": "Meshy_AI_GermanShepherd3D_20261021_texture_obj (1).zip",
+          "bytes": 102571731,
+          "sha256": "dafc11820ca61a28afcc7e9b68174b674e7104da119f586aafd6a38fdb84dd6e",
+          "members": [
+            {
+              "name": "Meshy_AI_GermanShepherd3D_20261021_texture_obj/Meshy_AI_GermanShepherd3D_20261021_texture.mtl",
+              "bytes": 221,
+              "sha256": "20a6578d448b738d22057ab22b4cadeff2e97dc5a726f711de789a3ffcf9ced3"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_20261021_texture_obj/Meshy_AI_GermanShepherd3D_20261021_texture.obj",
+              "bytes": 275195804,
+              "sha256": "e9da370592131be0b39c7d0eaee0f7125555914426d837a65f2917d3da156cb0"
+            },
+            {
+              "name": "Meshy_AI_GermanShepherd3D_20261021_texture_obj/Meshy_AI_GermanShepherd3D_20261021_texture.png",
+              "bytes": 5805737,
+              "sha256": "4d100310c91ce1b2ff334c80334a60e1251f55643753bc4cc1d5acc7f76295a0"
+            }
+          ],
+          "crc": "PASS"
+        }
+      ],
+      "maps": {
+        "base_color": {
+          "path": "art/german_shepherd_selected/coats/variation_2/base_color.png",
+          "bytes": 5805737,
+          "sha256": "4d100310c91ce1b2ff334c80334a60e1251f55643753bc4cc1d5acc7f76295a0",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        "metallic": {
+          "path": "art/german_shepherd_selected/coats/variation_2/metallic.png",
+          "bytes": 42483,
+          "sha256": "11922da8ff39f2472d706fd1e63a07b05c75073d511d71be33df2ba93b256951",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        "normal": {
+          "path": "art/german_shepherd_selected/coats/variation_2/normal.png",
+          "bytes": 5687487,
+          "sha256": "c12d0ed13f4e961075025137621d040e3ec95f795a78781a1213aaa606f8a895",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        "roughness": {
+          "path": "art/german_shepherd_selected/coats/variation_2/roughness.png",
+          "bytes": 1400332,
+          "sha256": "7e2c0f167c4e4bfd0e8c501887167197632452e9b5856462ed8478d2bde562ad",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      }
+    }
+  }
+}

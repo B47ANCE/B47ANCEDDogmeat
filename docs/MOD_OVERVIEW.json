@@ -28,7 +28,7 @@
     },
     {
       "status": "Separate branch",
-      "text": "User-selected German Shepherd rig-only checkpoint: 34 native raccoon-compatible bones, unchanged mesh/textures, editable BLEND and GLB/FBX. Separate animal integration and native playback/performance remain pending."
+      "text": "User-selected German Shepherd rig-only checkpoint: 34 native raccoon-compatible bones, unchanged mesh/textures, editable BLEND and GLB/FBX. Two additional supplied coats are retained with distinct UV layouts and remain unrigged. Separate animal integration and native playback/performance remain pending."
     }
   ],
   "limits": "Workshop item 3822584314 publishes only the default-off raccoon diagnostic. Vanilla 42.21 source audit passes; modified installation unsupported. Ownership, authenticated continuity and live tasks blocked. 431 offline Lua and 18 publication cases PASS; SP/dedicated NOT TESTED; stable G8 BLOCKED. Models on HOLD.",
@@ -39,7 +39,8 @@
     "docs/BRANDING.md",
     "docs/OWNERSHIP_GO_NO_GO_DECISION.md",
     "docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json",
-    "art/german_shepherd_selected/README.md"
+    "art/german_shepherd_selected/README.md",
+    "art/german_shepherd_selected/coats/README.md"
   ],
   "relations": []
 }

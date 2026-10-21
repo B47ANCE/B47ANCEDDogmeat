@@ -31,3 +31,4 @@ art/german_shepherd_selected/**/*.fbx filter=lfs diff=lfs merge=lfs -text
 art/german_shepherd_selected/**/*.glb filter=lfs diff=lfs merge=lfs -text
 art/german_shepherd_selected/**/*.blend filter=lfs diff=lfs merge=lfs -text
 art/german_shepherd_selected/original/*.png filter=lfs diff=lfs merge=lfs -text
+art/german_shepherd_selected/coats/variation_*/*.png filter=lfs diff=lfs merge=lfs -text
