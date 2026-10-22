@@ -21,7 +21,7 @@ NATIVE = {f'src/native/B47Dog/{name}.lua' for name in
           ('PZCache', 'NativeAnimal', 'NativeSession', 'NativeCheckpoint', 'NativeRuntime',
            'NativeAuthority', 'NativeProvision', 'NativeTestService', 'NativeAdmissionGuard')}
 BOOTSTRAP = {'src/bootstrap/shared/B47DogRegistration.lua','src/bootstrap/server/B47DogBootstrap.lua',
-             'src/bootstrap/client/B47DogTestMenu.lua'}
+             'src/bootstrap/client/B47DogTestMenu.lua','src/bootstrap/shared/B47ShepherdRegistration.lua'}
 MODULES = DOMAIN | NATIVE | BOOTSTRAP
 VANILLA_REQUIRES = {'Definitions/animal/RaccoonDefinitions','Definitions/animal/AnimalAvatarDefinition',
                     'Definitions/animal/AnimalPartsDefinitions','ISUI/ISModalDialog'}
@@ -124,6 +124,7 @@ def check_source():
             errors.append('Missing case-correct vanilla admission dependency: ' + action)
     allowed = MODULES | set(inventory['metadata_sources']) | {f'src/localization/{lang}/{category}.json'
                         for lang in catalog['languages'] for category in ('UI', 'Sandbox', 'IGUI')}
+    allowed |= {x['source'] for x in inventory['runtime_assets'] if x['source'].startswith('src/')}
     found = {p.relative_to(ROOT).as_posix() for p in (ROOT / 'src').rglob('*') if p.is_file()}
     if found != allowed:
         errors.append('Unexpected/missing source paths: ' + str(sorted(found ^ allowed)))

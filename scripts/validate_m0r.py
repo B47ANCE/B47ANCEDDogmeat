@@ -142,9 +142,10 @@ def main():
         expected_default=str(s['default']).lower() if s['type']=='boolean' else str(s['default'])
         if row is not None and row[4].strip()!=expected_default:
             errors.append('Setting Markdown default differs: '+s['id'])
+    shepherd_keys={'IGUI_Animal_Group_b47germanshepherd'} | {'IGUI_'+category+'_'+kind for category in ('AnimalType','Breed') for kind in ('b47gsdoriginal','b47gsdcoat1','b47gsdcoat2')}
     for k,v in keys.items():
-        if not isinstance(v,str) or not v.strip() or not k.startswith(('Sandbox_B47ANCEDDogTraining','UI_B47ANCEDDogTraining',
-                'Sandbox_B47ANCEDDogmeat','UI_B47ANCEDDogmeat','IGUI_AnimalType_b47dogtest')):
+        if not isinstance(v,str) or not v.strip() or (k not in shepherd_keys and not k.startswith(('Sandbox_B47ANCEDDogTraining','UI_B47ANCEDDogTraining',
+                'Sandbox_B47ANCEDDogmeat','UI_B47ANCEDDogmeat','IGUI_AnimalType_b47dogtest'))):
             errors.append('Invalid localization catalog entry: '+k)
     checked_history = 0
     for record in history:

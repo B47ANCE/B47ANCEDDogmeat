@@ -1,0 +1,35 @@
+{
+  "asset_revision": "gsd-selected-coats-v001",
+  "environment": "Blender 4.5.3 LTS offline",
+  "geometry_comparison": "Unordered triangle corners, local positions quantized to 1e-5; UVs aligned by geometry",
+  "base_vertices": 1425959,
+  "base_triangles": 2590138,
+  "base_geometry_signature": "f8e22f7627521b3b0627a75f24da906d6ef11d971df2a94c32b2b4c423139d5d",
+  "coats": {
+    "variation_1": {
+      "vertices": 1294771,
+      "triangles": 2590138,
+      "canonical_geometry_signature": "f8e22f7627521b3b0627a75f24da906d6ef11d971df2a94c32b2b4c423139d5d",
+      "geometry_matches_at_1e_5": true,
+      "aligned_uv_max_error": 0.9998640418052673,
+      "aligned_uv_mean_error": 0.3598008453845978,
+      "aligned_uv_corners_within_1e_5": 0.0,
+      "texture_swap_compatible": false,
+      "rigged": false,
+      "disposition": "Preserve supplied mesh and matching maps; no texture swap or UV edits"
+    },
+    "variation_2": {
+      "vertices": 1294771,
+      "triangles": 2590138,
+      "canonical_geometry_signature": "f8e22f7627521b3b0627a75f24da906d6ef11d971df2a94c32b2b4c423139d5d",
+      "geometry_matches_at_1e_5": true,
+      "aligned_uv_max_error": 0.9998530149459839,
+      "aligned_uv_mean_error": 0.3428882658481598,
+      "aligned_uv_corners_within_1e_5": 0.0,
+      "texture_swap_compatible": false,
+      "rigged": false,
+      "disposition": "Preserve supplied mesh and matching maps; no texture swap or UV edits"
+    }
+  },
+  "runtime": "NOT TESTED"
+}

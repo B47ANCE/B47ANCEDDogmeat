@@ -28,11 +28,12 @@ def configuration(root=ROOT):
 
 def payload():
     result={PREFIX+path:source.read_bytes() for path,source in sources().items()}
+    declared={PREFIX+x['target'] for x in json.loads((ROOT/'source-inventory.json').read_text())['runtime_assets']}
     info=result[PREFIX+'42/mod.info'].decode('utf-8')
     if 'id=B47ANCEDDogmeat' not in info.splitlines() or 'require=' in info.lower():
         raise ValueError('Unexpected runtime identity/dependency')
     for path in result:
-        if Path(path).suffix.lower() not in {'.lua','.json','.txt','.png','.info'}:
+        if Path(path).suffix.lower() not in {'.lua','.json','.txt','.png','.info'} and not (path in declared and path.endswith('.glb')):
             raise ValueError('Non-Lua runtime artifact: '+path)
     return result
 

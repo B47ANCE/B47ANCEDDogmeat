@@ -1,0 +1,31 @@
+{
+  "asset_revision": "gsd-selected-rig-v001",
+  "recorded_runtime_baseline": "0.2.0-dev.7",
+  "environment": "Blender 4.5.3 LTS and Python offline; native PZ NOT TESTED",
+  "runtime_payload_changed": false,
+  "files": {
+    "original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture.fbx": "8849a05f59a12a907d2fdc4d5da63f9bc3c43e995d8cdbacc7927b738763ea1b",
+    "original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture.png": "912e3cbea04ebe47fec73dba502ffe5eb1f738848f805ffe93b0c7469519b09c",
+    "original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_metallic.png": "f5d0eea7bfc4e4268f4306ab20d43d3420578ebcef9764dec8aa5eeae7c741ca",
+    "original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_normal.png": "20514443f5bc1a54c1c40c7c893aaec78546b6757f3bd09b4da34287dab9de57",
+    "original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_roughness.png": "ba0304cf359a5aef9dd78bfc8ac1fd1a57a55f811e16d95a447b270fd0cdf3f2",
+    "original/selected_shepherd.glb": "418b44949521fa43281fe95257118d15e211c6d7af16721b02b73d09b782c488",
+    "previews/rigged_deformation_probe.png": "665250c7ad832d7cb420c9ca56051bbd9123dd0027b913056d6ddf26485aa937",
+    "previews/rigged_neutral.png": "1f70f82e0aec0790edbeda201a8ea001003d6578bf40964d53c70db74db9a2a1",
+    "previews/selected_original.png": "1af73456ef9ee156fdbccff3fc6cde017484d20dc097d1cb1301091d40d65009",
+    "README.md": "2a0b84dbe645262bce4bbfaaccb1059813afc7885da24fe127a2c9f39c40669e",
+    "rigged/B47Dogmeat_GermanShepherd.glb": "270d1b4f89365e2e259de99c0373041c4ea382b92ec10f0e7b5697569d412f42",
+    "rigged/B47Dogmeat_GermanShepherd_embedded.fbx": "c9538afd3c8ab99f2e56c0862cdd9d93ec968895a13e8e8e8407ed3838910813",
+    "source/check_asset.py": "bd977af660d0030327be135b5f7228cac76036d264dbe077acbfc4edd27a5987",
+    "source/export_glb.py": "f3129ffc15c0aaf21e7912c79b58bae0212e31c3b6419d2c83134eadae007ca0",
+    "source/inspect_selected.py": "626179fa6b9a7ee8fc4c40b0fdaa70057a6b34f1b7c954e2652260e9505fe13e",
+    "source/rig_selected.py": "5e76532d8504447fbcfbee0b24cf8d12006b3af748188b72a072d1d7d8546908",
+    "source/selected_shepherd_rigged.blend": "f2cab77bbadcaaf750144a37f75feea0ea831ef5e2bb54b09639b9c6585c125e",
+    "source/validate_fbx.py": "eaa5f51de3ce6529af11bf0572fab4f117b5a3b031d0e7fa3caa254b1b09c3fd",
+    "validation/fbx-roundtrip.json": "5a51a35ed9077599e966836974dfccb4d34210e5eb4ed3f5384b6801d016b0aa",
+    "validation/glb-export.json": "020ea449f1fd43a72f333102d9f650b5e7563d934ee402d1211351e780f8b363",
+    "validation/native-contract.json": "1e7d3463493b37d6b05004661e63785b92696d19c50bd5486f67a135b2805488",
+    "validation/rig-validation.json": "f25638299904b45509cdcb9b45d1768d9c30bc948c77fbe032d3fdcd6af47448",
+    "validation/source-provenance.json": "50532cecfd9b7e75ca977e26f98e37ebd66f0dbd66ba07b2704ee5f990da9d6c"
+  }
+}

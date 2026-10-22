@@ -357,6 +357,10 @@
     {
       "path": "docs/publication-target-evidence.json",
       "pattern": "^  \"version\": \"(?P<version>[^\\\"]+)\"[,]?$"
+    },
+    {
+      "path": "docs/GERMAN_SHEPHERD_INTEGRATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -538,6 +542,14 @@
     {
       "reference": "docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json",
       "reason": "Immutable first Workshop MP test distribution receipt tied to actual 0.2.0-dev.7 source commit/package/service ID; preserve when current development version advances."
+    },
+    {
+      "reference": "art/german_shepherd_selected/",
+      "reason": "Frozen independent gsd-selected-rig-v001 authoring checkpoint recorded against runtime baseline 0.2.0-dev.7; original supplied mesh/textures and actual rig/export evidence preserved. Not a new published runtime payload or native/MP acceptance."
+    },
+    {
+      "reference": "art/german_shepherd_native/",
+      "reason": "Frozen gsd-native-rig-v001 authoring/native integration checkpoint recorded at 0.2.0-dev.8. Geometry/bind offline evidence and visual HOLD remain tied to this checkpoint; not PZ runtime verification."
     }
   ]
 }

@@ -2,11 +2,30 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+PROOF_BASELINE_VERSION = '0.2.0-dev.7'
+SHEPHERD_ADDITION = 'src/bootstrap/shared/B47ShepherdRegistration.lua'
+
+def baseline_bytes(relative, raw):
+    """Permit only the current edition/version header, never new proof claims.
+
+    Original expected hashes stay tied to source_baseline_commit in the ledger.
+    Runtime Lua is never normalized. Other content must still hash identically.
+    """
+    raw=raw.replace(b'\r\n',b'\n')
+    if relative=='src/metadata/mod.info':
+        pattern=rb'(?m)^(modversion=)[^\r\n]+$'
+    elif relative=='src/metadata/runtime-options.json' or relative.startswith('docs/native-'):
+        pattern=rb'(?m)^(  "project_version": ")[^"\r\n]+(",?)$'
+    else:return raw
+    normalized,count=re.subn(pattern,lambda m:m[1]+PROOF_BASELINE_VERSION.encode()+(m[2] if m.lastindex==2 else b''),raw)
+    if count!=1:raise ValueError('Expected exactly one current version header: '+relative)
+    return normalized
 REPORTS = ('AUTHENTICATED_PRINCIPAL_PROOF', 'NATIVE_MANAGED_LIFECYCLE_PROOF',
            'SERVER_MOVEMENT_INTERACTION_PROOF', 'PRIVATE_DATABASE_DURABILITY_PROOF',
            'NATIVE_OVERRIDE_DRIFT_REPORT', 'DATABASE_AUTHORITY_BLOCKER_MATRIX',
@@ -40,12 +59,12 @@ def check():
     if d['offline_validation']['combined_pair_rollback_detection'] is not False or d['offline_validation']['durable_native_commit_proven'] is not False:
         errors.append('Unsupported durability claim')
     inventory = json.loads((ROOT / 'source-inventory.json').read_text(encoding='utf-8'))
-    if set(d['production_sources']) != set(inventory['authoritative_lua']):
-        errors.append('Production source inventory changed during proof')
+    if set(d['production_sources']) | {SHEPHERD_ADDITION} != set(inventory['authoritative_lua']):
+        errors.append('Unreviewed production additions outside Shepherd registration')
     for group in ('production_sources', 'production_metadata', 'historical_manifests'):
         for relative, expected in d[group].items():
             path = ROOT / relative
-            if not path.resolve().is_relative_to(ROOT) or sha(path.read_bytes().replace(b'\r\n', b'\n')) != expected:
+            if not path.resolve().is_relative_to(ROOT) or sha(baseline_bytes(relative,path.read_bytes())) != expected:
                 errors.append('Proof baseline changed: ' + relative)
     request = d['source_request']
     relative = Path(request['path'])

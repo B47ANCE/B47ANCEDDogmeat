@@ -1,6 +1,16 @@
 # Changelog
 
+## [0.2.0-dev.8] - 2026-10-21
+
+- Rig the original Shepherd and both supplied coat variations to one native raccoon hierarchy, preserving geometry and UVs. Add three independent native types under a Shepherd group; preserve vanilla raccoons and the existing diagnostic carrier.
+- Use model-specific idle-pose inverse binds, authored skin weights and explicit hashed runtime asset mappings. Add registration, localization, asset/proof-boundary validation and selective CI LFS hydration. Ownership and live tasks remain disabled.
+- 439 offline Lua tests and 11 asset/proof boundary cases pass. Native locomotion visual acceptance remains HOLD; each mesh retains 2.59M triangles. PZ loading, performance, save/load and dedicated multiplayer remain NOT TESTED. No deployment or publication.
+
 ## [0.2.0-dev.7] — 2026-10-14
+
+- On 2026-10-21 retain user-supplied German Shepherd coat variations 1 and 2 as gsd-selected-coats-v001: byte-exact FBX/2K PBR maps, four input archive CRC/hash ledgers, original renders and an order-independent surface/UV comparison. Both match the original surface geometry at 1e-5 local-coordinate precision but use different UV layouts. Preserve the original rig/coat; no direct texture swap, UV/geometry edit, coat rigging, runtime change or publication. Runtime baseline remains unchanged.
+
+- On 2026-10-21 preserve the supplied high-resolution German Shepherd and add the independent gsd-selected-rig-v001 authoring checkpoint: raccoon-compatible 34-bone names/hierarchy, dog-fitted bind joints, normalized four-influence skinning, unchanged geometry/UV/texture evidence, BLEND/GLB/FBX and real neutral/deformation renders. No geometry/material edits, decimation, paid job, vanilla raccoon replacement, runtime activation or Workshop update. The published runtime version/payload remains unchanged; native animation and performance acceptance are pending.
 
 - Publish the first explicitly authorized MP testing item, 3822584314, on 2026-10-18 from e98d1eb after source/CI/package checks. Preserve the release archive/receipt and record the returned ID for future updates. Correct the SteamCMD success-format false negative with five tests (18 publication cases total); no second upload or runtime payload change. Steam remains running at the user's request; G7/stable G8 remain blocked.
 

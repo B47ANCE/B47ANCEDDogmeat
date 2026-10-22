@@ -1,0 +1,56 @@
+{
+  "asset_revision": "gsd-selected-rig-v001",
+  "project_version": "0.2.0-dev.7",
+  "runtime_payload_changed": false,
+  "user_constraint": "Rig and bind only; no geometry/UV/texture edits. Separate new animal; preserve vanilla raccoon.",
+  "glb": {
+    "original_filename": "Meshy_AI_GermanShepherd3D_1018211210_image-to-3d-texture.glb",
+    "sha256": "418b44949521fa43281fe95257118d15e211c6d7af16721b02b73d09b782c488",
+    "bytes": 102450900,
+    "path": "art/german_shepherd_selected/original/selected_shepherd.glb"
+  },
+  "fbx_archive": {
+    "original_filename": "Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_fbx.zip",
+    "sha256": "a8d441557f4335990db211dce9aea93a00d5647050d60e49dc67d3a3e4814f2f",
+    "bytes": 177399995,
+    "crc": "PASS",
+    "archive_retained": "Original supplied Downloads archive unchanged; unpacked members retained below"
+  },
+  "members": [
+    {
+      "archive_member": "Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_fbx/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture.fbx",
+      "path": "art/german_shepherd_selected/original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture.fbx",
+      "bytes": 128739868,
+      "sha256": "8849a05f59a12a907d2fdc4d5da63f9bc3c43e995d8cdbacc7927b738763ea1b"
+    },
+    {
+      "archive_member": "Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_fbx/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture.png",
+      "path": "art/german_shepherd_selected/original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture.png",
+      "bytes": 25851930,
+      "sha256": "912e3cbea04ebe47fec73dba502ffe5eb1f738848f805ffe93b0c7469519b09c"
+    },
+    {
+      "archive_member": "Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_fbx/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_metallic.png",
+      "path": "art/german_shepherd_selected/original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_metallic.png",
+      "bytes": 45769,
+      "sha256": "f5d0eea7bfc4e4268f4306ab20d43d3420578ebcef9764dec8aa5eeae7c741ca"
+    },
+    {
+      "archive_member": "Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_fbx/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_normal.png",
+      "path": "art/german_shepherd_selected/original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_normal.png",
+      "bytes": 21357089,
+      "sha256": "20514443f5bc1a54c1c40c7c893aaec78546b6757f3bd09b4da34287dab9de57"
+    },
+    {
+      "archive_member": "Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_fbx/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_roughness.png",
+      "path": "art/german_shepherd_selected/original/Meshy_AI_GermanShepherd3D_1018211214_image-to-3d-texture_roughness.png",
+      "bytes": 1403675,
+      "sha256": "ba0304cf359a5aef9dd78bfc8ac1fd1a57a55f811e16d95a447b270fd0cdf3f2"
+    }
+  ],
+  "input_skin_count": 0,
+  "input_animation_count": 0,
+  "triangles": 2590138,
+  "generator": "pygltflib@v1.16.5",
+  "selection": "User-supplied selected German Shepherd. Meshy task/account/license metadata not supplied; no new generation or credit use."
+}

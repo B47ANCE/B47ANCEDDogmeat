@@ -1,0 +1,13 @@
+{
+  "source": "art/german_shepherd_selected/original/selected_shepherd.glb",
+  "source_sha256": "418b44949521fa43281fe95257118d15e211c6d7af16721b02b73d09b782c488",
+  "embedded_base_color_sha256": "d065e5063b4b276a66029d809cd9d66c675b26c0479366fafddd34fc79d41a72",
+  "operation": "JPEG decode to PNG only; no resize, repaint, flip, color adjustment or UV edit",
+  "decoded_rgb_pixel_sha256": "6a1d2d4ddd141850f9b79453de46d61724b8ea821c61950385cdcd520443a0b8",
+  "png_sha256": "559c16490e181b335a8c919e5f41e1de72a6b1a510cfb8d38688b7ed59e689c6",
+  "size": [
+    4096,
+    4096
+  ],
+  "pixel_parity": true
+}
