@@ -1,6 +1,6 @@
 # Growth and doghouse identity feasibility
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 **No growth gameplay implemented.** The approved future design remains: a puppy enters an assigned compatible doghouse at a growth milestone and emerges with the next age model, preserving canonical identity, owner/handlers, personality/hidden training, health/history and equipment without a duplicate or loss. The temporary test carrier remains the raccoon.
 

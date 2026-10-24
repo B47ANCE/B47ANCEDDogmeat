@@ -33,7 +33,7 @@ def payload():
     if 'id=B47ANCEDDogmeat' not in info.splitlines() or 'require=' in info.lower():
         raise ValueError('Unexpected runtime identity/dependency')
     for path in result:
-        if Path(path).suffix.lower() not in {'.lua','.json','.txt','.png','.info'} and not (path in declared and path.endswith('.glb')):
+        if Path(path).suffix.lower() not in {'.lua','.json','.txt','.png','.info'} and not (path in declared and Path(path).suffix.lower() in {'.glb','.x','.xml'}):
             raise ValueError('Non-Lua runtime artifact: '+path)
     return result
 

@@ -34,7 +34,7 @@ def sources():
                 or destination.is_absolute() or '..' in destination.parts or '\\' in target or ':' in target
                 or not target.startswith('42/media/') or target in result):
             raise ValueError('Unsafe/duplicate runtime asset mapping')
-        if source.suffix.lower() not in {'.glb','.png','.txt'} or destination.suffix.lower()!=source.suffix.lower():
+        if source.suffix.lower() not in {'.glb','.png','.txt','.x','.xml'} or destination.suffix.lower()!=source.suffix.lower():
             raise ValueError('Unexpected runtime asset format')
         raw=source.read_bytes()
         if raw.startswith(b'version https://git-lfs.github.com/spec/v1'):

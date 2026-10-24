@@ -21,13 +21,14 @@ local result=require "B47ShepherdRegistration"
 assert(result.group=="b47germanshepherd" and #result.variants==3);passed=passed+1
 for _,v in ipairs(result.variants) do
     local d=AnimalDefinitions.animals[v.kind]
-    assert(d.bodyModel==v.model and d.animset=="raccoon" and d.group==result.group)
+    assert(d.bodyModel==v.model and d.animset=="b47germanshepherd" and d.group==result.group)
     assert(d.bodyModelSkel==v.model and d.bodyModelSkelNoHead==v.model)
     assert(d.textureSkeleton==v.texture and d.textureSkeletonBloody==v.texture)
     assert(d.breeds[v.breed].texture==v.texture and d.breeds[v.breed].rottenTexture==v.texture)
     assert(d.breeds[v.breed].sounds~=base.breeds.grey.sounds and d.breeds[v.breed].sounds.death=="RaccoonDeath")
     assert(d.stages[v.kind].nextStage==nil and d.mate==nil and d.babyType==nil)
     assert(not d.canBePicked and not d.canBePet and not d.canBeTransported and not d.canBeAttached)
+    assert(d.canClimbFences==false)
     assert(d.genes~=base.genes and d.stages~=base.stages and d.breeds~=base.breeds)
     local parts=AnimalPartsDefinitions.animals[v.kind..v.breed]
     assert(next(parts.parts)==nil and next(parts.bones)==nil and parts.head==nil and parts.leather==nil)

@@ -1,0 +1,64 @@
+{
+  "recorded_project_version": "0.2.0-dev.9",
+  "date": "2026-10-24",
+  "environment": "Windows offline; Blender 4.5.3 LTS; Python; Lua 5.1 via Lupa 2.6; assimp_py 1.1.0; NumPy 2.3.5",
+  "commands": [
+    {
+      "command": "python -B scripts/test_domain.py",
+      "result": "PASS: 465 Lua 5.1/Lupa 2.6 cases; 26 tail-health cases"
+    },
+    {
+      "command": "python -B scripts/test_shepherd_motion.py",
+      "result": "PASS: 11 clip/graph/motion regressions"
+    },
+    {
+      "command": "python -B scripts/test_asset_boundaries.py",
+      "result": "PASS: 12 mapping/proof boundary regressions"
+    },
+    {
+      "command": "python -B scripts/test_publication.py",
+      "result": "PASS: 18 archive/evidence/upload-result regressions; disposable fixture package only"
+    },
+    {
+      "command": "python -B scripts/check_motion_imports.py --module-directory <assimp_py-1.1.0>",
+      "result": "PASS: 31 files; independent Assimp parser"
+    },
+    {
+      "command": "python -B scripts/check_tail_blends.py",
+      "result": "PASS: 85244 samples; maximum 0.003990096445 source units"
+    },
+    {
+      "command": "python -B scripts/check_native_assets.py --all",
+      "result": "PASS: all three preserved model GLBs and both asset manifests"
+    },
+    {
+      "command": "python -B scripts/validate_m0r.py",
+      "result": "STATIC PASS"
+    },
+    {
+      "command": "python -B scripts/validate_foundation.py",
+      "result": "STATIC PASS: 23 Lua modules; 1305 fallback entries"
+    },
+    {
+      "command": "python -B scripts/build_loadable.py --check",
+      "result": "SOURCE PARITY PASS: 191 files"
+    },
+    {
+      "command": "python -B scripts/check_versions.py --root . --json",
+      "result": "PASS: canonical 0.2.0-dev.9 and declared mirrors"
+    }
+  ],
+  "renders": "60 actual Blender images: both coats; walk/run cycles, five health anchors plus four intermediate values, rest and death",
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "stable_G8": "BLOCKED",
+  "runtime_gates": [
+    "PZ import, scale/basis and actual skin deformation",
+    "Native locomotion speed, foot sliding, ground contact and state transitions",
+    "Native health replication, observers and sandbox option",
+    "Save/load, dedicated reconnect and restart",
+    "2.59-million-triangle model performance",
+    "Vanilla raccoon unaffected"
+  ],
+  "distribution": "No local deploy, game/server launch, Workshop upload or merge"
+}

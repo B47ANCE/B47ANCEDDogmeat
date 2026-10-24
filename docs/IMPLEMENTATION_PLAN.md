@@ -1,6 +1,6 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 Current iteration: 0.2.0-dev.8 adds the separate native Shepherd registration and preserved coat rigs. The published dev.7 package/receipt stays historical; no migration or stable-release claim. See [German Shepherd integration](GERMAN_SHEPHERD_INTEGRATION.md).
 

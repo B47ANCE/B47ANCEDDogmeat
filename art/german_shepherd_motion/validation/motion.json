@@ -1,0 +1,204 @@
+{
+  "project_version": "0.2.0-dev.9",
+  "asset_revision": "gsd-motion-v001",
+  "environment": "Blender 4.5.3 LTS offline",
+  "runtime": "NOT TESTED",
+  "mesh_geometry_uv_untouched": {
+    "B47Dogmeat_GSD_Coat1": "22ec562dbe4f60e1bf75af7f833e7879ed845fb1fcc9cc17fc924334f6512eae",
+    "B47Dogmeat_GSD_Coat2": "6223a4fea697d031b107a851af8bd1d1a84612cd5ba1f7300398f0d2af9522f9",
+    "B47Dogmeat_GSD_Original": "11e887ba6f06145c050537e11d50a531b4f06e6271275158feed00c7bd3dea07"
+  },
+  "clips": {
+    "B47Dogmeat_Idle_Neutral": {
+      "sha256": "1c71b6ca7f3d6b0e94ee18c2fe9dd1b78743254f4f68c730e5e1f81a070c0320",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Idle_Low": {
+      "sha256": "cb52d6a67181cd5da3d69bddd4861d7e0472890cf95d4c64483e79282e85c98a",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Idle_H25": {
+      "sha256": "8bb480c469831a2944db31aa7e61815c2eeff70285f337eeb4ea2ce19fb0a587",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Idle_H50": {
+      "sha256": "135f37fae414a91c75626671541f003ec9cb76b1608d9c83271b3f1d2833b3a7",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Idle_H75": {
+      "sha256": "21a2ada3fe264ae8e41db021e9ff4a2960a73b78380a2e48b94b771473797983",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Idle_High": {
+      "sha256": "c73926c6c1fc58423745116c813cf243f720c020ce5d77590b07979c4ad12dad",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Look_Neutral": {
+      "sha256": "6cbc21d2418c215381e735e84162c2815d70b5f0daa2e2b3a1aeaac3a8a5d66a",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Look_Low": {
+      "sha256": "e594f84feb060f03c705676c667af66f1a287ab35a5765bb5eab769c5853afd2",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Look_H25": {
+      "sha256": "abaeca10d652080f75e6417f34f007b31c4851c6ecb7b235eaab18bdf4d620b8",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Look_H50": {
+      "sha256": "505f90e1948b02b11718391cc3cc8041fa16ef1067dedf1bdf995c4af7dd920a",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Look_H75": {
+      "sha256": "fe4703b8cf97950f91aa676ecddcf110aab1333a5858f83cc69ae95fe31127ad",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Look_High": {
+      "sha256": "6163cb8047b363b71d496fa4e25a0c126b0c4ed0d2a2310e3bfa81d523c323e1",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Walk_Neutral": {
+      "sha256": "61e328ea080d3af9fbef4b339d5414db742e97653b57599e1d675336e77cf8dd",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Walk_Low": {
+      "sha256": "2cde8741bf31f1680a2f58b25a7de33faf3bab22cbaf20963502d21ae42f0310",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Walk_H25": {
+      "sha256": "05322b0e5e7c9be1ef2096f7b89e000d6f6ab718ecbd3a0336ec4946fae23b15",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Walk_H50": {
+      "sha256": "4ad2960d479229b1742dc890a63054a1084c4d84075b30d2aafe495763b4e976",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Walk_H75": {
+      "sha256": "fb9ee615493f192bea2f22ecb3894d03b45639b31382f8fdffb9eb4ba4b05e93",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Walk_High": {
+      "sha256": "0f070987446ff08f42c26f6597895fa4ca43f91673cc20225c5b0a8f7d6f443a",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Run_Neutral": {
+      "sha256": "bbddd5335afe816111403fa72b8140e99304cb657c5aac1d09857dc6c8de674c",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    },
+    "B47Dogmeat_Run_Low": {
+      "sha256": "2804d1c99de7f8056eb7dbb02da21d0ee706380924a3a3edb90e44d379e94030",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    },
+    "B47Dogmeat_Run_H25": {
+      "sha256": "96ee395ceddf7fbae13877cfc32670d954e1f872eaa458934188d4d19fca2b5c",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    },
+    "B47Dogmeat_Run_H50": {
+      "sha256": "08e9b78f904c99588f4398e0c96a4aca7c3a0f18c041e7aeb87d4353c1cec027",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    },
+    "B47Dogmeat_Run_H75": {
+      "sha256": "bc0254ef0c7a6142daf0b61bdcf426523829be419b40ac7fed4be982096ac12a",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    },
+    "B47Dogmeat_Run_High": {
+      "sha256": "0add9e37252ca2ad55140de783cccf6ac49b0cae1e006816a09f4426c82fa334",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    },
+    "B47Dogmeat_LieDown_Neutral": {
+      "sha256": "75f175bf9a091748da8acf63331430db917903a8330e7ec44368244582354fbe",
+      "frames": 40,
+      "duration_seconds": 1.3,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Lie_Neutral": {
+      "sha256": "edb735d5376bc300466b2e2df244a2cc52cc30d6715440403ed172ffdf397ef5",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.1457672119140625e-06
+    },
+    "B47Dogmeat_GetUp_Neutral": {
+      "sha256": "bee1fbe0441a15430bcedd650d512322c70e5cdfb16b6de4265e2ee195bf7b8a",
+      "frames": 40,
+      "duration_seconds": 1.3,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Eat_Neutral": {
+      "sha256": "f36f4eef0e2f3b2a05f733e4db816f47556839d4d993e41289e88f99d089f35e",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Hit_Neutral": {
+      "sha256": "1ef2df6fcd6c96107d3461acd3ea99f7e93f68c9e8ac3520de739fe9bcc07d6d",
+      "frames": 16,
+      "duration_seconds": 0.5,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Death_Neutral": {
+      "sha256": "8bc1637373ea9f1c1de06be30e400bfd18acbee0504ca279936318d6ae60c09a",
+      "frames": 34,
+      "duration_seconds": 1.1,
+      "x_matrix_roundtrip_error": 2.9802322387695312e-06
+    },
+    "B47Dogmeat_Dead_Neutral": {
+      "sha256": "d745f64942716b950f71c416108c0cce32fa4a7ea9ada65545fd3836fc26bd68",
+      "frames": 31,
+      "duration_seconds": 1.0,
+      "x_matrix_roundtrip_error": 2.86102294921875e-06
+    }
+  },
+  "max_bone_length_error": 9.974666087542161e-08,
+  "max_stance_target_error": 8.429369702178807e-08,
+  "bone_count": 34,
+  "native_motion_tracks_read": false,
+  "gait": "Original planted-foot walk and diagonal trot; same native hierarchy"
+}

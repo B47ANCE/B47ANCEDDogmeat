@@ -1,9 +1,10 @@
 # German Shepherd native integration
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
-Development decision, 2026-10-21: continue the additive MINOR 0.2.0 scope at
-0.2.0-dev.8. The published 0.2.0-dev.7 diagnostic is an immutable historical
+The dev.8 rig checkpoint below remains immutable. Current development continues
+at dev.9 with [original motion and tail health](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
+The 2026-10-21 decision continued the additive MINOR 0.2.0 scope at dev.8. The published 0.2.0-dev.7 diagnostic is an immutable historical
 distribution. This iteration adds independent Shepherd animal definitions and
 rigs the two additional supplied coats. It changes no ownership, handler, private
 store, marker or intent schema and migrates no existing raccoon or b47dogtest.
@@ -18,7 +19,8 @@ remeshing, decimation, UV transfer or texture repainting occurred.
 Each mesh/UV layout requires a separate native animal type, because native breeds
 select textures while bodyModel belongs to the animal definition. All three types
 share a German Shepherd group and reference the installed Raccoon animation
-mesh and raccoon animation set. No vanilla type/model registration is replaced.
+mesh; dev.9 selects its own Shepherd animation set and action group. No vanilla
+type/model registration is replaced.
 
 Authority scope: native AnimalCheats admin spawning, native simulation and native
 save/replication only. No automatic population spawns, client-owned gameplay,
@@ -46,7 +48,7 @@ bundled Assimp source revision is UNKNOWN. Local exported-matrix checks are
 evidence of the authoring conversion, not actual PZ loading.
 
 [VERIFIED, source inspection] Model scripts use `animalEffect`, `static=false`
-and `animationsMesh=Raccoon`; definitions use `animset="raccoon"`. The engine
+and `animationsMesh=Raccoon`; definitions now use `animset="b47germanshepherd"`. The engine
 loader supports GLB. Diffuse maps are explicit `media/textures/Body/*.png` files.
 The animal shader uses diffuse textures and four bone influences, not the full
 PBR material. Original normal/roughness/metallic maps remain in the authoring
@@ -83,12 +85,13 @@ four-influence skinning and export checks. The two supplied coats each contain
 1,294,771 vertices and 2,590,138 triangles. No optimization was authorized; loading
 cost and frame rate are unmeasured and remain a material performance gate.
 
-[RUNTIME GATE / visual HOLD] Rest shape is preserved, but locally sampled native
+[HISTORICAL dev.8 / visual HOLD] Rest shape was preserved, but locally sampled native
 walk/run motions still show leg/tail distortion from the raccoon proportions.
 The assets are rigged integration candidates, not accepted production canine
 animation. A dedicated Shepherd motion set on the same bone hierarchy is the
-next animation option; no copied native clips or alternative motion service is
-included here. Complete clip/transition acceptance remains pending.
+option implemented in dev.9; no copied native clips or alternative motion service
+is included. See the new contract for current offline results. Actual game
+clip/transition acceptance remains pending.
 
 On a separately authorized pristine disposable PZ installation: verify admin
 group/type/coat enumeration, all three diffuse/mesh bindings, camera scale,
@@ -103,7 +106,7 @@ runtime limits remain bound to their original evidence. The old proof checker
 normalizes only current version headers to its recorded dev.7 edition; it still
 rejects substantive historical changes and all unreviewed production additions.
 
-## Validation commands and results (2026-10-21)
+## Historical dev.8 validation commands and results (2026-10-21)
 
 All Python commands below use the locally installed Python runtime; Blender
 commands use Blender 4.5.3 LTS. The game root is passed explicitly and read only.

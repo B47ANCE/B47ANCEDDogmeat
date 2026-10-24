@@ -1,0 +1,148 @@
+{
+  "recorded_project_version": "0.2.0-dev.9",
+  "game_version": "42.21",
+  "steam_build": "25485521",
+  "observed_on": "2026-10-24",
+  "environment": "Packaged source and installed Lua inspection only; no game execution; modified installation remains unsupported",
+  "records": [
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/animals/IsoAnimal.class",
+      "sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+      "claim": "initType binds animset and actiongroup (25-39); native health read is not proof of server-exclusive ownership."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/action/ActionGroup.class",
+      "sha256": "4f2b8ee84016edaa351712b409e6f94aba22dc37a27a75f238d87c00151f4893",
+      "claim": "loadGroupData reads initial; group-level inheritance not supported."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/action/ActionTransition.class",
+      "sha256": "959d6bb740f16de909a525468b33a774f30fd787f67e66966fcd5183b3a05eaa",
+      "claim": "parse accepts transitionTo, conditions, conditionPriority and state flags."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/skinnedmodel/ModelManager.class",
+      "sha256": "9bd955ded08c284dd1e1a5f39c84dd8576e7a46186b3c6fdf69ef4b12d8709e5",
+      "claim": "loadModAnimations263-411 discovers mod anims_X/Raccoon; animationAssetLoaded66-77 merges unique clip names."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/skinnedmodel/model/FileTask_LoadAnimation.class",
+      "sha256": "27240cac4853f748cfad1b908f3e1c89d7b31e78632ca36fb465dc490bca8bf6",
+      "claim": "loadX applies MakeLeftHanded, no FBX/GLTF scale modifier."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/skinnedmodel/model/jassimp/ImportedSkeleton.class",
+      "sha256": "ceb9756c05f26f7aa730cc761cf13852fb3275690077500e047b3a8c6da8c0af",
+      "claim": "processAnimation uses trimmed AnimationSet name; existing bone indices retained."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/skinnedmodel/advancedanimation/AnimNode.class",
+      "sha256": "1b7cdc17098c2db683ab31b77a937b38b04ce275cb4c9582890afb97c5ce4dbe",
+      "claim": "m_useDeferredMovement XML name; triangle picker exists only with blend triangles."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/NetworkPlayerAI.class",
+      "sha256": "46df5ede124384e10a848fe9eb6f6ba06cccbb3cc74f51e5e9b0306cd80a628a",
+      "claim": "AnimalPacket set792-801 encodes health*100; parse1175-1183 decodes /100. Replication is not strict server authority proof."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/Lua/LuaEventManager.class",
+      "sha256": "9706f17e9b5e095a0e24230dc944de5d552fa62c997214636c4deb4957cf354b",
+      "claim": "No OnAnimalUpdate registration in inspected build; bounded client scanner used."
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/ISUI/Animal/ISAnimalUI.lua",
+      "sha256": "3368b1ada1d17bad7a6f152e8a9f77948968425f8d7c8cf863b971f768a50bcf",
+      "lines": [
+        15,
+        15
+      ],
+      "claim": "getHealth and isExistInTheWorld used by vanilla UI."
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/shared/TimedActions/Animals/ISPetAnimal.lua",
+      "sha256": "e303c6654963b90a0bb3200f674dd78411c6bfa2d17c52d48b4fad914bf2e0a0",
+      "lines": [
+        26,
+        48
+      ],
+      "claim": "Numeric/string animation-variable setters used by vanilla animal action."
+    },
+    {
+      "container": "game-root",
+      "path": "media/lua/client/Vehicles/ISUI/ISVehicleMenu.lua",
+      "sha256": "805a7854f9f418becddc7626b6262d8665fc16129412b3a289ec623069be9f23",
+      "lines": [
+        775,
+        781
+      ],
+      "claim": "Nearby square inspection route."
+    },
+    {
+      "container": "game-root",
+      "path": "media/AnimSets/player/aim/aim.xml",
+      "sha256": "e5b9b3f3532b2fa74b8247ccdac80c5f73eeff36ef8ab66ae91475ce98691954",
+      "lines": [
+        8,
+        71
+      ],
+      "claim": "Scalar and nondegenerate blend triangles with off-axis duplicate."
+    },
+    {
+      "container": "game-root",
+      "path": "media/scripts/generated/animations_meshes.txt",
+      "sha256": "626bc19bc4a19c7849dbd1d79b375dbb61c2b5555f0d9545555c5b654f3cb5fd",
+      "lines": [
+        1,
+        1
+      ],
+      "claim": "Raccoon animationDirectory without prefix restriction; source inspected."
+    },
+    {
+      "container": "game-root",
+      "path": "media/actiongroups/raccoon/defaultTransitions.xml",
+      "sha256": "9cf72a1d4bc22c054e86991d2515d97a957450f1ffebcdf7a4128d68b5c85b45",
+      "lines": [
+        1,
+        44
+      ],
+      "claim": "Native state variable transition contracts; no source body redistributed."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/skinnedmodel/animation/AnimationPlayer.class",
+      "sha256": "06fc56e5aa626c808e8c6c0870dc87c10a957d86c7c22782be1d437d52b8bc28",
+      "claim": "updateBoneAnimationTransform_Internal 424-510 linearly blends position and sequentially interpolates rotation."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/math/PZMath.class",
+      "sha256": "1108e80daab0ccb6ca30f4ac16f70daca508a7271604b73af0f88895adab3fb1",
+      "claim": "slerp uses shortest-path quaternion SLERP only when 1-abs(dot) > .1; otherwise linear quaternion interpolation."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/core/skinnedmodel/HelperFunctions.class",
+      "sha256": "61009668619cf5aa676e7058fa572d129198d31f5be6a54200a77f508826ed19",
+      "claim": "CreateFromQuaternion normalizes nonunit quaternion before constructing the transform."
+    },
+    {
+      "container": "projectzomboid.jar",
+      "path": "zombie/characters/action/ActionState.class",
+      "sha256": "74731468b447eed090d507fb96dd11d9711362bf1276ebbc3766168e9ac4852b",
+      "claim": "Transition files are sorted by filename, then transitions stable-sorted by condition specificity; destination ordering preserved in our authored graph."
+    }
+  ],
+  "runtime": "NOT TESTED"
+}

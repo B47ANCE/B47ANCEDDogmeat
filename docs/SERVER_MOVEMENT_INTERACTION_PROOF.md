@@ -1,6 +1,6 @@
 # Server movement and interaction proof
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 **D3 BLOCKED; D4 EXPERIMENTAL.** Source-supported movement and timed-action candidates exist. No exclusive, session-fenced canine controller or recoverable physical interaction receipt has been proved. No movement/bond/training controller, timed-action wrapper or network endpoint is added.
 

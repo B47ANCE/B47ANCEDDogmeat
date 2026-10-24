@@ -1,6 +1,6 @@
 # Server-authenticated account identity alternative
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 **Server accounts are a feasible identity design candidate, but an automatic account provider is still BLOCKED.** Their names reach Lua as strings and avoid SteamID64 precision loss. A callback player's username is not yet proved to identify the connection's authenticated account on every supported creation/replacement path, and equal names do not prove the same account incarnation after deletion or recreation. No provider is adopted and no ownership/task controller is enabled.
 

@@ -1,0 +1,92 @@
+{
+  "sampled_maximum": {
+    "kind": "Look",
+    "error": 0.0039900964449633095,
+    "frame": 5,
+    "segment": 3,
+    "fraction": 0.5,
+    "health": 0.875,
+    "shift": [
+      -0.003270717716497673,
+      -2.2372804235962218e-08,
+      0.002285448590232681
+    ]
+  },
+  "per_clip": {
+    "Idle": {
+      "frames": 61,
+      "maximum": {
+        "error": 0.0039900245793746125,
+        "frame": 0,
+        "segment": 3,
+        "fraction": 0.5,
+        "health": 0.875,
+        "shift": [
+          -0.003270739224941366,
+          -2.214467035516597e-08,
+          0.0022852923370879977
+        ]
+      }
+    },
+    "Look": {
+      "frames": 91,
+      "maximum": {
+        "error": 0.0039900964449633095,
+        "frame": 5,
+        "segment": 3,
+        "fraction": 0.5,
+        "health": 0.875,
+        "shift": [
+          -0.003270717716497673,
+          -2.2372804235962218e-08,
+          0.002285448590232681
+        ]
+      }
+    },
+    "Walk": {
+      "frames": 37,
+      "maximum": {
+        "error": 0.003990044346967779,
+        "frame": 2,
+        "segment": 3,
+        "fraction": 0.5,
+        "health": 0.875,
+        "shift": [
+          -0.003270725112823447,
+          -2.2372685810727322e-08,
+          0.0022853470473026723
+        ]
+      }
+    },
+    "Run": {
+      "frames": 22,
+      "maximum": {
+        "error": 0.0039899880144444524,
+        "frame": 0,
+        "segment": 3,
+        "fraction": 0.5,
+        "health": 0.875,
+        "shift": [
+          -0.0032707273215821786,
+          -2.2144620015631995e-08,
+          0.0022852455322734735
+        ]
+      }
+    }
+  },
+  "max_anchor_error": 2.9711236801147455e-07,
+  "min_adjacent_quat_dot": 0.9899620680637388,
+  "frame_samples": 211,
+  "blend_samples": 85244,
+  "source_clip_count": 31,
+  "units": "source authoring coordinates",
+  "method": "serialized local PRS; shortest-path NLERP/SLERP; compare tail-root skin transform to neutral same frame",
+  "limitations": "double precision emulation; finite health grid; authored frames only; no temporal or state-transition blending; not PZ runtime evidence",
+  "immutable_models_match_recorded_sha256": {
+    "B47Dogmeat_GSD_Original.glb": "81b4e354a41560e6a1853711cc5d4c3abd1d33dd00e7740b21b9545ef5368f13",
+    "B47Dogmeat_GSD_Coat1.glb": "1eec0c11f824c19e8c319c3730998bb7224d534763cc0cfe265f84e4e1259a6c",
+    "B47Dogmeat_GSD_Coat2.glb": "3634d65cefcf2a6f99f9d5a1fc4c5c1e54600074a73d9b1992c48c7112dec888"
+  },
+  "status": "OFFLINE PASS",
+  "project_version": "0.2.0-dev.9"
+}

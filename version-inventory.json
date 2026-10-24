@@ -361,6 +361,10 @@
     {
       "path": "docs/GERMAN_SHEPHERD_INTEGRATION.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -550,6 +554,10 @@
     {
       "reference": "art/german_shepherd_native/",
       "reason": "Frozen gsd-native-rig-v001 authoring/native integration checkpoint recorded at 0.2.0-dev.8. Geometry/bind offline evidence and visual HOLD remain tied to this checkpoint; not PZ runtime verification."
+    },
+    {
+      "reference": "art/german_shepherd_motion/**",
+      "reason": "Frozen gsd-motion-v001 authoring evidence recorded at 0.2.0-dev.9; later version headers must not relabel its tests."
     }
   ]
 }

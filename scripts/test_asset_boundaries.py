@@ -3,7 +3,7 @@ import hashlib,json,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
 import build_loadable as build
-from validate_database_authority_proof import baseline_bytes
+from validate_database_authority_proof import baseline_bytes,TAIL_OPTION
 
 class ProofHeaders(unittest.TestCase):
     def test_metadata_header_only(self):
@@ -22,6 +22,13 @@ class ProofHeaders(unittest.TestCase):
     def test_lua_never_normalized(self):
         raw=b'local observed = "0.2.0-dev.8"\nreturn false\n'
         self.assertEqual(baseline_bytes('src/native/example.lua',raw),raw)
+    def test_tail_option_preserves_diagnostic_prefix(self):
+        prefix=b'VERSION = 1,\noption B47ANCEDDogmeat.PersistenceTestMode { default = false, }\n'
+        self.assertEqual(baseline_bytes('src/metadata/sandbox-options.txt',prefix+TAIL_OPTION),prefix)
+        changed=prefix.replace(b'false',b'true')
+        self.assertNotEqual(baseline_bytes('src/metadata/sandbox-options.txt',changed+TAIL_OPTION),prefix)
+        for raw in (prefix,prefix+TAIL_OPTION+TAIL_OPTION,prefix+TAIL_OPTION.replace(b'default = true',b'default = false')):
+            with self.assertRaises(ValueError):baseline_bytes('src/metadata/sandbox-options.txt',raw)
 
 class AssetMapping(unittest.TestCase):
     def setUp(self):

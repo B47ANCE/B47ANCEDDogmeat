@@ -1,6 +1,6 @@
 # Sandbox settings registry
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 Latest user-directed database/relationship/task proposal: [DATABASE_REDESIGN_SANDBOX.md](DATABASE_REDESIGN_SANDBOX.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
 
@@ -101,3 +101,15 @@ Existing-save policies: N=new decisions only/no reroll; P=prospective rates/acti
 Bindings/F-keys, hold/toggle radial, controller mappings, UI scale, roster pin/expand and alert/subtitle accessibility are client presentation preferences. They cannot change gameplay time, sound attraction, learning, health, identity, door access or shared difficulty. Do not expose UI coordinates, protocol internals, checksum/schema limits, queue sizes, pathfinding budgets or catch-up segmentation as gameplay micro-settings. Those implementation safety limits require documented rationale and performance tests; population/pack size and decay remain meaningful server choices.
 
 [Localization contract](LOCALIZATION_CONTRACT.md) gives each row Sandbox_<namespace>_<option> and tooltip keys plus enum labels. T-SANDBOX tests each default, boundary, quantization, invalid value, dependency, disabled transition and existing-save rule. Configuration categories do not prove native capability. All options remain NOT IMPLEMENTED and runtime NOT TESTED.
+
+
+## Implemented presentation option (dev.9)
+
+The 79-setting table above remains future gameplay design. Separately,
+`B47ANCEDDogmeat.TailHealthIndicator` is a boolean server sandbox option, default
+true, with localized name/tooltip and explicit English fallback. It controls only
+Shepherd tail presentation from native replicated health. Disabling restores
+neutral; existing saves need no migration or stored flag. Invalid/missing health
+uses neutral. Bounds are boolean; radius, cache and per-callback work limits are
+internal safety constants. See [motion and tail health](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
+Runtime and dedicated observer behavior remain NOT TESTED.

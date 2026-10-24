@@ -9,5 +9,7 @@
   "Sandbox_B47ANCEDDogTraining_OwnerAfterCharacterDeath_option2": "Require New Claim",
   "Sandbox_B47ANCEDDogmeat": "B47ANCED Dogmeat Test",
   "Sandbox_B47ANCEDDogmeat_PersistenceTestMode": "Persistence Test Mode",
-  "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip": "Enables the admin save/load diagnostic in a disposable world. Default off. Never initializes automatically. Disabling prevents new test requests and preserves existing records and carriers."
+  "Sandbox_B47ANCEDDogmeat_PersistenceTestMode_tooltip": "Enables the admin save/load diagnostic in a disposable world. Default off. Never initializes automatically. Disabling prevents new test requests and preserves existing records and carriers.",
+  "Sandbox_B47ANCEDDogmeat_TailHealthIndicator": "Tail Health Indicator",
+  "Sandbox_B47ANCEDDogmeat_TailHealthIndicator_tooltip": "Show native health through standing or moving Shepherd tail height: raised when healthy, lowered when injured. Unknown health, resting and death use their natural poses. Presentation only; does not change health or ownership. Disabling returns a neutral tail."
 }

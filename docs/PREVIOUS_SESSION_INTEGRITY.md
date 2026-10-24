@@ -1,6 +1,6 @@
 # Previous-session integrity
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 **BLOCKED.** A clean current-process hook check cannot certify the prior process. A matching restored native marker, private checkpoint and mutable animal integer can all describe a replayed representation. The independent private record remains useful; its association with the returning body is unproved.
 

@@ -398,7 +398,7 @@
     "zombie/core/znet/SteamFriend": true
   },
   "format_revision": 1,
-  "project_version": "0.2.0-dev.8",
+  "project_version": "0.2.0-dev.9",
   "observed_date": "2026-10-14",
   "source_baseline_commit": "41192a9df906654628f8a09b33823d65fa6c29ab",
   "game_version": "42.21",

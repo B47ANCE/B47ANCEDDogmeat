@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<animNode>
+  <m_Name>hitreaction1</m_Name>
+  <m_AnimName>B47Dogmeat_Hit_Neutral</m_AnimName>
+  <m_BlendTime>0.2</m_BlendTime>
+  <m_SpeedScale>1</m_SpeedScale>
+  <m_Looped>false</m_Looped>
+  <m_SyncTrackingEnabled>true</m_SyncTrackingEnabled>
+  <m_useDeferredMovement>false</m_useDeferredMovement>
+  <m_Events>
+    <m_EventName>PlayBreedSound</m_EventName>
+    <m_Time>Start</m_Time>
+    <m_ParameterValue>pain</m_ParameterValue>
+  </m_Events>
+</animNode>

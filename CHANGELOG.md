@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.9] - 2026-10-24
+
+- Development scope: compatible animation correction and optional native-health tail presentation. Continue the additive 0.2.0 MINOR prerelease; no save-schema, identity, or ownership change. Geometry and UVs remain immutable.
+- Replace rejected direct-raccoon motion with 31 original clips around dog joint pivots, fixed-length walk/trot limbs, rest and static death poses. Preserve all three GLBs, geometry, UVs, weights and textures. Add an independent action group/animation set; disable Shepherd fence climbing until a suitable traversal exists.
+- Add server-sandbox `TailHealthIndicator` (default true), reading native health for raised/lowered tails during idle/look/walk/run. Neutral on unknown/disabled; bounded transient client scanning with no health writes, saves, ownership or live task controls. Five health anchors limit sampled tail-base blend drift below 0.0041 source units.
+- 465 offline Lua cases, animation/graph/immutable-asset regressions and independent Assimp imports pass. Both coats have actual Blender gait and health renders. PZ import, speed/contact, state blending, health replication, 2.59M-triangle performance and dedicated multiplayer remain NOT TESTED. G7 and stable G8 remain BLOCKED. No deployment, publication or merge.
+
 ## [0.2.0-dev.8] - 2026-10-21
 
 - Rig the original Shepherd and both supplied coat variations to one native raccoon hierarchy, preserving geometry and UVs. Add three independent native types under a Shepherd group; preserve vanilla raccoons and the existing diagnostic carrier.

@@ -1,6 +1,6 @@
 # Project artwork
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 ## Current project thumbnail
 

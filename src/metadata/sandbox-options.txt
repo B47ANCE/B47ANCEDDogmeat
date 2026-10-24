@@ -6,3 +6,10 @@ option B47ANCEDDogmeat.PersistenceTestMode
     page = B47ANCEDDogmeat,
     translation = B47ANCEDDogmeat_PersistenceTestMode,
 }
+option B47ANCEDDogmeat.TailHealthIndicator
+{
+    type = boolean,
+    default = true,
+    page = B47ANCEDDogmeat,
+    translation = B47ANCEDDogmeat_TailHealthIndicator,
+}

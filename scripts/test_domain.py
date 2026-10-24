@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def runtime(directory):
     lua = LuaRuntime(unpack_returned_tuples=True, register_eval=False, register_builtins=False)
     lua.globals().package.path = ';'.join(str(ROOT / p).replace('\\', '/') for p in
-                                         ('src/domain/?.lua', 'src/native/?.lua', 'src/bootstrap/shared/?.lua', 'tests/lua/?.lua',
+                                         ('src/domain/?.lua', 'src/native/?.lua', 'src/bootstrap/shared/?.lua', 'src/bootstrap/client/?.lua', 'tests/lua/?.lua',
                                           'tests/runtime/account_binding/shared/?.lua'))
     lua.globals().package.cpath = ''
     def target(relative):
@@ -53,7 +53,7 @@ def main():
         directory = Path(temporary).resolve()
         for name, phase in [('ownership_spec.lua', None), ('storage_spec.lua', None), ('pairing_spec.lua', None),
                             ('provision_spec.lua', None), ('registration_spec.lua', None), ('shepherd_registration_spec.lua', None), ('bootstrap_spec.lua', None),
-                            ('identity_authority_spec.lua', None),
+                            ('identity_authority_spec.lua', None), ('shepherd_tail_health_spec.lua', None),
                             ('admission_spec.lua', None),
                             ('continuity_spec.lua', None),
                             ('database_transaction_spec.lua', None),

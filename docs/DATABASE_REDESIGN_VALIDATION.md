@@ -1,6 +1,6 @@
 # Database/relationship/task redesign validation
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 Baseline: `72b542a622e1d519cfb8912a0a4960311f388cb1`, Build 42.21 packaged Core version fields 42/21 and Steam build 25485521. Source/runtime applicability remains limited to exact inspected hashes; actual pristine SP/dedicated evidence is absent. The [source ledger](native-database-redesign-evidence.json) records D01–D07. No actual database, relationship/task controller, migration, runtime sandbox option or new game test is implemented.
 

@@ -32,12 +32,13 @@ for _,variant in ipairs(variants) do
     -- Explicit whole-body lifecycle placeholder until separate corpse art exists.
     definition.bodyModelSkel=variant.model;definition.bodyModelSkelNoHead=variant.model
     definition.textureSkeleton=variant.texture;definition.textureSkeletonBloody=variant.texture
-    definition.animset="raccoon";definition.group="b47germanshepherd"
+    definition.animset="b47germanshepherd";definition.group="b47germanshepherd"
     definition.stages={[variant.kind]={ageToGrow=base.minAge}}
     definition.mate=nil;definition.babyType=nil
     definition.male=true;definition.female=false
     definition.canBePicked=false;definition.canBePet=false;definition.canBeTransported=false
     definition.canBeAttached=false
+    definition.canClimbFences=false
     local breed=clone(assert(base.breeds.grey))
     breed.name=variant.breed;breed.texture=variant.texture;breed.textureMale=variant.texture
     breed.rottenTexture=variant.texture

@@ -10,6 +10,15 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 PROOF_BASELINE_VERSION = '0.2.0-dev.7'
 SHEPHERD_ADDITION = 'src/bootstrap/shared/B47ShepherdRegistration.lua'
+TAIL_ADDITION = 'src/bootstrap/client/B47ShepherdTailHealth.lua'
+TAIL_OPTION = b'''option B47ANCEDDogmeat.TailHealthIndicator
+{
+    type = boolean,
+    default = true,
+    page = B47ANCEDDogmeat,
+    translation = B47ANCEDDogmeat_TailHealthIndicator,
+}
+'''
 
 def baseline_bytes(relative, raw):
     """Permit only the current edition/version header, never new proof claims.
@@ -18,6 +27,12 @@ def baseline_bytes(relative, raw):
     Runtime Lua is never normalized. Other content must still hash identically.
     """
     raw=raw.replace(b'\r\n',b'\n')
+    if relative=='src/metadata/sandbox-options.txt':
+        # Reviewed presentation-only appended block. Still compare the complete
+        # diagnostic prefix against its original immutable proof fingerprint.
+        if not raw.endswith(TAIL_OPTION) or raw.count(TAIL_OPTION)!=1:
+            raise ValueError('Unexpected tail presentation option block')
+        return raw[:-len(TAIL_OPTION)]
     if relative=='src/metadata/mod.info':
         pattern=rb'(?m)^(modversion=)[^\r\n]+$'
     elif relative=='src/metadata/runtime-options.json' or relative.startswith('docs/native-'):
@@ -59,8 +74,8 @@ def check():
     if d['offline_validation']['combined_pair_rollback_detection'] is not False or d['offline_validation']['durable_native_commit_proven'] is not False:
         errors.append('Unsupported durability claim')
     inventory = json.loads((ROOT / 'source-inventory.json').read_text(encoding='utf-8'))
-    if set(d['production_sources']) | {SHEPHERD_ADDITION} != set(inventory['authoritative_lua']):
-        errors.append('Unreviewed production additions outside Shepherd registration')
+    if set(d['production_sources']) | {SHEPHERD_ADDITION,TAIL_ADDITION} != set(inventory['authoritative_lua']):
+        errors.append('Unreviewed production additions outside Shepherd registration/presentation')
     for group in ('production_sources', 'production_metadata', 'historical_manifests'):
         for relative, expected in d[group].items():
             path = ROOT / relative

@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "dog",
   "name": "Dogmeat",
-  "version": "0.2.0-dev.8",
+  "version": "0.2.0-dev.9",
   "reviewed": true,
-  "source_digest": "be8d8e10b9515b9a0ac663168dc2e473cdf61069556ae9bdb80cfd3cca877d0d",
+  "source_digest": "d2b88c039eadf2718a9cf49808bed28c146c02e0f56881f4880672bc36efbf7a",
   "features": [
     {
       "status": "Foundation",
@@ -28,10 +28,14 @@
     },
     {
       "status": "Foundation",
-      "text": "Original Shepherd and both supplied coat variations bound to one raccoon hierarchy with immutable geometry/UVs. Three independent native animal types share a Shepherd group; vanilla raccoons and existing test carrier are unchanged. Native locomotion visual acceptance is HOLD."
+      "text": "Original Shepherd and both supplied coat variations use one raccoon hierarchy with unchanged geometry/UVs. Original dog-pivot clips and independent action/animation graphs correct the offline gait candidate. Vanilla raccoons and test carrier are unchanged."
+    },
+    {
+      "status": "Implemented",
+      "text": "Optional local tail-health presentation reads native replicated health under a server sandbox setting; unknown/disabled stays neutral. No health writes or ownership/task activation. Offline tested only."
     }
   ],
-  "limits": "Published Workshop3822584314 remains dev.7 default-off raccoon diagnostic. Dev.8 Shepherd rigs/registration are source candidates: 2.59M triangles each, native gait distortion, PZ loading/performance/save-load NOT TESTED. Ownership/live tasks disabled. 439 offline Lua cases PASS; G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
+  "limits": "Published Workshop item 3822584314 remains dev.7 default-off raccoon diagnostic. Dev.9 motion/health source candidate: 2.59M triangles per model, PZ import/speed/contact/state blending/health replication/save-load NOT TESTED. Shepherd climbing disabled. Ownership/live tasks disabled. 465 offline Lua cases PASS; G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
   "evidence": [
     "README.md",
     "source-inventory.json",
@@ -42,7 +46,11 @@
     "art/german_shepherd_selected/README.md",
     "art/german_shepherd_selected/coats/README.md",
     "docs/GERMAN_SHEPHERD_INTEGRATION.md",
-    "art/german_shepherd_native/README.md"
+    "art/german_shepherd_native/README.md",
+    "docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md",
+    "art/german_shepherd_motion/README.md",
+    "art/german_shepherd_motion/validation/motion.json",
+    "art/german_shepherd_motion/validation/tail-blends.json"
   ],
   "relations": []
 }

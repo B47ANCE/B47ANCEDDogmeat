@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<animNode>
+  <m_Name>idleSit</m_Name>
+  <m_AnimName>B47Dogmeat_Lie_Neutral</m_AnimName>
+  <m_BlendTime>0.2</m_BlendTime>
+  <m_SpeedScale>1</m_SpeedScale>
+  <m_Looped>true</m_Looped>
+  <m_SyncTrackingEnabled>true</m_SyncTrackingEnabled>
+  <m_useDeferredMovement>false</m_useDeferredMovement>
+  <m_Conditions>
+    <m_Name>idleAction</m_Name>
+    <m_Type>STRING</m_Type>
+    <m_Value>sit</m_Value>
+  </m_Conditions>
+  <m_Transitions>
+    <m_Target>idle</m_Target>
+    <m_AnimName>B47Dogmeat_GetUp_Neutral</m_AnimName>
+    <m_blendInTime>0.15</m_blendInTime>
+    <m_blendOutTime>0.15</m_blendOutTime>
+  </m_Transitions>
+  <m_Transitions>
+    <m_Target>idle2</m_Target>
+    <m_AnimName>B47Dogmeat_GetUp_Neutral</m_AnimName>
+    <m_blendInTime>0.15</m_blendInTime>
+    <m_blendOutTime>0.15</m_blendOutTime>
+  </m_Transitions>
+  <m_Transitions>
+    <m_Target>idle3</m_Target>
+    <m_AnimName>B47Dogmeat_GetUp_Neutral</m_AnimName>
+    <m_blendInTime>0.15</m_blendInTime>
+    <m_blendOutTime>0.15</m_blendOutTime>
+  </m_Transitions>
+</animNode>

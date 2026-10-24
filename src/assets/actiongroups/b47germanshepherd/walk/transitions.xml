@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<transitions>
+  <transition>
+    <transitionTo>eating</transitionTo>
+    <conditions>
+      <isTrue>isAnimalEating</isTrue>
+    </conditions>
+  </transition>
+  <transition>
+    <transitionTo>falldown</transitionTo>
+    <conditions>
+      <isTrue>bDead</isTrue>
+      <isFalse>bOnFloor</isFalse>
+    </conditions>
+  </transition>
+  <transition>
+    <transitionTo>hitreaction</transitionTo>
+    <conditions>
+      <isTrue>hashitreaction</isTrue>
+    </conditions>
+  </transition>
+  <transition>
+    <transitionTo>idle</transitionTo>
+    <conditions>
+      <isFalse>bMoving</isFalse>
+    </conditions>
+  </transition>
+  <transition>
+    <transitionTo>onground</transitionTo>
+    <conditions>
+      <isTrue>bDead</isTrue>
+      <isTrue>bOnFloor</isTrue>
+    </conditions>
+  </transition>
+  <transition>
+    <transitionTo>pathfind</transitionTo>
+    <conditions>
+      <isTrue>bPathfind</isTrue>
+    </conditions>
+  </transition>
+</transitions>

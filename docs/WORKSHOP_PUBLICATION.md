@@ -1,6 +1,6 @@
 # Workshop publication record
 
-Project Version: 0.2.0-dev.8
+Project Version: 0.2.0-dev.9
 
 Current dev.8 adds Shepherd registration/assets beyond the historical dev.7 publication audit. The old receipt and native source observations remain historical; they do not prove new model loading, animation, persistence or performance. Native locomotion visual acceptance is HOLD. No upload occurred in this iteration. See [the integration contract](GERMAN_SHEPHERD_INTEGRATION.md).
 

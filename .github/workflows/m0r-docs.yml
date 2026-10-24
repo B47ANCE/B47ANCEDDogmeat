@@ -22,6 +22,8 @@ jobs:
         run: python3 -B scripts/test_asset_boundaries.py
       - name: Native model inputs and offline bind contract
         run: python3 -B scripts/check_native_assets.py
+      - name: Shepherd clip, graph and immutable-geometry contracts
+        run: python3 -B scripts/test_shepherd_motion.py
       - name: Canonical version and current mirrors
         run: python3 -B scripts/check_versions.py --root . --json
       - name: Documentation and design contracts only
@@ -33,6 +35,10 @@ jobs:
       - name: Isolated offline Lua test dependency
         run: |
           python3 -m venv .ci-venv
-          .ci-venv/bin/python -m pip install --disable-pip-version-check lupa==2.6
+          .ci-venv/bin/python -m pip install --disable-pip-version-check lupa==2.6 assimp_py==1.1.0 numpy==2.3.5
+      - name: Independent Assimp parser for authored animation files
+        run: .ci-venv/bin/python -B scripts/check_motion_imports.py
+      - name: Serialized tail-root blend drift regression
+        run: .ci-venv/bin/python -B scripts/check_tail_blends.py
       - name: Execute Lua 5.1 domain tests (not PZ runtime)
         run: .ci-venv/bin/python -B scripts/test_domain.py

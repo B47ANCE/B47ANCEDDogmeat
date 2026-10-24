@@ -28,7 +28,15 @@ def check(all_files=False):
         for relative,expected in manifest['files'].items():
             path=(folder/relative).resolve();assert path.is_relative_to(folder.resolve())
             assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
-    print(json.dumps({'status':'OFFLINE PASS','models':checked,'runtime':'NOT TESTED','visual_acceptance':'HOLD','all_checkpoint_files':all_files}))
+    motion=ROOT/'art/german_shepherd_motion'
+    if all_files and (motion/'manifest.json').exists():
+        for relative,expected in json.loads((motion/'manifest.json').read_text())['files'].items():
+            path=(motion/relative).resolve();assert path.is_relative_to(motion.resolve())
+            assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
+    print(json.dumps({'status':'OFFLINE PASS','models':checked,'runtime':'NOT TESTED',
+        'historical_dev8_native_gait_acceptance':'HOLD',
+        'current_motion':'Original dog-pivot candidate; see motion checkpoint; PZ NOT TESTED',
+        'all_checkpoint_files':all_files}))
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--all',action='store_true');args=parser.parse_args();check(args.all)
