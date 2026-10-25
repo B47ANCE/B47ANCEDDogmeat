@@ -1,6 +1,6 @@
 # Disposable root-account binding experiment
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 This is an explicit, read-only diagnostic overlay for B47ANCEDDogmeat, excluded from ordinary assembly. It never grants ownership, installs a principal provider, writes a registry, restores a lease, spawns an animal or controls a task. Keep PersistenceTestMode off for this account-only experiment. The raccoon registration and deferred model remain unchanged.
 

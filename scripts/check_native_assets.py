@@ -4,7 +4,7 @@ from pathlib import Path
 from build_loadable import sources,ROOT
 
 def check(all_files=False):
-    folder=ROOT/'art/german_shepherd_native'
+    folder=ROOT/'art/german_shepherd_motion_v2'
     report=json.loads((folder/'validation/native-bind.json').read_text())
     assert report['runtime']=='NOT TESTED' and report['bone_nodes']==34 and report['deforming_bones']==25
     assert report['bind_reference']=='Rac_Idle01 frame zero'
@@ -17,6 +17,19 @@ def check(all_files=False):
         magic,version,length=struct.unpack_from('<III',raw);assert magic==0x46546c67 and version==2 and length==len(raw)
         size,kind=struct.unpack_from('<II',raw,12);assert kind==0x4e4f534a
         doc=json.loads(raw[20:20+size]);assert len(doc['skins'])==1 and not doc.get('animations')
+        proof=report['skin_attribute_proof'][model]
+        assert proof['all_non_skin_bytes_unchanged']
+        masked=bytearray(raw);binary_offset=28+size
+        for mesh in doc['meshes']:
+            for primitive in mesh['primitives']:
+                for attribute in ('JOINTS_0','WEIGHTS_0'):
+                    accessor=doc['accessors'][primitive['attributes'][attribute]]
+                    view=doc['bufferViews'][accessor['bufferView']]
+                    width={5121:1,5123:2,5126:4}[accessor['componentType']]*4
+                    assert view.get('byteStride',width)==width
+                    start=binary_offset+view.get('byteOffset',0)+accessor.get('byteOffset',0)
+                    masked[start:start+accessor['count']*width]=b'\0'*(accessor['count']*width)
+        assert hashlib.sha256(masked).hexdigest()==proof['unchanged_non_skin_bytes_sha256']
         assert len(doc['skins'][0]['joints'])==25
         assert doc['accessors'][doc['meshes'][0]['primitives'][0]['indices']]['count']==2590138*3
         assert variant['unchanged_source_geometry_uv'] and variant['geometry_uv_source_sha256']==variant['geometry_uv_bound_sha256']
@@ -28,14 +41,16 @@ def check(all_files=False):
         for relative,expected in manifest['files'].items():
             path=(folder/relative).resolve();assert path.is_relative_to(folder.resolve())
             assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
-    motion=ROOT/'art/german_shepherd_motion'
-    if all_files and (motion/'manifest.json').exists():
-        for relative,expected in json.loads((motion/'manifest.json').read_text())['files'].items():
-            path=(motion/relative).resolve();assert path.is_relative_to(motion.resolve())
-            assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
+    if all_files:
+        for historical in ('german_shepherd_native','german_shepherd_motion'):
+            checkpoint=ROOT/'art'/historical
+            for relative,expected in json.loads((checkpoint/'manifest.json').read_text())['files'].items():
+                path=(checkpoint/relative).resolve();assert path.is_relative_to(checkpoint.resolve())
+                assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
     print(json.dumps({'status':'OFFLINE PASS','models':checked,'runtime':'NOT TESTED',
         'historical_dev8_native_gait_acceptance':'HOLD',
-        'current_motion':'Original dog-pivot candidate; see motion checkpoint; PZ NOT TESTED',
+        'historical_dev9_visual_acceptance':'REJECTED by user',
+        'current_motion':'Reweighted fitted-motion v2 candidate; PZ NOT TESTED',
         'all_checkpoint_files':all_files}))
 
 if __name__=='__main__':

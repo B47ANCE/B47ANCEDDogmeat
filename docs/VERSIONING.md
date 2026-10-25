@@ -1,8 +1,8 @@
 # Version inventory
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
-Current iteration: 0.2.0-dev.8 adds the separate native Shepherd registration and preserved coat rigs. The published dev.7 package/receipt stays historical; no migration or stable-release claim. See [German Shepherd integration](GERMAN_SHEPHERD_INTEGRATION.md).
+Current iteration: 0.2.0-dev.10 is a compatible visual correction within the additive 0.2.0 MINOR prerelease. It revises skinning/motion and preserves geometry, UVs, textures, animal IDs and schemas. Dev.9's rejected visual checkpoint and published dev.7 remain historical. See [motion evidence](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
 
 ## Historical development narrative through 0.2.0-dev.7
 

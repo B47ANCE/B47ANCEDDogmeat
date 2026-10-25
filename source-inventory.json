@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "project_version": "0.2.0-dev.9",
+  "project_version": "0.2.0-dev.10",
   "status": "Development Shepherd motion and read-only native-health presentation; ownership/live task control disabled; PZ NOT TESTED",
   "authoritative_lua": [
     "src/bootstrap/client/B47DogTestMenu.lua",
@@ -186,19 +186,19 @@
   },
   "runtime_assets": [
     {
-      "source": "art/german_shepherd_native/models/B47Dogmeat_GSD_Original.glb",
+      "source": "art/german_shepherd_motion_v2/models/B47Dogmeat_GSD_Original.glb",
       "target": "42/media/models_X/Skinned/B47Dogmeat_GSD_Original.glb",
-      "sha256": "81b4e354a41560e6a1853711cc5d4c3abd1d33dd00e7740b21b9545ef5368f13"
+      "sha256": "334e0d5286bec82f83627f0be315be2e8961a42f6840e571614f3c80a50cdf3f"
     },
     {
-      "source": "art/german_shepherd_native/models/B47Dogmeat_GSD_Coat1.glb",
+      "source": "art/german_shepherd_motion_v2/models/B47Dogmeat_GSD_Coat1.glb",
       "target": "42/media/models_X/Skinned/B47Dogmeat_GSD_Coat1.glb",
-      "sha256": "1eec0c11f824c19e8c319c3730998bb7224d534763cc0cfe265f84e4e1259a6c"
+      "sha256": "c5aef907e5f10375d1155b3f4d96c675726d5bd3d6f8eaa1aa2997aecac2f38e"
     },
     {
-      "source": "art/german_shepherd_native/models/B47Dogmeat_GSD_Coat2.glb",
+      "source": "art/german_shepherd_motion_v2/models/B47Dogmeat_GSD_Coat2.glb",
       "target": "42/media/models_X/Skinned/B47Dogmeat_GSD_Coat2.glb",
-      "sha256": "3634d65cefcf2a6f99f9d5a1fc4c5c1e54600074a73d9b1992c48c7112dec888"
+      "sha256": "654ef35cb1e31c972361ca4c78968f2c96d58ff5f8289ee78c339a8445cd4b36"
     },
     {
       "source": "art/german_shepherd_native/textures/B47Dogmeat_GSD_Original.png",
@@ -226,161 +226,6 @@
       "sha256": "45527983dd84215e2277d85bdb48a0c718c8c9a0bb9000fd7721d6e4a25c4c97"
     },
     {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Dead_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Dead_Neutral.x",
-      "sha256": "d745f64942716b950f71c416108c0cce32fa4a7ea9ada65545fd3836fc26bd68"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Death_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Death_Neutral.x",
-      "sha256": "8bc1637373ea9f1c1de06be30e400bfd18acbee0504ca279936318d6ae60c09a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Eat_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Eat_Neutral.x",
-      "sha256": "f36f4eef0e2f3b2a05f733e4db816f47556839d4d993e41289e88f99d089f35e"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_GetUp_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_GetUp_Neutral.x",
-      "sha256": "bee1fbe0441a15430bcedd650d512322c70e5cdfb16b6de4265e2ee195bf7b8a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Hit_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Hit_Neutral.x",
-      "sha256": "1ef2df6fcd6c96107d3461acd3ea99f7e93f68c9e8ac3520de739fe9bcc07d6d"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Idle_H25.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H25.x",
-      "sha256": "8bb480c469831a2944db31aa7e61815c2eeff70285f337eeb4ea2ce19fb0a587"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Idle_H50.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H50.x",
-      "sha256": "135f37fae414a91c75626671541f003ec9cb76b1608d9c83271b3f1d2833b3a7"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Idle_H75.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H75.x",
-      "sha256": "21a2ada3fe264ae8e41db021e9ff4a2960a73b78380a2e48b94b771473797983"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Idle_High.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_High.x",
-      "sha256": "c73926c6c1fc58423745116c813cf243f720c020ce5d77590b07979c4ad12dad"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Idle_Low.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_Low.x",
-      "sha256": "cb52d6a67181cd5da3d69bddd4861d7e0472890cf95d4c64483e79282e85c98a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Idle_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_Neutral.x",
-      "sha256": "1c71b6ca7f3d6b0e94ee18c2fe9dd1b78743254f4f68c730e5e1f81a070c0320"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Lie_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Lie_Neutral.x",
-      "sha256": "edb735d5376bc300466b2e2df244a2cc52cc30d6715440403ed172ffdf397ef5"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_LieDown_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_LieDown_Neutral.x",
-      "sha256": "75f175bf9a091748da8acf63331430db917903a8330e7ec44368244582354fbe"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Look_H25.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H25.x",
-      "sha256": "abaeca10d652080f75e6417f34f007b31c4851c6ecb7b235eaab18bdf4d620b8"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Look_H50.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H50.x",
-      "sha256": "505f90e1948b02b11718391cc3cc8041fa16ef1067dedf1bdf995c4af7dd920a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Look_H75.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H75.x",
-      "sha256": "fe4703b8cf97950f91aa676ecddcf110aab1333a5858f83cc69ae95fe31127ad"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Look_High.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_High.x",
-      "sha256": "6163cb8047b363b71d496fa4e25a0c126b0c4ed0d2a2310e3bfa81d523c323e1"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Look_Low.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_Low.x",
-      "sha256": "e594f84feb060f03c705676c667af66f1a287ab35a5765bb5eab769c5853afd2"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Look_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_Neutral.x",
-      "sha256": "6cbc21d2418c215381e735e84162c2815d70b5f0daa2e2b3a1aeaac3a8a5d66a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Run_H25.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H25.x",
-      "sha256": "96ee395ceddf7fbae13877cfc32670d954e1f872eaa458934188d4d19fca2b5c"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Run_H50.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H50.x",
-      "sha256": "08e9b78f904c99588f4398e0c96a4aca7c3a0f18c041e7aeb87d4353c1cec027"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Run_H75.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H75.x",
-      "sha256": "bc0254ef0c7a6142daf0b61bdcf426523829be419b40ac7fed4be982096ac12a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Run_High.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_High.x",
-      "sha256": "0add9e37252ca2ad55140de783cccf6ac49b0cae1e006816a09f4426c82fa334"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Run_Low.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_Low.x",
-      "sha256": "2804d1c99de7f8056eb7dbb02da21d0ee706380924a3a3edb90e44d379e94030"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Run_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_Neutral.x",
-      "sha256": "bbddd5335afe816111403fa72b8140e99304cb657c5aac1d09857dc6c8de674c"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Walk_H25.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H25.x",
-      "sha256": "05322b0e5e7c9be1ef2096f7b89e000d6f6ab718ecbd3a0336ec4946fae23b15"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Walk_H50.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H50.x",
-      "sha256": "4ad2960d479229b1742dc890a63054a1084c4d84075b30d2aafe495763b4e976"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Walk_H75.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H75.x",
-      "sha256": "fb9ee615493f192bea2f22ecb3894d03b45639b31382f8fdffb9eb4ba4b05e93"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Walk_High.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_High.x",
-      "sha256": "0f070987446ff08f42c26f6597895fa4ca43f91673cc20225c5b0a8f7d6f443a"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Walk_Low.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_Low.x",
-      "sha256": "2cde8741bf31f1680a2f58b25a7de33faf3bab22cbaf20963502d21ae42f0310"
-    },
-    {
-      "source": "art/german_shepherd_motion/anims/B47Dogmeat_Walk_Neutral.x",
-      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_Neutral.x",
-      "sha256": "61e328ea080d3af9fbef4b339d5414db742e97653b57599e1d675336e77cf8dd"
-    },
-    {
       "source": "src/assets/AnimSets/b47germanshepherd/deadbody/deadbody.xml",
       "target": "42/media/AnimSets/b47germanshepherd/deadbody/deadbody.xml",
       "sha256": "fb7e6045c8ca6b4b227f5771173255c69e985e6bf8625b9a482007696fdff1dd"
@@ -403,12 +248,12 @@
     {
       "source": "src/assets/AnimSets/b47germanshepherd/followwall/defaultWalk.xml",
       "target": "42/media/AnimSets/b47germanshepherd/followwall/defaultWalk.xml",
-      "sha256": "c4b937407beb64b5cf3dcf45ca6fce7e66bd39765519e3318ed4a70c8ba60ae4"
+      "sha256": "887419ae6e02c9260e398b0c4db4836d6266287aa30ac75134fff1ac0801fc48"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/followwall/run.xml",
       "target": "42/media/AnimSets/b47germanshepherd/followwall/run.xml",
-      "sha256": "c22cc54a621f6f434f76b64c17b85e6b03c78154d5e6672b7ffaf020c386296d"
+      "sha256": "16395de2e1e3b26cb101b9068342cd68d41ca2db26f6f32adeb8cf63d3e1150e"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/hitreaction/hitreaction1.xml",
@@ -418,17 +263,17 @@
     {
       "source": "src/assets/AnimSets/b47germanshepherd/idle/idle.xml",
       "target": "42/media/AnimSets/b47germanshepherd/idle/idle.xml",
-      "sha256": "cc9dbe6925a461f0de391d6bda9d94d424fe03e5b0948bdd629b18a10fdf90e8"
+      "sha256": "66f54d7a4a329e53ce25ccfced2fcdd3ac4a3d500045bc3ba2c4e061e27e85be"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/idle/idle2.xml",
       "target": "42/media/AnimSets/b47germanshepherd/idle/idle2.xml",
-      "sha256": "b3e3d1cd38c2c45279f16845708c8ee56c0587fdc05e4867952a8636b90a670d"
+      "sha256": "56f7646f0282824cc810823b717273dd0246d2b703ea6521d4aff1e9b6597bcd"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/idle/idle3.xml",
       "target": "42/media/AnimSets/b47germanshepherd/idle/idle3.xml",
-      "sha256": "82b5ae98e75e4f314aeb744a95b81db14a6679e61cd4b87a4b729f80dd761d3e"
+      "sha256": "f02234940a877ef0e523cc913e3a84556e341c3d732d534bef6d200a6296baa0"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/idle/idleSit.xml",
@@ -443,27 +288,27 @@
     {
       "source": "src/assets/AnimSets/b47germanshepherd/pathfind/defaultPathfind.xml",
       "target": "42/media/AnimSets/b47germanshepherd/pathfind/defaultPathfind.xml",
-      "sha256": "c87fbf983e08673e6b3f32564fa3bfbed71f95ed3b43d9300386cc2ef51ceb0e"
+      "sha256": "d16f6cbd103b0e1efab497715bafe76fa9996ce9df242263714d3dc93e624972"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/pathfind/pathfindWait.xml",
       "target": "42/media/AnimSets/b47germanshepherd/pathfind/pathfindWait.xml",
-      "sha256": "6713595801c46498ed3c2a37615c7fe7b96f89ddb020642f63fa0f7b10ed5030"
+      "sha256": "952c9daa5df82ad96844b4640933124642225c3d45cc60508e8c78334a839a4b"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/pathfind/runPathfind.xml",
       "target": "42/media/AnimSets/b47germanshepherd/pathfind/runPathfind.xml",
-      "sha256": "a72848ffa139f7c8db8d8adac5bd1520812032c64fc5ebd72588ee17851226f6"
+      "sha256": "8955c8f79284d23a862b26d82b3efb43cc5f8c17cbf0b29edbb2dd99c744a526"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/walk/defaultWalk.xml",
       "target": "42/media/AnimSets/b47germanshepherd/walk/defaultWalk.xml",
-      "sha256": "d1a4fc4cc2fa52089af026b7f8d017c9cf8b00b18e1d5086c3ddcf8116611adb"
+      "sha256": "f426c15cc1c05f0d35a370fec2e860962cad4a0424411409049046ef647a8a86"
     },
     {
       "source": "src/assets/AnimSets/b47germanshepherd/walk/run.xml",
       "target": "42/media/AnimSets/b47germanshepherd/walk/run.xml",
-      "sha256": "d0b2935c16f9808a824c6a6e1003bf594e91021d7cdd575d07a8cf2dbd55c571"
+      "sha256": "3886e06891ab2af7d4eaf578cfcef99fb83c9a85fdf1b326a5b5fb951896fac3"
     },
     {
       "source": "src/assets/actiongroups/b47germanshepherd/actionGroup.xml",
@@ -569,6 +414,241 @@
       "source": "src/assets/actiongroups/b47germanshepherd/walk/transitions.xml",
       "target": "42/media/actiongroups/b47germanshepherd/walk/transitions.xml",
       "sha256": "7d49cd5f5d9b417d5f0e7d28faf27fef9aa89f99679c80c757487aa5d715d13c"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Dead_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Dead_Neutral.x",
+      "sha256": "9f21311ae651022f530615bfeb8e5b289e71eb19f92cf85a8cb41f17596a065f"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Death_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Death_Neutral.x",
+      "sha256": "cd225a7fa71f43f5adfd34191058bb242ce28f7c29454d81a80f7bbb8c4978c0"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Eat_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Eat_Neutral.x",
+      "sha256": "a22e3f7b09d4eeaec7b3c6f7533bb35f023a21f820ea752833327b91908db1e4"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_GetUp_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_GetUp_Neutral.x",
+      "sha256": "ed8e6171f7ddff8839b6bc498e40dbd737d07d188f898cf90f04be1d91b41e70"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Hit_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Hit_Neutral.x",
+      "sha256": "02ea7c00fd3c0dda4f5ff1ba9745ea76794a35dadd3ff4861b662f92b79459ba"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H125.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H125.x",
+      "sha256": "d99651a2a897be75e1e250a1adce4bde69e1b17b192011b03e1cbfa5246be2d1"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H25.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H25.x",
+      "sha256": "906ee4fda8146a356b05de97bf1d257df9661c684723f4bc723ba6a4c3b26f77"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H375.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H375.x",
+      "sha256": "09d1bd9a268f053ff708f2e8085e0f5760f7007da48c9d6460a2edea4df4f03c"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H50.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H50.x",
+      "sha256": "224592fa4e125c66a43963ef8dac88f257046c2b9a1f1f32da881dfc26efc7c3"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H625.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H625.x",
+      "sha256": "d615e212ce0fb0ee78b79606f4849d3f097facc31bb37612abcc0acdf32190dd"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H75.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H75.x",
+      "sha256": "8608e0d1a39ed71a50100caf1413493888d5ea29c687ddc499448ce9d3a20d6f"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_H875.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_H875.x",
+      "sha256": "377bcdb39b6e3da868c3775908784c6231a4d75df49b9044d1dac210923fc825"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_High.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_High.x",
+      "sha256": "28baa123798a99eced26ae4afa56371e55851543a0b06e6a28db9450f3bbf064"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_Low.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_Low.x",
+      "sha256": "046c87ddc266fb05498d71d12256247b805c3b849e7c1a490791b6d775dbb9da"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Idle_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Idle_Neutral.x",
+      "sha256": "f3e690d2822bbacc981188870e65b102f08f11fd14193d48d4c7c8c69077abb1"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Lie_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Lie_Neutral.x",
+      "sha256": "b1c330682cf6740d73920b1c69a32f4120407727f0b017d5848a3749d5212bf6"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_LieDown_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_LieDown_Neutral.x",
+      "sha256": "c812af7da1748ffcbae5ec4905e655e547dc05c9f66821fe88a293942d900aae"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H125.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H125.x",
+      "sha256": "4341bf76622f1f713063eb4a916746dace43ef118296d4de895758ca20c04d7b"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H25.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H25.x",
+      "sha256": "0ed01838f4e8471a976c9d64fc8ef0082a8bce447b8109450972a40135db8160"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H375.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H375.x",
+      "sha256": "6d4eb5e144c8bb0ff01ef75f159a721a60f5bdcd88f6e71412929931e575a1c4"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H50.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H50.x",
+      "sha256": "0ad9f22d90d5af355a48539927e7b0572dc20b961696c4069fe17a78c46f3146"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H625.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H625.x",
+      "sha256": "3aca1cc93fc6b011b96772f0bfb111e45fac072c003de8f47f11b5b80d629102"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H75.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H75.x",
+      "sha256": "c6fcb586b24f7c3aaa8128a5146a8e8207389558e772f263cea53dcd1f8afffe"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_H875.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_H875.x",
+      "sha256": "dfa61e7bb45dc6464c9bfc8eaa4e171be9fe00f778b013addd167fae6aff634f"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_High.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_High.x",
+      "sha256": "f2c9be46e10c451df40f9bafd3ca6e49502468324c4578290283c6eb834cf76a"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_Low.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_Low.x",
+      "sha256": "590504b0c4b3287ba864a85d5ba4b6a110e5ccee94c712b72c2d2dbde14e7c3e"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Look_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Look_Neutral.x",
+      "sha256": "4b9d53b2f81f20788433453b826fe7edec6c297afe1d45a569f8834c26bdd263"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H125.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H125.x",
+      "sha256": "67db91505e15793ee6691b7e3f58c435d9a21e6b1072f10c2f20963cf235364f"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H25.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H25.x",
+      "sha256": "ec06d3e92196b16e820e6f1d33b0db6fa15c959e896106c2010fd6d65a2c15dd"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H375.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H375.x",
+      "sha256": "30aa3f446f6769732cfe121109b7b844729b58c0bd23a79724b41a10fe61daee"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H50.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H50.x",
+      "sha256": "8830423b3d4d0ce914b993d00b906440d4c4929567d8565952864c1c38968a7c"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H625.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H625.x",
+      "sha256": "3af4da01e4946dd35b251421b6417a3d78af4b69d3a851dbfd4f4bde11ef392c"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H75.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H75.x",
+      "sha256": "be791bf7e33dc402dbac77954ae42209f6ddec490920344cf7b2325610841b16"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_H875.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_H875.x",
+      "sha256": "4dccc784db072a8d1ae446b678105894b4390e3390092fc055de9f7ee9e69c93"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_High.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_High.x",
+      "sha256": "cd3d66285e96e33fb0a213f5ddbc4619ab56306d6728ccffc74c4ac67d23f680"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_Low.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_Low.x",
+      "sha256": "00d968caf90a43aba33ccd0636856ab078d9b01690da23ed3d28bae861ad709b"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Run_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Run_Neutral.x",
+      "sha256": "ac352dc40eef3b2a753e158c13ed7dfb947f9cc1f7d0a6194e0ade51bd9b91b7"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H125.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H125.x",
+      "sha256": "b7b0897e999357c93585b15ddbb294d00ebeba836b7a849807694ef8841dbb3e"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H25.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H25.x",
+      "sha256": "113f5e21b30bd02e8c9ef06885606bc1d0172b54155ffef43ab2039656425690"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H375.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H375.x",
+      "sha256": "ec812951470ab90ca112cafa8e0e554d367dad6c5fc73edbac8239c80216eb26"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H50.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H50.x",
+      "sha256": "4d728657745dd8eac445973750825e0643f90f8f2812100bcfdbe3815e55d1e7"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H625.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H625.x",
+      "sha256": "ffec7dfab6e6cf44236385df6aaf96ee3fdd502cc2bf73c01644ab025af5deee"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H75.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H75.x",
+      "sha256": "237de6de70fadb4c7ac13ab1a68b461ed4fd268995233b8d79dd7e51cedf5d86"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_H875.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_H875.x",
+      "sha256": "ce318a81eb9a69f19b4464b3d6ca0acf4a156c093f798bee186916fcef64f6c1"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_High.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_High.x",
+      "sha256": "6d2cc338c331187ea973a45b535271534ee50aee889b1c5c00bd55749367e0c5"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_Low.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_Low.x",
+      "sha256": "d733766391af5bc7e3e62d9cefe0ed4588f2e289e49ba271df238e8dd6d4d2c4"
+    },
+    {
+      "source": "art/german_shepherd_motion_v2/anims/B47Dogmeat_Walk_Neutral.x",
+      "target": "42/media/anims_X/Raccoon/B47Dogmeat_Walk_Neutral.x",
+      "sha256": "118dc93522711ee9690db7fae641cfa1d622ad1d7f904e31e8c8a6cb770638fd"
     }
   ],
   "presentation_options": [

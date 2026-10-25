@@ -1,6 +1,6 @@
 # Database authority proof decision and validation
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 **NO-GO.** Secure automatic persistent multiplayer dogs cannot yet be enabled under the required Lua-only authority/lifecycle guarantees. The new audit confirms a connection-scoped command player and useful native action candidates, but does not establish a lossless server principal, authentic lifecycle/reconciliation, exclusive task producer or durable native/private commit. Existing Option A NO-GO remains effective. Neither GO nor CONDITIONAL GO is justified by the test-only transaction experiment.
 

@@ -220,7 +220,7 @@
     "zombie.characters.animals.IsoAnimal": true
   },
   "scope": "Direct public return/field descriptors; excludes generic collection contents, arbitrary object graphs, private/reflection routes and runtime dispatch. Explicit exposure is literal setExposed membership only.",
-  "project_version": "0.2.0-dev.9",
+  "project_version": "0.2.0-dev.10",
   "game_version": "42.21",
   "steam_build": "25485521",
   "status": "BLOCKED_NO_VERIFIED_LUA_ROOT_ACCOUNT_ROUTE",

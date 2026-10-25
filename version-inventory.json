@@ -558,6 +558,10 @@
     {
       "reference": "art/german_shepherd_motion/**",
       "reason": "Frozen gsd-motion-v001 authoring evidence recorded at 0.2.0-dev.9; later version headers must not relabel its tests."
+    },
+    {
+      "reference": "art/german_shepherd_motion_v2/**",
+      "reason": "Frozen gsd-skin-motion-v002 checkpoint recorded at 0.2.0-dev.10. Preserve exact source hashes and offline evidence; not visual acceptance or PZ runtime proof."
     }
   ]
 }

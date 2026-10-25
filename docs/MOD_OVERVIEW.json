@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "dog",
   "name": "Dogmeat",
-  "version": "0.2.0-dev.9",
+  "version": "0.2.0-dev.10",
   "reviewed": true,
-  "source_digest": "d2b88c039eadf2718a9cf49808bed28c146c02e0f56881f4880672bc36efbf7a",
+  "source_digest": "f91e8b525936d1baedee5ca6dd876dbed2bcb8d854e689f0e19bd210382fc2e2",
   "features": [
     {
       "status": "Foundation",
@@ -28,14 +28,14 @@
     },
     {
       "status": "Foundation",
-      "text": "Original Shepherd and both supplied coat variations use one raccoon hierarchy with unchanged geometry/UVs. Original dog-pivot clips and independent action/animation graphs correct the offline gait candidate. Vanilla raccoons and test carrier are unchanged."
+      "text": "Original Shepherd and both supplied coats retain geometry/UVs/textures and native bone contract. Revised connected-region skinning and 47 original clips repair cross-leg and hip/tail contamination; rest and collapse remain review candidates. Independent animal/action/animation definitions preserve vanilla raccoons."
     },
     {
-      "status": "Implemented",
+      "status": "Source",
       "text": "Optional local tail-health presentation reads native replicated health under a server sandbox setting; unknown/disabled stays neutral. No health writes or ownership/task activation. Offline tested only."
     }
   ],
-  "limits": "Published Workshop item 3822584314 remains dev.7 default-off raccoon diagnostic. Dev.9 motion/health source candidate: 2.59M triangles per model, PZ import/speed/contact/state blending/health replication/save-load NOT TESTED. Shepherd climbing disabled. Ownership/live tasks disabled. 465 offline Lua cases PASS; G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
+  "limits": "Published Workshop item 3822584314 remains dev.7 default-off raccoon diagnostic. Dev.10 revised skin/motion source candidate: visual acceptance pending, 2.59M triangles per model, PZ import/speed/contact/state blending/health replication/save-load NOT TESTED. Shepherd climbing disabled. Ownership/live tasks disabled. G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
   "evidence": [
     "README.md",
     "source-inventory.json",
@@ -48,9 +48,10 @@
     "docs/GERMAN_SHEPHERD_INTEGRATION.md",
     "art/german_shepherd_native/README.md",
     "docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md",
-    "art/german_shepherd_motion/README.md",
-    "art/german_shepherd_motion/validation/motion.json",
-    "art/german_shepherd_motion/validation/tail-blends.json"
+    "art/german_shepherd_motion_v2/README.md",
+    "art/german_shepherd_motion_v2/validation/motion.json",
+    "art/german_shepherd_motion_v2/validation/tail-blends.json",
+    "art/german_shepherd_motion_v2/validation/skin-deformation.json"
   ],
   "relations": []
 }

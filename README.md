@@ -1,10 +1,10 @@
 # B47ANCE'd Dog Training
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 The German Shepherd now has an independent [native integration candidate](docs/GERMAN_SHEPHERD_INTEGRATION.md), including both supplied coat variations and the original coat. All three retain the raccoon bone hierarchy and unchanged geometry/UVs, with their own original Shepherd motion and action graph. Their new animal types share a German Shepherd group without replacing vanilla raccoons or the existing persistence test carrier.
 
-The [new motion and tail-health implementation](docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md) replaces the distorted direct-raccoon gait with original dog-pivot walk/run clips. A default-on sandbox option raises the tail at higher native health and lowers it when injured; unknown health returns neutral. This is read-only presentation, not ownership or health authority. The original [rig and GLBs](art/german_shepherd_native/README.md) are unchanged. Each mesh retains 2.59 million triangles; actual game import, movement/contact, saves, multiplayer and performance remain NOT TESTED. Ownership and live tasks remain disabled. This source iteration has not been deployed or published.
+The user rejected dev.9's animation and tail. The [revised skin and motion checkpoint](art/german_shepherd_motion_v2/README.md) corrects crossed rear-leg weights, tail/hip contamination and discontinuous joint blending, with new walk/trot/rest clips and nine tail-health anchors. Geometry, UVs and textures stay unchanged; runtime GLBs receive revised skin attributes. The [tail-health option](docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md) reads native health for local presentation only. This remains an offline candidate requiring visual and in-game review. Each mesh retains 2.59 million triangles; game import, movement/contact, saves, multiplayer and performance are NOT TESTED. Ownership and live tasks remain disabled. This source iteration has not been deployed or published.
 
 The approved transparent German Shepherd is the mod icon; thumbnail and poster are unchanged. The [publication target audit](docs/WORKSHOP_PUBLICATION.md) resolves the historical override fingerprint blocker for a **vanilla Build 42.21 MP testing distribution**. The modified local installation remains unsupported and runtime-unverified. This is a default-off raccoon persistence diagnostic: ownership and live task control remain disabled. Published as [Workshop item 3822584314](https://steamcommunity.com/sharedfiles/filedetails/?id=3822584314), version 0.2.0-dev.7, from source commit e98d1eb. See [the immutable release receipt](docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json).
 
@@ -76,7 +76,7 @@ Public repository: [B47ANCE/B47ANCEDDogmeat](https://github.com/B47ANCE/B47ANCED
 
 The user supplied the initial 0.1.0-dev.1 scaffold version. Current 0.2.0-dev.7 continues additive MINOR development with server-side completion guards, guarded recovery/provisioning and adversarial admission/restart tests. The prior 0.2.0-dev.6 added approved branding. No storage schema or raccoon registration changes. The art checkpoint remains tested 0.1.0-dev.2; no model files changed.
 Future additive training functionality is MINOR scope; dependency versions, PZ builds and data schemas remain independent.
-G6 and G7 are NOT TESTED; G8 is BLOCKED. The current 431 offline Lua/file/event/transaction/diagnostic tests do not validate authenticated game actors, native dog lifecycle, durable world saves or multiplayer behavior.
+G6 and G7 are NOT TESTED; G8 is BLOCKED. The current 465 offline Lua/file/event/transaction/diagnostic tests do not validate authenticated game actors, native dog lifecycle, durable world saves or multiplayer behavior.
 
 The [native continuity audit](docs/BLOCKER_RESOLUTION_REPORT.md) adds a central refusal policy and nine lifecycle/security documents. ADMIT remains unreachable. The 59 direct native constructor sites and worker/deserializer paths show gaps beyond the nine hooks; a fresh process cannot attest prior-session authenticity. Same dev.7 is retained for this unreleased guard revision. [Operator procedures](docs/MULTIPLAYER_OWNERSHIP_TEST_PLAN.md) distinguish current negative tests from blocked positive ownership acceptance.
 

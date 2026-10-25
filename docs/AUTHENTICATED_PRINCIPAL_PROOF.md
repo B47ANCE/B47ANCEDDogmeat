@@ -1,6 +1,6 @@
 # Authenticated principal proof
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 **D1 BLOCKED.** The packaged command path associates a Lua callback with a player from the sending connection. A complete lossless SteamID64 + current connection + character episode + server session adapter has not been established. No gameplay principal adapter is installed.
 

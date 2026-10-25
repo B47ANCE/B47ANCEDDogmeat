@@ -1,6 +1,6 @@
 # Natural bonding and player permissions
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 Design proposal; no live bond/ownership writer or arbitrary Claim action is enabled. A permanent dog may have one primary owner and many independent secondary relationships. A native marker, actor-supplied SteamID, sub-bond percentage or UI button cannot establish ownership.
 

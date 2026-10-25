@@ -1,8 +1,8 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
-Current iteration: 0.2.0-dev.8 adds the separate native Shepherd registration and preserved coat rigs. The published dev.7 package/receipt stays historical; no migration or stable-release claim. See [German Shepherd integration](GERMAN_SHEPHERD_INTEGRATION.md).
+Current iteration: 0.2.0-dev.10 reworks the rejected Shepherd skinning/motion candidate while preserving supplied geometry, UVs, textures and the raccoon hierarchy. See [motion and validation](SHEPHERD_MOTION_AND_TAIL_HEALTH.md). Published dev.7 remains historical; no migration or stable-release claim.
 
 ## Historical development narrative through 0.2.0-dev.7
 

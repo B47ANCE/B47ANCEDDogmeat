@@ -1,6 +1,6 @@
 # Private persistence and recovery contract
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 Latest user-directed database/relationship/task proposal: [PERSISTENT_CANINE_AND_RELATIONSHIP_SCHEMA.md](PERSISTENT_CANINE_AND_RELATIONSHIP_SCHEMA.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
 

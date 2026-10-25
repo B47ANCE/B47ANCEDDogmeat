@@ -1,6 +1,6 @@
 # Central server admission policy
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 `src/domain/B47Dog/AdmissionPolicy.lua` supplies one refusal/diagnostic policy, called by the selected native transition wrappers, NativeSession assessment, NativeRuntime assessment/census and dedicated ownership preparation. **ADMIT is reserved and unreachable.** There is no public Admit endpoint, new ownership feature, native interception hook or persistent admission certificate.
 

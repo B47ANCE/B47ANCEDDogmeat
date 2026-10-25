@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-dev.10] - 2026-10-24
+
+- Compatible visual defect correction within the additive 0.2.0 MINOR prerelease. User rejected dev.9 animation/tail appearance; prior numeric checks did not establish visual quality. Preserve that checkpoint as rejected evidence.
+- Replace cross-leg and hip/tail contamination with connected-region skin weights, fitted canine landmarks and continuous joint blending. Preserve geometry, topology, UVs, textures, native skeleton/bind contract and independent animal identity.
+- Author 47 clips with grounded gait targets, staged rest, separately relaxed collapse limbs/head and nine health-tail anchors. Retain actual 24-frame walk/trot previews and full-mesh serialized deformation regressions.
+- Offline contracts and regressions pass; visual acceptance remains a review gate, including folded-limb compression. PZ and dedicated multiplayer NOT TESTED. Ownership/live tasks stay disabled. No deployment, publication or merge.
+
 ## [0.2.0-dev.9] - 2026-10-24
 
 - Development scope: compatible animation correction and optional native-health tail presentation. Continue the additive 0.2.0 MINOR prerelease; no save-schema, identity, or ownership change. Geometry and UVs remain immutable.

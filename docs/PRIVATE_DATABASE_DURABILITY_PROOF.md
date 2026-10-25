@@ -1,6 +1,6 @@
 # Private database durability proof
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 **D5 FEASIBLE for the tested logical transaction subset; D6 EXPERIMENTAL for fault handling. Durable native/private atomic commit remains BLOCKED.** This is a Lua file-store experiment, not SQLite. No JDBC, service, binding or production migration is added.
 

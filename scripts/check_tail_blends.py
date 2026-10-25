@@ -76,15 +76,15 @@ def matrix(q, position):
 
 
 def audit(root, subdivisions=100):
-    motion = root / "art/german_shepherd_motion/anims"
-    native = root / "art/german_shepherd_native"
+    motion = root / "art/german_shepherd_motion_v2/anims"
+    native = root / "art/german_shepherd_motion_v2"
     bind_report = json.loads((native / "validation/native-bind.json").read_text())
     parents, rest = read_bind(motion / "B47Dogmeat_Idle_Low.x")
     coordinate_map = np.array(bind_report["native_to_authoring"])
     inverse_map = np.linalg.inv(coordinate_map)
     inverse_bind = np.linalg.inv(rest["Bip01_Tail"])
-    pivot = np.array([.64, 0, .02, 1.0])
-    suffixes = ("Low", "H25", "H50", "H75", "High")
+    pivot = np.r_[bind_report['tail_root'],1.]
+    suffixes = ("Low", "H125", "H25", "H375", "H50", "H625", "H75", "H875", "High")
     chain, name = [], "Bip01_Tail"
     while name:
         chain.append(name)
@@ -152,7 +152,7 @@ def audit(root, subdivisions=100):
                     if error > maximum["error"]:
                         maximum = dict(error=error, frame=frame_index,
                                        segment=segment, fraction=fraction,
-                                       health=(segment+fraction)/4,
+                                       health=(segment+fraction)/8,
                                        shift=(actual-expected).tolist())
         per_clip[kind] = dict(frames=count, maximum=maximum)
         if maximum["error"] > maximum_all["error"]:
@@ -171,6 +171,8 @@ def audit(root, subdivisions=100):
         frame_samples=frame_count,
         blend_samples=sample_count,
         source_clip_count=len(list(motion.glob("*.x"))),
+        audit_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        clip_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(motion.glob("*.x"))},
         units="source authoring coordinates",
         method="serialized local PRS; shortest-path NLERP/SLERP; compare tail-root skin transform to neutral same frame",
         limitations="double precision emulation; finite health grid; authored frames only; no temporal or state-transition blending; not PZ runtime evidence",

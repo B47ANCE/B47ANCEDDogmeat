@@ -40,5 +40,7 @@ jobs:
         run: .ci-venv/bin/python -B scripts/check_motion_imports.py
       - name: Serialized tail-root blend drift regression
         run: .ci-venv/bin/python -B scripts/check_tail_blends.py
+      - name: Actual mesh skin and serialized clip deformation regressions
+        run: .ci-venv/bin/python -B scripts/check_skin_deformation.py
       - name: Execute Lua 5.1 domain tests (not PZ runtime)
         run: .ci-venv/bin/python -B scripts/test_domain.py

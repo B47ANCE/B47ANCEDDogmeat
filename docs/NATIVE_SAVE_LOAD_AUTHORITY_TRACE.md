@@ -1,6 +1,6 @@
 # Native save/load authority trace — Option A
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 [VERIFIED — packaged source] 2026-10-14, Build 42.21; actual project baseline `fda2538e64624babbd1606b4e53a0935d80c02f9`. The handoff's 6518be2 is an earlier checkpoint. [native-save-load-evidence.json](native-save-load-evidence.json) records hashes and A01–A12 source anchors. Offsets are bytecode offsets inside exact method signatures, not source lines. No game code was executed. The 59-site constructor inventory is retained without repeating it.
 

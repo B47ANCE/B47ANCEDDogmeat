@@ -4,7 +4,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
-MOTION=ROOT/'art/german_shepherd_motion'
+MOTION=ROOT/'art/german_shepherd_motion_v2'
 
 def read_clip(path):
     text=path.read_text(encoding='utf-8')
@@ -26,7 +26,7 @@ class Motion(unittest.TestCase):
         cls.clips={p.stem:read_clip(p) for p in (MOTION/'anims').glob('*.x')}
         cls.xmls=list((ROOT/'src/assets/AnimSets/b47germanshepherd').rglob('*.xml'))
     def test_complete_original_clips(self):
-        self.assertEqual(len(self.clips),31)
+        self.assertEqual(len(self.clips),47)
         for name,(clip,fps,bones) in self.clips.items():
             self.assertEqual(clip,name);self.assertEqual(fps,30);self.assertEqual(len(bones),34)
             self.assertEqual(hashlib.sha256((MOTION/'anims'/(name+'.x')).read_bytes()).hexdigest(),self.report['clips'][name]['sha256'])
@@ -40,7 +40,7 @@ class Motion(unittest.TestCase):
         tail={'Bip01_Tail','Bip01_Tail1','Bip01_Tail2','Bip01_TailNub'}
         for kind in ('Idle','Look','Walk','Run'):
             low=self.clips['B47Dogmeat_'+kind+'_Low'][2];high=self.clips['B47Dogmeat_'+kind+'_High'][2]
-            for suffix in ('H25','H50','H75','High'):
+            for suffix in ('H125','H25','H375','H50','H625','H75','H875','High'):
                 other=self.clips['B47Dogmeat_'+kind+'_'+suffix][2]
                 for bone in low:
                     if bone not in tail:self.assertEqual(low[bone],other[bone],(kind,bone,suffix))
@@ -76,7 +76,8 @@ class Motion(unittest.TestCase):
             if not blends:continue
             self.assertEqual(node.findtext('m_Scalar'),'B47DogmeatHealth');self.assertIsNone(node.find('m_Scalar2'))
             points={b.attrib['referenceID']:(float(b.findtext('m_XPos')),float(b.findtext('m_YPos'))) for b in blends}
-            self.assertEqual(points,{'1':(0,0),'2':(1,0),'3':(1.25,0),'4':(1.5,0),'5':(1.75,0),'6':(2,0),'7':(1.5,1)})
+            expected={'1':(0,0),**{str(i+2):(1+i/8,0) for i in range(9)},'11':(1.5,1)}
+            self.assertEqual(points,expected)
             for tri in node.findall('m_2DBlendTri'):
                 a,b,c=[points[tri.findtext(n)] for n in ('node1','node2','node3')]
                 self.assertGreater((b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]),0)

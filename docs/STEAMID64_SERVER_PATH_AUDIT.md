@@ -1,6 +1,6 @@
 # Lossless server SteamID64 path audit
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 **D1 remains BLOCKED: no safe lossless Lua-only server actor path was established on the inspected Build 42.21 / Steam 25485521.** Native string-valued Steam IDs exist, including one built from a server connection. The missing link is a verified Lua-accessible, current authenticated actor-to-string route. No principal adapter, ownership permission or live task controller is installed.
 

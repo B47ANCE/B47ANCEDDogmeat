@@ -1,6 +1,6 @@
 # Task arbitration contract
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 Latest user-directed database/relationship/task proposal: [ACTIVE_TASK_AND_HANDLER_AUTHORITY.md](ACTIVE_TASK_AND_HANDLER_AUTHORITY.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
 

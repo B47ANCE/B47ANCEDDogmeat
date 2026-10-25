@@ -1,6 +1,6 @@
 # M0R validation and remaining blockers
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 Meshy em-v003-preview, 2026-10-16: exactly one newly approved 20-credit task (01a143d2-0b78-7721-a5c2-d1c04780a497) succeeded. GLB/FBX reopen with 23,865 triangles, 52 welded boundary edges and 80 non-manifold edges. Ten actual model/mouth renders and independent read-only review retain anatomy INCOMPLETE/HOLD; a hollow head shell is not an anatomical cavity. Artifact integrity is distinct from model suitability; no new motion, texturing or runtime result.
 

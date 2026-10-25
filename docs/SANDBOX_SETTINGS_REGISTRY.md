@@ -1,6 +1,6 @@
 # Sandbox settings registry
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 Latest user-directed database/relationship/task proposal: [DATABASE_REDESIGN_SANDBOX.md](DATABASE_REDESIGN_SANDBOX.md). Its logical identity, natural bonding, offline self-care and task/lease semantics supplement/supersede corresponding proposed design details below; no runtime capability or historical evidence is upgraded. The baseline body is preserved.
 

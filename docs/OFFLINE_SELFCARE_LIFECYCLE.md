@@ -1,6 +1,6 @@
 # Offline self-care and database lifecycle
 
-Project Version: 0.2.0-dev.9
+Project Version: 0.2.0-dev.10
 
 Approved **design default**: Remain in World — Self-Care (`SelfCare`). Optional `StoreOffline` is not enabled. Current diagnostic behavior is unchanged and does not implement these policies. A database logical record/session binding proposal does not overturn Option A. Active native lifecycle, movement control and durability remain gated.
 
