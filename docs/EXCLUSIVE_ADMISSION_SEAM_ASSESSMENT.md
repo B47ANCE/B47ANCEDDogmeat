@@ -1,6 +1,6 @@
 # Exclusive admission seam assessment
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 **No sufficient exclusive Lua-exposed native admission seam was established.** A central privileged-action check exists in project Lua, but it lacks trusted physical origin. A native insertion point with a Lua veto and unforgeable restart provenance was not found in the bounded save/load chain. Both properties are required; intercepting a late permission request alone cannot manufacture the missing evidence.
 

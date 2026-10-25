@@ -9,7 +9,7 @@ def check(module_directory=None):
     import assimp_py
     flags=assimp_py.Process_MakeLeftHanded | assimp_py.Process_RemoveRedundantMaterials
     results=[]
-    for path in sorted((ROOT/'art/german_shepherd_motion_v2/anims').glob('*.x')):
+    for path in sorted((ROOT/'art/german_shepherd_motion_v3/anims').glob('*.x')):
         scene=assimp_py.import_file(str(path),flags)
         def nodes(node):return [node.name]+[name for child in node.children for name in nodes(child)]
         hierarchy=nodes(scene.root_node)

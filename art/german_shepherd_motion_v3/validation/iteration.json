@@ -1,0 +1,123 @@
+{
+  "recorded_project_version": "0.2.0-dev.11",
+  "compatibility": "Compatible visual correction within the existing additive 0.2.0 MINOR prerelease; no gameplay or save-schema change",
+  "environment": "Windows offline; Blender 4.5.3, Python 3.12.14/NumPy 2.3.5, Lupa 2.6, assimp_py 1.1.0",
+  "visual_review": {
+    "status": "REVIEW CANDIDATE",
+    "observations": [
+      "Both coat previews remove the tight hindleg loop in Lie and stacked hindleg folds in Dead.",
+      "Actual LieDown and GetUp frames are retained; no reversed-video substitute.",
+      "Head turns retain rigid face, mouth and ear proportions while the neck ruff deforms.",
+      "Angular hip/ankle contours and neck-fur stretching remain visible limitations."
+    ],
+    "limits": "Offline rendered review is not user acceptance or native PZ playback. No runtime testing performed."
+  },
+  "commands": [
+    {
+      "command": "python -B scripts/test_domain.py",
+      "result": "PASS: 465 offline Lua cases"
+    },
+    {
+      "command": "python -B scripts/test_shepherd_motion.py",
+      "result": "PASS: 13 cases; 47 clips"
+    },
+    {
+      "command": "python -B scripts/check_motion_imports.py --module-directory <assimp-py-1.1.0-directory>",
+      "result": "PASS: 47 independent Assimp imports"
+    },
+    {
+      "command": "python -B scripts/check_tail_blends.py",
+      "result": "PASS: 170488 serialized tail samples; maximum drift 0.0021716911401619583 source units; report refreshed against final clip hashes"
+    },
+    {
+      "command": "python -B scripts/check_head_deformation.py --output art/german_shepherd_motion_v3/validation/head-deformation.json",
+      "result": "PASS: all three current GLBs compared with previous bytes; only Head/Neck skin weights changed; 1810 serialized Look poses including half frames"
+    },
+    {
+      "command": "blender --background --factory-startup --python art/german_shepherd_motion_v3/source/validate_head_controls.py",
+      "result": "PASS: reopened saved linked scene; independent yaw +/-25, pitch +/-15 and combined controls, correct atlas pivot, neutral return; maximum matrix error 2.384185791015625e-07"
+    },
+    {
+      "command": "python -B scripts/check_skin_deformation.py",
+      "result": "PASS: 112 full-mesh samples including all 80 rest-transition keys; minimum rest knee angle 88.47939786746802 degrees; maximum edge extension 0.05890817583245654 below retained 0.06 bound"
+    },
+    {
+      "command": "python -B scripts/test_asset_boundaries.py",
+      "result": "PASS: 12 cases"
+    },
+    {
+      "command": "python -B scripts/test_publication.py",
+      "result": "PASS: 18 cases; disposable outputs only"
+    },
+    {
+      "command": "python -B scripts/check_native_assets.py --all",
+      "result": "PASS: three current skins, external authoring dependencies and current/historical checkpoint hashes"
+    },
+    {
+      "command": "python -B scripts/validate_m0r.py",
+      "result": "STATIC PASS"
+    },
+    {
+      "command": "python -B scripts/validate_foundation.py",
+      "result": "STATIC PASS"
+    },
+    {
+      "command": "python -B scripts/build_loadable.py --check",
+      "result": "SOURCE PARITY PASS: 207 files"
+    },
+    {
+      "command": "python -B scripts/check_versions.py --root . --json",
+      "result": "PASS: 91 current canonical mirrors plus VERSION"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "runtime_gates": [
+    "Native import/basis/scale and ground contact",
+    "State and temporal animation blends, speed and foot sliding",
+    "Performance with each unchanged 2590138-triangle source mesh",
+    "Native health replication, saves, join/rejoin and dedicated restart"
+  ],
+  "G6": "NOT TESTED",
+  "G7": "BLOCKED / NOT TESTED",
+  "stable_G8": "BLOCKED",
+  "actions_not_taken": [
+    "deploy",
+    "game/server launch",
+    "merge",
+    "Workshop upload"
+  ],
+  "validation_script_sha256": {
+    "audit_account_binding.py": "40475906c46db0acf8d9b36e9afe6ace53a0256f10488fc264f2b2ed5445497e",
+    "audit_native_construction.py": "c6b11a30c06aeedc5bf069161fb0164d6a4440db1143f89f9ee25e6f5d3ef8cd",
+    "audit_principal_strings.py": "557cfd86adfb3e4f5633c9ce947cf2c3d30e47e87ace6f8d33b93466853bef64",
+    "audit_public_push.py": "948d5d5c5e4f6fd34d55b3b14a2a9c944674c22369050f9ecafbdd72f8690067",
+    "audit_publication_target.py": "44bf1921834eaf4507ea2d329e73e4596d236f03c45e924a7a63a7d91c307c88",
+    "audit_server_accounts.py": "bfa8f1ce572866a794789ef8a17819fd9938d805ba3b5951e3fc8f4d9d5cb7d6",
+    "build_loadable.py": "0dda85e70c00d17e1eca463ac9bd203139e2da64bebfd93d786e50aa32dc675b",
+    "check_head_deformation.py": "a368be6c676b7bc9179b23be3fa841cd5c5bc2b052419c2ab1a9a413d1c5f959",
+    "check_motion_imports.py": "7a74f207f5f28d7096a6f5b9e24daafc6da21b567f86418b023035183aa45255",
+    "check_native_assets.py": "ab50a2ccfe6e8ca10913bde5dd8ba3e07cb5d53d10522160760cd7e126884440",
+    "check_skin_deformation.py": "bb38bf6a6fdde4cc979087d8e5fc9f6b5f1627466ed50bfe691bfb110d35579c",
+    "check_tail_blends.py": "b4548e74358c95bbd2f0282431ef3a16ee972d66a5fb3b690e0adfb3ab8db9a9",
+    "check_versions.py": "008834561ef6d3321d95d7b9517ad0fde94bd06ff9c1051d0abd79f61659467c",
+    "collect_database_authority_proof.py": "6ddc36d06c9a38ab4ce466e22ca1691cbace55a60aa73efbde8a3990c1e7f6d0",
+    "collect_evidence.py": "826aa5bd9db4eaa69bf35f9e8223823ad4c8a3a538a2831f3b3d31c0de6b1747",
+    "inspect_class_api.py": "0730bf7f29db376d62c85d64595e5576022b80f978c1dfd360f9da2b0de45c19",
+    "prepare_workshop.py": "b39d23a5d53e23d3f4ffbf3264e07832d836ad2c941a7c3e85ed5469ef0a4dd9",
+    "publish_workshop.py": "7b65535a8e5c46024b5ae5106d911f9e63a133a9b5a45127225133179d642d9c",
+    "render_workshop.py": "d8d0eafa1ccdf37b0244644831e2e847647f36ed6cb26022d9572e6ea4b41694",
+    "stage_account_probe.py": "380746b1bc735beb3efc3925200195fefc099ca140f2cceb369c9f48e15b0488",
+    "test_asset_boundaries.py": "9b9e04b254ea4a4084c850d42d980e4202377d09d6023e2c3567131d0ac9997f",
+    "test_domain.py": "a6fc355bfe430ce39ac1f0f6f1aa5d91598c0aa8413845e25e86d165505bebc7",
+    "test_publication.py": "c19ca68fcfac85fae675afe3d67e8e885f7b37ac140c30d5022865fe22209c21",
+    "test_shepherd_motion.py": "4182881ce65f2fe62de0a72bfa33a9d0da209544532fc3483ced02cdbf97c934",
+    "validate_audit.py": "b8c19b813888bc1045dd434990d841afe867f20e05e03965d9480919e5432bf9",
+    "validate_database_authority_proof.py": "283a79dee8bff6c7713b153a432cbc56d9a205440ed82cc7ea3e2b2542da92f5",
+    "validate_database_design.py": "1bf329ea0ee1523b5e0fec54dd79c070199eeea85c7d0b8377b3847e9bab68d7",
+    "validate_foundation.py": "004ba2352fa0742435eec080c7d4aee2c06780ba51d6245404874e80638c2f1a",
+    "validate_m0r.py": "3f49a0e76bef5d687cddd5bb8c3b1f6b7ae6b268754dd33f6327f4b9cd168d3c"
+  }
+}

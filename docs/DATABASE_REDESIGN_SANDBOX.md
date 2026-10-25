@@ -1,6 +1,6 @@
 # Database redesign sandbox proposals
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 Design only; **no new runtime registration**. The latest handoff's values `SelfCare` and `StoreOffline` supersede the earlier labels RemainInWorldSelfCare/StoreWhenOwnerOffline. Those older labels were never deployed, so no alias/migration is implemented. The approved semantic default remains physical self-care. Existing 79 design settings in the provisional B47ANCEDDogTraining catalog are preserved; this supplement uses approved technical namespace B47ANCEDDogmeat without silently renaming that older catalog.
 

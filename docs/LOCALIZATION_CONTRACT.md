@@ -1,6 +1,6 @@
 # Localization contract
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) emits 35 runtime fallback keys in UI/Sandbox/IGUI for all 29 languages (1,015 entries). The full design catalog now has 318 keys; source-inventory.json declares the exact runtime subset. The original B47ANCEDDogTraining translation/design prefix is retained separately from the approved B47ANCEDDogmeat runtime Mod ID.
 

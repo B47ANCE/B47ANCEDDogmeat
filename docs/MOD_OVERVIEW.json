@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "dog",
   "name": "Dogmeat",
-  "version": "0.2.0-dev.10",
+  "version": "0.2.0-dev.11",
   "reviewed": true,
-  "source_digest": "9ab2d6d765c83e59f654cacd571a648aca9dcafe013fafd87c181d5b3a5bb270",
+  "source_digest": "88771445c4ca435123f06a583ee09dd2b1aff04d3f95d078f0cf6658e30303f9",
   "features": [
     {
       "status": "Foundation",
@@ -28,14 +28,14 @@
     },
     {
       "status": "Foundation",
-      "text": "Original Shepherd and both supplied coats retain geometry/UVs/textures and native bone contract. Revised connected-region skinning and 47 original clips repair cross-leg and hip/tail contamination; rest and collapse remain review candidates. Independent animal/action/animation definitions preserve vanilla raccoons."
+      "text": "Original Shepherd and both coats retain geometry/UVs/textures and the native bone contract. Open rest/death hindlegs remove the tight tuck; a rigid facial skin region supports independent head turns and an editable atlas control. 47 original clips and independent animal/action/animation definitions preserve vanilla raccoons. Offline review candidate."
     },
     {
       "status": "Source",
       "text": "Optional local tail-health presentation reads native replicated health under a server sandbox setting; unknown/disabled stays neutral. No health writes or ownership/task activation. Offline tested only."
     }
   ],
-  "limits": "Published Workshop item 3822584314 remains dev.7 default-off raccoon diagnostic. Dev.10 revised skin/motion source candidate: visual acceptance pending, 2.59M triangles per model, PZ import/speed/contact/state blending/health replication/save-load NOT TESTED. Shepherd climbing disabled. Ownership/live tasks disabled. G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
+  "limits": "Published Workshop item 3822584314 remains dev.7 default-off raccoon diagnostic. Dev.11 rest/head source candidate: in-game visual acceptance pending; angular hip/ankle contours and neck-fur deformation remain, 2.59M triangles per model, PZ import/speed/contact/state blending/health replication/save-load NOT TESTED. Shepherd climbing disabled. Ownership/live tasks disabled. G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
   "evidence": [
     "README.md",
     "source-inventory.json",
@@ -48,10 +48,12 @@
     "docs/GERMAN_SHEPHERD_INTEGRATION.md",
     "art/german_shepherd_native/README.md",
     "docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md",
-    "art/german_shepherd_motion_v2/README.md",
-    "art/german_shepherd_motion_v2/validation/motion.json",
-    "art/german_shepherd_motion_v2/validation/tail-blends.json",
-    "art/german_shepherd_motion_v2/validation/skin-deformation.json"
+    "art/german_shepherd_motion_v3/README.md",
+    "art/german_shepherd_motion_v3/validation/motion.json",
+    "art/german_shepherd_motion_v3/validation/tail-blends.json",
+    "art/german_shepherd_motion_v3/validation/skin-deformation.json",
+    "art/german_shepherd_motion_v3/validation/head-deformation.json",
+    "art/german_shepherd_motion_v3/validation/reopened-head-controls-audit.json"
   ],
   "relations": []
 }

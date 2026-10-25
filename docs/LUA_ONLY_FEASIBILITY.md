@@ -1,6 +1,6 @@
 # Lua-only identity feasibility
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 **Complete native admission and automatic authenticated identity across restarts are not established through the inspected Lua interfaces.** This is a bounded negative result for the current design and Build 42.21 evidence, not a universal mathematical proof that every possible Lua-only design is impossible. No custom Java, class replacement, injected code, bridge or native binary is permitted.
 

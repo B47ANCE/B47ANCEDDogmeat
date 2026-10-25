@@ -1,6 +1,6 @@
 # Database-authoritative canine design
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 Status: DESIGN PROPOSAL; gameplay implementation blocked. The two latest user handoffs authorize this design revision, including natural bonding, independent secondary relationships, default offline self-care and one active task/handler lease. They do not enable ownership, SQLite, storage mode or a new native controller. Original raccoon presentation, schemas and runtime source remain unchanged.
 

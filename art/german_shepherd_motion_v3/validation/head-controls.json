@@ -1,0 +1,29 @@
+{
+  "environment": "Blender 4.5.3 LTS offline",
+  "runtime": "NOT TESTED",
+  "bind_head_matrix_error": 1.7881393432617188e-07,
+  "samples": [
+    {
+      "local_axis": "Z",
+      "degrees": -25,
+      "head_world_matrix_error": 1.4901161193847656e-08
+    },
+    {
+      "local_axis": "Z",
+      "degrees": 25,
+      "head_world_matrix_error": 0.0
+    },
+    {
+      "local_axis": "X",
+      "degrees": -15,
+      "head_world_matrix_error": 5.960464477539063e-08
+    },
+    {
+      "local_axis": "X",
+      "degrees": 15,
+      "head_world_matrix_error": 2.3283064365386963e-10
+    }
+  ],
+  "linked_source": "shepherd_reweighted.blend",
+  "exported_control_bones": 0
+}

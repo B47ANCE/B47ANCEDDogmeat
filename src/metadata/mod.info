@@ -1,6 +1,6 @@
 name=B47ANCED Dogmeat - Persistence Test
 id=B47ANCEDDogmeat
-modversion=0.2.0-dev.10
+modversion=0.2.0-dev.11
 versionMin=42.21
 description=Experimental native save/load test with a temporary raccoon carrier. Dedicated multiplayer NOT TESTED. Enable Persistence Test Mode only in a disposable world.
 url=https://github.com/B47ANCE/B47ANCEDDogmeat

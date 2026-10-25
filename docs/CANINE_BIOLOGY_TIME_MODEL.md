@@ -1,6 +1,6 @@
 # Canine biology and game-time model
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 M0R design, 2026-10-12. FEASIBLE bounded extension model; native reconciliation and physical offscreen elimination EXPERIMENTAL. Rates and thresholds below are provisional game-balance calibration values, not veterinary claims. [Ownership](NATIVE_STATE_OWNERSHIP_MATRIX.md), [task priorities](TASK_ARBITRATION_CONTRACT.md), [settings](SANDBOX_SETTINGS_REGISTRY.md).
 

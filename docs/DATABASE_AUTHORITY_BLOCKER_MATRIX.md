@@ -1,6 +1,6 @@
 # Database authority blocker matrix
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 Decision: **NO-GO for secure persistent multiplayer dogs under the required automatic lifecycle contract.** Offline feasibility is useful but does not resolve the missing native authority boundaries. Each D gate uses the requested classification; runtime absence is stated separately.
 

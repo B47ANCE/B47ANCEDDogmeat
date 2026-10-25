@@ -4,7 +4,7 @@ from pathlib import Path
 from build_loadable import sources,ROOT
 
 def check(all_files=False):
-    folder=ROOT/'art/german_shepherd_motion_v2'
+    folder=ROOT/'art/german_shepherd_motion_v3'
     report=json.loads((folder/'validation/native-bind.json').read_text())
     assert report['runtime']=='NOT TESTED' and report['bone_nodes']==34 and report['deforming_bones']==25
     assert report['bind_reference']=='Rac_Idle01 frame zero'
@@ -38,11 +38,14 @@ def check(all_files=False):
         texture=mapping['42/media/textures/Body/'+model+'.png'].read_bytes()
         assert texture.startswith(b'\x89PNG\r\n\x1a\n');checked+=1
     if all_files:
+        for relative,expected in manifest.get('external_input_sha256',{}).items():
+            path=(ROOT/relative).resolve();assert path.is_relative_to(ROOT.resolve())
+            assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
         for relative,expected in manifest['files'].items():
             path=(folder/relative).resolve();assert path.is_relative_to(folder.resolve())
             assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
     if all_files:
-        for historical in ('german_shepherd_native','german_shepherd_motion'):
+        for historical in ('german_shepherd_native','german_shepherd_motion','german_shepherd_motion_v2'):
             checkpoint=ROOT/'art'/historical
             for relative,expected in json.loads((checkpoint/'manifest.json').read_text())['files'].items():
                 path=(checkpoint/relative).resolve();assert path.is_relative_to(checkpoint.resolve())
@@ -50,7 +53,7 @@ def check(all_files=False):
     print(json.dumps({'status':'OFFLINE PASS','models':checked,'runtime':'NOT TESTED',
         'historical_dev8_native_gait_acceptance':'HOLD',
         'historical_dev9_visual_acceptance':'REJECTED by user',
-        'current_motion':'Reweighted fitted-motion v2 candidate; PZ NOT TESTED',
+        'current_motion':'Rest and independent-head v3 candidate; PZ NOT TESTED',
         'all_checkpoint_files':all_files}))
 
 if __name__=='__main__':

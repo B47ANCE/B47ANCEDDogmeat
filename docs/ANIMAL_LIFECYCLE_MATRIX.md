@@ -1,6 +1,6 @@
 # Animal lifecycle support matrix
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 “Diagnostic” means an offline-tested observation/refusal implementation. It is not native gameplay support. Every physical continuity claim below remains BLOCKED or NOT TESTED. C references link to [native coverage](NATIVE_ADMISSION_COVERAGE.md); `P` is the retained private canonical record. Native markers never authorize it.
 

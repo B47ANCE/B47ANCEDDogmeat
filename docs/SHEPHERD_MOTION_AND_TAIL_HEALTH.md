@@ -1,20 +1,30 @@
 # Shepherd motion and tail health
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
 Compatible visual correction within the additive 0.2.0 MINOR prerelease.
 The user rejected dev.9's animations and tail on 2026-10-24. Its numerical
 checks established export contracts, not acceptable deformation. The dev.8
-native rig and dev.9 motion directories remain unchanged historical checkpoints.
+native rig, dev.9 motion and dev.10 skin/motion directories remain unchanged historical checkpoints.
 
 ## Current source
 
-`art/german_shepherd_motion_v2` contains revised skin weights for the original
+`art/german_shepherd_motion_v3` contains revised skin weights for the original
 Shepherd and both supplied coats, and 47 locally authored motion clips. Geometry,
 topology, normals, each coat's UV layout, textures, bone names/hierarchy and
 inverse binds remain unchanged. Runtime GLBs change only JOINTS_0 and WEIGHTS_0
 attribute bytes. The source BLEND retains all three editable skins; the smaller
 motion BLEND contains the rig and actions.
+
+Dev.11 separates the rigid face from the neck ruff. Previously the muzzle mostly
+followed Neck while ears followed Head, and the clips transformed both bones
+together. The source head faces nearly -Y while the torso is turned about 75
+degrees away. The corrected atlas pivot and head-specific pitch axis let the
+whole face rotate independently. Only existing Head/Neck influence is
+redistributed; all other bone weights remain exact. Look uses +/-25-degree yaw
+and +/-12-degree pitch. The linked `source/shepherd_head_controls.blend` exposes
+`GSD_Head_Control`: local Z yaw, local X pitch, zero rotation for the original
+pose. The Empty and constraint are authoring helpers, not runtime additions.
 
 The supplied stance is asymmetric and rotated about 14.65 degrees from the
 previously assumed axis. Both rear paws have positive source Y: a sign-only
@@ -29,7 +39,10 @@ analysis only; source vertices are not welded or moved.
 
 Motion uses reachable limb targets, continuous toe-off rotation, modest shoulder
 and pelvis movement, a four-beat walk and diagonal trot. Rest settles forequarters
-and haunches in stages, with flat paws and a grounded tail curve. Death rolls into
+and haunches in stages. The dev.11 rear stance opens the knees instead of tucking
+them to about 50 degrees: paws shift slightly rearward, hocks flatten and the
+knees splay moderately. All 80 LieDown/GetUp keys are checked for floor contact
+and knee angles. Dead retains more rear-leg extension instead of stacked folds. Death rolls into
 a static pose with separately relaxed limbs and a fitted head turn; its floor
 correction evaluates the actual weighted surface.
 These remain authored candidates, not production animation or native speed proof.
@@ -44,7 +57,7 @@ movement; Translation_Data stays fixed. Shepherd climbing remains disabled.
 
 `B47ANCEDDogmeat.TailHealthIndicator` remains a server sandbox boolean, default
 true, with English fallback text in all 29 language folders. No new configuration
-or save schema is introduced in dev.10.
+or save schema is introduced in dev.11.
 
 - High native health raises the tail; low health lowers it.
 - Unknown/invalid health and a disabled option select neutral.
@@ -83,10 +96,12 @@ deformation, hierarchy/loops, fixed-length IK, health-anchor isolation, graph
 closure and actual independent Assimp parser acceptance. Reports identify exact
 source/model hashes. Numerical regression bounds are not visual acceptance.
 
-Complete 24-frame walk/trot reviews and transition/tail samples are retained in
-the v2 checkpoint. The supplied sculpt still compresses around deeply folded
-limbs and attachments; those limits are visible in previews. Successful exports
-and a few good still images do not establish acceptable animation.
+Current head and rest loops use actual v3 Blender frames, including separately
+rendered GetUp frames. Both coats show removal of the tight hindleg loop; the
+resting/dead endpoints retain some angular ankle/hip contours and need in-game
+review. Head turns keep face proportions rigid; neck fur still stretches and
+compresses. Historical walk/trot reviews remain in v2 and are not relabeled as
+current playback. Successful exports do not establish native visual acceptance.
 
 [RUNTIME GATE] Actual PZ import/basis/scale, speed/foot sliding, transitions,
 collision/ground contact, health changes/remote observers, cache lifecycle,
@@ -104,9 +119,11 @@ Workshop item 3822584314 still contains the historical dev.7 diagnostic.
 From the repository root with Blender 4.5.3 and Python/NumPy:
 
 ```text
-blender --background --factory-startup --python art/german_shepherd_motion_v2/source/build_skin.py
-blender --background --factory-startup --python art/german_shepherd_motion_v2/source/author_motion.py -- --preview
-python -B art/german_shepherd_motion_v2/source/build_animset.py
+blender --background --factory-startup --python art/german_shepherd_motion_v3/source/build_skin.py
+blender --background --factory-startup --python art/german_shepherd_motion_v3/source/author_motion.py -- --preview
+blender --background --factory-startup --python art/german_shepherd_motion_v3/source/build_head_controls.py
+blender --background --factory-startup --python art/german_shepherd_motion_v3/source/validate_head_controls.py
+python -B scripts/check_head_deformation.py --output art/german_shepherd_motion_v3/validation/head-deformation.json
 python -B scripts/test_shepherd_motion.py
 python -B scripts/check_motion_imports.py --module-directory <assimp-py-1.1.0-directory>
 python -B scripts/check_tail_blends.py
@@ -114,8 +131,8 @@ python -B scripts/check_skin_deformation.py
 python -B scripts/test_domain.py
 python -B scripts/test_asset_boundaries.py
 python -B scripts/test_publication.py
-python -B art/german_shepherd_motion_v2/source/make_reviews.py
-python -B art/german_shepherd_motion_v2/source/finalize_checkpoint.py
+python -B art/german_shepherd_motion_v3/source/make_reviews.py
+python -B art/german_shepherd_motion_v3/source/finalize_checkpoint.py
 python -B scripts/check_native_assets.py --all
 python -B scripts/validate_m0r.py
 python -B scripts/validate_foundation.py

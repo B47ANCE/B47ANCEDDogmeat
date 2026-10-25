@@ -562,6 +562,10 @@
     {
       "reference": "art/german_shepherd_motion_v2/**",
       "reason": "Frozen gsd-skin-motion-v002 checkpoint recorded at 0.2.0-dev.10. Preserve exact source hashes and offline evidence; not visual acceptance or PZ runtime proof."
+    },
+    {
+      "reference": "art/german_shepherd_motion_v3/**",
+      "reason": "Frozen gsd-rest-head-v003 checkpoint recorded at 0.2.0-dev.11; retain exact offline head/rest evidence and unchanged geometry proof on later version iterations. Not PZ runtime proof."
     }
   ]
 }

@@ -1,0 +1,306 @@
+{
+  "project_version": "0.2.0-dev.11",
+  "asset_revision": "gsd-rest-head-v003",
+  "environment": "Blender 4.5.3 LTS offline",
+  "runtime": "NOT TESTED",
+  "mesh_geometry_uv_untouched": {
+    "B47Dogmeat_GSD_Coat1": "22ec562dbe4f60e1bf75af7f833e7879ed845fb1fcc9cc17fc924334f6512eae",
+    "B47Dogmeat_GSD_Coat2": "6223a4fea697d031b107a851af8bd1d1a84612cd5ba1f7300398f0d2af9522f9",
+    "B47Dogmeat_GSD_Original": "11e887ba6f06145c050537e11d50a531b4f06e6271275158feed00c7bd3dea07"
+  },
+  "clips": {
+    "B47Dogmeat_Idle_Neutral": {
+      "sha256": "ac51536b64881f59940a30492de448692de93b495d237b42e10eec803d26a0c8",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_Low": {
+      "sha256": "01946785523d50b42f857db3ff3f6d03d5ac596e8751ba434d921762353e0fbd",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H125": {
+      "sha256": "c7a712b8a86ff43bda9b1251f373e8b2c381f9b8976724fb21ab9e58f5ea8096",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H25": {
+      "sha256": "81f4c39d2b200b5560083531c5cc200b55d917380e601d3a59769bab845b09e0",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H375": {
+      "sha256": "443a0c01528c861a54fc126c31befc16a741a63d3c5fc76f840dbd5fb1a85631",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H50": {
+      "sha256": "1cc493e9084789a957276e5ba0404f37105e9714a89459e72177f90e299a8c50",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H625": {
+      "sha256": "d7c1c81d80a74ac053363418d405fc13e3663e75235286d285224a2ef4e34003",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H75": {
+      "sha256": "58032960c7a8ad34e5f81833227b6a039df868bc9bdc21cb6033c0f0439997d7",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_H875": {
+      "sha256": "66e625bb1f67677eea1c0b5bb4e684fe4cf85a7d64e7e7347f720dde271e2e0f",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Idle_High": {
+      "sha256": "1c99dded6e1102267d3d0997a93f2e957917d88ee0b6b3fdb2c0f861e9ba5d9d",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_Neutral": {
+      "sha256": "552fb718446c7e30fa787440df79323813fb669f5bdc6314298e170858437c38",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_Low": {
+      "sha256": "005628e840861926f09da7130a848a69676e958bcb7be915c230f7bbf25e3aa8",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H125": {
+      "sha256": "b9436b934a64c956945650ece7cb9e7cc0097bf43725a7243991c211fc6e4991",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H25": {
+      "sha256": "90e43bb689b4a8a4ec535a6665a688f8eb24b4b86268bc78514577ae919613b5",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H375": {
+      "sha256": "d476bd981566307a675a9aa0a6a95f37f14751bff4aa615096c2e9ea74d63263",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H50": {
+      "sha256": "b680fd69663ebbce992425d9c19996842d934adcf17f6ac43bce67a6363641e5",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H625": {
+      "sha256": "60c64b79da215e6012c94a12b7e1dd2740a6d6abd044d5884d26c9e5cff5cf62",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H75": {
+      "sha256": "1f6e5c935360cf7f30fdda064bdde523621d104a097c7fd2c89801dcddbe5720",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_H875": {
+      "sha256": "1d7be334a3911b090c84e1617e2b2db361074994d54d06cf8ed25d9541dda5c4",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Look_High": {
+      "sha256": "ceb408d28d1eba8c3d2f73e017503687d0899ffb50444c1b6d7e264f5f5517d9",
+      "frames": 91,
+      "duration_seconds": 3.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Walk_Neutral": {
+      "sha256": "b446c6a33b31ebad35eda8861b132decec10bb12575ae5436dffa4151ec77c5d",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_Low": {
+      "sha256": "0717f612c79496e836acf3a809ce20d0b53721be511fcf086729e9644586f0ba",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H125": {
+      "sha256": "d37af8352ae8d8bdfb80820204fc3f88805e756d0e56837e1c58ba3f0314fb36",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H25": {
+      "sha256": "b740912111d0a79b47f93269945875dedbb59e100e4d958e075bd7cc051ed9f5",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H375": {
+      "sha256": "2fa3218abe94e97e4a584a4e4d04079b1f3386fd7d3d33d27eb6c7d1bae8a2b5",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H50": {
+      "sha256": "36edf27791f1515d598798683ff77187e80a3401c93acf8d162c8be54380333b",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H625": {
+      "sha256": "7378efe32aa481caaec424e83d9de3a6323cc57757dbcccb534f55c5e68d170b",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H75": {
+      "sha256": "ff66fe09530083b28256d46be5d5a7a0fbce67128d63b1a5834befe6c7df980c",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_H875": {
+      "sha256": "89396853fa12ad4400f8fea915b3dbc798fd299439346875a2d1820750f5dad1",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Walk_High": {
+      "sha256": "e2b87282ebcd851a1a2e55062a34c5f31523806824bc12a47e0746cf63504a93",
+      "frames": 37,
+      "duration_seconds": 1.2,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_Neutral": {
+      "sha256": "7f5c2a999a0505a117d683b50f4be36f2b8e1842d023deebbf2cab12158e6b7d",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_Low": {
+      "sha256": "f1e9a297393f8225e70da47da9420cdef41e0099c3fc00f01ed46c89602ee814",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H125": {
+      "sha256": "d8cce7862c24ff265b07df71019947c5f861efd63137bafc3e2a932800599321",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H25": {
+      "sha256": "69672ac22a5ae0310442d006b48312834205db055ae8a900cc544d0fa3b15095",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H375": {
+      "sha256": "1c050893f3a4a3c8dc30386d6b39e2c349365a9b4f06e5ec9135577235e85832",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H50": {
+      "sha256": "71162c822cc4381ea2969b1893b1ff4ec8054eba6a54e009126a11eb815d2913",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H625": {
+      "sha256": "6a2cf4168ce720f317d22477a652ae490039580336af9af18e43af31bf72674f",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H75": {
+      "sha256": "8ea05d4808255c7a26fcee34c19ddca8502c581113bc8d85c0c3e69ea79743d0",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_H875": {
+      "sha256": "f44059c6f5e9fde605bdf33a9f75e870f327fb7275c0779f1209afd25bcc0b43",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_Run_High": {
+      "sha256": "bd9012d8220bcc38efd46be75828cbb97b7536c2569c52b067f470d11723e7eb",
+      "frames": 22,
+      "duration_seconds": 0.7,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    },
+    "B47Dogmeat_LieDown_Neutral": {
+      "sha256": "7d7ac4ef330137470c4fa9775f7f74e7a0c562d9e9488fa666f54edd236f4cfb",
+      "frames": 40,
+      "duration_seconds": 1.3,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Lie_Neutral": {
+      "sha256": "10326e81006713115afb9826b3e1b91483198514d147c6395960d142c63ad92d",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.7418136596679688e-06
+    },
+    "B47Dogmeat_GetUp_Neutral": {
+      "sha256": "f13f39c1a2a9db5567b2719989c0e485f2e122dd90c6b269336c0c6512779ffe",
+      "frames": 40,
+      "duration_seconds": 1.3,
+      "x_matrix_roundtrip_error": 2.9206275939941406e-06
+    },
+    "B47Dogmeat_Eat_Neutral": {
+      "sha256": "72d32e9fb74d271baf1325171aed5073d2c90c6595d2d176ebf574f27b36b8b5",
+      "frames": 61,
+      "duration_seconds": 2.0,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Hit_Neutral": {
+      "sha256": "ee9b0e64e96db8bd658bbe3e1562b4357210ef41b8a04427e2750c2f2be8c2c0",
+      "frames": 16,
+      "duration_seconds": 0.5,
+      "x_matrix_roundtrip_error": 2.8014183044433594e-06
+    },
+    "B47Dogmeat_Death_Neutral": {
+      "sha256": "6c64cbb13d473e70d2db0c5b1d0f3ad382eeb031641ce29895bf46bbe4dd40e6",
+      "frames": 34,
+      "duration_seconds": 1.1,
+      "x_matrix_roundtrip_error": 3.0994415283203125e-06
+    },
+    "B47Dogmeat_Dead_Neutral": {
+      "sha256": "0a00414a3b3bba36f63ccc6ef9e4e4d55a024e065ef4dc6307f4d6bafd95f0c6",
+      "frames": 31,
+      "duration_seconds": 1.0,
+      "x_matrix_roundtrip_error": 3.039836883544922e-06
+    }
+  },
+  "max_bone_length_error": 9.756507762803679e-08,
+  "max_stance_target_error": 6.143906154658885e-08,
+  "bone_count": 34,
+  "native_motion_tracks_read": false,
+  "gait": "Fitted four-beat walk and diagonal trot; same native hierarchy",
+  "tail_root": [
+    0.59,
+    0.37,
+    0.08
+  ],
+  "visual_acceptance": "Candidate; PZ NOT TESTED"
+}

@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0-dev.11] - 2026-10-24
+
+- Compatible visual correction within the additive 0.2.0 MINOR prerelease: refine folded hindleg rest poses and give the skull independent yaw/pitch through corrected head/neck weights and fitted pivots.
+- Open the resting hindleg stance and extend side-resting hindlegs without changing leg weights. Add a linked editable atlas control and independent exported-model/clip checks for rigid facial motion and all rest-transition frames.
+- Preserve geometry, topology, UVs, textures, native bone hierarchy/binds, animal IDs and schemas. Offline checks only; some angular hip/ankle contours and neck-fur deformation remain for review. No runtime testing, deployment or publication.
+
 ## [0.2.0-dev.10] - 2026-10-24
 
 - Compatible visual defect correction within the additive 0.2.0 MINOR prerelease. User rejected dev.9 animation/tail appearance; prior numeric checks did not establish visual quality. Preserve that checkpoint as rejected evidence.

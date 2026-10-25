@@ -4,7 +4,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
-MOTION=ROOT/'art/german_shepherd_motion_v2'
+MOTION=ROOT/'art/german_shepherd_motion_v3'
 
 def read_clip(path):
     text=path.read_text(encoding='utf-8')
@@ -97,6 +97,23 @@ class Motion(unittest.TestCase):
         for tracks in bones.values():
             for keys in tracks.values():
                 for _,value in keys:self.assertEqual(value,keys[0][1])
+    def test_rest_transition_endpoints_match(self):
+        for a,ai,b,bi in [('LieDown',-1,'Lie',0),('Lie',0,'GetUp',0),('GetUp',-1,'Idle',0),('Idle',0,'LieDown',0)]:
+            first=self.clips['B47Dogmeat_'+a+'_Neutral'][2];second=self.clips['B47Dogmeat_'+b+'_Neutral'][2]
+            for bone,channels in first.items():
+                for channel,keys in channels.items():
+                    x=keys[ai][1];y=second[bone][channel][bi][1]
+                    if channel==0:self.assertAlmostEqual(abs(sum(u*v for u,v in zip(x,y))),1,places=5,msg=(a,b,bone))
+                    else:self.assertLess(max(abs(u-v) for u,v in zip(x,y)),2e-5,(a,b,bone))
+    def test_head_has_independent_atlas_rotation(self):
+        look=self.clips['B47Dogmeat_Look_Neutral'][2]
+        # Head local channels encode movement relative to its Neck parent.
+        rotations=look['Bip01_Head'][0];neutral=rotations[0][1]
+        degrees=[math.degrees(2*math.acos(min(1,abs(sum(u*v for u,v in zip(neutral,q)))))) for _,q in rotations]
+        self.assertGreater(max(degrees),24)
+        self.assertLess(max(degrees),30)
+        for _,q in look['Bip01_Neck'][0]:
+            self.assertAlmostEqual(abs(sum(u*v for u,v in zip(q,look['Bip01_Neck'][0][0][1]))),1,places=5)
     def test_own_actiongroup_resolves_all_transitions(self):
         folder=ROOT/'src/assets/actiongroups/b47germanshepherd'
         states={p.name for p in folder.iterdir() if p.is_dir()}

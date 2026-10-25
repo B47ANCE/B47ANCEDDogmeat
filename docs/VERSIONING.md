@@ -1,8 +1,8 @@
 # Version inventory
 
-Project Version: 0.2.0-dev.10
+Project Version: 0.2.0-dev.11
 
-Current iteration: 0.2.0-dev.10 is a compatible visual correction within the additive 0.2.0 MINOR prerelease. It revises skinning/motion and preserves geometry, UVs, textures, animal IDs and schemas. Dev.9's rejected visual checkpoint and published dev.7 remain historical. See [motion evidence](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
+Current iteration: 0.2.0-dev.11 is a compatible rest-pose and head-rotation correction within the additive 0.2.0 MINOR prerelease. It revises skinning/motion and preserves geometry, UVs, textures, animal IDs and schemas. Earlier asset checkpoints and published dev.7 remain historical. See [motion evidence](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
 
 ## Historical development narrative through 0.2.0-dev.7
 
