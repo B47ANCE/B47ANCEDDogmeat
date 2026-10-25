@@ -75,7 +75,14 @@ class ArtifactTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             target=Path(tmp)/'new'
             result=build(target)
-            self.assertEqual(verify_archive(target/result['package'],payload()),112)
+            expected=payload()
+            self.assertEqual(verify_archive(target/result['package'],expected),len(expected))
+            for suffix in ('Original','Coat1','Coat2'):
+                self.assertIn(PREFIX+'42/media/models_X/Skinned/B47Dogmeat_GSD_'+suffix+'.glb',expected)
+                self.assertIn(PREFIX+'42/media/textures/Body/B47Dogmeat_GSD_'+suffix+'.png',expected)
+            self.assertIn(PREFIX+'42/media/anims_X/Raccoon/B47Dogmeat_Walk_Neutral.x',expected)
+            self.assertIn(PREFIX+'42/media/AnimSets/b47germanshepherd/walk/defaultWalk.xml',expected)
+            self.assertIn(PREFIX+'42/media/actiongroups/b47germanshepherd/actionGroup.xml',expected)
             from publish_workshop import read_vdf
             values=read_vdf(target/'upload.vdf')
             self.assertEqual(values['publishedfileid'],configuration()['publishedfileid'] or '0')

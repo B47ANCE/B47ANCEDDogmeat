@@ -1,0 +1,75 @@
+{
+  "project_version": "0.2.0-dev.12",
+  "audit_source_sha256": "7f075bf7da6b7032252479476298bdfffa94f70bff7f0962c6b09b9959535287",
+  "evidence": "Blender 4.5.3 offline, reopened saved linked control scene, independently composed author-space atlas rotations",
+  "runtime": "NOT TESTED",
+  "blend_sha256": "8112f0c7f7bb4e27ab3db83c10f456e323626579875d16c791ad4cf2068c6578",
+  "control": "GSD_Head_Control",
+  "linked_mesh_source": "//..\\..\\german_shepherd_motion_v3\\source\\shepherd_reweighted.blend",
+  "source_position_sha256": "922021f025bf8c04afc86bad63de0e89da9296984a85660f06fdf71766b4cc34",
+  "bones": 34,
+  "helper_bones_added": 0,
+  "native_rest_matrices_unchanged": true,
+  "mesh_armature_modifier_targets_local_rig": true,
+  "samples": [
+    {
+      "yaw": 0,
+      "pitch": 0,
+      "head_expected_source_pivot_error": 1.1920928955078125e-07,
+      "neck_expected_shared_yaw_error": 2.384185791015625e-07,
+      "head_nub_follow_error": 2.086162567138672e-07
+    },
+    {
+      "yaw": -25,
+      "pitch": 0,
+      "head_expected_source_pivot_error": 1.7881393432617188e-07,
+      "neck_expected_shared_yaw_error": 2.384185791015625e-07,
+      "head_nub_follow_error": 2.980232238769531e-07
+    },
+    {
+      "yaw": 25,
+      "pitch": 0,
+      "head_expected_source_pivot_error": 2.086162567138672e-07,
+      "neck_expected_shared_yaw_error": 1.0965629826387158e-07,
+      "head_nub_follow_error": 2.384185791015625e-07
+    },
+    {
+      "yaw": 0,
+      "pitch": -15,
+      "head_expected_source_pivot_error": 2.384185791015625e-07,
+      "neck_expected_shared_yaw_error": 2.384185791015625e-07,
+      "head_nub_follow_error": 2.384185791015625e-07
+    },
+    {
+      "yaw": 0,
+      "pitch": 15,
+      "head_expected_source_pivot_error": 1.7881393432617188e-07,
+      "neck_expected_shared_yaw_error": 2.384185791015625e-07,
+      "head_nub_follow_error": 1.7881393432617188e-07
+    },
+    {
+      "yaw": 25,
+      "pitch": 12,
+      "head_expected_source_pivot_error": 1.1920928955078125e-07,
+      "neck_expected_shared_yaw_error": 1.0965629826387158e-07,
+      "head_nub_follow_error": 2.384185791015625e-07
+    },
+    {
+      "yaw": -25,
+      "pitch": -12,
+      "head_expected_source_pivot_error": 2.980232238769531e-07,
+      "neck_expected_shared_yaw_error": 2.384185791015625e-07,
+      "head_nub_follow_error": 2.980232238769531e-07
+    },
+    {
+      "yaw": 0,
+      "pitch": 0,
+      "head_expected_source_pivot_error": 1.1920928955078125e-07,
+      "neck_expected_shared_yaw_error": 2.384185791015625e-07,
+      "head_nub_follow_error": 2.086162567138672e-07
+    }
+  ],
+  "zero_return_error": 1.1920928955078125e-07,
+  "max_error": 2.980232238769531e-07,
+  "status": "PASS - reopened independent atlas control"
+}

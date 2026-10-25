@@ -1,6 +1,6 @@
 # Multiplayer ownership blocker report
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 Latest database-authoritative proposal is documented in [DATABASE_AUTHORITY_DESIGN.md](DATABASE_AUTHORITY_DESIGN.md) and [DATABASE_REDESIGN_VALIDATION.md](DATABASE_REDESIGN_VALIDATION.md). Native Option A NO-GO is retained. No database/lease/controller gameplay has been enabled; prior report evidence below retains its exact scope.
 

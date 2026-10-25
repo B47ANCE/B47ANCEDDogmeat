@@ -1,0 +1,604 @@
+{
+  "project_version": "0.2.0-dev.12",
+  "audit_source_sha256": "b2d7c2903bd5f7b07d79df06cfed7f8e4067c490582e54d45aa228db15a11e6c",
+  "environment": "Standalone NumPy offline GLB/X decode; no Blender author functions imported",
+  "runtime": "NOT TESTED",
+  "candidate": "art\\german_shepherd_motion_v3",
+  "baseline": "art\\german_shepherd_motion_v2",
+  "previous_comparison": "verified reference digests",
+  "formal_region_masks": {
+    "muzzle": "y < -0.40 and 0.25 < z < 0.52",
+    "upper_face": "0.48 < z < 0.63 and x < -0.45",
+    "ears": "z > 0.65",
+    "mouth_and_lower_muzzle": "y < -0.32 and 0.17 < z < 0.40",
+    "torso_behind_neck": "dot(position,BACK) > -0.25 and -0.22 < z < 0.40",
+    "lower_limbs": "z < -0.25 and sum(L/R limb weights) > 0.999"
+  },
+  "x_to_glb_coordinate_bridge": "G_glb = H @ G_x @ H, H=diag(1,1,-1,1); checked against emitted rest frames",
+  "fractional_sampling": "Quaternion normalized linear interpolation; exact keyframes also all evaluated",
+  "models": {
+    "B47Dogmeat_GSD_Coat1.glb": {
+      "sha256": "b6a4f28eb765edea50142deed018255e25b1cff2d936aa490752bc1e3d812f37",
+      "baseline_sha256": null,
+      "previous_comparison": "verified reference digests",
+      "non_skin_bytes_exact": null,
+      "immutable_bytes_sha256": "f7f1b9b2203c3b48416f3dd6da61ad7e0a8441324d348bfeaf8fe793320cc477",
+      "primitives": [
+        {
+          "vertices": 1425374,
+          "non_head_neck_weights_exact": null,
+          "non_head_neck_weights_sha256": "ad808baec2782c9c6668f1d6cd673e820742dbed5895be35e0adbf76a7a631af",
+          "non_head_neck_column_names": [
+            "Bip01_Pelvis",
+            "Bip01_Spine",
+            "Bip01_L_Thigh",
+            "Bip01_L_Calf",
+            "Bip01_L_Foot",
+            "Bip01_L_Toe0",
+            "Bip01_R_Thigh",
+            "Bip01_R_Calf",
+            "Bip01_R_Foot",
+            "Bip01_R_Toe0",
+            "Bip01_L_Clavicle",
+            "Bip01_L_UpperArm",
+            "Bip01_L_Forearm",
+            "Bip01_L_Hand",
+            "Bip01_L_Finger0",
+            "Bip01_R_Clavicle",
+            "Bip01_R_UpperArm",
+            "Bip01_R_Forearm",
+            "Bip01_R_Hand",
+            "Bip01_R_Finger0",
+            "Bip01_Tail",
+            "Bip01_Tail1",
+            "Bip01_Tail2"
+          ],
+          "max_influences": 4,
+          "regions": {
+            "muzzle": {
+              "vertices": 9829,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "upper_face": {
+              "vertices": 57838,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "ears": {
+              "vertices": 8478,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "mouth_and_lower_muzzle": {
+              "vertices": 14816,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "torso_behind_neck": {
+              "vertices": 426306,
+              "head_weight_min": 0.0,
+              "head_weight_max": 0.0
+            },
+            "lower_limbs": {
+              "vertices": 141885,
+              "head_weight_min": 0.0,
+              "head_weight_max": 0.0
+            }
+          },
+          "bind_identity_matrix_error": 6.226651363405722e-07
+        }
+      ]
+    },
+    "B47Dogmeat_GSD_Coat2.glb": {
+      "sha256": "1996fcc0072c6dd7b54fee051e9db23850f038012e69a894e4a4f521493d352c",
+      "baseline_sha256": null,
+      "previous_comparison": "verified reference digests",
+      "non_skin_bytes_exact": null,
+      "immutable_bytes_sha256": "4cadada8f69c0199d278459b7d94b9b2f9f24dad1753001d2d25109a645df576",
+      "primitives": [
+        {
+          "vertices": 1425349,
+          "non_head_neck_weights_exact": null,
+          "non_head_neck_weights_sha256": "97cb62d45e9e94dc604b13be636c4dc0d03836c52b73b1c2fddf8a226d790a56",
+          "non_head_neck_column_names": [
+            "Bip01_Pelvis",
+            "Bip01_Spine",
+            "Bip01_L_Thigh",
+            "Bip01_L_Calf",
+            "Bip01_L_Foot",
+            "Bip01_L_Toe0",
+            "Bip01_R_Thigh",
+            "Bip01_R_Calf",
+            "Bip01_R_Foot",
+            "Bip01_R_Toe0",
+            "Bip01_L_Clavicle",
+            "Bip01_L_UpperArm",
+            "Bip01_L_Forearm",
+            "Bip01_L_Hand",
+            "Bip01_L_Finger0",
+            "Bip01_R_Clavicle",
+            "Bip01_R_UpperArm",
+            "Bip01_R_Forearm",
+            "Bip01_R_Hand",
+            "Bip01_R_Finger0",
+            "Bip01_Tail",
+            "Bip01_Tail1",
+            "Bip01_Tail2"
+          ],
+          "max_influences": 4,
+          "regions": {
+            "muzzle": {
+              "vertices": 9824,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "upper_face": {
+              "vertices": 57847,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "ears": {
+              "vertices": 8470,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "mouth_and_lower_muzzle": {
+              "vertices": 14774,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "torso_behind_neck": {
+              "vertices": 426311,
+              "head_weight_min": 0.0,
+              "head_weight_max": 0.0
+            },
+            "lower_limbs": {
+              "vertices": 141966,
+              "head_weight_min": 0.0,
+              "head_weight_max": 0.0
+            }
+          },
+          "bind_identity_matrix_error": 6.226651363405722e-07
+        }
+      ]
+    },
+    "B47Dogmeat_GSD_Original.glb": {
+      "sha256": "d254c4e4b6c46bd6a5883cc76d7f4f4bcdcf0fa7da816af05079e6078d5c9f1d",
+      "baseline_sha256": null,
+      "previous_comparison": "verified reference digests",
+      "non_skin_bytes_exact": null,
+      "immutable_bytes_sha256": "0215a3fff5dc8c0dc9123557ad8d2950fadf8d08d5ab86fcb9015beb0f67aec7",
+      "primitives": [
+        {
+          "vertices": 1425959,
+          "non_head_neck_weights_exact": null,
+          "non_head_neck_weights_sha256": "3a129c2ed4b90e4b9ba3041b808fe90a99f36bfcc780fbe16bca1e2a44775666",
+          "non_head_neck_column_names": [
+            "Bip01_Pelvis",
+            "Bip01_Spine",
+            "Bip01_L_Thigh",
+            "Bip01_L_Calf",
+            "Bip01_L_Foot",
+            "Bip01_L_Toe0",
+            "Bip01_R_Thigh",
+            "Bip01_R_Calf",
+            "Bip01_R_Foot",
+            "Bip01_R_Toe0",
+            "Bip01_L_Clavicle",
+            "Bip01_L_UpperArm",
+            "Bip01_L_Forearm",
+            "Bip01_L_Hand",
+            "Bip01_L_Finger0",
+            "Bip01_R_Clavicle",
+            "Bip01_R_UpperArm",
+            "Bip01_R_Forearm",
+            "Bip01_R_Hand",
+            "Bip01_R_Finger0",
+            "Bip01_Tail",
+            "Bip01_Tail1",
+            "Bip01_Tail2"
+          ],
+          "max_influences": 4,
+          "regions": {
+            "muzzle": {
+              "vertices": 9886,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "upper_face": {
+              "vertices": 57647,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "ears": {
+              "vertices": 8460,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "mouth_and_lower_muzzle": {
+              "vertices": 14754,
+              "head_weight_min": 1.0,
+              "head_weight_max": 1.0
+            },
+            "torso_behind_neck": {
+              "vertices": 426309,
+              "head_weight_min": 0.0,
+              "head_weight_max": 0.0
+            },
+            "lower_limbs": {
+              "vertices": 141706,
+              "head_weight_min": 0.0,
+              "head_weight_max": 0.0
+            }
+          },
+          "bind_identity_matrix_error": 6.226651363405722e-07
+        }
+      ]
+    }
+  },
+  "clips": {
+    "B47Dogmeat_Look_H125.x": {
+      "sha256": "c850606e73aa3502e4c1e4e7da00277dd9e39dc48c0748f31b5ff46bba114582",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_H25.x": {
+      "sha256": "484dde7b220c95ce468e3849f43c36a7ed8ec9805776f1a2e4b986080636d110",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_H375.x": {
+      "sha256": "d05d0628a3a565b218635647031e2a1a86ec1025a2f2fd505b2d1bc10d342878",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_H50.x": {
+      "sha256": "e753d4ec25011fda7125575536580882a280c009cdf89a1c761c378ed71dc265",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_H625.x": {
+      "sha256": "97aab70ca1469a34b44b5c369511e15d4c3940e1145d9c92b7a14168e2445a92",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_H75.x": {
+      "sha256": "fc26bf99fd7707ea810c5b1620236f4a5a678c86300ea37091e703fc2f997f16",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_H875.x": {
+      "sha256": "c45d14cfba209fac394eed3e43071ce30b155cb14b091a470ad70f222a473af9",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_High.x": {
+      "sha256": "11cd16955b13228b8de8f1c7abd9909aa85db908d717fccf9b721c2ef3c00d06",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_Low.x": {
+      "sha256": "24ad762f82b103e26ab5d50c350137cd4c852cb67378e7962e3449c6353317ba",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    },
+    "B47Dogmeat_Look_Neutral.x": {
+      "sha256": "40239babc74758ee489e318a778626e1311491b4a518b889bccc73ee8793f065",
+      "keyframes": 91,
+      "samples_with_half_frames": 181,
+      "rest_global_matrix_error": 5.676897675381543e-07,
+      "yaw_degrees_range": [
+        -24.984775297386435,
+        24.984756449032517
+      ],
+      "pitch_degrees_range": [
+        -11.99269780295421,
+        11.992690635913329
+      ],
+      "endpoint_neutral_max_error": 1.4856725050194086e-07,
+      "pairwise_distance_error": 1.0605877642788641e-07,
+      "rigid_head_prediction_error": 7.771561172376096e-16,
+      "head_rotation_orthogonality_error": 2.2015056411195388e-07,
+      "neck_motion_matrix_error": 0.00012298716559588918
+    }
+  },
+  "motion": "art/german_shepherd_motion_v4",
+  "neutral_head_torso_forward": true,
+  "landmarks": {
+    "reference_model": "B47Dogmeat_GSD_Coat2",
+    "vertex_indices": [
+      162,
+      181491,
+      271515,
+      360063,
+      379534,
+      380808,
+      461904,
+      540248,
+      547861,
+      624221,
+      632967,
+      633410,
+      634156,
+      714613,
+      721739,
+      722993,
+      807679,
+      817201,
+      899542,
+      984573,
+      1076770,
+      1077689,
+      1081947,
+      1166909,
+      1172977,
+      1261465,
+      1343073
+    ],
+    "source_positions": [
+      [
+        -0.9414310146572531,
+        -0.15933999496852796,
+        0.6533409607363865
+      ],
+      [
+        -0.873458054690351,
+        -0.3214629828063846,
+        0.3992819525883533
+      ],
+      [
+        -0.8572139508895982,
+        -0.40111197826876416,
+        0.422927035135217
+      ],
+      [
+        -0.8596580399485749,
+        -0.1657249930300393,
+        0.8305769537691958
+      ],
+      [
+        -0.5774470073699496,
+        -0.1826730053135703,
+        0.6791189713403583
+      ],
+      [
+        -0.5570939849923038,
+        -0.08105499781189429,
+        0.4800429386086762
+      ],
+      [
+        -0.6761850039297639,
+        -0.3257769894111151,
+        0.39836500730598345
+      ],
+      [
+        -0.8281250269897922,
+        -0.3200060087074641,
+        0.37402294331695884
+      ],
+      [
+        -0.7169029198088153,
+        -0.22497299278202856,
+        0.6513579377788119
+      ],
+      [
+        -0.952169963918658,
+        -0.15472600310123627,
+        0.6086639609129634
+      ],
+      [
+        -0.777408991297909,
+        -0.46646798775515547,
+        0.2525260192051064
+      ],
+      [
+        -0.7734059822013417,
+        -0.4935460126851225,
+        0.480365930008702
+      ],
+      [
+        -0.762631998877104,
+        -0.5603139878943845,
+        0.39994094261783175
+      ],
+      [
+        -0.9175000410397347,
+        -0.021484000957239367,
+        0.48000803802278824
+      ],
+      [
+        -0.7814360092751635,
+        -0.5641509932105263,
+        0.39907100365962833
+      ],
+      [
+        -0.7641159885749702,
+        -0.4744419979202606,
+        0.3712129954074044
+      ],
+      [
+        -0.8374909988443138,
+        -0.4000019836071461,
+        0.30899091728497297
+      ],
+      [
+        -0.7021150035201092,
+        -0.016686999376223203,
+        0.5935899986361619
+      ],
+      [
+        -0.77851699309891,
+        -0.40305700387220167,
+        0.5199639287020545
+      ],
+      [
+        -0.8392409459553016,
+        -0.082012998341074,
+        0.6505520046921447
+      ],
+      [
+        -0.7970789707745056,
+        -0.17310098888163827,
+        0.7091829284327105
+      ],
+      [
+        -0.7815609927110934,
+        -0.5889539767547176,
+        0.44792602860252373
+      ],
+      [
+        -0.7251009768832537,
+        0.11086899391563583,
+        0.48005298379575834
+      ],
+      [
+        -0.7771739646850768,
+        -0.40013501338995056,
+        0.33916794712422416
+      ],
+      [
+        -0.7012609404246669,
+        -0.40102600287441803,
+        0.41623397849616595
+      ],
+      [
+        -0.7078139590058462,
+        -0.2019309910291889,
+        0.6500029965827707
+      ],
+      [
+        -0.8119170097498241,
+        -0.043157001265719606,
+        0.6299929839151446
+      ]
+    ]
+  },
+  "status": "PASS - offline asset regression only"
+}

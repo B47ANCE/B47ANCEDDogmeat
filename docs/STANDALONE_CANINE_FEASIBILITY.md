@@ -1,6 +1,6 @@
 # Standalone Lua-only canine feasibility
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 User-approved diagnostic exception, 2026-10-14: [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) uses vanilla raccoon presentation while original model work is deferred. This supports persistence investigation only and does not satisfy original canine asset acceptance. Native ObjectModDataPacket marker forgery now blocks production identity/ownership; no safe alternative durable native identity has been established.
 

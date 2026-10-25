@@ -1,6 +1,6 @@
 # Native reconstruction provenance
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 Classification is for **complete physical identity continuity through a transition**, not merely one intercepted UI action. SUPPORTED requires demonstrated trusted continuity; RESTRICTABLE requires safe managed-only prevention before execution; UNSUPPORTED means the inspected current boundary cannot authenticate/intercept that path; UNKNOWN means evidence is insufficient. No listed physical transition earns SUPPORTED. Source A anchors are in [the evidence ledger](native-save-load-evidence.json); C anchors retain the [earlier native coverage](NATIVE_ADMISSION_COVERAGE.md).
 

@@ -1,6 +1,6 @@
 # English Mastiff complete-anatomy assessment and modeling plan
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 Decision, 2026-10-16: **local anatomy added; facial/visual acceptance INCOMPLETE;
 production rigging and native activation HOLD**.

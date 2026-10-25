@@ -1,0 +1,193 @@
+{
+  "status": "OFFLINE ASSIMP PARSE PASS",
+  "parser": "assimp_py 1.1.0",
+  "clips": [
+    {
+      "file": "B47Dogmeat_Dead_Neutral.x",
+      "sha256": "d745f64942716b950f71c416108c0cce32fa4a7ea9ada65545fd3836fc26bd68",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Death_Neutral.x",
+      "sha256": "8bc1637373ea9f1c1de06be30e400bfd18acbee0504ca279936318d6ae60c09a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Eat_Neutral.x",
+      "sha256": "f36f4eef0e2f3b2a05f733e4db816f47556839d4d993e41289e88f99d089f35e",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_GetUp_Neutral.x",
+      "sha256": "bee1fbe0441a15430bcedd650d512322c70e5cdfb16b6de4265e2ee195bf7b8a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Hit_Neutral.x",
+      "sha256": "1ef2df6fcd6c96107d3461acd3ea99f7e93f68c9e8ac3520de739fe9bcc07d6d",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Idle_H25.x",
+      "sha256": "8bb480c469831a2944db31aa7e61815c2eeff70285f337eeb4ea2ce19fb0a587",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Idle_H50.x",
+      "sha256": "135f37fae414a91c75626671541f003ec9cb76b1608d9c83271b3f1d2833b3a7",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Idle_H75.x",
+      "sha256": "21a2ada3fe264ae8e41db021e9ff4a2960a73b78380a2e48b94b771473797983",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Idle_High.x",
+      "sha256": "c73926c6c1fc58423745116c813cf243f720c020ce5d77590b07979c4ad12dad",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Idle_Low.x",
+      "sha256": "cb52d6a67181cd5da3d69bddd4861d7e0472890cf95d4c64483e79282e85c98a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Idle_Neutral.x",
+      "sha256": "1c71b6ca7f3d6b0e94ee18c2fe9dd1b78743254f4f68c730e5e1f81a070c0320",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Lie_Neutral.x",
+      "sha256": "edb735d5376bc300466b2e2df244a2cc52cc30d6715440403ed172ffdf397ef5",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_LieDown_Neutral.x",
+      "sha256": "75f175bf9a091748da8acf63331430db917903a8330e7ec44368244582354fbe",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Look_H25.x",
+      "sha256": "abaeca10d652080f75e6417f34f007b31c4851c6ecb7b235eaab18bdf4d620b8",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Look_H50.x",
+      "sha256": "505f90e1948b02b11718391cc3cc8041fa16ef1067dedf1bdf995c4af7dd920a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Look_H75.x",
+      "sha256": "fe4703b8cf97950f91aa676ecddcf110aab1333a5858f83cc69ae95fe31127ad",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Look_High.x",
+      "sha256": "6163cb8047b363b71d496fa4e25a0c126b0c4ed0d2a2310e3bfa81d523c323e1",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Look_Low.x",
+      "sha256": "e594f84feb060f03c705676c667af66f1a287ab35a5765bb5eab769c5853afd2",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Look_Neutral.x",
+      "sha256": "6cbc21d2418c215381e735e84162c2815d70b5f0daa2e2b3a1aeaac3a8a5d66a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Run_H25.x",
+      "sha256": "96ee395ceddf7fbae13877cfc32670d954e1f872eaa458934188d4d19fca2b5c",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Run_H50.x",
+      "sha256": "08e9b78f904c99588f4398e0c96a4aca7c3a0f18c041e7aeb87d4353c1cec027",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Run_H75.x",
+      "sha256": "bc0254ef0c7a6142daf0b61bdcf426523829be419b40ac7fed4be982096ac12a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Run_High.x",
+      "sha256": "0add9e37252ca2ad55140de783cccf6ac49b0cae1e006816a09f4426c82fa334",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Run_Low.x",
+      "sha256": "2804d1c99de7f8056eb7dbb02da21d0ee706380924a3a3edb90e44d379e94030",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Run_Neutral.x",
+      "sha256": "bbddd5335afe816111403fa72b8140e99304cb657c5aac1d09857dc6c8de674c",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Walk_H25.x",
+      "sha256": "05322b0e5e7c9be1ef2096f7b89e000d6f6ab718ecbd3a0336ec4946fae23b15",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Walk_H50.x",
+      "sha256": "4ad2960d479229b1742dc890a63054a1084c4d84075b30d2aafe495763b4e976",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Walk_H75.x",
+      "sha256": "fb9ee615493f192bea2f22ecb3894d03b45639b31382f8fdffb9eb4ba4b05e93",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Walk_High.x",
+      "sha256": "0f070987446ff08f42c26f6597895fa4ca43f91673cc20225c5b0a8f7d6f443a",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Walk_Low.x",
+      "sha256": "2cde8741bf31f1680a2f58b25a7de33faf3bab22cbaf20963502d21ae42f0310",
+      "nodes": 35,
+      "meshes": 0
+    },
+    {
+      "file": "B47Dogmeat_Walk_Neutral.x",
+      "sha256": "61e328ea080d3af9fbef4b339d5414db742e97653b57599e1d675336e77cf8dd",
+      "nodes": 35,
+      "meshes": 0
+    }
+  ],
+  "limit": "Binding exposes no animation metadata; channel/timing/matrix checks are separate. Not the bundled PZ importer or runtime."
+}

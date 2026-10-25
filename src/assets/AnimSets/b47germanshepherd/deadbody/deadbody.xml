@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<animNode>
+  <m_Name>deadbody</m_Name>
+  <m_AnimName>B47Dogmeat_Dead_Neutral</m_AnimName>
+  <m_BlendTime>0.2</m_BlendTime>
+  <m_SpeedScale>1</m_SpeedScale>
+  <m_Looped>true</m_Looped>
+  <m_SyncTrackingEnabled>true</m_SyncTrackingEnabled>
+  <m_useDeferredMovement>false</m_useDeferredMovement>
+</animNode>

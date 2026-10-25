@@ -1,0 +1,195 @@
+{
+  "asset_revision": "gsd-skin-motion-v002",
+  "project_version": "0.2.0-dev.10",
+  "environment": "Blender 4.5.3 LTS offline",
+  "native_source_sha256": "a8cc66ee09bae74f02f1dbc045a528989cb02e9f7df5ec720f25b8d706348320",
+  "idle_bind_source_sha256": "e132d9c58215e755be496c8225e8c436905cb9d847cb7193884bf9deca1e01f3",
+  "bind_reference": "Rac_Idle01 frame zero",
+  "hierarchy_names_and_parents_match": true,
+  "bone_nodes": 34,
+  "deforming_bones": 25,
+  "helper_bones": "Nine zero-weight hierarchy helpers; not native anatomical bind positions",
+  "native_to_authoring": [
+    [
+      3.262482266563893e-07,
+      0.0,
+      4.3212890625,
+      0.2912959158420563
+    ],
+    [
+      -4.3212890625,
+      0.0,
+      3.262482266563893e-07,
+      0.0001982583780772984
+    ],
+    [
+      0.0,
+      4.3212890625,
+      0.0,
+      -0.8311949968338013
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "mesh_object_transform": [
+    [
+      1.7471151636527793e-08,
+      -0.23141242563724518,
+      0.0,
+      4.587435978464782e-05
+    ],
+    [
+      0.23141242563724518,
+      1.7471151636527793e-08,
+      0.0,
+      -0.06740949302911758
+    ],
+    [
+      0.0,
+      0.0,
+      0.23141242563724518,
+      0.19234885275363922
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "alignment_scale": 4.321288952153954,
+  "variants": {
+    "original": {
+      "model": "B47Dogmeat_GSD_Original",
+      "source_vertices": 1425959,
+      "source_triangles": 2590138,
+      "geometry_uv_source_sha256": "11e887ba6f06145c050537e11d50a531b4f06e6271275158feed00c7bd3dea07",
+      "geometry_uv_bound_sha256": "11e887ba6f06145c050537e11d50a531b4f06e6271275158feed00c7bd3dea07",
+      "unchanged_source_geometry_uv": true,
+      "glb_position_max_error_after_inverse_alignment": 2.7001369412582577e-07,
+      "glb_uv_max_error": 0.0,
+      "native_inverse_bind_max_error": 3.2782554626464844e-06,
+      "native_joint_global_max_error": 3.3974647521972656e-06,
+      "positive_winding_fraction": 0.999852131430835,
+      "max_influences": 4,
+      "unweighted_vertices": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "glb_sha256": "334e0d5286bec82f83627f0be315be2e8961a42f6840e571614f3c80a50cdf3f"
+    },
+    "variation_1": {
+      "model": "B47Dogmeat_GSD_Coat1",
+      "source_vertices": 1294771,
+      "source_triangles": 2590138,
+      "geometry_uv_source_sha256": "22ec562dbe4f60e1bf75af7f833e7879ed845fb1fcc9cc17fc924334f6512eae",
+      "geometry_uv_bound_sha256": "22ec562dbe4f60e1bf75af7f833e7879ed845fb1fcc9cc17fc924334f6512eae",
+      "unchanged_source_geometry_uv": true,
+      "glb_position_max_error_after_inverse_alignment": 9.057645233845335e-08,
+      "glb_uv_max_error": 0.0,
+      "native_inverse_bind_max_error": 3.2782554626464844e-06,
+      "native_joint_global_max_error": 3.3974647521972656e-06,
+      "positive_winding_fraction": 0.999852131430835,
+      "max_influences": 4,
+      "unweighted_vertices": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "glb_sha256": "c5aef907e5f10375d1155b3f4d96c675726d5bd3d6f8eaa1aa2997aecac2f38e"
+    },
+    "variation_2": {
+      "model": "B47Dogmeat_GSD_Coat2",
+      "source_vertices": 1294771,
+      "source_triangles": 2590138,
+      "geometry_uv_source_sha256": "6223a4fea697d031b107a851af8bd1d1a84612cd5ba1f7300398f0d2af9522f9",
+      "geometry_uv_bound_sha256": "6223a4fea697d031b107a851af8bd1d1a84612cd5ba1f7300398f0d2af9522f9",
+      "unchanged_source_geometry_uv": true,
+      "glb_position_max_error_after_inverse_alignment": 9.057645233845335e-08,
+      "glb_uv_max_error": 0.0,
+      "native_inverse_bind_max_error": 3.2782554626464844e-06,
+      "native_joint_global_max_error": 3.3974647521972656e-06,
+      "positive_winding_fraction": 0.999852131430835,
+      "max_influences": 4,
+      "unweighted_vertices": 0,
+      "max_weight_sum_error": 1.1920928955078125e-07,
+      "glb_sha256": "654ef35cb1e31c972361ca4c78968f2c96d58ff5f8289ee78c339a8445cd4b36"
+    }
+  },
+  "runtime": "NOT TESTED",
+  "frozen_bind_checkpoint": "art/german_shepherd_native",
+  "tail_field": {
+    "method": "Exact-position welded mesh edge graph, cut-plane component, two-source surface geodesic root blend, smooth finite-reach decay",
+    "source_vertices": 1294771,
+    "welded_vertices": 1294771,
+    "tail_vertices": 180109,
+    "mixed_root_vertices": 35511,
+    "parameters": {
+      "cut_z": 0.0,
+      "blend_top": 0.16,
+      "fade_start": 0.27,
+      "reach": 0.35,
+      "body_reach": 1.0
+    },
+    "positions_sha256": "922021f025bf8c04afc86bad63de0e89da9296984a85660f06fdf71766b4cc34",
+    "welded_edges_sha256": "f256155069bb91336bb46e04b7c7aeedd744f7db0479ecaa5b0681e2c003a62a",
+    "field_sha256": "e947d607338b60215b45eb8124db9fe53f914d437c2ced8d470f3b7fd2a543bf"
+  },
+  "tail_root": [
+    0.59,
+    0.37,
+    0.08
+  ],
+  "limb_field": {
+    "method": "Four separated paw components below cut, surface geodesic correction fading above cut, convex partition; preserves baseline upper attachments",
+    "cut_z": -0.25,
+    "blend_top": -0.1,
+    "reach": 0.3,
+    "fade_start": 0.22,
+    "pure_lower_vertices": [
+      27358,
+      29826,
+      34867,
+      35892
+    ],
+    "mixed_vertices": 143136,
+    "max_sum": 1.0,
+    "min_weight": 0.0,
+    "source_positions_sha256": "922021f025bf8c04afc86bad63de0e89da9296984a85660f06fdf71766b4cc34",
+    "field_sha256": "fcd6418be79ea686a3568e9329112ab64f1bf8b031bb04dc60fd3b8b3420033a"
+  },
+  "skin_attribute_proof": {
+    "B47Dogmeat_GSD_Coat1": {
+      "glb_sha256": "c5aef907e5f10375d1155b3f4d96c675726d5bd3d6f8eaa1aa2997aecac2f38e",
+      "prior_glb_sha256": "1eec0c11f824c19e8c319c3730998bb7224d534763cc0cfe265f84e4e1259a6c",
+      "unchanged_non_skin_bytes_sha256": "f7f1b9b2203c3b48416f3dd6da61ad7e0a8441324d348bfeaf8fe793320cc477",
+      "changed_attributes": [
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ],
+      "source_mapping_max_error": 9.057645233845335e-08,
+      "all_non_skin_bytes_unchanged": true
+    },
+    "B47Dogmeat_GSD_Coat2": {
+      "glb_sha256": "654ef35cb1e31c972361ca4c78968f2c96d58ff5f8289ee78c339a8445cd4b36",
+      "prior_glb_sha256": "3634d65cefcf2a6f99f9d5a1fc4c5c1e54600074a73d9b1992c48c7112dec888",
+      "unchanged_non_skin_bytes_sha256": "4cadada8f69c0199d278459b7d94b9b2f9f24dad1753001d2d25109a645df576",
+      "changed_attributes": [
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ],
+      "source_mapping_max_error": 9.057645233845335e-08,
+      "all_non_skin_bytes_unchanged": true
+    },
+    "B47Dogmeat_GSD_Original": {
+      "glb_sha256": "334e0d5286bec82f83627f0be315be2e8961a42f6840e571614f3c80a50cdf3f",
+      "prior_glb_sha256": "81b4e354a41560e6a1853711cc5d4c3abd1d33dd00e7740b21b9545ef5368f13",
+      "unchanged_non_skin_bytes_sha256": "0215a3fff5dc8c0dc9123557ad8d2950fadf8d08d5ab86fcb9015beb0f67aec7",
+      "changed_attributes": [
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ],
+      "source_mapping_max_error": 2.7001369412582577e-07,
+      "all_non_skin_bytes_unchanged": true
+    }
+  }
+}

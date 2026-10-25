@@ -1,6 +1,6 @@
 # Minimum playable development candidate and full roadmap
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 M0R scope design, 2026-10-12. This is a candidate acceptance contract, not a release announcement or approval. M1 is a research prototype. The minimum candidate does not replace the full approved feature roadmap or mean 1.0 completion. No release version is invented: the historical M0R checkpoint was 0.1.0-dev.1 and the current compatible art checkpoint is 0.1.0-dev.2; a future gameplay/release iteration needs its own compatibility classification and reviewed version decision.
 

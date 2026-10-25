@@ -1,6 +1,6 @@
 # Lua-only ownership prototype disposition
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 **Positive ownership prototype: NOT IMPLEMENTED.** The handoff authorizes a minimal prototype only if source inspection identifies a plausible trustworthy seam. The [seam assessment](EXCLUSIVE_ADMISSION_SEAM_ASSESSMENT.md) found no sufficient native origin/binding/save transaction contract. Implementing an ownership writer would assume the missing guarantee. The existing diagnostic remains the bounded raccoon carrier experiment; no further speculative guard is added.
 

@@ -1,6 +1,42 @@
 # Changelog
 
+## [0.2.0-dev.12] - 2026-10-25
+
+- Compatible animation correction within the additive 0.2.0 MINOR prerelease: research canine gait, align the neutral head forward, add visible lateral tail sway and refine hindlimb coordination.
+- Move both rear stifle/hock pivots forward 0.04 model units and normalize wrist recovery during rest transitions. Add independent exported sole-contact, joint-continuity and package-mapping regression checks.
+- Motion-only work reuses the verified dev.11 skins, geometry, UVs, textures and native bind contract. Runtime validation remains pending; no deployment or publication.
+
+## [0.2.0-dev.11] - 2026-10-24
+
+- Compatible visual correction within the additive 0.2.0 MINOR prerelease: refine folded hindleg rest poses and give the skull independent yaw/pitch through corrected head/neck weights and fitted pivots.
+- Open the resting hindleg stance and extend side-resting hindlegs without changing leg weights. Add a linked editable atlas control and independent exported-model/clip checks for rigid facial motion and all rest-transition frames.
+- Preserve geometry, topology, UVs, textures, native bone hierarchy/binds, animal IDs and schemas. Offline checks only; some angular hip/ankle contours and neck-fur deformation remain for review. No runtime testing, deployment or publication.
+
+## [0.2.0-dev.10] - 2026-10-24
+
+- Compatible visual defect correction within the additive 0.2.0 MINOR prerelease. User rejected dev.9 animation/tail appearance; prior numeric checks did not establish visual quality. Preserve that checkpoint as rejected evidence.
+- Replace cross-leg and hip/tail contamination with connected-region skin weights, fitted canine landmarks and continuous joint blending. Preserve geometry, topology, UVs, textures, native skeleton/bind contract and independent animal identity.
+- Author 47 clips with grounded gait targets, staged rest, separately relaxed collapse limbs/head and nine health-tail anchors. Retain actual 24-frame walk/trot previews and full-mesh serialized deformation regressions.
+- Offline contracts and regressions pass; visual acceptance remains a review gate, including folded-limb compression. PZ and dedicated multiplayer NOT TESTED. Ownership/live tasks stay disabled. No deployment, publication or merge.
+
+## [0.2.0-dev.9] - 2026-10-24
+
+- Development scope: compatible animation correction and optional native-health tail presentation. Continue the additive 0.2.0 MINOR prerelease; no save-schema, identity, or ownership change. Geometry and UVs remain immutable.
+- Replace rejected direct-raccoon motion with 31 original clips around dog joint pivots, fixed-length walk/trot limbs, rest and static death poses. Preserve all three GLBs, geometry, UVs, weights and textures. Add an independent action group/animation set; disable Shepherd fence climbing until a suitable traversal exists.
+- Add server-sandbox `TailHealthIndicator` (default true), reading native health for raised/lowered tails during idle/look/walk/run. Neutral on unknown/disabled; bounded transient client scanning with no health writes, saves, ownership or live task controls. Five health anchors limit sampled tail-base blend drift below 0.0041 source units.
+- 465 offline Lua cases, animation/graph/immutable-asset regressions and independent Assimp imports pass. Both coats have actual Blender gait and health renders. PZ import, speed/contact, state blending, health replication, 2.59M-triangle performance and dedicated multiplayer remain NOT TESTED. G7 and stable G8 remain BLOCKED. No deployment, publication or merge.
+
+## [0.2.0-dev.8] - 2026-10-21
+
+- Rig the original Shepherd and both supplied coat variations to one native raccoon hierarchy, preserving geometry and UVs. Add three independent native types under a Shepherd group; preserve vanilla raccoons and the existing diagnostic carrier.
+- Use model-specific idle-pose inverse binds, authored skin weights and explicit hashed runtime asset mappings. Add registration, localization, asset/proof-boundary validation and selective CI LFS hydration. Ownership and live tasks remain disabled.
+- 439 offline Lua tests and 11 asset/proof boundary cases pass. Native locomotion visual acceptance remains HOLD; each mesh retains 2.59M triangles. PZ loading, performance, save/load and dedicated multiplayer remain NOT TESTED. No deployment or publication.
+
 ## [0.2.0-dev.7] — 2026-10-14
+
+- On 2026-10-21 retain user-supplied German Shepherd coat variations 1 and 2 as gsd-selected-coats-v001: byte-exact FBX/2K PBR maps, four input archive CRC/hash ledgers, original renders and an order-independent surface/UV comparison. Both match the original surface geometry at 1e-5 local-coordinate precision but use different UV layouts. Preserve the original rig/coat; no direct texture swap, UV/geometry edit, coat rigging, runtime change or publication. Runtime baseline remains unchanged.
+
+- On 2026-10-21 preserve the supplied high-resolution German Shepherd and add the independent gsd-selected-rig-v001 authoring checkpoint: raccoon-compatible 34-bone names/hierarchy, dog-fitted bind joints, normalized four-influence skinning, unchanged geometry/UV/texture evidence, BLEND/GLB/FBX and real neutral/deformation renders. No geometry/material edits, decimation, paid job, vanilla raccoon replacement, runtime activation or Workshop update. The published runtime version/payload remains unchanged; native animation and performance acceptance are pending.
 
 - Publish the first explicitly authorized MP testing item, 3822584314, on 2026-10-18 from e98d1eb after source/CI/package checks. Preserve the release archive/receipt and record the returned ID for future updates. Correct the SteamCMD success-format false negative with five tests (18 publication cases total); no second upload or runtime payload change. Steam remains running at the user's request; G7/stable G8 remain blocked.
 

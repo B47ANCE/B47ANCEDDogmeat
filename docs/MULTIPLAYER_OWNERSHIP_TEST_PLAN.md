@@ -1,6 +1,6 @@
 # Native continuity operator test plan
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 Status: **NOT EXECUTED.** No PZ/client/server was launched or deployed for this audit. Current build is for negative/refusal diagnostics; it cannot pass positive multiplayer ownership acceptance. These instructions are a plan for separately authorized disposable testing, not authorization to change a live server or install/launch now.
 

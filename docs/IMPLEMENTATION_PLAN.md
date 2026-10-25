@@ -1,6 +1,12 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
+
+Current iteration: 0.2.0-dev.12 corrects walking order, moves both rear stifle/hock pivots forward, adds visible tail sway and makes the neutral head face forward while preserving supplied geometry, UVs, textures and the raccoon hierarchy. See [motion and validation](SHEPHERD_MOTION_AND_TAIL_HEALTH.md). Published dev.7 remains historical; no migration or stable-release claim.
+
+## Historical development narrative through 0.2.0-dev.7
+
+The statements below describe their original investigation checkpoints, including pre-publication status. They do not deny the subsequent Workshop publication or establish current runtime proof.
 
 The user-approved [em-v003-preview attempt](../art/english_mastiff_anatomy_preview/README.md) is complete as a 20-credit static job, not as an anatomical character. Its actual head section does not establish a bounded mouth cavity, dentition, gums or tongue. Keep anatomy HOLD and use the documented local modeling fallback before further texture/rig work.
 

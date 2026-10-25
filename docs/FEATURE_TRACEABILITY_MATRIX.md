@@ -1,6 +1,6 @@
 # Current standalone feature traceability matrix
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 M0R assessment, 2026-10-12. Canonical current design rows: [feature_traceability.json](contracts/feature_traceability.json). All historical F01–F101 IDs and requirement meanings are retained, then F102–F132 cover original native foundation and new core sanitation/door/security requirements. Historical source classifications do not transfer to standalone implementation. The older [feature feasibility matrix](FEATURE_FEASIBILITY_MATRIX.md) remains immutable add-on research.
 

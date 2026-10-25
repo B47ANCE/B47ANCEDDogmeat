@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "dog",
   "name": "Dogmeat",
-  "version": "0.2.0-dev.7",
+  "version": "0.2.0-dev.12",
   "reviewed": true,
-  "source_digest": "e758635dbf97f95e90f5868f3e74482221d7ea5e0433e1e9e2875b6a0e507592",
+  "source_digest": "c4350ebc84870e55f57fb7e8ced039838e45ad2870e69ccae1df24f4e49c6f09",
   "features": [
     {
       "status": "Foundation",
@@ -25,16 +25,40 @@
     {
       "status": "Blocked",
       "text": "Authenticated ownership/admission and exclusive native-control contracts unresolved."
+    },
+    {
+      "status": "Foundation",
+      "text": "Original Shepherd and both coats retain frozen v3 geometry/UVs/textures/weights and the native bone contract. Canine movement research informs 47 original v4 clips: lateral-sequence walk, diagonal trot, forward stifle/hock pivots, forward-neutral independently controlled head and lateral tail sway. Independent animal/action/animation definitions preserve vanilla raccoons. Offline review candidate."
+    },
+    {
+      "status": "Source",
+      "text": "Optional local tail-health presentation reads native replicated health under a server sandbox setting; unknown/disabled stays neutral. No health writes or ownership/task activation. Offline tested only."
     }
   ],
-  "limits": "Workshop item 3822584314 publishes only the default-off raccoon diagnostic. Vanilla 42.21 source audit passes; modified installation unsupported. Ownership, authenticated continuity and live tasks blocked. 431 offline Lua and 18 publication cases PASS; SP/dedicated NOT TESTED; stable G8 BLOCKED. Models on HOLD.",
+  "limits": "Published Workshop item 3822584314 remains dev.7 default-off raccoon diagnostic. Dev.12 motion candidate: visual acceptance pending; stiff rest ankle/haunch contours, neck-ruff compression and narrow extended-tail base remain. 2.59M triangles per model; PZ import/speed/contact/state blending/health replication/save-load NOT TESTED. Shepherd climbing disabled. Ownership/live tasks disabled. G6 NOT TESTED, G7 BLOCKED/NOT TESTED and stable G8 BLOCKED.",
   "evidence": [
     "README.md",
     "source-inventory.json",
     "docs/WORKSHOP_PUBLICATION.md",
     "docs/BRANDING.md",
     "docs/OWNERSHIP_GO_NO_GO_DECISION.md",
-    "docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json"
+    "docs/WORKSHOP_RELEASE_0_2_0_DEV_7.json",
+    "art/german_shepherd_selected/README.md",
+    "art/german_shepherd_selected/coats/README.md",
+    "docs/GERMAN_SHEPHERD_INTEGRATION.md",
+    "art/german_shepherd_native/README.md",
+    "docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md",
+    "art/german_shepherd_motion_v3/manifest.json",
+    "art/german_shepherd_motion_v4/README.md",
+    "art/german_shepherd_motion_v4/manifest.json",
+    "art/german_shepherd_motion_v4/validation/motion.json",
+    "art/german_shepherd_motion_v4/validation/canine-movement.json",
+    "art/german_shepherd_motion_v4/validation/skin-deformation.json",
+    "art/german_shepherd_motion_v4/validation/head-deformation.json",
+    "art/german_shepherd_motion_v4/validation/tail-blends.json",
+    "art/german_shepherd_motion_v4/validation/reopened-head-controls-audit.json",
+    "art/german_shepherd_motion_v4/validation/joint-guides.json",
+    "docs/CANINE_MOVEMENT_RESEARCH_AUDIT.md"
   ],
   "relations": []
 }

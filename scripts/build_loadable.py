@@ -3,6 +3,8 @@ from pathlib import Path
 import argparse
 import json
 import tempfile
+import hashlib
+import ntpath
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -25,6 +27,22 @@ def sources():
     result['42/poster.png'] = ROOT/'src/metadata/poster.png'
     result['42/media/ui/B47ANCEDDogmeat_icon.png'] = ROOT/'src/metadata/media/ui/B47ANCEDDogmeat_icon.png'
     result['42/media/sandbox-options.txt'] = ROOT/'src/metadata/sandbox-options.txt'
+    for entry in inventory.get('runtime_assets',[]):
+        relative,target=entry['source'],entry['target']
+        source=(ROOT/relative).resolve();destination=Path(target)
+        if (not source.is_relative_to(ROOT) or ntpath.isabs(relative) or '\\' in relative or ':' in relative or '..' in Path(relative).parts
+                or destination.is_absolute() or '..' in destination.parts or '\\' in target or ':' in target
+                or not target.startswith('42/media/') or target in result):
+            raise ValueError('Unsafe/duplicate runtime asset mapping')
+        if source.suffix.lower() not in {'.glb','.png','.txt','.x','.xml'} or destination.suffix.lower()!=source.suffix.lower():
+            raise ValueError('Unexpected runtime asset format')
+        raw=source.read_bytes()
+        if raw.startswith(b'version https://git-lfs.github.com/spec/v1'):
+            raise ValueError('Runtime asset is an unhydrated Git LFS pointer: '+relative)
+        if hashlib.sha256(raw).hexdigest()!=entry['sha256']:
+            raise ValueError('Runtime asset hash differs: '+relative)
+        result[target]=source
+    if len({x.casefold() for x in result})!=len(result):raise ValueError('Case collision')
     return result
 
 def assemble(destination):

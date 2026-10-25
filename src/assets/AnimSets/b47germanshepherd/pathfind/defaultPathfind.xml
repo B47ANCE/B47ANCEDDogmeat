@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<animNode>
+  <m_Name>defaultPathfind</m_Name>
+  <m_AnimName>B47Dogmeat_Walk_Neutral</m_AnimName>
+  <m_BlendTime>0.2</m_BlendTime>
+  <m_SpeedScale>1</m_SpeedScale>
+  <m_Looped>true</m_Looped>
+  <m_SyncTrackingEnabled>true</m_SyncTrackingEnabled>
+  <m_useDeferredMovement>false</m_useDeferredMovement>
+  <m_Scalar>B47DogmeatHealth</m_Scalar>
+  <m_2DBlends referenceID="1">
+    <m_AnimName>B47Dogmeat_Walk_Neutral</m_AnimName>
+    <m_XPos>0</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="2">
+    <m_AnimName>B47Dogmeat_Walk_Low</m_AnimName>
+    <m_XPos>1</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="3">
+    <m_AnimName>B47Dogmeat_Walk_H125</m_AnimName>
+    <m_XPos>1.125</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="4">
+    <m_AnimName>B47Dogmeat_Walk_H25</m_AnimName>
+    <m_XPos>1.25</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="5">
+    <m_AnimName>B47Dogmeat_Walk_H375</m_AnimName>
+    <m_XPos>1.375</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="6">
+    <m_AnimName>B47Dogmeat_Walk_H50</m_AnimName>
+    <m_XPos>1.5</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="7">
+    <m_AnimName>B47Dogmeat_Walk_H625</m_AnimName>
+    <m_XPos>1.625</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="8">
+    <m_AnimName>B47Dogmeat_Walk_H75</m_AnimName>
+    <m_XPos>1.75</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="9">
+    <m_AnimName>B47Dogmeat_Walk_H875</m_AnimName>
+    <m_XPos>1.875</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="10">
+    <m_AnimName>B47Dogmeat_Walk_High</m_AnimName>
+    <m_XPos>2</m_XPos>
+    <m_YPos>0</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlends referenceID="11">
+    <m_AnimName>B47Dogmeat_Walk_Neutral</m_AnimName>
+    <m_XPos>1.5</m_XPos>
+    <m_YPos>1</m_YPos>
+    <m_SpeedScale>1</m_SpeedScale>
+  </m_2DBlends>
+  <m_2DBlendTri>
+    <node1>1</node1>
+    <node2>2</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>2</node1>
+    <node2>3</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>3</node1>
+    <node2>4</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>4</node1>
+    <node2>5</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>5</node1>
+    <node2>6</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>6</node1>
+    <node2>7</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>7</node1>
+    <node2>8</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>8</node1>
+    <node2>9</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_2DBlendTri>
+    <node1>9</node1>
+    <node2>10</node2>
+    <node3>11</node3>
+  </m_2DBlendTri>
+  <m_Conditions>
+    <m_Name>bMoving</m_Name>
+    <m_Type>BOOL</m_Type>
+    <m_Value>true</m_Value>
+  </m_Conditions>
+  <m_Events>
+    <m_EventName>PlayBreedSound</m_EventName>
+    <m_TimePc>0.25</m_TimePc>
+    <m_ParameterValue>walkFront</m_ParameterValue>
+  </m_Events>
+  <m_Events>
+    <m_EventName>PlayBreedSound</m_EventName>
+    <m_TimePc>0.75</m_TimePc>
+    <m_ParameterValue>walkBack</m_ParameterValue>
+  </m_Events>
+</animNode>

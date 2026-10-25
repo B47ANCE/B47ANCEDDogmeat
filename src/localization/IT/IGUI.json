@@ -1,3 +1,10 @@
 {
-  "IGUI_AnimalType_b47dogtest": "Dog persistence test carrier (raccoon)"
+  "IGUI_AnimalType_b47dogtest": "Dog persistence test carrier (raccoon)",
+  "IGUI_Animal_Group_b47germanshepherd": "German Shepherd",
+  "IGUI_AnimalType_b47gsdoriginal": "German Shepherd (original coat)",
+  "IGUI_AnimalType_b47gsdcoat1": "German Shepherd (coat variation 1)",
+  "IGUI_AnimalType_b47gsdcoat2": "German Shepherd (coat variation 2)",
+  "IGUI_Breed_b47gsdoriginal": "Original coat",
+  "IGUI_Breed_b47gsdcoat1": "Coat variation 1",
+  "IGUI_Breed_b47gsdcoat2": "Coat variation 2"
 }

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<animNode>
+  <m_Name>eating</m_Name>
+  <m_AnimName>B47Dogmeat_Eat_Neutral</m_AnimName>
+  <m_BlendTime>0.2</m_BlendTime>
+  <m_SpeedScale>1</m_SpeedScale>
+  <m_Looped>false</m_Looped>
+  <m_SyncTrackingEnabled>true</m_SyncTrackingEnabled>
+  <m_useDeferredMovement>false</m_useDeferredMovement>
+  <m_Conditions>
+    <m_Name>idleAction</m_Name>
+    <m_Type>STRING</m_Type>
+    <m_Value>eat</m_Value>
+  </m_Conditions>
+  <m_Events>
+    <m_EventName>idleActionEnd</m_EventName>
+    <m_Time>End</m_Time>
+    <m_ParameterValue />
+  </m_Events>
+</animNode>

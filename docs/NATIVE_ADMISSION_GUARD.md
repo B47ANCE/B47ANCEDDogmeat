@@ -1,6 +1,6 @@
 # Server admission guard development
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 Historical selected-hook checkpoint: source/validation at `6518be2aa7afaa71d70e3ff4b28b68dc01e21a63`. Its 332-test/20-module/1,015-fallback results retain that scope. The same unreleased dev.7 has since been revised; current policy, counts and blockers are in [BLOCKER_RESOLUTION_REPORT.md](BLOCKER_RESOLUTION_REPORT.md) and [SERVER_ADMISSION_GUARD.md](SERVER_ADMISSION_GUARD.md). The earlier report below is preserved.
 

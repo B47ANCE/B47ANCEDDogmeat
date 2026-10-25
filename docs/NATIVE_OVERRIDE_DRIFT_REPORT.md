@@ -1,6 +1,6 @@
 # Native override drift report
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 **[VERIFIED — offline file comparison] Five historical loose-class baseline checks still fail. Two additional inspected loose classes differ from the package. Effective pristine runtime remains UNKNOWN.** Installed files, launcher/classpath settings and historical hash manifests were not changed.
 

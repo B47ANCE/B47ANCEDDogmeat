@@ -1,0 +1,30 @@
+{
+  "asset_revision": "gsd-selected-rig-v001",
+  "format": "GLB with skin",
+  "path": "art/german_shepherd_selected/rigged/B47Dogmeat_GermanShepherd.glb",
+  "bytes": 130978424,
+  "sha256": "270d1b4f89365e2e259de99c0373041c4ea382b92ec10f0e7b5697569d412f42",
+  "skins": 1,
+  "joint_count": 34,
+  "animations": 0,
+  "image_payloads": [
+    {
+      "mime_type": "image/jpeg",
+      "sha256": "c05b4830135d338edd27eb3b5f0f1dd79d1580e91aa4fdf3e009b7e1802c43fb",
+      "bytes": 10045458
+    },
+    {
+      "mime_type": "image/jpeg",
+      "sha256": "d065e5063b4b276a66029d809cd9d66c675b26c0479366fafddd34fc79d41a72",
+      "bytes": 13915650
+    },
+    {
+      "mime_type": "image/jpeg",
+      "sha256": "73e947b70f7404cd3a7b7dcc631fedcbb067470832648d802fb190f5fe9797da",
+      "bytes": 1775112
+    }
+  ],
+  "all_original_image_payloads_preserved": true,
+  "runtime": "NOT TESTED",
+  "native_names_and_parents_match": true
+}

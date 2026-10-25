@@ -1,0 +1,83 @@
+{
+  "game_version": "42.21",
+  "steam_build": "25485521",
+  "environment": "Source inspection; game not executed; existing modified installation unsupported",
+  "records": [
+    {
+      "path": "media/models_X/Skinned/Raccoon_Body.x",
+      "container": "game-root",
+      "sha256": "a8cc66ee09bae74f02f1dbc045a528989cb02e9f7df5ec720f25b8d706348320"
+    },
+    {
+      "path": "media/anims_X/Raccoon/Rac_Idle01.x",
+      "container": "game-root",
+      "sha256": "e132d9c58215e755be496c8225e8c436905cb9d847cb7193884bf9deca1e01f3"
+    },
+    {
+      "path": "media/lua/shared/Definitions/animal/RaccoonDefinitions.lua",
+      "container": "game-root",
+      "sha256": "55185497017826ae3a1d3f3e980f963de29644797ea4d992d40ea9e483ca502c"
+    },
+    {
+      "path": "media/lua/shared/Definitions/animal/AnimalAvatarDefinition.lua",
+      "container": "game-root",
+      "sha256": "9a3ecc84e1e6f362edcfe815a91b3e4cfa568dd8e2878ca57197135ebcab1d86"
+    },
+    {
+      "path": "media/lua/shared/Definitions/animal/AnimalPartsDefinitions.lua",
+      "container": "game-root",
+      "sha256": "6ab17895eb51b15101a868fa7d5659ed818427fac774cdf9d6d42f7398a320f8"
+    },
+    {
+      "path": "media/scripts/generated/models_animals.txt",
+      "container": "game-root",
+      "sha256": "148a08e544ea44714617681bac2d770ad82beac899a20e3b51ec40c72950a1d0"
+    },
+    {
+      "path": "media/shaders/animalEffect.frag",
+      "container": "game-root",
+      "sha256": "110b03a92789f47e69facc2d3de34c1c29ad7c01254abf90a71d05d7828ee598"
+    },
+    {
+      "path": "media/shaders/animalEffect.vert",
+      "container": "game-root",
+      "sha256": "3eb23a4d768e156740ecb77c1c8cb04790f483b11865e62a817f6574ff33449d"
+    },
+    {
+      "path": "zombie/core/skinnedmodel/advancedanimation/AnimatedModel$AnimatedModelInstanceRenderData.class",
+      "container": "projectzomboid.jar",
+      "sha256": "c96e48b6d138db930abe557459b2ff81e025a47cba6c3b199700473362e2f04d"
+    },
+    {
+      "path": "zombie/core/skinnedmodel/animation/AnimationPlayer$SkinTransformData.class",
+      "container": "projectzomboid.jar",
+      "sha256": "de9db9d1526bd842a6694df6deb33bb0f1c38b7ca3f55b0bd1ab44f507c1ff6a"
+    },
+    {
+      "path": "zombie/core/skinnedmodel/animation/AnimationPlayer.class",
+      "container": "projectzomboid.jar",
+      "sha256": "06fc56e5aa626c808e8c6c0870dc87c10a957d86c7c22782be1d437d52b8bc28"
+    },
+    {
+      "path": "zombie/core/skinnedmodel/model/FileTask_AbstractLoadModel.class",
+      "container": "projectzomboid.jar",
+      "sha256": "a58f90cfcaae255179b80dc971f71a967addf53ef66a12333cc4629bb200890c"
+    },
+    {
+      "path": "zombie/core/skinnedmodel/model/jassimp/ImportedSkeleton.class",
+      "container": "projectzomboid.jar",
+      "sha256": "ceb9756c05f26f7aa730cc761cf13852fb3275690077500e047b3a8c6da8c0af"
+    },
+    {
+      "path": "zombie/core/skinnedmodel/model/jassimp/ProcessedAiScene.class",
+      "container": "projectzomboid.jar",
+      "sha256": "6cf548c3a56f0729ff9666b8bb0932c810b1aa01fd2b1b7dbada5cfd1eba6b8a"
+    }
+  ],
+  "claims": [
+    "Own mesh inverse binds are used with shared native clips; see integration contract for inspected methods.",
+    "34 skeleton names and parents retained; 25 deforming bones.",
+    "No native mesh, weights, animation tracks, class files or Java implementation shipped."
+  ],
+  "runtime": "NOT TESTED"
+}

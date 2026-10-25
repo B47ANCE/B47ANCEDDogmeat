@@ -1,6 +1,6 @@
 # Option A ownership decision
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 **NO-GO — trustworthy automatic native-to-private ownership continuity is unavailable through the verified Lua boundary on the inspected Build 42.21.** Do not enable multiplayer ownership or add speculative guards. Neither GO nor CONDITIONAL GO is justified. This is the engineering decision for the required guarantees and current evidence, not a universal impossibility theorem about every future Lua design or game build.
 

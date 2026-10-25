@@ -1,0 +1,169 @@
+{
+  "asset_revision": "gsd-selected-rig-v001",
+  "scope": "Existing vanilla raccoon skeleton/animation identifiers; separate Dogmeat animal integration only. No native models or clips bundled.",
+  "native_references": [
+    {
+      "path": "media/models_X/Skinned/Raccoon_Body.x",
+      "sha256": "a8cc66ee09bae74f02f1dbc045a528989cb02e9f7df5ec720f25b8d706348320"
+    },
+    {
+      "path": "media/scripts/generated/models_animals.txt",
+      "sha256": "148a08e544ea44714617681bac2d770ad82beac899a20e3b51ec40c72950a1d0"
+    },
+    {
+      "path": "media/scripts/generated/animations_meshes.txt",
+      "sha256": "626bc19bc4a19c7849dbd1d79b375dbb61c2b5555f0d9545555c5b654f3cb5fd"
+    },
+    {
+      "path": "media/lua/shared/Definitions/animal/RaccoonDefinitions.lua",
+      "sha256": "55185497017826ae3a1d3f3e980f963de29644797ea4d992d40ea9e483ca502c"
+    }
+  ],
+  "animation_mesh": "Raccoon",
+  "animation_set": "raccoon",
+  "native_model_script_reference": "Raccoon_Body",
+  "vanilla_raccoon_replaced": false,
+  "runtime_registered": false,
+  "intended_model_script": "B47Dogmeat_GermanShepherd",
+  "new_animal_registration": "Separate native type required; no writes to raccoonboar/raccoonsow/raccoonkit or Raccoon_Body",
+  "bone_names_and_parents": [
+    {
+      "name": "Dummy01",
+      "parent": null
+    },
+    {
+      "name": "Bip01",
+      "parent": "Dummy01"
+    },
+    {
+      "name": "Bip01_Pelvis",
+      "parent": "Bip01"
+    },
+    {
+      "name": "Bip01_Spine",
+      "parent": "Bip01_Pelvis"
+    },
+    {
+      "name": "Bip01_L_Thigh",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_L_Calf",
+      "parent": "Bip01_L_Thigh"
+    },
+    {
+      "name": "Bip01_L_Foot",
+      "parent": "Bip01_L_Calf"
+    },
+    {
+      "name": "Bip01_L_Toe0",
+      "parent": "Bip01_L_Foot"
+    },
+    {
+      "name": "Bip01_L_Toe0Nub",
+      "parent": "Bip01_L_Toe0"
+    },
+    {
+      "name": "Bip01_R_Thigh",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_R_Calf",
+      "parent": "Bip01_R_Thigh"
+    },
+    {
+      "name": "Bip01_R_Foot",
+      "parent": "Bip01_R_Calf"
+    },
+    {
+      "name": "Bip01_R_Toe0",
+      "parent": "Bip01_R_Foot"
+    },
+    {
+      "name": "Bip01_R_Toe0Nub",
+      "parent": "Bip01_R_Toe0"
+    },
+    {
+      "name": "Bip01_Neck",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_L_Clavicle",
+      "parent": "Bip01_Neck"
+    },
+    {
+      "name": "Bip01_L_UpperArm",
+      "parent": "Bip01_L_Clavicle"
+    },
+    {
+      "name": "Bip01_L_Forearm",
+      "parent": "Bip01_L_UpperArm"
+    },
+    {
+      "name": "Bip01_L_Hand",
+      "parent": "Bip01_L_Forearm"
+    },
+    {
+      "name": "Bip01_L_Finger0",
+      "parent": "Bip01_L_Hand"
+    },
+    {
+      "name": "Bip01_L_Finger0Nub",
+      "parent": "Bip01_L_Finger0"
+    },
+    {
+      "name": "Bip01_R_Clavicle",
+      "parent": "Bip01_Neck"
+    },
+    {
+      "name": "Bip01_R_UpperArm",
+      "parent": "Bip01_R_Clavicle"
+    },
+    {
+      "name": "Bip01_R_Forearm",
+      "parent": "Bip01_R_UpperArm"
+    },
+    {
+      "name": "Bip01_R_Hand",
+      "parent": "Bip01_R_Forearm"
+    },
+    {
+      "name": "Bip01_R_Finger0",
+      "parent": "Bip01_R_Hand"
+    },
+    {
+      "name": "Bip01_R_Finger0Nub",
+      "parent": "Bip01_R_Finger0"
+    },
+    {
+      "name": "Bip01_Head",
+      "parent": "Bip01_Neck"
+    },
+    {
+      "name": "Bip01_HeadNub",
+      "parent": "Bip01_Head"
+    },
+    {
+      "name": "Bip01_Tail",
+      "parent": "Bip01_Spine"
+    },
+    {
+      "name": "Bip01_Tail1",
+      "parent": "Bip01_Tail"
+    },
+    {
+      "name": "Bip01_Tail2",
+      "parent": "Bip01_Tail1"
+    },
+    {
+      "name": "Bip01_TailNub",
+      "parent": "Bip01_Tail2"
+    },
+    {
+      "name": "Translation_Data",
+      "parent": null
+    }
+  ],
+  "bind_pose": "Dog-fitted joint positions; native names/hierarchy and axis basis retained. Absolute raccoon bind-pose equality is not claimed.",
+  "runtime": "NOT TESTED; native loading, axes/scale, full-clip deformation and performance remain gates"
+}

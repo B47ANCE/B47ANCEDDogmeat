@@ -1,6 +1,8 @@
 # Workshop publication record
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
+
+Current dev.12 adds researched canine gait timing, forward stifle/hock alignment and head/tail motion using the unchanged dev.11 Shepherd models. Shepherd registration/assets remain beyond the historical dev.7 publication audit. The old receipt and native source observations remain historical; they do not prove new model loading, animation, persistence or performance. Native locomotion visual acceptance is HOLD. No upload occurred in this iteration. See [the integration contract](GERMAN_SHEPHERD_INTEGRATION.md).
 
 Status: **PUBLISHED AND VERIFIED** — Workshop item [3822584314](https://steamcommunity.com/sharedfiles/filedetails/?id=3822584314), public, App ID 108600. Release source commit: `e98d1ebfcd76ef39976e01d1f7840dd846bc30d5`; versioned archive SHA-256 `2c05351b0deee6bc2cf8c0eb3ab70b999869fe34541a06ed163d1a8873b61a5a`. The immutable receipt is WORKSHOP_RELEASE_0_2_0_DEV_7.json. The user explicitly requested investigation, safe blocker resolution, new-item creation and publication after checks. This is an MP testing distribution, not a stable release.
 
@@ -44,7 +46,7 @@ python -B scripts/audit_public_push.py
 git diff --cached --check
 ```
 
-Current offline evidence: 431 Lua tests and 18 publication regressions PASS (13 initial packaging/evidence cases plus five success-format verification cases); source/versions and artifact integrity/parity checks are required again for the pushed release source. Strict local --native failures remain recorded as expected environmental blockers, not relabelled PASS. CI runs offline regressions only and cannot upload or start PZ.
+Historical dev.7 offline publication evidence: 431 Lua tests and 18 publication regressions PASS (13 initial packaging/evidence cases plus five success-format verification cases); source/versions and artifact integrity/parity checks are required again for the pushed release source. Strict local --native failures remain recorded as expected environmental blockers, not relabelled PASS. CI runs offline regressions only and cannot upload or start PZ.
 
 Canonical description/changenote: WORKSHOP_DESCRIPTION.md and WORKSHOP_CHANGELOG.md. scripts/render_workshop.py is an exact copy of the B47ANCE team-owned shared strict renderer (Build-WorkshopDescription.py), retained portably for CI. scripts/prepare_workshop.py refuses existing output, assembles Contents/mods/B47ANCEDDogmeat, writes a versioned ZIP, validates exact contents/CRC/path/case/source parity and produces a source-commit/package/file-hash manifest and VDF. It does not upload, install or delete anything. scripts/publish_workshop.py is the separate manual uploader: it requires exact clean origin/main, green commit CI, a fresh target audit, matching canonical VDF/content/provenance, cached-login account supplied through a local environment variable, and --new-item for first creation. It writes an exclusive attempt marker, verifies SteamCMD success against the returned VDF ID and refuses blind retries. It never handles a password or restarts Steam. Generated outputs are ignored under staging/. No credentials enter source or release artifacts.
 

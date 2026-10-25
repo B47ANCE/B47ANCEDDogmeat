@@ -1,6 +1,6 @@
 # Milestone dependency graph and gates
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 M0R contract, 2026-10-12. FEASIBLE planning; no implementation/runtime gate passes. M0R document completion does not approve M1 code. [Traceability](FEATURE_TRACEABILITY_MATRIX.md), [acceptance](MULTIPLAYER_ACCEPTANCE_MATRIX.md), [minimum candidate](MINIMUM_PLAYABLE_RELEASE.md).
 

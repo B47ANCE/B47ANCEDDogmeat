@@ -1,6 +1,12 @@
 # Version inventory
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
+
+Current iteration: 0.2.0-dev.12 is a compatible canine movement and joint-alignment correction within the additive 0.2.0 MINOR prerelease. It revises motion while reusing frozen v3 skins, preserving geometry, UVs, textures, animal IDs and schemas. Earlier asset checkpoints and published dev.7 remain historical. See [motion evidence](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
+
+## Historical development narrative through 0.2.0-dev.7
+
+The statements below describe their original investigation checkpoints, including pre-publication status. They do not deny the subsequent Workshop publication or establish current runtime proof.
 
 The database-authoritative architecture/relationship/task handoffs add compatible proposal-only documents and structural validation within unreleased dev.7. Production src/, existing storage/marker schema, options and exposed behavior do not change; no new Project Version or migration is invented. Logical schema revision 1 is a separate draft namespace, not the current snapshot schema. An actual implementation/migration target and compatibility classification remain undecided and must be recorded before that work. New current mirrors and exact supplied requirement snapshots are classified in version-inventory.json.
 

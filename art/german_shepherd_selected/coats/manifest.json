@@ -1,0 +1,25 @@
+{
+  "asset_revision": "gsd-selected-coats-v001",
+  "recorded_runtime_baseline": "0.2.0-dev.7",
+  "runtime_payload_changed": false,
+  "files": {
+    "check_coats.py": "36e63d341b2e62d1ffe62a136aed03273a392cb1d5bde4badb6c7db5563591bf",
+    "compatibility.json": "b0c8b31bd1cfb3231e9c9caf8665ae23561aedc87c1a76e247ba98bd08a9c201",
+    "inspect_coats.py": "c877521bab80f0a0fde841667497a253017f7f89eff27e74cca14d353fd4a592",
+    "README.md": "6d2735683cf2d37d134a0c98a209d704241f762ca6775283b6c0f7c6b10c23ba",
+    "render_coats.py": "305a7f2b948537ab4ea96fdaa23b72ec1eec86c7a9901296f168e5250f8323c3",
+    "source-provenance.json": "61a146a6cb4347ada6fbd00da1962532b17070edfb42cfe16661c1def05faac3",
+    "variation_1/base_color.png": "04764e5df041fdd75e80f508f20abe4731bc0589390ade49703668fb895278ab",
+    "variation_1/metallic.png": "d105b79a57b5fd9dd5f571a12bd1700d979a9a9707cc5f2ddc360262fda0884e",
+    "variation_1/normal.png": "26c5bec20fcc217376611c06676222d66aa218451010da1e2dad9e45bc7c8b77",
+    "variation_1/preview.png": "42bcc2a2d72ddce9b747cd1ed5d77a35f018aee430e3d7aebd7613198d815552",
+    "variation_1/roughness.png": "4cfa446ed9cc600167311142ab327f0bafab16fa1a866d018ac19cce9600cf00",
+    "variation_1/supplied.fbx": "d491849e41806f8ef49ae43a7186ea7ff8cc661bdcc7b5020c882eba9d2d7d77",
+    "variation_2/base_color.png": "4d100310c91ce1b2ff334c80334a60e1251f55643753bc4cc1d5acc7f76295a0",
+    "variation_2/metallic.png": "11922da8ff39f2472d706fd1e63a07b05c75073d511d71be33df2ba93b256951",
+    "variation_2/normal.png": "c12d0ed13f4e961075025137621d040e3ec95f795a78781a1213aaa606f8a895",
+    "variation_2/preview.png": "791f3f3b8e1729e2b7154ad673ee1bee2b710bbe1f83311c8bc76c28076d2c2c",
+    "variation_2/roughness.png": "7e2c0f167c4e4bfd0e8c501887167197632452e9b5856462ed8478d2bde562ad",
+    "variation_2/supplied.fbx": "cbbc72d89ca755ec6f8bfa5d2077558d4c607ab305360c38abd3bc672012350e"
+  }
+}

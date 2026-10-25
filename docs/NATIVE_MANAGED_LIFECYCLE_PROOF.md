@@ -1,6 +1,6 @@
 # Native managed lifecycle proof
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 **D2 BLOCKED; existing Option A NO-GO retained.** A private canonical record can survive loss of a native reference. It cannot prove the old body was withdrawn, that a restored body is authentic, or that no saved duplicate exists. No automatic replacement, marker adoption, positive admission or new guard is introduced.
 

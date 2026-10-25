@@ -1,0 +1,44 @@
+{
+  "asset_revision": "gsd-selected-rig-v001",
+  "fbx": "art/german_shepherd_selected/rigged/B47Dogmeat_GermanShepherd_embedded.fbx",
+  "bytes": 122003612,
+  "sha256": "c9538afd3c8ab99f2e56c0862cdd9d93ec968895a13e8e8e8407ed3838910813",
+  "reopened_in": "Blender 4.5.3 LTS",
+  "mesh_count": 1,
+  "rig_count": 1,
+  "bone_count": 34,
+  "bone_names_parents_roundtrip_match": true,
+  "vertices": 1425959,
+  "triangles": 2590138,
+  "source_vertex_count": 1425959,
+  "source_triangles": 2590138,
+  "local_position_max_error": 0.0,
+  "unweighted_vertices": 0,
+  "max_influences": 4,
+  "weight_sum_max_error": 5.21540641784668e-08,
+  "images": [
+    {
+      "name": "Image_0",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "sha256": "d065e5063b4b276a66029d809cd9d66c675b26c0479366fafddd34fc79d41a72"
+    },
+    {
+      "name": "Image_0.001",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "sha256": "d065e5063b4b276a66029d809cd9d66c675b26c0479366fafddd34fc79d41a72"
+    }
+  ],
+  "packed_source_image_hashes": {
+    "Image_0": "d065e5063b4b276a66029d809cd9d66c675b26c0479366fafddd34fc79d41a72",
+    "Image_1": "73e947b70f7404cd3a7b7dcc631fedcbb067470832648d802fb190f5fe9797da",
+    "Image_2": "c05b4830135d338edd27eb3b5f0f1dd79d1580e91aa4fdf3e009b7e1802c43fb"
+  },
+  "all_original_texture_bytes_preserved": false,
+  "runtime": "NOT TESTED; native playback/axes/scale not proven by FBX roundtrip"
+}

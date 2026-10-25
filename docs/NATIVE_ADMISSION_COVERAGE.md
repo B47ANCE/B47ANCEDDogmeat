@@ -1,6 +1,6 @@
 # Native admission coverage
 
-Project Version: 0.2.0-dev.7
+Project Version: 0.2.0-dev.12
 
 Audit: 2026-10-14, against packaged Build 42.21; source baseline `6518be2aa7afaa71d70e3ff4b28b68dc01e21a63`. This is [VERIFIED] packaged source inspection, not effective running-class or runtime proof. Hashes are in [native-continuity-evidence.json](native-continuity-evidence.json). The [construction index](native-construction-index.json) records 59 direct `new IsoAnimal` instructions among 136 candidate class files. This search does not close indirect, virtual, generic deserialization, reflection, native-library or external-mod call graphs. No complete admission certificate is claimed.
 
