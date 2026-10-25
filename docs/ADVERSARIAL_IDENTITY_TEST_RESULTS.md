@@ -1,6 +1,6 @@
 # Adversarial identity evidence — Option A
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 [TESTED — Windows offline] Lua 5.1 through Lupa 2.6, disposable real fixture files and separate Lua VMs; **375 PASS, 0 failed**, including the two new evidence-equivalence phases. No native animal serialization, game process, packet, native duplication or dedicated concurrency was executed. Original baseline fda2538 had 373 tests; that earlier result remains historical. Source evidence is separate in [native-save-load-evidence.json](native-save-load-evidence.json).
 

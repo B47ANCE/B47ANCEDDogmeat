@@ -76,7 +76,7 @@ def matrix(q, position):
 
 
 def audit(root, subdivisions=100):
-    motion = root / "art/german_shepherd_motion_v3/anims"
+    motion = root / "art/german_shepherd_motion_v4/anims"
     native = root / "art/german_shepherd_motion_v3"
     bind_report = json.loads((native / "validation/native-bind.json").read_text())
     parents, rest = read_bind(motion / "B47Dogmeat_Idle_Low.x")

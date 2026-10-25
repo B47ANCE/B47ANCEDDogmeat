@@ -1,6 +1,6 @@
 # Multiplayer and lifecycle acceptance matrix
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 New B-IDENTITY blocker, 2026-10-14: clients can load/wipe animal ModData through the native ObjectModDataPacket route. A matching marker alone is not provenance. Require forged/copied marker tests and an independently validated Lua-only authority solution before enabling ownership/gameplay. The [loadable persistence diagnostic](NATIVE_BOOTSTRAP_TEST.md) has only privileged Inspect/Provision commands, and dedicated ownership preparation refuses UntrustedNativeMarker.
 

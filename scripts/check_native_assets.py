@@ -3,13 +3,31 @@ import argparse,hashlib,json,struct
 from pathlib import Path
 from build_loadable import sources,ROOT
 
+def check_motion_mapping(inventory):
+    """Reject a valid but stale motion checkpoint being packaged by mistake."""
+    motion=ROOT/'art/german_shepherd_motion_v4'
+    clips={p.name:p for p in (motion/'anims').glob('*.x')};assert len(clips)==47
+    entries=[i for i in inventory['runtime_assets'] if i['target'].startswith('42/media/anims_X/Raccoon/B47Dogmeat_')]
+    assert len(entries)==47 and {Path(i['target']).name for i in entries}==set(clips)
+    for item in entries:
+        path=clips[Path(item['target']).name]
+        assert item['source']==path.relative_to(ROOT).as_posix(),'Stale motion checkpoint'
+        assert item['sha256']==hashlib.sha256(path.read_bytes()).hexdigest()
+    models=[i for i in inventory['runtime_assets'] if i['target'].startswith('42/media/models_X/Skinned/B47Dogmeat_GSD_')]
+    assert len(models)==3 and all(i['source'].startswith('art/german_shepherd_motion_v3/models/') for i in models)
+
 def check(all_files=False):
+    check_motion_mapping(json.loads((ROOT/'source-inventory.json').read_text()))
     folder=ROOT/'art/german_shepherd_motion_v3'
     report=json.loads((folder/'validation/native-bind.json').read_text())
     assert report['runtime']=='NOT TESTED' and report['bone_nodes']==34 and report['deforming_bones']==25
     assert report['bind_reference']=='Rac_Idle01 frame zero'
     manifest=json.loads((folder/'manifest.json').read_text())
     assert report['project_version']==manifest['recorded_project_version']
+    motion=ROOT/'art/german_shepherd_motion_v4'
+    motion_manifest=json.loads((motion/'manifest.json').read_text())
+    assert motion_manifest['recorded_project_version']==(ROOT/'VERSION').read_text().strip()
+    assert motion_manifest['skin_attributes_revised'] is False
     mapping=sources();checked=0
     for variant in report['variants'].values():
         model=variant['model'];path=mapping['42/media/models_X/Skinned/'+model+'.glb'];raw=path.read_bytes()
@@ -38,6 +56,12 @@ def check(all_files=False):
         texture=mapping['42/media/textures/Body/'+model+'.png'].read_bytes()
         assert texture.startswith(b'\x89PNG\r\n\x1a\n');checked+=1
     if all_files:
+        for relative,expected in motion_manifest['files'].items():
+            path=(motion/relative).resolve();assert path.is_relative_to(motion.resolve())
+            assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
+        for relative,expected in motion_manifest['external_input_sha256'].items():
+            path=(ROOT/relative).resolve();assert path.is_relative_to(ROOT.resolve())
+            assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
         for relative,expected in manifest.get('external_input_sha256',{}).items():
             path=(ROOT/relative).resolve();assert path.is_relative_to(ROOT.resolve())
             assert hashlib.sha256(path.read_bytes()).hexdigest()==expected,relative
@@ -53,7 +77,7 @@ def check(all_files=False):
     print(json.dumps({'status':'OFFLINE PASS','models':checked,'runtime':'NOT TESTED',
         'historical_dev8_native_gait_acceptance':'HOLD',
         'historical_dev9_visual_acceptance':'REJECTED by user',
-        'current_motion':'Rest and independent-head v3 candidate; PZ NOT TESTED',
+        'current_motion':'Canine movement v4; frozen v3 skins; PZ NOT TESTED',
         'all_checkpoint_files':all_files}))
 
 if __name__=='__main__':

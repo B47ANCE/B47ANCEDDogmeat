@@ -1,6 +1,6 @@
 # Multiplayer identity authority investigation
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 The approved `B47ANCEDDogmeat` / `b47dogtest` / `grey` raccoon remains the diagnostic carrier. The model is unchanged. This report retains the 0.2.0-dev.5 identity audit scope, with later source refinements identified below. The current [server admission guard](NATIVE_ADMISSION_GUARD.md) refuses selected Lua representation transitions but does not certify native provenance. **Automatic multiplayer carrier admission remains blocked; no game or server was launched.**
 

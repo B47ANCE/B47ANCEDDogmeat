@@ -365,6 +365,10 @@
     {
       "path": "docs/SHEPHERD_MOTION_AND_TAIL_HEALTH.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CANINE_MOVEMENT_RESEARCH_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -566,6 +570,10 @@
     {
       "reference": "art/german_shepherd_motion_v3/**",
       "reason": "Frozen gsd-rest-head-v003 checkpoint recorded at 0.2.0-dev.11; retain exact offline head/rest evidence and unchanged geometry proof on later version iterations. Not PZ runtime proof."
+    },
+    {
+      "reference": "art/german_shepherd_motion_v4/**",
+      "reason": "Motion-only gsd-canine-motion-v004 checkpoint recorded at 0.2.0-dev.12; reuses frozen dev.11 skins. Preserve actual offline evidence on later iterations; not PZ runtime proof."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Previous-session authenticity proof assessment
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 **No positive authenticity proof is available.** The result is a source-supported counterexample to the current evidence model, with an offline witness at the actual Lua admission boundary. It is not a demonstrated native packet exploit or proof that an ordinary client can construct every hypothetical saved state.
 

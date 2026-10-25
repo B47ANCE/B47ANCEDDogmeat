@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0-dev.12] - 2026-10-25
+
+- Compatible animation correction within the additive 0.2.0 MINOR prerelease: research canine gait, align the neutral head forward, add visible lateral tail sway and refine hindlimb coordination.
+- Move both rear stifle/hock pivots forward 0.04 model units and normalize wrist recovery during rest transitions. Add independent exported sole-contact, joint-continuity and package-mapping regression checks.
+- Motion-only work reuses the verified dev.11 skins, geometry, UVs, textures and native bind contract. Runtime validation remains pending; no deployment or publication.
+
 ## [0.2.0-dev.11] - 2026-10-24
 
 - Compatible visual correction within the additive 0.2.0 MINOR prerelease: refine folded hindleg rest poses and give the skull independent yaw/pitch through corrected head/neck weights and fitted pivots.

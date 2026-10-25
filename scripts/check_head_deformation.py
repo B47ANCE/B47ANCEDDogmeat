@@ -116,7 +116,7 @@ def masks(co,weights,names):
  'lower_limbs':(z<-.25)&(weights[:,limb].sum(1)>.999)}
 
 def main(args):
- root=Path(__file__).resolve().parents[1];candidate=root/args.candidate;baseline=root/args.baseline
+ root=Path(__file__).resolve().parents[1];candidate=root/args.candidate;baseline=root/args.baseline;motion=root/args.motion
  if args.reference and args.output:assert (root/args.reference).resolve()!=(root/args.output).resolve(),'Do not overwrite the verified reference report'
  reference_proof=json.loads((root/args.reference).read_text(encoding='utf-8')) if args.reference else None
  comparison_mode='previous GLB bytes' if not args.skip_previous else 'verified reference digests' if reference_proof else 'NOT RUN (current-asset checks only)'
@@ -130,6 +130,7 @@ def main(args):
  assert {p.stem for p in model_paths}=={v['model'] for v in record['variants'].values()}
  for basepath in model_paths:
   target=candidate/'models'/basepath.name;assert target.exists(),target
+  assert sha(target.read_bytes())==next(v['glb_sha256'] for v in record['variants'].values() if v['model']==basepath.stem),'Frozen v3 skin changed'
   base=None if args.skip_previous else GLB(basepath);model=GLB(target)
   immutable=model.immutable_hash()
   if base is not None:
@@ -176,7 +177,12 @@ def main(args):
   if args.output:(root/args.output).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
   print('HEAD_MODELS_ONLY',flush=True);return report
  model=reference['model'];head_index=model.names.index('Bip01_Head');head_bind=model.ibm[head_index]
- clip_paths=sorted((candidate/'anims').glob('*Look*.x'));expected={'B47Dogmeat_Look_'+suffix+'.x'for suffix in ('Neutral','Low','H125','H25','H375','H50','H625','H75','H875','High')};assert expected and {p.name for p in clip_paths}==expected,'Missing or unexpected exported Look clips'
+ def pivot_yaw(degrees):
+  angle=np.radians(degrees);c,s=np.cos(angle),np.sin(angle);m=np.eye(4);m[:3,:3]=[[c,-s,0],[s,c,0],[0,0,1]]
+  atlas=np.array([-.745,.015,.435]);m[:3,3]=atlas-m[:3,:3]@atlas;return m
+ neutral_neck=pivot_yaw(-35);neutral_head=pivot_yaw(-70.04851073581948)
+ report['motion']=motion.relative_to(root).as_posix();report['neutral_head_torso_forward']=True
+ clip_paths=sorted((motion/'anims').glob('*Look*.x'));expected={'B47Dogmeat_Look_'+suffix+'.x'for suffix in ('Neutral','Low','H125','H25','H375','H50','H625','H75','H875','High')};assert expected and {p.name for p in clip_paths}==expected,'Missing or unexpected exported Look clips'
  for path in clip_paths:
   parents,rest,tracks=read_x(path);restG=global_matrices(rest,parents)
   rest_error=max(float(np.abs(H@restG[n]@H-model.global_node(model.name_to_node[n])).max())for n in restG)
@@ -192,10 +198,15 @@ def main(args):
    predicted=source@headD[:3,:3].T+headD[:3,3];maximum['rigid_head_prediction_error']=max(maximum['rigid_head_prediction_error'],float(np.abs(authored-predicted).max()))
    maximum['pairwise_distance_error']=max(maximum['pairwise_distance_error'],float(np.abs(np.linalg.norm(authored[:,None]-authored[None,:],axis=2)-pairs).max()))
    maximum['head_rotation_orthogonality_error']=max(maximum['head_rotation_orthogonality_error'],float(np.abs(headD[:3,:3].T@headD[:3,:3]-np.eye(3)).max()))
-   neckD=A@skins[model.names.index('Bip01_Neck')]@invA;maximum['neck_motion_matrix_error']=max(maximum['neck_motion_matrix_error'],float(np.abs(neckD-np.eye(4)).max()))
-   forward=headD[:3,:3]@FORWARD;yaw.append(float(np.degrees(np.arctan2(np.cross(FORWARD,forward)[2],np.dot(FORWARD[:2],forward[:2])))));pitch.append(float(np.degrees(np.arctan2(-forward[2],np.linalg.norm(forward[:2])))))
-   if time in (times[0],times[-1]):neutral.append(float(np.abs(authored-source).max()))
-  assert max(maximum.values())<2e-5,(path.name,maximum)
+   expected_neck=pivot_yaw(-35+12.5*np.sin(2*np.pi*time/times[-1]))
+   neckD=A@skins[model.names.index('Bip01_Neck')]@invA;maximum['neck_motion_matrix_error']=max(maximum['neck_motion_matrix_error'],float(np.abs(neckD-expected_neck).max()))
+   if time in times:assert float(np.abs(neckD-expected_neck).max())<2e-5,(path.name,time,'Neck keyframe yaw')
+   forward=headD[:3,:3]@FORWARD;yaw.append(float(np.degrees(np.arctan2(np.cross(-BACK,forward)[2],np.dot(-BACK[:2],forward[:2])))));pitch.append(float(np.degrees(np.arctan2(-forward[2],np.linalg.norm(forward[:2])))))
+   if time in (times[0],times[-1]):neutral.append(float(np.abs(authored-(source@neutral_head[:3,:3].T+neutral_head[:3,3])).max()))
+  # Half-frame PRS interpolation approximates the analytic sinusoid. Keyframes
+  # keep the strict bound above; record the separate subframe curve deviation.
+  assert maximum['neck_motion_matrix_error']<.00015,(path.name,maximum)
+  assert max(v for k,v in maximum.items() if k!='neck_motion_matrix_error')<2e-5,(path.name,maximum)
   assert max(neutral)<2e-5,(path.name,'neutral',neutral)
   assert min(yaw)<-24.9 and max(yaw)>24.9 and max(np.abs(yaw))<25.02,(path.name,'yaw',min(yaw),max(yaw))
   assert min(pitch)<-11.9 and max(pitch)>11.9 and max(np.abs(pitch))<12.02,(path.name,'pitch',min(pitch),max(pitch))
@@ -209,4 +220,4 @@ def main(args):
  print('HEAD_EXPORT_REGRESSION_PASS',flush=True)
  return report
 if __name__=='__main__':
- parser=argparse.ArgumentParser();parser.add_argument('--skip-previous',action='store_true',help='Do not load historical v2 GLBs; comparison is NOT RUN unless --reference is supplied');parser.add_argument('--reference',help='Previously verified report with immutable and non-head weight digests');parser.add_argument('--models-only',action='store_true');parser.add_argument('--candidate',default='art/german_shepherd_motion_v3');parser.add_argument('--baseline',default='art/german_shepherd_motion_v2');parser.add_argument('--output',default=None);main(parser.parse_args())
+ parser=argparse.ArgumentParser();parser.add_argument('--skip-previous',action='store_true',help='Do not load historical v2 GLBs; comparison is NOT RUN unless --reference is supplied');parser.add_argument('--reference',help='Previously verified report with immutable and non-head weight digests');parser.add_argument('--models-only',action='store_true');parser.add_argument('--candidate',default='art/german_shepherd_motion_v3');parser.add_argument('--motion',default='art/german_shepherd_motion_v4');parser.add_argument('--baseline',default='art/german_shepherd_motion_v2');parser.add_argument('--output',default=None);main(parser.parse_args())

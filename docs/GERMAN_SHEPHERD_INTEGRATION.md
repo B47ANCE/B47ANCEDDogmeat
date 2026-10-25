@@ -1,11 +1,11 @@
 # German Shepherd native integration
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 The dev.8 rig checkpoint below remains immutable. Current development continues
-at dev.11 with [revised skinning, motion and tail health](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
-Dev.9's visual result was rejected; its files remain historical. Current GLBs
-change only skin attributes; geometry, UVs, textures and native binds stay intact.
+at dev.12 with [research-informed motion and tail health](SHEPHERD_MOTION_AND_TAIL_HEALTH.md).
+Dev.9's visual result was rejected; its files remain historical. Current GLBs reuse the frozen dev.11 skin checkpoint byte-for-byte; only the
+47 motion clips change. Geometry, UVs, textures and native binds stay intact.
 The 2026-10-21 decision continued the additive MINOR 0.2.0 scope at dev.8. The published 0.2.0-dev.7 diagnostic is an immutable historical
 distribution. This iteration adds independent Shepherd animal definitions and
 rigs the two additional supplied coats. It changes no ownership, handler, private

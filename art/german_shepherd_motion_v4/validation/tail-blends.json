@@ -1,0 +1,142 @@
+{
+  "sampled_maximum": {
+    "kind": "Walk",
+    "error": 0.001399964224388291,
+    "frame": 9,
+    "segment": 7,
+    "fraction": 0.5,
+    "health": 0.9375,
+    "shift": [
+      -0.0011893120888052389,
+      -0.0003846039055631634,
+      0.000630489033064327
+    ]
+  },
+  "per_clip": {
+    "Idle": {
+      "frames": 61,
+      "maximum": {
+        "error": 0.0013999428015101475,
+        "frame": 15,
+        "segment": 7,
+        "fraction": 0.5,
+        "health": 0.9375,
+        "shift": [
+          -0.001189286202746942,
+          -0.0003845971799351644,
+          0.000630494396994738
+        ]
+      }
+    },
+    "Look": {
+      "frames": 91,
+      "maximum": {
+        "error": 0.0013999393234778678,
+        "frame": 22,
+        "segment": 7,
+        "fraction": 0.5,
+        "health": 0.9375,
+        "shift": [
+          -0.001189353051885611,
+          -0.0003845100504354382,
+          0.0006304137121797004
+        ]
+      }
+    },
+    "Walk": {
+      "frames": 37,
+      "maximum": {
+        "error": 0.001399964224388291,
+        "frame": 9,
+        "segment": 7,
+        "fraction": 0.5,
+        "health": 0.9375,
+        "shift": [
+          -0.0011893120888052389,
+          -0.0003846039055631634,
+          0.000630489033064327
+        ]
+      }
+    },
+    "Run": {
+      "frames": 22,
+      "maximum": {
+        "error": 0.0013998288980580388,
+        "frame": 5,
+        "segment": 7,
+        "fraction": 0.5,
+        "health": 0.9375,
+        "shift": [
+          -0.0011893377489557988,
+          -0.0003843742669550343,
+          0.0006302801644109679
+        ]
+      }
+    }
+  },
+  "max_anchor_error": 3.5541131546418007e-07,
+  "min_adjacent_quat_dot": 0.997004549021195,
+  "frame_samples": 211,
+  "blend_samples": 170488,
+  "source_clip_count": 47,
+  "audit_source_sha256": "6cf987186d07982e4578609c93a923f5b1d3e7f6f02bca32146131b1ee419a5d",
+  "clip_sha256": {
+    "B47Dogmeat_Dead_Neutral.x": "dd92f397c2500babf5db23cd14cc21ea491fe0086da65a576662e282b7afa904",
+    "B47Dogmeat_Death_Neutral.x": "8476cd6fe616cbc12bd4225bdd163215d308f946bbc137a734d225c584b9fb52",
+    "B47Dogmeat_Eat_Neutral.x": "7f3ae2ba7c268a9c232ab9536bafab198149d2863de85aaef815fc422ce6f680",
+    "B47Dogmeat_GetUp_Neutral.x": "ebae0af446a6d00c8e8d3c0c526b2a68d2b83a0f0dbbcd2319ad4395313cf173",
+    "B47Dogmeat_Hit_Neutral.x": "d783e38bddee7c210688cb631c7c8cbc543dbdd005564444506fe29dd2e7a865",
+    "B47Dogmeat_Idle_H125.x": "b29b4e8fd412c854881df086102f92aad6f397f69f25585b7c7c23f6456b3166",
+    "B47Dogmeat_Idle_H25.x": "e4553e6185c44db7bc3574fcf6e50961552ef8c36fd7353363a1135040598f2a",
+    "B47Dogmeat_Idle_H375.x": "5521c55fa3a3b481d31b5ba8f5c4e37c3ffbedcc90e9c2bc3786f8cfa8ea3ca8",
+    "B47Dogmeat_Idle_H50.x": "6b0cf26221ba1dd284e15c75fe6abeec639ec3323f95365f0f7c50ae61df7788",
+    "B47Dogmeat_Idle_H625.x": "bddd0296df523a2d765b465b06495beb9ea831dfb6f4355014d5716e8b97a5ea",
+    "B47Dogmeat_Idle_H75.x": "fd07c426fce42d2fc11731992e7f19aba6da34deb22815bd47b9973bb0bba5e6",
+    "B47Dogmeat_Idle_H875.x": "d767a4fe221831c034dca55e961bce1688a63c2185e42669aceb7476c2201ece",
+    "B47Dogmeat_Idle_High.x": "86270b0418fadffe264cfed3d48291f1a48a853dc6c9b2b25c31c99bad34126a",
+    "B47Dogmeat_Idle_Low.x": "65a7c9d32b44542c8d61215bd4248d274ecf20130e34dc5d4ec4bc9662f25ad2",
+    "B47Dogmeat_Idle_Neutral.x": "cd2d29248089934ded8d707bd40ece840bb597541d275674f7d1887f2538d3df",
+    "B47Dogmeat_Lie_Neutral.x": "8b965f70ff668ba8eaecdee2a0e649869ffa15022c7acf136a021f6619dc7a4a",
+    "B47Dogmeat_LieDown_Neutral.x": "ba2effe138526855adc3ca77a8aa63a46312a54510e6f26553fb6cc0defd9b44",
+    "B47Dogmeat_Look_H125.x": "c850606e73aa3502e4c1e4e7da00277dd9e39dc48c0748f31b5ff46bba114582",
+    "B47Dogmeat_Look_H25.x": "484dde7b220c95ce468e3849f43c36a7ed8ec9805776f1a2e4b986080636d110",
+    "B47Dogmeat_Look_H375.x": "d05d0628a3a565b218635647031e2a1a86ec1025a2f2fd505b2d1bc10d342878",
+    "B47Dogmeat_Look_H50.x": "e753d4ec25011fda7125575536580882a280c009cdf89a1c761c378ed71dc265",
+    "B47Dogmeat_Look_H625.x": "97aab70ca1469a34b44b5c369511e15d4c3940e1145d9c92b7a14168e2445a92",
+    "B47Dogmeat_Look_H75.x": "fc26bf99fd7707ea810c5b1620236f4a5a678c86300ea37091e703fc2f997f16",
+    "B47Dogmeat_Look_H875.x": "c45d14cfba209fac394eed3e43071ce30b155cb14b091a470ad70f222a473af9",
+    "B47Dogmeat_Look_High.x": "11cd16955b13228b8de8f1c7abd9909aa85db908d717fccf9b721c2ef3c00d06",
+    "B47Dogmeat_Look_Low.x": "24ad762f82b103e26ab5d50c350137cd4c852cb67378e7962e3449c6353317ba",
+    "B47Dogmeat_Look_Neutral.x": "40239babc74758ee489e318a778626e1311491b4a518b889bccc73ee8793f065",
+    "B47Dogmeat_Run_H125.x": "a1c52d194df0b1efb63a3a0f798294bd97d6b4678281860e79a3aa10759a4906",
+    "B47Dogmeat_Run_H25.x": "c2c6fad1933f10da60e7e2797607611239b3bf72217f26cb5e7bd56a6e6dcd4f",
+    "B47Dogmeat_Run_H375.x": "60dc51c87d88f72f154f09a47add0b63ac6c84762d0c855b281d0f3ac3db459b",
+    "B47Dogmeat_Run_H50.x": "f2b0e43639f903c46de24f63194a269ea1a8a6950b9bd8008a1390a340b15792",
+    "B47Dogmeat_Run_H625.x": "3cb26e7e8d373c30df9a564bc1e5aabf19097720b609cef29bcaa3ddb5f75b97",
+    "B47Dogmeat_Run_H75.x": "fa24dc082be6b512f9a977ff652ef143e18196d9f583b4f4de83ac9d4a7d760c",
+    "B47Dogmeat_Run_H875.x": "f6be97b81d7d616b5c85b7334e6b71dfb48d17b93cd34ff820660c1142c6dfe2",
+    "B47Dogmeat_Run_High.x": "81375a235850575fe7524a3dc7afb2712a4c3146386f06fd05d527555cf67f6e",
+    "B47Dogmeat_Run_Low.x": "e1379283a3f6c5ea5c6a5c19fd106ed0a25da6eb0837bfbb63219cdd4c9cefb1",
+    "B47Dogmeat_Run_Neutral.x": "f569fb9993d29b759a402a0469dce46b5596de80e7e63499c4ed4224f41de048",
+    "B47Dogmeat_Walk_H125.x": "e901f20fdd6701f683dec9296b1be7955afa76e46530c23549de8c0f6d978695",
+    "B47Dogmeat_Walk_H25.x": "57e5a967ce0928b7ef45ff04a6dc13b0f8c8e3215867f8b2e0888b9091719b63",
+    "B47Dogmeat_Walk_H375.x": "1785ece21c05e387b0d14fe4170f35f84a82bc051e64702248f55abf15eabbee",
+    "B47Dogmeat_Walk_H50.x": "8b603768cad0b2e39bfe2f03d60d59ba9ee407679368c7b8623966cf134697e2",
+    "B47Dogmeat_Walk_H625.x": "68e2fc4d01b2ee5a6c30242b213ddf83bbfed9308057c01957ac0eae73aacf9e",
+    "B47Dogmeat_Walk_H75.x": "83c6d29a31b291d845dc99fb3da487e97168b92fe435c1d8ed0f6540d7fe81cc",
+    "B47Dogmeat_Walk_H875.x": "54d0dc709a08a19d1bd120dd9fea71f61909484bdc0228bb9291ac06b5089df1",
+    "B47Dogmeat_Walk_High.x": "548402a6880405125efed613881bfaf02909a76ffd2b28b38b29af827563c7ef",
+    "B47Dogmeat_Walk_Low.x": "e82830a115695df35cf8027846b2a7fcf779dbc6dbf90a5f30dd775b7f105c38",
+    "B47Dogmeat_Walk_Neutral.x": "60a5d8ef1d19ff6689ffa65cc45b486a65797723a26fd9c358e26aac8d23b745"
+  },
+  "units": "source authoring coordinates",
+  "method": "serialized local PRS; shortest-path NLERP/SLERP; compare tail-root skin transform to neutral same frame",
+  "limitations": "double precision emulation; finite health grid; authored frames only; no temporal or state-transition blending; not PZ runtime evidence",
+  "immutable_models_match_recorded_sha256": {
+    "B47Dogmeat_GSD_Original.glb": "d254c4e4b6c46bd6a5883cc76d7f4f4bcdcf0fa7da816af05079e6078d5c9f1d",
+    "B47Dogmeat_GSD_Coat1.glb": "b6a4f28eb765edea50142deed018255e25b1cff2d936aa490752bc1e3d812f37",
+    "B47Dogmeat_GSD_Coat2.glb": "1996fcc0072c6dd7b54fee051e9db23850f038012e69a894e4a4f521493d352c"
+  },
+  "status": "OFFLINE PASS",
+  "project_version": "0.2.0-dev.12"
+}

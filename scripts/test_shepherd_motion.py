@@ -4,7 +4,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
-MOTION=ROOT/'art/german_shepherd_motion_v3'
+MOTION=ROOT/'art/german_shepherd_motion_v4'
 
 def read_clip(path):
     text=path.read_text(encoding='utf-8')
@@ -36,6 +36,16 @@ class Motion(unittest.TestCase):
                 for key,(time,scale) in enumerate(tracks[1]):self.assertEqual(scale,(1,1,1));self.assertEqual(time,key)
                 for _,quat in tracks[0]:self.assertAlmostEqual(sum(x*x for x in quat),1,places=5)
                 for keys in tracks.values():self.assertTrue(all(math.isfinite(v) for _,values in keys for v in values))
+    def test_packaging_maps_current_motion_and_frozen_models(self):
+        from check_native_assets import check_motion_mapping
+        check_motion_mapping(json.loads((ROOT/'source-inventory.json').read_text()))
+    def test_packaging_rejects_stale_motion_even_when_file_exists(self):
+        from check_native_assets import check_motion_mapping
+        inventory=json.loads((ROOT/'source-inventory.json').read_text())
+        clip=next(i for i in inventory['runtime_assets'] if '/anims/' in i['source'])
+        clip['source']=clip['source'].replace('motion_v4/','motion_v3/')
+        clip['sha256']=hashlib.sha256((ROOT/clip['source']).read_bytes()).hexdigest()
+        with self.assertRaisesRegex(AssertionError,'Stale motion checkpoint'):check_motion_mapping(inventory)
     def test_health_changes_only_tail(self):
         tail={'Bip01_Tail','Bip01_Tail1','Bip01_Tail2','Bip01_TailNub'}
         for kind in ('Idle','Look','Walk','Run'):
@@ -98,7 +108,7 @@ class Motion(unittest.TestCase):
             for keys in tracks.values():
                 for _,value in keys:self.assertEqual(value,keys[0][1])
     def test_rest_transition_endpoints_match(self):
-        for a,ai,b,bi in [('LieDown',-1,'Lie',0),('Lie',0,'GetUp',0),('GetUp',-1,'Idle',0),('Idle',0,'LieDown',0)]:
+        for a,ai,b,bi in [('LieDown',-1,'Lie',0),('Lie',0,'GetUp',0),('GetUp',-1,'Idle',0),('Idle',0,'LieDown',0),('Idle',0,'Death',0),('Death',-1,'Dead',0)]:
             first=self.clips['B47Dogmeat_'+a+'_Neutral'][2];second=self.clips['B47Dogmeat_'+b+'_Neutral'][2]
             for bone,channels in first.items():
                 for channel,keys in channels.items():
@@ -110,10 +120,11 @@ class Motion(unittest.TestCase):
         # Head local channels encode movement relative to its Neck parent.
         rotations=look['Bip01_Head'][0];neutral=rotations[0][1]
         degrees=[math.degrees(2*math.acos(min(1,abs(sum(u*v for u,v in zip(neutral,q)))))) for _,q in rotations]
-        self.assertGreater(max(degrees),24)
-        self.assertLess(max(degrees),30)
-        for _,q in look['Bip01_Neck'][0]:
-            self.assertAlmostEqual(abs(sum(u*v for u,v in zip(q,look['Bip01_Neck'][0][0][1]))),1,places=5)
+        self.assertGreater(max(degrees),15)
+        self.assertLess(max(degrees),22)
+        neck=look['Bip01_Neck'][0];start=neck[0][1]
+        neck_angles=[math.degrees(2*math.acos(min(1,abs(sum(u*v for u,v in zip(start,q)))))) for _,q in neck]
+        self.assertGreater(max(neck_angles),12.4);self.assertLess(max(neck_angles),12.6)
     def test_own_actiongroup_resolves_all_transitions(self):
         folder=ROOT/'src/assets/actiongroups/b47germanshepherd'
         states={p.name for p in folder.iterdir() if p.is_dir()}

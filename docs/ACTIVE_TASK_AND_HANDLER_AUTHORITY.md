@@ -1,6 +1,6 @@
 # Active task and handler authority
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 The latest task-arbitration handoff governs this design. **One permanent logical dog, one authoritative active task, at most one active handler lease.** No live task controller is enabled while native binding, exclusive physical control, reconstruction/durability and multiplayer gates remain unresolved. The original [TASK_ARBITRATION_CONTRACT.md](TASK_ARBITRATION_CONTRACT.md) remains the earlier baseline; its physical transaction/receipt safeguards still apply, while the public states/priorities below supersede the older proposal.
 

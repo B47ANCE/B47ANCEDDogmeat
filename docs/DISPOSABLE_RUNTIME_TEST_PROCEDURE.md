@@ -1,6 +1,6 @@
 # Disposable save/load proof procedure — Option A
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 **NOT EXECUTED. Positive ownership proof BLOCKED by NO-GO.** This procedure separates current negative diagnostics from the positive same-legitimate-animal proof. It authorizes no installation, game/server launch, interruption, live-server change or Workshop upload. Use separate operator authorization, pristine supported Build 42.21 and new disposable worlds only. The current local loose-class/launcher drift remains an effective-runtime gate.
 

@@ -1,8 +1,8 @@
 # Workshop publication record
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
-Current dev.11 includes Shepherd registration/assets beyond the historical dev.7 publication audit. The old receipt and native source observations remain historical; they do not prove new model loading, animation, persistence or performance. Native locomotion visual acceptance is HOLD. No upload occurred in this iteration. See [the integration contract](GERMAN_SHEPHERD_INTEGRATION.md).
+Current dev.12 adds researched canine gait timing, forward stifle/hock alignment and head/tail motion using the unchanged dev.11 Shepherd models. Shepherd registration/assets remain beyond the historical dev.7 publication audit. The old receipt and native source observations remain historical; they do not prove new model loading, animation, persistence or performance. Native locomotion visual acceptance is HOLD. No upload occurred in this iteration. See [the integration contract](GERMAN_SHEPHERD_INTEGRATION.md).
 
 Status: **PUBLISHED AND VERIFIED** — Workshop item [3822584314](https://steamcommunity.com/sharedfiles/filedetails/?id=3822584314), public, App ID 108600. Release source commit: `e98d1ebfcd76ef39976e01d1f7840dd846bc30d5`; versioned archive SHA-256 `2c05351b0deee6bc2cf8c0eb3ab70b999869fe34541a06ed163d1a8873b61a5a`. The immutable receipt is WORKSHOP_RELEASE_0_2_0_DEV_7.json. The user explicitly requested investigation, safe blocker resolution, new-item creation and publication after checks. This is an MP testing distribution, not a stable release.
 

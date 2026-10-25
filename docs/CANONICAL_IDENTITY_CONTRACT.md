@@ -1,6 +1,6 @@
 # Canonical identity implementation contract
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 This is the current admission implementation companion to [CANINE_IDENTITY_CONTRACT.md](CANINE_IDENTITY_CONTRACT.md), which remains the architecture baseline. It does not relax that contract or establish a second identity namespace. Schemas remain 1. The private `(world UUID, dog UUID)` is canonical; a native integer, online ID, reference, name, coat, public marker or signature is not an ownership credential.
 

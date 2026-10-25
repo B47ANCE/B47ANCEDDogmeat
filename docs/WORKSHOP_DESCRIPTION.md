@@ -4,7 +4,7 @@
 
 MP testing build - dedicated multiplayer NOT TESTED
 
-Version 0.2.0-dev.11 is an experimental development diagnostic for native animal save/load research. It is not a playable dog companion release. Use a new disposable world only.
+Version 0.2.0-dev.12 is an experimental development diagnostic for native animal save/load research. It is not a playable dog companion release. Use a new disposable world only.
 
 ## Features
 
@@ -12,7 +12,7 @@ Version 0.2.0-dev.11 is an experimental development diagnostic for native animal
 - Temporary vanilla raccoon carrier for native lifecycle and save/load investigation.
 - Guarded server-side diagnostic requests and private persistence foundations.
 - Independent German Shepherd native type group: original coat plus variations 1 and 2, sharing the raccoon animation skeleton. Vanilla raccoons remain available.
-- Revised Shepherd skinning with independent head turns and more open rest/death hindlegs, with optional tail height reflecting native health; offline candidate, actual game behavior untested.
+- Shepherd movement candidate with corrected walking order, forward rear-joint alignment, forward-facing independent head turns and lateral tail sway. Optional tail height reflects native health; actual game behavior untested.
 - Custom transparent German Shepherd mod icon and unchanged project thumbnail.
 
 ## Compatibility & Requirements

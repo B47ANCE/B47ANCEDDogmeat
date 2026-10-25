@@ -1,8 +1,8 @@
 # Current standalone implementation plan
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
-Current iteration: 0.2.0-dev.11 opens the Shepherd's folded rest poses and adds independent head rotation while preserving supplied geometry, UVs, textures and the raccoon hierarchy. See [motion and validation](SHEPHERD_MOTION_AND_TAIL_HEALTH.md). Published dev.7 remains historical; no migration or stable-release claim.
+Current iteration: 0.2.0-dev.12 corrects walking order, moves both rear stifle/hock pivots forward, adds visible tail sway and makes the neutral head face forward while preserving supplied geometry, UVs, textures and the raccoon hierarchy. See [motion and validation](SHEPHERD_MOTION_AND_TAIL_HEALTH.md). Published dev.7 remains historical; no migration or stable-release claim.
 
 ## Historical development narrative through 0.2.0-dev.7
 

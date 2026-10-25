@@ -1,6 +1,6 @@
 # M0R native source evidence and exact limits
 
-Project Version: 0.2.0-dev.11
+Project Version: 0.2.0-dev.12
 
 Native observations below were recorded at 0.1.0-dev.1 on 2026-10-12. This current contract header is not a new native inspection or runtime result; the gsd-v002 art rebuild does not change those observations.
 

@@ -1,0 +1,39 @@
+{
+  "project_version": "0.2.0-dev.12",
+  "status": "OFFLINE PASS",
+  "runtime": "NOT TESTED",
+  "scope": "Nondeforming authoring guides; no runtime skeleton edits",
+  "source_sha256": "8a908d7ffb36dfd6d12b35046bf213df0e03f43a6bf9f6cd4d382fd5baf8c91f",
+  "blend_sha256": "906da23d36af8c4b867f30c94dd75d9c85b0bc99f12d13c392eb0f18ddba08c0",
+  "linked_mesh": "//..\\..\\german_shepherd_motion_v3\\source\\shepherd_reweighted.blend",
+  "rear_guides": {
+    "L": {
+      "stifle": [
+        0.4125029146671295,
+        0.12646663188934326,
+        -0.23999999463558197
+      ],
+      "hock": [
+        0.5870389342308044,
+        0.19222962856292725,
+        -0.5600000023841858
+      ],
+      "expected_forward_shift": 0.04,
+      "max_error": 0.0
+    },
+    "R": {
+      "stifle": [
+        0.301072895526886,
+        0.44455263018608093,
+        -0.23999999463558197
+      ],
+      "hock": [
+        0.4394769072532654,
+        0.48025763034820557,
+        -0.5600000023841858
+      ],
+      "expected_forward_shift": 0.04,
+      "max_error": 0.0
+    }
+  }
+}

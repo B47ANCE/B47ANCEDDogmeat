@@ -3,13 +3,14 @@
 This is a regression screen, not visual or PZ acceptance. Uses NumPy; does not
 import Blender, the authoring pose function, a game class or any native motion.
 """
-import hashlib,json,struct,contextlib,io
+import hashlib,json,struct,contextlib,io,sys
 from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 from check_tail_blends import read_clip,read_bind,quat,matrix
 ROOT=Path(__file__).resolve().parents[1]
 ASSET=ROOT/'art/german_shepherd_motion_v3'
+MOTION=ROOT/'art/german_shepherd_motion_v4'
 
 def read_model(path):
     raw=path.read_bytes();size=struct.unpack_from('<I',raw,12)[0];doc=json.loads(raw[20:20+size]);binary=raw[28+size:]
@@ -27,7 +28,7 @@ def audit():
     # verified v2 digests, then exercise all ten actual Look clips and half frames.
     from check_head_deformation import main as audit_head
     with contextlib.redirect_stdout(io.StringIO()):
-        head_proof=audit_head(SimpleNamespace(candidate='art/german_shepherd_motion_v3',
+        head_proof=audit_head(SimpleNamespace(candidate='art/german_shepherd_motion_v3',motion='art/german_shepherd_motion_v4',
             baseline='art/german_shepherd_motion_v2',skip_previous=True,models_only=False,
             reference='art/german_shepherd_motion_v3/validation/head-deformation.json',output=None))
     path=ASSET/'models/B47Dogmeat_GSD_Coat2.glb';raw,doc,positions,joints,weights,faces=read_model(path)
@@ -72,17 +73,20 @@ def audit():
     regions=[(name,np.flatnonzero(combined[:,i]),i) for i,name in enumerate(names)]
     edges=np.concatenate([faces[:,[0,1]],faces[:,[1,2]],faces[:,[2,0]]]);edges.sort(axis=1);edges=np.unique(edges,axis=0)
     rest_lengths=np.linalg.norm(co[edges[:,0]]-co[edges[:,1]],axis=1)
-    parents,rest=read_bind(ASSET/'anims/B47Dogmeat_Idle_Neutral.x');inverse_rest={n:np.linalg.inv(v) for n,v in rest.items()}
+    parents,rest=read_bind(MOTION/'anims/B47Dogmeat_Idle_Neutral.x');inverse_rest={n:np.linalg.inv(v) for n,v in rest.items()}
     cases=[('Idle','High',0),('Eat','Neutral',.5),('Lie','Neutral',0),('Dead','Neutral',0)]
-    cases += [(kind,'High' if kind=='Run' else 'Neutral',i/8) for kind in ('Walk','Run') for i in range(8)]
+    for kind,suffix in [('Walk','Neutral'),('Run','High')]:
+        count=len(read_clip(MOTION/'anims'/('B47Dogmeat_'+kind+'_'+suffix+'.x'))[2]['Bip01_Head'][0])-1
+        cases.extend((kind,suffix,i/count) for i in range(count+1))
     # Every serialized rest-transition frame, including the deepest fold.
     cases += [(kind,'Neutral',i/39) for kind in ('LieDown','GetUp') for i in range(40)]
     cases += [('Look','Neutral',i/8) for i in range(8)]
-    cases += [('Death','Neutral',t) for t in (.25,.5,.75,1)]
+    death_count=len(read_clip(MOTION/'anims/B47Dogmeat_Death_Neutral.x')[2]['Bip01_Head'][0])-1
+    cases += [('Death','Neutral',i/death_count) for i in range(death_count+1)]
     cache={};results=[]
     for kind,suffix,t in cases:
         clip='B47Dogmeat_'+kind+'_'+suffix
-        if clip not in cache:cache[clip]=read_clip(ASSET/'anims'/(clip+'.x'))[2]
+        if clip not in cache:cache[clip]=read_clip(MOTION/'anims'/(clip+'.x'))[2]
         tracks=cache[clip];frame=round(t*(len(tracks['Bip01_Head'][0])-1));global_pose={}
         for name,parent in parents.items():
             local=matrix(quat(tracks[name][0][frame][1]),tracks[name][2][frame][1])
@@ -104,6 +108,9 @@ def audit():
                 'R':[(.39,.415,.10),(.339772,.454671,-.24),(.478176,.490376,-.56)]}
             angles={}
             for side,points in rear_landmarks.items():
+                back=np.array([.96748,.25296,0]);back/=np.linalg.norm(back)
+                points=[np.array(p) for p in points]
+                points[1]-=.04*back;points[2]-=.04*back
                 bones=('Bip01_Pelvis','Bip01_'+side+'_Thigh','Bip01_'+side+'_Calf')
                 hip,knee,hock=[(skin_matrices[bone]@np.r_[p,1])[:3] for bone,p in zip(bones,points)]
                 a=hip-knee;b=hock-knee
@@ -115,16 +122,17 @@ def audit():
             face=posed[landmarks];error=float(np.max(np.abs(np.linalg.norm(face[:,None]-face[None,:],axis=2)-facial_distances)))
             assert error<2e-5,('rigid face',t,error)
             item['facial_pair_distance_error']=error
-        if kind in ('Idle','Eat','Lie','Walk','Run','LieDown','GetUp','Look'):
+        if kind in ('Idle','Eat','Lie','Walk','Run','LieDown','GetUp','Look','Death','Dead'):
             extension=np.linalg.norm(posed[edges[:,0]]-posed[edges[:,1]],axis=1)-rest_lengths
             maximum=float(extension.max());assert maximum<.06,(kind,t,'edge extension',maximum)
             item.update(maximum_edge_extension=maximum,edges_above_004_extension=int((extension>.04).sum()))
         results.append(item)
+        if len(results)%20==0:print('SKIN_FRAMES',len(results),'of',len(cases),file=sys.stderr,flush=True)
     return {'project_version':(ROOT/'VERSION').read_text().strip(),'status':'OFFLINE REGRESSION PASS',
         'method':'Actual current GLB skin and serialized X hierarchy/local transforms; full surface, sampled authored frames',
         'model_sha256':hashlib.sha256(raw).hexdigest(),
         'audit_source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-        'clip_sha256':{clip:hashlib.sha256((ASSET/'anims'/(clip+'.x')).read_bytes()).hexdigest() for clip in cache},
+        'clip_sha256':{clip:hashlib.sha256((MOTION/'anims'/(clip+'.x')).read_bytes()).hexdigest() for clip in cache},
         'vertices':len(co),'edges':len(edges),'paws':paws,'head_regions':head_regions,
         'independent_head_audit':{'status':head_proof['status'],'models':len(head_proof['models']),
             'look_samples':sum(v['samples_with_half_frames'] for v in head_proof['clips'].values())},'samples':results,
